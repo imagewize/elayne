@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 1.0.0-beta.2
+Version: 1.0.0-beta.3
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: elayne
@@ -16,3 +16,53 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Elayne WordPress Theme, (C) 2025 Jasper Frumau
 Elayne is distributed under the terms of the GNU GPL.
 */
+
+/* Partial underline styling for post titles (matches Versifier) */
+.has-partial-underline a {
+    display: inline-block;
+    border-bottom: 2px solid currentColor !important;
+    border-image: linear-gradient(to right, currentColor 33%, transparent 33%) 1;
+    padding-bottom: 0.25rem;
+    text-decoration: none !important;
+}
+
+.has-partial-underline-center.has-partial-underline-third a {
+    border-image: linear-gradient(to right, transparent 33.33%, currentColor 33.33%, currentColor 66.66%, transparent 66.66%) 1 !important;
+}
+
+.wp-block-post-title.has-partial-underline-center.has-partial-underline-third {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.wp-block-post-title.has-partial-underline-center.has-partial-underline-third::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 33.33%;
+    right: 33.33%;
+    height: 2px;
+    background-color: currentColor;
+}
+
+.wp-block-post-title.has-partial-underline-center.has-partial-underline-third a {
+    border-bottom: none !important;
+    border-image: none !important;
+    text-decoration: none !important;
+}
+
+/* Opt-out helper: add body class "no-partial-underline" to disable underline styles */
+body.no-partial-underline .has-partial-underline a,
+body.no-partial-underline .wp-block-post-title.has-partial-underline-center.has-partial-underline-third a {
+    border-bottom: none !important;
+    border-image: none !important;
+    padding-bottom: 0;
+}
+
+body.no-partial-underline .wp-block-post-title.has-partial-underline-center.has-partial-underline-third {
+    padding-bottom: 0;
+}
+
+body.no-partial-underline .wp-block-post-title.has-partial-underline-center.has-partial-underline-third::after {
+    display: none;
+}

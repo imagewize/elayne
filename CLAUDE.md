@@ -423,16 +423,110 @@ tail -f /srv/www/demo.imagewize.com/logs/error.log
 2. `readme.txt` - Line 7: `Stable tag: X.X.X`
 3. `CHANGELOG.md` - Add new version section
 
+## Debugging
+
+### Debug Log Location
+
+When debugging issues on the Elayne demo site:
+- **Location in VM**: `/srv/www/demo.imagewize.com/logs/debug.log`
+- **Access from VM**:
+  ```bash
+  # From Trellis VM shell
+  tail -50 /srv/www/demo.imagewize.com/logs/debug.log
+
+  # Or from host machine
+  cd ~/code/imagewize.com/trellis
+  trellis vm shell -- tail -50 /srv/www/demo.imagewize.com/logs/debug.log
+  ```
+- **Note**: The log directory is synced via Lima, but typically accessed through VM commands
+
 ## WordPress Integration
 
 ### Template Hierarchy
-- `index.html` - Default template (post archives, blog)
-- `single.html` - Single post template
-- `page.html` - Single page template
+
+Elayne follows a clean template architecture where HTML templates (in `/templates/`) reference PHP patterns (in `/patterns/`). This structure follows Ollie theme's approach for maximum maintainability.
+
+**Complete Template List** (in `/templates/`):
+
+| Template File | Referenced Pattern | Purpose |
+|---------------|-------------------|---------|
+| `404.html` | `elayne/template-page-404` | Error page (Page Not Found) |
+| `archive.html` | `elayne/template-page-archive` | Archive pages (category, tag, date) |
+| `front-page.html` | `elayne/template-index-grid` | Static homepage (overrides page content*) |
+| `home.html` | `elayne/template-index-grid` | Blog index page |
+| `index.html` | `elayne/template-index-grid` | Fallback template (post archives) |
+| `page.html` | `elayne/template-page-centered` | Default page template |
+| `page-no-title.html` | `elayne/template-page-full` | Page without title section |
+| `page-with-sidebar.html` | `elayne/template-page-right-sidebar` | Page with right sidebar |
+| `search.html` | `elayne/template-page-search` | Search results page |
+| `single.html` | `elayne/template-post-centered` | Single post template |
+
+**Template Patterns** (in `/patterns/`):
+
+| Pattern File | Purpose | Usage |
+|--------------|---------|-------|
+| `template-page-404.php` | 404 error page with search | Error pages |
+| `template-page-archive.php` | Archive layout with query title and post grid | Category, tag, date archives |
+| `template-page-centered.php` | Centered page layout with title | Standard pages |
+| `template-page-full.php` | Full-width page without title section | Landing pages, custom layouts |
+| `template-page-right-sidebar.php` | Two-column layout (66.66% content, 33.33% sidebar) | Pages with sidebar |
+| `template-page-search.php` | Search results with query loop | Search results |
+| `template-index-grid.php` | Post grid layout for blog/archive | Blog index, archives, homepage |
+| `template-post-centered.php` | Centered single post layout | Single posts |
+
+**How Templates Work:**
+- Templates in `/templates/` are HTML files that WordPress recognizes in the template hierarchy
+- Each template references exactly **one pattern** using `<!-- wp:pattern {"slug":"elayne/pattern-name"} /-->`
+- Patterns in `/patterns/` are PHP files containing the actual block markup and can include `<!-- wp:post-content /-->` for page editor content
+- This separation allows for easier maintenance and reuse across templates
+- Pattern files include header comments with `Title`, `Slug`, `Categories`, and optional `Template Types`
 
 ### Template Parts
 - `parts/header.html` - Site header with navigation
 - `parts/footer.html` - Site footer
+
+### ⚠️ Important: Front Page Template Behavior
+
+The `templates/front-page.html` template **overrides page content** when a static page is set as the homepage (`Settings > Reading > "Your homepage displays" set to "A static page"`).
+
+**How it works:**
+1. WordPress template hierarchy: `front-page.html` takes precedence over page templates when `page_on_front` is set
+2. The current `front-page.html` loads a hardcoded pattern: `<!-- wp:pattern {"slug":"elayne/template-index-grid"} /-->`
+3. This pattern displays only the `elayne/blog-post-columns` pattern (3 posts in a grid)
+4. **Any content added to the page via the block editor will NOT appear on the frontend**
+
+**Example Issue:**
+If you set page ID 6 as the homepage and edit it in the block editor to include:
+- Blog Post Columns pattern
+- Featured Post Two Column pattern
+
+Only the first pattern will display on the frontend because `front-page.html` ignores the page content stored in the database.
+
+**Solution Options:**
+
+1. **Make `front-page.html` respect page content:**
+   ```html
+   <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+   <!-- wp:group {"tagName":"main"} -->
+   <main class="wp-block-group"><!-- wp:post-content {"layout":{"type":"constrained"}} /--></main>
+   <!-- /wp:group -->
+
+   <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+   ```
+   This renders the actual page content, allowing editors to build custom homepages via the block editor.
+
+2. **Delete `front-page.html` entirely:**
+   - WordPress will fall back to using the page's assigned template (e.g., `page-no-title.html`)
+   - Requires that page templates use `<!-- wp:post-content /-->` to display page content
+
+3. **Design homepage in template (current approach):**
+   - Keep `front-page.html` with hardcoded patterns
+   - Don't try to edit homepage content via the block editor
+   - Modify patterns directly in `patterns/` directory
+   - This approach ensures consistent homepage design across installs
+
+**Recommendation**: Choose option 1 or 3 depending on whether you want editors to customize the homepage (option 1) or maintain a consistent, template-controlled homepage (option 3).
 
 ### Core Features Disabled
 - Core block patterns removed (line 22 in functions.php)
