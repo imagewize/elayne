@@ -62,6 +62,12 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
 - Validate block templates in the editor to ensure no block validation errors appear.
 - Run `wp i18n make-pot` if translations are touched to confirm the POT file updates cleanly.
 
+## Versioning Checklist
+- When bumping versions (e.g., to `1.0.0-beta.2`), update `style.css` header, `readme.txt` Stable tag and changelog section, and `CHANGELOG.md` release entry together.
+- Match `readme.txt` changelog formatting to Moiraine: `== Changelog ==` header, entries like `= 1.0.0-beta.3 - 12/10/25 =` with bullet prefixes `NEW/ADDED/CHANGED/TECHNICAL` and concise sentences ending in periods.
+- Keep `CHANGELOG.md` aligned to Keep a Changelog; include descriptive subsection titles (e.g., `### Added - ...`, `### Changed - ...`) similar to Moiraine’s style.
+- Use `git status` / `git diff` to review current changes; compare against `main` when needed (`git diff main...HEAD`) before updating release notes.
+
 ## Commit & Pull Request Guidelines
 - Use short, Title-Case commit messages focused on a single change (e.g., `Hero Pattern Update`).
 - PRs should state purpose, affected paths (patterns, templates, assets), and manual test notes (browser/viewport and steps).

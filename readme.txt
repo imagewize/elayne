@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.2
+Stable tag: 1.0.0-beta.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,31 +111,48 @@ Elayne includes custom image sizes optimized for different layouts:
 
 == Changelog ==
 
-= 1.0.0-beta.2 - December 2025 =
-* Added development tooling for WordPress.org theme publication
-* Added composer.json with WordPress Coding Standards (WPCS) support
-* Added phpcs.xml configuration for code quality checks
-* Added package.json with theme metadata
-* Added GitHub Actions workflow for automated theme review checks
-* Composer scripts for linting and code standards validation
+= 1.0.0-beta.3 - 12/10/25 =
+* CHANGED: Social links now prioritize Mastodon in header/footer patterns; Twitter/Facebook removed.
+* ADDED: Bundled Mastodon, Instagram, LinkedIn, and Bluesky SVG icons under `patterns/images`.
+* ADDED: Synced shared pattern image assets into `patterns/images/` for consistent rendering.
 
-= 1.0.0-beta.1 - December 2025 =
-* Initial beta release
-* 15 original block patterns (including header pattern)
-* 8 custom pattern categories
-* Full Site Editing support
-* Custom image sizes
-* Fluid typography system
-* Professional color palette
-* Block extensions for navigation and post excerpt blocks
-* Custom navigation dropdown functionality
-* Enhanced post excerpt linking capabilities
+= 1.0.0-beta.2 - 12/10/25 =
+* ADDED: Development tooling for WordPress.org publication (composer.json with WPCS, phpcs.xml, package.json).
+* ADDED: GitHub Actions workflow for automated theme review checks.
+* ADDED: Composer scripts for linting and code standards validation.
+
+= 1.0.0-beta.1 - 12/10/25 =
+* NEW: Initial beta release of Elayne block theme.
+* NEW: 15 original block patterns across 8 categories with custom image sizes and fluid typography.
+* NEW: Block extensions for navigation and post excerpt blocks with enhanced linking and dropdown behavior.
 
 == Credits ==
 
 * Theme Author: Jasper Frumau (https://imagewize.com)
 * Open Sans Font: Licensed under SIL Open Font License 1.1
 * Based on modern WordPress block theme standards
+
+== Image Credits ==
+
+All pattern images live in `patterns/images/` and use GPL-compatible licenses.
+
+= Workspace Images (CC0 Public Domain) =
+
+* "Wacom Computer" by Negative Space — CC0 Public Domain (https://stocksnap.io/photo/wacom-computer-LNYEQYRA6G) — computer-hands.webp
+* "Mac Desktop" by Andrew Pons — CC0 Public Domain (https://stocksnap.io/photo/mac-desktop-UCEBZORVVB) — desktop.webp
+* "Code Coding" by Anita Peeples — CC0 Public Domain (https://stocksnap.io/photo/code-coding-IX9Z71L6PD) — guy-laptop.webp
+
+= Team Member Avatars (Pexels License, GPL-Compatible) =
+
+* "Man in Blue Dress Shirt and Black Formal Suit" by Chloe Kala — Pexels License (https://www.pexels.com/photo/man-in-blue-dress-shirt-and-black-formal-suit-1043473/) — avatar-1.webp, avatar-4.webp
+* "A Man Reading the Newspaper While Drinking Coffee" by Ron Lach — Pexels License (https://www.pexels.com/photo/a-man-reading-the-newspaper-while-drinking-coffee-10131170/) — avatar-2.webp
+* "A Woman Holding a Phone" by Alena Shekhovtcova — Pexels License (https://www.pexels.com/photo/a-woman-holding-a-phone-8067901/) — avatar-3.webp
+* "Woman Wearing White Multi Colored Floral Top" by Chloe Kala — Pexels License (https://www.pexels.com/photo/woman-wearing-white-multi-colored-floral-top-1877913/) — avatar-5.webp
+* "Woman Wearing Blue Shawl Lapel Suit Jacket" by Moose Photos — Pexels License (https://www.pexels.com/photo/woman-wearing-blue-shawl-lapel-suit-jacket-1036622/) — avatar-7.webp
+
+= Logo Images =
+
+Logo files logo-1.webp through logo-6.webp are geometric designs created by the theme author and do not require attribution.
 
 == Copyright ==
 

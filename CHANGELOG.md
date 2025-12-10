@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.3] - 2025-12-10
+
+### Added - Social assets and pattern media
+- Bundled SVGs for Mastodon, Instagram, LinkedIn, and Bluesky under `patterns/images/`.
+- Synced shared pattern assets into a new `patterns/images/` directory for consistent rendering.
+
+### Changed - Social links
+- Swapped social links in header/footer patterns to Mastodon-first and removed Twitter/Facebook.
+
 ## [1.0.0-beta.2] - 2025-12-10
 
 ### Added
@@ -25,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added wp-coding-standards/wpcs v3.0.0 for WordPress coding standards
 - Added phpcompatibility/phpcompatibility-wp for PHP compatibility checks
 - Configured automated CI/CD for theme quality assurance
+- Added Mastodon-first social icons in header/footer patterns and bundled SVG assets in `patterns/images/`
 
 ## [1.0.0-beta.1] - 2025-12-10
 
