@@ -1,0 +1,443 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Important Git Commit Guidelines
+
+**Demo Site Theme - NO Claude Attribution**
+- This is the Elayne theme for the demo site (`demo/web/app/themes/elayne/`)
+- Do NOT include Claude Code attribution in commits
+- Do NOT add "🤖 Generated with Claude Code" or "Co-Authored-By: Claude" footers
+- Keep all commits professional and attribution-free for client-facing demo content
+- This applies to ALL changes in this theme directory
+
+## Project Overview
+
+Elayne is a premium WordPress block theme for professional business websites:
+- **Architecture**: Pure block theme (no build tools, no npm/composer)
+- **WordPress Version**: 6.6+ required
+- **PHP Version**: 8.0+ required
+- **Theme Type**: Full Site Editing (FSE) block theme
+- **Target Audience**: Professional businesses, spas, real estate, and service industries
+
+## Theme Architecture
+
+### Pure Block Theme Structure
+- **No build process**: Direct PHP, HTML, and vanilla JavaScript
+- **theme.json**: Single source of truth for styles, colors, typography, spacing
+- **HTML templates**: Block markup in `templates/` directory
+- **PHP patterns**: Reusable block patterns in `patterns/` directory
+- **Block extensions**: Vanilla JavaScript in `assets/js/block-extensions/`
+
+### Directory Structure
+```
+elayne/
+├── assets/
+│   ├── fonts/          # Variable fonts (Mona Sans, Open Sans, Bitter)
+│   └── js/
+│       └── block-extensions/  # Vanilla JS extensions for core blocks
+├── inc/
+│   └── block-extensions.php   # PHP handlers for block extensions
+├── languages/          # Translation files (text domain: 'elayne')
+├── parts/              # Template parts (header.html, footer.html)
+├── patterns/           # 15 PHP block patterns
+├── templates/          # HTML templates (index, single, page)
+├── functions.php       # Theme setup and pattern categories
+├── style.css           # Theme metadata (no actual styles)
+└── theme.json          # Global styles, settings, colors, typography
+```
+
+## Development Workflow
+
+### No Build Tools
+- **Direct editing**: All changes are made directly to source files
+- **No compilation**: No npm, webpack, or build step required
+- **Browser testing**: Test changes by refreshing WordPress site
+- **Version control**: Use git for all changes
+
+### Local Development with Trellis VM
+The demo site uses **Trellis VM** (Lima-based, NOT Vagrant) for local WordPress environment:
+
+**Note:** If using this theme in a different project, adjust paths (`~/code/imagewize.com` → your project path, `demo.imagewize.com` → your domain).
+
+**Accessing the VM:**
+```bash
+# Navigate to repository root
+cd ~/code/imagewize.com
+
+# Access VM shell
+cd trellis
+trellis vm shell
+
+# Access with specific working directory
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current/web/app/themes/elayne
+```
+
+**File Synchronization (Lima):**
+- **Automatic, real-time sync** between host and VM
+- Files edited on host (`~/code/imagewize.com/demo/`) are **immediately synced** to VM (`/srv/www/demo.imagewize.com/`)
+- No manual file copying or rsync needed
+- Changes to theme files, PHP patterns, CSS, JS are instantly available
+
+**Common Issue - Changes Not Appearing:**
+- Usually WordPress cache, NOT file sync
+- **Solution:**
+  ```bash
+  # From Trellis VM
+  cd /srv/www/demo.imagewize.com/current
+  wp cache flush --path=web/wp
+  ```
+- For CSS/JS: Hard refresh browser (Cmd+Shift+R)
+- WordPress may cache stylesheets with version query params
+
+### Testing Changes
+Since this is a pure block theme with no build process:
+
+1. **Edit files directly** - No compilation needed
+2. **Refresh browser** - Changes appear immediately (may need cache clear)
+3. **Clear WordPress cache** if needed:
+   ```bash
+   # From Trellis VM
+   wp cache flush --path=web/wp
+
+   # Or from host machine (single command)
+   cd ~/code/imagewize.com/trellis
+   trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp cache flush --path=web/wp
+   ```
+
+### WordPress Development Mode
+For pattern and theme.json changes to appear immediately, ensure development mode is enabled in the demo site's `config/environments/development.php`:
+```php
+Config::define('WP_DEVELOPMENT_MODE', 'theme');
+```
+
+**Benefits for theme development:**
+- Bypasses theme.json caching for immediate changes
+- Pattern modifications appear instantly without cache clearing
+- Essential for block theme and pattern development
+- Ensures theme.json color/spacing/typography changes apply immediately
+
+**Values:**
+- `'theme'` - Theme development mode (recommended for Elayne development)
+- `'plugin'` - Plugin development mode
+- `'core'` - WordPress core development mode
+- `'all'` - All development modes enabled
+- `''` - Development mode disabled
+
+**Important:** Disable in production environments for optimal performance.
+
+## Key Components
+
+### Theme Configuration (theme.json)
+
+**Location**: `/theme.json`
+
+Central configuration for:
+- **Color palette**: 10 semantic colors (primary, main, base, etc.)
+- **Typography**: 3 variable fonts with 7 fluid font sizes
+- **Spacing**: 5 responsive spacing sizes using clamp()
+- **Shadows**: 8 shadow presets (4 dark, 4 light variants)
+- **Layout**: contentSize (740px), wideSize (1260px)
+
+**Important**: All design tokens are defined here. Never hardcode colors, sizes, or spacing in patterns.
+
+### Block Patterns (patterns/*.php)
+
+**15 Professional Patterns** organized by category:
+- Header: `header-light-with-hamburger-menu`
+- Hero: `hero-two-tone`, `hero-with-cta`
+- CTA/Contact: `cta-newsletter`, `contact-info`, `contact-side-by-side`
+- Features: `feature-grid`, `services-feature-cards`
+- Team/Testimonials: `team-grid`, `testimonial-card`, `client-reviews-orange`
+- Statistics: `stats-showcase`, `stats-list`
+- Posts: `blog-post-columns-portrait`, `post-featured-two-column`
+
+**Pattern Structure**:
+```php
+<?php
+/**
+ * Title: Pattern Name
+ * Slug: elayne/pattern-slug
+ * Categories: elayne/category
+ * Description: Pattern description
+ */
+?>
+<!-- Block markup here -->
+```
+
+**Custom Pattern Categories** (registered in functions.php):
+- `elayne/hero`, `elayne/features`, `elayne/call-to-action`
+- `elayne/testimonial`, `elayne/team`, `elayne/statistics`
+- `elayne/contact`, `elayne/posts`
+
+### Block Extensions
+
+**Two Core Block Extensions**:
+
+1. **Navigation Block** (`assets/js/block-extensions/navigation.js`)
+   - Adds "Clickable Parents" option (click text = navigate, click chevron = toggle)
+   - Adds "Improved Chevrons" option (better inline positioning on mobile)
+   - Handler: `inc/block-extensions.php` filters `render_block` for `core/navigation`
+
+2. **Post Excerpt Block** (`assets/js/block-extensions/post-excerpt.js`)
+   - Adds "Link to Post" option (wraps excerpt in post link)
+   - Adds "Underline Link" toggle
+   - Handler: `inc/block-extensions.php` filters `render_block` for `core/post-excerpt`
+
+**Architecture**:
+- Vanilla JavaScript (no React/JSX compilation)
+- Uses WordPress `wp.hooks`, `wp.components`, `wp.blockEditor` APIs
+- Attributes registered via `addFilter('blocks.registerBlockType')`
+- Inspector controls added via Higher Order Component pattern
+- Server-side rendering in `inc/block-extensions.php`
+
+### Custom Image Sizes
+
+Defined in `functions.php`:
+- `elayne-portrait-small` (380×570, 2:3 ratio) - Small portrait images
+- `elayne-portrait-medium` (380×507, 3:4 ratio) - Medium portrait images
+- `elayne-portrait-large` (380×475, 4:5 ratio) - Large portrait images
+- `elayne-single-hero` (700×400, ~16:9 ratio) - Hero images for single posts/pages
+
+## Design System
+
+### Color Palette
+Use semantic color names (defined in theme.json):
+- **Brand**: `primary` (teal), `primary-accent` (light teal), `primary-dark` (dark teal)
+- **Contrast**: `main` (dark gray), `main-accent` (medium gray)
+- **Base**: `base` (white), `secondary` (light gray)
+- **Tint**: `tertiary` (very light gray)
+- **Borders**: `border-light`, `border-dark`
+
+### Typography
+- **Primary**: Mona Sans (variable 300-900, sans-serif) - headings
+- **Open Sans**: (variable 300-800, sans-serif) - body text fallback
+- **Bitter**: (variable 100-900, serif) - optional serif
+- **Monospace**: system monospace - code blocks
+
+**Fluid Font Sizes**: All sizes use clamp() for responsive scaling
+- `x-small` (0.825rem → 0.95rem)
+- `small` (0.9rem → 1.05rem)
+- `base` (1rem → 1.165rem)
+- `medium` (1.2rem → 1.65rem)
+- `large` (1.5rem → 2.75rem)
+- `x-large` (1.875rem → 3.5rem)
+- `xx-large` (2.25rem → 4.3875rem)
+
+### Spacing Scale
+All spacing uses responsive clamp():
+- `small`: clamp(0.5rem, 2.5vw, 1rem)
+- `medium`: clamp(1.5rem, 4vw, 2rem)
+- `large`: clamp(2rem, 5vw, 3rem)
+- `x-large`: clamp(3rem, 7vw, 5rem)
+- `xx-large`: clamp(4rem, 9vw, 7rem)
+
+## Best Practices
+
+### Creating New Patterns
+1. Create PHP file in `patterns/` directory
+2. Follow naming convention: `category-descriptive-name.php`
+3. Use semantic color/spacing variables: `var:preset|color|primary`
+4. Include proper header comment with Title, Slug, Categories, Description
+5. Register slug in format: `elayne/pattern-name`
+6. Test pattern in block editor inserter
+
+**Pattern Image Guidelines:**
+- **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
+- Always use direct file paths: `<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/filename.webp`
+- Hardcoded IDs cause performance issues: database queries for non-existent media, blinking/flashing effects, console errors, and validation failures
+- All pattern images should be stored in `patterns/images/` directory
+- Removing hardcoded IDs ensures patterns work consistently across all WordPress installations
+
+### Modifying theme.json
+1. **Always validate JSON** - Invalid JSON breaks entire theme
+2. **Use semantic naming** - Colors should describe purpose, not appearance
+3. **Test fluid typography** - Verify clamp() values at mobile and desktop widths
+4. **Maintain consistency** - Follow existing naming patterns
+
+### Block Extensions
+1. **Vanilla JavaScript only** - No build step, no JSX
+2. **WordPress API usage** - Use `wp.*` global objects
+3. **Server-side rendering** - Filter `render_block` in PHP for output
+4. **Inspector controls** - Use PanelBody and ToggleControl components
+5. **Attribute persistence** - Register attributes via `blocks.registerBlockType` filter
+
+### Translation Readiness
+- Text domain: `'elayne'`
+- Use `__()`, `_e()`, `esc_html__()` for all user-facing strings
+- Translation files in `/languages/` directory
+- POT file generation for translators
+
+## Common Tasks
+
+### Adding a New Pattern
+```bash
+# 1. Create pattern file
+touch patterns/my-new-pattern.php
+
+# 2. Add pattern header and markup
+# 3. Test in WordPress block editor (appears in inserter)
+# 4. Assign to appropriate pattern category
+```
+
+### Modifying Global Styles
+```bash
+# 1. Edit theme.json
+# 2. Validate JSON syntax
+# 3. Refresh WordPress editor (Cmd+Shift+R to clear cache)
+# 4. Test changes in both editor and frontend
+```
+
+### Extending a Core Block
+```bash
+# 1. Create JavaScript file in assets/js/block-extensions/
+# 2. Add PHP handler in inc/block-extensions.php
+# 3. Enqueue script in block-extensions.php
+# 4. Register attributes via wp.hooks.addFilter
+# 5. Add Inspector controls via Higher Order Component
+# 6. Test in block editor
+```
+
+### Updating Image Sizes
+```bash
+# 1. Edit add_image_size() calls in functions.php
+# 2. Regenerate thumbnails (WordPress plugin or WP-CLI):
+wp media regenerate --yes
+```
+
+## WP-CLI Usage
+
+**IMPORTANT**: All WP-CLI commands must be run from the Trellis VM, not from your local machine.
+
+**Why Trellis VM?**
+- Database connection is configured in the VM environment
+- WordPress installation is accessible at `/srv/www/demo.imagewize.com/current/`
+- All WP-CLI commands require database access
+- Local machine doesn't have correct database credentials
+- **Important**: If you have another database server (MySQL, MariaDB, PostgreSQL) running locally on your machine, it will conflict with the Trellis VM's database port. In this case, you **must** run WP-CLI commands from within the VM
+
+### Common WP-CLI Commands
+
+**From Trellis VM (Interactive Shell):**
+```bash
+# Access VM shell
+cd ~/code/imagewize.com/trellis
+trellis vm shell
+
+# Navigate to demo site
+cd /srv/www/demo.imagewize.com/current
+
+# Common commands
+wp cache flush --path=web/wp
+wp theme list --path=web/wp
+wp plugin list --path=web/wp
+wp media regenerate --yes --path=web/wp
+wp i18n make-pot . languages/elayne.pot
+
+# For multisite, run commands for each site
+wp site list --field=url --path=web/wp | xargs -n1 -I % wp --url=% cache flush --path=web/wp
+```
+
+**From Host Machine (Single Command):**
+```bash
+# Navigate to trellis directory
+cd ~/code/imagewize.com/trellis
+
+# Run single command
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp cache flush --path=web/wp
+
+# Regenerate thumbnails
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp media regenerate --yes --path=web/wp
+
+# Generate translation POT file
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current/web/app/themes/elayne -- wp i18n make-pot . languages/elayne.pot
+```
+
+### Multisite Commands
+
+The demo site is a multisite installation, so some commands need to be run for each site:
+
+```bash
+# From Trellis VM
+cd /srv/www/demo.imagewize.com/current
+
+# List all sites
+wp site list --path=web/wp
+
+# Flush cache for all sites
+wp site list --field=url --path=web/wp | xargs -n1 -I % wp --url=% cache flush --path=web/wp
+
+# Run command for specific site URL
+wp --url=http://demo.imagewize.test/ cache flush --path=web/wp
+```
+
+## Server Access
+
+### Accessing Live Demo Server
+
+**SSH Access:**
+```bash
+# SSH as web user (recommended for WP-CLI commands)
+ssh web@demo.imagewize.com
+
+# SSH as root user (for server management)
+ssh root@demo.imagewize.com
+```
+
+**Demo Site Paths on Server (Bedrock Structure):**
+- Current release: `/srv/www/demo.imagewize.com/current/`
+- Theme directory: `/srv/www/demo.imagewize.com/current/web/app/themes/elayne/`
+- Uploads: `/srv/www/demo.imagewize.com/shared/uploads/`
+- Logs: `/srv/www/demo.imagewize.com/logs/`
+
+**Common Server Operations:**
+```bash
+# SSH to demo server
+ssh web@demo.imagewize.com
+cd /srv/www/demo.imagewize.com/current
+
+# Check WordPress status (multisite)
+wp site list --path=web/wp
+
+# Flush cache (multisite - all sites)
+wp site list --field=url --path=web/wp | xargs -n1 -I % wp --url=% cache flush --path=web/wp
+
+# Check theme
+wp theme list --path=web/wp
+
+# View error logs
+tail -f /srv/www/demo.imagewize.com/logs/error.log
+```
+
+**Deployment:**
+- Managed via Trellis from repository root
+- See main `CLAUDE.md` in repository root for deployment commands
+- Demo site uses multisite configuration
+
+## Version Management
+
+**Current Version**: 1.0.0-beta.1
+
+**Version locations to update**:
+1. `style.css` - Line 10: `Version: X.X.X`
+2. `readme.txt` - Line 7: `Stable tag: X.X.X`
+3. `CHANGELOG.md` - Add new version section
+
+## WordPress Integration
+
+### Template Hierarchy
+- `index.html` - Default template (post archives, blog)
+- `single.html` - Single post template
+- `page.html` - Single page template
+
+### Template Parts
+- `parts/header.html` - Site header with navigation
+- `parts/footer.html` - Site footer
+
+### Core Features Disabled
+- Core block patterns removed (line 22 in functions.php)
+- Only custom Elayne patterns are available
+
+### Editor Styles
+- `style.css` enqueued for both frontend and editor
+- Ensures WYSIWYG consistency between editor and frontend
