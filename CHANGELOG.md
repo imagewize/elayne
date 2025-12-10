@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.2] - 2025-12-10
+
+### Added
+- Development tooling for theme publication:
+  - composer.json with WordPress Coding Standards (WPCS) support
+  - phpcs.xml configuration for code quality checks
+  - package.json with theme metadata
+  - Composer scripts: `lint`, `wpcs:scan`, `wpcs:fix`
+- GitHub Actions workflow for automated theme review checks
+  - Runs WordPress theme-review-action on pull requests and pushes
+  - Tests accessibility-ready compliance
+  - Validates theme against WordPress.org requirements
+
+### Technical
+- Added php-parallel-lint/php-parallel-lint for PHP syntax checking
+- Added wp-coding-standards/wpcs v3.0.0 for WordPress coding standards
+- Added phpcompatibility/phpcompatibility-wp for PHP compatibility checks
+- Configured automated CI/CD for theme quality assurance
+
 ## [1.0.0-beta.1] - 2025-12-10
 
 ### Added

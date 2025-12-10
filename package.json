@@ -1,0 +1,14 @@
+{
+	"name": "elayne",
+	"version": "1.0.0-beta.2",
+	"description": "A modern WordPress block theme with 80+ patterns for building professional health & wellness websites.",
+	"keywords": [
+		"wordpress",
+		"theme",
+		"block-theme",
+		"business",
+		"sme"
+	],
+	"author": "Jasper Frumau",
+	"license": "GPL-2.0-or-later"
+}
