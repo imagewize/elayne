@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.1
+Stable tag: 1.0.0-beta.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,6 +110,14 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.2 - December 2025 =
+* Added development tooling for WordPress.org theme publication
+* Added composer.json with WordPress Coding Standards (WPCS) support
+* Added phpcs.xml configuration for code quality checks
+* Added package.json with theme metadata
+* Added GitHub Actions workflow for automated theme review checks
+* Composer scripts for linting and code standards validation
 
 = 1.0.0-beta.1 - December 2025 =
 * Initial beta release
