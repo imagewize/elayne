@@ -1,0 +1,35 @@
+/**
+ * Site Title Block Styles
+ *
+ * Provides underline decoration for site title/logo elements
+ */
+
+.wp-block-site-title.has-bottom-border {
+	position: relative;
+	padding-bottom: 20px;
+}
+
+.wp-block-site-title.has-bottom-border::after {
+	content: "";
+	background: var(--wp--preset--color--main, #000);
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 2px;
+	width: 50%;
+}
+
+/* Hover effect */
+.wp-block-site-title.has-bottom-border:hover::after {
+	opacity: 0.8;
+}
+
+/* Editor-specific styles */
+.editor-styles-wrapper .wp-block-site-title.has-bottom-border {
+	padding-bottom: 20px;
+}
+
+.editor-styles-wrapper .wp-block-site-title.has-bottom-border::after {
+	background: var(--wp--preset--color--main, #000);
+}

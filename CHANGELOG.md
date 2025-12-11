@@ -7,6 +7,71 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.4] - 2025-12-11
+
+### Added - Custom block styles system
+
+**Block Style Infrastructure:**
+- New block-specific styles directory (`assets/styles/`)
+- Automatic block style loading system via `wp_enqueue_block_style()`
+- Only loads styles when blocks are used (performance optimization)
+- Supports custom styling for core blocks
+
+**Custom Block Styles:**
+- **core-site-title.css** - Bottom border decoration for site title/logo
+  - Centered underline effect (50% width)
+  - Hover opacity transition
+  - Editor-compatible styles
+- **core-group.css** - Enhanced group block styling
+  - Removes default global padding from full-width sections
+  - Background blur style variant (`is-style-background-blur`)
+  - Responsive row improvements with mobile stacking (`elayne-row-stack`)
+  - Flexible alignment utilities
+
+**New Image Size:**
+- **elayne-portrait-xs** (350×525) - 2:3 aspect ratio for extra small portrait layouts
+  - Complements existing portrait size family
+  - Optimized for smaller grid displays
+
+### Added - New header and footer patterns
+
+**New Header Pattern:**
+- **header-light-with-standard-menu** - Header with logo, inline navigation, and social icons
+  - Alternative to hamburger menu variant
+  - Desktop-optimized with inline navigation
+  - Mobile responsive with overlay menu
+  - Includes social media links (Mastodon, Instagram, Bluesky)
+  - Clean, minimal design with border separator
+
+**New Footer Pattern:**
+- **footer-simple** - Minimal footer with single-line menu navigation
+  - Centered horizontal layout with separator dots
+  - Copyright year, site name, and essential links
+  - Lightweight alternative to complex footer layouts
+  - Responsive text sizing
+
+### Changed - Site title styling enhancements
+
+- Added custom typography styling to site titles in header patterns
+  - Font weight: 300 (light) for refined appearance
+  - Uses primary font family from theme.json
+  - Applied to both hamburger and standard menu headers
+  - Consistent with modern, clean design aesthetic
+
+### Changed - Pattern refinements
+
+- Updated post template patterns for improved consistency
+- Refined blog post column patterns with better spacing
+- Enhanced sidebar template styling
+- Improved single post template structure
+
+### Technical
+
+- Block styles loaded conditionally via `wp_enqueue_block_style()` API
+- Automatic style discovery from `assets/styles/` directory
+- Pattern-based architecture for custom block styling
+- Maintains WordPress 6.6+ block theme standards
+
 ## [1.0.0-beta.3] - 2025-12-10
 
 ### Added - Additional layout template patterns

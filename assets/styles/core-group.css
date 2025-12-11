@@ -1,0 +1,100 @@
+/**
+ * Group Block Styles
+ *
+ * Custom styles for the core/group block
+ *
+ * @package Elayne
+ */
+
+/* Remove default global padding from specific contexts
+--------------------------------------------- */
+
+/* Remove global padding when group is used as a full-width section wrapper */
+.wp-block-group.alignfull.has-global-padding {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* Ensure inner content can still use padding via block controls */
+.wp-block-group.alignfull > .wp-block-group__inner-container,
+.wp-block-group.alignfull > .is-layout-constrained,
+.wp-block-group.alignfull > .is-layout-flow {
+	/* Inherits padding from block settings */
+}
+
+/* Background Blur Style
+--------------------------------------------- */
+.is-style-background-blur {
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+}
+
+/* Responsive Row Improvements
+--------------------------------------------- */
+
+/* Stack rows on mobile */
+@media (max-width: 781px) {
+	.elayne-row-stack {
+		flex-direction: column;
+		align-items: flex-start !important;
+	}
+
+	.elayne-row-stack > * {
+		flex-basis: 100% !important;
+	}
+
+	.elayne-flex-start {
+		align-items: flex-start !important;
+	}
+
+	.elayne-justify-start {
+		justify-content: flex-start !important;
+	}
+}
+
+/* Prevent button groups from shrinking */
+.elayne-row-stack > .wp-block-buttons,
+.elayne-no-shrink {
+	flex-shrink: 0;
+}
+
+/* Sticky positioning helper */
+.wp-block-group.elayne-sticky-top {
+	position: sticky;
+	top: calc(20px + var(--wp-admin--admin-bar--position-offset, 0px));
+	z-index: 100;
+}
+
+/* Helper classes to swap order on mobile */
+@media (max-width: 781px) {
+	.elayne-swap-order {
+		flex-direction: column-reverse;
+	}
+
+	.elayne-row-reverse {
+		flex-direction: row-reverse;
+	}
+}
+
+/* Box Shadow Style Variation
+--------------------------------------------- */
+.is-style-box-shadow,
+.is-style-column-box-shadow {
+	box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+	padding: var(--wp--preset--spacing--medium);
+	border-radius: 5px;
+}
+
+/* Constrained Layout Improvements
+--------------------------------------------- */
+
+/* Ensure proper spacing for nested constrained layouts */
+.is-layout-constrained > .wp-block-group.is-layout-constrained {
+	max-width: 100%;
+}
+
+/* Remove extra padding from nested groups */
+.wp-block-group .wp-block-group.has-global-padding {
+	padding-right: 0;
+	padding-left: 0;
+}
