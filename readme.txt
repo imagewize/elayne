@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.3
+Stable tag: 1.0.0-beta.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -131,6 +131,18 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.4 - 12/11/25 =
+* ADDED: Custom block styles system with automatic loading via wp_enqueue_block_style().
+* ADDED: Block-specific styles directory (assets/styles/) for conditional CSS loading.
+* ADDED: core-site-title.css - Bottom border decoration with centered underline effect.
+* ADDED: core-group.css - Background blur variant and responsive row improvements.
+* ADDED: elayne-portrait-xs image size (350×525, 2:3 ratio) for extra small layouts.
+* ADDED: header-light-with-standard-menu pattern - Desktop-optimized header with inline navigation.
+* ADDED: footer-simple pattern - Minimal single-line footer with centered menu.
+* CHANGED: Site title styling with custom font weight (300) in header patterns.
+* CHANGED: Pattern refinements across post templates and blog layouts.
+* TECHNICAL: Block styles loaded conditionally (performance optimization).
 
 = 1.0.0-beta.3 - 12/10/25 =
 * ADDED: New page layout patterns - Left Sidebar complements existing Right Sidebar option.

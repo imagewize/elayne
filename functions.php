@@ -63,6 +63,7 @@ add_action( 'init', __NAMESPACE__ . '\elayne_pattern_categories', 9 );
  */
 function elayne_custom_image_sizes() {
 	// Portrait image sizes for grid/archive layouts.
+	add_image_size( 'elayne-portrait-xs', 350, 525, true );     // 2:3 aspect ratio (extra small).
 	add_image_size( 'elayne-portrait-small', 380, 570, true );  // 2:3 aspect ratio.
 	add_image_size( 'elayne-portrait-medium', 380, 507, true ); // 3:4 aspect ratio.
 	add_image_size( 'elayne-portrait-large', 380, 475, true );  // 4:5 aspect ratio.
@@ -71,6 +72,34 @@ function elayne_custom_image_sizes() {
 	add_image_size( 'elayne-single-hero', 700, 400, true );     // 16:9-ish.
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\elayne_custom_image_sizes' );
+
+/**
+ * Load custom block styles only when the block is used.
+ */
+function elayne_enqueue_custom_block_styles() {
+	// Scan our styles folder to locate block styles.
+	$files = glob( get_template_directory() . '/assets/styles/*.css' );
+
+	if ( ! $files ) {
+		return;
+	}
+
+	foreach ( $files as $file ) {
+		// Get the filename and core block name.
+		$filename   = basename( $file, '.css' );
+		$block_name = str_replace( 'core-', 'core/', $filename );
+
+		wp_enqueue_block_style(
+			$block_name,
+			array(
+				'handle' => "elayne-block-{$filename}",
+				'src'    => get_theme_file_uri( "assets/styles/{$filename}.css" ),
+				'path'   => get_theme_file_path( "assets/styles/{$filename}.css" ),
+			)
+		);
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_enqueue_custom_block_styles' );
 
 /**
  * Include block extensions.
