@@ -8,8 +8,12 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"align":"full","backgroundColor":"primary-accent","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-primary-accent-background-color has-background" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
+<!-- wp:group {"metadata":{"categories":["elayne/call-to-action"],"patternName":"elayne/cta-newsletter","name":"Newsletter Signup CTA"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"primary-accent","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull has-primary-accent-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
+	<!-- wp:spacer {"height":"50px"} -->
+	<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 		<!-- wp:columns {"align":"wide","verticalAlignment":"center"} -->

@@ -147,7 +147,7 @@ Central configuration for:
 - Header: `header-light-with-hamburger-menu`
 - Hero: `hero-two-tone`, `hero-with-cta`
 - CTA/Contact: `cta-newsletter`, `contact-info`, `contact-side-by-side`
-- Features: `feature-grid`, `services-feature-cards`
+- Features: `three-column-feature-grid`, `services-feature-cards`
 - Team/Testimonials: `team-grid`, `testimonial-card`, `client-reviews-orange`
 - Statistics: `stats-showcase`, `stats-list`
 - Posts: `blog-post-columns-portrait`, `post-featured-two-column`
@@ -242,12 +242,84 @@ All spacing uses responsive clamp():
 5. Register slug in format: `elayne/pattern-name`
 6. Test pattern in block editor inserter
 
+**Pattern Background Spacing (IMPORTANT):**
+- **Always add margin reset** to patterns with background colors: `"margin":{"top":"0","bottom":"0"}`
+- WordPress core automatically adds `margin-block-start` between blocks in constrained layouts
+- Without margin reset, gaps appear between adjacent patterns with different backgrounds
+- This follows the Ollie theme approach (inline styles vs. CSS overrides)
+
+**Example - Correct margin reset:**
+```html
+<!-- wp:group {"align":"full","backgroundColor":"primary-accent","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"},"margin":{"top":"0","bottom":"0"}}}} -->
+<div class="wp-block-group alignfull has-primary-accent-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
+```
+
+**Why inline styles instead of CSS:**
+- Ollie uses inline `margin:0` on every background pattern (verified in 50+ patterns)
+- More explicit and visible in pattern code
+- No need for global CSS overrides with `!important`
+- Pattern-specific control vs. theme-wide CSS rules
+- Easier to maintain and debug
+
+**When to use margin reset:**
+- Full-width sections (`align="full"`) with background colors
+- Any pattern that stacks vertically with other background patterns
+- Hero sections, CTAs, testimonials, feature grids
+
 **Pattern Image Guidelines:**
 - **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
 - Always use direct file paths: `<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/filename.webp`
 - Hardcoded IDs cause performance issues: database queries for non-existent media, blinking/flashing effects, console errors, and validation failures
 - All pattern images should be stored in `patterns/images/` directory
 - Removing hardcoded IDs ensures patterns work consistently across all WordPress installations
+
+**Full-Width Pattern Layout (CRITICAL):**
+- **Problem**: Full-width patterns (`align="full"`) with constrained layout on the outer group cause horizontal gaps/overflow
+- **Root Cause**: Setting `"layout":{"type":"constrained","contentSize":"1200px"}` on an `alignfull` group creates a max-width constraint that conflicts with the full-width alignment
+- **Solution**: ALWAYS use `"layout":{"type":"default"}` on the outer `alignfull` group, then nest constrained groups inside for content areas
+- **When to use**: ANY full-width section with `align="full"` and background color/image
+
+**Example - WRONG (causes gap):**
+```html
+<!-- Outer group has BOTH align="full" AND constrained layout - CAUSES GAP! -->
+<!-- wp:group {"align":"full","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group alignfull">
+    <!-- Content here -->
+    <figure class="wp-block-image"><img src="..." alt=""/></figure>
+</div>
+<!-- /wp:group -->
+```
+
+**Example - CORRECT (no gap):**
+```html
+<!-- Outer group uses "default" layout, inner groups use "constrained" -->
+<!-- wp:group {"align":"full","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull">
+
+    <!-- Constrained group for text content -->
+    <!-- wp:group {"layout":{"type":"constrained","contentSize":"800px"}} -->
+    <div class="wp-block-group">
+        <h1>Heading</h1>
+        <p>Text content...</p>
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Constrained group for images -->
+    <!-- wp:group {"layout":{"type":"constrained","contentSize":"1200px"}} -->
+    <div class="wp-block-group">
+        <figure class="wp-block-image"><img src="..." alt=""/></figure>
+    </div>
+    <!-- /wp:group -->
+
+</div>
+<!-- /wp:group -->
+```
+
+**Rule of Thumb**:
+- **Outer `alignfull` group**: ALWAYS use `"layout":{"type":"default"}`
+- **Inner content groups**: Use `"layout":{"type":"constrained","contentSize":"XXXpx"}` to center and limit width
+- This pattern matches WordPress core blocks and Ollie/modern block themes
+- See `hero-two-tone.php` for a working reference example
 
 ### Modifying theme.json
 1. **Always validate JSON** - Invalid JSON breaks entire theme
