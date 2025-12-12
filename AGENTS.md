@@ -57,6 +57,24 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
 - Use semantic color/spacing variables: `var:preset|color|primary`
 - Follow format: `elayne/pattern-name` for slugs
 
+#### Pattern Background Spacing (CRITICAL)
+- **Always add margin reset** to patterns with background colors: `"margin":{"top":"0","bottom":"0"}`
+- WordPress core adds automatic `margin-block-start` between blocks in constrained layouts
+- Without margin reset, unwanted gaps appear between adjacent patterns with different backgrounds
+- Use inline styles (Ollie approach) instead of global CSS overrides
+- Example: `style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);..."`
+- Required for: Full-width sections, hero sections, CTAs, testimonials, feature grids with backgrounds
+
+#### Full-Width Pattern Layout (CRITICAL)
+- **NEVER use constrained layout on outer `alignfull` group** - causes horizontal gaps/overflow
+- **Root cause**: `"layout":{"type":"constrained","contentSize":"1200px"}` on `alignfull` group creates max-width that conflicts with full-width alignment
+- **Correct approach**:
+  - Outer `alignfull` group: ALWAYS use `"layout":{"type":"default"}`
+  - Inner content groups: Use `"layout":{"type":"constrained","contentSize":"XXXpx"}` to center and limit width
+- **Reference**: See `hero-two-tone.php` for working example
+- **Wrong**: `<!-- wp:group {"align":"full","layout":{"type":"constrained","contentSize":"1200px"}} -->`
+- **Correct**: `<!-- wp:group {"align":"full","layout":{"type":"default"}} -->` with nested constrained groups inside
+
 ## Testing Guidelines
 - Manual verification is primary: activate the theme, add each pattern to a page, and confirm layout/spacing matches design.
 - Validate block templates in the editor to ensure no block validation errors appear.

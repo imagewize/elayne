@@ -26,7 +26,7 @@ All patterns are 100% original, created specifically for Elayne:
 - `contact-side-by-side` - Two-column contact layout
 
 **Features & Services (2)**
-- `feature-grid` - Grid layout for feature showcasing
+- `three-column-feature-grid` - Grid layout for feature showcasing
 - `services-feature-cards` - Service cards with icons and descriptions
 
 **Team & Testimonials (3)**

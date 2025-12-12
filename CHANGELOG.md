@@ -7,6 +7,77 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.5] - 2025-12-12
+
+### Added - Style variations system
+
+**Two New Style Variations:**
+- **Gray & Gold** - Sophisticated grayscale palette with gold accents
+  - Bodoni Moda serif font for elegant headings
+  - Open Sans for clean body text
+  - Professional gray tones (#1a1a1a, #f8f8f8) with gold accent (#FFD700)
+  - Ideal for luxury brands, professional services, and upscale businesses
+  - Includes 5 duotone presets (Primary, Secondary, Accent, Neutral, High Contrast)
+- **Orange** - Vibrant orange-focused color scheme
+  - Mona Sans variable font for modern headings
+  - Open Sans for body text, Bitter for serif elements
+  - Bold orange palette (#e65c00) with warm accents
+  - Perfect for creative agencies, startups, and energetic brands
+  - Includes 3 duotone presets (Primary, Secondary, High Contrast)
+
+**New Bodoni Moda Font:**
+- Variable font family (weights 400-900)
+- Includes italic variant
+- Classic serif typeface for elegant, sophisticated designs
+- Self-hosted WOFF2 format for optimal performance
+
+**Style Variations Implementation:**
+- Style variations stored in `styles/` directory
+- Users can switch entire design system via Site Editor → Styles
+- Each variation includes complete color palette, typography, and block styles
+- Fully compatible with Global Styles interface
+
+### Added - New hero pattern
+
+**New Pattern:**
+- **hero-modern** (slug: `elayne/hero-centered`) - Modern centered hero with gradient background
+  - Dramatic gradient background (dark slate with purple/indigo accents)
+  - Large centered headline with responsive typography (clamp-based sizing)
+  - Dual CTA buttons (primary solid, secondary translucent)
+  - Hero image below content with rounded corners
+  - Fully responsive with fluid spacing
+  - Perfect for SaaS products, tech startups, and modern web apps
+
+### Changed - Pattern refinements
+
+**Pattern Improvements:**
+- **client-reviews-orange** → **client-reviews** - Renamed and refactored to use theme colors
+  - Now follows theme color palette instead of hardcoded orange (#ff6b35)
+  - Uses `primary-dark` background color for better theme compatibility
+  - Maintains same layout and structure
+  - Better integration with style variations
+- **three-column-feature-grid** - Renamed from `feature-grid` for clarity
+  - Added top/bottom spacers for improved vertical rhythm
+  - Added margin reset (top/bottom: 0) for cleaner full-width sections
+  - Pattern metadata updated to match new name
+  - Slug changed to `elayne/three-column-feature-grid`
+- **blog-post-columns** and **blog-post-columns-portrait** - Spacing improvements
+  - Removed hardcoded horizontal padding from group wrapper
+  - Cleaner full-width alignment
+  - Better responsive behavior
+
+**Pattern Metadata Updates:**
+- Updated hero-two-tone and hero-with-cta with proper metadata structure
+- Improved contact-info and cta-newsletter pattern spacing
+- Enhanced consistency across all pattern files
+
+### Technical
+
+- Style variations follow WordPress theme.json v3 specification
+- Variable fonts provide better performance and flexible typography
+- All patterns now use theme color tokens for better customization
+- Pattern naming convention standardized (hyphenated slugs, descriptive titles)
+
 ## [1.0.0-beta.4] - 2025-12-11
 
 ### Added - Custom block styles system

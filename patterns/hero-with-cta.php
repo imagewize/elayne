@@ -12,6 +12,10 @@
 <div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
+		<!-- wp:spacer {"height":"50px"} -->
+		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
+
 		<!-- wp:heading {"textAlign":"center","level":1,"textColor":"main","fontSize":"x-large","fontFamily":"open-sans"} -->
 		<h1 class="wp-block-heading has-text-align-center has-main-color has-text-color has-open-sans-font-family has-x-large-font-size"><?php esc_html_e( 'Launch your idea with confidence', 'elayne' ); ?></h1>
 		<!-- /wp:heading -->
@@ -31,6 +35,10 @@
 		<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
+
+		<!-- wp:spacer {"height":"50px"} -->
+		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
 	</div>
 	<!-- /wp:group -->
 </div>

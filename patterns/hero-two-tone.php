@@ -8,10 +8,14 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"align":"full","backgroundColor":"base","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
+<!-- wp:group {"align":"full","backgroundColor":"base","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
+		<!-- wp:spacer {"height":"50px"} -->
+		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
+
 		<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xx-large","left":"var:preset|spacing|xx-large"}}}} -->
 		<div class="wp-block-columns alignwide are-vertically-aligned-center">
 		<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
@@ -47,6 +51,10 @@
 		<!-- /wp:column -->
 		</div>
 		<!-- /wp:columns -->
+
+		<!-- wp:spacer {"height":"50px"} -->
+		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
 	</div>
 	<!-- /wp:group -->
 </div>

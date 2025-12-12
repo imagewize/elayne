@@ -12,6 +12,10 @@
 <div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
+		<!-- wp:spacer {"height":"50px"} -->
+		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
+
 		<!-- wp:heading {"textAlign":"center","textColor":"main","style":{"typography":{"lineHeight":"1.1"},"spacing":{"margin":{"bottom":"var:preset|spacing|x-large"}},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontSize":"x-large","fontFamily":"open-sans"} -->
 		<h2 class="wp-block-heading has-text-align-center has-main-color has-text-color has-link-color has-open-sans-font-family has-x-large-font-size" style="margin-bottom:var(--wp--preset--spacing--x-large);line-height:1.1"><?php esc_html_e( 'Get In Touch', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
@@ -22,8 +26,8 @@
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"grid","columnCount":null,"minimumColumnWidth":"320px"}} -->
 	<div class="wp-block-group alignwide">
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","radius":"8px"}},"borderColor":"border-light","backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-border-color has-border-light-border-color has-tertiary-background-color has-background" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)">
 			<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|medium"}}},"textColor":"primary","fontSize":"large"} -->
 			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Office Hours', 'elayne' ); ?></h3>
 			<!-- /wp:heading -->
@@ -38,8 +42,8 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","radius":"8px"}},"borderColor":"border-light","backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-border-color has-border-light-border-color has-tertiary-background-color has-background" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)">
 			<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|medium"}}},"textColor":"primary","fontSize":"large"} -->
 			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Contact Details', 'elayne' ); ?></h3>
 			<!-- /wp:heading -->
@@ -58,8 +62,8 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","radius":"8px"}},"borderColor":"border-light","backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-border-color has-border-light-border-color has-tertiary-background-color has-background" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)">
 			<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|medium"}}},"textColor":"primary","fontSize":"large"} -->
 			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Visit Us', 'elayne' ); ?></h3>
 			<!-- /wp:heading -->
@@ -87,6 +91,10 @@
 		<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
+
+		<!-- wp:spacer {"height":"50px"} -->
+		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
 	</div>
 	<!-- /wp:group -->
 </div>

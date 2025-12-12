@@ -1,0 +1,150 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Orange",
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"colors": ["#e65c00", "#ffd4b3"]
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"colors": ["#8a3700", "#ffd4b3"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "primary",
+					"color": "#e65c00"
+				},
+				{
+					"name": "Brand Accent",
+					"slug": "primary-accent",
+					"color": "#ffd4b3"
+				},
+				{
+					"name": "Brand Dark",
+					"slug": "primary-dark",
+					"color": "#8a3700"
+				},
+				{
+					"name": "Contrast",
+					"slug": "main",
+					"color": "#1a1a1a"
+				},
+				{
+					"name": "Contrast Accent",
+					"slug": "main-accent",
+					"color": "#666666"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#ffffff"
+				},
+				{
+					"name": "Base Accent",
+					"slug": "secondary",
+					"color": "#999999"
+				},
+				{
+					"name": "Tint",
+					"slug": "tertiary",
+					"color": "#f5f5f5"
+				},
+				{
+					"name": "Border Light",
+					"slug": "border-light",
+					"color": "#eeeeee"
+				},
+				{
+					"name": "Border Dark",
+					"slug": "border-dark",
+					"color": "#cccccc"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Mona Sans, sans-serif",
+					"name": "Mona Sans",
+					"slug": "primary",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Mona Sans",
+							"fontStretch": "75% 125%",
+							"fontStyle": "normal",
+							"fontWeight": "300 900",
+							"src": ["file:./assets/fonts/mona-sans/Mona-Sans.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "Open Sans, sans-serif",
+					"name": "Open Sans",
+					"slug": "open-sans",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Open Sans",
+							"fontStyle": "normal",
+							"fontWeight": "300 800",
+							"src": ["file:./assets/fonts/Open-Sans.woff2"]
+						},
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Open Sans",
+							"fontStyle": "italic",
+							"fontWeight": "300 800",
+							"src": ["file:./assets/fonts/Open-Sans-Italic.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "Bitter, serif",
+					"name": "Bitter",
+					"slug": "serif",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Bitter",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": ["file:./assets/fonts/bitter/Bitter-VariableFont_wght.woff2"]
+						},
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Bitter",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": ["file:./assets/fonts/bitter/Bitter-Italic-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "monospace",
+					"name": "Monospace",
+					"slug": "monospace"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|base",
+			"text": "var:preset|color|main"
+		}
+	}
+}

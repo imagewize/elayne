@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.4
+Stable tag: 1.0.0-beta.5
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -40,7 +40,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 * contact-side-by-side - Two-column contact layout
 
 **Features & Services (2)**
-* feature-grid - Grid layout for feature showcasing
+* three-column-feature-grid - Grid layout for feature showcasing
 * services-feature-cards - Service cards with icons and descriptions
 
 **Team & Testimonials (3)**
@@ -131,6 +131,16 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.5 - 12/12/25 =
+* ADDED: Two style variations - "Gray & Gold" (Bodoni Moda serif + grayscale + gold) and "Orange" (Mona Sans + vibrant orange).
+* ADDED: Bodoni Moda variable font family (400-900 weights) with italic variant for elegant typography.
+* ADDED: Style variations system in styles/ directory - switch entire design via Site Editor → Styles.
+* ADDED: hero-modern pattern - Modern centered hero with gradient background and dual CTAs.
+* CHANGED: client-reviews-orange renamed to client-reviews - Now uses theme colors instead of hardcoded orange.
+* CHANGED: feature-grid renamed to three-column-feature-grid with improved spacing and vertical rhythm.
+* CHANGED: Pattern spacing improvements across blog-post-columns, hero-two-tone, hero-with-cta, contact-info, and cta-newsletter.
+* TECHNICAL: Style variations follow theme.json v3 spec with complete color, typography, and block style definitions.
 
 = 1.0.0-beta.4 - 12/11/25 =
 * ADDED: Custom block styles system with automatic loading via wp_enqueue_block_style().

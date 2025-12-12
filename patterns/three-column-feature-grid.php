@@ -1,15 +1,19 @@
 <?php
 /**
- * Title: 3-Column Feature Grid
- * Slug: elayne/feature-grid
+ * Title: Three-Column Feature Grid
+ * Slug: elayne/three-column-feature-grid
  * Description: Showcase your key features or services in a clean three-column layout
  * Categories: elayne/features
  * Keywords: features, services, grid, columns, benefits
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/features"],"patternName":"elayne/feature-grid","name":"3-Column Feature Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"}}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
+<!-- wp:group {"metadata":{"categories":["elayne/features"],"patternName":"elayne/three-column-feature-grid","name":"Three-Column Feature Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
+	<!-- wp:spacer -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 		<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
@@ -61,5 +65,9 @@
 		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
+
+	<!-- wp:spacer -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
 </div>
 <!-- /wp:group -->
