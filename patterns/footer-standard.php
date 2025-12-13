@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Footer Light
- * Slug: elayne/footer-light
- * Description: A light footer with brand blurb, social links, and navigation columns.
+ * Title: Footer Standard
+ * Slug: elayne/footer-standard
+ * Description: A standard footer with brand blurb, social links, and navigation columns.
  * Categories: footer
- * Keywords: footer
+ * Keywords: footer, standard
  * Viewport Width: 1500
  * Block Types: core/template-part/footer
  * Post Types: wp_template

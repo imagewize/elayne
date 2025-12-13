@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Header Light with Hamburger Menu
- * Slug: elayne/header-light-with-hamburger-menu
- * Description: Header with nav and social icons
+ * Title: Header Mobile
+ * Slug: elayne/header-mobile
+ * Description: Mobile-optimized header with hamburger menu and social icons
  * Categories: header
- * Keywords: header, nav, links, button
+ * Keywords: header, mobile, nav, hamburger, menu
  * Viewport Width: 1500
  * Block Types: core/template-part/header
  * Post Types: wp_template

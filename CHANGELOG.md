@@ -7,6 +7,86 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.6] - 2025-12-13
+
+### Added - New pricing pattern and checkmark list style
+
+**New Pattern:**
+- **pricing-comparison** (slug: `elayne/pricing-comparison`) - Three-column pricing comparison grid
+  - Monthly/annual toggle capability
+  - Feature comparison with checkmark lists
+  - Highlighted recommended plan (center column elevated with shadow)
+  - Three pricing tiers (Guardian/Free, Mage/$480, Phantom/$600)
+  - Rounded corners and modern card design
+  - Perfect for SaaS products, membership sites, and subscription services
+
+**New Block Style:**
+- **Checkmark List** (`.is-style-checkmark-list`) - Custom list style with checkmark icons
+  - Uses SVG checkmark icon from `patterns/images/check-circle.svg`
+  - Flex layout with proper spacing
+  - Works with any list block
+  - Used in pricing comparison pattern
+  - Defined in `style.css`
+
+### Added - Hero pattern light variant
+
+**New Pattern:**
+- **hero-modern-light** (slug: `elayne/hero-modern-light`) - Light variant of modern hero
+  - Light background (base color) instead of dark gradient
+  - Large centered headline with responsive typography (clamp-based sizing)
+  - Tagline with medium font size
+  - Dual CTA buttons (primary solid, secondary with border)
+  - Hero image below content with rounded corners
+  - Fully responsive with fluid spacing
+  - Complements existing `hero-modern-dark` pattern
+
+### Changed - Pattern renaming for clarity
+
+**Pattern Renamings:**
+- **contact-info** → **contact-details** (slug: `elayne/contact-details`)
+  - More descriptive name for contact information display
+  - Better reflects pattern purpose (office hours, phone, email, address)
+- **footer-light** → **footer-standard** (slug: `elayne/footer-standard`)
+  - Renamed for consistency with header naming convention
+  - Matches standard footer pattern naming
+- **header-light-with-hamburger-menu** → **header-mobile** (slug: `elayne/header-mobile`)
+  - Simplified name reflects mobile-first design
+  - Clearer purpose (hamburger menu = mobile navigation)
+- **header-light-with-standard-menu** → **header-standard** (slug: `elayne/header-standard`)
+  - Simplified name for desktop navigation
+  - Better consistency with footer naming
+- **hero-modern** → **hero-modern-dark** (slug: `elayne/hero-modern-dark`)
+  - Clarifies dark background variant
+  - Distinguishes from new light variant
+
+### Added - Dutch language support
+
+**Internationalization:**
+- Added Dutch (nl_NL) translation files
+  - `languages/nl_NL.po` - Translation strings
+  - `languages/nl_NL.mo` - Compiled translations
+  - `languages/elayne.pot` - Translation template with 50+ translatable strings
+- Full theme translation coverage
+  - All pattern text translatable
+  - Button labels, headings, descriptions
+  - Contact information, testimonials, team content
+  - Pricing table content
+
+### Changed - Template part references
+
+**Template Updates:**
+- Updated `parts/header.html` to reference `header-standard` instead of `header-light-with-standard-menu`
+- Updated `parts/footer.html` to reference `footer-standard` instead of `footer-light`
+- Maintains consistency with renamed patterns
+
+### Technical
+
+- Added checkmark SVG icon asset (`patterns/images/check-circle.svg`)
+- Added README banner image (`assets/images/readme-banner.png`)
+- Pattern metadata updated to reflect new naming conventions
+- All pattern slugs follow consistent `elayne/pattern-name` format
+- CSS additions for checkmark list style in `style.css`
+
 ## [1.0.0-beta.5] - 2025-12-12
 
 ### Added - Style variations system
