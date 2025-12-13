@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.5
+Stable tag: 1.0.0-beta.6
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -131,6 +131,15 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.6 - 12/13/25 =
+* ADDED: pricing-comparison pattern - Three-column pricing grid with checkmark lists and highlighted recommended plan.
+* ADDED: Checkmark list block style (.is-style-checkmark-list) with SVG icons for pricing and feature lists.
+* ADDED: hero-modern-light pattern - Light variant of modern hero with base background color.
+* ADDED: Dutch (nl_NL) translation files with 50+ translatable strings.
+* CHANGED: Pattern renamings for clarity - contact-info → contact-details, footer-light → footer-standard, header-light-with-hamburger-menu → header-mobile, header-light-with-standard-menu → header-standard, hero-modern → hero-modern-dark.
+* CHANGED: Updated template parts (header.html, footer.html) to reference renamed patterns.
+* TECHNICAL: Added check-circle.svg icon, README banner image, and checkmark list CSS in style.css.
 
 = 1.0.0-beta.5 - 12/12/25 =
 * ADDED: Two style variations - "Gray & Gold" (Bodoni Moda serif + grayscale + gold) and "Orange" (Mona Sans + vibrant orange).

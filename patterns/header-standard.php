@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Header Light with Standard Menu
- * Slug: elayne/header-light-with-standard-menu
- * Description: Header with logo, inline navigation, and social icons
+ * Title: Header Standard
+ * Slug: elayne/header-standard
+ * Description: Standard header with logo, inline navigation, and social icons
  * Categories: header
- * Keywords: header, nav, links, button
+ * Keywords: header, standard, nav, links, button
  * Viewport Width: 1500
  * Block Types: core/template-part/header
  * Post Types: wp_template

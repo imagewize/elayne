@@ -1,16 +1,16 @@
 <?php
 /**
- * Title: Modern Hero - Centered
- * Slug: elayne/hero-centered
+ * Title: Modern Hero - Dark
+ * Slug: elayne/hero-modern-dark
  * Categories: banner, featured
- * Keywords: hero, banner, cta, header
+ * Keywords: hero, banner, cta, header, dark
  * Block Types: core/group
- * Description: A modern centered hero with gradient background, headline, tagline, CTA buttons and image below
+ * Description: A modern centered hero with dark gradient background, headline, tagline, CTA buttons and image below
  */
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"clamp(5rem, 10vw, 10rem)","bottom":"clamp(5rem, 10vw, 10rem)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"},"margin":{"top":"0","bottom":"0"}},"color":{"gradient":"radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.15) 0%, transparent 50%), linear-gradient(180deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%)"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-background" style="background:radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.15) 0%, transparent 50%), linear-gradient(180deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%);margin-top:0;margin-bottom:0;padding-top:clamp(5rem, 10vw, 10rem);padding-right:var(--wp--preset--spacing--50);padding-bottom:clamp(5rem, 10vw, 10rem);padding-left:var(--wp--preset--spacing--50)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--large)","bottom":"var(--wp--preset--spacing--x-large)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"},"margin":{"top":"0","bottom":"0"}},"color":{"gradient":"radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.15) 0%, transparent 50%), linear-gradient(180deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%)"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull has-background" style="background:radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.15) 0%, transparent 50%), linear-gradient(180deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%);margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--50)">
     
     <!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--50)"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
     <div class="wp-block-group">

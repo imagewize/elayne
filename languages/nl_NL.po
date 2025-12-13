@@ -1,0 +1,1298 @@
+# Copyright (C) 2025 Jasper Frumau
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Elayne 1.0.0-beta.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/elayne\n"
+"Last-Translator: Imagewize <info@imagewize.com>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-12-12T06:19:10+00:00\n"
+"PO-Revision-Date: 2025-12-12 07:17+0000\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: elayne\n"
+"Language: nl_NL\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Elayne"
+msgstr "Elayne"
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://imagewize.com/themes/elayne"
+msgstr "https://imagewize.com/themes/elayne"
+
+#. Description of the theme
+#: style.css
+msgid "A premium business block theme with advanced patterns for professional websites. Features industry-specific pattern sets for spa, real estate, and professional services with built-in conversion optimization."
+msgstr "Een premium zakelijk blokthema met geavanceerde patronen voor professionele websites. Bevat sectorspecifieke patroonsets voor spa, vastgoed en zakelijke diensten met ingebouwde conversie-optimalisatie."
+
+#. Author of the theme
+#: style.css
+msgid "Jasper Frumau"
+msgstr "Jasper Frumau"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://imagewize.com"
+msgstr "https://imagewize.com"
+
+#: functions.php:44
+msgid "Hero"
+msgstr "Hero"
+
+#: functions.php:45
+#: patterns/footer-light.php:89
+msgid "Features"
+msgstr "Kenmerken"
+
+#: functions.php:46
+msgid "Call To Action"
+msgstr "Call-to-action"
+
+#: functions.php:47
+msgid "Testimonials"
+msgstr "Referenties"
+
+#: functions.php:48
+msgid "Team"
+msgstr "Team"
+
+#: functions.php:49
+msgid "Statistics"
+msgstr "Statistieken"
+
+#: functions.php:50
+#: patterns/footer-light.php:53
+#: patterns/footer-light.php:69
+#: patterns/footer-light.php:125
+#: patterns/footer-simple.php:35
+msgid "Contact"
+msgstr "Contact"
+
+#: functions.php:51
+msgid "Pages"
+msgstr "Pagina's"
+
+#: functions.php:52
+msgid "Posts"
+msgstr "Berichten"
+
+#: patterns/blog-post-columns-portrait.php
+#: patterns/blog-post-columns.php
+msgctxt "Pattern title"
+msgid "Blog Post Columns (Portrait)"
+msgstr "Blogberichten in kolommen (staand)"
+
+#: patterns/blog-post-columns-portrait.php
+#: patterns/blog-post-columns.php
+msgctxt "Pattern description"
+msgid "Three-column blog post grid with portrait-oriented featured images"
+msgstr "Blograster met drie kolommen en staande uitgelichte afbeeldingen"
+
+#: patterns/blog-post-list.php
+msgctxt "Pattern title"
+msgid "Blog Post List"
+msgstr "Blogberichtenlijst"
+
+#: patterns/blog-post-list.php
+#: patterns/template-index-list.php
+msgctxt "Pattern description"
+msgid "A single column list layout for blog posts and archive pages."
+msgstr "Een eencoloms lijstindeling voor blogberichten en archiefpagina's."
+
+#: patterns/blog-post-list.php:27
+#: patterns/template-post-centered.php:25
+#: patterns/template-post-left-sidebar.php:31
+#: patterns/template-post-right-sidebar.php:27
+#: patterns/template-post-wide.php:25
+msgid "·"
+msgstr "·"
+
+#: patterns/client-reviews.php
+msgctxt "Pattern title"
+msgid "Client Reviews"
+msgstr "Klantenreviews"
+
+#: patterns/client-reviews.php
+msgctxt "Pattern description"
+msgid "Three client reviews with profile images following theme color settings"
+msgstr "Drie klantenreviews met profielfoto's volgens de themakleuren"
+
+#: patterns/client-reviews.php:18
+msgid "Client Reviews."
+msgstr "Klantenreviews."
+
+#: patterns/client-reviews.php:24
+#: patterns/client-reviews.php:34
+#: patterns/client-reviews.php:44
+msgid "Client profile"
+msgstr "Klantenprofiel"
+
+#: patterns/client-reviews.php:28
+msgid "\"We have hired Jasper a couple of times and he always does a great job and in a timely manner! He is very good at what he does and we continue to use him for our projects.\""
+msgstr "\"We hebben Jasper een paar keer ingehuurd en hij levert altijd goed en op tijd werk! Hij is erg goed in wat hij doet en we blijven hem inzetten voor onze projecten.\""
+
+#: patterns/client-reviews.php:38
+msgid "\"His communication was top-notch, he met all deadlines, and his skills were very strong. He was proficient in WordPress, WooCommerce, Shopify and programming on those platforms to get our new Shopify site up and running.\""
+msgstr "\"Zijn communicatie was uitstekend, hij haalde alle deadlines en zijn vaardigheden waren zeer sterk. Hij was bedreven in WordPress, WooCommerce, Shopify en programmeren op die platforms om onze nieuwe Shopify-site op te zetten.\""
+
+#: patterns/client-reviews.php:48
+msgid "\"Couldn't have done this job without Jasper and he did a great job. My website now runs faster than ever. Would definitely hire again.\""
+msgstr "\"Dit project was niet gelukt zonder Jasper en hij deed geweldig werk. Mijn website draait nu sneller dan ooit. Zou hem zeker opnieuw inhuren.\""
+
+#: patterns/contact-info.php
+msgctxt "Pattern title"
+msgid "Contact Information Section"
+msgstr "Contactsectie"
+
+#: patterns/contact-info.php
+msgctxt "Pattern description"
+msgid "Professional contact section with office hours, phone, email, and address in a modern card layout"
+msgstr "Professionele contactsectie met openingstijden, telefoon, e-mail en adres in een moderne kaartlay-out"
+
+#: patterns/contact-info.php:20
+msgid "Get In Touch"
+msgstr "Neem contact op"
+
+#: patterns/contact-info.php:24
+msgid "Tell us about your project and we'll respond within one business day with next steps."
+msgstr "Vertel ons over je project en we reageren binnen een werkdag met de volgende stappen."
+
+#: patterns/contact-info.php:32
+msgid "Office Hours"
+msgstr "Openingstijden"
+
+#: patterns/contact-info.php:36
+msgid "Monday - Friday"
+msgstr "Maandag - vrijdag"
+
+#: patterns/contact-info.php:36
+msgid "9:00 AM - 5:00 PM"
+msgstr "9:00 - 17:00"
+
+#: patterns/contact-info.php:40
+msgid "Weekend appointments available upon request"
+msgstr "Afspraak in het weekend op aanvraag mogelijk"
+
+#: patterns/contact-info.php:48
+msgid "Contact Details"
+msgstr "Contactgegevens"
+
+#: patterns/contact-info.php:52
+msgid "Phone:"
+msgstr "Telefoon:"
+
+#: patterns/contact-info.php:56
+msgid "Email:"
+msgstr "E-mail:"
+
+#: patterns/contact-info.php:60
+msgid "Response time:"
+msgstr "Reactietijd:"
+
+#: patterns/contact-info.php:60
+msgid "Within 24 hours"
+msgstr "Binnen 24 uur"
+
+#: patterns/contact-info.php:68
+msgid "Visit Us"
+msgstr "Bezoek ons"
+
+#: patterns/contact-info.php:73
+msgid "123 Business Street"
+msgstr "123 Business Street"
+
+#: patterns/contact-info.php:74
+msgid "Suite 100"
+msgstr "Suite 100"
+
+#: patterns/contact-info.php:75
+msgid "City, State 12345"
+msgstr "Stad, Staat 12345"
+
+#: patterns/contact-info.php:80
+msgid "Free parking available for visitors"
+msgstr "Gratis parkeren beschikbaar voor bezoekers"
+
+#: patterns/contact-info.php:90
+msgid "Schedule a Consultation"
+msgstr "Plan een consult"
+
+#: patterns/contact-side-by-side.php
+msgctxt "Pattern title"
+msgid "Contact Side by Side"
+msgstr "Contact naast elkaar"
+
+#: patterns/contact-side-by-side.php
+msgctxt "Pattern description"
+msgid "Contact information displayed in a side-by-side layout with grid blocks"
+msgstr "Contactgegevens in een zij-aan-zij lay-out met gridblokken"
+
+#: patterns/contact-side-by-side.php:24
+msgid "Get in touch"
+msgstr "Neem contact op"
+
+#: patterns/contact-side-by-side.php:28
+msgid "Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac pellentesque."
+msgstr "Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac pellentesque."
+
+#: patterns/contact-side-by-side.php:48
+msgid "Collaborate"
+msgstr "Samenwerken"
+
+#: patterns/contact-side-by-side.php:51
+msgid "partner@example.com"
+msgstr "partner@example.com"
+
+#: patterns/contact-side-by-side.php:63
+msgid "Press"
+msgstr "Pers"
+
+#: patterns/contact-side-by-side.php:66
+msgid "press@example.com"
+msgstr "press@example.com"
+
+#: patterns/contact-side-by-side.php:84
+msgid "Join Our Team"
+msgstr "Kom bij ons team"
+
+#: patterns/contact-side-by-side.php:87
+msgid "careers@example.com"
+msgstr "careers@example.com"
+
+#: patterns/contact-side-by-side.php:99
+msgid "Say Hello"
+msgstr "Zeg hallo"
+
+#: patterns/contact-side-by-side.php:102
+msgid "hello@example.com"
+msgstr "hello@example.com"
+
+#: patterns/cta-newsletter.php
+msgctxt "Pattern title"
+msgid "Newsletter Signup CTA"
+msgstr "CTA voor nieuwsbriefinschrijving"
+
+#: patterns/cta-newsletter.php
+msgctxt "Pattern description"
+msgid "Call-to-action block for newsletter subscription or lead capture"
+msgstr "Call-to-actionblok voor nieuwsbriefinschrijving of leadgeneratie"
+
+#: patterns/cta-newsletter.php:24
+msgid "Get Weekly Business Growth "
+msgstr "Ontvang wekelijks zakelijke groei "
+
+#: patterns/cta-newsletter.php:24
+msgid "Insights"
+msgstr "Inzichten"
+
+#: patterns/cta-newsletter.php:28
+msgid "Join 5,000+ business owners receiving actionable strategies, industry trends, and exclusive resources directly to their inbox."
+msgstr "Sluit je aan bij 5.000+ ondernemers die direct bruikbare strategieen, trends en exclusieve middelen in hun inbox ontvangen."
+
+#: patterns/cta-newsletter.php:38
+msgid "Subscribe Now"
+msgstr "Schrijf je nu in"
+
+#: patterns/cta-newsletter.php:44
+msgid "No spam. Unsubscribe anytime."
+msgstr "Geen spam. Uitschrijven kan altijd."
+
+#: patterns/footer-light.php
+msgctxt "Pattern title"
+msgid "Footer Light"
+msgstr "Footer licht"
+
+#: patterns/footer-light.php
+msgctxt "Pattern description"
+msgid "A light footer with brand blurb, social links, and navigation columns."
+msgstr "Een lichte footer met merkblok, social links en navigatiekolommen."
+
+#: patterns/footer-light.php:20
+msgid "Build polished pages with the Elayne block theme and the WordPress Site Editor."
+msgstr "Bouw verzorgde pagina's met het Elayne-blokthema en de WordPress Site Editor."
+
+#: patterns/footer-light.php:36
+msgid "Company"
+msgstr "Bedrijf"
+
+#: patterns/footer-light.php:41
+#: patterns/footer-simple.php:27
+msgid "About"
+msgstr "Over"
+
+#: patterns/footer-light.php:45
+msgid "Careers"
+msgstr "Vacatures"
+
+#: patterns/footer-light.php:49
+msgid "Brand Assets"
+msgstr "Huisstijlmiddelen"
+
+#: patterns/footer-light.php:60
+msgid "Resources"
+msgstr "Bronnen"
+
+#: patterns/footer-light.php:65
+msgid "Blog"
+msgstr "Blog"
+
+#: patterns/footer-light.php:73
+msgid "Support Docs"
+msgstr "Handleidingen"
+
+#: patterns/footer-light.php:77
+msgid "Get Help"
+msgstr "Hulp nodig"
+
+#: patterns/footer-light.php:84
+msgid "Product"
+msgstr "Product"
+
+#: patterns/footer-light.php:93
+msgid "Pricing"
+msgstr "Prijzen"
+
+#: patterns/footer-light.php:97
+msgid "Use Cases"
+msgstr "Toepassingen"
+
+#: patterns/footer-light.php:101
+msgid "Demo"
+msgstr "Demo"
+
+#: patterns/footer-light.php:117
+msgid "Download"
+msgstr "Download"
+
+#: patterns/footer-light.php:121
+msgid "Visit Site"
+msgstr "Bezoek site"
+
+#: patterns/footer-simple.php
+msgctxt "Pattern title"
+msgid "Footer Simple"
+msgstr "Footer simpel"
+
+#: patterns/footer-simple.php
+msgctxt "Pattern description"
+msgid "A minimal footer with single-line menu navigation"
+msgstr "Een minimale footer met menu in een enkele regel"
+
+#: patterns/footer-simple.php:43
+msgid "Privacy"
+msgstr "Privacy"
+
+#: patterns/footer-simple.php:51
+msgid "Terms"
+msgstr "Voorwaarden"
+
+#: patterns/header-light-with-hamburger-menu.php
+msgctxt "Pattern title"
+msgid "Header Light with Hamburger Menu"
+msgstr "Header licht met hamburgermenu"
+
+#: patterns/header-light-with-hamburger-menu.php
+msgctxt "Pattern description"
+msgid "Header with nav and social icons"
+msgstr "Header met navigatie en social-iconen"
+
+#: patterns/header-light-with-standard-menu.php
+msgctxt "Pattern title"
+msgid "Header Light with Standard Menu"
+msgstr "Header licht met standaardmenu"
+
+#: patterns/header-light-with-standard-menu.php
+msgctxt "Pattern description"
+msgid "Header with logo, inline navigation, and social icons"
+msgstr "Header met logo, inline navigatie en social-iconen"
+
+#: patterns/hero-modern.php
+msgctxt "Pattern title"
+msgid "Modern Hero - Centered"
+msgstr "Moderne hero - gecentreerd"
+
+#: patterns/hero-modern.php
+msgctxt "Pattern description"
+msgid "A modern centered hero with gradient background, headline, tagline, CTA buttons and image below"
+msgstr "Een moderne gecentreerde hero met verloopachtergrond, kop, tagline, CTA-knoppen en afbeelding eronder"
+
+#: patterns/hero-two-tone.php
+msgctxt "Pattern title"
+msgid "Hero Section Two-Tone"
+msgstr "Hero-sectie tweeledig"
+
+#: patterns/hero-two-tone.php
+msgctxt "Pattern description"
+msgid "Modern hero section with two-tone heading, dual CTA buttons, and optional image - responsive design with proper spacing"
+msgstr "Moderne hero-sectie met tweekleurige heading, dubbele CTA-knoppen en optionele afbeelding - responsive ontwerp met de juiste spacing"
+
+#: patterns/hero-two-tone.php:24
+msgid "Hero "
+msgstr "Hero "
+
+#: patterns/hero-two-tone.php:24
+msgid "Section"
+msgstr "Sectie"
+
+#: patterns/hero-two-tone.php:24
+msgid "2.0"
+msgstr "2.0"
+
+#: patterns/hero-two-tone.php:28
+msgid "Transform your business with proven strategies that deliver measurable results. Our solutions are designed for ambitious companies ready to scale."
+msgstr "Transformeer je bedrijf met bewezen strategieen die meetbare resultaten leveren. Onze oplossingen zijn ontworpen voor ambitieuze bedrijven die willen opschalen."
+
+#: patterns/hero-two-tone.php:34
+msgid "Getting started"
+msgstr "Aan de slag"
+
+#: patterns/hero-two-tone.php:38
+msgid "Contribute"
+msgstr "Draag bij"
+
+#: patterns/hero-two-tone.php:48
+msgid "Hero background"
+msgstr "Hero-achtergrond"
+
+#: patterns/hero-with-cta.php
+msgctxt "Pattern title"
+msgid "Hero Section with Call to Action"
+msgstr "Hero-sectie met call-to-action"
+
+#: patterns/hero-with-cta.php
+msgctxt "Pattern description"
+msgid "Business-focused hero section with headline, description, and prominent call-to-action button"
+msgstr "Zakelijk gerichte hero met kop, beschrijving en opvallende call-to-actionknop"
+
+#: patterns/hero-with-cta.php:20
+msgid "Launch your idea with confidence"
+msgstr "Lanceer je idee met vertrouwen"
+
+#: patterns/hero-with-cta.php:24
+msgid "Build your product, attract users, and grow faster with our powerful tools designed for startups."
+msgstr "Bouw je product, trek gebruikers aan en groei sneller met onze krachtige tools voor startups."
+
+#: patterns/hero-with-cta.php:30
+#: patterns/stats-list.php:35
+#: patterns/stats-showcase.php:35
+msgid "Get Started"
+msgstr "Aan de slag"
+
+#: patterns/hero-with-cta.php:34
+msgid "Learn More"
+msgstr "Meer leren"
+
+#: patterns/post-featured-two-column.php
+msgctxt "Pattern title"
+msgid "Featured Post Two Columns (Portrait)"
+msgstr "Uitgelicht bericht twee kolommen (staand)"
+
+#: patterns/post-featured-two-column.php
+msgctxt "Pattern description"
+msgid "Displays a single featured post with portrait image and title on the left, excerpt on the right. Shows posts tagged with \"featured\"."
+msgstr "Toont een uitgelicht bericht met staande afbeelding en titel links en een samenvatting rechts. Toont berichten met tag \"featured\"."
+
+#: patterns/services-feature-cards.php
+msgctxt "Pattern title"
+msgid "Services Feature Cards"
+msgstr "Service-featurekaarten"
+
+#: patterns/services-feature-cards.php
+msgctxt "Pattern description"
+msgid "A services section with feature cards showcasing consulting, development, and support services"
+msgstr "Een services-sectie met featurekaarten voor consultancy, development en support"
+
+#: patterns/services-feature-cards.php:20
+msgid "Consulting"
+msgstr "Consultancy"
+
+#: patterns/services-feature-cards.php:24
+#: patterns/services-feature-cards.php:40
+#: patterns/services-feature-cards.php:50
+#: patterns/services-feature-cards.php:64
+#: patterns/services-feature-cards.php:80
+#: patterns/services-feature-cards.php:90
+#: patterns/services-feature-cards.php:104
+#: patterns/services-feature-cards.php:120
+#: patterns/services-feature-cards.php:130
+msgid "Arrow"
+msgstr "Pijl"
+
+#: patterns/services-feature-cards.php:29
+msgid "Strategic guidance and expert advice to help your business grow, optimize processes, and achieve your goals with proven methodologies."
+msgstr "Strategische begeleiding en advies om je bedrijf te laten groeien, processen te optimaliseren en je doelen te behalen met bewezen methoden."
+
+#: patterns/services-feature-cards.php:36
+msgid "Strategy Planning"
+msgstr "Strategische planning"
+
+#: patterns/services-feature-cards.php:46
+msgid "Business Analysis"
+msgstr "Businessanalyse"
+
+#: patterns/services-feature-cards.php:60
+msgid "Development"
+msgstr "Development"
+
+#: patterns/services-feature-cards.php:69
+msgid "Custom software solutions, web applications, and digital products built with modern technologies and best practices."
+msgstr "Maatwerksoftware, webapps en digitale producten gebouwd met moderne technologieen en best practices."
+
+#: patterns/services-feature-cards.php:76
+msgid "Web Applications"
+msgstr "Webapplicaties"
+
+#: patterns/services-feature-cards.php:86
+msgid "Mobile Apps"
+msgstr "Mobiele apps"
+
+#: patterns/services-feature-cards.php:100
+msgid "Support"
+msgstr "Support"
+
+#: patterns/services-feature-cards.php:109
+msgid "Ongoing maintenance, technical support, and optimization services to keep your systems running smoothly and efficiently."
+msgstr "Doorlopend onderhoud, technische support en optimalisatie om je systemen soepel en efficient te laten draaien."
+
+#: patterns/services-feature-cards.php:116
+msgid "Maintenance"
+msgstr "Onderhoud"
+
+#: patterns/services-feature-cards.php:126
+msgid "Technical Support"
+msgstr "Technische support"
+
+#: patterns/stats-list.php
+msgctxt "Pattern title"
+msgid "Stats List with CTA"
+msgstr "Statistiekenlijst met CTA"
+
+#: patterns/stats-list.php
+msgctxt "Pattern description"
+msgid "Two-column section with promotional content and feature list"
+msgstr "Twee kolommen met promotionele content en een functieslijst"
+
+#: patterns/stats-list.php:20
+msgid "Deploy faster"
+msgstr "Sneller deployen"
+
+#: patterns/stats-list.php:24
+msgid "A better workflow"
+msgstr "Een betere workflow"
+
+#: patterns/stats-list.php:28
+#: patterns/stats-list.php:80
+msgid "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+msgstr "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+
+#: patterns/stats-list.php:40
+msgid "Live demo"
+msgstr "Live demo"
+
+#: patterns/stats-list.php:55
+#: patterns/stats-showcase.php:55
+msgid "Moiraine completely transformed how we build WordPress sites. The pattern library is incredible and performance is unmatched."
+msgstr "Moiraine heeft onze manier van WordPress-sites bouwen volledig veranderd. De patroonbibliotheek is geweldig en de performance is ongeevenaard."
+
+#: patterns/stats-list.php:59
+#: patterns/stats-showcase.php:59
+msgid "— Sarah Chen, Creative Director"
+msgstr "— Sarah Chen, Creative Director"
+
+#: patterns/stats-list.php:76
+msgid "Push to deploy."
+msgstr "Push om te deployen."
+
+#: patterns/stats-list.php:94
+msgid "SSL certificates."
+msgstr "SSL-certificaten."
+
+#: patterns/stats-list.php:98
+msgid "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+msgstr "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+
+#: patterns/stats-list.php:112
+msgid "Database backups."
+msgstr "Databaseback-ups."
+
+#: patterns/stats-list.php:116
+msgid "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."
+msgstr "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."
+
+#: patterns/stats-showcase.php
+msgctxt "Pattern title"
+msgid "Stats Showcase with CTA"
+msgstr "Statistiekenshowcase met CTA"
+
+#: patterns/stats-showcase.php
+msgctxt "Pattern description"
+msgid "Two-column section combining promotional content with modern statistics display"
+msgstr "Twee kolommen die promotionele content combineren met een moderne statistiekenweergave"
+
+#: patterns/stats-showcase.php:20
+msgid "Trusted by Thousands"
+msgstr "Vertrouwd door duizenden"
+
+#: patterns/stats-showcase.php:24
+msgid "Built for performance and designed for results"
+msgstr "Gebouwd voor performance en ontworpen voor resultaat"
+
+#: patterns/stats-showcase.php:28
+msgid "Join the growing community of professionals who trust Moiraine to power their WordPress sites. Beautiful design meets exceptional performance."
+msgstr "Sluit je aan bij de groeiende community van professionals die Moiraine gebruiken voor hun WordPress-sites. Mooi design ontmoet uitzonderlijke performance."
+
+#: patterns/stats-showcase.php:40
+msgid "View Documentation"
+msgstr "Bekijk documentatie"
+
+#: patterns/stats-showcase.php:75
+msgid "Active Sites"
+msgstr "Actieve sites"
+
+#: patterns/stats-showcase.php:79
+msgid "10K+"
+msgstr "10K+"
+
+#: patterns/stats-showcase.php:91
+msgid "Performance"
+msgstr "Performance"
+
+#: patterns/stats-showcase.php:95
+msgid "100"
+msgstr "100"
+
+#: patterns/stats-showcase.php:99
+msgid "PageSpeed Score"
+msgstr "PageSpeed-score"
+
+#: patterns/stats-showcase.php:111
+msgid "User Rating"
+msgstr "Gebruikersscore"
+
+#: patterns/stats-showcase.php:115
+msgid "5.0"
+msgstr "5.0"
+
+#: patterns/stats-showcase.php:119
+msgid "★★★★★"
+msgstr "★★★★★"
+
+#: patterns/stats-showcase.php:131
+msgid "Pattern Library"
+msgstr "Patroonbibliotheek"
+
+#: patterns/stats-showcase.php:135
+msgid "38"
+msgstr "38"
+
+#: patterns/stats-showcase.php:139
+msgid "Ready to use"
+msgstr "Gebruiksklaar"
+
+#: patterns/team-grid.php
+msgctxt "Pattern title"
+msgid "Team Member Grid"
+msgstr "Teamgrid"
+
+#: patterns/team-grid.php
+msgctxt "Pattern description"
+msgid "Showcase your team with professional profiles in a clean three-column grid layout"
+msgstr "Toon je team met professionele profielen in een strakke grid van drie kolommen"
+
+#: patterns/team-grid.php:16
+msgid "Meet Our Team"
+msgstr "Maak kennis met ons team"
+
+#: patterns/team-grid.php:20
+msgid "Dedicated professionals committed to delivering exceptional results for your business"
+msgstr "Toegewijde professionals die zich inzetten voor uitmuntende resultaten voor jouw bedrijf"
+
+#: patterns/team-grid.php:28
+#: patterns/team-grid.php:52
+#: patterns/team-grid.php:76
+msgid "Team member photo"
+msgstr "Foto teamlid"
+
+#: patterns/team-grid.php:34
+msgid "Sarah Johnson"
+msgstr "Sarah Johnson"
+
+#: patterns/team-grid.php:38
+msgid "Chief Executive Officer"
+msgstr "Algemeen directeur"
+
+#: patterns/team-grid.php:42
+msgid "With 15+ years of industry experience, Sarah leads our strategic vision and drives innovation across all operations."
+msgstr "Met meer dan 15 jaar ervaring leidt Sarah onze strategische visie en stimuleert ze innovatie in alle operaties."
+
+#: patterns/team-grid.php:58
+#: patterns/testimonial-card.php:52
+msgid "Michael Chen"
+msgstr "Michael Chen"
+
+#: patterns/team-grid.php:62
+msgid "Head of Operations"
+msgstr "Hoofd operaties"
+
+#: patterns/team-grid.php:66
+msgid "Michael ensures seamless execution and operational excellence, bringing efficiency and quality to every project."
+msgstr "Michael zorgt voor vlekkeloze uitvoering en operationele excellentie en brengt efficientie en kwaliteit in elk project."
+
+#: patterns/team-grid.php:82
+msgid "Emily Rodriguez"
+msgstr "Emily Rodriguez"
+
+#: patterns/team-grid.php:86
+msgid "Client Success Director"
+msgstr "Director klantensucces"
+
+#: patterns/team-grid.php:90
+msgid "Emily builds lasting client relationships and ensures every partnership delivers exceptional value and measurable success."
+msgstr "Emily bouwt duurzame klantrelaties en zorgt dat elke samenwerking uitzonderlijke waarde en meetbaar succes oplevert."
+
+#: patterns/template-index-grid.php
+msgctxt "Pattern title"
+msgid "Post Loop Grid"
+msgstr "Post-loop grid"
+
+#: patterns/template-index-grid.php
+msgctxt "Pattern description"
+msgid "A three column grid layout for blog posts and archive pages."
+msgstr "Een grid met drie kolommen voor blogberichten en archiefpagina's."
+
+#: patterns/template-index-list.php
+msgctxt "Pattern title"
+msgid "Post Loop List"
+msgstr "Post-loop lijst"
+
+#: patterns/template-page-404.php
+msgctxt "Pattern title"
+msgid "404 Page"
+msgstr "404-pagina"
+
+#: patterns/template-page-404.php
+msgctxt "Pattern description"
+msgid "The page that shows when no other page is found."
+msgstr "De pagina die verschijnt wanneer geen andere pagina is gevonden."
+
+#: patterns/template-page-404.php:16
+msgid "Page Not Found"
+msgstr "Pagina niet gevonden"
+
+#: patterns/template-page-404.php:20
+msgid "Unfortunately, the page you are looking for no longer exists, or has been moved. Please try searching for your content below."
+msgstr "Helaas bestaat de pagina die je zoekt niet meer of is verplaatst. Probeer hieronder te zoeken."
+
+#: patterns/template-page-404.php:24
+#: patterns/template-page-search.php:18
+msgid "Search"
+msgstr "Zoeken"
+
+#: patterns/template-page-archive.php
+msgctxt "Pattern title"
+msgid "Archive Page"
+msgstr "Archiefpagina"
+
+#: patterns/template-page-archive.php
+msgctxt "Pattern description"
+msgid "The archive template for blog categories, tags, and other taxonomies."
+msgstr "De archieftemplate voor blogcategorieen, tags en andere taxonomieen."
+
+#: patterns/template-page-centered.php
+msgctxt "Pattern title"
+msgid "Page Centered"
+msgstr "Pagina gecentreerd"
+
+#: patterns/template-page-centered.php
+msgctxt "Pattern description"
+msgid "A centered page layout where the content sits in a container in the middle of the page."
+msgstr "Een gecentreerde pagina-indeling waarbij de content in het midden van de pagina staat."
+
+#: patterns/template-page-centered.php:30
+#: patterns/template-post-centered.php:48
+#: patterns/template-post-left-sidebar.php:62
+#: patterns/template-post-right-sidebar.php:58
+#: patterns/template-post-wide.php:48
+msgid "Comments"
+msgstr "Reacties"
+
+#: patterns/template-page-full.php
+msgctxt "Pattern title"
+msgid "Page Full Width No Title"
+msgstr "Pagina volledige breedte zonder titel"
+
+#: patterns/template-page-full.php
+msgctxt "Pattern description"
+msgid "This full page layout with no title, perfect for building pages with patterns."
+msgstr "Deze paginalay-out op volledige breedte zonder titel, ideaal om pagina's met patronen op te bouwen."
+
+#: patterns/template-page-left-sidebar.php
+msgctxt "Pattern title"
+msgid "Page Left Sidebar"
+msgstr "Pagina met linker zijbalk"
+
+#: patterns/template-page-left-sidebar.php
+msgctxt "Pattern description"
+msgid "A page layout with a left sidebar and right content area."
+msgstr "Een paginalay-out met een linker zijbalk en rechter content."
+
+#: patterns/template-page-right-sidebar.php
+msgctxt "Pattern title"
+msgid "Page Right Sidebar"
+msgstr "Pagina met rechter zijbalk"
+
+#: patterns/template-page-right-sidebar.php
+msgctxt "Pattern description"
+msgid "A page layout with a right sidebar and left content area."
+msgstr "Een paginalay-out met een rechter zijbalk en linker content."
+
+#: patterns/template-page-search.php
+msgctxt "Pattern title"
+msgid "Search Page"
+msgstr "Zoekpagina"
+
+#: patterns/template-page-search.php
+msgctxt "Pattern description"
+msgid "The search results template."
+msgstr "De zoekresultaat-template."
+
+#: patterns/template-page-search.php:18
+msgid "Search site..."
+msgstr "Zoek op site..."
+
+#: patterns/template-page-search.php:41
+msgid "Add text or blocks that will display when a query returns no results."
+msgstr "Voeg tekst of blokken toe die worden getoond wanneer een zoekopdracht geen resultaten oplevert."
+
+#: patterns/template-page-search.php:42
+msgid "Sorry, nothing was found for that search term."
+msgstr "Sorry, er is niets gevonden voor die zoekterm."
+
+#: patterns/template-page-wide-no-title.php
+msgctxt "Pattern title"
+msgid "Page Wide No Title"
+msgstr "Pagina breed zonder titel"
+
+#: patterns/template-page-wide-no-title.php
+msgctxt "Pattern description"
+msgid "This wide page layout with no title, perfect for building pages with patterns."
+msgstr "Deze brede paginalay-out zonder titel, perfect om pagina's met patronen te bouwen."
+
+#: patterns/template-page-wide.php
+msgctxt "Pattern title"
+msgid "Page Wide"
+msgstr "Pagina breed"
+
+#: patterns/template-page-wide.php
+msgctxt "Pattern description"
+msgid "This wide page layout where the content sits in a wide container that stretches the page area."
+msgstr "Deze brede paginalay-out waarbij de content in een brede container staat die het pagina-gebied vult."
+
+#: patterns/template-post-centered.php
+msgctxt "Pattern title"
+msgid "Post Centered"
+msgstr "Bericht gecentreerd"
+
+#: patterns/template-post-centered.php
+msgctxt "Pattern description"
+msgid "A centered post layout where the content sits in a container in the middle of the page."
+msgstr "Een gecentreerde berichtlay-out waarbij de content in het midden van de pagina staat."
+
+#: patterns/template-post-left-sidebar.php
+msgctxt "Pattern title"
+msgid "Post Left Sidebar"
+msgstr "Bericht met linker zijbalk"
+
+#: patterns/template-post-left-sidebar.php
+msgctxt "Pattern description"
+msgid "A post layout with a left sidebar and right content area."
+msgstr "Een berichtlay-out met een linker zijbalk en rechter content."
+
+#: patterns/template-post-right-sidebar.php
+msgctxt "Pattern title"
+msgid "Post Right Sidebar"
+msgstr "Bericht met rechter zijbalk"
+
+#: patterns/template-post-right-sidebar.php
+msgctxt "Pattern description"
+msgid "A post layout with a right sidebar and left content area."
+msgstr "Een berichtlay-out met een rechter zijbalk en linker content."
+
+#: patterns/template-post-wide.php
+msgctxt "Pattern title"
+msgid "Post Wide"
+msgstr "Bericht breed"
+
+#: patterns/template-post-wide.php
+msgctxt "Pattern description"
+msgid "A wide post layout where the content sits in a wide container that stretches the page area."
+msgstr "Een brede berichtlay-out waarbij de content in een brede container staat die het pagina-gebied vult."
+
+#: patterns/testimonial-card.php
+msgctxt "Pattern title"
+msgid "Client Testimonial Card"
+msgstr "Klanttestimonialkaart"
+
+#: patterns/testimonial-card.php
+msgctxt "Pattern description"
+msgid "Single testimonial with client quote, name, and company"
+msgstr "Enkele testimonial met klantquote, naam en bedrijf"
+
+#: patterns/testimonial-card.php:16
+msgid "What Our Clients Say"
+msgstr "Wat onze klanten zeggen"
+
+#: patterns/testimonial-card.php:24
+msgid "Working with this team has transformed our approach to customer acquisition. We've seen a 150% increase in qualified leads within just three months."
+msgstr "Samenwerken met dit team heeft onze aanpak voor klantacquisitie veranderd. We zagen binnen drie maanden 150% meer gekwalificeerde leads."
+
+#: patterns/testimonial-card.php:32
+msgid "Sarah Mitchell"
+msgstr "Sarah Mitchell"
+
+#: patterns/testimonial-card.php:36
+msgid "CEO, TechVenture Solutions"
+msgstr "CEO, TechVenture Solutions"
+
+#: patterns/testimonial-card.php:44
+msgid "The ROI speaks for itself. Professional service, strategic thinking, and genuine partnership. Couldn't recommend them more highly."
+msgstr "De ROI spreekt voor zich. Professionele service, strategisch denken en een echte samenwerking. Kan ze niet genoeg aanraden."
+
+#: patterns/testimonial-card.php:56
+msgid "Director of Marketing, Global Innovations Inc."
+msgstr "Marketingdirector, Global Innovations Inc."
+
+#: patterns/three-column-feature-grid.php
+msgctxt "Pattern title"
+msgid "Three-Column Feature Grid"
+msgstr "Drie kolommen featuregrid"
+
+#: patterns/three-column-feature-grid.php
+msgctxt "Pattern description"
+msgid "Showcase your key features or services in a clean three-column layout"
+msgstr "Laat je belangrijkste features of diensten zien in een strakke lay-out met drie kolommen"
+
+#: patterns/three-column-feature-grid.php:20
+msgid "Why Businesses Choose Us"
+msgstr "Waarom bedrijven voor ons kiezen"
+
+#: patterns/three-column-feature-grid.php:24
+msgid "We deliver results that matter to your bottom line"
+msgstr "Wij leveren resultaten die tellen voor je winst"
+
+#: patterns/three-column-feature-grid.php:32
+msgid "Proven Results"
+msgstr "Bewezen resultaten"
+
+#: patterns/three-column-feature-grid.php:36
+msgid "Track record of delivering measurable ROI and business growth for our clients across diverse industries."
+msgstr "Bewezen staat van dienst met meetbare ROI en groei voor klanten in diverse sectoren."
+
+#: patterns/three-column-feature-grid.php:44
+msgid "Expert Team"
+msgstr "Expertteam"
+
+#: patterns/three-column-feature-grid.php:48
+msgid "Dedicated professionals with deep industry expertise committed to understanding and achieving your business goals."
+msgstr "Toegewijde professionals met diepe branchekennis die jouw bedrijfsdoelen begrijpen en realiseren."
+
+#: patterns/three-column-feature-grid.php:56
+msgid "Ongoing Support"
+msgstr "Doorlopende support"
+
+#: patterns/three-column-feature-grid.php:60
+msgid "Continuous optimization and support to ensure your investment delivers sustained value and competitive advantage."
+msgstr "Continue optimalisatie en support zodat je investering blijvende waarde en een concurrentievoordeel oplevert."
+
+#: styles/gray-gold.json
+msgctxt "Style variation name"
+msgid "Gray & Gold"
+msgstr "Grijs & goud"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Duotone name"
+msgid "Primary"
+msgstr "Primair"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Duotone name"
+msgid "Secondary"
+msgstr "Secundair"
+
+#: styles/gray-gold.json
+msgctxt "Duotone name"
+msgid "Accent"
+msgstr "Accent"
+
+#: styles/gray-gold.json
+msgctxt "Duotone name"
+msgid "Neutral"
+msgstr "Neutraal"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Duotone name"
+msgid "High Contrast"
+msgstr "Hoog contrast"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Brand"
+msgstr "Merk"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Brand Accent"
+msgstr "Merkaccent"
+
+#: styles/gray-gold.json
+msgctxt "Color name"
+msgid "Brand Alt"
+msgstr "Merk alternatief"
+
+#: styles/gray-gold.json
+msgctxt "Color name"
+msgid "Brand Alt Accent"
+msgstr "Merk alternatief accent"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "Contrast"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast Accent"
+msgstr "Contrastaccent"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "Basis"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Base Accent"
+msgstr "Basisaccent"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Tint"
+msgstr "Tint"
+
+#: styles/gray-gold.json
+msgctxt "Color name"
+msgid "Border Base"
+msgstr "Basisrand"
+
+#: styles/gray-gold.json
+msgctxt "Color name"
+msgid "Border Contrast"
+msgstr "Contrastrand"
+
+#: styles/gray-gold.json
+msgctxt "Font family name"
+msgid "Bodoni Moda"
+msgstr "Bodoni Moda"
+
+#: styles/gray-gold.json
+msgctxt "Font family name"
+msgid "Bodoni Moda Italic"
+msgstr "Bodoni Moda Italic"
+
+#: styles/gray-gold.json
+#: styles/orange.json
+#: theme.json
+msgctxt "Font family name"
+msgid "Open Sans"
+msgstr "Open Sans"
+
+#: styles/orange.json
+msgctxt "Style variation name"
+msgid "Orange"
+msgstr "Oranje"
+
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Brand Dark"
+msgstr "Merk donker"
+
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Border Light"
+msgstr "Rand licht"
+
+#: styles/orange.json
+#: theme.json
+msgctxt "Color name"
+msgid "Border Dark"
+msgstr "Rand donker"
+
+#: styles/orange.json
+#: theme.json
+msgctxt "Font family name"
+msgid "Mona Sans"
+msgstr "Mona Sans"
+
+#: styles/orange.json
+#: theme.json
+msgctxt "Font family name"
+msgid "Bitter"
+msgstr "Bitter"
+
+#: styles/orange.json
+#: theme.json
+msgctxt "Font family name"
+msgid "Monospace"
+msgstr "Monospace"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Teal"
+msgstr "Blauwgroen"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Ocean"
+msgstr "Oceaan"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Charcoal"
+msgstr "Houtskool"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Extra Large Dark"
+msgstr "Extra groot donker"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Large Dark"
+msgstr "Groot donker"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Medium Dark"
+msgstr "Medium donker"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Small Dark"
+msgstr "Klein donker"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Extra Large Light"
+msgstr "Extra groot licht"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Large Light"
+msgstr "Groot licht"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Medium Light"
+msgstr "Medium licht"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Small Light"
+msgstr "Klein licht"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr "Klein"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Medium"
+msgstr "Middel"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr "Groot"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Extra Large"
+msgstr "Extra groot"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2xl"
+msgstr "2xl"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Small"
+msgstr "Extra klein"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Klein"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Base"
+msgstr "Basis"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Middel"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Groot"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Extra groot"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Extra Large"
+msgstr "Extra extra groot"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "Header"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Footer"

@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Contact Information Section
- * Slug: elayne/contact-info
+ * Title: Contact Details Section
+ * Slug: elayne/contact-details
  * Description: Professional contact section with office hours, phone, email, and address in a modern card layout
  * Categories: elayne/call-to-action
- * Keywords: contact, address, phone, email, office, hours, location
+ * Keywords: contact, address, phone, email, office, hours, location, details
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/call-to-action"],"patternName":"elayne/contact-info","name":"Contact Information Section"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/call-to-action"],"patternName":"elayne/contact-details","name":"Contact Details Section"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
