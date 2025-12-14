@@ -4,17 +4,17 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.6
+Stable tag: 1.0.0-beta.7
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 15 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 20 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 15 Professional Patterns - All 100% original, created specifically for Elayne
+* 20 Professional Patterns - All 100% original, created specifically for Elayne
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
 * Industry-Specific Content - Pattern sets optimized for spa, real estate, and professional services
@@ -39,22 +39,28 @@ Launch a professional business website with the Elayne WordPress block theme! El
 * contact-info - Contact information display
 * contact-side-by-side - Two-column contact layout
 
-**Features & Services (2)**
+**Features & Services (3)**
 * three-column-feature-grid - Grid layout for feature showcasing
 * services-feature-cards - Service cards with icons and descriptions
+* agency-services-showcase - Four-column agency services grid with custom icons
 
 **Team & Testimonials (3)**
 * team-grid - Team member grid with photos and bios
 * testimonial-card - Single testimonial card layout
-* client-reviews-orange - Client reviews with accent styling
+* client-success-stories - Enhanced testimonials with ratings and success metrics
 
 **Statistics (2)**
 * stats-showcase - Statistics display with visual emphasis
 * stats-list - List-style statistics presentation
 
-**Blog/Posts (2)**
+**Blog/Posts (3)**
 * blog-post-columns-portrait - Portrait-oriented blog grid
 * post-featured-two-column - Featured post two-column layout
+* author-box - Author biography with avatar and social links
+
+**Support & Information (2)**
+* faq - Collapsible FAQ section with accordion functionality
+* career-opportunities - Job listings for recruitment pages
 
 = Layout Templates =
 
@@ -131,6 +137,17 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.7 - 12/14/25 =
+* ADDED: faq pattern - Collapsible FAQ section with accordion-style expandable questions and answers.
+* ADDED: agency-services-showcase pattern - Four-column service grid with custom SVG icons (Web Design, Marketing, Strategy, E-commerce).
+* ADDED: career-opportunities pattern - Job listings section with detailed position cards for recruitment pages.
+* ADDED: client-success-stories pattern - Enhanced testimonial layout with star ratings and client information.
+* ADDED: author-box pattern - Author biography card with avatar, bio, and social links.
+* ADDED: Four custom service icons (icon-service-web.svg, icon-service-marketing.svg, icon-service-strategy.svg, icon-service-commerce.svg).
+* CHANGED: Pattern renamings - feature-boxes-with-icon-dark → agency-services-showcase, testimonials-with-big-text → client-success-stories.
+* CHANGED: Style updates to agency-services-showcase and career-opportunities patterns.
+* TECHNICAL: Pattern count increased from 15 to 20 original patterns.
 
 = 1.0.0-beta.6 - 12/13/25 =
 * ADDED: pricing-comparison pattern - Three-column pricing grid with checkmark lists and highlighted recommended plan.

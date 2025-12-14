@@ -7,6 +7,69 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.7] - 2025-12-14
+
+### Added - New patterns for agencies and professional services
+
+**New Patterns:**
+- **faq** (slug: `elayne/faq`) - Collapsible FAQ section with accordion-style questions
+  - Uses WordPress Details block for native accordion functionality
+  - 9 pre-written agency-focused questions and answers
+  - Rounded card design on tertiary background
+  - Contact CTA section at bottom
+  - Perfect for service pages, support sections, and informational content
+- **agency-services-showcase** (slug: `elayne/agency-services-showcase`) - Four-column service grid with custom icons
+  - Showcases Web Design & Development, Digital Marketing, Brand Strategy, and E-commerce
+  - Custom SVG icons for each service
+  - Grid layout with responsive cards
+  - Professional presentation for agency offerings
+- **career-opportunities** (slug: `elayne/career-opportunities`) - Job listings section for recruitment
+  - Detailed job position cards with role, type, and location
+  - Multiple job listings with consistent formatting
+  - Call-to-action for applications
+  - Ideal for careers/jobs pages
+- **client-success-stories** (slug: `elayne/client-success-stories`) - Enhanced testimonial layout with ratings
+  - Featured main testimonial with star ratings
+  - Supporting testimonials grid
+  - Client names, titles, and company information
+  - Professional presentation for case studies and reviews
+- **author-box** (slug: `elayne/author-box`) - Author biography card
+  - Avatar with rounded border
+  - Author name and bio
+  - Social media links (Twitter, LinkedIn, Facebook, Instagram, GitHub)
+  - Perfect for blog posts and team pages
+
+**New Assets:**
+- Added 4 custom service icons in `patterns/images/`:
+  - `icon-service-web.svg` - Web design and development icon
+  - `icon-service-marketing.svg` - Digital marketing icon
+  - `icon-service-strategy.svg` - Brand strategy icon
+  - `icon-service-commerce.svg` - E-commerce solutions icon
+
+### Changed - Pattern renamings for clarity
+
+**Pattern Renamings:**
+- **feature-boxes-with-icon-dark** → **agency-services-showcase** (slug: `elayne/agency-services-showcase`)
+  - Better reflects professional agency use case
+  - More descriptive name for service showcases
+- **testimonials-with-big-text** → **client-success-stories** (slug: `elayne/client-success-stories`)
+  - Clearer purpose for success stories and case studies
+  - Emphasizes results and client satisfaction
+
+### Changed - Pattern refinements
+
+**Pattern Improvements:**
+- **agency-services-showcase** - Style updates for improved visual hierarchy
+- **career-opportunities** - Enhanced spacing and layout improvements
+- Various minor pattern refinements for consistency
+
+### Technical
+
+- Pattern count increased from 15 to 20 original patterns
+- All new patterns follow Elayne design system
+- Service icons optimized for web delivery (SVG format)
+- Improved pattern metadata and categorization
+
 ## [1.0.0-beta.6] - 2025-12-13
 
 ### Added - New pricing pattern and checkmark list style

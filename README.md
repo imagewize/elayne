@@ -4,18 +4,18 @@
 
 **Design better, build faster, publish sooner.** Elayne is a professional WordPress block theme designed for modern businesses, offering sophisticated patterns and conversion-optimized layouts — no coding or expensive page builders required.
 
-## ✨ Why Choose Elayne?
+## Why Choose Elayne?
 
-- **🎯 Business-Focused**: Professional patterns specifically designed for corporate websites, service providers, and modern businesses
-- **🚀 Industry-Specific Content**: Pattern sets optimized for spa, real estate, and professional services
-- **💼 Conversion Optimized**: Built-in patterns designed to convert visitors into customers
-- **📱 Mobile-First Design**: Every pattern is responsive and optimized for all devices
-- **🎨 Clean, Modern Aesthetic**: Sophisticated design with professional color palettes and typography
-- **🛠️ Full Site Editing**: Seamlessly integrated with WordPress's native site editor — drag, drop, and publish
+- **Business-Focused**: Professional patterns specifically designed for corporate websites, service providers, and modern businesses
+- **Industry-Specific Content**: Pattern sets optimized for spa, real estate, and professional services
+- **Conversion Optimized**: Built-in patterns designed to convert visitors into customers
+- **Mobile-First Design**: Every pattern is responsive and optimized for all devices
+- **Clean, Modern Aesthetic**: Sophisticated design with professional color palettes and typography
+- **Full Site Editing**: Seamlessly integrated with WordPress's native site editor — drag, drop, and publish
 
 Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to create stunning professional websites using the latest Full Site Editing features.
 
-## 🚀 Quick Start
+## Quick Start
 
 | Action | Link |
 | --- | --- |
@@ -27,18 +27,18 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 - WordPress 6.6 or later
 - PHP 8.0 or later
 
-## 📦 Installation
+## Installation
 
 1. Download the theme
 2. Upload to `/wp-content/themes/elayne/`
 3. Activate via **Appearance → Themes**
 4. Start designing in **Appearance → Editor**
 
-## 🎨 Features & Capabilities
+## Features & Capabilities
 
 ### Pattern Library
 
-Elayne includes **20+ professionally designed patterns** organized into categories:
+Elayne includes **25+ professionally designed patterns** organized into categories:
 
 **Hero Sections (3)**
 - `hero-modern` - Contemporary hero with bold typography
@@ -56,24 +56,30 @@ Elayne includes **20+ professionally designed patterns** organized into categori
 - `contact-info` - Contact information display
 - `contact-side-by-side` - Two-column contact layout
 
-**Features & Services (2)**
+**Features & Services (3)**
 - `three-column-feature-grid` - Grid layout for feature showcasing
 - `services-feature-cards` - Service cards with icons and descriptions
+- `agency-services-showcase` - Four-column agency services grid with custom icons
 
 **Team & Testimonials (3)**
 - `team-grid` - Team member grid with photos and bios
 - `testimonial-card` - Single testimonial card layout
-- `client-reviews` - Client reviews with accent styling
+- `client-success-stories` - Enhanced testimonials with ratings and success metrics
 
 **Statistics (2)**
 - `stats-showcase` - Statistics display with visual emphasis
 - `stats-list` - List-style statistics presentation
 
-**Blog/Posts (4)**
+**Blog/Posts (5)**
 - `blog-post-columns` - Classic blog grid layout
 - `blog-post-columns-portrait` - Portrait-oriented blog grid
 - `blog-post-list` - List-style blog layout
 - `post-featured-two-column` - Featured post two-column layout
+- `author-box` - Author biography with avatar and social links
+
+**Support & Information (2)**
+- `faq` - Collapsible FAQ section with accordion functionality
+- `career-opportunities` - Job listings for recruitment pages
 
 **Page Templates (11)**
 - `template-page-full` - Full-width page template
@@ -94,7 +100,7 @@ Elayne includes **20+ professionally designed patterns** organized into categori
 - `template-post-left-sidebar` - Post with left sidebar
 - `template-post-right-sidebar` - Post with right sidebar
 
-### 🎯 Typography & Design
+### Typography & Design
 
 - **Primary Font**: Open Sans (variable weight, 300-800)
 - **Fluid Typography**: Responsive font scaling with clamp()
@@ -102,7 +108,7 @@ Elayne includes **20+ professionally designed patterns** organized into categori
 - **Custom Shadows**: Multiple shadow presets for depth
 - **Custom Image Sizes**: Optimized for portrait and landscape layouts
 
-### 🚀 Technical Features
+### Technical Features
 
 - **WordPress 6.6+** required
 - **PHP 8.0+** required
@@ -111,7 +117,7 @@ Elayne includes **20+ professionally designed patterns** organized into categori
 - **Custom image sizes** for optimized layouts
 - **Pattern categories** for easy organization
 
-## 🛠️ For Developers
+## For Developers
 
 ### Project Structure
 
@@ -122,7 +128,7 @@ elayne/
 │   └── styles/         # Block-specific styles
 ├── languages/          # Translation files
 ├── parts/              # Template parts (header, footer)
-├── patterns/           # Block patterns (36 patterns + templates)
+├── patterns/           # Block patterns (41 patterns + templates)
 ├── templates/          # Page templates (index, single, page)
 ├── functions.php       # Theme setup and functionality
 ├── style.css           # Theme stylesheet and metadata
@@ -137,7 +143,7 @@ elayne/
 - **No Build Required**: Works out of the box
 - **Custom Pattern Categories**: Organized pattern library
 
-## 📚 Working with Full Site Editing
+## Working with Full Site Editing
 
 ### Site Editor
 
@@ -181,17 +187,17 @@ Elayne registers custom pattern categories:
 - Contact
 - Posts
 
-## 📄 License
+## License
 
 Elayne is licensed under the [GNU General Public License v2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
 
-## 🤝 Community & Support
+## Community & Support
 
 - **Support**: [imagewize.com/support](https://imagewize.com/support)
 - **Documentation**: [imagewize.com/themes/elayne](https://imagewize.com/themes/elayne)
 - **Website**: [imagewize.com](https://imagewize.com)
 
-## 👨‍💻 About
+## About
 
 Elayne is created and maintained by [Jasper Frumau](https://imagewize.com).
 
@@ -201,9 +207,6 @@ Elayne is created and maintained by [Jasper Frumau](https://imagewize.com).
 - **Open Sans Font**: Licensed under SIL Open Font License 1.1
 - **Base Architecture**: Inspired by modern WordPress block theme standards
 
----
-
-**Version**: 1.0.0-beta.5
-**Last Updated**: December 2025
+---add 
 
 **[View Demo](https://demo.imagewize.com)** | **[Visit Imagewize](https://imagewize.com)**
