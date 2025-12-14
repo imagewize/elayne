@@ -16,6 +16,7 @@
 
 ### Local Development with Trellis VM
 - Uses **Trellis VM** (Lima-based, NOT Vagrant)
+- **Protocol**: Uses **HTTP** (not HTTPS) - Access via `http://demo.imagewize.test/` (NOT `https://`)
 - **Access VM**: `cd ~/code/imagewize.com/trellis && trellis vm shell`
 - **File Sync**: Automatic, real-time sync between host (`~/code/imagewize.com/demo/`) and VM (`/srv/www/demo.imagewize.com/`)
 - **No manual file copying needed** - edits on host immediately available in VM
@@ -104,6 +105,14 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
 - **Reference**: See `hero-two-tone.php` for working example
 - **Wrong**: `<!-- wp:group {"align":"full","layout":{"type":"constrained","contentSize":"1200px"}} -->`
 - **Correct**: `<!-- wp:group {"align":"full","layout":{"type":"default"}} -->` with nested constrained groups inside
+
+#### Page Template Layout for Full-Width Patterns (CRITICAL)
+- **Problem**: Page templates using `"layout":{"type":"default"}` on `post-content` prevent full-width patterns from breaking out
+- **Root cause**: `default` layout constrains all children, while `constrained` layout allows `alignfull` to break out
+- **Solution**: Page templates must use `{"layout":{"type":"constrained"}}` on `post-content` block
+- **Fixed templates**: `template-page-wide.php`, `template-page-wide-no-title.php` updated to use constrained layout
+- **Correct template**: `template-page-full.php` already correct (used by `page-no-title.html`)
+- **Reference**: Based on Ollie theme's approach
 
 ## Testing Guidelines
 - Manual verification is primary: activate the theme, add each pattern to a page, and confirm layout/spacing matches design.

@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.8] - 2025-12-15
+
+### Changed - Full-width layout refinements
+
+- Added horizontal padding to full-width patterns (client reviews, newsletter CTA, hero variants, pricing) to preserve side gutters on smaller screens.
+- Updated wide page templates to use constrained post content layouts so alignfull patterns can break out correctly without unintended max-width constraints.
+
+### Technical - Alignfull support inside post content
+
+- Added layout helper CSS that lets alignfull blocks inside post content span edge-to-edge while respecting global padding.
+
 ## [1.0.0-beta.7] - 2025-12-14
 
 ### Added - New patterns for agencies and professional services

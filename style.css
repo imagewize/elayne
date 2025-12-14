@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 1.0.0-beta.7
+Version: 1.0.0-beta.8
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: elayne
@@ -65,6 +65,14 @@ body.no-partial-underline .wp-block-post-title.has-partial-underline-center.has-
 
 body.no-partial-underline .wp-block-post-title.has-partial-underline-center.has-partial-underline-third::after {
     display: none;
+}
+
+/* Layout helpers: allow alignfull blocks inside post content to bleed edge-to-edge while root padding stays on */
+.wp-site-blocks .wp-block-post-content .alignfull {
+    margin-left: calc(-1 * var(--wp--style--root--padding-left, 0px));
+    margin-right: calc(-1 * var(--wp--style--root--padding-right, 0px));
+    width: calc(100% + var(--wp--style--root--padding-left, 0px) + var(--wp--style--root--padding-right, 0px));
+    max-width: 100vw;
 }
 
 /* Checkmark list style for pricing tables */

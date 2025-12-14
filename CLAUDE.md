@@ -58,7 +58,9 @@ elayne/
 ### Local Development with Trellis VM
 The demo site uses **Trellis VM** (Lima-based, NOT Vagrant) for local WordPress environment:
 
-**Note:** If using this theme in a different project, adjust paths (`~/code/imagewize.com` → your project path, `demo.imagewize.com` → your domain).
+**Important Notes:**
+- **Protocol**: Trellis VM uses **HTTP** (not HTTPS) - Access via `http://demo.imagewize.test/` (NOT `https://`)
+- **Path adjustment**: If using this theme in a different project, adjust paths (`~/code/imagewize.com` → your project path, `demo.imagewize.com` → your domain)
 
 **Accessing the VM:**
 ```bash
@@ -412,6 +414,15 @@ All spacing uses responsive clamp():
 - **Inner content groups**: Use `"layout":{"type":"constrained","contentSize":"XXXpx"}` to center and limit width
 - This pattern matches WordPress core blocks and Ollie/modern block themes
 - See `hero-two-tone.php` for a working reference example
+
+**Page Template Layout for Full-Width Patterns (CRITICAL):**
+- **Problem**: Page templates that use `"layout":{"type":"default"}` on `post-content` block prevent full-width patterns from breaking out properly
+- **Root Cause**: The `default` layout type constrains all child blocks, while `constrained` layout type allows `alignfull` blocks to break out
+- **Solution**: Page templates must use `"layout":{"type":"constrained"}` on the `post-content` block
+- **Fixed templates**: `template-page-wide.php`, `template-page-wide-no-title.php` both updated to use `constrained` layout
+- **Correct template**: `template-page-full.php` already uses `constrained` layout (this is the template used by `page-no-title.html`)
+- **Reference**: Based on Ollie theme's `template-page-full.php` approach
+- **When editing page templates**: Always verify `post-content` block uses `{"layout":{"type":"constrained"}}`, NOT `{"layout":{"type":"default"}}`
 
 ### Modifying theme.json
 1. **Always validate JSON** - Invalid JSON breaks entire theme
