@@ -207,6 +207,5 @@ Elayne is created and maintained by [Jasper Frumau](https://imagewize.com).
 - **Open Sans Font**: Licensed under SIL Open Font License 1.1
 - **Base Architecture**: Inspired by modern WordPress block theme standards
 
----add 
 
 **[View Demo](https://demo.imagewize.com)** | **[Visit Imagewize](https://imagewize.com)**
