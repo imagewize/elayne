@@ -9,14 +9,14 @@
 			"defaultPalette": false,
 			"duotone": [
 				{
-					"name": "Primary",
+					"name": "Ink",
 					"slug": "primary",
-					"colors": ["#0891B2", "#CFFAFE"]
+					"colors": ["#0B1324", "#FDFBF7"]
 				},
 				{
-					"name": "Secondary",
+					"name": "Sand",
 					"slug": "secondary",
-					"colors": ["#1F2937", "#F3F4F6"]
+					"colors": ["#5B6474", "#F3EDE6"]
 				},
 				{
 					"name": "High Contrast",
@@ -26,71 +26,71 @@
 			],
 			"gradients": [
 				{
-					"name": "Teal",
-					"slug": "teal",
-					"gradient": "linear-gradient(135deg, #0891B2, #06B6D4)"
+					"name": "Ink to Navy",
+					"slug": "ink-to-navy",
+					"gradient": "linear-gradient(135deg, #0B1324, #1F2937)"
 				},
 				{
-					"name": "Ocean",
-					"slug": "ocean",
-					"gradient": "linear-gradient(135deg, #155E75, #0891B2)"
+					"name": "Misty Blue",
+					"slug": "misty-blue",
+					"gradient": "linear-gradient(135deg, #1F2937, #C5D0E6)"
 				},
 				{
-					"name": "Charcoal",
-					"slug": "charcoal",
-					"gradient": "linear-gradient(135deg, #1F2937, #4B5563)"
+					"name": "Sand Glow",
+					"slug": "sand-glow",
+					"gradient": "linear-gradient(135deg, #FDFBF7, #E5DFD6)"
 				}
 			],
 			"palette": [
 				{
 					"name": "Brand",
 					"slug": "primary",
-					"color": "#0891B2"
+					"color": "#1F2937"
 				},
 				{
 					"name": "Brand Accent",
 					"slug": "primary-accent",
-					"color": "#CFFAFE"
+					"color": "#C5D0E6"
 				},
 				{
 					"name": "Brand Dark",
 					"slug": "primary-dark",
-					"color": "#155E75"
+					"color": "#111827"
 				},
 				{
 					"name": "Contrast",
 					"slug": "main",
-					"color": "#1F2937"
+					"color": "#0B1324"
 				},
 				{
 					"name": "Contrast Accent",
 					"slug": "main-accent",
-					"color": "#6B7280"
+					"color": "#5B6474"
 				},
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": "#ffffff"
+					"color": "#FDFBF7"
 				},
 				{
 					"name": "Base Accent",
 					"slug": "secondary",
-					"color": "#9CA3AF"
+					"color": "#DAD3C8"
 				},
 				{
 					"name": "Tint",
 					"slug": "tertiary",
-					"color": "#F3F4F6"
+					"color": "#F3EDE6"
 				},
 				{
 					"name": "Border Light",
 					"slug": "border-light",
-					"color": "#E5E7EB"
+					"color": "#EBE5DD"
 				},
 				{
 					"name": "Border Dark",
 					"slug": "border-dark",
-					"color": "#D1D5DB"
+					"color": "#D3CBC0"
 				}
 			],
 			"link": true

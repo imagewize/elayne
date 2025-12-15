@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.9
+Stable tag: 1.0.0-beta.10
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -137,6 +137,15 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.10 - 12/15/25 =
+* ADDED: Three new color scheme styles - Teal Bay, Denim Copper, and Forest Sage accessible via Appearance > Editor > Styles.
+* CHANGED: Updated default theme.json color palette to use warmer "Ink & Sand" color scheme (softer ink blue and warm sand tones).
+* CHANGED: Original teal color scheme now available as "Teal Bay" style variation.
+* FIXED: template-page-wide-no-title.php now allows full-width (alignfull) patterns to work correctly.
+* FIXED: Removed incorrect alignwide wrapper that was boxing content and preventing edge-to-edge patterns.
+* TECHNICAL: Implemented WordPress theme.json styles system for color variations (styles/teal-bay.json, styles/denim-copper.json, styles/forest-sage.json).
+* TECHNICAL: Wide No Title template now properly supports full-width pattern layouts for landing pages.
 
 = 1.0.0-beta.9 - 12/15/25 =
 * ADDED: New "3xl" font size (xxx-large) to theme.json with responsive clamp sizing (5rem to 9rem).

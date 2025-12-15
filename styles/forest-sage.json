@@ -1,0 +1,103 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Forest Sage",
+	"settings": {
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [
+				{
+					"name": "Forest",
+					"slug": "primary",
+					"colors": ["#1E2A1F", "#FAFBF7"]
+				},
+				{
+					"name": "Sage",
+					"slug": "secondary",
+					"colors": ["#6A7B6A", "#EEF3EA"]
+				},
+				{
+					"name": "Accent",
+					"slug": "accent",
+					"colors": ["#2F4F4F", "#C4D7C6"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
+			"gradients": [
+				{
+					"name": "Pine",
+					"slug": "pine",
+					"gradient": "linear-gradient(135deg, #1F3535, #2F4F4F)"
+				},
+				{
+					"name": "Dawn",
+					"slug": "dawn",
+					"gradient": "linear-gradient(135deg, #FAFBF7, #D9E3D4)"
+				},
+				{
+					"name": "Sage Mist",
+					"slug": "sage-mist",
+					"gradient": "linear-gradient(135deg, #6A7B6A, #C4D7C6)"
+				}
+			],
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "primary",
+					"color": "#2F4F4F"
+				},
+				{
+					"name": "Brand Accent",
+					"slug": "primary-accent",
+					"color": "#C4D7C6"
+				},
+				{
+					"name": "Brand Dark",
+					"slug": "primary-dark",
+					"color": "#1F3535"
+				},
+				{
+					"name": "Contrast",
+					"slug": "main",
+					"color": "#1E2A1F"
+				},
+				{
+					"name": "Contrast Accent",
+					"slug": "main-accent",
+					"color": "#6A7B6A"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#FAFBF7"
+				},
+				{
+					"name": "Base Accent",
+					"slug": "secondary",
+					"color": "#D9E3D4"
+				},
+				{
+					"name": "Tint",
+					"slug": "tertiary",
+					"color": "#EEF3EA"
+				},
+				{
+					"name": "Border Light",
+					"slug": "border-light",
+					"color": "#E2E8DE"
+				},
+				{
+					"name": "Border Dark",
+					"slug": "border-dark",
+					"color": "#C0CBBF"
+				}
+			]
+		}
+	}
+}

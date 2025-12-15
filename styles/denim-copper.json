@@ -1,0 +1,98 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Denim Copper",
+	"settings": {
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [
+				{
+					"name": "Denim",
+					"slug": "primary",
+					"colors": ["#0B1226", "#FCFCFF"]
+				},
+				{
+					"name": "Copper",
+					"slug": "secondary",
+					"colors": ["#C26B2C", "#FCFCFF"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
+			"gradients": [
+				{
+					"name": "Denim",
+					"slug": "denim",
+					"gradient": "linear-gradient(135deg, #0F1E4D, #1E3A8A)"
+				},
+				{
+					"name": "Copper Glow",
+					"slug": "copper-glow",
+					"gradient": "linear-gradient(135deg, #C26B2C, #F3D1B5)"
+				},
+				{
+					"name": "Sky",
+					"slug": "sky",
+					"gradient": "linear-gradient(135deg, #C2D4FF, #F1F4FB)"
+				}
+			],
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "primary",
+					"color": "#1E3A8A"
+				},
+				{
+					"name": "Brand Accent",
+					"slug": "primary-accent",
+					"color": "#C2D4FF"
+				},
+				{
+					"name": "Brand Dark",
+					"slug": "primary-dark",
+					"color": "#0F1E4D"
+				},
+				{
+					"name": "Contrast",
+					"slug": "main",
+					"color": "#0B1226"
+				},
+				{
+					"name": "Contrast Accent",
+					"slug": "main-accent",
+					"color": "#5C6E99"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#FCFCFF"
+				},
+				{
+					"name": "Base Accent",
+					"slug": "secondary",
+					"color": "#D5DDF1"
+				},
+				{
+					"name": "Tint",
+					"slug": "tertiary",
+					"color": "#F1F4FB"
+				},
+				{
+					"name": "Border Light",
+					"slug": "border-light",
+					"color": "#E2E8F5"
+				},
+				{
+					"name": "Border Dark",
+					"slug": "border-dark",
+					"color": "#C7D0E8"
+				}
+			]
+		}
+	}
+}
