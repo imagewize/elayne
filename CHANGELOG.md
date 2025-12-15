@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.10] - 2025-12-15
+
+### Added - Color styles
+
+- Added three new color scheme styles: Teal Bay, Denim Copper, and Forest Sage.
+- Each style provides a complete alternative color palette accessible via Appearance > Editor > Styles.
+
+### Changed - Default color palette
+
+- Updated default theme.json color palette to use warmer "Ink & Sand" color scheme.
+- Changed from bright teal/cyan to softer ink blue and warm sand tones for more sophisticated default appearance.
+- Original teal color scheme now available as "Teal Bay" style variation.
+
+### Fixed - Template layout issues
+
+- Fixed template-page-wide-no-title.php to allow full-width (alignfull) patterns to work correctly.
+- Removed incorrect alignwide wrapper that was boxing content and preventing edge-to-edge patterns.
+- Template now matches template-page-full.php structure with vertical padding but no horizontal constraints.
+
+### Technical - Template architecture
+
+- Wide No Title template now properly supports full-width pattern layouts for landing pages.
+- Maintains vertical spacing (top/bottom padding) while allowing horizontal edge-to-edge content.
+- Implemented WordPress theme.json styles system for color variations.
+- Created styles/teal-bay.json, styles/denim-copper.json, and styles/forest-sage.json.
+
 ## [1.0.0-beta.9] - 2025-12-15
 
 ### Added - Typography enhancements
