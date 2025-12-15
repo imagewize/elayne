@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.8
+Stable tag: 1.0.0-beta.9
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -137,6 +137,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.9 - 12/15/25 =
+* ADDED: New "3xl" font size (xxx-large) to theme.json with responsive clamp sizing (5rem to 9rem).
+* CHANGED: Simplified client-success-stories pattern markup with cleaner wrapper structure.
+* CHANGED: Completed full-width pattern padding consistency across all alignfull patterns.
+* TECHNICAL: Improved pattern code quality with cleaner markup and better maintainability.
 
 = 1.0.0-beta.8 - 12/15/25 =
 * CHANGED: Added horizontal padding to full-width patterns (client reviews, newsletter CTA, hero variants, pricing) to keep side gutters on smaller screens.

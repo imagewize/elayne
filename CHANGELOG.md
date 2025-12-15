@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.9] - 2025-12-15
+
+### Added - Typography enhancements
+
+- Added new "3xl" font size (xxx-large) to theme.json with responsive clamp sizing (5rem to 9rem).
+
+### Changed - Pattern markup cleanup
+
+- Simplified client-success-stories pattern markup with cleaner wrapper structure and removed redundant inline styles.
+- Completed full-width pattern padding consistency - ensured all full-width patterns have horizontal padding on left/right sides.
+
+### Technical - Full-width pattern refinements
+
+- All alignfull patterns now consistently include horizontal padding (left/right) for proper edge gutters on all screen sizes.
+- Improved pattern code quality with cleaner markup and better maintainability.
+
 ## [1.0.0-beta.8] - 2025-12-15
 
 ### Changed - Full-width layout refinements

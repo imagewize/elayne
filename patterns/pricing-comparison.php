@@ -8,8 +8,8 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/features","elayne/call-to-action"],"patternName":"elayne/pricing-comparison","name":"Pricing Comparison"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
+<!-- wp:group {"metadata":{"categories":["elayne/features","elayne/call-to-action"],"patternName":"elayne/pricing-comparison","name":"Pricing Comparison"},"className":"alignfull has-base-background-color has-background"} -->
+<div class="wp-block-group alignfull has-base-background-color has-background">
 	<!-- wp:spacer -->
 	<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
