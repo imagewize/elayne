@@ -301,6 +301,7 @@ All spacing uses responsive clamp():
 - **How to avoid**: When creating block comments, ensure `style` object only contains CSS-related properties (spacing, border, typography). Move other attributes outside `style` to the root level
 - **Common root-level attributes**: `align`, `backgroundColor`, `textColor`, `gradient`, `layout`, `className`, `anchor`, `metadata`
 - **Style object properties**: `spacing`, `border`, `color`, `typography`, `dimensions`, `shadow`
+- **Metadata + wrapper sync**: If the block comment includes `metadata` (categories/patternName/name) or padding/margin values, ensure the rendered wrapper `div` matches (including left/right padding) to avoid Gutenberg recovery diffs and validation warnings.
 
 **Responsive Grid Layouts (CRITICAL):**
 - **Use grid layout with `minimumColumnWidth`** for truly responsive multi-column patterns (3→2→1 columns)
@@ -362,7 +363,15 @@ All spacing uses responsive clamp():
 
 **Pattern Image Guidelines:**
 - **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
-- Always use direct file paths: `<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/filename.webp`
+- **ALWAYS use PHP template methods** for image paths as recommended in [WordPress documentation](https://developer.wordpress.org/themes/patterns/using-php-in-patterns/):
+  ```php
+  <?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/filename.webp
+  ```
+  Or alternatively:
+  ```php
+  <?php echo esc_url( get_theme_file_uri( 'patterns/images/filename.webp' ) ); ?>
+  ```
+- **Security requirement**: Always wrap template methods in `esc_url()` for proper URL escaping
 - Hardcoded IDs cause performance issues: database queries for non-existent media, blinking/flashing effects, console errors, and validation failures
 - All pattern images should be stored in `patterns/images/` directory
 - Removing hardcoded IDs ensures patterns work consistently across all WordPress installations
