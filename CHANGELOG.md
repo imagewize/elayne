@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.13] - 2025-12-16
+
+### Added - New event pattern and category
+
+- Added new "Events" category (elayne/events) for event-related patterns.
+- Added **event-upcoming-grid** pattern (slug: `elayne/event-upcoming-grid`) - Responsive 3-column event grid
+  - Displays upcoming events with date badges, time, location, and registration buttons
+  - Calendar-style date display with month, day, and weekday
+  - Event type badges (Online/In-person) with custom styling
+  - Time display with timezone support
+  - Location and capacity information with emoji icons
+  - Dual CTA buttons (Register/Details, Get tickets/Details, Save seat/Details)
+  - Card-based design with rounded corners and borders
+  - Perfect for workshops, webinars, conferences, and community events
+  - Fully translatable content with proper text domain
+
+### Changed - Documentation organization
+
+- Moved theme documentation files from `demo/web/app/themes/elayne/docs/` to `docs/elayne/`
+  - Follows same pattern as other theme documentation in project root
+  - Includes pattern analysis, implementation summaries, and planning documents
+  - Better organization for project-wide documentation access
+
+### Technical
+
+- Pattern count increased from 20 to 21 original patterns
+- Event pattern features responsive grid layout with `minimumColumnWidth: 20rem`
+- All event content properly localized with `esc_html_e()` for translations
+- Event category added to theme pattern registration in functions.php
+
 ## [1.0.0-beta.12] - 2025-12-16
 
 ### Added - New pattern category

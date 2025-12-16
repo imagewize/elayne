@@ -11,7 +11,7 @@
 - **Conversion Optimized**: Built-in patterns designed to convert visitors into customers
 - **Mobile-First Design**: Every pattern is responsive and optimized for all devices
 - **Clean, Modern Aesthetic**: Sophisticated design with professional color palettes and typography
-- **Full Site Editing**: Seamlessly integrated with WordPress's native site editor — drag, drop, and publish
+- **True No-Code Solution**: Seamlessly integrated with WordPress's native site editor — drag, drop, and publish
 
 Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to create stunning professional websites using the latest Full Site Editing features.
 
@@ -38,110 +38,92 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 ### Pattern Library
 
-Elayne includes **25+ professionally designed patterns** organized into categories:
+Elayne includes **44 professionally designed patterns** organized into categories:
 
-**Hero Sections (3)**
-- `hero-modern` - Contemporary hero with bold typography
-- `hero-two-tone` - Split background hero with contrasting colors
-- `hero-with-cta` - Hero section with prominent call-to-action
+**Hero Sections**
+- Contemporary hero with bold typography (light and dark variations)
+- Split background hero with contrasting colors
+- Hero section with prominent call-to-action
 
-**Headers & Footers (4)**
-- `header-light-with-standard-menu` - Classic navigation header
-- `header-light-with-hamburger-menu` - Mobile-optimized hamburger menu
-- `footer-light` - Professional light footer
-- `footer-simple` - Minimal footer layout
+**Headers & Footers**
+- Classic navigation header
+- Mobile-optimized hamburger menu
+- Professional standard footer
+- Minimal footer layout
 
-**Call-to-Action & Contact (3)**
-- `cta-newsletter` - Newsletter signup with email capture
-- `contact-info` - Contact information display
-- `contact-side-by-side` - Two-column contact layout
+**Call-to-Action & Contact**
+- Newsletter signup with email capture
+- Contact information display with office hours and location
+- Two-column contact layout
 
-**Features & Services (3)**
-- `three-column-feature-grid` - Grid layout for feature showcasing
-- `services-feature-cards` - Service cards with icons and descriptions
-- `agency-services-showcase` - Four-column agency services grid with custom icons
+**Features & Services**
+- Grid layout for feature showcasing
+- Service cards with icons and descriptions
+- Four-column agency services grid with custom icons
+- Three-column pricing comparison with feature comparison and highlighted recommended plan
 
-**Team & Testimonials (3)**
-- `team-grid` - Team member grid with photos and bios
-- `testimonial-card` - Single testimonial card layout
-- `client-success-stories` - Enhanced testimonials with ratings and success metrics
+**Team & Testimonials**
+- Team member grid with photos and bios
+- Single testimonial card layout
+- Enhanced testimonials with ratings and success metrics
+- Client reviews with profile images
 
-**Statistics (2)**
-- `stats-showcase` - Statistics display with visual emphasis
-- `stats-list` - List-style statistics presentation
+**Statistics**
+- Statistics display with visual emphasis
+- List-style statistics presentation
 
-**Blog/Posts (5)**
-- `blog-post-columns` - Classic blog grid layout
-- `blog-post-columns-portrait` - Portrait-oriented blog grid
-- `blog-post-list` - List-style blog layout
-- `post-featured-two-column` - Featured post two-column layout
-- `author-box` - Author biography with avatar and social links
+**Blog & Posts**
+- Classic blog grid layout
+- Portrait-oriented blog grid
+- List-style blog layout
+- Featured post two-column layout
+- Author biography with avatar and social links
 
-**Support & Information (2)**
-- `faq` - Collapsible FAQ section with accordion functionality
-- `career-opportunities` - Job listings for recruitment pages
+**Support & Information**
+- Collapsible FAQ section with accordion functionality
+- Job listings for recruitment pages
 
-**Page Templates (11)**
-- `template-page-full` - Full-width page template
-- `template-page-wide` - Wide page template
-- `template-page-wide-no-title` - Wide page without title
-- `template-page-centered` - Centered content layout
-- `template-page-left-sidebar` - Page with left sidebar
-- `template-page-right-sidebar` - Page with right sidebar
-- `template-page-404` - Custom 404 error page
-- `template-page-archive` - Archive page template
-- `template-page-search` - Search results template
-- `template-index-grid` - Grid-style index template
-- `template-index-list` - List-style index template
+**Events**
+- Responsive 3-column event grid with date badges and registration buttons
 
-**Post Templates (4)**
-- `template-post-centered` - Centered post layout
-- `template-post-wide` - Wide post layout
-- `template-post-left-sidebar` - Post with left sidebar
-- `template-post-right-sidebar` - Post with right sidebar
+**Page Templates**
+- Full-width page template
+- Wide page template
+- Wide page without title
+- Centered content layout
+- Page with left sidebar
+- Page with right sidebar
+- Custom 404 error page
+- Archive page template
+- Search results template
+- Grid-style index template
+- List-style index template
+
+**Post Templates**
+- Centered post layout
+- Wide post layout
+- Post with left sidebar
+- Post with right sidebar
+
+### Style Variations
+
+Switch your entire site's look with one click using pre-configured color palettes:
+
+- **Gray & Gold** - Sophisticated gray tones with elegant gold accents
+- **Denim & Copper** - Deep denim blues paired with warm copper highlights
+- **Forest & Sage** - Natural forest greens with calming sage tones
+- **Orange** - Vibrant orange palette for energetic brands
+- **Teal Bay** - Professional teal and bay blue combination
+
+Change styles instantly in **Appearance → Editor → Styles**
 
 ### Typography & Design
 
 - **Primary Font**: Open Sans (variable weight, 300-800)
-- **Fluid Typography**: Responsive font scaling with clamp()
-- **Professional Color Palette**: Business-focused color scheme
+- **Fluid Typography**: Responsive font scaling that adapts to screen size
+- **Professional Color Palettes**: Multiple pre-configured color schemes
 - **Custom Shadows**: Multiple shadow presets for depth
 - **Custom Image Sizes**: Optimized for portrait and landscape layouts
-
-### Technical Features
-
-- **WordPress 6.6+** required
-- **PHP 8.0+** required
-- **Full Site Editing (FSE)** compatible
-- **Block theme** architecture
-- **Custom image sizes** for optimized layouts
-- **Pattern categories** for easy organization
-
-## For Developers
-
-### Project Structure
-
-```
-elayne/
-├── assets/
-│   ├── fonts/          # Open Sans and other fonts
-│   └── styles/         # Block-specific styles
-├── languages/          # Translation files
-├── parts/              # Template parts (header, footer)
-├── patterns/           # Block patterns (41 patterns + templates)
-├── templates/          # Page templates (index, single, page)
-├── functions.php       # Theme setup and functionality
-├── style.css           # Theme stylesheet and metadata
-└── theme.json          # Global styles and settings
-```
-
-### Theme Features
-
-- **Translation Ready**: Full internationalization support
-- **Modern PHP 8.0+**: Clean, well-documented code
-- **Child Theme Support**: Extend without modifying core
-- **No Build Required**: Works out of the box
-- **Custom Pattern Categories**: Organized pattern library
 
 ## Working with Full Site Editing
 
@@ -162,20 +144,53 @@ Access the visual site builder at **Appearance → Editor** to:
 
 ### Global Styles
 
-Powered by `theme.json`, customize:
+Powered by theme.json, customize:
 - Color palettes
 - Typography scales
 - Spacing and layout
 - Block defaults
 
+## For Developers
+
+### Technical Requirements
+
+- **WordPress 6.6+** required
+- **PHP 8.0+** required
+- **Full Site Editing (FSE)** compatible
+- **Block theme** architecture
+
+### Theme Features
+
+- **Translation Ready**: Full internationalization support
+- **Modern PHP 8.0+**: Clean, well-documented code
+- **Child Theme Support**: Extend without modifying core
+- **No Build Required**: Works out of the box
+- **Custom Pattern Categories**: Organized pattern library
+
+### Project Structure
+
+```
+elayne/
+├── assets/
+│   ├── fonts/          # Open Sans and other fonts
+│   └── styles/         # Block-specific styles
+├── languages/          # Translation files
+├── parts/              # Template parts (header, footer)
+├── patterns/           # Block patterns (44 patterns + templates)
+├── templates/          # Page templates (index, single, page)
+├── functions.php       # Theme setup and functionality
+├── style.css           # Theme stylesheet and metadata
+└── theme.json          # Global styles and settings
+```
+
 ### Custom Image Sizes
 
-- `elayne-portrait-small` (380×570) - 2:3 aspect ratio
-- `elayne-portrait-medium` (380×507) - 3:4 aspect ratio
-- `elayne-portrait-large` (380×475) - 4:5 aspect ratio
-- `elayne-single-hero` (700×400) - 16:9-ish landscape
+- Portrait Small (380×570) - 2:3 aspect ratio
+- Portrait Medium (380×507) - 3:4 aspect ratio
+- Portrait Large (380×475) - 4:5 aspect ratio
+- Single Hero (700×400) - 16:9-ish landscape
 
-## Pattern Categories
+### Pattern Categories
 
 Elayne registers custom pattern categories:
 - Hero
@@ -185,6 +200,8 @@ Elayne registers custom pattern categories:
 - Team
 - Statistics
 - Contact
+- Cards
+- Events
 - Posts
 
 ## License

@@ -4,17 +4,17 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.12
+Stable tag: 1.0.0-beta.13
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 20 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 21 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 20 Professional Patterns - All 100% original, created specifically for Elayne
+* 21 Professional Patterns - All 100% original, created specifically for Elayne
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
 * Industry-Specific Content - Pattern sets optimized for spa, real estate, and professional services
@@ -61,6 +61,9 @@ Launch a professional business website with the Elayne WordPress block theme! El
 **Support & Information (2)**
 * faq - Collapsible FAQ section with accordion functionality
 * career-opportunities - Job listings for recruitment pages
+
+**Events (1)**
+* event-upcoming-grid - Responsive 3-column event grid with date badges and registration buttons
 
 = Layout Templates =
 
@@ -137,6 +140,14 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.13 - 12/16/25 =
+* ADDED: New "Events" category (elayne/events) for event-related patterns.
+* ADDED: event-upcoming-grid pattern - Responsive 3-column event grid with date badges, time, location, and registration buttons.
+* ADDED: Calendar-style date display (month, day, weekday), event type badges (Online/In-person), and dual CTA buttons.
+* CHANGED: Moved theme documentation files from demo/web/app/themes/elayne/docs/ to docs/elayne/ for better project organization.
+* TECHNICAL: Pattern count increased from 20 to 21 original patterns.
+* TECHNICAL: Event pattern features responsive grid layout with minimumColumnWidth: 20rem and full translation support.
 
 = 1.0.0-beta.12 - 12/16/25 =
 * ADDED: New "Cards" category (elayne/card) for reusable card-style patterns like author boxes and contact cards.
