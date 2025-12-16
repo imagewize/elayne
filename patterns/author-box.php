@@ -3,7 +3,7 @@
  * Title: Author Box
  * Slug: elayne/author-box
  * Description: Author biography section with avatar, name, bio, and social links
- * Categories: elayne/card, elayne/blog
+ * Categories: elayne/card
  * Keywords: author, bio, profile, user, writer, contributor
  * Viewport Width: 800
  * Block Types:

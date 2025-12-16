@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.12] - 2025-12-16
+
+### Added - New pattern category
+
+- Added "Cards" category (elayne/card) for reusable card-style patterns.
+- Provides better organization for card components like author boxes, contact cards, and other card-based layouts.
+
+### Changed - Pattern category cleanup
+
+- Fixed duplicate pattern categories by standardizing all patterns to use namespaced categories (elayne/*).
+- Updated hero patterns to use elayne/hero category instead of WordPress core categories (banner, featured).
+- Updated blog/post patterns to use elayne/posts category instead of core "posts" category.
+- Updated author-box pattern to use elayne/card category for better categorization.
+- Updated contact-side-by-side pattern to use elayne/contact category.
+
+### Fixed - Pattern organization
+
+- Resolved duplicate category display issue in pattern library.
+- All patterns now properly organized under registered theme categories.
+- Eliminated confusion from mixing WordPress core categories with theme categories.
+
+### Technical - Category system
+
+- Pattern categories now consistently use theme namespace (elayne/*) for custom patterns.
+- WordPress core categories (header, footer) still used appropriately for template parts.
+- Improved pattern discoverability and organization in Site Editor.
+
 ## [1.0.0-beta.11] - 2025-12-16
 
 ### Changed - Header and pattern refinements

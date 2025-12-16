@@ -48,6 +48,7 @@ function elayne_pattern_categories() {
 		'elayne/team'           => array( 'label' => __( 'Team', 'elayne' ) ),
 		'elayne/statistics'     => array( 'label' => __( 'Statistics', 'elayne' ) ),
 		'elayne/contact'        => array( 'label' => __( 'Contact', 'elayne' ) ),
+		'elayne/card'           => array( 'label' => __( 'Cards', 'elayne' ) ),
 		'elayne/pages'          => array( 'label' => __( 'Pages', 'elayne' ) ),
 		'elayne/posts'          => array( 'label' => __( 'Posts', 'elayne' ) ),
 	);

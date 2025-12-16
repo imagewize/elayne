@@ -4,7 +4,7 @@
  * Slug: elayne/template-index-grid
  * Template Types: front-page, home, index
  * Description: A three column grid layout for blog posts and archive pages.
- * Categories: posts
+ * Categories: elayne/posts
  * Keywords: blog, posts, query, loop
  * Viewport Width: 1500
  * Inserter: false

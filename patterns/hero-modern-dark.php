@@ -2,7 +2,7 @@
 /**
  * Title: Modern Hero - Dark
  * Slug: elayne/hero-modern-dark
- * Categories: banner, featured
+ * Categories: elayne/hero
  * Keywords: hero, banner, cta, header, dark
  * Block Types: core/group
  * Description: A modern centered hero with dark gradient background, headline, tagline, CTA buttons and image below
