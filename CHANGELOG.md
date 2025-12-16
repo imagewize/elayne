@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.11] - 2025-12-16
+
+### Changed - Header and pattern refinements
+
+- Removed horizontal padding from header patterns (header-standard, header-mobile) to allow full-width alignment.
+- Updated client-success-stories pattern with improved styling:
+  - Adjusted star rating font sizes (large → medium for main testimonial, large → base for supporting testimonials).
+  - Removed border styling from testimonial cards for cleaner appearance.
+  - Changed secondary color references to main-accent for better consistency.
+  - Added is-style-rounded class to avatar images.
+  - Fixed hardcoded image URLs to use proper template directory function.
+- Updated agency-services-showcase pattern with additional wrapper group for improved layout structure.
+- Adjusted header navigation font size (medium → base) in header-mobile pattern.
+
+### Technical - Pattern markup improvements
+
+- Improved semantic HTML structure with proper wrapper elements.
+- Enhanced compatibility with theme color palette by using consistent color tokens.
+- Better responsive behavior for header elements with full-width alignment.
+
 ## [1.0.0-beta.10] - 2025-12-15
 
 ### Added - Color styles

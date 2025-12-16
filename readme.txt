@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.10
+Stable tag: 1.0.0-beta.11
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -137,6 +137,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.11 - 12/16/25 =
+* CHANGED: Removed horizontal padding from header patterns (header-standard, header-mobile) for full-width alignment.
+* CHANGED: Updated client-success-stories pattern with improved styling - adjusted font sizes, removed border styling, updated color references.
+* CHANGED: Updated agency-services-showcase pattern with additional wrapper group for better layout structure.
+* CHANGED: Adjusted header navigation font size in header-mobile pattern for better consistency.
+* TECHNICAL: Improved semantic HTML structure and enhanced theme color palette compatibility.
 
 = 1.0.0-beta.10 - 12/15/25 =
 * ADDED: Three new color scheme styles - Teal Bay, Denim Copper, and Forest Sage accessible via Appearance > Editor > Styles.
