@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.11
+Stable tag: 1.0.0-beta.12
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -137,6 +137,16 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0-beta.12 - 12/16/25 =
+* ADDED: New "Cards" category (elayne/card) for reusable card-style patterns like author boxes and contact cards.
+* CHANGED: Fixed duplicate pattern categories by standardizing all patterns to use namespaced categories (elayne/*).
+* CHANGED: Updated hero patterns (hero-modern-light, hero-modern-dark) to use elayne/hero instead of core categories (banner, featured).
+* CHANGED: Updated blog/post patterns (blog-post-columns, blog-post-list, template-index-grid) to use elayne/posts instead of core "posts" category.
+* CHANGED: Updated author-box pattern to use elayne/card category for better organization.
+* CHANGED: Updated contact-side-by-side pattern to use elayne/contact category.
+* FIXED: Resolved duplicate category display issue in pattern library (previously showed "Posts 2" and other duplicates).
+* TECHNICAL: Pattern categories now consistently use theme namespace (elayne/*) while WordPress core categories (header, footer) remain for template parts.
 
 = 1.0.0-beta.11 - 12/16/25 =
 * CHANGED: Removed horizontal padding from header patterns (header-standard, header-mobile) for full-width alignment.

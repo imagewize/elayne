@@ -3,7 +3,7 @@
  * Title: Blog Post Columns (Portrait)
  * Slug: elayne/blog-post-columns
  * Description: Three-column blog post grid with portrait-oriented featured images
- * Categories: posts
+ * Categories: elayne/posts
  * Keywords: blog, posts, query, pages, portrait, grid
  * Viewport Width: 1500
  * Block Types:

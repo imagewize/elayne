@@ -3,7 +3,7 @@
  * Title: Contact Side by Side
  * Slug: elayne/contact-side-by-side
  * Description: Contact information displayed in a side-by-side layout with grid blocks
- * Categories: elayne/card
+ * Categories: elayne/contact
  * Keywords: card, contact, social, links, email, company, side-by-side
  * Viewport Width: 1920
  * Block Types:

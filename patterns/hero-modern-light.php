@@ -2,7 +2,7 @@
 /**
  * Title: Modern Hero - Light
  * Slug: elayne/hero-modern-light
- * Categories: banner, featured
+ * Categories: elayne/hero
  * Keywords: hero, banner, cta, header, light
  * Block Types: core/group
  * Description: A modern centered hero with light gradient background, headline, tagline, CTA buttons and image below

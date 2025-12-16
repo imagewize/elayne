@@ -3,7 +3,7 @@
  * Title: Blog Post List
  * Slug: elayne/blog-post-list
  * Description: A single column list layout for blog posts and archive pages.
- * Categories: posts
+ * Categories: elayne/posts
  * Keywords: blog, posts, query, loop, list
  * Viewport Width: 1500
  * Block Types: core/query
