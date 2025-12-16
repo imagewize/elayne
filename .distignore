@@ -1,0 +1,39 @@
+# Directories (need /* suffix for zip -x@ to exclude recursively)
+.git/*
+.github/*
+
+# Development files
+.DS_Store
+.gitignore
+.distignore
+rsync
+phpcs.xml
+composer.json
+composer.lock
+package.json
+
+# Documentation and scripts
+AGENTS.md
+CLAUDE.md
+README.md
+*.sh
+
+# Translation source files (not part of distribution)
+messages.mo
+
+# Temporary files
+ziDHI0kh
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/*
+.idea/*
+*.sublime-project
+*.sublime-workspace
+
+# Logs and temporary files
+*.log
+.htaccess
+__MACOSX
