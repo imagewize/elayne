@@ -38,16 +38,17 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 ### Pattern Library
 
-Elayne includes **44 professionally designed patterns** organized into categories:
+Elayne includes **34 professionally designed patterns** (plus 15 page and post templates) organized into categories:
 
 **Hero Sections**
-- Contemporary hero with bold typography (light and dark variations)
+- Contemporary hero with bold typography (dark variation)
+- Contemporary hero with bold typography (light variation)
 - Split background hero with contrasting colors
 - Hero section with prominent call-to-action
 
 **Headers & Footers**
-- Classic navigation header
-- Mobile-optimized hamburger menu
+- Mobile-optimized hamburger menu header
+- Desktop-optimized header with inline navigation
 - Professional standard footer
 - Minimal footer layout
 
@@ -55,12 +56,14 @@ Elayne includes **44 professionally designed patterns** organized into categorie
 - Newsletter signup with email capture
 - Contact information display with office hours and location
 - Two-column contact layout
+- Modular CTA card component for landing pages, blog sidebars, and conversion-focused sections
 
 **Features & Services**
 - Grid layout for feature showcasing
 - Service cards with icons and descriptions
 - Four-column agency services grid with custom icons
 - Three-column pricing comparison with feature comparison and highlighted recommended plan
+- Client logos display with responsive grid for social proof
 
 **Team & Testimonials**
 - Team member grid with photos and bios
@@ -85,6 +88,13 @@ Elayne includes **44 professionally designed patterns** organized into categorie
 
 **Events**
 - Responsive 3-column event grid with date badges and registration buttons
+
+**Portfolio**
+- Masonry-style portfolio grid showcasing creative work with category filters
+- Comprehensive project case study with structured storytelling - challenge, approach, and results
+
+**Pages**
+- Pre-launch or maintenance page with countdown and email capture
 
 **Page Templates**
 - Full-width page template
@@ -202,6 +212,8 @@ Elayne registers custom pattern categories:
 - Contact
 - Cards
 - Events
+- Portfolio
+- Pages
 - Posts
 
 ## License
@@ -224,5 +236,20 @@ Elayne is created and maintained by [Jasper Frumau](https://imagewize.com).
 - **Open Sans Font**: Licensed under SIL Open Font License 1.1
 - **Base Architecture**: Inspired by modern WordPress block theme standards
 
+### Pattern Images
+
+All pattern images are GPL-compatible. See [readme.txt](readme.txt) Copyright section for complete attribution details including:
+
+**Workspace Images (CC0 Public Domain)**
+- computer-hands.webp - Wacom Computer by Negative Space (StockSnap.io)
+- desktop.webp - Mac Desktop by Andrew Pons (StockSnap.io)
+- guy-laptop.webp - Code Coding by Anita Peeples (StockSnap.io)
+- wellness.webp - Meditating with Candles by Elina Fairytale (Pexels)
+
+**Team Avatars (Pexels License)**
+- avatar-1.webp through avatar-7.webp - Professional headshots (Pexels)
+
+**Logo Images**
+- logo-1.webp through logo-6.webp - Geometric designs by theme author
 
 **[View Demo](https://demo.imagewize.com)** | **[Visit Imagewize](https://imagewize.com)**

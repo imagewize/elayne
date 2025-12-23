@@ -7,6 +7,94 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2025-12-23
+
+### Added - New Portfolio and Pages Patterns
+
+**New Portfolio Category Patterns:**
+- **portfolio-grid-masonry** (slug: `elayne/portfolio-grid-masonry`) - Masonry-style portfolio grid
+  - Showcases creative work in visually engaging grid layout
+  - Category filter pills (All, Branding, Web Design, Development, Marketing)
+  - Variable height cards (320px and 480px) for dynamic masonry effect
+  - Project cards with overlay titles and category tags
+  - Rounded corners (16px) and professional card design
+  - Perfect for agencies, designers, and creative professionals
+  - Uses existing pattern images (desktop.webp, computer-hands.webp, guy-laptop.webp, wellness.webp)
+
+- **case-study-detailed** (slug: `elayne/case-study-detailed`) - Comprehensive project case study
+  - Structured storytelling format: Challenge, Approach, Results
+  - Hero cover image with project title and metadata
+  - Three-phase approach section with numbered steps
+  - Results metrics display (3-column stats grid)
+  - Client testimonial quote with border accent
+  - Project gallery (WordPress gallery block)
+  - Services provided tags (pill-style badges)
+  - Full-width CTA section at bottom
+  - Perfect for showcasing detailed client work and case studies
+
+**New Pages Category Patterns:**
+- **page-coming-soon** (slug: `elayne/page-coming-soon`) - Pre-launch/maintenance page
+  - Full-height centered layout (100vh min-height)
+  - Site logo at top (200px width)
+  - Large "Coming Soon" heading (4rem)
+  - Countdown timer display (Days, Hours, Minutes, Seconds)
+  - Email notification signup CTA
+  - Social media links (Twitter, LinkedIn, Instagram)
+  - Clean, minimal design on base background
+  - Perfect for product launches and website maintenance
+
+**New Call-to-Action Patterns:**
+- **card-call-to-action** (slug: `elayne/card-call-to-action`) - Modular CTA component
+  - Compact card design (400px max width)
+  - Shadow and rounded corners for depth
+  - Centered heading and description
+  - Full-width button (100% width)
+  - Perfect for landing pages, blog sidebars, and conversion sections
+  - Reusable component for various page contexts
+
+**New Features Patterns:**
+- **client-logo-wall** (slug: `elayne/client-logo-wall`) - Client logo showcase
+  - "Trusted by Leading Brands" heading section
+  - Responsive grid layout (minimum 10rem columns)
+  - 12 logo placeholders in duotone effect
+  - Rounded card container (8px border-radius)
+  - "View Our Portfolio" CTA button
+  - Builds credibility and social proof
+  - Uses existing logo images (logo-1 through logo-6)
+
+**New Template:**
+- **landing-page.html** template - Full-screen landing page without header/footer
+  - Referenced by `template-landing-page.php` pattern
+  - Zero margins on main container
+  - Perfect for coming soon pages and dedicated landing pages
+  - Allows full creative control without site chrome
+
+**New Pattern Image:**
+- Added `wellness.webp` - Meditation/wellness scene for portfolio masonry pattern
+
+### Changed - Pattern count and categories
+
+- Pattern count increased from 21 to 26 original content patterns (34 total including templates)
+- Added new "Portfolio" category (elayne/portfolio) with 2 patterns
+- Added new "Pages" category (elayne/pages) with 1 pattern
+- Enhanced "Call-to-Action" category with card component
+- Enhanced "Features" category with client logo wall
+
+### Changed - Documentation and assets
+
+- Updated README.md with new pattern descriptions and categorization
+- Optimized readme-banner.png size (1.45MB → 236KB, 84% reduction)
+- Updated pattern listings in documentation
+
+### Technical
+
+- Total patterns: 50 files (34 content patterns + 16 template patterns)
+- New template type: Landing Page (full-screen, no header/footer)
+- All new patterns follow Elayne design system
+- Fully translatable with proper text domain
+- Responsive grid layouts with modern CSS
+- Pattern categories properly registered in functions.php
+
 ## [1.0.0-beta.13] - 2025-12-16
 
 ### Added - New event pattern and category
