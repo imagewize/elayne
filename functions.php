@@ -50,6 +50,7 @@ function elayne_pattern_categories() {
 		'elayne/contact'        => array( 'label' => __( 'Contact', 'elayne' ) ),
 		'elayne/card'           => array( 'label' => __( 'Cards', 'elayne' ) ),
 		'elayne/events'         => array( 'label' => __( 'Events', 'elayne' ) ),
+		'elayne/portfolio'      => array( 'label' => __( 'Portfolio', 'elayne' ) ),
 		'elayne/pages'          => array( 'label' => __( 'Pages', 'elayne' ) ),
 		'elayne/posts'          => array( 'label' => __( 'Posts', 'elayne' ) ),
 	);

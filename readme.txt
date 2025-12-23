@@ -4,17 +4,17 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0-beta.13
+Stable tag: 1.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 21 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 34 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 21 Professional Patterns - All 100% original, created specifically for Elayne
+* 34 Professional Patterns - All 100% original, created specifically for Elayne
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
 * Industry-Specific Content - Pattern sets optimized for spa, real estate, and professional services
@@ -27,34 +27,43 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-**Header Patterns (1)**
-* header-light-with-hamburger-menu - Header with hamburger navigation and social icons
+**Header Patterns (2)**
+* header-mobile - Header with hamburger navigation and social icons
+* header-standard - Desktop-optimized header with inline navigation
 
-**Hero Patterns (2)**
+**Hero Patterns (4)**
+* hero-modern-dark - Contemporary hero with bold typography (dark variation)
+* hero-modern-light - Contemporary hero with bold typography (light variation)
 * hero-two-tone - Split background hero with contrasting colors
 * hero-with-cta - Hero section with prominent call-to-action
 
-**Call-to-Action & Contact (3)**
+**Call-to-Action & Contact (4)**
 * cta-newsletter - Newsletter signup with email capture
 * contact-info - Contact information display
 * contact-side-by-side - Two-column contact layout
+* card-call-to-action - Modular CTA component for landing pages, blog sidebars, and conversion-focused sections
 
-**Features & Services (3)**
+**Features & Services (5)**
 * three-column-feature-grid - Grid layout for feature showcasing
 * services-feature-cards - Service cards with icons and descriptions
 * agency-services-showcase - Four-column agency services grid with custom icons
+* pricing-comparison - Three-column pricing grid with feature comparison and highlighted recommended plan
+* client-logo-wall - Display client logos to build credibility and social proof with responsive grid layout
 
-**Team & Testimonials (3)**
+**Team & Testimonials (4)**
 * team-grid - Team member grid with photos and bios
 * testimonial-card - Single testimonial card layout
 * client-success-stories - Enhanced testimonials with ratings and success metrics
+* client-reviews - Client reviews with profile images
 
 **Statistics (2)**
 * stats-showcase - Statistics display with visual emphasis
 * stats-list - List-style statistics presentation
 
-**Blog/Posts (3)**
+**Blog/Posts (5)**
+* blog-post-columns - Classic blog grid layout
 * blog-post-columns-portrait - Portrait-oriented blog grid
+* blog-post-list - List-style blog layout
 * post-featured-two-column - Featured post two-column layout
 * author-box - Author biography with avatar and social links
 
@@ -64,6 +73,17 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 **Events (1)**
 * event-upcoming-grid - Responsive 3-column event grid with date badges and registration buttons
+
+**Portfolio (2)**
+* portfolio-grid-masonry - Masonry-style portfolio grid showcasing creative work with category filters
+* case-study-detailed - Comprehensive project case study with structured storytelling - challenge, approach, and results
+
+**Footer Patterns (2)**
+* footer-standard - Professional standard footer
+* footer-simple - Minimal footer layout
+
+**Pages (1)**
+* page-coming-soon - Pre-launch or maintenance page with countdown and email capture
 
 = Layout Templates =
 
@@ -140,6 +160,21 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.0 - 12/23/25 =
+* ADDED: portfolio-grid-masonry pattern - Masonry-style portfolio grid with category filters and variable height cards.
+* ADDED: case-study-detailed pattern - Comprehensive project case study with Challenge/Approach/Results structure, metrics, and testimonial.
+* ADDED: page-coming-soon pattern - Pre-launch/maintenance page with countdown timer and email capture.
+* ADDED: card-call-to-action pattern - Modular CTA component for landing pages and sidebars.
+* ADDED: client-logo-wall pattern - Client logo showcase with responsive grid layout for social proof.
+* ADDED: landing-page.html template - Full-screen template without header/footer for dedicated landing pages.
+* ADDED: New "Portfolio" category (elayne/portfolio) with 2 patterns for creative work showcases.
+* ADDED: New "Pages" category (elayne/pages) for full-page layouts like coming soon pages.
+* ADDED: wellness.webp pattern image for portfolio examples.
+* CHANGED: Pattern count increased from 21 to 26 original content patterns (34 total including templates).
+* CHANGED: Optimized readme-banner.png file size (1.45MB → 236KB, 84% reduction).
+* CHANGED: Updated README.md with new pattern descriptions and categorization.
+* TECHNICAL: Total of 50 pattern files (34 content + 16 templates) with modern responsive grid layouts.
 
 = 1.0.0-beta.13 - 12/16/25 =
 * ADDED: New "Events" category (elayne/events) for event-related patterns.
@@ -291,6 +326,14 @@ GNU General Public License for more details.
 - **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 - **Attribution:** Not required (CC0)
 - **Description:** Team working together in colorful office space with laptops
+
+### wellness.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/meditating-with-candles-and-incense-3822621/)
+- **Title:** Meditating with Candles and Incense
+- **Photographer:** [Elina Fairytale](https://www.pexels.com/@elly-fairytale/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Person meditating in lotus position with candles and incense, calm wellness setting
 
 ## Team Member Avatars (Pexels License - GPL-Compatible)
 

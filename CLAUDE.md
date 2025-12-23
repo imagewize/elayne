@@ -363,6 +363,7 @@ All spacing uses responsive clamp():
 
 **Pattern Image Guidelines:**
 - **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
+- **NEVER use external URLs** (Unsplash, CDNs, etc.) - all images must be local files
 - **ALWAYS use PHP template methods** for image paths as recommended in [WordPress documentation](https://developer.wordpress.org/themes/patterns/using-php-in-patterns/):
   ```php
   <?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/filename.webp
@@ -372,8 +373,24 @@ All spacing uses responsive clamp():
   <?php echo esc_url( get_theme_file_uri( 'patterns/images/filename.webp' ) ); ?>
   ```
 - **Security requirement**: Always wrap template methods in `esc_url()` for proper URL escaping
+- **Image storage**: All pattern images must be stored in `patterns/images/` directory
+- **GPL compatibility**: All images must be GPL-compatible or public domain (CC0, Pexels License, Unsplash License, etc.)
+  - **Document image sources in `readme.txt`** (Copyright section at bottom of file) - This is the official WordPress.org requirement
+  - Follow the same attribution format as existing images (see lines 269-349 in readme.txt)
+  - Also update `README.md` if image credits are relevant for GitHub documentation
+  - Ensure redistribution rights before adding new images
+  - **Preferred sources**:
+    - **WordPress Openverse** (openverse.org) - Curated GPL-compatible images with built-in filtering
+    - Pexels (Free to use, no attribution required)
+    - Unsplash (Free to use, attribution appreciated)
+    - Pixabay (CC0 Public Domain)
+    - Custom photography
+  - When using Openverse, filter by "Use commercially" and "Modify or adapt" permissions
+- **Image optimization**:
+  - Use WebP format for best compression and quality
+  - Optimize file sizes (aim for <200KB per image)
+  - Use appropriate dimensions for intended use (avoid oversized images)
 - Hardcoded IDs cause performance issues: database queries for non-existent media, blinking/flashing effects, console errors, and validation failures
-- All pattern images should be stored in `patterns/images/` directory
 - Removing hardcoded IDs ensures patterns work consistently across all WordPress installations
 
 **Full-Width Pattern Layout (CRITICAL):**
