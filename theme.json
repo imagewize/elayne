@@ -96,6 +96,7 @@
 			"link": true
 		},
 		"custom": {
+			"avatarSize": "80px",
 			"fontWeight": {
 				"thin": 100,
 				"extra-light": 200,
