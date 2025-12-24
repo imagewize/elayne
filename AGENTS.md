@@ -59,7 +59,7 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
   - **Document sources in `readme.txt`** (Copyright section) - WordPress.org requirement
   - Follow attribution format from existing images (lines 269-349 in readme.txt)
   - **Preferred sources**: WordPress Openverse (openverse.org - filter by "Use commercially" + "Modify or adapt"), Pexels (GPL-compatible license), or custom photography
-  - **NEVER use**: Pixabay (not GPL-compatible), Unsplash (not GPL-compatible)
+  - **NEVER use**: not GPL-compatible images
 - **Image optimization**: Use WebP format, optimize file sizes (<200KB), appropriate dimensions
 - Hardcoded IDs cause performance issues: database queries for non-existent media, blinking/flashing effects, console errors
 - All pattern images stored in `patterns/images/` directory

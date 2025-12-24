@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -90,6 +90,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 **Page Layouts:**
 * Centered (default) - Standard centered page with title
 * Full Width - Full-width page without title (perfect for landing pages)
+* Hero (No Top Padding) - Full-width page with header/footer and no top padding
 * Wide - Wide page with title and expanded content area
 * Wide No Title - Wide page without title section
 * Left Sidebar - Two-column layout (33.33% sidebar, 66.66% content)
@@ -160,6 +161,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.0.1 - 12/24/25 =
+* ADDED: Page Hero template with no top padding for hero-first pages.
 
 = 1.0.0 - 12/23/25 =
 * ADDED: portfolio-grid-masonry pattern - Masonry-style portfolio grid with category filters and variable height cards.
