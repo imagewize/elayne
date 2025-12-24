@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2025-12-24
+
+### Added - Hero page template
+
+- Added **template-page-hero** (slug: `elayne/template-page-hero`) for pages that start with a full-width hero and need no top padding.
+
 ## [1.0.0] - 2025-12-23
 
 ### Added - New Portfolio and Pages Patterns

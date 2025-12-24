@@ -374,18 +374,16 @@ All spacing uses responsive clamp():
   ```
 - **Security requirement**: Always wrap template methods in `esc_url()` for proper URL escaping
 - **Image storage**: All pattern images must be stored in `patterns/images/` directory
-- **GPL compatibility**: All images must be GPL-compatible or public domain (CC0, Pexels License, Unsplash License, etc.)
+- **GPL compatibility**: All images must be GPL-compatible or public domain (CC0, Pexels License, etc.)
   - **Document image sources in `readme.txt`** (Copyright section at bottom of file) - This is the official WordPress.org requirement
   - Follow the same attribution format as existing images (see lines 269-349 in readme.txt)
   - Also update `README.md` if image credits are relevant for GitHub documentation
   - Ensure redistribution rights before adding new images
   - **Preferred sources**:
-    - **WordPress Openverse** (openverse.org) - Curated GPL-compatible images with built-in filtering
-    - Pexels (Free to use, no attribution required)
-    - Unsplash (Free to use, attribution appreciated)
-    - Pixabay (CC0 Public Domain)
+    - **WordPress Openverse** (openverse.org) - Curated GPL-compatible images with built-in filtering (filter by "Use commercially" + "Modify or adapt")
+    - Pexels (GPL-compatible license, free to use, no attribution required)
     - Custom photography
-  - When using Openverse, filter by "Use commercially" and "Modify or adapt" permissions
+  - **NEVER use**: not GPL-compatible images
 - **Image optimization**:
   - Use WebP format for best compression and quality
   - Optimize file sizes (aim for <200KB per image)

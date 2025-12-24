@@ -38,7 +38,7 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 ### Pattern Library
 
-Elayne includes **34 professionally designed patterns** (plus 15 page and post templates) organized into categories:
+Elayne includes **34 professionally designed patterns** (plus 17 page and post templates) organized into categories:
 
 **Hero Sections**
 - Contemporary hero with bold typography (dark variation)
@@ -98,6 +98,7 @@ Elayne includes **34 professionally designed patterns** (plus 15 page and post t
 
 **Page Templates**
 - Full-width page template
+- Hero page template (no top padding)
 - Wide page template
 - Wide page without title
 - Centered content layout
@@ -186,7 +187,7 @@ elayne/
 │   └── styles/         # Block-specific styles
 ├── languages/          # Translation files
 ├── parts/              # Template parts (header, footer)
-├── patterns/           # Block patterns (44 patterns + templates)
+├── patterns/           # Block patterns (34 content patterns + 17 templates)
 ├── templates/          # Page templates (index, single, page)
 ├── functions.php       # Theme setup and functionality
 ├── style.css           # Theme stylesheet and metadata
