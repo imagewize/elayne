@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2025-12-24
+
+### Changed - Avatar styling improvements
+
+- Added custom avatar size configuration in theme.json (`settings.custom.avatarSize: "80px"`)
+- Updated stats-list pattern avatar styling to use theme.json custom variable instead of hardcoded pixel values
+- CSS now references `var(--wp--custom--avatar-size)` for consistent, maintainable avatar sizing across the theme
+- Avatar images properly sized at 80x80px with circular shape using WordPress core `is-style-rounded` class
+- Removed redundant custom CSS for rounded styling (WordPress core handles this via `border-radius: 9999px`)
+
+### Technical - CSS architecture
+
+- Centralized avatar size definition in theme.json for single source of truth
+- More maintainable CSS with semantic variable naming
+- Better integration with WordPress theme.json design token system
+- Leverages WordPress core block styles instead of custom CSS for rounded images
+
 ## [1.0.2] - 2025-12-24
 
 ### Changed - Hero pattern style refinements
