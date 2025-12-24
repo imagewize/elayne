@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2025-12-24
+
+### Changed - Hero pattern style refinements
+
+- Updated **hero-modern-dark** pattern with improved styling:
+  - Simplified background gradient from complex radial/linear combo to cleaner diagonal linear gradient (135deg)
+  - Changed from `radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.15) 0%, transparent 50%), linear-gradient(180deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%)` to `linear-gradient(135deg,rgb(11,19,36) 0%,rgb(101,106,113) 100%)`
+  - Added top spacer (50px) before heading for better vertical rhythm
+  - Added bottom spacer (4rem) after hero image for consistent spacing
+  - Reformatted code indentation for better maintainability (tabs instead of spaces)
+
+### Technical - Pattern code quality
+
+- Improved hero-modern-dark pattern markup with cleaner indentation
+- Enhanced visual consistency with simplified gradient approach
+- Better vertical spacing throughout pattern
+
 ## [1.0.1] - 2025-12-24
 
 ### Added - Hero page template
