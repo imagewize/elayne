@@ -38,25 +38,29 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 ### Pattern Library
 
-Elayne includes **34 professionally designed patterns** (plus 17 page and post templates) organized into categories:
+Elayne includes **47 professionally designed patterns** (plus 16 page and post templates) organized into categories:
 
 **Hero Sections**
 - Contemporary hero with bold typography (dark variation)
 - Contemporary hero with bold typography (light variation)
 - Split background hero with contrasting colors
 - Hero section with prominent call-to-action
+- Overlapping image and content box hero for spa/wellness sites
 
 **Headers & Footers**
 - Mobile-optimized hamburger menu header
 - Desktop-optimized header with inline navigation
+- Header with centered logo and navigation menu with top bar
 - Professional standard footer
 - Minimal footer layout
+- Two-column footer with site info/social and multi-column navigation
 
 **Call-to-Action & Contact**
 - Newsletter signup with email capture
 - Contact information display with office hours and location
 - Two-column contact layout
 - Modular CTA card component for landing pages, blog sidebars, and conversion-focused sections
+- Booking call-to-action with form integration
 
 **Features & Services**
 - Grid layout for feature showcasing
@@ -64,12 +68,19 @@ Elayne includes **34 professionally designed patterns** (plus 17 page and post t
 - Four-column agency services grid with custom icons
 - Three-column pricing comparison with feature comparison and highlighted recommended plan
 - Client logos display with responsive grid for social proof
+- Two-column feature section with image and content
+- Feature columns with overlapping image effect
+- Reversed overlapping feature columns
+- Full-width wellness cover section with highlight box
 
 **Team & Testimonials**
 - Team member grid with photos and bios
 - Single testimonial card layout
 - Enhanced testimonials with ratings and success metrics
 - Client reviews with profile images
+- Three-column testimonial grid with star ratings
+- Two-column review section with image and testimonial
+- Review with overlapping text and image
 
 **Statistics**
 - Statistics display with visual emphasis
@@ -81,6 +92,7 @@ Elayne includes **34 professionally designed patterns** (plus 17 page and post t
 - List-style blog layout
 - Featured post two-column layout
 - Author biography with avatar and social links
+- Four-column grid for wellness blog posts
 
 **Support & Information**
 - Collapsible FAQ section with accordion functionality
@@ -95,6 +107,9 @@ Elayne includes **34 professionally designed patterns** (plus 17 page and post t
 
 **Pages**
 - Pre-launch or maintenance page with countdown and email capture
+
+**Shop/E-commerce**
+- Three-column product grid for spa/wellness shops
 
 **Page Templates**
 - Full-width page template
@@ -120,6 +135,8 @@ Elayne includes **34 professionally designed patterns** (plus 17 page and post t
 
 Switch your entire site's look with one click using pre-configured color palettes:
 
+- **Ink & Sand** (Default) - Warm ink blue and sand tones for sophisticated business sites
+- **Spa & Wellness** - Soothing teal and ocean sage palette with elegant Cormorant Garamond and friendly Quicksand fonts — perfect for spas, wellness centers, yoga studios, and health retreats
 - **Gray & Gold** - Sophisticated gray tones with elegant gold accents
 - **Denim & Copper** - Deep denim blues paired with warm copper highlights
 - **Forest & Sage** - Natural forest greens with calming sage tones
@@ -161,6 +178,54 @@ Powered by theme.json, customize:
 - Spacing and layout
 - Block defaults
 
+## Companion Plugin: Elayne Blocks
+
+Elayne works seamlessly with the **[Elayne Blocks](https://github.com/imagewize/elayne-blocks)** plugin, which provides custom Gutenberg blocks that enhance the theme's capabilities. While these blocks were designed as companions to the Elayne theme, they are **theme-agnostic** and work with any WordPress theme.
+
+### Why a Separate Plugin?
+
+WordPress.org Theme Review requirements prohibit custom block registration in themes. By separating blocks into a plugin, we ensure compliance while providing powerful functionality that works across any theme.
+
+### Available Blocks
+
+The Elayne Blocks plugin includes **4 custom blocks**:
+
+1. **Mega Menu Block** (`elayne/mega-menu`)
+   - Advanced navigation with mega menu functionality
+   - WordPress Interactivity API integration
+   - Template part support for dynamic content
+   - Keyboard navigation and responsive design
+
+2. **Carousel Block** (`elayne/carousel`)
+   - Responsive image/content carousel
+   - Slick Carousel integration
+   - Customizable settings and breakpoints
+   - Touch/swipe support
+
+3. **Slide Block** (`elayne/slide`)
+   - Individual carousel slides
+   - InnerBlocks support for flexible content
+   - Works seamlessly with Carousel parent block
+
+4. **FAQ Tabs Block** (`elayne/faq-tabs`)
+   - Interactive FAQ with vertical tab navigation
+   - Dynamic content display with answers
+   - Customizable button with configurable text and URL
+   - WordPress Interactivity API integration
+
+### Installation
+
+```bash
+# Clone the plugin repository
+cd wp-content/plugins/
+git clone https://github.com/imagewize/elayne-blocks.git
+
+# Or download from GitHub releases
+# Activate via WordPress admin: Plugins → Elayne Blocks → Activate
+```
+
+For more information, visit: [github.com/imagewize/elayne-blocks](https://github.com/imagewize/elayne-blocks)
+
 ## For Developers
 
 ### Technical Requirements
@@ -169,6 +234,7 @@ Powered by theme.json, customize:
 - **PHP 8.0+** required
 - **Full Site Editing (FSE)** compatible
 - **Block theme** architecture
+- **Elayne Blocks plugin** (optional, for enhanced functionality)
 
 ### Theme Features
 
@@ -216,6 +282,7 @@ Elayne registers custom pattern categories:
 - Portfolio
 - Pages
 - Posts
+- Shop
 
 ## License
 
@@ -249,6 +316,11 @@ All pattern images are GPL-compatible. See [readme.txt](readme.txt) Copyright se
 
 **Team Avatars (Pexels License)**
 - avatar-1.webp through avatar-7.webp - Professional headshots (Pexels)
+
+**Spa & Wellness Images (CC0/CC BY)**
+- Treatment images: back-massage.webp, spa-treatment-hot-stones.webp, spa-treatment-landscape.webp, spa-treatment-zoomed.webp, yoga-pose.webp
+- Client avatars: spa/avatar-1.webp through spa/avatar-4.webp, spa/review-profile.webp
+- Product images: spa/shop/bath-salt.webp, spa/shop/massage-oil.webp, spa/shop/serum.webp, spa/shop/supplements.webp
 
 **Logo Images**
 - logo-1.webp through logo-6.webp - Geometric designs by theme author

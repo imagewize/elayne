@@ -53,6 +53,7 @@ function elayne_pattern_categories() {
 		'elayne/portfolio'      => array( 'label' => __( 'Portfolio', 'elayne' ) ),
 		'elayne/pages'          => array( 'label' => __( 'Pages', 'elayne' ) ),
 		'elayne/posts'          => array( 'label' => __( 'Posts', 'elayne' ) ),
+		'elayne/spa'            => array( 'label' => __( 'Spa & Wellness', 'elayne' ) ),
 	);
 
 	foreach ( $block_pattern_categories as $name => $properties ) {

@@ -53,9 +53,14 @@
 					"color": "#CFFAFE"
 				},
 				{
-					"name": "Brand Dark",
-					"slug": "primary-dark",
+					"name": "Brand Alt",
+					"slug": "primary-alt",
 					"color": "#155E75"
+				},
+				{
+					"name": "Brand Alt Accent",
+					"slug": "primary-alt-accent",
+					"color": "#0E7490"
 				},
 				{
 					"name": "Contrast",

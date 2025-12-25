@@ -4,17 +4,18 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.3
+Stable tag: 1.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 34 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 47 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 34 Professional Patterns - All 100% original, created specifically for Elayne
+* 47 Professional Patterns - All 100% original, created specifically for Elayne
+* 5 Style Variations - Complete design systems including new Spa & Wellness style
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
 * Industry-Specific Content - Pattern sets optimized for spa, real estate, and professional services
@@ -27,45 +28,56 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-**Header Patterns (2)**
+**Header Patterns (3)**
 * header-mobile - Header with hamburger navigation and social icons
 * header-standard - Desktop-optimized header with inline navigation
+* header-top-bar-centered-menu - Centered logo with top bar and navigation menu
 
-**Hero Patterns (4)**
+**Hero Patterns (5)**
 * hero-modern-dark - Contemporary hero with bold typography (dark variation)
 * hero-modern-light - Contemporary hero with bold typography (light variation)
 * hero-two-tone - Split background hero with contrasting colors
 * hero-with-cta - Hero section with prominent call-to-action
+* spa-home-hero - Overlapping image and content box hero for spa/wellness sites
 
-**Call-to-Action & Contact (4)**
+**Call-to-Action & Contact (5)**
 * cta-newsletter - Newsletter signup with email capture
 * contact-info - Contact information display
 * contact-side-by-side - Two-column contact layout
 * card-call-to-action - Modular CTA component for landing pages, blog sidebars, and conversion-focused sections
+* spa-booking-cta - Booking call-to-action with form integration
 
-**Features & Services (5)**
+**Features & Services (9)**
 * three-column-feature-grid - Grid layout for feature showcasing
 * services-feature-cards - Service cards with icons and descriptions
 * agency-services-showcase - Four-column agency services grid with custom icons
 * pricing-comparison - Three-column pricing grid with feature comparison and highlighted recommended plan
 * client-logo-wall - Display client logos to build credibility and social proof with responsive grid layout
+* two-column-feature - Two-column feature section with image and content
+* overlapping-feature-columns - Feature columns with overlapping image effect
+* overlapping-feature-columns-reversed - Reversed overlapping feature columns
+* wellness-cover-highlight - Full-width wellness cover section with highlight box
 
-**Team & Testimonials (4)**
+**Team & Testimonials (7)**
 * team-grid - Team member grid with photos and bios
 * testimonial-card - Single testimonial card layout
 * client-success-stories - Enhanced testimonials with ratings and success metrics
 * client-reviews - Client reviews with profile images
+* testimonials-grid - Three-column testimonial grid with star ratings
+* two-column-review - Two-column review section with image and testimonial
+* review-text-image-overlap - Review with overlapping text and image
 
 **Statistics (2)**
 * stats-showcase - Statistics display with visual emphasis
 * stats-list - List-style statistics presentation
 
-**Blog/Posts (5)**
+**Blog/Posts (6)**
 * blog-post-columns - Classic blog grid layout
 * blog-post-columns-portrait - Portrait-oriented blog grid
 * blog-post-list - List-style blog layout
 * post-featured-two-column - Featured post two-column layout
 * author-box - Author biography with avatar and social links
+* four-column-wellness-posts - Four-column grid for wellness blog posts
 
 **Support & Information (2)**
 * faq - Collapsible FAQ section with accordion functionality
@@ -78,12 +90,16 @@ Launch a professional business website with the Elayne WordPress block theme! El
 * portfolio-grid-masonry - Masonry-style portfolio grid showcasing creative work with category filters
 * case-study-detailed - Comprehensive project case study with structured storytelling - challenge, approach, and results
 
-**Footer Patterns (2)**
+**Footer Patterns (3)**
 * footer-standard - Professional standard footer
 * footer-simple - Minimal footer layout
+* footer-with-nav-columns - Two-column footer with site info/social and multi-column navigation
 
 **Pages (1)**
 * page-coming-soon - Pre-launch or maintenance page with countdown and email capture
+
+**Shop/E-commerce (1)**
+* shop-overview-three-columns - Three-column product grid for spa/wellness shops
 
 = Layout Templates =
 
@@ -161,6 +177,19 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.1.0 - 12/25/25 =
+* ADDED: New "Spa & Wellness" style variation with Cormorant Garamond serif and Quicksand sans-serif fonts, soothing spa color palette (Teal, Ocean Sage), and elegant typography.
+* ADDED: 13 new patterns - header-top-bar-centered-menu, footer-with-nav-columns, spa-home-hero, spa-booking-cta, two-column-feature, overlapping-feature-columns, overlapping-feature-columns-reversed, wellness-cover-highlight, testimonials-grid, two-column-review, review-text-image-overlap, four-column-wellness-posts, shop-overview-three-columns.
+* ADDED: Cormorant Garamond and Quicksand variable fonts (self-hosted WOFF2 format) for Spa & Wellness style.
+* ADDED: 14 spa-focused pattern images in patterns/images/spa/ directory (treatment images, avatars, product shots).
+* ADDED: Overlapping columns CSS styling (.is-style-overlap-columns, .is-style-overlap-columns-reversed) for modern overlapping layouts.
+* ADDED: Cart icon styling, spa post grid enhancements, and mobile navigation adjustments.
+* CHANGED: Pattern count increased from 34 to 47 total patterns.
+* CHANGED: Enhanced pattern library with spa and wellness industry focus.
+* CHANGED: Updated palette tokens to use primary-alt and add primary-alt-accent across style variations.
+* CHANGED: Added Spa & Wellness pattern category to the inserter for easier browsing.
+* TECHNICAL: Total style variations now 5 (Ink & Sand, Teal Bay, Denim Copper, Forest Sage, Spa & Wellness).
 
 = 1.0.3 - 12/24/25 =
 * ADDED: Custom avatar size configuration in theme.json (settings.custom.avatarSize: "80px") for centralized avatar sizing.
@@ -398,6 +427,124 @@ GNU General Public License for more details.
 - **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
 - **Attribution:** Not required (Pexels License)
 - **Description:** Professional woman in blue business suit
+
+---
+
+## Spa Theme Images (CC0 / CC BY)
+
+Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
+
+### spa/avatar-1.webp
+- **Source:** User-provided AI image (ChatGPT, Dec 25, 2025)
+- **Title:** Spa customer portrait
+- **Photographer:** AI-generated
+- **License:** Provided by client (AI-generated)
+- **Attribution:** Not required
+- **Description:** Portrait of a male spa customer with soft studio lighting
+
+### spa/avatar-2.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/female-portrait-QRVWBXC99Z)
+- **Title:** Female Portrait
+- **Photographer:** [Matt Moloney](https://mjmolo.com)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Studio portrait of woman
+
+### spa/avatar-3.webp
+- **Source:** User-provided AI image (Dec 25, 2025)
+- **Title:** Spa customer portrait
+- **Photographer:** AI-generated
+- **License:** Provided by client (AI-generated)
+- **Attribution:** Not required
+- **Description:** Portrait of a female spa customer with soft studio lighting
+
+### spa/avatar-4.webp
+- **Source:** User-provided AI image (Dec 25, 2025)
+- **Title:** Spa customer portrait
+- **Photographer:** AI-generated
+- **License:** Provided by client (AI-generated)
+- **Attribution:** Not required
+- **Description:** Portrait of a female spa customer with soft studio lighting
+
+### spa/review-profile.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/monochrome-photo-of-smiling-woman-2764975/)
+- **Title:** Monochrome Photo of Smiling Woman
+- **Photographer:** [Tubarones Photography](https://www.pexels.com/@tubarones/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Monochrome portrait of woman with warm smile
+
+### spa/back-massage.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/topless-woman-lying-on-bed-getting-massage-3757952/)
+- **Title:** Topless Woman Lying on Bed Getting Massage
+- **Photographer:** [Andrea Piacquadio](https://www.pexels.com/@olly/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Relaxing back massage treatment in spa setting
+
+### spa/spa-treatment-hot-stones.webp
+- **Source:** ChatGPT (AI-generated, user-provided)
+- **Title:** Spa treatment with hot stones
+- **Photographer:** ChatGPT (AI-generated)
+- **License:** User-provided (AI-generated via ChatGPT)
+- **Attribution:** Not required (user-provided)
+- **Description:** AI-generated hot stone treatment on spa table
+
+### spa/spa-treatment-landscape.webp
+- **Source:** [Flickr](https://www.flickr.com/photos/184934270@N04/52263877413)
+- **Title:** Spa treatment room landscape
+- **Photographer:** [bloggeratlarge](https://www.flickr.com/photos/184934270@N04)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Wide spa treatment room interior
+
+### spa/spa-treatment-zoomed.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/a-woman-having-a-massage-6663361/)
+- **Title:** A Woman Having a Massage
+- **Photographer:** [Arina Krasnikova](https://www.pexels.com/@arina-krasnikova/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional massage therapy treatment
+
+### spa/yoga-pose.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/woman-yoga-ZM6UUXW2SB)
+- **Title:** Woman Yoga
+- **Photographer:** [Burst](https://burst.shopify.com)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Woman in yoga pose
+
+### spa/shop/bath-salt.webp
+- **Source:** [Flickr](https://www.flickr.com/photos/127294011@N07/26214965493)
+- **Title:** bath salts in mason jar with himalayan salt and lavendar
+- **Photographer:** [PersonalCreations.com](https://www.flickr.com/photos/127294011@N07)
+- **License:** [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
+- **Attribution:** Required (CC BY 2.0)
+- **Description:** Bath salts in a mason jar with botanicals
+
+### spa/shop/massage-oil.webp
+- **Source:** [Flickr](https://www.flickr.com/photos/22141297@N06/7796393844)
+- **Title:** Pure Jasmine Oil Absolute Perfume - All Natural Aromatherapy Essential Oil ~ Bridal Perfume
+- **Photographer:** [Naomi King](https://www.flickr.com/photos/22141297@N06)
+- **License:** [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
+- **Attribution:** Required (CC BY 2.0)
+- **Description:** Aromatherapy oil bottle
+
+### spa/shop/serum.webp
+- **Source:** [Rawpixel](https://www.rawpixel.com/image/11515764/photo-image-medicine-public-domain-table)
+- **Title:** Beard grooming oil barbers table
+- **Photographer:** Rawpixel (creator not listed)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Glass bottle cosmetic product
+
+### spa/shop/supplements.webp
+- **Source:** [Flickr](https://www.flickr.com/photos/126255752@N08/14872889829)
+- **Title:** Dream Leaf - Lucid Dreaming Supplements
+- **Photographer:** [luciddreamleaf](https://www.flickr.com/photos/126255752@N08)
+- **License:** [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)
+- **Attribution:** Required (CC BY-SA 2.0)
+- **Description:** Supplement bottle product shot
 
 ---
 
