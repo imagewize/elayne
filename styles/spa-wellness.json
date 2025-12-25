@@ -1,0 +1,156 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Spa & Wellness",
+	"settings": {
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [
+				{
+					"name": "Spa Teal",
+					"slug": "primary",
+					"colors": ["#5BBCD6", "#E8F5F2"]
+				},
+				{
+					"name": "Ocean Sage",
+					"slug": "secondary",
+					"colors": ["#2D4A4E", "#F7FCFA"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
+			"gradients": [
+				{
+					"name": "Spa Teal",
+					"slug": "spa-teal",
+					"gradient": "linear-gradient(135deg, #5BBCD6, #A5D8CA)"
+				},
+				{
+					"name": "Ocean Depth",
+					"slug": "ocean-depth",
+					"gradient": "linear-gradient(135deg, #2D4A4E, #42858F)"
+				},
+				{
+					"name": "Peaceful Sky",
+					"slug": "peaceful-sky",
+					"gradient": "linear-gradient(135deg, #E8F5F2, #F7FCFA)"
+				}
+			],
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "primary",
+					"color": "#5BBCD6"
+				},
+				{
+					"name": "Brand Accent",
+					"slug": "primary-accent",
+					"color": "#E8F5F2"
+				},
+				{
+					"name": "Brand Alt",
+					"slug": "primary-alt",
+					"color": "#A5D8CA"
+				},
+				{
+					"name": "Brand Alt Accent",
+					"slug": "primary-alt-accent",
+					"color": "#42858F"
+				},
+				{
+					"name": "Contrast",
+					"slug": "main",
+					"color": "#2D4A4E"
+				},
+				{
+					"name": "Contrast Accent",
+					"slug": "main-accent",
+					"color": "#E1EBE9"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#fff"
+				},
+				{
+					"name": "Base Accent",
+					"slug": "secondary",
+					"color": "#6A8D94"
+				},
+				{
+					"name": "Tint",
+					"slug": "tertiary",
+					"color": "#F7FCFA"
+				},
+				{
+					"name": "Border Light",
+					"slug": "border-light",
+					"color": "#D9E6E3"
+				},
+				{
+					"name": "Border Dark",
+					"slug": "border-dark",
+					"color": "#51757A"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Cormorant Garamond, serif",
+					"name": "Cormorant Garamond",
+					"slug": "heading",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Cormorant Garamond",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-VariableFont_wght.woff2"]
+						},
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Cormorant Garamond",
+							"fontStyle": "italic",
+							"fontWeight": "300 700",
+							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-Italic-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "Quicksand, sans-serif",
+					"name": "Quicksand",
+					"slug": "body",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Quicksand",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": ["file:./assets/fonts/quicksand/Quicksand-VariableFont_wght.woff2"]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "500",
+					"letterSpacing": "-0.02em"
+				}
+			}
+		}
+	}
+}

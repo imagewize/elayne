@@ -7,6 +7,130 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-12-25
+
+### Added - Spa & Wellness style variation and patterns
+
+**New Style Variation:**
+- **Spa & Wellness** - Elegant spa and wellness color scheme with sophisticated typography
+  - Cormorant Garamond serif font for elegant headings with refined letterforms
+  - Quicksand sans-serif for clean, friendly body text
+  - Soothing spa color palette: Teal (#5BBCD6), Ocean Sage (#2D4A4E), soft accent tones
+  - Three custom duotone presets (Spa Teal, Ocean Sage, High Contrast)
+  - Three gradient presets (Spa Teal, Ocean Depth, Peaceful Sky)
+  - Perfect for spas, wellness centers, yoga studios, and health retreats
+  - Accessible via Appearance > Editor > Styles
+
+**New Fonts:**
+- **Cormorant Garamond** - Elegant serif typeface (variable weight 300-700) with italic variant
+- **Quicksand** - Modern rounded sans-serif (variable weight 300-700)
+- Self-hosted WOFF2 format for optimal performance
+
+**New Patterns (13):**
+
+*Header Patterns (1):*
+- **header-top-bar-centered-menu** - Header with centered logo and navigation menu with top bar
+  - Clean centered layout
+  - Optional top announcement bar
+  - Perfect for spa and wellness sites
+
+*Footer Patterns (1):*
+- **footer-with-nav-columns** - Two-column footer with site info/social and multi-column navigation
+  - Site title, description, and social links on left
+  - Three navigation columns on right (About, Services, Visit)
+  - Copyright and legal links at bottom
+  - Flexible layout for any business type
+
+*Hero Patterns (1):*
+- **spa-home-hero** - Hero section with overlapping colored box on image background
+  - Dramatic overlapping layout
+  - Image on left, content box overlaps on right
+  - Perfect for spa homepages and landing pages
+
+*Call-to-Action Patterns (1):*
+- **spa-booking-cta** - Booking call-to-action with form integration
+  - Encourages appointment bookings
+  - Form-ready layout
+  - Conversion-optimized design
+
+*Features Patterns (4):*
+- **two-column-feature** - Two-column feature section with image and content
+  - Balanced 50/50 layout
+  - Image on left, content on right
+  - Versatile for services, features, about sections
+- **overlapping-feature-columns** - Feature columns with overlapping image effect
+  - Modern overlapping design
+  - Image overlaps content box
+  - Creates visual depth and interest
+- **overlapping-feature-columns-reversed** - Reversed overlapping feature columns
+  - Mirror layout of overlapping-feature-columns
+  - Content on left, image overlaps from right
+  - Provides layout variety
+- **wellness-cover-highlight** - Full-width wellness cover section with highlight box
+  - Dramatic full-width cover image
+  - Overlay content box
+  - Perfect for hero sections and feature highlights
+
+*Testimonials & Reviews (3):*
+- **testimonials-grid** - Three-column testimonial grid with star ratings
+  - Client testimonials in card layout
+  - Star ratings for credibility
+  - Professional presentation
+- **two-column-review** - Two-column review section with image and testimonial
+  - Client photo with testimonial
+  - Quote-style formatting
+  - Personal touch for reviews
+- **review-text-image-overlap** - Review with overlapping text and image
+  - Text overlaps image for visual interest
+  - Modern magazine-style layout
+  - Engaging testimonial presentation
+
+*Blog/Posts Patterns (1):*
+- **four-column-wellness-posts** - Four-column grid for wellness blog posts
+  - Compact grid layout
+  - Perfect for blog archives and related posts
+  - Optimized for wellness content
+
+*Shop/E-commerce Patterns (1):*
+- **shop-overview-three-columns** - Three-column product grid for spa/wellness shops
+  - Product showcase layout
+  - Image-focused cards
+  - Perfect for WooCommerce integration
+
+**New Pattern Images:**
+- Added spa-focused images in `patterns/images/spa/` directory:
+  - **Treatment images**: back-massage.webp, spa-treatment-hot-stones.webp, spa-treatment-landscape.webp, spa-treatment-zoomed.webp, yoga-pose.webp
+  - **Client avatars**: avatar-1.webp, avatar-2.webp, avatar-3.webp, avatar-4.webp, review-profile.webp
+  - **Product images** (shop subdirectory): bath-salt.webp, massage-oil.webp, serum.webp, supplements.webp
+  - All images optimized WebP format for fast loading
+
+**CSS Enhancements:**
+- Added overlapping columns styling (`.is-style-overlap-columns`, `.is-style-overlap-columns-reversed`)
+  - Creates modern overlapping layouts on desktop (min-width: 782px)
+  - Second column overlaps first by -10% with z-index layering
+  - Centered vertical alignment for visual balance
+- Enhanced spa post grid styling for consistent image display
+- Added cart icon styling with hover effects and transitions
+- Mobile navigation adjustments for centered logo and menu button
+
+### Changed - Pattern organization and categories
+
+- Pattern count increased from 34 to 47 total patterns
+- Enhanced pattern library with spa and wellness industry focus
+- Improved layout variety with overlapping column techniques
+- Better responsive design across all new patterns
+- Updated palette tokens to use `primary-alt` and add `primary-alt-accent` across style variations
+- Added Spa & Wellness pattern category for easier pattern browsing
+
+### Technical
+
+- Total style variations: 5 (Ink & Sand, Teal Bay, Denim Copper, Forest Sage, Spa & Wellness)
+- All new patterns follow Elayne design system with theme color tokens
+- Variable fonts provide flexible typography and better performance
+- Self-hosted fonts ensure GDPR compliance and fast loading
+- CSS improvements for modern overlapping layouts
+- All content fully translatable with proper text domain
+
 ## [1.0.3] - 2025-12-24
 
 ### Changed - Avatar styling improvements
