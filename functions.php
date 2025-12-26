@@ -37,6 +37,27 @@ function elayne_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_styles' );
 
 /**
+ * Enqueue navigation frontend script for clickable parent functionality.
+ */
+function elayne_enqueue_navigation_frontend_script() {
+	$js_file_path = get_theme_file_path( '/assets/js/navigation-frontend.js' );
+	$js_file_url  = get_theme_file_uri( '/assets/js/navigation-frontend.js' );
+
+	if ( ! file_exists( $js_file_path ) ) {
+		return;
+	}
+
+	wp_enqueue_script(
+		'elayne-navigation-frontend',
+		$js_file_url,
+		array(), // No dependencies needed.
+		filemtime( $js_file_path ),
+		true     // Load in footer.
+	);
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_navigation_frontend_script' );
+
+/**
  * Register pattern categories.
  */
 function elayne_pattern_categories() {
