@@ -7,6 +7,59 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2025-12-26
+
+### Added - Enhanced navigation system with clickable parents
+
+**Navigation Enhancements:**
+- **Clickable Parent Menu Items** - Parent menu items can now be both clickable links AND dropdown toggles
+  - Click text to navigate to parent page
+  - Click chevron to toggle submenu
+  - Uses `hasClickableParents` attribute on Navigation block
+  - Preserves WordPress Interactivity API compatibility
+  - Includes fallback JavaScript for enhanced compatibility
+- **Improved Chevron Positioning** - Better chevron icon placement in navigation menus
+  - Chevron icons properly nested inside buttons for HTML5 validation
+  - Cleaner DOM structure for accessibility
+  - Uses `hasImprovedChevrons` attribute on Navigation block
+- **Custom Navigation Styles** - Comprehensive navigation styling system
+  - New `assets/styles/core-navigation.css` with organized CSS architecture
+  - Desktop dropdown styling with shadows and borders
+  - Mobile overlay menu styling
+  - CSS custom properties for consistent spacing and sizing
+  - Responsive design for all viewport sizes
+- **Navigation Frontend Script** - Client-side enhancement for navigation functionality
+  - Automatically enqueued for all pages
+  - Handles clickable parent conversion
+  - Fixes HTML5 validation issues
+  - Lightweight (no dependencies)
+
+### Changed - Pattern and style refinements
+
+**Pattern Updates:**
+- **header-standard** - Updated site title styling
+  - Changed font weight from 300 (light) to 600 (semi-bold) for better visibility
+  - Adjusted font size from "medium" to "base" for consistency
+  - Removed custom "has-bottom-border" class
+  - Added `hasClickableParents` and `hasImprovedChevrons` to navigation block
+- **footer-simple** - Updated footer link colors
+  - Changed default text color from "secondary" to "main" for better contrast
+  - Updated link hover color from "main" to "primary" for better visual feedback
+- **stats-showcase** - Improved avatar styling
+  - Removed hardcoded width/height (60px) from avatar image
+  - Added `is-avatar` class for consistent avatar sizing via theme.json
+  - Uses `var(--wp--custom--avatar-size)` for centralized sizing
+  - Maintains `is-style-rounded-full` and `is-style-rounded` classes
+
+### Technical
+
+- Frontend JavaScript uses vanilla DOM manipulation (no dependencies)
+- CSS organized with table of contents and clear sections
+- WordPress Interactivity API attributes preserved on converted elements
+- HTML5 validation improved by proper chevron icon nesting
+- Navigation enhancements work with all WordPress themes (not theme-specific)
+- Avatar sizing now centralized via theme.json custom properties
+
 ## [1.1.0] - 2025-12-25
 
 ### Added - Spa & Wellness style variation and patterns

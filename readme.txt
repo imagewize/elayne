@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -177,6 +177,16 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.1.1 - 12/26/25 =
+* ADDED: Clickable Parent Menu Items - Parent menu items can now be both clickable links AND dropdown toggles (click text to navigate, click chevron to toggle submenu).
+* ADDED: Improved Chevron Positioning - Better chevron icon placement in navigation menus with proper HTML5 validation.
+* ADDED: Custom Navigation Styles - Comprehensive navigation styling system (assets/styles/core-navigation.css) with desktop dropdown, mobile overlay, and responsive design.
+* ADDED: Navigation Frontend Script - Client-side enhancement for navigation functionality (automatically enqueued, lightweight, no dependencies).
+* CHANGED: header-standard pattern - Updated site title styling (font-weight 300→600, font-size medium→base, removed has-bottom-border class, added hasClickableParents and hasImprovedChevrons to navigation).
+* CHANGED: footer-simple pattern - Updated footer link colors (text color secondary→main, hover color main→primary for better contrast).
+* CHANGED: stats-showcase pattern - Improved avatar styling (removed hardcoded 60px width/height, added is-avatar class, uses var(--wp--custom--avatar-size)).
+* TECHNICAL: Frontend JavaScript uses vanilla DOM manipulation, CSS organized with table of contents, WordPress Interactivity API attributes preserved, HTML5 validation improved.
 
 = 1.1.0 - 12/25/25 =
 * ADDED: New "Spa & Wellness" style variation with Cormorant Garamond serif and Quicksand sans-serif fonts, soothing spa color palette (Teal, Ocean Sage), and elegant typography.
