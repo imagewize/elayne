@@ -7,6 +7,69 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.2] - 2025-12-27
+
+### Added - Elayne branding and logo assets
+
+**New Logo Assets:**
+- **Elayne Logo Collection** - Complete logo system in multiple formats and sizes
+  - Primary gold logo (SVG + PNG): elayne-logo-primary.svg, elayne-logo-primary.png
+  - Dark logo (SVG + PNG): elayne-logo-dark.svg, elayne-logo-dark.png
+  - White logo (SVG + PNG): elayne-logo-white.svg, elayne-logo-white.png
+  - Outline logo (SVG + PNG): elayne-logo-outline.svg, elayne-logo-outline.png
+  - Favicon sizes (16x16, 32x32, 48x48 PNG) for all logo variants
+  - All logos stored in `assets/images/logos/` directory
+  - SVG format for scalability, PNG with drop shadows for raster use
+  - Gold color (#D4AF37) for premium branding
+
+**README Updates:**
+- Updated README.md with Elayne logo header
+  - Replaced text banner with centered SVG logo
+  - Cleaner, more professional presentation
+  - Logo at 120x140px for optimal display
+
+### Changed - Pattern and CSS refinements
+
+**Pattern Updates:**
+- **portfolio-grid-masonry** - Layout and link styling improvements
+  - Changed from CSS Grid to true masonry layout using CSS columns
+  - Added `portfolio-masonry-grid` class with column-count: 3
+  - Responsive breakpoints: 2 columns (tablet), 1 column (mobile)
+  - Portfolio item titles now have hover underline effect
+  - Added text-decoration: none to default state for cleaner appearance
+  - Better visual hierarchy with improved link states
+- **card-call-to-action** - Code cleanup and formatting
+  - Simplified markup with cleaner indentation
+  - Removed unnecessary shadow styling (uses default card styling)
+  - More maintainable code structure
+- **team-grid** - Code formatting improvements
+  - Cleaner indentation for better readability
+- **stats-showcase** - Minor spacing adjustments
+  - Improved consistency with other patterns
+
+**CSS Enhancements:**
+- **core-navigation.css** - Underline styling refinements
+  - Added `text-decoration-thickness: 1px` to navigation links
+  - Consistent underline thickness across all navigation states
+  - Applied to both standard navigation and clickable parent links
+  - Better visual consistency for hover states
+- **style.css** - Portfolio masonry layout system
+  - Added `.portfolio-masonry-grid` class with CSS column layout
+  - Three-column masonry on desktop (column-count: 3)
+  - Two-column on tablet (max-width: 1024px)
+  - Single-column on mobile (max-width: 640px)
+  - Prevents column breaks within portfolio items (break-inside: avoid)
+  - Configurable column gap (16px default)
+
+### Technical
+
+- Total logo files: 20 (4 variants × 4 sizes + 4 SVG originals)
+- Logo design features lily flower symbolism for elegance and sophistication
+- All PNG logos include subtle drop shadows for depth
+- SVG logos provide scalability for all screen sizes
+- Masonry layout uses CSS columns (no JavaScript required)
+- Improved pattern code maintainability with consistent formatting
+
 ## [1.1.1] - 2025-12-26
 
 ### Added - Enhanced navigation system with clickable parents
