@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2025-12-27
+
+### Added - WooCommerce integration
+
+**WooCommerce Product Archive Support:**
+- **Custom Product Archive Template** - New `templates/archive-product.html` template for WooCommerce shop pages
+  - Responsive 3-2-1 column grid layout (3 desktop, 2 tablet, 1 mobile)
+  - Product collection block with breadcrumbs, sorting, and pagination
+  - Review testimonial pattern at bottom of shop page
+  - Integrates seamlessly with WooCommerce product displays
+  - Uses Elayne design system (spacing, colors, typography)
+
+**Responsive Product Grid CSS:**
+- Custom CSS Grid override for WooCommerce Product Collection block
+  - Overrides WooCommerce's default flexbox layout with CSS Grid
+  - Responsive breakpoints: 3 columns (>1024px), 2 columns (641px-1024px), 1 column (≤640px)
+  - Properly sized columns using `grid-template-columns: repeat(n, 1fr)`
+  - Removes WooCommerce's width constraints on list items (`width: auto !important`)
+  - Better responsive behavior than WooCommerce's default (which uses flexbox + percentage widths)
+  - Defined in `style.css` lines 223-246
+
+### Technical - WooCommerce implementation
+
+- Template references `elayne/two-column-review` pattern for social proof
+- CSS targets `.wc-block-product-template.is-flex-container` for grid conversion
+- Uses `!important` declarations to override WooCommerce's inline styles
+- Grid gap adjusts responsively (2rem desktop, 1.5rem tablet, 1rem mobile)
+- Compatible with WooCommerce Product Collection block (modern block-based approach)
+- No JavaScript required - pure CSS solution
+
 ## [1.1.2] - 2025-12-27
 
 ### Added - Elayne branding and logo assets

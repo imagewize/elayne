@@ -4,17 +4,18 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.1.2
+Stable tag: 1.2.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 47 beautiful pattern designs and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 47 beautiful pattern designs, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
 * 47 Professional Patterns - All 100% original, created specifically for Elayne
+* WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
 * 5 Style Variations - Complete design systems including new Spa & Wellness style
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
@@ -177,6 +178,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.2.0 - 12/27/25 =
+* ADDED: WooCommerce Product Archive Template - New templates/archive-product.html for shop pages with responsive 3-2-1 column grid layout.
+* ADDED: Responsive Product Grid CSS - Custom CSS Grid override for WooCommerce Product Collection block (3 columns desktop, 2 tablet, 1 mobile).
+* ADDED: Product archive includes breadcrumbs, sorting, pagination, and review testimonial pattern for social proof.
+* CHANGED: WooCommerce grid now uses CSS Grid instead of WooCommerce's default flexbox layout for better responsive behavior.
+* TECHNICAL: CSS targets .wc-block-product-template.is-flex-container, removes width constraints, uses grid-template-columns with responsive breakpoints (1024px, 640px).
 
 = 1.1.2 - 12/27/25 =
 * ADDED: Elayne Logo Collection - Complete logo system with 4 variants (primary gold, dark, white, outline) in SVG and PNG formats with favicon sizes (16x16, 32x32, 48x48).

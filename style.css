@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 1.1.2
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: elayne
@@ -217,5 +217,30 @@ figure.is-avatar,
 @media (max-width: 640px) {
     .portfolio-masonry-grid {
         column-count: 1;
+    }
+}
+
+/* WooCommerce Product Collection responsive grid (3-2-1 columns) */
+.wc-block-product-template.is-flex-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+}
+
+.wc-block-product-template.is-flex-container > li {
+    width: auto !important;
+}
+
+@media (max-width: 1024px) {
+    .wc-block-product-template.is-flex-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .wc-block-product-template.is-flex-container {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
     }
 }
