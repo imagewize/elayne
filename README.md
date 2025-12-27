@@ -41,7 +41,7 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 ### Pattern Library
 
-Elayne includes **47 professionally designed patterns** (plus 16 page and post templates) organized into categories:
+Elayne includes **47 professionally designed patterns** (plus 17 page and post templates) organized into categories:
 
 **Hero Sections**
 - Contemporary hero with bold typography (dark variation)
