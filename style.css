@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: elayne
@@ -191,5 +191,31 @@ figure.is-avatar,
         position: relative;
         left: 0;
         transform: translateX(0);
+    }
+}
+
+/* Masonry grid layout using CSS columns */
+.portfolio-masonry-grid {
+    column-count: 3;
+    column-gap: 16px;
+}
+
+.portfolio-masonry-grid .portfolio-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Responsive masonry columns */
+@media (max-width: 1024px) {
+    .portfolio-masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .portfolio-masonry-grid {
+        column-count: 1;
     }
 }

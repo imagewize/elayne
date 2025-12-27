@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -177,6 +177,17 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.1.2 - 12/27/25 =
+* ADDED: Elayne Logo Collection - Complete logo system with 4 variants (primary gold, dark, white, outline) in SVG and PNG formats with favicon sizes (16x16, 32x32, 48x48).
+* ADDED: Logo assets stored in assets/images/logos/ directory with SVG for scalability and PNG with drop shadows for raster use.
+* CHANGED: README.md updated with Elayne logo header - replaced text banner with centered SVG logo (120x140px) for cleaner, more professional presentation.
+* CHANGED: portfolio-grid-masonry pattern - Changed from CSS Grid to true masonry layout using CSS columns (3 columns desktop, 2 tablet, 1 mobile) with improved link hover states.
+* CHANGED: card-call-to-action pattern - Code cleanup with simplified markup and cleaner indentation.
+* CHANGED: team-grid and stats-showcase patterns - Code formatting improvements for better readability.
+* CHANGED: core-navigation.css - Added text-decoration-thickness: 1px to navigation links for consistent underline thickness across all states.
+* CHANGED: style.css - Added .portfolio-masonry-grid class with responsive CSS column layout (break-inside: avoid for portfolio items).
+* TECHNICAL: 20 total logo files (4 variants × 4 sizes + 4 SVG originals), masonry layout uses CSS columns (no JavaScript), logo design features lily flower symbolism.
 
 = 1.1.1 - 12/26/25 =
 * ADDED: Clickable Parent Menu Items - Parent menu items can now be both clickable links AND dropdown toggles (click text to navigate, click chevron to toggle submenu).

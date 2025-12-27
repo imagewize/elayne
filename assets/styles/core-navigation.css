@@ -49,6 +49,7 @@
 .wp-block-navigation__container .current-menu-item > a,
 .wp-block-navigation__container .has-child button:hover {
 	text-decoration: underline;
+	text-decoration-thickness: 1px;
 }
 
 /* ============================================
@@ -355,6 +356,7 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 
 .has-clickable-parents .moiraine-nav-parent-link:hover {
 	text-decoration: underline;
+	text-decoration-thickness: 1px;
 }
 
 /* Toggle button */
