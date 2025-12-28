@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,14 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.2.1 - 12/28/25 =
+* CHANGED: Pattern responsiveness improvements - Converted 5 patterns (shop-overview-three-columns, team-grid, stats-showcase, stats-list, services-feature-cards) from columns to grid layout with minimumColumnWidth for proper 3→2→1 column responsive flow.
+* CHANGED: header-standard pattern - Added horizontal padding, changed navigation flexWrap to nowrap, added hide-on-mobile class to social links for better mobile display.
+* CHANGED: Full-width patterns - Removed horizontal padding from outer containers (career-opportunities, services-feature-cards) for proper edge-to-edge backgrounds.
+* CHANGED: Template parts - Updated default header (parts/header.html) from header-mobile to header-standard for unified responsive header.
+* ADDED: .hide-on-mobile CSS rule in core-navigation.css for hiding elements on screens ≤781px.
+* TECHNICAL: Grid layouts provide automatic responsive behavior, eliminated cramped 3-column tablet layouts, simplified header architecture.
 
 = 1.2.0 - 12/27/25 =
 * ADDED: WooCommerce Product Archive Template - New templates/archive-product.html for shop pages with responsive 3-2-1 column grid layout.

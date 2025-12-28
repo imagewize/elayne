@@ -11,8 +11,8 @@
  */
 ?>
 
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-hot-stones.webp' ) ); ?>","dimRatio":50,"customOverlayColor":"#c8a993","isUserOverlayColor":false,"isDark":false,"align":"wide","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignwide is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#c8a993"></span><img class="wp-block-cover__image-background" alt="Hot stone massage treatment at spa" src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-hot-stones.webp' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-hot-stones.webp' ) ); ?>","alt":"Hot stone massage treatment at spa","dimRatio":50,"customOverlayColor":"#c8a993","isDark":false,"align":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull is-light"><img class="wp-block-cover__image-background" alt="Hot stone massage treatment at spa" src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-hot-stones.webp' ) ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#c8a993"></span><div class="wp-block-cover__inner-container">
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|small","right":"var:preset|spacing|small"},"margin":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large"}}},"backgroundColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group has-base-background-color has-background" style="margin-top:var(--wp--preset--spacing--xx-large);margin-bottom:var(--wp--preset--spacing--xx-large);padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--small)">

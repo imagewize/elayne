@@ -7,6 +7,61 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2025-12-28
+
+### Changed - Responsive layout improvements
+
+**Pattern Responsiveness Enhancements:**
+- **shop-overview-three-columns** - Converted from 3-column layout to grid layout with `minimumColumnWidth: 280px`
+  - Responsive breakpoints: 3 columns (desktop) → 2 columns (tablet) → 1 column (mobile)
+  - Smoother responsive behavior across all device sizes
+  - Better user experience with proper tablet layout
+- **team-grid** - Converted from columns to grid layout with `minimumColumnWidth: 280px`
+  - Proper 3-2-1 column responsive flow
+  - Improved tablet display (2 columns instead of cramped 3)
+- **stats-showcase** - Converted stats grid from columns to grid layout with `minimumColumnWidth: 280px`
+  - Better responsive behavior for statistics cards
+- **stats-list** - Converted feature list from columns to grid layout with `minimumColumnWidth: 280px`
+  - Improved mobile and tablet display
+- **services-feature-cards** - Removed horizontal padding from outer container (padding: 0)
+  - Full-width background now extends properly on all screen sizes
+  - Removed redundant backgroundColor from outer group (already on constrained inner group)
+- **career-opportunities** - Removed horizontal padding from outer container (padding: 0)
+  - Consistent with other full-width patterns
+- **template-page-centered** - Changed default alignment to "full" for better pattern display
+  - Patterns with full-width backgrounds now work correctly
+- **wellness-cover-highlight** - Removed default backgroundColor (uses cover block background)
+  - Cleaner pattern structure
+
+**Header Pattern Updates:**
+- **header-standard** - Major responsive improvements
+  - Added horizontal padding (left/right: `var:preset|spacing|medium`) to header container
+  - Changed navigation flexWrap from "wrap" to "nowrap" for better mobile behavior
+  - Added "hide-on-mobile" class to social links (hidden on mobile, shown on desktop)
+  - Removed unnecessary wrapper group around site title
+  - Simplified header structure for better mobile display
+  - Navigation and site title now properly aligned on all screen sizes
+
+**Navigation Improvements:**
+- Added `.hide-on-mobile` CSS rule to `core-navigation.css`
+  - Hides elements with this class on screens ≤781px
+  - Used for social links in header-standard pattern
+  - Provides cleaner mobile header layout
+
+**Template Parts:**
+- Updated default header (`parts/header.html`) from header-mobile to header-standard
+  - header-standard now properly optimized for both desktop and mobile
+  - Single header pattern for all screen sizes
+  - Simplified theme architecture
+
+### Technical - Responsive layout standardization
+
+- Converted 5 patterns from `wp:columns` to grid layout with `minimumColumnWidth`
+- Grid layouts provide automatic 3→2→1 column responsive behavior
+- Eliminated cramped 3-column layouts on tablet devices
+- Full-width pattern padding now consistently applied only to constrained inner groups
+- Header pattern now uses single responsive design instead of separate mobile/desktop variants
+
 ## [1.2.0] - 2025-12-27
 
 ### Added - WooCommerce integration
