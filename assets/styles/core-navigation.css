@@ -130,6 +130,13 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
    4. Mobile Navigation & Overlay
    ============================================ */
 
+/* Hide elements on mobile (e.g., social links in header) */
+@media only screen and (max-width: 781px) {
+	.hide-on-mobile {
+		display: none !important;
+	}
+}
+
 /* Override WordPress core gap with consistent spacing (all screen sizes) */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {

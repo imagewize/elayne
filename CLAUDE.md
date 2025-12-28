@@ -305,19 +305,22 @@ All spacing uses responsive clamp():
 
 **Responsive Grid Layouts (CRITICAL):**
 - **Use grid layout with `minimumColumnWidth`** for truly responsive multi-column patterns (3→2→1 columns)
-- **NEVER use `wp:columns` for pricing tables or feature grids** - columns go 3→3 (narrow)→1, causing cramped layouts on tablets
+- **NEVER use `wp:columns` for pricing tables, feature grids, team grids, or product grids** - columns go 3→3 (narrow/cramped)→1, skipping the 2-column tablet layout entirely
 - **NEVER use grid with fixed `columnCount`** - forces exact column count at all screen sizes
-- **Correct approach**: `{"layout":{"type":"grid","minimumColumnWidth":"20rem"}}`
+- **Correct approach**: `{"layout":{"type":"grid","minimumColumnWidth":"20rem"}}` or similar
 - **How it works**: Automatically adjusts columns based on available space:
   - Desktop (wide): 3 columns when space allows (>60rem container)
   - Tablet (medium): 2 columns when space is limited (40-60rem)
   - Mobile (narrow): 1 column when very narrow (<40rem)
-- **When to use**: Pricing tables, feature grids, team grids, card layouts, any 3-column pattern
+- **When to use**: Pricing tables, feature grids, team grids, card layouts, shop product displays, any 3-column pattern
+- **Pattern inventory**:
+  - **Using grid correctly**: `three-column-feature-grid.php` (320px), `pricing-comparison.php` (20rem), `team-grid.php` (300px), `shop-overview-three-columns.php` (280px)
+  - **Using columns (2-column only)**: `stats-list.php`, `stats-showcase.php` (acceptable because only 2 columns that stack to 1)
 - **Example - WRONG (columns)**:
   ```html
   <!-- wp:columns {"align":"wide"} -->
   <div class="wp-block-columns alignwide">
-    <!-- wp:column -->...(cramped on tablet)
+    <!-- wp:column -->...(cramped on tablet, skips 2-column layout)
   ```
 - **Example - WRONG (fixed grid)**:
   ```html
@@ -334,8 +337,13 @@ All spacing uses responsive clamp():
     <!-- wp:group -->...(pricing card 3)
   </div>
   ```
-- **Benefits**: Smooth responsive behavior, no media queries needed, better UX on all devices
-- **Reference**: See `pricing-comparison.php` for working example
+- **Choosing `minimumColumnWidth` value**:
+  - **280px-300px**: Smaller cards (product images, team photos with compact text)
+  - **320px**: Medium-sized feature cards with icons and descriptions
+  - **20rem (320px at default 16px)**: Larger pricing cards with extensive content
+  - **Rule of thumb**: Set to the minimum comfortable width for your content to avoid text wrapping issues
+- **Benefits**: Smooth responsive behavior, no media queries needed, better UX on all devices, proper tablet experience
+- **Reference examples**: See `pricing-comparison.php`, `three-column-feature-grid.php`, `team-grid.php`, `shop-overview-three-columns.php`
 
 **Pattern Background Spacing (IMPORTANT):**
 - **Always add margin reset** to patterns with background colors: `"margin":{"top":"0","bottom":"0"}`
@@ -360,6 +368,52 @@ All spacing uses responsive clamp():
 - Full-width sections (`align="full"`) with background colors
 - Any pattern that stacks vertically with other background patterns
 - Hero sections, CTAs, testimonials, feature grids
+
+**Responsive Horizontal Padding (CRITICAL):**
+- **ALWAYS apply horizontal padding to the outer container** for full-width patterns with backgrounds
+- **Standard horizontal padding = `var:preset|spacing|medium`** (~24px on mobile at 390px viewport)
+- **NEVER use inner padding only** - this creates white gaps on mobile for colored backgrounds
+- **Apply padding once** - don't add horizontal padding in multiple nested containers
+
+**Two Pattern Structures:**
+
+1. **Full-width Group with Background:**
+```html
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+```
+✅ Background extends edge-to-edge
+✅ Content has proper spacing
+✅ Consistent across viewports
+
+2. **Cover Block with Background:**
+```html
+<!-- wp:cover {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}}} -->
+  <div class="wp-block-cover__inner-container">
+    <!-- wp:group {"layout":{"type":"constrained"}} -->
+    <!-- Inner content - NO additional horizontal padding -->
+  </div>
+</div>
+```
+✅ Outer padding on cover block
+✅ NO horizontal padding on inner groups
+✅ Prevents white gaps on mobile
+
+**Common Mistakes:**
+```html
+<!-- ❌ WRONG - No horizontal padding on outer container -->
+<!-- wp:cover {"align":"full","style":{"spacing":{"padding":{"left":"0","right":"0"}}}} -->
+  <!-- Inner group with padding - causes white gaps! -->
+
+<!-- ✅ CORRECT - Horizontal padding on outer container -->
+<!-- wp:cover {"align":"full","style":{"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}}} -->
+  <!-- Inner content uses constrained layout, not additional padding -->
+```
+
+**Reference Examples:**
+- ✅ Correct: `services-feature-cards.php`, `shop-overview-three-columns.php`
+- ✅ Fixed: `stats-list.php`, `stats-showcase.php`, `team-grid.php` (December 2025 update)
+
+**See:** [docs/elayne/RESPONSIVENESS.md](../../docs/elayne/RESPONSIVENESS.md) for complete analysis
 
 **Pattern Image Guidelines:**
 - **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
