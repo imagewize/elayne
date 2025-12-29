@@ -23,7 +23,7 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 | Action | Link |
 | --- | --- |
 | **View Demo** | [demo.imagewize.com](https://demo.imagewize.com) |
-| **Documentation** | [imagewize.com/themes/elayne](https://imagewize.com/resouces/elayne) |
+| **Documentation** | [imagewize.com/resources/elayne](https://imagewize.com/resources/elayne) |
 | **Support** | [imagewize.com/support](https://imagewize.com/support) |
 
 ### Requirements
