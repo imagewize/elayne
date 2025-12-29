@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.2] - 2025-12-29
+
+### Fixed - Mobile spacing and pattern refinements
+
+**Pattern Fixes:**
+- **services-feature-cards** - Fixed missing horizontal padding on mobile
+  - Added `var:preset|spacing|medium` to left/right padding on outer full-width group
+  - Prevents edge-to-edge content on mobile devices
+  - Corrects regression from version 1.2.1 where horizontal padding was incorrectly removed
+  - Pattern now follows Elayne responsive padding standard
+
+**Pattern Improvements:**
+- **three-column-feature-grid** - Code formatting and spacing refinements
+  - Removed background colors from individual feature cards (cleaner tertiary background)
+  - Adjusted bottom margin spacing from `xx-large` to `large` for better vertical rhythm
+  - Changed grid `blockGap` from `x-large` to `0` for consistent card spacing
+  - Added `blockGap: 0` to individual cards for tighter content spacing
+  - Improved code formatting with cleaner indentation
+  - More maintainable markup structure
+
+### Technical
+
+- Mobile spacing now consistent across all full-width patterns
+- Constrained layout containers require horizontal padding for proper mobile display
+- Pattern code quality improvements for better maintainability
+
 ## [1.2.1] - 2025-12-28
 
 ### Changed - Responsive layout improvements

@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.2.2 - 12/29/25 =
+* FIXED: services-feature-cards pattern - Added horizontal padding (var:preset|spacing|medium) on mobile to prevent edge-to-edge content.
+* FIXED: Corrected regression from version 1.2.1 where horizontal padding was incorrectly removed from services-feature-cards outer container.
+* CHANGED: three-column-feature-grid pattern - Code formatting and spacing refinements (removed card backgrounds, adjusted spacing, cleaner indentation).
+* TECHNICAL: Mobile spacing now consistent across all full-width patterns - constrained layout containers require horizontal padding for proper mobile display.
 
 = 1.2.1 - 12/28/25 =
 * CHANGED: Pattern responsiveness improvements - Converted 5 patterns (shop-overview-three-columns, team-grid, stats-showcase, stats-list, services-feature-cards) from columns to grid layout with minimumColumnWidth for proper 3→2→1 column responsive flow.
