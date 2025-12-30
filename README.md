@@ -287,14 +287,10 @@ Elayne registers custom pattern categories:
 - Posts
 - Shop
 
-## License
-
-Elayne is licensed under the [GNU General Public License v2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
-
 ## Community & Support
 
 - **Support**: [imagewize.com/support](https://imagewize.com/support)
-- **Documentation**: [imagewize.com/themes/elayne](https://imagewize.com/themes/elayne)
+- **Documentation**: [imagewize.com/resources/elayne](https://imagewize.com/resources/elayne)
 - **Website**: [imagewize.com](https://imagewize.com)
 
 ## About

@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.3] - 2025-12-30
+
+### Changed - License update
+
+**License Version Update:**
+- Updated theme license from GPL v2 to GPL v3
+  - style.css: Changed license from "GNU General Public License v2 or later" to "GNU General Public License v3 or later"
+  - License URI updated from https://www.gnu.org/licenses/gpl-2.0.html to https://www.gnu.org/licenses/gpl-3.0.html
+  - Added full GPL v3 license text to LICENSE.md file
+  - Removed redundant license section from README.md (license details now in LICENSE.md)
+  - readme.txt updated to reflect GPL v3 licensing
+
+### Technical
+
+- Theme now consistently uses GPL v3 across all files
+- LICENSE.md contains complete GPL v3 license text (674 lines)
+- Copyright notice in style.css and readme.txt updated accordingly
+
 ## [1.2.2] - 2025-12-29
 
 ### Fixed - Mobile spacing and pattern refinements

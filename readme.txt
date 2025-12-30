@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.2.3 - 12/30/25 =
+* CHANGED: Updated theme license from GPL v2 to GPL v3 for consistency and clarity.
+* ADDED: LICENSE.md file with complete GPL v3 license text (674 lines).
+* CHANGED: style.css license updated to "GNU General Public License v3 or later" with URI https://www.gnu.org/licenses/gpl-3.0.html.
+* CHANGED: Removed redundant license section from README.md - license details now in dedicated LICENSE.md file.
+* TECHNICAL: Theme now consistently uses GPL v3 across all files (style.css, readme.txt, LICENSE.md).
 
 = 1.2.2 - 12/29/25 =
 * FIXED: services-feature-cards pattern - Added horizontal padding (var:preset|spacing|medium) on mobile to prevent edge-to-edge content.
