@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.4] - 2025-12-31
+
+### Changed - Navigation and post metadata styling
+
+**Navigation Chevron Spacing:**
+- Reduced gap between parent menu text and chevron from 0.5rem to 0.25rem
+  - Updated `.moiraine-nav-parent-wrapper` gap property in core-navigation.css
+  - Updated `.moiraine-nav-toggle` margin-left in overlay mode
+  - Tighter, more compact visual appearance for navigation menus
+  - Consistent spacing across desktop and mobile overlay modes
+
+**Post Author and Date Alignment:**
+- Added CSS fixes for vertical alignment of post author and post date blocks
+  - `.wp-block-post-author` now uses flexbox with `align-items: center`
+  - `.wp-block-post-author__content` aligns author name with avatar center
+  - `.wp-block-post-date` aligns with author name when in flex container
+  - Prevents misaligned metadata in post layouts
+
+### Technical
+
+- Navigation spacing improvements enhance visual consistency
+- Post metadata alignment fixes improve readability in sidebar and post layouts
+- CSS changes isolated to core-navigation.css and style.css
+
 ## [1.2.3] - 2025-12-30
 
 ### Changed - License update
