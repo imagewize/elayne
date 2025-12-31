@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.2.5 - 12/31/25 =
+* ADDED: Pattern URL documentation - Comprehensive guide on how get_template_directory_uri() creates environment-specific URLs in database content with search-replace solutions
+* TECHNICAL: Logo cleanup - Removed 12 unused PNG logo files (16x16, 32x32, 48x48 variants), now using SVG exclusively
+
 
 = 1.2.4 - 12/31/25 =
 * CHANGED: Navigation chevron spacing - Reduced gap between parent menu text and chevron from 0.5rem to 0.25rem for tighter, more compact visual appearance.

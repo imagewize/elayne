@@ -128,6 +128,78 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
 
 **Important:** Disable in production environments for optimal performance.
 
+### CRITICAL: Pattern URL Behavior and Database Content
+
+**IMPORTANT**: Elayne pattern files use `get_template_directory_uri()` which returns **environment-specific URLs** that get hardcoded into the database when patterns are used in pages.
+
+**How Pattern URLs Work:**
+
+When pattern PHP files are evaluated by WordPress, `get_template_directory_uri()` returns:
+- **Local Dev (Trellis VM)**: `http://demo.imagewize.test/app/themes/elayne`
+- **Production**: `https://demo.imagewize.com/app/themes/elayne`
+
+**The Problem:**
+
+When you insert a pattern into a page/post:
+1. WordPress evaluates the PHP pattern file
+2. `get_template_directory_uri()` returns the **current environment's URL**
+3. The URL gets **hardcoded** into `wp_posts.post_content` in the database
+4. Moving content between environments without search-replace causes **mixed content warnings**
+
+**Example:**
+
+```php
+// Pattern file: patterns/hero-modern-dark.php
+<img src="<?php echo esc_url(get_template_directory_uri() . '/patterns/images/desktop.webp'); ?>" />
+```
+
+**Saved in database (local):**
+```html
+<img src="http://demo.imagewize.test/app/themes/elayne/patterns/images/desktop.webp" />
+```
+
+**Problem on production:**
+```
+Mixed Content Warning: http://demo.imagewize.test/app/themes/elayne/patterns/images/desktop.webp
+requested on https://demo.imagewize.com/ page
+```
+
+**Solution - Always Run Search-Replace:**
+
+**When creating content locally and deploying to production:**
+```bash
+# STEP 1: Check for dev URLs in production
+ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
+  wp db query \"SELECT COUNT(*) FROM wp_posts WHERE post_content LIKE '%.test%';\" \
+  --path=web/wp --url=https://demo.imagewize.com"
+
+# STEP 2: If count > 0, fix URLs before going live
+ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
+  wp db export /tmp/backup_\$(date +%Y%m%d_%H%M%S).sql.gz --path=web/wp && \
+  wp search-replace 'http://demo.imagewize.test' 'https://demo.imagewize.com' \
+  --all-tables --precise --path=web/wp --url=https://demo.imagewize.com && \
+  wp cache flush --path=web/wp"
+```
+
+**When pulling production database to local dev:**
+```bash
+# After database import, replace production URLs with dev URLs
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- \
+  wp search-replace 'https://demo.imagewize.com' 'http://demo.imagewize.test' \
+  --all-tables --precise --path=web/wp --url=http://demo.imagewize.test
+```
+
+**Prevention Tips:**
+1. ✅ Always audit for `.test` URLs before deploying content to production
+2. ✅ Backup database before running search-replace
+3. ✅ Verify in browser console (F12) for mixed content warnings
+4. ✅ Use `wp cache flush` after URL changes
+5. ✅ Hard refresh browser (Cmd+Shift+R) to clear cache
+
+**See also:**
+- `/Users/j/code/imagewize.com/CLAUDE.md` - "CRITICAL: URL Sanitization After Database Operations"
+- `/Users/j/code/trellis-tools/content-creation/PAGE-CREATION.md` - "CRITICAL: URL Sanitization Before Production"
+
 ## Key Components
 
 ### Theme Configuration (theme.json)
