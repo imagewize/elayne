@@ -351,7 +351,7 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 .has-clickable-parents .moiraine-nav-parent-wrapper {
 	display: flex;
 	align-items: center;
-	gap: 0.5rem;
+	gap: 0.25rem;
 	width: auto;
 }
 
@@ -468,5 +468,5 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 /* Combined: Clickable Parents + Improved Chevrons */
 /* Only add spacing in overlay mode where touch targets need more room */
 .wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents.has-improved-chevrons .moiraine-nav-toggle {
-	margin-left: 0.5rem;
+	margin-left: 0.25rem;
 }
