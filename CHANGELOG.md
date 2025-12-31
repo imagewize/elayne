@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.5] - 2025-12-31
+
+### Added
+
+**Pattern URL Documentation:**
+- Added comprehensive documentation about pattern URL behavior and database content
+- Documented how `get_template_directory_uri()` returns environment-specific URLs that get hardcoded into database
+- Included troubleshooting steps for mixed content warnings when moving content between environments
+- Added search-replace commands for URL sanitization when deploying content to production
+- Cross-referenced main CLAUDE.md documentation for URL sanitization workflows
+
+### Technical
+
+**Logo Asset Cleanup:**
+- Removed unused PNG logo files in multiple sizes (16x16, 32x32, 48x48)
+- Removed dark, outline, primary, and white logo variants
+- Theme now uses SVG logos exclusively for better scalability and performance
+
 ## [1.2.4] - 2025-12-31
 
 ### Changed - Navigation and post metadata styling
