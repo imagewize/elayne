@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.2.5
+Stable tag: 1.3.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.3.0 - 01/02/26 =
+* ADDED: Four new vertical pattern categories - Legal Services, Fintech & Technology, Beauty & Salon, and Retail & E-commerce.
+* ADDED: Four legal services patterns - hero sections (standard, with statistics, split layout) and contact information pattern.
+* ADDED: Legal services image assets - 6 practice area SVG icons, 3 attorney portraits, and 1 hero image (all WebP optimized).
+* TECHNICAL: Extended pattern category registration system to support vertical-specific content organization.
+
 
 = 1.2.5 - 12/31/25 =
 * ADDED: Pattern URL documentation - Comprehensive guide on how get_template_directory_uri() creates environment-specific URLs in database content with search-replace solutions
@@ -607,6 +614,42 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **License:** [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)
 - **Attribution:** Required (CC BY-SA 2.0)
 - **Description:** Supplement bottle product shot
+
+---
+
+## Legal Theme Images (Pexels License - GPL-Compatible)
+
+### legal/hero-law-office.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/businessman-in-his-office-looking-at-the-camera-4427630/)
+- **Title:** Businessman in His Office Looking at the Camera
+- **Photographer:** [August de Richelieu](https://www.pexels.com/@august-de-richelieu/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional businessman in law office setting
+
+### legal/attorney-1.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/businessman-looking-sideways-4427620/)
+- **Title:** Businessman Looking Sideways
+- **Photographer:** [August de Richelieu](https://www.pexels.com/@august-de-richelieu/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional businessman attorney portrait
+
+### legal/attorney-2.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/businesswoman-in-her-office-4427610/)
+- **Title:** Businesswoman in Her Office
+- **Photographer:** [August de Richelieu](https://www.pexels.com/@august-de-richelieu/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional businesswoman attorney portrait
+
+### legal/attorney-3.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/businessman-standing-with-his-hands-on-his-desk-4427616/)
+- **Title:** Businessman Standing with His Hands on His Desk
+- **Photographer:** [August de Richelieu](https://www.pexels.com/@august-de-richelieu/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional businessman attorney portrait
 
 ---
 

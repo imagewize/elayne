@@ -75,6 +75,10 @@ function elayne_pattern_categories() {
 		'elayne/pages'          => array( 'label' => __( 'Pages', 'elayne' ) ),
 		'elayne/posts'          => array( 'label' => __( 'Posts', 'elayne' ) ),
 		'elayne/spa'            => array( 'label' => __( 'Spa & Wellness', 'elayne' ) ),
+		'elayne/legal'          => array( 'label' => __( 'Legal Services', 'elayne' ) ),
+		'elayne/fintech'        => array( 'label' => __( 'Fintech & Technology', 'elayne' ) ),
+		'elayne/salon'          => array( 'label' => __( 'Beauty & Salon', 'elayne' ) ),
+		'elayne/retail'         => array( 'label' => __( 'Retail & E-commerce', 'elayne' ) ),
 	);
 
 	foreach ( $block_pattern_categories as $name => $properties ) {

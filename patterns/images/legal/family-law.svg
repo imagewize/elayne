@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<!-- Parent figures -->
+	<circle cx="22" cy="18" r="6" fill="currentColor" opacity="0.3"/>
+	<circle cx="42" cy="18" r="6" fill="currentColor" opacity="0.3"/>
+
+	<!-- Parent bodies -->
+	<path d="M14 30C14 27 16 25 22 25C28 25 30 27 30 30V42H14V30Z" fill="currentColor" opacity="0.2"/>
+	<path d="M34 30C34 27 36 25 42 25C48 25 50 27 50 30V42H34V30Z" fill="currentColor" opacity="0.2"/>
+
+	<!-- Child figure -->
+	<circle cx="32" cy="28" r="5" fill="currentColor"/>
+	<path d="M24 40C24 36 26 34 32 34C38 34 40 36 40 40V54H24V40Z" fill="currentColor"/>
+
+	<!-- Hearts -->
+	<path d="M18 46C18 46 16 44 16 42C16 40 17 39 18 39C19 39 20 40 20 42C20 44 18 46 18 46Z" fill="white" opacity="0.8"/>
+	<path d="M46 46C46 46 44 44 44 42C44 40 45 39 46 39C47 39 48 40 48 42C48 44 46 46 46 46Z" fill="white" opacity="0.8"/>
+</svg>

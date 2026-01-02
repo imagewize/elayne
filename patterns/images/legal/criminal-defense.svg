@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<!-- Shield background -->
+	<path d="M32 8L16 14V28C16 40 24 50 32 56C40 50 48 40 48 28V14L32 8Z" fill="currentColor" opacity="0.2"/>
+
+	<!-- Shield outline -->
+	<path d="M32 10L18 16V28C18 38.5 25 47.5 32 54C39 47.5 46 38.5 46 28V16L32 10Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+	<!-- Checkmark in shield -->
+	<circle cx="32" cy="32" r="11" fill="currentColor"/>
+	<path d="M26 32L30 36L38 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+	<!-- Decorative stars -->
+	<path d="M14 24L15 26L13 26L14 24Z" fill="currentColor" opacity="0.4"/>
+	<path d="M50 24L51 26L49 26L50 24Z" fill="currentColor" opacity="0.4"/>
+</svg>

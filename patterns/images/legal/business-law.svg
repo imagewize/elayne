@@ -1,0 +1,22 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<!-- Briefcase body -->
+	<rect x="10" y="22" width="44" height="30" rx="3" fill="currentColor" opacity="0.2"/>
+
+	<!-- Briefcase handle -->
+	<path d="M24 22V18C24 15.7909 25.7909 14 28 14H36C38.2091 14 40 15.7909 40 18V22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+
+	<!-- Briefcase top -->
+	<rect x="10" y="22" width="44" height="8" fill="currentColor"/>
+
+	<!-- Document lines -->
+	<rect x="18" y="36" width="20" height="2" rx="1" fill="currentColor"/>
+	<rect x="18" y="41" width="16" height="2" rx="1" fill="currentColor"/>
+	<rect x="18" y="46" width="12" height="2" rx="1" fill="currentColor"/>
+
+	<!-- Checkmark circle -->
+	<circle cx="46" cy="46" r="9" fill="currentColor"/>
+	<path d="M42 46L44.5 48.5L50 43" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+	<!-- Lock detail -->
+	<rect x="30" y="28" width="4" height="6" rx="1" fill="white" opacity="0.8"/>
+</svg>

@@ -1,0 +1,103 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Legal Blue",
+	"settings": {
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [
+				{
+					"name": "Navy",
+					"slug": "primary",
+					"colors": ["#1E3A8A", "#FDFBF7"]
+				},
+				{
+					"name": "Gold",
+					"slug": "secondary",
+					"colors": ["#D4AF37", "#FDFBF7"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
+			"gradients": [
+				{
+					"name": "Navy Blue",
+					"slug": "navy",
+					"gradient": "linear-gradient(135deg, #1E3A8A, #3B82F6)"
+				},
+				{
+					"name": "Gold Shine",
+					"slug": "gold-shine",
+					"gradient": "linear-gradient(135deg, #D4AF37, #F4E4B9)"
+				},
+				{
+					"name": "Professional",
+					"slug": "professional",
+					"gradient": "linear-gradient(135deg, #1E40AF, #1F2937)"
+				}
+			],
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "primary",
+					"color": "#1E3A8A"
+				},
+				{
+					"name": "Brand Accent",
+					"slug": "primary-accent",
+					"color": "#3B82F6"
+				},
+				{
+					"name": "Brand Alt",
+					"slug": "primary-alt",
+					"color": "#1E40AF"
+				},
+				{
+					"name": "Brand Alt Accent",
+					"slug": "primary-alt-accent",
+					"color": "#D4AF37"
+				},
+				{
+					"name": "Contrast",
+					"slug": "main",
+					"color": "#1F2937"
+				},
+				{
+					"name": "Contrast Accent",
+					"slug": "main-accent",
+					"color": "#6B7280"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#FDFBF7"
+				},
+				{
+					"name": "Base Accent",
+					"slug": "secondary",
+					"color": "#D4AF37"
+				},
+				{
+					"name": "Tint",
+					"slug": "tertiary",
+					"color": "#F3F4F6"
+				},
+				{
+					"name": "Border Light",
+					"slug": "border-light",
+					"color": "#E5E7EB"
+				},
+				{
+					"name": "Border Dark",
+					"slug": "border-dark",
+					"color": "#D1D5DB"
+				}
+			]
+		}
+	}
+}
