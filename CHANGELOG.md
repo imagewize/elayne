@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-01-02
+
+### Added
+
+**New Vertical Pattern Categories:**
+- Added Legal Services category (`elayne/legal`) with professional law firm patterns
+- Added Fintech & Technology category (`elayne/fintech`) for financial and tech businesses
+- Added Beauty & Salon category (`elayne/salon`) for beauty and wellness services
+- Added Retail & E-commerce category (`elayne/retail`) for online and physical stores
+
+**Legal Services Patterns:**
+- Legal Services Hero (`elayne/legal-hero`) - Professional hero section with call-to-action buttons
+- Legal Hero with Statistics (`elayne/legal-hero-with-stats`) - Premium hero with integrated statistics and gradient background
+- Legal Hero Split Layout (`elayne/legal-hero-split`) - Split-screen hero with trust badge, features, and client reviews
+- Legal Contact Information (`elayne/legal-contact`) - Contact details with office location, phone, email, and hours
+
+**Legal Services Assets:**
+- Added 6 custom SVG icons for practice areas: business law, criminal defense, estate planning, family law, litigation, and real estate law
+- Added 3 attorney portrait images (WebP format) for team sections
+- Added professional law office hero image (WebP format)
+
+### Technical
+
+**Pattern System Enhancements:**
+- Extended pattern category registration to support vertical-specific content organization
+- All new patterns include proper metadata, categories, keywords, and viewport width settings
+- Legal patterns feature responsive layouts with grid-based column systems
+
 ## [1.2.5] - 2025-12-31
 
 ### Added

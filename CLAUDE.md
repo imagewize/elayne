@@ -702,12 +702,17 @@ wp --url=http://demo.imagewize.test/ cache flush --path=web/wp
 
 **SSH Access:**
 ```bash
-# SSH as web user (recommended for WP-CLI commands)
+# SSH as web user (recommended for read-only operations and WP-CLI commands)
 ssh web@demo.imagewize.com
 
-# SSH as root user (for server management)
-ssh root@demo.imagewize.com
+# SSH as warden user (admin access - requires password for sudo commands)
+ssh warden@demo.imagewize.com
 ```
+
+**SSH User Guide:**
+- **`web@`** - Passwordless, read-only access. Use for automation and monitoring.
+- **`warden@`** - Admin user with sudo access. Requires password for administrative commands.
+- **`root@`** - Only configured on the provisioning MacBook. Use `warden@` instead.
 
 **Demo Site Paths on Server (Bedrock Structure):**
 - Current release: `/srv/www/demo.imagewize.com/current/`

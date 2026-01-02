@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<!-- House body -->
+	<path d="M32 12L12 26V54H52V26L32 12Z" fill="currentColor" opacity="0.2"/>
+
+	<!-- Roof outline -->
+	<path d="M8 26L32 8L56 26" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+	<!-- Door -->
+	<rect x="26" y="38" width="12" height="16" rx="1" fill="currentColor"/>
+	<circle cx="35" cy="46" r="1.5" fill="white"/>
+
+	<!-- Windows -->
+	<rect x="16" y="30" width="8" height="8" rx="1" fill="currentColor" opacity="0.6"/>
+	<rect x="40" y="30" width="8" height="8" rx="1" fill="currentColor" opacity="0.6"/>
+
+	<!-- Window panes -->
+	<line x1="20" y1="30" x2="20" y2="38" stroke="white" stroke-width="1"/>
+	<line x1="16" y1="34" x2="24" y2="34" stroke="white" stroke-width="1"/>
+	<line x1="44" y1="30" x2="44" y2="38" stroke="white" stroke-width="1"/>
+	<line x1="40" y1="34" x2="48" y2="34" stroke="white" stroke-width="1"/>
+
+	<!-- Chimney -->
+	<rect x="40" y="14" width="6" height="10" fill="currentColor"/>
+</svg>
