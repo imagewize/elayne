@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,15 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.3.1 - 01/02/26 =
+* ADDED: CONTRIBUTING.md developer guide with technical requirements, pattern development guidelines, and contribution standards.
+* ADDED: Legal Services industry vertical with legal-focused patterns, Legal Blue style variation, and legal-specific images.
+* CHANGED: README.md documentation - Condensed pattern library section to category-based overview, moved developer details to CONTRIBUTING.md.
+* CHANGED: Pattern count updated from 47 to 72 patterns with reorganized category counts.
+* CHANGED: Industry verticals section now includes Legal Services alongside Spa & Wellness and Real Estate.
+* TECHNICAL: Separated user-facing documentation (README.md) from developer documentation (CONTRIBUTING.md) for better organization.
+
 
 = 1.3.0 - 01/02/26 =
 * ADDED: Four new vertical pattern categories - Legal Services, Fintech & Technology, Beauty & Salon, and Retail & E-commerce.
