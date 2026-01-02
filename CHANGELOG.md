@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.1] - 2026-01-02
+
+### Added
+
+**CONTRIBUTING.md Developer Guide:**
+- Comprehensive developer documentation covering technical requirements, project structure, and contribution guidelines
+- Detailed pattern development guidelines including responsive grid layouts and horizontal padding best practices
+- Industry vertical pattern creation guidelines with naming conventions and image organization
+- Translation, code standards, and testing checklists for contributors
+
+**Legal Services Industry Vertical:**
+- New legal-focused patterns and content optimized for law firms and legal professionals
+- Legal Blue style variation with professional navy blue and gold palette
+- Legal-specific images stored in `patterns/images/legal/` directory
+
+### Changed
+
+**README.md Documentation Restructure:**
+- Condensed pattern library section from detailed 100+ line listing to concise category-based overview
+- Simplified \
+
 ## [1.3.0] - 2026-01-02
 
 ### Added
