@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.3.2 - 01/03/26 =
+* CHANGED: Navigation styling - Removed underline decoration from current menu items and hovered parent buttons
+* CHANGED: Firefox link rendering - Standardized underline thickness at 0.1rem for consistency
+* ADDED: Header pattern with phone number - New "Header Standard with Phone Number" pattern with responsive phone display
+* TECHNICAL: CSS improvements - Added .hide-on-desktop media query and Firefox-specific link underline fix"
+
 
 = 1.3.1 - 01/02/26 =
 * ADDED: CONTRIBUTING.md developer guide with technical requirements, pattern development guidelines, and contribution standards.

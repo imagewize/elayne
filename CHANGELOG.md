@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.2] - 2026-01-03
+
+### Changed
+
+**Navigation Styling:**
+- Removed underline decoration from current menu items and hovered parent menu buttons for cleaner appearance
+
+**Firefox Link Rendering:**
+- Added browser-specific fix to standardize link underline thickness at 0.1rem in Firefox
+
+### Added
+
+**New Header Pattern:**
+- Added "Header Standard with Phone Number" pattern (header-standard-with-tel-number) with logo, inline navigation, and phone number
+- Phone number displays on mobile only, with full navigation visible on desktop
+- Includes responsive visibility classes (hide-on-desktop/hide-on-mobile)
+
+### Technical
+
+**CSS Enhancements:**
+- Added media query for .hide-on-desktop class (min-width: 782px)
+- Added Firefox-specific @-moz-document rule for consistent link underline thickness",
+
 ## [1.3.1] - 2026-01-02
 
 ### Added
