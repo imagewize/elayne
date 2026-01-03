@@ -46,11 +46,6 @@
 	padding: 0;
 }
 
-.wp-block-navigation__container .current-menu-item > a,
-.wp-block-navigation__container .has-child button:hover {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-}
 
 /* ============================================
    3. Desktop Dropdown Navigation
@@ -133,6 +128,13 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 /* Hide elements on mobile (e.g., social links in header) */
 @media only screen and (max-width: 781px) {
 	.hide-on-mobile {
+		display: none !important;
+	}
+}
+
+/* Hide elements on desktop/tablet (e.g., show only on mobile) */
+@media only screen and (min-width: 782px) {
+	.hide-on-desktop {
 		display: none !important;
 	}
 }

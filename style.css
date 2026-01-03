@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 1.3.1
+Version: 1.3.2
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -265,4 +265,15 @@ figure.is-avatar,
 .wp-block-post-date {
     display: flex;
     align-items: center;
+}
+
+/* ========================================================================
+   Link Underline Styling
+   ======================================================================== */
+
+/* Firefox-specific fix for thick underlines  */
+@-moz-document url-prefix() {
+    a {
+        text-decoration-thickness: .1rem !important;
+    }
 }
