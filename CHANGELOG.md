@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.3] - 2026-01-03
+
+### Changed
+
+**Pattern Library Count Update:**
+- Updated pattern count from 72 to 73 professionally designed patterns
+- Headers & Footers category expanded from 6 to 7 patterns
+- Added standard header with phone number to header variations
+
+**README.md Documentation Completion:**
+- Completed documentation restructure started in 1.3.2
+- Finalized separation of user-facing documentation (README.md) from developer documentation (CONTRIBUTING.md)
+- Pattern library section now reflects accurate counts across all categories",
+
 ## [1.3.2] - 2026-01-03
 
 ### Changed
@@ -49,7 +63,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **README.md Documentation Restructure:**
 - Condensed pattern library section from detailed 100+ line listing to concise category-based overview
-- Simplified \
+- Simplified documentation by moving developer details to CONTRIBUTING.md
+- Pattern count updated from 47 to 72 patterns with reorganized category counts
+- Industry verticals section now includes Legal Services alongside Spa & Wellness and Real Estate
+
+### Technical
+
+**Documentation Organization:**
+- Separated user-facing documentation (README.md) from developer documentation (CONTRIBUTING.md) for better organization
 
 ## [1.3.0] - 2026-01-02
 

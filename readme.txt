@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.3.3 - 01/03/26 =
+* CHANGED: Pattern library updated to 73 patterns (from 72), with Headers & Footers category now including 7 patterns.
+* CHANGED: Added standard header with phone number pattern to header variations.
+* CHANGED: Completed README.md documentation restructure for better organization."
+
 
 = 1.3.2 - 01/03/26 =
 * CHANGED: Navigation styling - Removed underline decoration from current menu items and hovered parent buttons

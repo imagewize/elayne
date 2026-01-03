@@ -41,10 +41,10 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 ### Pattern Library
 
-Elayne includes **72 professionally designed patterns** organized into categories:
+Elayne includes **73 professionally designed patterns** organized into categories:
 
 - **Hero Sections** (8 patterns) - Contemporary heroes with bold typography, split backgrounds, CTAs, and industry-specific variations for spa/wellness and legal services
-- **Headers & Footers** (6 patterns) - Mobile and desktop navigation, centered logos with top bars, professional and minimal footers
+- **Headers & Footers** (7 patterns) - Mobile and desktop navigation, standard header with phone number, centered logos with top bars, professional and minimal footers
 - **Call-to-Action & Contact** (8 patterns) - Newsletter signups, contact layouts, booking CTAs, and legal-specific contact sections
 - **Features & Services** (12 patterns) - Feature grids, service cards, pricing comparisons, client logos, overlapping image effects, and industry-specific service showcases
 - **Team & Testimonials** (13 patterns) - Team grids, testimonial cards with ratings, client reviews, and legal professional showcases
