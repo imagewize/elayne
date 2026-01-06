@@ -1,100 +1,271 @@
 /**
- * Group Block Styles
- *
- * Custom styles for the core/group block
- *
- * @package Elayne
+ * Elayne Theme - Card & Group Effects
+ * Pure CSS card and block container interactions
+ * Version: 1.0.0
  */
 
-/* Remove default global padding from specific contexts
---------------------------------------------- */
+/* ===========================
+   BLOCK STYLE: ELEVATE ON HOVER
+   Card lifts with shadow effect
+   =========================== */
 
-/* Remove global padding when group is used as a full-width section wrapper */
-.wp-block-group.alignfull.has-global-padding {
-	padding-right: 0;
-	padding-left: 0;
+.is-style-elevate-hover {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Ensure inner content can still use padding via block controls */
-.wp-block-group.alignfull > .wp-block-group__inner-container,
-.wp-block-group.alignfull > .is-layout-constrained,
-.wp-block-group.alignfull > .is-layout-flow {
-	/* Inherits padding from block settings */
+.is-style-elevate-hover:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(11, 19, 36, 0.15);
 }
 
-/* Background Blur Style
---------------------------------------------- */
-.is-style-background-blur {
-	-webkit-backdrop-filter: blur(20px);
-	backdrop-filter: blur(20px);
+/* Active state (subtle press down) */
+.is-style-elevate-hover:active {
+	transform: translateY(-4px);
+	transition: transform 0.1s ease;
 }
 
-/* Responsive Row Improvements
---------------------------------------------- */
+/* ===========================
+   BLOCK STYLE: GLOW BORDER
+   Animated gradient border on hover
+   =========================== */
 
-/* Stack rows on mobile */
-@media (max-width: 781px) {
-	.elayne-row-stack {
-		flex-direction: column;
-		align-items: flex-start !important;
+.is-style-glow-border {
+	position: relative;
+	border: 2px solid transparent;
+	transition: border-color 0.3s ease;
+}
+
+.is-style-glow-border::before {
+	content: '';
+	position: absolute;
+	inset: -2px;
+	border-radius: inherit;
+	padding: 2px;
+	background: linear-gradient(
+		135deg,
+		var(--wp--preset--color--primary-accent),
+		var(--wp--preset--color--primary)
+	);
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.is-style-glow-border:hover::before {
+	opacity: 1;
+}
+
+/* ===========================
+   BLOCK STYLE: IMAGE ZOOM
+   Zoom nested images on card hover
+   =========================== */
+
+.is-style-image-zoom {
+	overflow: hidden;
+}
+
+/* Target any image within the group */
+.is-style-image-zoom .wp-block-image,
+.is-style-image-zoom figure {
+	overflow: hidden;
+}
+
+.is-style-image-zoom img {
+	transition: transform 0.4s ease;
+	will-change: transform;
+}
+
+.is-style-image-zoom:hover img {
+	transform: scale(1.08);
+}
+
+/* ===========================
+   BLOCK STYLE: TILT CARD
+   3D perspective tilt effect
+   =========================== */
+
+/* Only enable tilt on devices with hover capability */
+@media (hover: hover) and (pointer: fine) {
+	.is-style-tilt-card {
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		transform-style: preserve-3d;
 	}
 
-	.elayne-row-stack > * {
-		flex-basis: 100% !important;
+	.is-style-tilt-card:hover {
+		transform: perspective(1000px) rotateX(2deg) rotateY(-2deg);
+		box-shadow: 0 15px 30px rgba(11, 19, 36, 0.12);
 	}
 
-	.elayne-flex-start {
-		align-items: flex-start !important;
-	}
-
-	.elayne-justify-start {
-		justify-content: flex-start !important;
-	}
-}
-
-/* Prevent button groups from shrinking */
-.elayne-row-stack > .wp-block-buttons,
-.elayne-no-shrink {
-	flex-shrink: 0;
-}
-
-/* Sticky positioning helper */
-.wp-block-group.elayne-sticky-top {
-	position: sticky;
-	top: calc(20px + var(--wp-admin--admin-bar--position-offset, 0px));
-	z-index: 100;
-}
-
-/* Helper classes to swap order on mobile */
-@media (max-width: 781px) {
-	.elayne-swap-order {
-		flex-direction: column-reverse;
-	}
-
-	.elayne-row-reverse {
-		flex-direction: row-reverse;
+	/* Slight shift on active/click */
+	.is-style-tilt-card:active {
+		transform: perspective(1000px) rotateX(1deg) rotateY(-1deg);
+		transition: transform 0.1s ease;
 	}
 }
 
-/* Box Shadow Style Variation
---------------------------------------------- */
-.is-style-box-shadow,
-.is-style-column-box-shadow {
-	box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
-	padding: var(--wp--preset--spacing--medium);
-	border-radius: 5px;
+/* ===========================
+   BLOCK STYLE: SCALE HOVER
+   Subtle scale up effect
+   =========================== */
+
+.is-style-scale-hover {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Constrained Layout Improvements
---------------------------------------------- */
-
-/* Ensure proper spacing for nested constrained layouts */
-.is-layout-constrained > .wp-block-group.is-layout-constrained {
-	max-width: 100%;
+.is-style-scale-hover:hover {
+	transform: scale(1.03);
+	box-shadow: 0 12px 24px rgba(11, 19, 36, 0.1);
 }
 
-/* Remove extra padding from nested groups */
-.wp-block-group .wp-block-group.has-global-padding {
-	padding-right: 0;
-	padding-left: 0;
+.is-style-scale-hover:active {
+	transform: scale(1.01);
+	transition: transform 0.1s ease;
+}
+
+/* ===========================
+   BLOCK STYLE: BORDER PULSE
+   Pulsing border animation on hover
+   =========================== */
+
+@keyframes border-pulse {
+	0%, 100% {
+		border-color: var(--wp--preset--color--primary);
+		box-shadow: 0 0 0 rgba(31, 41, 55, 0);
+	}
+	50% {
+		border-color: var(--wp--preset--color--primary-accent);
+		box-shadow: 0 0 20px rgba(31, 41, 55, 0.2);
+	}
+}
+
+.is-style-border-pulse {
+	border: 2px solid transparent;
+	transition: border-color 0.3s ease;
+}
+
+/* Activate pulsing border on hover */
+.is-style-border-pulse:hover {
+	border-color: var(--wp--preset--color--primary);
+	animation: border-pulse 2s ease-in-out infinite;
+}
+
+/* ===========================
+   BLOCK STYLE: SLIDE BORDER
+   Border slides in from edges
+   =========================== */
+
+.is-style-slide-border {
+	position: relative;
+	overflow: hidden;
+}
+
+/* Create the sliding border effect with pseudo-elements */
+.is-style-slide-border::before,
+.is-style-slide-border::after {
+	content: '';
+	position: absolute;
+	background: var(--wp--preset--color--primary);
+	transition: transform 0.4s ease;
+}
+
+/* Top and bottom borders */
+.is-style-slide-border::before {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	transform: scaleX(0);
+	transform-origin: left;
+}
+
+/* Left and right borders */
+.is-style-slide-border::after {
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+}
+
+.is-style-slide-border:hover::before {
+	transform: scaleX(1);
+}
+
+.is-style-slide-border:hover::after {
+	transform: scaleY(1);
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+/* Enhanced focus states for interactive groups */
+.is-style-elevate-hover:focus-within,
+.is-style-glow-border:focus-within,
+.is-style-tilt-card:focus-within,
+.is-style-scale-hover:focus-within {
+	outline: 3px solid var(--wp--preset--color--primary);
+	outline-offset: 3px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	.is-style-elevate-hover,
+	.is-style-glow-border,
+	.is-style-image-zoom,
+	.is-style-tilt-card,
+	.is-style-scale-hover,
+	.is-style-border-pulse,
+	.is-style-slide-border,
+	.is-style-elevate-hover::before,
+	.is-style-glow-border::before,
+	.is-style-slide-border::before,
+	.is-style-slide-border::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	/* Disable transforms for reduced motion */
+	.is-style-elevate-hover:hover,
+	.is-style-tilt-card:hover,
+	.is-style-scale-hover:hover,
+	.is-style-image-zoom:hover img {
+		transform: none !important;
+	}
+}
+
+/* ===========================
+   PRINT STYLES
+   Remove all effects for print
+   =========================== */
+
+@media print {
+	.is-style-elevate-hover,
+	.is-style-glow-border,
+	.is-style-tilt-card,
+	.is-style-scale-hover,
+	.is-style-border-pulse,
+	.is-style-slide-border {
+		transition: none !important;
+		transform: none !important;
+		box-shadow: none !important;
+		animation: none !important;
+	}
+
+	.is-style-glow-border::before,
+	.is-style-slide-border::before,
+	.is-style-slide-border::after {
+		display: none !important;
+	}
+
+	.is-style-image-zoom img {
+		transform: none !important;
+	}
 }

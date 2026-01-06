@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.3.3
+Stable tag: 1.4.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,20 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.4.0 - 01/06/26 =
+* ADDED: CSS Effect System - 32 new block style variations with pure CSS animations across buttons, cards, images, and text
+* ADDED: Button Effects - 6 new styles (Arrow Slide, Gradient Shift, Shimmer, Glow, Border Draw, Slide Up)
+* ADDED: Card/Group Effects - 7 new interactive styles (Elevate Hover, Glow Border, Image Zoom, Tilt Card, Scale Hover, Border Pulse, Slide Border)
+* ADDED: Image Effects - 9 new hover styles (Zoom, Grayscale, Rotate Icon, Blur, Brightness, Sepia, Lift Shadow, Border Reveal, Tilt 3D)
+* ADDED: Text/Link Effects - 10 new typography styles (Animated Underline variations, Gradient Text, Highlight Fade, Link Hover Shift, Fade In, Animated Markers)
+* ADDED: Accessibility Support - Enhanced focus states, reduced motion preferences, and print stylesheet optimization
+* ADDED: RTL Language Support - Text and link effects fully support right-to-left languages
+* CHANGED: Link Styling - Removed default underline, added medium font weight (500) to paragraph links, underline now only appears on hover
+* TECHNICAL: Added 3 new CSS files (core-button.css, core-image.css, core-paragraph.css) and rewrote core-group.css
+* TECHNICAL: Added elayne_register_effect_block_styles() function to register 32 block style variations
+* TECHNICAL: Performance optimizations using GPU acceleration, will-change property, and hover capability detection"
+
 
 = 1.3.3 - 01/03/26 =
 * CHANGED: Pattern library updated to 73 patterns (from 72), with Headers & Footers category now including 7 patterns.

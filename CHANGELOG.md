@@ -7,6 +7,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-01-06
+
+### Added - CSS Effect System
+**New Interactive Block Styles:**
+- **Button Effects:** 6 new animation styles including Arrow Slide (arrow slides right on hover), Gradient Shift (animated gradient background), Shimmer (light sweep effect), Glow (glowing shadow), Border Draw (outline fills on hover), and Slide Up (background slides from bottom)
+- **Card/Group Effects:** 7 new interactive styles including Elevate on Hover (card lifts with shadow), Glow Border (animated gradient border), Image Zoom (zoom nested images), Tilt Card (3D perspective tilt), Scale Hover (subtle scale up), Border Pulse (pulsing border animation), and Slide Border (border slides from edges)
+- **Image Effects:** 9 new hover styles including Zoom Hover, Grayscale to Color, Rotate Icon, Blur, Brightness, Sepia, Lift Shadow, Border Reveal, and Tilt 3D
+- **Text/Link Effects:** 10 new typography styles including Animated Underline (expands from left), Animated Underline Center (expands from center), Gradient Text (gradient clipped to text), Gradient Text Animated (shifting gradient), Highlight Fade (background appears on hover), Link Hover Shift (slides right with underline), Underline Slide (animated heading underline), Fade In (text fades in with upward movement), and Animated Markers (list markers slide on hover)
+
+**Effect System Features:**
+- Pure CSS animations with hardware acceleration for smooth 60fps performance
+- Comprehensive accessibility support with enhanced focus states and reduced motion preferences
+- Print stylesheet optimization (removes all effects for clean printing)
+- RTL language support for text/link effects
+- Cross-browser compatibility with fallbacks for unsupported features
+
+### Changed - Typography Improvements
+**Link Styling:**
+- Removed default underline from all links (modern, cleaner appearance)
+- Added medium font weight (500) to paragraph links for better visual hierarchy
+- Links now only show underline on hover state
+
+### Technical
+**New Stylesheet Files:**
+- Added `assets/styles/core-button.css` - Button effect system (260 lines)
+- Added `assets/styles/core-image.css` - Image effect system (231 lines)
+- Added `assets/styles/core-paragraph.css` - Text/link effect system (348 lines)
+- Updated `assets/styles/core-group.css` - Complete rewrite with card/group effects (271 lines, previously 73 lines)
+
+**Block Style Registration:**
+- Added `elayne_register_effect_block_styles()` function in `functions.php`
+- Registers 32 new block style variations across 6 core blocks
+- Supports core/button, core/group, core/image, core/paragraph, core/heading, and core/list blocks
+
+**Performance Optimizations:**
+- Uses CSS `will-change` property for transform-heavy animations
+- Leverages GPU acceleration via `transform` and `opacity` transitions
+- Media query for hover capability detection (`@media (hover: hover) and (pointer: fine)`)
+- Automatic animation disabling for `prefers-reduced-motion` users",
+
 ## [1.3.3] - 2026-01-03
 
 ### Changed
