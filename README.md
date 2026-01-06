@@ -32,33 +32,26 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 ## Installation
 
-1. Download the theme
-2. Upload to `/wp-content/themes/elayne/`
+1. Download the theme from [GitHub releases](https://github.com/imagewize/elayne/releases) or WordPress.org
+2. Upload via **Appearance → Themes → Add New** or manually to `/wp-content/themes/elayne/`
 3. Activate via **Appearance → Themes**
 4. Start designing in **Appearance → Editor**
+
+For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Features & Capabilities
 
 ### Pattern Library
 
-Elayne includes **73 professionally designed patterns** organized into categories:
+Elayne includes **73 professionally designed patterns** across 12 categories:
 
-- **Hero Sections** (8 patterns) - Contemporary heroes with bold typography, split backgrounds, CTAs, and industry-specific variations for spa/wellness and legal services
-- **Headers & Footers** (7 patterns) - Mobile and desktop navigation, standard header with phone number, centered logos with top bars, professional and minimal footers
-- **Call-to-Action & Contact** (8 patterns) - Newsletter signups, contact layouts, booking CTAs, and legal-specific contact sections
-- **Features & Services** (12 patterns) - Feature grids, service cards, pricing comparisons, client logos, overlapping image effects, and industry-specific service showcases
-- **Team & Testimonials** (13 patterns) - Team grids, testimonial cards with ratings, client reviews, and legal professional showcases
-- **Statistics** (4 patterns) - Visual emphasis displays, list presentations, and legal-specific stat sections
-- **Blog & Posts** (7 patterns) - Classic and portrait grids, list layouts, featured posts, author bios, and wellness-focused blog displays
-- **Support & Information** (2 patterns) - Collapsible FAQs and job listings
-- **Events** (1 pattern) - Responsive 3-column event grids with date badges
-- **Portfolio** (2 patterns) - Masonry grids and comprehensive case studies
-- **Pages** (1 pattern) - Pre-launch/maintenance pages with countdown
-- **Shop/E-commerce** (1 pattern) - Three-column product grids for spa/wellness shops
+**Core Patterns:** Hero Sections (8) • Headers & Footers (7) • Call-to-Action & Contact (8) • Features & Services (12) • Team & Testimonials (13) • Statistics (4) • Blog & Posts (7)
 
-**Templates:**
-- **Page Templates** (11) - Full-width, hero, wide, centered, sidebar layouts, 404, archive, search, and index variations
-- **Post Templates** (4) - Centered, wide, and sidebar layouts
+**Specialized:** Support & Information (2) • Events (1) • Portfolio (2) • Pages (1) • Shop/E-commerce (1)
+
+**Templates:** 11 page templates • 4 post templates
+
+Browse the complete pattern library in **Appearance → Editor → Patterns**
 
 ### Industry Verticals
 
@@ -70,81 +63,35 @@ Elayne provides specialized pattern sets for specific industries:
 
 ### Style Variations
 
-Switch your entire site's look with one click using pre-configured color palettes:
+Switch your entire site's look with one click using **8 pre-configured color palettes**: Ink & Sand (Default) • Spa & Wellness (Teal & Sage) • Legal Blue • Gray & Gold • Denim & Copper • Forest & Sage • Orange • Teal Bay
 
-- **Ink & Sand** (Default) - Warm ink blue and sand tones for sophisticated business sites
-- **Spa & Wellness** - Soothing teal and ocean sage palette with elegant Cormorant Garamond and friendly Quicksand fonts
-- **Legal Blue** - Professional navy blue and gold palette perfect for law firms and legal professionals
-- **Gray & Gold** - Sophisticated gray tones with elegant gold accents
-- **Denim & Copper** - Deep denim blues paired with warm copper highlights
-- **Forest & Sage** - Natural forest greens with calming sage tones
-- **Orange** - Vibrant orange palette for energetic brands
-- **Teal Bay** - Professional teal and bay blue combination
+Change styles in **Appearance → Editor → Styles**
 
-Change styles instantly in **Appearance → Editor → Styles**
+### CSS Effects & Block Styles
+
+Transform your content with **32 interactive block styles** — pure CSS animations with zero JavaScript:
+
+**Button Effects** (6) • **Card & Group Effects** (7) • **Image Effects** (9) • **Text & Link Effects** (10)
+
+All effects are pure CSS, accessible, and optimized for performance. Apply via **Appearance → Editor → Select Block → Styles Panel**
 
 ### Typography & Design
 
-- **Primary Font**: Open Sans (variable weight, 300-800)
-- **Fluid Typography**: Responsive font scaling that adapts to screen size
-- **Professional Color Palettes**: Multiple pre-configured color schemes
-- **Custom Shadows**: Multiple shadow presets for depth
-- **Custom Image Sizes**: Optimized for portrait and landscape layouts
+**Fonts:** Mona Sans (primary) • Open Sans • Bitter (serif) • Monospace — all variable weight with fluid responsive scaling. Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness) • Bodoni Moda (Gray & Gold)
 
-## Working with Full Site Editing
+**Design System:** Professional color palettes • Custom shadow presets • Optimized image sizes for portrait and landscape layouts
 
-### Site Editor
+## Getting Started
 
-Access the visual site builder at **Appearance → Editor** to:
-- Edit headers, footers, and templates
-- Customize global styles
-- Create custom templates
-- Build with patterns
-
-### Creating Pages with Patterns
-
-1. Create a new page
-2. Insert a pattern from the Elayne collection
-3. Choose appropriate page template (Full, Wide, Centered, etc.)
-4. Customize content and publish
-
-### Global Styles
-
-Powered by theme.json, customize:
-- Color palettes
-- Typography scales
-- Spacing and layout
-- Block defaults
+Access the WordPress Site Editor at **Appearance → Editor** to customize your site. Insert patterns, edit templates, and adjust global styles — all with drag-and-drop simplicity. Visit the [documentation](https://imagewize.com/resources/elayne) for detailed tutorials.
 
 ## Companion Plugin: Elayne Blocks
 
-Elayne works seamlessly with the **[Elayne Blocks](https://github.com/imagewize/elayne-blocks)** plugin, which provides custom Gutenberg blocks that enhance the theme's capabilities. While these blocks were designed as companions to the Elayne theme, they are **theme-agnostic** and work with any WordPress theme.
+Elayne works seamlessly with the **[Elayne Blocks](https://github.com/imagewize/elayne-blocks)** plugin, which provides 4 custom blocks: Mega Menu, Carousel, Slide, and FAQ Tabs. While designed as companions to Elayne, these blocks are **theme-agnostic** and work with any WordPress theme.
 
-### Why a Separate Plugin?
+WordPress.org Theme Review requirements prohibit custom block registration in themes, so blocks are provided via a separate plugin for compliance while maintaining powerful functionality.
 
-WordPress.org Theme Review requirements prohibit custom block registration in themes. By separating blocks into a plugin, we ensure compliance while providing powerful functionality that works across any theme.
-
-### Available Blocks
-
-The Elayne Blocks plugin includes **4 custom blocks**:
-
-1. **Mega Menu Block** - Advanced navigation with mega menu functionality, WordPress Interactivity API integration, and keyboard navigation
-2. **Carousel Block** - Responsive image/content carousel with Slick Carousel integration and touch/swipe support
-3. **Slide Block** - Individual carousel slides with InnerBlocks support for flexible content
-4. **FAQ Tabs Block** - Interactive FAQ with vertical tab navigation and customizable buttons
-
-### Installation
-
-```bash
-# Clone the plugin repository
-cd wp-content/plugins/
-git clone https://github.com/imagewize/elayne-blocks.git
-
-# Or download from GitHub releases
-# Activate via WordPress admin: Plugins → Elayne Blocks → Activate
-```
-
-For more information, visit: [github.com/imagewize/elayne-blocks](https://github.com/imagewize/elayne-blocks)
+Download from the [Elayne Blocks repository](https://github.com/imagewize/elayne-blocks) and install via **Plugins → Add New → Upload Plugin**.
 
 ## Community & Support
 
@@ -160,8 +107,7 @@ Elayne is created and maintained by [Jasper Frumau](https://imagewize.com).
 ### Credits
 
 - **Theme Author**: Jasper Frumau
-- **Open Sans Font**: Licensed under SIL Open Font License 1.1
+- **Fonts & Images**: All fonts and images are GPL-compatible. See [readme.txt](readme.txt) for complete license details and attribution.
 - **Base Architecture**: Inspired by modern WordPress block theme standards
-- **Pattern Images**: All images are GPL-compatible. See [readme.txt](readme.txt) for complete attribution details.
 
 **[View Demo](https://demo.imagewize.com)** | **[Visit Imagewize](https://imagewize.com)**

@@ -10,6 +10,31 @@ Thank you for your interest in contributing to Elayne! This guide provides techn
 - **Block theme** architecture
 - **Elayne Blocks plugin** (optional, for enhanced functionality)
 
+## Developer Installation
+
+For developers who want to contribute or extend the theme:
+
+```bash
+# Clone the theme repository
+cd wp-content/themes/
+git clone https://github.com/imagewize/elayne.git
+
+# Or download from GitHub releases
+# https://github.com/imagewize/elayne/releases
+
+# Activate via WordPress admin: Appearance → Themes → Elayne → Activate
+```
+
+### Installing Elayne Blocks Plugin (Optional)
+
+```bash
+# Clone the plugin repository
+cd wp-content/plugins/
+git clone https://github.com/imagewize/elayne-blocks.git
+
+# Activate via WordPress admin: Plugins → Elayne Blocks → Activate
+```
+
 ## Theme Features
 
 - **Translation Ready**: Full internationalization support
@@ -67,6 +92,27 @@ Elayne registers custom pattern categories for better organization:
 - **Pages** - Full page layouts (pre-launch, maintenance)
 - **Posts** - Blog-related patterns
 - **Shop** - E-commerce and product displays
+
+## CSS Effects & Block Styles
+
+Elayne includes **32 interactive block styles** organized into 4 categories:
+
+- **Button Effects** (6 styles) - Arrow Slide, Gradient Shift, Shimmer, Glow, Border Draw, Slide Up
+- **Card & Group Effects** (7 styles) - Elevate on Hover, Glow Border, Image Zoom, Tilt Card, Scale Hover, Border Pulse, Slide Border
+- **Image Effects** (9 styles) - Zoom Hover, Grayscale to Color, Rotate Icon, Blur, Brightness, Sepia, Lift Shadow, Border Reveal, Tilt 3D
+- **Text & Link Effects** (10 styles) - Animated Underline, Gradient Text, Highlight Fade, Link Hover Shift, and more
+
+### Technical Implementation
+
+All effects are implemented with these considerations:
+
+- **Pure CSS**: Zero JavaScript for maximum performance
+- **Hardware-accelerated**: Uses `transform` and `opacity` for smooth 60fps animations
+- **Accessibility**: Respects `prefers-reduced-motion` media query
+- **Print-optimized**: Effects disabled for clean printing (`@media print`)
+- **Browser compatibility**: Works across all modern browsers (Chrome, Firefox, Safari, Edge)
+
+Effects are registered as block styles in `functions.php` and styled in `assets/styles/` directory.
 
 ## Pattern Development Guidelines
 
