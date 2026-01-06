@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,14 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.4.1 - 01/06/26 =
+* ADDED: Developer installation instructions in CONTRIBUTING.md with GitHub clone commands
+* ADDED: CSS Effects documentation - 32 interactive block styles with technical implementation details
+* CHANGED: README.md structure - Streamlined installation, pattern library, style variations, and typography sections
+* CHANGED: Font licensing - Expanded readme.txt with detailed licensing for all 6 fonts (Open Sans, Cormorant Garamond, Quicksand, Bodoni Moda, Mona Sans, Bitter)
+* TECHNICAL: Moved developer-specific content from README.md to CONTRIBUTING.md for better organization"
+
 
 = 1.4.0 - 01/06/26 =
 * ADDED: CSS Effect System - 32 new block style variations with pure CSS animations across buttons, cards, images, and text
@@ -693,11 +701,53 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 
 **Status:** Logo images logo-1.webp, logo-2.webp, logo-3.webp, logo-4.webp, logo-5.webp are geometric designs created by theme author and do not require attribution or replacement.
 
-Other assets:
+---
 
-- The Open Sans font is available via the SIL Open Font License 1.1: https://fonts.google.com/specimen/Open+Sans
-- The Mona Sans font is available via the SIL Open Font License 1.1: https://github.com/github/mona-sans
-- The Bitter font is available via the SIL Open Font License 1.1: https://fonts.google.com/specimen/Bitter
+## Fonts
+
+All fonts are self-hosted in the theme and licensed under the SIL Open Font License 1.1:
+
+### Open Sans (Default Theme Font)
+- **License:** SIL Open Font License 1.1
+- **Source:** https://fonts.google.com/specimen/Open+Sans
+- **Weights:** Variable (300-800)
+- **Variants:** Regular, Italic
+- **Used in:** Default theme, all style variations
+
+### Cormorant Garamond
+- **License:** SIL Open Font License 1.1
+- **Source:** https://fonts.google.com/specimen/Cormorant+Garamond
+- **Weights:** Variable (400-900)
+- **Variants:** Regular, Italic
+- **Used in:** Spa & Wellness style variation
+
+### Quicksand
+- **License:** SIL Open Font License 1.1
+- **Source:** https://fonts.google.com/specimen/Quicksand
+- **Weights:** Variable (300-700)
+- **Variants:** Regular
+- **Used in:** Spa & Wellness style variation
+
+### Bodoni Moda
+- **License:** SIL Open Font License 1.1
+- **Source:** https://fonts.google.com/specimen/Bodoni+Moda
+- **Weights:** Variable (400-900)
+- **Variants:** Regular, Italic
+- **Used in:** Gray & Gold style variation
+
+### Mona Sans
+- **License:** SIL Open Font License 1.1
+- **Source:** https://github.com/github/mona-sans
+- **Weights:** Variable
+- **Variants:** Regular
+- **Used in:** Orange style variation
+
+### Bitter
+- **License:** SIL Open Font License 1.1
+- **Source:** https://fonts.google.com/specimen/Bitter
+- **Weights:** Variable
+- **Variants:** Regular, Italic
+- **Used in:** Orange style variation
 
 == Support ==
 

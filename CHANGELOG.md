@@ -7,6 +7,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2026-01-06
+
+### Added
+
+**Developer Installation Documentation:**
+- Added detailed developer installation instructions in CONTRIBUTING.md
+- Included GitHub repository clone commands for theme and Elayne Blocks plugin
+- Added activation instructions via WordPress admin
+
+**CSS Effects Documentation:**
+- Documented 32 interactive block styles across 4 categories (Button, Card/Group, Image, Text/Link)
+- Added technical implementation details: pure CSS, hardware-accelerated, accessibility features
+- Explained browser compatibility and print optimization
+
+### Changed
+
+**README.md Structure:**
+- Streamlined installation section with link to detailed developer guide in CONTRIBUTING.md
+- Condensed pattern library description from detailed list to concise summary format
+- Simplified style variations from detailed descriptions to compact list format
+- Restructured typography section with complete font details and design system overview
+- Condensed "Working with Full Site Editing" section to "Getting Started" with streamlined guidance
+- Simplified Elayne Blocks plugin section with concise feature list
+
+**Font Licensing Documentation:**
+- Expanded font licensing section in readme.txt with detailed information for all 6 fonts
+- Added complete font details: license type, source URLs, weights, variants, and usage context
+- Organized fonts with clear headings: Open Sans, Cormorant Garamond, Quicksand, Bodoni Moda, Mona Sans, Bitter
+- Specified which style variations use which fonts
+
+### Technical
+
+**Documentation Organization:**
+- Moved developer-specific content from README.md to CONTRIBUTING.md
+- Separated user-facing documentation from contributor/developer documentation
+- Improved information hierarchy and discoverability",
+
 ## [1.4.0] - 2026-01-06
 
 ### Added - CSS Effect System
