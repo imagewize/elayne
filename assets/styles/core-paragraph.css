@@ -1,0 +1,348 @@
+/**
+ * Elayne Theme - Link & Text Effects
+ * Pure CSS link and text animations
+ * Version: 1.0.0
+ */
+
+/* ===========================
+   PARAGRAPH STYLE: ANIMATED UNDERLINE
+   Underline expands from left on hover
+   =========================== */
+
+.is-style-animated-underline a {
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.is-style-animated-underline a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: currentColor;
+	transition: width 0.3s ease;
+}
+
+.is-style-animated-underline a:hover::after,
+.is-style-animated-underline a:focus::after {
+	width: 100%;
+}
+
+/* ===========================
+   PARAGRAPH STYLE: ANIMATED UNDERLINE CENTER
+   Underline expands from center outward
+   =========================== */
+
+.is-style-animated-underline-center a {
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.is-style-animated-underline-center a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background: currentColor;
+	transition: width 0.3s ease, left 0.3s ease;
+}
+
+.is-style-animated-underline-center a:hover::after,
+.is-style-animated-underline-center a:focus::after {
+	width: 100%;
+	left: 0;
+}
+
+/* ===========================
+   HEADING STYLE: GRADIENT TEXT
+   Gradient background clipped to text
+   =========================== */
+
+.is-style-gradient-text {
+	background: linear-gradient(
+		135deg,
+		var(--wp--preset--color--primary) 0%,
+		var(--wp--preset--color--main) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: var(--wp--preset--color--primary); /* Fallback for browsers without support */
+	transition: filter 0.3s ease;
+}
+
+.is-style-gradient-text:hover {
+	filter: brightness(1.2);
+}
+
+/* ===========================
+   HEADING STYLE: GRADIENT TEXT ANIMATED
+   Animated gradient that shifts on hover
+   =========================== */
+
+.is-style-gradient-text-animated {
+	background: linear-gradient(
+		135deg,
+		var(--wp--preset--color--primary) 0%,
+		var(--wp--preset--color--main) 50%,
+		var(--wp--preset--color--primary) 100%
+	);
+	background-size: 200% 200%;
+	background-position: 0% 50%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: var(--wp--preset--color--primary); /* Fallback */
+	transition: background-position 0.5s ease;
+}
+
+.is-style-gradient-text-animated:hover {
+	background-position: 100% 50%;
+}
+
+/* ===========================
+   PARAGRAPH STYLE: HIGHLIGHT FADE
+   Background highlight appears on hover
+   =========================== */
+
+.is-style-highlight-fade {
+	transition: background-color 0.3s ease, padding 0.3s ease;
+	border-radius: 4px;
+}
+
+.is-style-highlight-fade:hover {
+	background-color: var(--wp--preset--color--tertiary);
+	padding: 0.5em 1em;
+}
+
+/* ===========================
+   PARAGRAPH STYLE: LINK HOVER SHIFT
+   Links slide right with underline animation on hover
+   =========================== */
+
+.is-style-link-hover-shift a {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	transition: transform 0.2s ease;
+}
+
+.is-style-link-hover-shift a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: currentColor;
+	transition: width 0.3s ease;
+}
+
+.is-style-link-hover-shift a:hover,
+.is-style-link-hover-shift a:focus {
+	transform: translateX(4px);
+}
+
+.is-style-link-hover-shift a:hover::after,
+.is-style-link-hover-shift a:focus::after {
+	width: 100%;
+}
+
+/* ===========================
+   HEADING STYLE: UNDERLINE SLIDE
+   Animated underline for headings
+   =========================== */
+
+.is-style-underline-slide {
+	position: relative;
+	display: inline-block;
+	padding-bottom: 0.5em;
+}
+
+.is-style-underline-slide::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background: currentColor;
+	transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.is-style-underline-slide:hover::after {
+	width: 100%;
+}
+
+/* ===========================
+   PARAGRAPH STYLE: FADE IN
+   Text fades in with slight upward movement
+   Note: Applied on load, not hover
+   =========================== */
+
+.is-style-fade-in {
+	animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ===========================
+   LIST STYLE: ANIMATED MARKERS
+   List markers slide in on hover
+   =========================== */
+
+.is-style-animated-markers li {
+	position: relative;
+	padding-left: 1.5em;
+	transition: padding-left 0.2s ease;
+}
+
+.is-style-animated-markers li::marker {
+	transition: all 0.2s ease;
+}
+
+.is-style-animated-markers li:hover {
+	padding-left: 2em;
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+/* Enhanced focus states for links */
+.is-style-animated-underline a:focus-visible,
+.is-style-animated-underline-center a:focus-visible,
+.is-style-link-hover-shift a:focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+/* Ensure gradient text remains readable */
+@supports not (background-clip: text) {
+	.is-style-gradient-text,
+	.is-style-gradient-text-animated {
+		background: none;
+		-webkit-text-fill-color: inherit;
+		color: var(--wp--preset--color--primary);
+	}
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	.is-style-animated-underline a::after,
+	.is-style-animated-underline-center a::after,
+	.is-style-link-hover-shift a,
+	.is-style-underline-slide::after,
+	.is-style-gradient-text,
+	.is-style-gradient-text-animated,
+	.is-style-highlight-fade,
+	.is-style-animated-markers li {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	.is-style-fade-in {
+		animation: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+
+	.is-style-link-hover-shift a:hover {
+		transform: none !important;
+	}
+
+	.is-style-animated-markers li:hover {
+		padding-left: 1.5em !important;
+	}
+}
+
+/* ===========================
+   PRINT STYLES
+   Remove all effects for print
+   =========================== */
+
+@media print {
+	.is-style-animated-underline a::after,
+	.is-style-animated-underline-center a::after,
+	.is-style-underline-slide::after {
+		display: none !important;
+	}
+
+	.is-style-gradient-text,
+	.is-style-gradient-text-animated {
+		background: none !important;
+		-webkit-text-fill-color: inherit !important;
+		color: var(--wp--preset--color--primary) !important;
+		filter: none !important;
+	}
+
+	.is-style-highlight-fade,
+	.is-style-link-hover-shift a,
+	.is-style-animated-markers li {
+		transition: none !important;
+		transform: none !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+
+	.is-style-animated-underline a,
+	.is-style-animated-underline-center a {
+		text-decoration: underline !important;
+	}
+}
+
+/* ===========================
+   RTL LANGUAGE SUPPORT
+   =========================== */
+
+[dir="rtl"] .is-style-animated-underline a::after {
+	left: auto;
+	right: 0;
+}
+
+[dir="rtl"] .is-style-animated-underline-center a::after {
+	left: auto;
+	right: 50%;
+}
+
+[dir="rtl"] .is-style-animated-underline-center a:hover::after,
+[dir="rtl"] .is-style-animated-underline-center a:focus::after {
+	right: 0;
+}
+
+[dir="rtl"] .is-style-link-hover-shift a:hover,
+[dir="rtl"] .is-style-link-hover-shift a:focus {
+	transform: translateX(-4px);
+}
+
+[dir="rtl"] .is-style-underline-slide::after {
+	left: auto;
+	right: 0;
+}
+
+[dir="rtl"] .is-style-animated-markers li {
+	padding-left: 0;
+	padding-right: 1.5em;
+}
+
+[dir="rtl"] .is-style-animated-markers li:hover {
+	padding-left: 0;
+	padding-right: 2em;
+}

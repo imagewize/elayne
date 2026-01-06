@@ -1,0 +1,260 @@
+/**
+ * Elayne Theme - Button Effects
+ * Pure CSS button animations and interactions
+ * Version: 1.0.0
+ */
+
+/* ===========================
+   BASE BUTTON ENHANCEMENTS
+   Applied to all buttons
+   =========================== */
+
+.wp-element-button,
+.wp-block-button__link {
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+/* Subtle scale and shadow on all button hovers */
+.wp-element-button:hover,
+.wp-block-button__link:hover {
+	transform: scale(1.02);
+	box-shadow: 0 4px 12px rgba(11, 19, 36, 0.15);
+}
+
+/* Active state (click feedback) */
+.wp-element-button:active,
+.wp-block-button__link:active {
+	transform: scale(0.98);
+}
+
+/* ===========================
+   BUTTON STYLE: ARROW SLIDE
+   Arrow slides right on hover
+   =========================== */
+
+.is-style-arrow-slide .wp-block-button__link {
+	position: relative;
+	padding-right: 3em;
+	overflow: visible;
+}
+
+.is-style-arrow-slide .wp-block-button__link::after {
+	content: '→';
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+	will-change: transform;
+}
+
+.is-style-arrow-slide .wp-block-button__link:hover::after {
+	transform: translateY(-50%) translateX(4px);
+}
+
+/* Reset hover scale for arrow buttons */
+.is-style-arrow-slide .wp-block-button__link:hover {
+	transform: scale(1);
+}
+
+/* ===========================
+   BUTTON STYLE: GRADIENT SHIFT
+   Background gradient animates on hover
+   =========================== */
+
+.is-style-gradient-shift .wp-block-button__link {
+	background: linear-gradient(
+		135deg,
+		var(--wp--preset--color--primary) 0%,
+		var(--wp--preset--color--main) 100%
+	) !important;
+	background-size: 200% 200% !important;
+	background-position: 0% 50% !important;
+	transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.is-style-gradient-shift .wp-block-button__link:hover {
+	background-position: 100% 50% !important;
+}
+
+/* ===========================
+   BUTTON STYLE: SHIMMER
+   Light shimmer sweeps across button
+   =========================== */
+
+.is-style-shimmer .wp-block-button__link {
+	position: relative;
+	overflow: hidden;
+}
+
+.is-style-shimmer .wp-block-button__link::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.3),
+		transparent
+	);
+	transition: left 0.5s ease;
+}
+
+.is-style-shimmer .wp-block-button__link:hover::before {
+	left: 100%;
+}
+
+/* ===========================
+   BUTTON STYLE: GLOW
+   Glowing shadow effect on hover
+   =========================== */
+
+.is-style-glow .wp-block-button__link {
+	transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.is-style-glow .wp-block-button__link:hover {
+	box-shadow:
+		0 0 20px rgba(31, 41, 55, 0.4),
+		0 0 40px rgba(31, 41, 55, 0.2),
+		0 4px 12px rgba(11, 19, 36, 0.15);
+	transform: translateY(-2px);
+}
+
+/* ===========================
+   BUTTON STYLE: BORDER DRAW
+   Outline button with fill animation
+   =========================== */
+
+.is-style-border-draw .wp-block-button__link {
+	position: relative;
+	border: 2px solid var(--wp--preset--color--primary) !important;
+	background: transparent !important;
+	color: var(--wp--preset--color--primary) !important;
+	overflow: hidden;
+	transition: color 0.4s ease;
+	z-index: 1;
+}
+
+.is-style-border-draw .wp-block-button__link::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: var(--wp--preset--color--primary);
+	transition: width 0.4s ease;
+	z-index: -1;
+}
+
+.is-style-border-draw .wp-block-button__link:hover::before {
+	width: 100%;
+}
+
+.is-style-border-draw .wp-block-button__link:hover {
+	color: var(--wp--preset--color--base) !important;
+	transform: scale(1);
+}
+
+/* ===========================
+   BUTTON STYLE: SLIDE UP
+   Background slides up from bottom
+   =========================== */
+
+.is-style-slide-up .wp-block-button__link {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	transition: color 0.3s ease;
+}
+
+.is-style-slide-up .wp-block-button__link::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background: var(--wp--preset--color--primary);
+	transition: height 0.3s ease;
+	z-index: -1;
+}
+
+.is-style-slide-up .wp-block-button__link:hover::before {
+	height: 100%;
+}
+
+.is-style-slide-up .wp-block-button__link:hover {
+	color: var(--wp--preset--color--base);
+	transform: scale(1);
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+/* Enhanced focus states */
+.wp-element-button:focus-visible,
+.wp-block-button__link:focus-visible {
+	outline: 3px solid var(--wp--preset--color--primary);
+	outline-offset: 3px;
+	border-radius: 5px;
+}
+
+/* Animated focus ring */
+@keyframes focus-pulse {
+	0%, 100% { outline-offset: 3px; }
+	50% { outline-offset: 5px; }
+}
+
+.wp-element-button:focus-visible,
+.wp-block-button__link:focus-visible {
+	animation: focus-pulse 1.5s ease-in-out;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	.wp-element-button,
+	.wp-block-button__link,
+	.wp-element-button::before,
+	.wp-element-button::after,
+	.wp-block-button__link::before,
+	.wp-block-button__link::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	/* Disable transforms for reduced motion */
+	.wp-element-button:hover,
+	.wp-block-button__link:hover,
+	.wp-element-button:active,
+	.wp-block-button__link:active {
+		transform: none !important;
+	}
+}
+
+/* ===========================
+   PRINT STYLES
+   Remove all effects for print
+   =========================== */
+
+@media print {
+	.wp-element-button,
+	.wp-block-button__link {
+		transition: none !important;
+		transform: none !important;
+		box-shadow: none !important;
+	}
+
+	.wp-element-button::before,
+	.wp-element-button::after,
+	.wp-block-button__link::before,
+	.wp-block-button__link::after {
+		display: none !important;
+	}
+}

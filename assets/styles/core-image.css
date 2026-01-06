@@ -1,0 +1,231 @@
+/**
+ * Elayne Theme - Image Effects
+ * Pure CSS image interactions and hover effects
+ * Version: 1.0.0
+ */
+
+/* ===========================
+   BLOCK STYLE: ZOOM HOVER
+   Image scales up on hover
+   =========================== */
+
+.is-style-zoom-hover {
+	overflow: hidden;
+}
+
+.is-style-zoom-hover img {
+	transition: transform 0.4s ease;
+	will-change: transform;
+}
+
+.is-style-zoom-hover:hover img {
+	transform: scale(1.08);
+}
+
+/* ===========================
+   BLOCK STYLE: GRAYSCALE HOVER
+   Grayscale to color transition
+   =========================== */
+
+.is-style-grayscale-hover img {
+	filter: grayscale(100%);
+	transition: filter 0.4s ease;
+}
+
+.is-style-grayscale-hover:hover img {
+	filter: grayscale(0%);
+}
+
+/* ===========================
+   BLOCK STYLE: ROTATE ICON
+   Subtle rotation for icons
+   =========================== */
+
+.is-style-rotate-icon img,
+.is-style-rotate-icon svg {
+	transition: transform 0.3s ease;
+}
+
+.is-style-rotate-icon:hover img,
+.is-style-rotate-icon:hover svg {
+	transform: rotate(15deg);
+}
+
+/* ===========================
+   BLOCK STYLE: BLUR HOVER
+   Blur effect on hover
+   =========================== */
+
+.is-style-blur-hover img {
+	transition: filter 0.3s ease;
+}
+
+.is-style-blur-hover:hover img {
+	filter: blur(4px);
+}
+
+/* ===========================
+   BLOCK STYLE: BRIGHTNESS HOVER
+   Brighten image on hover
+   =========================== */
+
+.is-style-brightness-hover img {
+	transition: filter 0.3s ease;
+}
+
+.is-style-brightness-hover:hover img {
+	filter: brightness(1.15);
+}
+
+/* ===========================
+   BLOCK STYLE: SEPIA HOVER
+   Sepia tone on hover
+   =========================== */
+
+.is-style-sepia-hover img {
+	transition: filter 0.4s ease;
+}
+
+.is-style-sepia-hover:hover img {
+	filter: sepia(80%);
+}
+
+/* ===========================
+   BLOCK STYLE: LIFT SHADOW
+   Image lifts with shadow
+   =========================== */
+
+.is-style-lift-shadow {
+	display: inline-block;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.is-style-lift-shadow:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(11, 19, 36, 0.15);
+}
+
+.is-style-lift-shadow:active {
+	transform: translateY(-4px);
+}
+
+/* ===========================
+   BLOCK STYLE: BORDER REVEAL
+   Border appears on hover
+   =========================== */
+
+.is-style-border-reveal {
+	position: relative;
+	display: inline-block;
+}
+
+.is-style-border-reveal::before {
+	content: '';
+	position: absolute;
+	inset: -4px;
+	border: 3px solid var(--wp--preset--color--primary);
+	border-radius: inherit;
+	opacity: 0;
+	transition: opacity 0.3s ease, inset 0.3s ease;
+}
+
+.is-style-border-reveal:hover::before {
+	opacity: 1;
+	inset: -8px;
+}
+
+/* ===========================
+   BLOCK STYLE: TILT 3D
+   3D tilt effect for images
+   =========================== */
+
+@media (hover: hover) and (pointer: fine) {
+	.is-style-tilt-3d {
+		display: inline-block;
+		transition: transform 0.3s ease;
+		transform-style: preserve-3d;
+	}
+
+	.is-style-tilt-3d:hover {
+		transform: perspective(800px) rotateY(5deg);
+	}
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+/* Enhanced focus states */
+.is-style-zoom-hover:focus-visible,
+.is-style-grayscale-hover:focus-visible,
+.is-style-rotate-icon:focus-visible,
+.is-style-lift-shadow:focus-visible,
+.is-style-border-reveal:focus-visible,
+.is-style-tilt-3d:focus-visible {
+	outline: 3px solid var(--wp--preset--color--primary);
+	outline-offset: 3px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	.is-style-zoom-hover img,
+	.is-style-grayscale-hover img,
+	.is-style-rotate-icon img,
+	.is-style-rotate-icon svg,
+	.is-style-blur-hover img,
+	.is-style-brightness-hover img,
+	.is-style-sepia-hover img,
+	.is-style-lift-shadow,
+	.is-style-border-reveal::before,
+	.is-style-tilt-3d {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	/* Disable transforms and filters for reduced motion */
+	.is-style-zoom-hover:hover img,
+	.is-style-rotate-icon:hover img,
+	.is-style-rotate-icon:hover svg,
+	.is-style-lift-shadow:hover,
+	.is-style-tilt-3d:hover {
+		transform: none !important;
+	}
+
+	.is-style-grayscale-hover:hover img,
+	.is-style-blur-hover:hover img,
+	.is-style-brightness-hover:hover img,
+	.is-style-sepia-hover:hover img {
+		filter: none !important;
+	}
+}
+
+/* ===========================
+   PRINT STYLES
+   Remove all effects for print
+   =========================== */
+
+@media print {
+	.is-style-zoom-hover img,
+	.is-style-grayscale-hover img,
+	.is-style-rotate-icon img,
+	.is-style-rotate-icon svg,
+	.is-style-blur-hover img,
+	.is-style-brightness-hover img,
+	.is-style-sepia-hover img {
+		transition: none !important;
+		transform: none !important;
+		filter: none !important;
+	}
+
+	.is-style-lift-shadow,
+	.is-style-tilt-3d {
+		transition: none !important;
+		transform: none !important;
+		box-shadow: none !important;
+	}
+
+	.is-style-border-reveal::before {
+		display: none !important;
+	}
+}

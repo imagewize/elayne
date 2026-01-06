@@ -131,6 +131,70 @@ function elayne_enqueue_custom_block_styles() {
 add_action( 'init', __NAMESPACE__ . '\elayne_enqueue_custom_block_styles' );
 
 /**
+ * Register CSS effect block styles.
+ */
+function elayne_register_effect_block_styles() {
+	$block_styles = array(
+		'core/button'    => array(
+			'arrow-slide'    => __( 'Arrow Slide', 'elayne' ),
+			'gradient-shift' => __( 'Gradient Shift', 'elayne' ),
+			'shimmer'        => __( 'Shimmer', 'elayne' ),
+			'glow'           => __( 'Glow', 'elayne' ),
+			'border-draw'    => __( 'Border Draw', 'elayne' ),
+			'slide-up'       => __( 'Slide Up', 'elayne' ),
+		),
+		'core/group'     => array(
+			'elevate-hover' => __( 'Elevate on Hover', 'elayne' ),
+			'glow-border'   => __( 'Glow Border', 'elayne' ),
+			'image-zoom'    => __( 'Image Zoom', 'elayne' ),
+			'tilt-card'     => __( 'Tilt Card', 'elayne' ),
+			'scale-hover'   => __( 'Scale Hover', 'elayne' ),
+			'border-pulse'  => __( 'Border Pulse', 'elayne' ),
+			'slide-border'  => __( 'Slide Border', 'elayne' ),
+		),
+		'core/image'     => array(
+			'zoom-hover'       => __( 'Zoom Hover', 'elayne' ),
+			'grayscale-hover'  => __( 'Grayscale Hover', 'elayne' ),
+			'rotate-icon'      => __( 'Rotate Icon', 'elayne' ),
+			'blur-hover'       => __( 'Blur Hover', 'elayne' ),
+			'brightness-hover' => __( 'Brightness Hover', 'elayne' ),
+			'sepia-hover'      => __( 'Sepia Hover', 'elayne' ),
+			'lift-shadow'      => __( 'Lift Shadow', 'elayne' ),
+			'border-reveal'    => __( 'Border Reveal', 'elayne' ),
+			'tilt-3d'          => __( 'Tilt 3D', 'elayne' ),
+		),
+		'core/paragraph' => array(
+			'animated-underline'        => __( 'Animated Underline', 'elayne' ),
+			'animated-underline-center' => __( 'Animated Underline Center', 'elayne' ),
+			'highlight-fade'            => __( 'Highlight Fade', 'elayne' ),
+			'link-hover-shift'          => __( 'Link Hover Shift', 'elayne' ),
+			'fade-in'                   => __( 'Fade In', 'elayne' ),
+		),
+		'core/heading'   => array(
+			'gradient-text'          => __( 'Gradient Text', 'elayne' ),
+			'gradient-text-animated' => __( 'Gradient Text Animated', 'elayne' ),
+			'underline-slide'        => __( 'Underline Slide', 'elayne' ),
+		),
+		'core/list'      => array(
+			'animated-markers' => __( 'Animated Markers', 'elayne' ),
+		),
+	);
+
+	foreach ( $block_styles as $block => $styles ) {
+		foreach ( $styles as $style_name => $style_label ) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => $style_name,
+					'label' => $style_label,
+				)
+			);
+		}
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_register_effect_block_styles' );
+
+/**
  * Include block extensions.
  */
 require_once get_template_directory() . '/inc/block-extensions.php';

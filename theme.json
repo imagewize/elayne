@@ -378,7 +378,14 @@
 				}
 			},
 			"core/paragraph": {
-				"css": "&.has-background { padding: var(--wp--preset--spacing--small) }"
+				"css": "&.has-background { padding: var(--wp--preset--spacing--small) }",
+				"elements": {
+					"link": {
+						"typography": {
+							"fontWeight": "500"
+						}
+					}
+				}
 			},
 			"core/post-title": {
 				"elements": {
@@ -503,6 +510,9 @@
 			"link": {
 				"color": {
 					"text": "var:preset|color|primary"
+				},
+				"typography": {
+					"textDecoration": "none"
 				},
 				":hover": {
 					"typography": {
