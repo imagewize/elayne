@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 1.4.1
+Version: 1.4.2
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -275,5 +275,52 @@ figure.is-avatar,
 @-moz-document url-prefix() {
     a {
         text-decoration-thickness: .1rem !important;
+    }
+}
+
+/* ========================================================================
+   Legal Hero Split Layout - Mobile Ordering
+   ======================================================================== */
+
+/* On mobile, show image first, then content, then reviews */
+@media (max-width: 782px) {
+    .legal-hero-split-grid {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .legal-hero-split-content {
+        order: 2;
+    }
+
+    .legal-hero-split-image {
+        order: 1;
+    }
+
+    .legal-hero-split-reviews {
+        order: 3;
+    }
+}
+
+/* On desktop, stack image and reviews in the right column */
+@media (min-width: 783px) {
+    .legal-hero-split-grid {
+        grid-template-columns: 1fr 1fr !important; /* Force 2 columns */
+        grid-auto-flow: dense; /* Allow items to fill available space */
+    }
+
+    .legal-hero-split-content {
+        grid-column: 1; /* First column */
+        grid-row: 1 / 3; /* Span both rows */
+    }
+
+    .legal-hero-split-image {
+        grid-column: 2; /* Second column */
+        grid-row: 1; /* First row */
+    }
+
+    .legal-hero-split-reviews {
+        grid-column: 2; /* Second column */
+        grid-row: 2; /* Second row */
     }
 }

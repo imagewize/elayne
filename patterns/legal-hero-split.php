@@ -8,15 +8,11 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/legal","elayne/hero"],"patternName":"elayne/legal-hero-split","name":"Legal Hero Split Layout"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:spacer {"height":"50px"} -->
-<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xx-large","left":"var:preset|spacing|xx-large"}}}} -->
-<div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"bottom":"var:preset|spacing|medium"}},"border":{"radius":"50px","width":"1px"}},"backgroundColor":"primary","borderColor":"primary","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/legal","elayne/hero"],"patternName":"elayne/legal-hero-split","name":"Legal Hero Split Layout"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)"><!-- wp:group {"align":"wide","className":"legal-hero-split-grid","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xx-large","left":"var:preset|spacing|xx-large"}}},"layout":{"type":"grid","minimumColumnWidth":"400px"}} -->
+<div class="wp-block-group alignwide legal-hero-split-grid"><!-- wp:group {"className":"legal-hero-split-content","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group legal-hero-split-content" style="padding-top:0;padding-bottom:0"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"bottom":"var:preset|spacing|medium"}},"border":{"radius":"50px","width":"1px"}},"backgroundColor":"primary","borderColor":"primary","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
 <div class="wp-block-group has-border-color has-primary-border-color has-primary-background-color has-background" style="border-width:1px;border-radius:50px;margin-bottom:var(--wp--preset--spacing--medium);padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600","letterSpacing":"0.5px"}},"textColor":"secondary","fontSize":"x-small"} -->
 <p class="has-secondary-color has-text-color has-x-small-font-size" style="font-weight:600;letter-spacing:0.5px">✓ Trusted Since 1985</p>
 <!-- /wp:paragraph --></div>
@@ -109,16 +105,16 @@
 <div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-border-color has-primary-border-color has-base-font-size has-custom-font-size wp-element-button" style="border-width:2px;border-radius:8px">Call Now</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
-<!-- /wp:column -->
+<!-- /wp:group -->
 
-<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"12px"}}} -->
+<!-- wp:group {"className":"legal-hero-split-image","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group legal-hero-split-image" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"12px"}}} -->
 <figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/hero-law-office.webp" alt="<?php esc_attr_e( 'Professional lawyers discussing case', 'elayne' ); ?>" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
-<!-- /wp:image -->
+<!-- /wp:image --></div>
+<!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"12px"},"position":{"type":""},"dimensions":{"minHeight":""},"shadow":"0 10px 40px rgba(0, 0, 0, 0.2)"},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-base-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium);box-shadow:0 10px 40px rgba(0, 0, 0, 0.2)"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"contrast","fontSize":"x-small"} -->
+<!-- wp:group {"className":"legal-hero-split-reviews","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"12px"},"position":{"type":""},"dimensions":{"minHeight":""},"shadow":"0 10px 40px rgba(0, 0, 0, 0.2)"},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group legal-hero-split-reviews has-base-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium);box-shadow:0 10px 40px rgba(0, 0, 0, 0.2)"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"contrast","fontSize":"x-small"} -->
 <p class="has-contrast-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Client Reviews', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
@@ -137,8 +133,6 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
 <!-- /wp:group -->
 
 <!-- wp:spacer {"height":"50px"} -->

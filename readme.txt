@@ -4,22 +4,23 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 47 beautiful pattern designs, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 73 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 47 Professional Patterns - All 100% original, created specifically for Elayne
+* 73 Professional Patterns - All 100% original, created specifically for Elayne
+* 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
-* 5 Style Variations - Complete design systems including new Spa & Wellness style
+* 8 Style Variations - Complete design systems including Spa & Wellness, Legal Blue, and more
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
-* Industry-Specific Content - Pattern sets optimized for spa, real estate, and professional services
+* Industry-Specific Content - Pattern sets optimized for spa, wellness, real estate, and legal services
 * Sophisticated Design - Clean, modern patterns with professional aesthetics
 * Conversion Optimization - Built-in patterns designed to convert visitors into customers
 * Full Site Editing (FSE) - Complete control over your site design
@@ -29,108 +30,86 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-**Header Patterns (3)**
-* header-mobile - Header with hamburger navigation and social icons
-* header-standard - Desktop-optimized header with inline navigation
-* header-top-bar-centered-menu - Centered logo with top bar and navigation menu
+Elayne includes **73 professionally designed patterns** across 12 categories:
 
-**Hero Patterns (5)**
-* hero-modern-dark - Contemporary hero with bold typography (dark variation)
-* hero-modern-light - Contemporary hero with bold typography (light variation)
-* hero-two-tone - Split background hero with contrasting colors
-* hero-with-cta - Hero section with prominent call-to-action
-* spa-home-hero - Overlapping image and content box hero for spa/wellness sites
+**Core Patterns:**
+* Hero Sections (8) - Modern heroes with bold typography, split layouts, and conversion-focused designs
+* Headers & Footers (7) - Responsive navigation options from mobile hamburger to desktop inline menus
+* Call-to-Action & Contact (8) - Newsletter signups, contact forms, and booking CTAs
+* Features & Services (12) - Feature grids, pricing tables, service showcases, and client logo walls
+* Team & Testimonials (13) - Team grids, testimonial cards, client reviews with ratings
+* Statistics (4) - Statistics displays and feature lists with visual emphasis
+* Blog & Posts (7) - Grid layouts, list views, featured posts, and author boxes
 
-**Call-to-Action & Contact (5)**
-* cta-newsletter - Newsletter signup with email capture
-* contact-info - Contact information display
-* contact-side-by-side - Two-column contact layout
-* card-call-to-action - Modular CTA component for landing pages, blog sidebars, and conversion-focused sections
-* spa-booking-cta - Booking call-to-action with form integration
+**Specialized Patterns:**
+* Support & Information (2) - FAQ sections and career opportunity listings
+* Events (1) - Event grids with date badges and registration
+* Portfolio (2) - Masonry grids and detailed case studies
+* Pages (1) - Coming soon pages with countdown timers
+* Shop/E-commerce (1) - Product grids optimized for WooCommerce
 
-**Features & Services (9)**
-* three-column-feature-grid - Grid layout for feature showcasing
-* services-feature-cards - Service cards with icons and descriptions
-* agency-services-showcase - Four-column agency services grid with custom icons
-* pricing-comparison - Three-column pricing grid with feature comparison and highlighted recommended plan
-* client-logo-wall - Display client logos to build credibility and social proof with responsive grid layout
-* two-column-feature - Two-column feature section with image and content
-* overlapping-feature-columns - Feature columns with overlapping image effect
-* overlapping-feature-columns-reversed - Reversed overlapping feature columns
-* wellness-cover-highlight - Full-width wellness cover section with highlight box
+**Templates:**
+* 11 page templates (centered, full-width, wide, sidebars, hero, landing page)
+* 4 post templates (centered, wide, left sidebar, right sidebar)
 
-**Team & Testimonials (7)**
-* team-grid - Team member grid with photos and bios
-* testimonial-card - Single testimonial card layout
-* client-success-stories - Enhanced testimonials with ratings and success metrics
-* client-reviews - Client reviews with profile images
-* testimonials-grid - Three-column testimonial grid with star ratings
-* two-column-review - Two-column review section with image and testimonial
-* review-text-image-overlap - Review with overlapping text and image
+Browse the complete pattern library in **Appearance → Editor → Patterns**
 
-**Statistics (2)**
-* stats-showcase - Statistics display with visual emphasis
-* stats-list - List-style statistics presentation
+= Industry Verticals =
 
-**Blog/Posts (6)**
-* blog-post-columns - Classic blog grid layout
-* blog-post-columns-portrait - Portrait-oriented blog grid
-* blog-post-list - List-style blog layout
-* post-featured-two-column - Featured post two-column layout
-* author-box - Author biography with avatar and social links
-* four-column-wellness-posts - Four-column grid for wellness blog posts
+Elayne provides specialized pattern sets for specific industries:
 
-**Support & Information (2)**
-* faq - Collapsible FAQ section with accordion functionality
-* career-opportunities - Job listings for recruitment pages
+* **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays
+* **Real Estate** - Property showcases, listing patterns, and professional service displays
+* **Legal Services** - Attorney profiles, practice area showcases, case statistics, and client testimonials optimized for law firms
 
-**Events (1)**
-* event-upcoming-grid - Responsive 3-column event grid with date badges and registration buttons
+= Style Variations =
 
-**Portfolio (2)**
-* portfolio-grid-masonry - Masonry-style portfolio grid showcasing creative work with category filters
-* case-study-detailed - Comprehensive project case study with structured storytelling - challenge, approach, and results
+Switch your entire site's look with one click using **8 pre-configured color palettes**:
 
-**Footer Patterns (3)**
-* footer-standard - Professional standard footer
-* footer-simple - Minimal footer layout
-* footer-with-nav-columns - Two-column footer with site info/social and multi-column navigation
+* Ink & Sand (Default) - Softer ink blue and warm sand tones
+* Spa & Wellness (Teal & Sage) - Soothing spa colors with elegant Cormorant Garamond serif
+* Legal Blue - Professional navy blue and gold palette for law firms
+* Gray & Gold - Sophisticated grayscale with gold accents and Bodoni Moda serif
+* Denim & Copper - Modern denim blue with warm copper accents
+* Forest & Sage - Natural forest green with sage tones
+* Orange - Vibrant orange with Mona Sans variable font
+* Teal Bay - Bright teal and cyan tones
 
-**Pages (1)**
-* page-coming-soon - Pre-launch or maintenance page with countdown and email capture
+Change styles in **Appearance → Editor → Styles**
 
-**Shop/E-commerce (1)**
-* shop-overview-three-columns - Three-column product grid for spa/wellness shops
+= CSS Effects & Block Styles =
 
-= Layout Templates =
+Transform your content with **32 interactive block styles** — pure CSS animations with zero JavaScript:
 
-**Page Layouts:**
-* Centered (default) - Standard centered page with title
-* Full Width - Full-width page without title (perfect for landing pages)
-* Hero (No Top Padding) - Full-width page with header/footer and no top padding
-* Wide - Wide page with title and expanded content area
-* Wide No Title - Wide page without title section
-* Left Sidebar - Two-column layout (33.33% sidebar, 66.66% content)
-* Right Sidebar - Two-column layout (66.66% content, 33.33% sidebar)
+**Button Effects (6):**
+Arrow Slide, Gradient Shift, Shimmer, Glow, Border Draw, Slide Up
 
-**Post Layouts:**
-* Centered (default) - Standard centered post layout with comments
-* Wide - Wide post layout for long-form content
-* Left Sidebar - Two-column post with left sidebar
-* Right Sidebar - Two-column post with right sidebar
+**Card & Group Effects (7):**
+Elevate Hover, Glow Border, Image Zoom, Tilt Card, Scale Hover, Border Pulse, Slide Border
 
-**Blog Index:**
-* Grid Layout (default) - Three-column post grid
-* List Layout - Single-column list with excerpts
+**Image Effects (9):**
+Zoom, Grayscale, Rotate Icon, Blur, Brightness, Sepia, Lift Shadow, Border Reveal, Tilt 3D
 
-All sidebar layouts include comments sections and "Latest Posts" grids. Sidebars are hidden on mobile devices for optimal responsive design.
+**Text & Link Effects (10):**
+Animated Underline, Animated Underline Center, Gradient Text, Gradient Text Animated, Highlight Fade, Link Hover Shift, Underline Slide, Fade In, Animated Markers
+
+All effects are pure CSS, accessible, and optimized for performance. Apply via **Appearance → Editor → Select Block → Styles Panel**
 
 = Typography & Design =
 
-* Primary Font: Open Sans (variable weight, 300-800)
-* Professional Color Palette: Business-focused color scheme
-* Custom Image Sizes: Optimized for portrait and landscape layouts
-* Block Patterns: Organized into 8 custom categories
+**Fonts:**
+* Mona Sans (primary) - Modern variable font
+* Open Sans - Clean sans-serif with variable weight (300-800)
+* Bitter (serif) - Elegant serif option
+* Monospace - Code and technical content
+* Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness) • Bodoni Moda (Gray & Gold)
+
+**Design System:**
+* Professional color palettes for business websites
+* Custom shadow presets for visual depth
+* Optimized image sizes for portrait and landscape layouts
+* Fluid responsive scaling with clamp()
+* Block patterns organized into 12 custom categories
 
 = Block Extensions =
 
@@ -178,6 +157,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.4.2 - 01/07/26 =
+* CHANGED: Legal Hero Split layout - Converted to CSS grid with improved mobile ordering (image first, content second, reviews third) and enhanced desktop layout (content spans full height, image/reviews stack in right column).
+* CHANGED: Legal pattern spacing - Reduced vertical padding across multiple patterns (hero, services, testimonials, contact) from xxx-large to large/xx-large for better visual rhythm.
+* TECHNICAL: Removed organizational HTML comments from legal patterns - Fixes block validation errors caused by comments between opening tags and WordPress block comments.
+* TECHNICAL: Documentation - Added comprehensive guide in CLAUDE.md about HTML comment restrictions in block patterns to prevent validation failures."
+
 
 = 1.4.1 - 01/06/26 =
 * ADDED: Developer installation instructions in CONTRIBUTING.md with GitHub clone commands
