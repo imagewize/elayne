@@ -356,6 +356,26 @@ All spacing uses responsive clamp():
 - **Custom list checkmarks**: Apply `is-style-checkmark-list` class to `wp:list` blocks (see `style.css` for implementation)
 - **Benefits**: Editor compatibility, theme.json integration, pattern reusability, accessibility, maintainability
 
+**HTML Comments in Block Markup (CRITICAL):**
+- **NEVER add HTML comments between opening tags and WordPress block comments** - this causes block validation errors
+- **Only WordPress block comments are allowed** - anything else breaks validation
+- **Common mistake**: Adding organizational comments like `<!-- Attorney 1 -->`, `<!-- Stat 1 -->`, or `<!-- Feature 1 -->` inside block markup
+- **Wrong example**:
+  ```html
+  <div class="wp-block-group alignwide">
+    <!-- Attorney 1 -->  ← WRONG! Causes validation error
+    <!-- wp:group -->
+  ```
+- **Correct example**:
+  ```html
+  <div class="wp-block-group alignwide">
+    <!-- wp:group -->  ← Correct, only WordPress block comments
+  ```
+- **Why this fails**: WordPress compares the `save` function output (clean markup) with the pattern file content. Extra HTML comments create a mismatch, triggering "Block validation failed" errors in the browser console
+- **Error message**: `Block validation: Block validation failed for 'core/group'` with diff showing extra content in pattern vs expected output
+- **If you need organizational comments**: Place them BEFORE the WordPress block comment on the same line or in a separate line, never between opening div tags and block comments
+- **Reference**: See fixed patterns `legal-team.php` and `legal-stats.php` (December 2025)
+
 **Block Comment Attribute Structure (CRITICAL):**
 - **Block attributes must be correctly nested** in block comment JSON to avoid validation errors
 - **Common mistake**: Nesting root-level attributes like `backgroundColor` or `layout` inside the `style` object causes "Block validation failed" errors in the browser console

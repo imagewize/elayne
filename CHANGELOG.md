@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.2] - 2026-01-07
+
+### Changed
+
+**Legal Hero Split Layout:**
+- Converted from CSS columns to CSS grid layout for better responsive control
+- Improved mobile layout: image appears first, followed by content, then reviews
+- Enhanced desktop layout: content spans full height in left column, image and reviews stack in right column
+- Reduced top/bottom padding from `xxx-large` to `large` for more compact section spacing
+
+**Legal Pattern Spacing Adjustments:**
+- Reduced vertical padding in multiple legal patterns (services, testimonials, contact) from `xxx-large` to `large` or `xx-large` for better visual rhythm
+- More balanced spacing throughout legal template sections
+
+### Technical
+
+**Code Quality Improvements:**
+- Removed organizational HTML comments from legal pattern files (legal-team.php, legal-stats.php, legal-testimonials.php)
+- Fixed block validation issues caused by HTML comments between opening tags and WordPress block comments
+- Added comprehensive documentation in CLAUDE.md about HTML comment restrictions in block patterns
+- Cleaner pattern markup improves WordPress block validation and prevents console errors",
+
 ## [1.4.1] - 2026-01-06
 
 ### Added

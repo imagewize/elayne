@@ -22,7 +22,6 @@
 
 		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
 		<div class="wp-block-group alignwide">
-			<!-- Stat 1: Years of Experience -->
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
 				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|small"}}},"textColor":"secondary"} -->
@@ -39,7 +38,6 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- Stat 2: Cases Won -->
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
 				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|small"}}},"textColor":"secondary"} -->
@@ -56,7 +54,6 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- Stat 3: Success Rate -->
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
 				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|small"}}},"textColor":"secondary"} -->
