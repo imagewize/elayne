@@ -4,17 +4,17 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.4.2
+Stable tag: 1.5.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 73 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 74 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 73 Professional Patterns - All 100% original, created specifically for Elayne
+* 74 Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
 * 8 Style Variations - Complete design systems including Spa & Wellness, Legal Blue, and more
@@ -30,11 +30,11 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-Elayne includes **73 professionally designed patterns** across 12 categories:
+Elayne includes **74 professionally designed patterns** across 12 categories:
 
 **Core Patterns:**
 * Hero Sections (8) - Modern heroes with bold typography, split layouts, and conversion-focused designs
-* Headers & Footers (7) - Responsive navigation options from mobile hamburger to desktop inline menus
+* Headers & Footers (8) - Responsive navigation options from mobile hamburger to desktop inline menus, including advanced two-bar layouts with contact information
 * Call-to-Action & Contact (8) - Newsletter signups, contact forms, and booking CTAs
 * Features & Services (12) - Feature grids, pricing tables, service showcases, and client logo walls
 * Team & Testimonials (13) - Team grids, testimonial cards, client reviews with ratings
@@ -157,6 +157,16 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.5.0 - 01/08/26 =
+* ADDED: New "Header Double Bar" pattern - Two-bar header with top contact bar (email, phone, search) and bottom navigation with left-aligned logo. Top bar hides on mobile.
+* ADDED: Icon assets (icon-email.svg, icon-phone.svg, icon-search.svg) from Eva Icons collection (MIT license) using currentColor for theme color inheritance.
+* CHANGED: Reduced site title font size in "Header Top Bar Centered Menu" from 2.5rem to 1.8rem for better visual proportion.
+* CHANGED: Updated pattern count from 73 to 74 patterns (Headers & Footers: 7→8).
+* CHANGED: Enhanced Elayne Blocks companion plugin documentation with Search Overlay Trigger description and detailed block feature list.
+* FIXED: Inline icon vertical alignment - Small resized images (e.g., 20×20px) now align properly with adjacent text using inline-flex layout.
+* TECHNICAL: Added inline icon alignment CSS rules in core-image.css targeting .wp-block-image.is-resized elements."
+
 
 = 1.4.2 - 01/07/26 =
 * CHANGED: Legal Hero Split layout - Converted to CSS grid with improved mobile ordering (image first, content second, reviews third) and enhanced desktop layout (content spans full height, image/reviews stack in right column).
@@ -686,6 +696,37 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 ## Logo Images
 
 **Status:** Logo images logo-1.webp, logo-2.webp, logo-3.webp, logo-4.webp, logo-5.webp are geometric designs created by theme author and do not require attribution or replacement.
+
+---
+
+## Icons
+
+### Eva Icons (MIT License)
+
+The following icons are from the Eva Icons collection via Blade UI Kit:
+
+**icon-search.svg** (Search Icon)
+- **Source:** [Blade UI Kit - Eva Search Outline](https://blade-ui-kit.com/blade-icons/eva-search-outline)
+- **Original Project:** [Eva Icons](https://akveo.github.io/eva-icons/)
+- **License:** [MIT License](https://opensource.org/licenses/MIT)
+- **Copyright:** Akveo (Eva Icons)
+- **Used in:** Header patterns for search functionality
+
+**icon-email.svg** (Email Icon)
+- **Source:** [Blade UI Kit - Eva Email Outline](https://blade-ui-kit.com/blade-icons/eva-email-outline)
+- **Original Project:** [Eva Icons](https://akveo.github.io/eva-icons/)
+- **License:** [MIT License](https://opensource.org/licenses/MIT)
+- **Copyright:** Akveo (Eva Icons)
+- **Used in:** Header patterns for email contact links
+
+**icon-phone.svg** (Phone Icon)
+- **Source:** [Blade UI Kit - Eva Phone Outline](https://blade-ui-kit.com/blade-icons/eva-phone-outline)
+- **Original Project:** [Eva Icons](https://akveo.github.io/eva-icons/)
+- **License:** [MIT License](https://opensource.org/licenses/MIT)
+- **Copyright:** Akveo (Eva Icons)
+- **Used in:** Header patterns for phone contact links
+
+The MIT License is GPL-compatible. Icons use `fill="currentColor"` to inherit text color for consistent theming.
 
 ---
 

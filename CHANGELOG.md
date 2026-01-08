@@ -7,6 +7,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-01-08
+
+### Added
+
+**New Header Pattern - Header Double Bar:**
+- Two-bar header design with top contact bar and bottom navigation
+- Top bar features email, phone, and search overlay trigger (right-aligned)
+- Bottom bar includes left-aligned logo with navigation menu
+- Top bar hides on mobile for optimal responsive experience
+- Utilizes Elayne Blocks Search Overlay Trigger for enhanced search functionality
+- Includes SVG icons for email, phone, and search (Eva Icons, MIT licensed)
+
+**New Icon Assets:**
+- Added icon-email.svg, icon-phone.svg, and icon-search.svg from Eva Icons collection
+- Icons use `currentColor` for automatic theme color inheritance
+- Licensed under MIT License (GPL-compatible)
+
+### Changed
+
+**Header Pattern Refinements:**
+- Reduced site title font size in "Header Top Bar Centered Menu" from 2.5rem to 1.8rem for better proportion
+
+**Documentation Updates:**
+- Updated pattern count from 73 to 74 patterns in README.md and readme.txt
+- Updated Headers & Footers category from 7 to 8 patterns
+- Added Elayne Blocks Search Overlay Trigger to companion plugin description
+- Enhanced companion plugin documentation with detailed block descriptions
+
+### Fixed
+
+**Inline Icon Alignment:**
+- Fixed vertical alignment issues for small inline icons (e.g., 20×20px images)
+- Applied `display: inline-flex` and `align-items: center` to resized image blocks
+- Ensures icons align properly with adjacent text in header patterns
+
+### Technical
+
+**CSS Improvements:**
+- Added new section in core-image.css for inline icon alignment fixes
+- Targets `.wp-block-image.is-resized` elements to prevent baseline misalignment
+- Zero margin on resized image figures to eliminate unwanted spacing",
+
 ## [1.4.2] - 2026-01-07
 
 ### Changed
