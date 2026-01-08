@@ -229,3 +229,19 @@
 		display: none !important;
 	}
 }
+
+/* ===========================
+   INLINE ICON ALIGNMENT
+   Fix vertical alignment for small inline icons
+   =========================== */
+
+.wp-block-image.is-resized figure,
+.wp-block-image.is-resized {
+	margin: 0;
+	display: inline-flex;
+	align-items: center;
+}
+
+.wp-block-image.is-resized img {
+	display: block;
+}

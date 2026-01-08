@@ -43,9 +43,9 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Pattern Library
 
-Elayne includes **73 professionally designed patterns** across 12 categories:
+Elayne includes **74 professionally designed patterns** across 12 categories:
 
-**Core Patterns:** Hero Sections (8) • Headers & Footers (7) • Call-to-Action & Contact (8) • Features & Services (12) • Team & Testimonials (13) • Statistics (4) • Blog & Posts (7)
+**Core Patterns:** Hero Sections (8) • Headers & Footers (8) • Call-to-Action & Contact (8) • Features & Services (12) • Team & Testimonials (13) • Statistics (4) • Blog & Posts (7)
 
 **Specialized:** Support & Information (2) • Events (1) • Portfolio (2) • Pages (1) • Shop/E-commerce (1)
 
@@ -87,9 +87,15 @@ Access the WordPress Site Editor at **Appearance → Editor** to customize your 
 
 ## Companion Plugin: Elayne Blocks
 
-Elayne works seamlessly with the **[Elayne Blocks](https://github.com/imagewize/elayne-blocks)** plugin, which provides 4 custom blocks: Mega Menu, Carousel, Slide, and FAQ Tabs. While designed as companions to Elayne, these blocks are **theme-agnostic** and work with any WordPress theme.
+Elayne works seamlessly with the **[Elayne Blocks](https://github.com/imagewize/elayne-blocks)** plugin, which provides 5 custom blocks designed to enhance your site:
 
-WordPress.org Theme Review requirements prohibit custom block registration in themes, so blocks are provided via a separate plugin for compliance while maintaining powerful functionality.
+- **Mega Menu** - Advanced navigation with multi-column dropdown menus
+- **Carousel** - Image and content carousels with smooth transitions
+- **Slide** - Individual carousel slides with flexible content layouts
+- **FAQ Tabs** - Tabbed FAQ interface with accordion-style answers
+- **Search Overlay Trigger** - Customizable search overlay with smooth animations and mobile-optimized design
+
+While designed as companions to Elayne, these blocks are **theme-agnostic** and work with any WordPress theme. WordPress.org Theme Review requirements prohibit custom block registration in themes, so blocks are provided via a separate plugin for compliance while maintaining powerful functionality.
 
 Download from the [Elayne Blocks repository](https://github.com/imagewize/elayne-blocks) and install via **Plugins → Add New → Upload Plugin**.
 
