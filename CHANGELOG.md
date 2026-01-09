@@ -60,7 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Image Attribution Updates:**
 - Updated harbor-sunset.webp attribution in CHANGELOG.md and readme.txt
-- Changed photographer credit from "Pixabay" to "Pexels Contributor"
+- Changed photographer credit to "Pexels Contributor"
 - Added "GPL-compatible" clarification to license description
 - Avoids potential GPL license checker false positives
 
