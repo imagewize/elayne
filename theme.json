@@ -39,6 +39,11 @@
 					"name": "Sand Glow",
 					"slug": "sand-glow",
 					"gradient": "linear-gradient(135deg, #FDFBF7, #E5DFD6)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(11, 19, 36, 0.95), rgba(11, 19, 36, 0.85))"
 				}
 			],
 			"palette": [

@@ -44,6 +44,11 @@
 					"name": "Sage Mist",
 					"slug": "sage-mist",
 					"gradient": "linear-gradient(135deg, #6A7B6A, #C4D7C6)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(30, 42, 31, 0.95), rgba(30, 42, 31, 0.85))"
 				}
 			],
 			"palette": [

@@ -39,6 +39,11 @@
 					"name": "Sky",
 					"slug": "sky",
 					"gradient": "linear-gradient(135deg, #C2D4FF, #F1F4FB)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(11, 18, 38, 0.95), rgba(11, 18, 38, 0.85))"
 				}
 			],
 			"palette": [

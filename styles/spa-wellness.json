@@ -39,6 +39,11 @@
 					"name": "Peaceful Sky",
 					"slug": "peaceful-sky",
 					"gradient": "linear-gradient(135deg, #E8F5F2, #F7FCFA)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(45, 74, 78, 0.95), rgba(45, 74, 78, 0.85))"
 				}
 			],
 			"palette": [

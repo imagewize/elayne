@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.6.0
+Stable tag: 1.8.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -158,9 +158,30 @@ Elayne includes custom image sizes optimized for different layouts:
 
 == Changelog ==
 
+= 1.8.0 - 01/09/26 =
+* ADDED: Banner pattern category - New "Banners" section for header/announcement patterns.
+* ADDED: Announcement Bar, Page Header Banner, Legal Page Header Banner patterns.
+* ADDED: Skip link accessibility - Improved focus visibility and keyboard navigation.
+* CHANGED: Legal hero diagonal overlay now uses editable Cover block gradient.
+* CHANGED: Footer theme link updated to Elayne on WordPress.org.
+* CHANGED: Harbor sunset attribution clarified as GPL-compatible Pexels credit.
+* TECHNICAL: Added "Main Diagonal" gradient token across theme + style variations.
+* TECHNICAL: New diagonal banner CSS and banner image assets."
+
+
+= 1.7.0 - 01/09/26 =
+* ADDED: Banner pattern category - New "Banners" category for organizing header and announcement patterns.
+* ADDED: Announcement Bar pattern (banner-announcement-bar) - Slim top bar for promotions, alerts, and important notices.
+* ADDED: Page Header Banner pattern (banner-page-header) - Page header with title, description, and optional background image for internal pages.
+* ADDED: Legal Page Header Banner pattern (banner-page-header-legal) - Professional header banner for law firm practice areas and service pages.
+* ADDED: Skip link accessibility improvements - Enhanced keyboard navigation with highly visible focus states following WordPress standards.
+* CHANGED: Footer theme link - Updated to reference Elayne theme instead of Moiraine, now points to WordPress.org theme directory.
+* CHANGED: Harbor sunset image attribution - Updated photographer credit to "Pexels Contributor" and added GPL-compatible clarification to avoid license checker false positives."
+
+
 = 1.6.0 - 01/08/26 =
 * ADDED: Legal Hero Diagonal pattern - Professional hero section with diagonal overlay effect, text left and image right on desktop, full overlay on mobile.
-* ADDED: Harbor sunset background image (harbor-sunset.webp) - Pexels licensed, photographer Pixabay.
+* ADDED: Harbor sunset background image (harbor-sunset.webp) - Pexels licensed professional waterfront scene.
 * TECHNICAL: New CSS for diagonal hero sections - Uses clip-path polygon for responsive diagonal overlay (65% desktop, 100% mobile)."
 
 
@@ -496,10 +517,18 @@ GNU General Public License for more details.
 ### harbor-sunset.webp
 - **Source:** [Pexels](https://www.pexels.com/photo/assorted-boats-on-body-of-water-during-sunset-237289/)
 - **Title:** Assorted Boats on Body of Water during Sunset
-- **Photographer:** Pixabay
+- **Photographer:** Pexels Contributor
 - **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
 - **Attribution:** Not required (Pexels License)
 - **Description:** Harbor with boats at sunset, professional waterfront view
+
+### banner-boats-16x9.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/photo-of-boats-parked-on-river-2031706/)
+- **Title:** Photo of Boats Parked on River
+- **Photographer:** [Chait Goli](https://www.pexels.com/@chaitaastic/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Boats on calm river at dusk, 16:9 landscape banner for general page headers (800×450)
 
 ## Team Member Avatars (Pexels License - GPL-Compatible)
 
@@ -698,12 +727,21 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Description:** Professional businesswoman attorney portrait
 
 ### legal/attorney-3.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/businessman-standing-with-his-hands-on-his-desk-4427616/)
-- **Title:** Businessman Standing with His Hands on His Desk
-- **Photographer:** [August de Richelieu](https://www.pexels.com/@august-de-richelieu/)
+- **Source:** [Pexels](https://www.pexels.com/photo/man-wearing-black-formal-suit-jacket-32976/)
+- **Title:** Man Wearing Black Formal Suit Jacket
+- **Photographer:** [Pranav Digwal](https://www.pexels.com/@pranavdigwal/)
 - **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
 - **Attribution:** Not required (Pexels License)
-- **Description:** Professional businessman attorney portrait
+- **Description:** Professional businessman in formal black suit
+
+### legal/banner-boats-4x3.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/photo-of-boats-parked-on-river-2031706/)
+- **Title:** Photo of Boats Parked on River
+- **Photographer:** [Chait Goli](https://www.pexels.com/@chaitaastic/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Boats on calm river at dusk, 4:3 banner for legal practice area headers (800×600)
+- **Note:** Same source image as banner-boats-16x9.webp, cropped to different aspect ratio
 
 ---
 

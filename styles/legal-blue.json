@@ -39,6 +39,11 @@
 					"name": "Professional",
 					"slug": "professional",
 					"gradient": "linear-gradient(135deg, #1E40AF, #1F2937)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(31, 41, 55, 0.85))"
 				}
 			],
 			"palette": [
