@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 1.5.0
+Version: 1.6.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -322,5 +322,66 @@ figure.is-avatar,
     .legal-hero-split-reviews {
         grid-column: 2; /* Second column */
         grid-row: 2; /* Second row */
+    }
+}
+
+/* ========================================================================
+   Diagonal Hero Section - Sloped Overlay Effect
+   ======================================================================== */
+
+/* Diagonal overlay hero section */
+.diagonal-hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Create the diagonal overlay using ::before pseudo-element */
+.diagonal-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(31, 41, 55, 0.92) 0%,      /* primary color with 92% opacity */
+        rgba(17, 24, 39, 0.88) 100%     /* primary-alt color with 88% opacity */
+    );
+    clip-path: polygon(0 0, 65% 0, 55% 100%, 0 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Ensure content stays above overlay */
+.diagonal-hero-section .wp-block-cover__inner-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .diagonal-hero-section::before {
+        clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .diagonal-hero-section {
+        min-height: 500px !important;
+    }
+
+    /* Full overlay on mobile for better readability */
+    .diagonal-hero-section::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        background: linear-gradient(135deg,
+            rgba(31, 41, 55, 0.95) 0%,
+            rgba(17, 24, 39, 0.92) 100%
+        );
+    }
+}
+
+@media (max-width: 480px) {
+    .diagonal-hero-section {
+        min-height: 450px !important;
     }
 }

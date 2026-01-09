@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0] - 2026-01-08
+
+### Added
+
+**Legal Hero Diagonal Pattern:**
+- New block pattern `legal-hero-diagonal` for professional service websites
+- Diagonal overlay effect with gradient from primary color (92% opacity) to primary-alt (88% opacity)
+- Desktop layout: Text content left (65% width), background image visible right
+- Mobile layout: Full overlay for better text readability
+- Includes harbor sunset background image (Pexels license, GPL-compatible)
+- Responsive breakpoints: 1024px, 768px, 480px with adjusted overlay angles and heights
+- Pattern categories: hero, legal
+- Keywords: hero, diagonal, overlay, legal, law firm, attorney, professional
+
+**New Pattern Image:**
+- `harbor-sunset.webp` - Professional waterfront harbor scene at sunset by Pixabay (Pexels License)
+- Licensed attribution documented in readme.txt
+
+### Technical
+
+**CSS Additions:**
+- New `.diagonal-hero-section` class with diagonal overlay styling
+- Uses `clip-path: polygon()` for diagonal effect (65% width on desktop, 70% on tablet, 100% on mobile)
+- Pseudo-element `::before` for overlay layer with proper z-index stacking
+- Responsive min-height adjustments: 600px (desktop), 500px (tablet), 450px (mobile)
+- Pointer-events handling for overlay layer to preserve interactivity",
+
 ## [1.5.0] - 2026-01-08
 
 ### Added

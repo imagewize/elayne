@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -157,6 +157,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.6.0 - 01/08/26 =
+* ADDED: Legal Hero Diagonal pattern - Professional hero section with diagonal overlay effect, text left and image right on desktop, full overlay on mobile.
+* ADDED: Harbor sunset background image (harbor-sunset.webp) - Pexels licensed, photographer Pixabay.
+* TECHNICAL: New CSS for diagonal hero sections - Uses clip-path polygon for responsive diagonal overlay (65% desktop, 100% mobile)."
+
 
 = 1.5.0 - 01/08/26 =
 * ADDED: New "Header Double Bar" pattern - Two-bar header with top contact bar (email, phone, search) and bottom navigation with left-aligned logo. Top bar hides on mobile.
@@ -486,6 +492,14 @@ GNU General Public License for more details.
 - **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
 - **Attribution:** Not required (Pexels License)
 - **Description:** Person meditating in lotus position with candles and incense, calm wellness setting
+
+### harbor-sunset.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/assorted-boats-on-body-of-water-during-sunset-237289/)
+- **Title:** Assorted Boats on Body of Water during Sunset
+- **Photographer:** Pixabay
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Harbor with boats at sunset, professional waterfront view
 
 ## Team Member Avatars (Pexels License - GPL-Compatible)
 
