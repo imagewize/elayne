@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 1.6.0
+Version: 1.8.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -326,30 +326,19 @@ figure.is-avatar,
 }
 
 /* ========================================================================
-   Diagonal Hero Section - Sloped Overlay Effect
+   Diagonal Hero Section - Editable Overlay Effect
    ======================================================================== */
 
-/* Diagonal overlay hero section */
+/* Diagonal overlay hero section with WordPress Cover block overlay */
 .diagonal-hero-section {
     position: relative;
     overflow: hidden;
 }
 
-/* Create the diagonal overlay using ::before pseudo-element */
-.diagonal-hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg,
-        rgba(31, 41, 55, 0.92) 0%,      /* primary color with 92% opacity */
-        rgba(17, 24, 39, 0.88) 100%     /* primary-alt color with 88% opacity */
-    );
+/* Create the diagonal clip-path on BOTH Cover block overlay elements (solid colors AND gradients) */
+.diagonal-hero-section .wp-block-cover__background,
+.diagonal-hero-section .wp-block-cover__gradient-background {
     clip-path: polygon(0 0, 65% 0, 55% 100%, 0 100%);
-    z-index: 1;
-    pointer-events: none;
 }
 
 /* Ensure content stays above overlay */
@@ -360,7 +349,8 @@ figure.is-avatar,
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-    .diagonal-hero-section::before {
+    .diagonal-hero-section .wp-block-cover__background,
+    .diagonal-hero-section .wp-block-cover__gradient-background {
         clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
     }
 }
@@ -371,12 +361,9 @@ figure.is-avatar,
     }
 
     /* Full overlay on mobile for better readability */
-    .diagonal-hero-section::before {
+    .diagonal-hero-section .wp-block-cover__background,
+    .diagonal-hero-section .wp-block-cover__gradient-background {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        background: linear-gradient(135deg,
-            rgba(31, 41, 55, 0.95) 0%,
-            rgba(17, 24, 39, 0.92) 100%
-        );
     }
 }
 
@@ -384,4 +371,90 @@ figure.is-avatar,
     .diagonal-hero-section {
         min-height: 450px !important;
     }
+}
+
+/* ========================================================================
+   Diagonal Banner Section - Editable Overlay Effect
+   ======================================================================== */
+
+/* Diagonal overlay banner section with WordPress Cover block overlay */
+.diagonal-banner-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Create the diagonal clip-path on BOTH Cover block overlay elements (solid colors AND gradients) */
+.diagonal-banner-section .wp-block-cover__background,
+.diagonal-banner-section .wp-block-cover__gradient-background {
+    clip-path: polygon(0 0, 65% 0, 55% 100%, 0 100%);
+}
+
+/* Ensure content stays above overlay */
+.diagonal-banner-section .wp-block-cover__inner-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .diagonal-banner-section .wp-block-cover__background,
+    .diagonal-banner-section .wp-block-cover__gradient-background {
+        clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Full overlay on mobile for better readability */
+    .diagonal-banner-section .wp-block-cover__background,
+    .diagonal-banner-section .wp-block-cover__gradient-background {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+/* ============================================
+   Skip Link Accessibility Improvements
+   ============================================ */
+
+/* Skip link - hidden by default, visible on focus */
+.skip-link.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px); /* Legacy browsers */
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+/* Skip link focus state - highly visible */
+.skip-link.screen-reader-text:focus,
+#wp-skip-link:focus {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100000;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    clip: auto;
+    clip-path: none;
+    padding: 15px 20px;
+    background-color: var(--wp--preset--color--primary, #0073aa);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    outline: 3px solid var(--wp--preset--color--primary-alt, #005a87);
+    outline-offset: 2px;
+}
+
+/* Ensure skip link target is visible */
+#wp--skip-link--target {
+    scroll-margin-top: 20px;
 }

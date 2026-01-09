@@ -39,6 +39,11 @@
 					"name": "Charcoal",
 					"slug": "charcoal",
 					"gradient": "linear-gradient(135deg, #1F2937, #4B5563)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(31, 41, 55, 0.85))"
 				}
 			],
 			"palette": [

@@ -63,6 +63,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_navigation_fr
 function elayne_pattern_categories() {
 	$block_pattern_categories = array(
 		'elayne/hero'           => array( 'label' => __( 'Hero', 'elayne' ) ),
+		'elayne/banner'         => array( 'label' => __( 'Banners', 'elayne' ) ),
 		'elayne/features'       => array( 'label' => __( 'Features', 'elayne' ) ),
 		'elayne/call-to-action' => array( 'label' => __( 'Call To Action', 'elayne' ) ),
 		'elayne/testimonial'    => array( 'label' => __( 'Testimonials', 'elayne' ) ),
