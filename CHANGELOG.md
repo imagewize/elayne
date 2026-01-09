@@ -7,34 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.8.0] - 2026-01-09
-
-### Added
-**Banner Pattern Category:**
-- Registered new "Banners" pattern category for organizing header and announcement layouts
-**New Banner Patterns:**
-- Announcement Bar for slim top notices and promotions
-- Page Header Banner with diagonal overlay and optional background image
-- Legal Page Header Banner tailored for law firm practice areas
-**Skip Link Accessibility:**
-- Improved skip link visibility and focus styling with better keyboard navigation
-
-### Changed
-**Diagonal Hero Overlay:**
-- Switched legal hero diagonal overlay to use the Cover block gradient for easier editing
-**Footer Theme Attribution:**
-- Footer theme link now points to the Elayne theme on WordPress.org
-**Image Attribution Details:**
-- Updated harbor-sunset.webp attribution and clarified GPL-compatible license notes
-
-### Technical
-**Gradient Tokens:**
-- Added a "Main Diagonal" gradient to theme.json and all style variations
-**Diagonal Banner Styles:**
-- Added diagonal banner CSS that clips both solid and gradient overlays
-**Pattern Assets:**
-- Added new banner images and updated the legal attorney portrait asset",
-
 ## [1.7.0] - 2026-01-09
 
 ### Added
@@ -58,6 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+**Diagonal Hero Overlay:**
+- Switched legal hero diagonal overlay to use the Cover block gradient for easier editing
+
 **Image Attribution Updates:**
 - Updated harbor-sunset.webp attribution in CHANGELOG.md and readme.txt
 - Changed photographer credit to "Pexels Contributor"
@@ -67,7 +42,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Footer Theme Link:**
 - Updated footer pattern to reference "Elayne" theme instead of "Moiraine"
 - Link now points to WordPress.org theme directory: `https://wordpress.org/themes/elayne/`
-- Ensures accurate theme attribution in footer copyright text",
+- Ensures accurate theme attribution in footer copyright text
+
+### Technical
+
+**Gradient Tokens:**
+- Added a "Main Diagonal" gradient to theme.json and all style variations
+
+**Diagonal Banner Styles:**
+- Added diagonal banner CSS that clips both solid and gradient overlays
+
+**Pattern Assets:**
+- Added new banner images and updated the legal attorney portrait asset
 
 ## [1.6.0] - 2026-01-08
 

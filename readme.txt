@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.8.0
+Stable tag: 1.7.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -158,25 +158,17 @@ Elayne includes custom image sizes optimized for different layouts:
 
 == Changelog ==
 
-= 1.8.0 - 01/09/26 =
-* ADDED: Banner pattern category - New "Banners" section for header/announcement patterns.
-* ADDED: Announcement Bar, Page Header Banner, Legal Page Header Banner patterns.
-* ADDED: Skip link accessibility - Improved focus visibility and keyboard navigation.
-* CHANGED: Legal hero diagonal overlay now uses editable Cover block gradient.
-* CHANGED: Footer theme link updated to Elayne on WordPress.org.
-* CHANGED: Harbor sunset attribution clarified as GPL-compatible Pexels credit.
-* TECHNICAL: Added "Main Diagonal" gradient token across theme + style variations.
-* TECHNICAL: New diagonal banner CSS and banner image assets."
-
-
 = 1.7.0 - 01/09/26 =
 * ADDED: Banner pattern category - New "Banners" category for organizing header and announcement patterns.
 * ADDED: Announcement Bar pattern (banner-announcement-bar) - Slim top bar for promotions, alerts, and important notices.
 * ADDED: Page Header Banner pattern (banner-page-header) - Page header with title, description, and optional background image for internal pages.
 * ADDED: Legal Page Header Banner pattern (banner-page-header-legal) - Professional header banner for law firm practice areas and service pages.
 * ADDED: Skip link accessibility improvements - Enhanced keyboard navigation with highly visible focus states following WordPress standards.
+* CHANGED: Legal hero diagonal overlay now uses editable Cover block gradient.
 * CHANGED: Footer theme link - Updated to reference Elayne theme instead of Moiraine, now points to WordPress.org theme directory.
-* CHANGED: Harbor sunset image attribution - Updated photographer credit to "Pexels Contributor" and added GPL-compatible clarification to avoid license checker false positives."
+* CHANGED: Harbor sunset image attribution - Updated photographer credit to "Pexels Contributor" and added GPL-compatible clarification to avoid license checker false positives.
+* TECHNICAL: Added "Main Diagonal" gradient token across theme + style variations.
+* TECHNICAL: New diagonal banner CSS and banner image assets.
 
 
 = 1.6.0 - 01/08/26 =
