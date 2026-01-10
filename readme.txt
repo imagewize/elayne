@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -157,6 +157,16 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 1.7.1 - 01/10/26 =
+* CHANGED: Page Header Banner - Switched to a simple solid background layout with updated text styling.
+* ADDED: Page Header Banner (Accent) - New accent-colored header pattern.
+* ADDED: Page Header Banner (Slanted) - New slanted overlay header with background image.
+* CHANGED: Legal hero pattern - Renamed to Hero Cover (Slanted Legal) and updated overlay styling.
+* ADDED: Hero Cover (Slanted) - New full-height slanted hero pattern.
+* FIXED: Legal header patterns - Removed the legacy Legal Page Header Banner to avoid duplication.
+* TECHNICAL: Pattern metadata - Updated slugs, titles, descriptions, and keywords for new variants."
+
 
 = 1.7.0 - 01/09/26 =
 * ADDED: Banner pattern category - New "Banners" category for organizing header and announcement patterns.
