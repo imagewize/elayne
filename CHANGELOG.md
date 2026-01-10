@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.1] - 2026-01-10
+
+### Changed - Banner pattern refresh
+**Page Header Banner simplified:**
+- Converted the default page header banner to a solid background layout instead of a diagonal image cover.
+- Updated copy and color usage to match the simpler, text-forward presentation.
+
+### Added - New banner options
+**Accent page header banner:**
+- Introduced a new accent-colored page header banner pattern for bold, simple headers.
+
+**Slanted page header banner:**
+- Added a slanted overlay banner with a background image for more dramatic headers.
+
+### Changed - Hero pattern naming and overlay
+**Legal hero pattern update:**
+- Renamed the legal hero pattern to “Hero Cover (Slanted Legal)” with updated labels/keywords.
+- Switched the overlay styling to a solid accent overlay for the slanted legal hero.
+
+### Added - New hero pattern
+**Hero Cover (Slanted):**
+- Added a general slanted hero cover pattern with image and diagonal gradient styling.
+
+### Fixed - Pattern availability
+**Legal header cleanup:**
+- Removed the old Legal Page Header Banner pattern to reduce duplicate/legacy variants.
+
+### Technical - Pattern registry adjustments
+**Pattern metadata updates:**
+- Adjusted slugs, titles, descriptions, and keywords to reflect new banner and hero variants.",
+
 ## [1.7.0] - 2026-01-09
 
 ### Added
