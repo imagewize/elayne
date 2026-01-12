@@ -312,9 +312,33 @@ All spacing uses responsive clamp():
 1. Create PHP file in `patterns/` directory
 2. Follow naming convention: `category-descriptive-name.php`
 3. Use semantic color/spacing variables: `var:preset|color|primary`
-4. Include proper header comment with Title, Slug, Categories, Description
+4. Include proper header comment with Title, Slug, Categories, Description, Keywords, and Grid Config
 5. Register slug in format: `elayne/pattern-name`
-6. Test pattern in block editor inserter
+6. Add appropriate category tags for grid layouts (see below)
+7. Test pattern in block editor inserter
+
+**Grid Layout Categories:**
+For three-column grid patterns, add the appropriate complexity category:
+- **`elayne/card-simple`** - Simple cards (18rem): icon + title + short description
+- **`elayne/card-extended`** - Complex cards (19rem): nested cards, multiple CTAs, rich content
+- **`elayne/card-profiles`** - Profile cards (20rem): photos + names + titles + bios
+
+**Pattern Header Example:**
+```php
+<?php
+/**
+ * Title: Three-Column Feature Grid
+ * Slug: elayne/three-column-feature-grid
+ * Description: Showcase your key features or services in a clean three-column layout
+ * Categories: elayne/features, elayne/card, elayne/card-simple
+ * Keywords: features, services, grid, columns, benefits, simple
+ * Viewport Width: 1200
+ * Grid Config: 18rem (simple cards: icon + title + short description)
+ */
+?>
+```
+
+These categories appear in the WordPress block pattern inserter, making it easy for users to filter patterns by complexity level. The Grid Config comment line helps developers quickly identify the intended grid configuration.
 
 **Use Native WordPress Blocks (CRITICAL):**
 - **NEVER use `wp:html` blocks** for content that can be created with native WordPress blocks
@@ -429,16 +453,105 @@ All spacing uses responsive clamp():
     <!-- wp:group -->...(pricing card 3)
   </div>
   ```
-- **Choosing `minimumColumnWidth` value**:
-  - **280px-300px**: Smaller cards (product images, team photos with compact text)
-  - **320px**: Medium-sized feature cards with icons and descriptions
-  - **20rem (320px at default 16px)**: Larger pricing cards with extensive content
-  - **Rule of thumb**: Set to the minimum comfortable width for your content to avoid text wrapping issues
+- **Choosing `minimumColumnWidth` value (use `rem`, not `px`):**
+  - **18rem (~288px)**: Simple card grids (icon + title + short description)
+  - **19rem (~304px)**: Complex card grids (nested cards, multiple CTAs, rich content)
+  - **20rem (~320px)**: Team/profile grids with photos and bios
+  - **28-29rem**: Text-heavy columns (testimonials, features with long descriptions)
+  - **Why `rem` not `px`**: Better accessibility (respects user font-size preferences), WordPress standard (Ollie, Twenty Twenty-Five both use `rem`)
+  - **Content density matters**: Complex cards with nested structures (like `services-feature-cards.php` or `pricing-comparison.php`) need 19rem to prevent excessive whitespace on desktop while maintaining smooth 3→2→1 responsive behavior
 - **Benefits**: Smooth responsive behavior, no media queries needed, better UX on all devices, proper tablet experience
 - **Reference examples**: See `pricing-comparison.php`, `three-column-feature-grid.php`, `team-grid.php`, `shop-overview-three-columns.php`
 
+**Spacing & BlockGap Standards (CRITICAL):**
+
+**Based on comprehensive spacing refactor (Jan 2026)** following WordPress block theme best practices (Ollie & Twenty Twenty-Five themes).
+
+**Key Principles:**
+1. **NO spacer blocks** - Always use semantic `blockGap` instead of `<!-- wp:spacer -->` blocks
+2. **NO manual margins** - Headings and paragraphs should have NO margin overrides; use parent container `blockGap` to control spacing
+3. **Semantic blockGap hierarchy** - Use consistent spacing scale based on content relationship
+4. **Margin reset required** - All full-width patterns MUST include `"margin":{"top":"0","bottom":"0"}` (no units)
+
+**Semantic BlockGap Scale:**
+```
+- var:preset|spacing|small (~8-16px)   - Tight grouping (eyebrow + heading + description)
+- var:preset|spacing|medium (~24-32px) - Normal block spacing (default)
+- var:preset|spacing|large (~32-48px)  - Section spacing
+- var:preset|spacing|x-large (~48-80px) - Major section breaks, grid spacing
+```
+
+**Pattern Structure (Standard Hierarchy):**
+```html
+<!-- Outer full-width container: x-large blockGap + margin reset + horizontal padding -->
+<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|x-large","margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
+
+  <!-- Title/intro group: small blockGap for tight heading→paragraph -->
+  <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+    <!-- wp:heading -->
+    <h2>Section Title</h2>
+    <!-- wp:paragraph -->
+    <p>Description text</p>
+  <!-- /wp:group -->
+
+  <!-- Content grid: x-large blockGap between items -->
+  <!-- wp:group {"layout":{"type":"grid","minimumColumnWidth":"20rem"},"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}}} -->
+
+    <!-- Individual card: small/medium blockGap within card -->
+    <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+      <h3>Card Title</h3>
+      <p>Card content</p>
+    <!-- /wp:group -->
+
+  <!-- /wp:group -->
+
+<!-- /wp:group -->
+```
+
+**What NOT to Do:**
+```html
+<!-- ❌ WRONG - Spacer blocks -->
+<!-- wp:spacer {"height":"100px"} -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- ❌ WRONG - Manual margins on headings -->
+<!-- wp:heading {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|medium"}}}} -->
+
+<!-- ❌ WRONG - Hardcoded spacing values -->
+<p style="margin-top:1.5rem">Text</p>
+
+<!-- ❌ WRONG - Incomplete margin reset -->
+"margin":{"top":"0px"}  <!-- Should be "top":"0","bottom":"0" with no units -->
+```
+
+**What TO Do:**
+```html
+<!-- ✅ CORRECT - Use blockGap on parent container -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
+  <h2>Heading</h2>
+  <p>Text</p>
+<!-- /wp:group -->
+
+<!-- ✅ CORRECT - Complete margin reset (no units) -->
+"margin":{"top":"0","bottom":"0"}
+
+<!-- ✅ CORRECT - Nested groups for different spacing contexts -->
+<!-- Outer: x-large blockGap for major breaks -->
+<!-- Inner: small blockGap for tight content grouping -->
+```
+
+**Quality Checklist for Patterns:**
+- [ ] No `<!-- wp:spacer -->` blocks
+- [ ] No manual margins on `<!-- wp:heading -->` or `<!-- wp:paragraph -->` blocks
+- [ ] Full-width sections have complete margin reset: `{"top":"0","bottom":"0"}`
+- [ ] All spacing uses presets (no hardcoded `1.5rem`, `60px`, etc.)
+- [ ] Semantic blockGap values used appropriately
+- [ ] Related content wrapped in groups with tight `blockGap`
+- [ ] Follows established hierarchy (outer: x-large, title: small, content: medium/large)
+
 **Pattern Background Spacing (IMPORTANT):**
-- **Always add margin reset** to patterns with background colors: `"margin":{"top":"0","bottom":"0"}`
+- **Always add complete margin reset** to patterns with background colors: `"margin":{"top":"0","bottom":"0"}` (no units like "0px")
 - WordPress core automatically adds `margin-block-start` between blocks in constrained layouts
 - Without margin reset, gaps appear between adjacent patterns with different backgrounds
 - This follows the Ollie theme approach (inline styles vs. CSS overrides)

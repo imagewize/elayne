@@ -3,14 +3,15 @@
  * Title: Upcoming Events Grid
  * Slug: elayne/event-upcoming-grid
  * Description: Display upcoming events in a responsive 3-column grid with event details
- * Categories: elayne/events
+ * Categories: elayne/events, elayne/card-extended
+ * Grid Config: 19rem (event cards with metadata, tags, and CTAs)
  * Keywords: events, calendar, upcoming, workshops, webinars, conferences
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/events"],"patternName":"elayne/event-upcoming-grid","name":"Upcoming Events Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","textColor":"main","layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/events","elayne/card-extended"],"patternName":"elayne/event-upcoming-grid","name":"Upcoming Events Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","textColor":"main","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-color has-base-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-<!-- wp:group {"layout":{"type":"constrained","wideSize":"1260px"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","wideSize":"1260px"}} -->
 <div class="wp-block-group">
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"11px","fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase"},"elements":{"link":{"color":{"text":"var:preset|color|main-accent"}}}},"textColor":"main-accent"} -->
 <p class="has-main-accent-color has-text-color has-link-color" style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'What\'s on', 'elayne' ); ?></p>
@@ -20,16 +21,14 @@
 <h2 class="wp-block-heading has-x-large-font-size" style="font-weight:700;letter-spacing:-0.02em;line-height:1.1"><?php esc_html_e( 'Upcoming events', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|small"}},"typography":{"lineHeight":"1.6"}},"textColor":"main-accent","fontSize":"base"} -->
-<p class="has-main-accent-color has-text-color has-base-font-size" style="margin-top:var(--wp--preset--spacing--small);line-height:1.6"><?php esc_html_e( 'Workshops, webinars, and meetups you can join.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"}},"textColor":"main-accent","fontSize":"base"} -->
+<p class="has-main-accent-color has-text-color has-base-font-size" style="line-height:1.6"><?php esc_html_e( 'Workshops, webinars, and meetups you can join.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
 
-<!-- wp:spacer {"height":"32px"} -->
-<div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"grid","minimumColumnWidth":"20rem"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"19rem"}} -->
+<div class="wp-block-group alignwide">
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"16px","width":"1px"}},"borderColor":"border-light","backgroundColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-contrast-background-color has-background" style="border-width:1px;border-radius:16px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"12px","bottom":"12px","left":"10px","right":"10px"},"blockGap":"3px"},"border":{"radius":"12px","width":"1px"}},"borderColor":"border-light","backgroundColor":"tertiary","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
@@ -60,16 +59,16 @@
 </div>
 <!-- /wp:group -->
 
-<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"19px","fontWeight":"700","lineHeight":"1.3","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"10px"}}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:10px;font-size:19px;font-weight:700;letter-spacing:-0.01em;line-height:1.3"><?php esc_html_e( 'Oceanarium Edu Tour', 'elayne' ); ?></h3>
+<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"19px","fontWeight":"700","lineHeight":"1.3","letterSpacing":"-0.01em"}}} -->
+<h3 class="wp-block-heading" style="font-size:19px;font-weight:700;letter-spacing:-0.01em;line-height:1.3"><?php esc_html_e( 'Oceanarium Edu Tour', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"14px","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"14px"}}},"textColor":"main-accent"} -->
-<p class="has-main-accent-color has-text-color" style="margin-bottom:14px;font-size:14px;line-height:1.6"><?php esc_html_e( 'A guided learning session with activities and Q&A. Suitable for kids & parents.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"14px","lineHeight":"1.6"}},"textColor":"main-accent"} -->
+<p class="has-main-accent-color has-text-color" style="font-size:14px;line-height:1.6"><?php esc_html_e( 'A guided learning session with activities and Q&A. Suitable for kids & parents.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"10px","margin":{"bottom":"var:preset|spacing|medium"}}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
-<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--medium)">
+<!-- wp:group {"style":{"spacing":{"blockGap":"10px"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
+<div class="wp-block-group">
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"13px","fontWeight":"500"},"spacing":{"padding":{"top":"7px","bottom":"7px","left":"11px","right":"11px"}},"border":{"radius":"999px","width":"1px"}},"borderColor":"border-light","backgroundColor":"tertiary","textColor":"main-accent"} -->
 <p class="has-main-accent-color has-tertiary-background-color has-text-color has-background has-border-color has-border-light-border-color" style="border-width:1px;border-radius:999px;padding-top:7px;padding-right:11px;padding-bottom:7px;padding-left:11px;font-size:13px;font-weight:500"><?php esc_html_e( '📍 Marina Bay / Sentosa', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
@@ -124,16 +123,16 @@
 </div>
 <!-- /wp:group -->
 
-<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"19px","fontWeight":"700","lineHeight":"1.3","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"10px"}}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:10px;font-size:19px;font-weight:700;letter-spacing:-0.01em;line-height:1.3"><?php esc_html_e( 'WordPress Performance Night', 'elayne' ); ?></h3>
+<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"19px","fontWeight":"700","lineHeight":"1.3","letterSpacing":"-0.01em"}}} -->
+<h3 class="wp-block-heading" style="font-size:19px;font-weight:700;letter-spacing:-0.01em;line-height:1.3"><?php esc_html_e( 'WordPress Performance Night', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"14px","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"14px"}}},"textColor":"main-accent"} -->
-<p class="has-main-accent-color has-text-color" style="margin-bottom:14px;font-size:14px;line-height:1.6"><?php esc_html_e( 'Fast sites, Core Web Vitals, caching, and real-case speed audits.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"14px","lineHeight":"1.6"}},"textColor":"main-accent"} -->
+<p class="has-main-accent-color has-text-color" style="font-size:14px;line-height:1.6"><?php esc_html_e( 'Fast sites, Core Web Vitals, caching, and real-case speed audits.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"10px","margin":{"bottom":"var:preset|spacing|medium"}}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
-<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--medium)">
+<!-- wp:group {"style":{"spacing":{"blockGap":"10px"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
+<div class="wp-block-group">
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"13px","fontWeight":"500"},"spacing":{"padding":{"top":"7px","bottom":"7px","left":"11px","right":"11px"}},"border":{"radius":"999px","width":"1px"}},"borderColor":"border-light","backgroundColor":"tertiary","textColor":"main-accent"} -->
 <p class="has-main-accent-color has-tertiary-background-color has-text-color has-background has-border-color has-border-light-border-color" style="border-width:1px;border-radius:999px;padding-top:7px;padding-right:11px;padding-bottom:7px;padding-left:11px;font-size:13px;font-weight:500"><?php esc_html_e( '📍 Amsterdam, NL', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
@@ -188,16 +187,16 @@
 </div>
 <!-- /wp:group -->
 
-<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"19px","fontWeight":"700","lineHeight":"1.3","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"10px"}}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:10px;font-size:19px;font-weight:700;letter-spacing:-0.01em;line-height:1.3"><?php esc_html_e( 'SEO for SMEs: Quick Wins', 'elayne' ); ?></h3>
+<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"19px","fontWeight":"700","lineHeight":"1.3","letterSpacing":"-0.01em"}}} -->
+<h3 class="wp-block-heading" style="font-size:19px;font-weight:700;letter-spacing:-0.01em;line-height:1.3"><?php esc_html_e( 'SEO for SMEs: Quick Wins', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"14px","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"14px"}}},"textColor":"main-accent"} -->
-<p class="has-main-accent-color has-text-color" style="margin-bottom:14px;font-size:14px;line-height:1.6"><?php esc_html_e( 'A practical checklist you can apply today. Includes Q&A and templates.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"14px","lineHeight":"1.6"}},"textColor":"main-accent"} -->
+<p class="has-main-accent-color has-text-color" style="font-size:14px;line-height:1.6"><?php esc_html_e( 'A practical checklist you can apply today. Includes Q&A and templates.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"10px","margin":{"bottom":"var:preset|spacing|medium"}}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
-<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--medium)">
+<!-- wp:group {"style":{"spacing":{"blockGap":"10px"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
+<div class="wp-block-group">
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"13px","fontWeight":"500"},"spacing":{"padding":{"top":"7px","bottom":"7px","left":"11px","right":"11px"}},"border":{"radius":"999px","width":"1px"}},"borderColor":"border-light","backgroundColor":"tertiary","textColor":"main-accent"} -->
 <p class="has-main-accent-color has-tertiary-background-color has-text-color has-background has-border-color has-border-light-border-color" style="border-width:1px;border-radius:999px;padding-top:7px;padding-right:11px;padding-bottom:7px;padding-left:11px;font-size:13px;font-weight:500"><?php esc_html_e( '📍 Live stream', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
@@ -219,8 +218,6 @@
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
-</div>
-<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
 </div>

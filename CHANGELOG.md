@@ -7,6 +7,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-01-12
+
+### Changed
+**Pattern Spacing Standards:**
+- Shifted multiple patterns from manual margins and spacer blocks to semantic `blockGap` usage for cleaner spacing control
+- Removed hardcoded margin overrides on headings, paragraphs, buttons, separators, and featured images to align with block theme spacing behavior
+**Banner Header Typography:**
+- Updated page header banner headings to rely on block gap spacing (no manual bottom margins) and adjusted size on the accent variant to `x-large`
+**Legal Hero with Statistics:**
+- Updated badge and button color treatments for stronger contrast in the legal hero stats pattern
+**Grid Sizing & Metadata:**
+- Standardized grid minimum widths to `rem`-based sizes, including 18rem simple card grids in the Agency Services Showcase
+- Added Grid Config guidance and card complexity tags in pattern headers for clearer usage intent
+
+### Added
+**Pattern Categories:**
+- New pattern categories for card complexity: `elayne/card-simple`, `elayne/card-extended`, and `elayne/card-profiles`
+**Authoring Guidance:**
+- New documentation on grid category tags, Grid Config header fields, balanced block comments, and environment URL replacement for pattern assets
+- Expanded spacing and blockGap standards reference for consistent pattern construction
+
+### Fixed
+**Background Section Gaps:**
+- Corrected margin reset values to use unitless `0` for full-width background sections to prevent unintended gaps
+**Pattern Layout Consistency:**
+- Removed unnecessary spacer blocks and manual margin styles that could create uneven vertical spacing in blog and testimonial patterns
+
+### Technical
+**Theme Documentation Updates:**
+- Updated theme agent and authoring docs with commit hygiene rules, grid standards, spacing checklist, and pattern insertion caveats
+**Pattern Header Compliance:**
+- Ensured pattern headers include keywords and Grid Config notes where applicable to improve editor discovery and maintenance
+",
+
 ## [1.7.1] - 2026-01-10
 
 ### Changed - Banner pattern refresh

@@ -31,12 +31,12 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"5px"},"spacing":{"margin":{"top":"var:preset|spacing|large"}}}} /-->
+<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"5px"}}} /-->
 
 <!-- wp:post-excerpt /-->
 
-<!-- wp:separator {"className":"is-style-separator-thin","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"border-light"} -->
-<hr class="wp-block-separator has-text-color has-border-light-color has-alpha-channel-opacity has-border-light-background-color has-background is-style-separator-thin" style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--x-large)"/>
+<!-- wp:separator {"className":"is-style-separator-thin","backgroundColor":"border-light"} -->
+<hr class="wp-block-separator has-text-color has-border-light-color has-alpha-channel-opacity has-border-light-background-color has-background is-style-separator-thin"/>
 <!-- /wp:separator --></div>
 <!-- /wp:group -->
 <!-- /wp:post-template -->

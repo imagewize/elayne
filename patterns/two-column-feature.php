@@ -27,8 +27,8 @@
     <p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase">Fitness</p>
     <!-- /wp:paragraph -->
 
-    <!-- wp:heading {"style":{"typography":{"fontFamily":"var:preset|font-family|cormorant-garamond"},"spacing":{"margin":{"top":"0.5rem","bottom":"1.5rem"}}}} -->
-    <h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:1.5rem;font-family:var(--wp--preset--font-family--cormorant-garamond)">Build a Stronger Core with Us</h2>
+    <!-- wp:heading {"style":{"typography":{"fontFamily":"var:preset|font-family|cormorant-garamond"}}} -->
+    <h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--cormorant-garamond)">Build a Stronger Core with Us</h2>
     <!-- /wp:heading -->
     
     <!-- wp:paragraph -->

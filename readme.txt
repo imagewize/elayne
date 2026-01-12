@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.7.1
+Stable tag: 2.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -157,6 +157,17 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.0.0 - 01/12/26 =
+* CHANGED: Pattern spacing now relies on blockGap instead of manual margins/spacers for more consistent layout.
+* CHANGED: Banner header patterns drop manual heading margins; accent header size updated to x-large.
+* CHANGED: Legal Hero with Statistics pattern badge and button colors updated for stronger contrast.
+* CHANGED: Grid minimum widths standardized to rem-based values; agency services grid set to 18rem.
+* ADDED: New card complexity categories (simple, extended, profiles) for pattern filtering.
+* ADDED: Pattern authoring guidance for Grid Config headers, grid tags, block comment balance, and environment URL swaps.
+* FIXED: Full-width background patterns now use unitless margin reset to prevent unwanted gaps.
+* TECHNICAL: Expanded theme docs with spacing standards, quality checklist, and commit hygiene notes."
+
 
 = 1.7.1 - 01/10/26 =
 * CHANGED: Page Header Banner - Switched to a simple solid background layout with updated text styling.

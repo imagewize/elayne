@@ -26,8 +26,8 @@
 
 <!-- wp:post-excerpt /-->
 
-<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"secondary"} -->
-<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background" style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--x-large)"/>
+<!-- wp:separator {"backgroundColor":"secondary"} -->
+<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background"/>
 <!-- /wp:separator -->
 <!-- /wp:post-template -->
 
@@ -38,8 +38,8 @@
 <!-- /wp:query-pagination -->
 
 <!-- wp:query-no-results -->
-<!-- wp:paragraph {"placeholder":"<?php esc_attr_e( 'Add text or blocks that will display when a query returns no results.', 'elayne' ); ?>","style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
-<p style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><?php esc_html_e( 'Sorry, nothing was found for that search term.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"placeholder":"<?php esc_attr_e( 'Add text or blocks that will display when a query returns no results.', 'elayne' ); ?>","style":{"spacing":{"margin":{"right":"0","left":"0"}}}} -->
+<p style="margin-right:0;margin-left:0"><?php esc_html_e( 'Sorry, nothing was found for that search term.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></main>

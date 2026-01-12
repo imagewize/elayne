@@ -11,9 +11,9 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Frequently Asked Questions"},"align":"full","className":"faq-section","style":{"spacing":{"margin":{"top":"0px"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull faq-section has-tertiary-background-color has-background" style="margin-top:0px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|large","left":"auto","right":"auto"}}},"className":"has-max-width-constrained"} -->
-<h2 class="wp-block-heading has-text-align-center has-max-width-constrained" style="margin-bottom:var(--wp--preset--spacing--large);margin-left:auto;margin-right:auto"><?php esc_html_e( 'Frequently Asked Questions', 'elayne' ); ?></h2>
+<!-- wp:group {"metadata":{"name":"Frequently Asked Questions"},"align":"full","className":"faq-section","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull faq-section has-tertiary-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"left":"auto","right":"auto"}}},"className":"has-max-width-constrained"} -->
+<h2 class="wp-block-heading has-text-align-center has-max-width-constrained" style="margin-left:auto;margin-right:auto"><?php esc_html_e( 'Frequently Asked Questions', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"metadata":{"name":"FAQ Items"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","wideSize":"900px"}} -->
@@ -66,8 +66,8 @@
 <!-- /wp:details --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"metadata":{"name":"Contact CTA"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"margin":{"top":"var:preset|spacing|x-large","left":"auto","right":"auto"}},"border":{"radius":"5px"}},"backgroundColor":"base","layout":{"type":"constrained","wideSize":"900px"}} -->
-<div class="wp-block-group has-base-background-color has-background" style="border-radius:5px;margin-top:var(--wp--preset--spacing--x-large);margin-left:auto;margin-right:auto;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<!-- wp:group {"metadata":{"name":"Contact CTA"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"margin":{"left":"auto","right":"auto"}},"border":{"radius":"5px"}},"backgroundColor":"base","layout":{"type":"constrained","wideSize":"900px"}} -->
+<div class="wp-block-group has-base-background-color has-background" style="border-radius:5px;margin-left:auto;margin-right:auto;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"metadata":{"name":"Contact Text"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","wideSize":"600px"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"large"} -->
 <h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Still have questions?', 'elayne' ); ?></h3>

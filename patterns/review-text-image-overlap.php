@@ -15,17 +15,13 @@
 <div class="wp-block-columns alignwide is-style-overlap-columns-reversed" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
   <!-- wp:column {"width":"50%","className":"overlap-column"} -->
   <div class="wp-block-column overlap-column" style="flex-basis:50%">
-    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}},"backgroundColor":"base","className":"has-box-shadow"} -->
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|medium"}},"backgroundColor":"base","className":"has-box-shadow"} -->
     <div class="wp-block-group has-box-shadow has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
-      
+
       <!-- wp:paragraph -->
       <p>"The treatment I received at this spa exceeded all my expectations. The staff was professional and attentive, making me feel valued throughout my visit."</p>
       <!-- /wp:paragraph -->
 
-      <!-- wp:spacer {"height":"50px"} -->
-      <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-      <!-- /wp:spacer -->
-      
       <!-- wp:separator {"className":"is-style-wide","backgroundColor":"border-light"} -->
       <hr class="wp-block-separator has-text-color has-border-light-color has-alpha-channel-opacity has-border-light-background-color has-background is-style-wide"/>
       <!-- /wp:separator -->
