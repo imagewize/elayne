@@ -12,8 +12,8 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"backgroundColor":"neutral","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-neutral-background-color has-background" style="padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)">
 
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"bottom":"var:preset|spacing|large"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
-	<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--large)">
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+	<div class="wp-block-group">
 		<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
 		<h2 class="wp-block-heading has-text-align-center has-x-large-font-size">Trusted by Leading Brands</h2>
 		<!-- /wp:heading -->
@@ -79,8 +79,8 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->
-		<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--medium)">
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-buttons">
 			<!-- wp:button {"style":{"border":{"radius":"100px"}}} -->
 			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" style="border-radius:100px">View Our Portfolio</a></div>
 			<!-- /wp:button -->

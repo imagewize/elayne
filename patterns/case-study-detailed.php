@@ -252,8 +252,8 @@
 		<p class="has-text-align-center has-base-color has-text-color has-link-color">Let's discuss how we can help you achieve measurable results like these.</p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->
-		<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--medium)">
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-buttons">
 			<!-- wp:button {"backgroundColor":"base","textColor":"contrast","style":{"border":{"radius":"100px"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}}} -->
 			<div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-base-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:100px">Start Your Project</a></div>
 			<!-- /wp:button -->

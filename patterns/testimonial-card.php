@@ -10,14 +10,14 @@
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 		<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
 		<h2 class="wp-block-heading has-text-align-center has-x-large-font-size"><?php esc_html_e( 'What Our Clients Say', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"},"margin":{"top":"var:preset|spacing|xx-large"}}}} -->
-		<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--xx-large)">
+		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}}} -->
+		<div class="wp-block-columns alignwide">
 		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","color":"#ebeced"}},"backgroundColor":"base"} -->
 		<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-color:#ebeced;border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
 			<!-- wp:paragraph {"fontSize":"medium"} -->

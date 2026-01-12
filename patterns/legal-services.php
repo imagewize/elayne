@@ -3,36 +3,35 @@
  * Title: Legal Services Grid
  * Slug: elayne/legal-services
  * Description: Six-column responsive grid of legal practice areas with custom SVG icons
- * Categories: elayne/legal, elayne/features
- * Keywords: services, law, legal, attorney, practice areas, family law, business law
+ * Categories: elayne/legal, elayne/features, elayne/card-simple
+ * Keywords: services, law, legal, attorney, practice areas, family law, business law, simple
  * Viewport Width: 1200
+ * Grid Config: 18rem (simple cards: icon + service name + short description)
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/legal","elayne/features"],"patternName":"elayne/legal-services","name":"Legal Services Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:spacer {"height":"50px"} -->
-	<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
-
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/legal","elayne/features"],"patternName":"elayne/legal-services","name":"Legal Services Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
-		<!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|large"}}},"fontSize":"x-large"} -->
-		<h2 class="wp-block-heading has-text-align-center has-x-large-font-size" style="margin-bottom:var(--wp--preset--spacing--large)"><?php esc_html_e( 'Our Legal Services', 'elayne' ); ?></h2>
+		<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
+		<h2 class="wp-block-heading has-text-align-center has-x-large-font-size"><?php esc_html_e( 'Our Legal Services', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xx-large"}}},"fontSize":"base"} -->
-		<p class="has-text-align-center has-base-font-size" style="margin-bottom:var(--wp--preset--spacing--xx-large)"><?php esc_html_e( 'Comprehensive legal representation across multiple practice areas', 'elayne' ); ?></p>
+		<!-- wp:paragraph {"align":"center","fontSize":"base"} -->
+		<p class="has-text-align-center has-base-font-size"><?php esc_html_e( 'Comprehensive legal representation across multiple practice areas', 'elayne' ); ?></p>
 		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
 
-		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"300px"}} -->
+		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
 		<div class="wp-block-group alignwide"><!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
 				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/family-law.svg" alt="<?php esc_attr_e( 'Family Law', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
-				<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"fontSize":"large"} -->
-				<h3 class="wp-block-heading has-large-font-size" style="margin-top:var(--wp--preset--spacing--small);margin-bottom:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Family Law', 'elayne' ); ?></h3>
+				<!-- wp:heading {"level":3,"fontSize":"large"} -->
+				<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Family Law', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"small"} -->
@@ -41,14 +40,14 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
+			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
 				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/business-law.svg" alt="<?php esc_attr_e( 'Business Law', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
-				<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"fontSize":"large"} -->
-				<h3 class="wp-block-heading has-large-font-size" style="margin-top:var(--wp--preset--spacing--small);margin-bottom:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Business Law', 'elayne' ); ?></h3>
+				<!-- wp:heading {"level":3,"fontSize":"large"} -->
+				<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Business Law', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"small"} -->
@@ -57,14 +56,14 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
+			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
 				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/real-estate-law.svg" alt="<?php esc_attr_e( 'Real Estate Law', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
-				<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"fontSize":"large"} -->
-				<h3 class="wp-block-heading has-large-font-size" style="margin-top:var(--wp--preset--spacing--small);margin-bottom:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Real Estate Law', 'elayne' ); ?></h3>
+				<!-- wp:heading {"level":3,"fontSize":"large"} -->
+				<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Real Estate Law', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"small"} -->
@@ -73,14 +72,14 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
+			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
 				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/estate-planning.svg" alt="<?php esc_attr_e( 'Estate Planning', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
-				<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"fontSize":"large"} -->
-				<h3 class="wp-block-heading has-large-font-size" style="margin-top:var(--wp--preset--spacing--small);margin-bottom:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Estate Planning', 'elayne' ); ?></h3>
+				<!-- wp:heading {"level":3,"fontSize":"large"} -->
+				<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Estate Planning', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"small"} -->
@@ -89,14 +88,14 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
+			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
 				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/litigation.svg" alt="<?php esc_attr_e( 'Litigation', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
-				<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"fontSize":"large"} -->
-				<h3 class="wp-block-heading has-large-font-size" style="margin-top:var(--wp--preset--spacing--small);margin-bottom:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Litigation', 'elayne' ); ?></h3>
+				<!-- wp:heading {"level":3,"fontSize":"large"} -->
+				<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Litigation', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"small"} -->
@@ -105,14 +104,14 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
+			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
 				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/criminal-defense.svg" alt="<?php esc_attr_e( 'Criminal Defense', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
-				<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"fontSize":"large"} -->
-				<h3 class="wp-block-heading has-large-font-size" style="margin-top:var(--wp--preset--spacing--small);margin-bottom:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Criminal Defense', 'elayne' ); ?></h3>
+				<!-- wp:heading {"level":3,"fontSize":"large"} -->
+				<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Criminal Defense', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"fontSize":"small"} -->
@@ -124,9 +123,5 @@
 		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
-
-	<!-- wp:spacer {"height":"50px"} -->
-	<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
 </div>
 <!-- /wp:group -->

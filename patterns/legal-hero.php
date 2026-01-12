@@ -12,33 +12,33 @@
 <div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
-		<!-- wp:spacer {"height":"50px"} -->
-		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-		<!-- /wp:spacer -->
-
 		<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xx-large","left":"var:preset|spacing|xx-large"}}}} -->
 		<div class="wp-block-columns alignwide are-vertically-aligned-center">
 		<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-			<!-- wp:heading {"level":1,"textColor":"main","style":{"typography":{"lineHeight":"1.1"},"spacing":{"margin":{"bottom":"var:preset|spacing|x-large"}},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontSize":"xx-large","fontFamily":"open-sans"} -->
-			<h1 class="wp-block-heading has-main-color has-text-color has-link-color has-open-sans-font-family has-xx-large-font-size" style="margin-bottom:var(--wp--preset--spacing--x-large);line-height:1.1"><?php esc_html_e( 'Trusted Legal Counsel for ', 'elayne' ); ?><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-primary-color"><?php esc_html_e( 'Families and Businesses', 'elayne' ); ?></mark></h1>
-			<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group">
+				<!-- wp:heading {"level":1,"textColor":"main","style":{"typography":{"lineHeight":"1.1"},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontSize":"xx-large","fontFamily":"open-sans"} -->
+				<h1 class="wp-block-heading has-main-color has-text-color has-link-color has-open-sans-font-family has-xx-large-font-size" style="line-height:1.1"><?php esc_html_e( 'Trusted Legal Counsel for ', 'elayne' ); ?><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-primary-color"><?php esc_html_e( 'Families and Businesses', 'elayne' ); ?></mark></h1>
+				<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xx-large"}},"typography":{"lineHeight":"1.6"}},"textColor":"main","fontSize":"medium","fontFamily":"open-sans"} -->
-			<p class="has-main-color has-text-color has-open-sans-font-family has-medium-font-size" style="margin-bottom:var(--wp--preset--spacing--xx-large);line-height:1.6"><?php esc_html_e( 'Experienced attorneys providing personalized legal solutions since 1998. We combine deep legal expertise with a commitment to understanding your unique needs and protecting your interests.', 'elayne' ); ?></p>
-			<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"}},"textColor":"main","fontSize":"medium","fontFamily":"open-sans"} -->
+				<p class="has-main-color has-text-color has-open-sans-font-family has-medium-font-size" style="line-height:1.6"><?php esc_html_e( 'Experienced attorneys providing personalized legal solutions since 1998. We combine deep legal expertise with a commitment to understanding your unique needs and protecting your interests.', 'elayne' ); ?></p>
+				<!-- /wp:paragraph -->
 
-			<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
-			<div class="wp-block-buttons">
-				<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"}},"fontSize":"base","fontFamily":"open-sans"} -->
-				<div class="wp-block-button has-custom-font-size has-open-sans-font-family has-base-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
-				<!-- /wp:button -->
+				<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
+				<div class="wp-block-buttons">
+					<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"}},"fontSize":"base","fontFamily":"open-sans"} -->
+					<div class="wp-block-button has-custom-font-size has-open-sans-font-family has-base-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
+					<!-- /wp:button -->
 
-				<!-- wp:button {"backgroundColor":"tertiary","textColor":"primary","style":{"border":{"radius":"8px"}},"fontSize":"base","fontFamily":"open-sans"} -->
-				<div class="wp-block-button has-custom-font-size has-open-sans-font-family has-base-font-size"><a class="wp-block-button__link has-primary-color has-tertiary-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Our Services', 'elayne' ); ?></a></div>
-				<!-- /wp:button -->
+					<!-- wp:button {"backgroundColor":"tertiary","textColor":"primary","style":{"border":{"radius":"8px"}},"fontSize":"base","fontFamily":"open-sans"} -->
+					<div class="wp-block-button has-custom-font-size has-open-sans-font-family has-base-font-size"><a class="wp-block-button__link has-primary-color has-tertiary-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Our Services', 'elayne' ); ?></a></div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:buttons -->
 			</div>
-			<!-- /wp:buttons -->
+			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
 
@@ -51,10 +51,6 @@
 		<!-- /wp:column -->
 		</div>
 		<!-- /wp:columns -->
-
-		<!-- wp:spacer {"height":"50px"} -->
-		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-		<!-- /wp:spacer -->
 	</div>
 	<!-- /wp:group -->
 </div>

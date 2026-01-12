@@ -14,6 +14,7 @@
 - For CLI activation inside a Bedrock/Trellis install: `wp theme activate elayne --path=web/wp`.
 - Regenerate translations when strings change: `wp i18n make-pot . languages/elayne.pot`.
 - Flush caches after template or pattern edits if using object caching: `wp cache flush`.
+- **Commit hygiene**: Demo theme commits must be attribution-free (no Claude/AI footers).
 
 ### Local Development with Trellis VM
 - Uses **Trellis VM** (Lima-based, NOT Vagrant)
@@ -89,6 +90,7 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
 
 #### Pattern Metadata & Inline Styles (IMPORTANT)
 - Keep the block comment and rendered wrapper in sync: include `metadata` (categories/patternName/name) when present, and mirror padding/margin values (including left/right) in the outer `div` inline styles so Gutenberg recovery does not rewrite the pattern.
+- **Block comment balance**: Every `<!-- wp:group -->` must have a matching `<!-- /wp:group -->`. Extra closing comments or missing wrappers can force Gutenberg to wrap the tail in a Classic block.
 
 #### Responsive Grid Layouts (CRITICAL)
 - **Use grid layout with `minimumColumnWidth`** for responsive multi-column patterns (3→2→1 columns)
@@ -98,6 +100,8 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
 - **Behavior**: Desktop (3 cols) → Tablet (2 cols) → Mobile (1 col) based on available space
 - **Use for**: Pricing tables, feature grids, team grids, card layouts
 - **Reference**: See `pricing-comparison.php`
+- **Grid standards**: Use category tags plus consistent widths: `elayne/card-simple` = `18rem`, `elayne/card-extended` = `19rem`, `elayne/card-profiles` = `20rem`, text-heavy grids = `28-29rem`.
+- **Centering rule**: Keep the outer full-width group as `layout: default`, then wrap the grid in an inner `alignwide` group so it centers inside the constrained container.
 
 #### Pattern Background Spacing (CRITICAL)
 - **Always add margin reset** to patterns with background colors: `"margin":{"top":"0","bottom":"0"}`
@@ -116,6 +120,10 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
 - **Reference**: See `hero-two-tone.php` for working example
 - **Wrong**: `<!-- wp:group {"align":"full","layout":{"type":"constrained","contentSize":"1200px"}} -->`
 - **Correct**: `<!-- wp:group {"align":"full","layout":{"type":"default"}} -->` with nested constrained groups inside
+
+#### Pattern URLs & Environment Moves (IMPORTANT)
+- `get_template_directory_uri()` is evaluated when a pattern is inserted; the resulting URL is hardcoded into `post_content`.
+- After moving content between environments, run `wp search-replace` to swap `.test` URLs to production (and vice versa) before going live.
 
 #### Page Template Layout for Full-Width Patterns (CRITICAL)
 - **Problem**: Page templates using `"layout":{"type":"default"}` on `post-content` prevent full-width patterns from breaking out

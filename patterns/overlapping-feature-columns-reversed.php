@@ -15,16 +15,16 @@
 <div class="wp-block-columns alignwide is-style-overlap-columns-reversed" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
   <!-- wp:column {"width":"50%","className":"overlap-column"} -->
   <div class="wp-block-column overlap-column" style="flex-basis:50%">
-    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}},"backgroundColor":"base","className":"has-box-shadow"} -->
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"}},"backgroundColor":"base","className":"has-box-shadow"} -->
     <div class="wp-block-group has-box-shadow has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
       <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500","textTransform":"uppercase","letterSpacing":"2px"}},"textColor":"primary","fontSize":"small"} -->
       <p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase">Supplements</p>
       <!-- /wp:paragraph -->
 
-      <!-- wp:heading {"style":{"typography":{"fontFamily":"var:preset|font-family|cormorant-garamond"},"spacing":{"margin":{"top":"0.5rem","bottom":"1.5rem"}}}} -->
-      <h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:1.5rem;font-family:var(--wp--preset--font-family--cormorant-garamond)">Natural Supplements for Everyday Wellness</h2>
+      <!-- wp:heading {"style":{"typography":{"fontFamily":"var:preset|font-family|cormorant-garamond"}}} -->
+      <h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--cormorant-garamond)">Natural Supplements for Everyday Wellness</h2>
       <!-- /wp:heading -->
-      
+
       <!-- wp:paragraph -->
       <p>Our premium Turmeric & Ginger Tummies provide anti-inflammatory benefits while supporting digestion. Pair with our Pure Collagen supplement to promote skin elasticity and joint health for a complete wellness routine.</p>
       <!-- /wp:paragraph -->
@@ -32,10 +32,6 @@
       <!-- wp:paragraph -->
       <p><a href="#">Shop supplements →</a></p>
       <!-- /wp:paragraph -->
-
-      <!-- wp:spacer {"height":"50px"} -->
-      <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-      <!-- /wp:spacer -->
     </div>
     <!-- /wp:group -->
   </div>

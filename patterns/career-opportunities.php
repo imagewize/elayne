@@ -11,8 +11,8 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Career Opportunities"},"align":"full","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"0","left":"0"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"inherit":true,"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:0;padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:0">
+<!-- wp:group {"metadata":{"name":"Career Opportunities"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"0","left":"0"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-right:0;padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:0">
 	<!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"primary","fontSize":"small"} -->
@@ -39,8 +39,8 @@
 				<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Senior WordPress Developer', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-				<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Full Time · Remote · $80,000 - $110,000/year', 'elayne' ); ?></p>
+				<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
+				<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Full Time · Remote · $80,000 - $110,000/year', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -55,8 +55,8 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"is-style-separator-thin"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity style-separator-thin" style="margin-top:var(--wp--preset--spacing--medium);margin-bottom:var(--wp--preset--spacing--medium)"/>
+		<!-- wp:separator {"className":"style-separator-thin"} -->
+		<hr class="wp-block-separator has-alpha-channel-opacity style-separator-thin"/>
 		<!-- /wp:separator -->
 
 		<!-- wp:group {"metadata":{"name":"Job 2"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
@@ -67,8 +67,8 @@
 				<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Digital Marketing Specialist', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-				<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Full Time · Hybrid · $65,000 - $90,000/year', 'elayne' ); ?></p>
+				<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
+				<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Full Time · Hybrid · $65,000 - $90,000/year', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -83,8 +83,8 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"is-style-separator-thin"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity style-separator-thin" style="margin-top:var(--wp--preset--spacing--medium);margin-bottom:var(--wp--preset--spacing--medium)"/>
+		<!-- wp:separator {"className":"style-separator-thin"} -->
+		<hr class="wp-block-separator has-alpha-channel-opacity style-separator-thin"/>
 		<!-- /wp:separator -->
 
 		<!-- wp:group {"metadata":{"name":"Job 3"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
@@ -95,8 +95,8 @@
 				<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'UX/UI Designer', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-				<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Full Time · Remote · $70,000 - $95,000/year', 'elayne' ); ?></p>
+				<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
+				<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Full Time · Remote · $70,000 - $95,000/year', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -111,8 +111,8 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"className":"is-style-separator-thin"} -->
-		<hr class="wp-block-separator has-alpha-channel-opacity style-separator-thin" style="margin-top:var(--wp--preset--spacing--medium);margin-bottom:var(--wp--preset--spacing--medium)"/>
+		<!-- wp:separator {"className":"style-separator-thin"} -->
+		<hr class="wp-block-separator has-alpha-channel-opacity style-separator-thin"/>
 		<!-- /wp:separator -->
 
 		<!-- wp:group {"metadata":{"name":"Job 4"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
@@ -123,8 +123,8 @@
 				<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Content Strategist', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-				<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Part Time · Remote · $40 - $60/hour', 'elayne' ); ?></p>
+				<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
+				<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Part Time · Remote · $40 - $60/hour', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

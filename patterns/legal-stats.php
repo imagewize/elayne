@@ -8,24 +8,20 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/legal","elayne/statistics"],"patternName":"elayne/legal-stats","name":"Legal Stats - Experience & Success"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"primary","layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/legal","elayne/statistics"],"patternName":"elayne/legal-stats","name":"Legal Stats - Experience & Success"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"primary","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull has-primary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:spacer {"height":"30px"} -->
-	<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
-
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
-		<!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xx-large"}}},"textColor":"base","fontSize":"x-large"} -->
-		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-x-large-font-size" style="margin-bottom:var(--wp--preset--spacing--xx-large)"><?php esc_html_e( 'Proven Track Record of Success', 'elayne' ); ?></h2>
+		<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"x-large"} -->
+		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( 'Proven Track Record of Success', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
 		<div class="wp-block-group alignwide">
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|small"}}},"textColor":"secondary"} -->
-				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--small);font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '25+', 'elayne' ); ?></h3>
+				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"}},"textColor":"secondary"} -->
+				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '25+', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"base","fontSize":"small"} -->
@@ -40,8 +36,8 @@
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|small"}}},"textColor":"secondary"} -->
-				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--small);font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '500+', 'elayne' ); ?></h3>
+				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"}},"textColor":"secondary"} -->
+				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '500+', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"base","fontSize":"small"} -->
@@ -56,8 +52,8 @@
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|small"}}},"textColor":"secondary"} -->
-				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--small);font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '98%', 'elayne' ); ?></h3>
+				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"}},"textColor":"secondary"} -->
+				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '98%', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"base","fontSize":"small"} -->
@@ -73,9 +69,5 @@
 		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
-
-	<!-- wp:spacer {"height":"30px"} -->
-	<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
 </div>
 <!-- /wp:group -->
