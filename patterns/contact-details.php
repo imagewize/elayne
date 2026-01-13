@@ -78,8 +78,6 @@
 			<!-- wp:paragraph {"textColor":"main","fontSize":"base"} -->
 			<p class="has-main-color has-text-color has-base-font-size"><?php esc_html_e( 'Free parking available for visitors', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
-		</div>
-		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
 
