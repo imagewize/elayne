@@ -14,11 +14,11 @@
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
 	<div class="wp-block-group">
 		<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"clamp(2.75rem, 6vw, 4.5rem)","fontWeight":"800","lineHeight":"1.1","letterSpacing":"-0.02em"}},"textColor":"main"} -->
-		<h1 class="wp-block-heading has-text-align-center has-main-color has-text-color" style="font-size:clamp(2.75rem, 6vw, 4.5rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em">Data to enrich your online business</h1>
+		<h1 class="wp-block-heading has-text-align-center has-main-color has-text-color" style="font-size:clamp(2.75rem, 6vw, 4.5rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em">Elevate your business presence online</h1>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.25rem","lineHeight":"1.7"}},"textColor":"main-accent","fontSize":"medium"} -->
-		<p class="has-text-align-center has-main-accent-color has-text-color has-medium-font-size" style="font-size:1.25rem;line-height:1.7">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
+		<p class="has-text-align-center has-main-accent-color has-text-color has-medium-font-size" style="font-size:1.25rem;line-height:1.7">Create engaging digital experiences that connect with your audience. Showcase your expertise, build trust, and grow your business with a professional web presence.</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->

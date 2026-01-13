@@ -43,13 +43,15 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Pattern Library
 
-Elayne includes **74 professionally designed patterns** across 12 categories:
+Elayne includes **81 professionally designed patterns** across multiple categories:
 
-**Core Patterns:** Hero Sections (8) • Headers & Footers (8) • Call-to-Action & Contact (8) • Features & Services (12) • Team & Testimonials (13) • Statistics (4) • Blog & Posts (7)
+**Core Patterns:** Hero Sections (10) • Headers & Footers (8) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (17) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (11)
 
-**Specialized:** Support & Information (2) • Events (1) • Portfolio (2) • Pages (1) • Shop/E-commerce (1)
+**Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (12)
 
-**Templates:** 11 page templates • 4 post templates
+**Industry Verticals:** Spa & Wellness (11) • Legal Services (9)
+
+**Templates:** 17 page and post templates
 
 Browse the complete pattern library in **Appearance → Editor → Patterns**
 
