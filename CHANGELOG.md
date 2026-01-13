@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-01-13
+
+### Changed
+**Pattern Library Expansion Overview:**
+- Updated pattern library counts and category breakdown to reflect 81 patterns and 17 templates
+- Reorganized categories into Core, Specialized, and Industry Verticals for clearer browsing
+**Hero Modern Light Copy Refresh:**
+- Rewrote hero headline and supporting paragraph for a more business-focused message
+**Stats Showcase Branding + Styling:**
+- Replaced Moiraine references with Elayne in testimonial and intro copy
+- Switched accent text and link colors to the tertiary palette for consistent styling
+### Added
+**New Card Pattern Set:**
+- Added an Image Card Grid pattern with three image-led cards, CTAs, and responsive grid behavior
+**Industry Verticals:**
+- Added Spa & Wellness and Legal Services vertical pattern groups to the library listings
+### Fixed
+**Legal Services Pattern Markup:**
+- Removed stray closing group markup to keep block wrappers balanced and avoid editor issues
+### Technical
+**Marketing Assets:**
+- Updated theme screenshot to reflect current design set and pattern coverage",
+
 ## [2.0.1] - 2026-01-13
 
 ### Changed - Legal stats layout responsiveness

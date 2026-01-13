@@ -24,8 +24,8 @@
 <h2 class="wp-block-heading has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( 'Built for performance and designed for results', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"main-accent","fontSize":"base"} -->
-<p class="has-main-accent-color has-text-color has-base-font-size"><?php esc_html_e( 'Join the growing community of professionals who trust Moiraine to power their WordPress sites. Beautiful design meets exceptional performance.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"textColor":"tertiary","fontSize":"base"} -->
+<p class="has-tertiary-color has-text-color has-base-font-size"><?php esc_html_e( 'Join the growing community of professionals who trust Elayne to power their WordPress sites. Beautiful design meets exceptional performance.', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -36,7 +36,7 @@
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|main-accent"}}}},"fontSize":"small"} -->
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|tertiary"}}}},"fontSize":"small"} -->
 <p class="has-link-color has-small-font-size"><a href="#"><?php esc_html_e( 'View Documentation', 'elayne' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
@@ -51,8 +51,8 @@
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
-<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Moiraine completely transformed how we build WordPress sites. The pattern library is incredible and performance is unmatched.', 'elayne' ); ?></p>
+<div class="wp-block-group"><!-- wp:paragraph {"textColor":"tertiary","fontSize":"small"} -->
+<p class="has-tertiary-color has-text-color has-small-font-size"><?php esc_html_e( 'Elayne completely transformed how we build WordPress sites. The pattern library is incredible and performance is unmatched.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"textColor":"base","fontSize":"x-small"} -->

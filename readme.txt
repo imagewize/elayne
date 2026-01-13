@@ -4,17 +4,17 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.0.1
+Stable tag: 2.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 74 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 81 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 74 Professional Patterns - All 100% original, created specifically for Elayne
+* 81 Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
 * 8 Style Variations - Complete design systems including Spa & Wellness, Legal Blue, and more
@@ -30,27 +30,32 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-Elayne includes **74 professionally designed patterns** across 12 categories:
+Elayne includes **81 professionally designed patterns** across multiple categories:
 
 **Core Patterns:**
-* Hero Sections (8) - Modern heroes with bold typography, split layouts, and conversion-focused designs
+* Hero Sections (10) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs
 * Headers & Footers (8) - Responsive navigation options from mobile hamburger to desktop inline menus, including advanced two-bar layouts with contact information
-* Call-to-Action & Contact (8) - Newsletter signups, contact forms, and booking CTAs
-* Features & Services (12) - Feature grids, pricing tables, service showcases, and client logo walls
-* Team & Testimonials (13) - Team grids, testimonial cards, client reviews with ratings
-* Statistics (4) - Statistics displays and feature lists with visual emphasis
-* Blog & Posts (7) - Grid layouts, list views, featured posts, and author boxes
+* Banners (4) - Announcement bars, page headers with solid or slanted backgrounds
+* Call-to-Action (11) - Newsletter signups, contact forms, booking CTAs, and conversion-focused blocks
+* Contact (2) - Professional contact information displays with office hours, phone, email, and address
+* Features (17) - Feature grids, pricing tables, service showcases, client logo walls, and agency services
+* Testimonials (7) - Client reviews, success stories with ratings, and detailed feedback layouts
+* Statistics (1) - Statistics displays and feature lists with visual emphasis
+* Team (1) - Team member grids with photos and bios
+* Blog & Posts (11) - Grid layouts, list views, featured posts, author boxes, and portrait-oriented displays
 
 **Specialized Patterns:**
-* Support & Information (2) - FAQ sections and career opportunity listings
+* Cards (13) - Versatile card patterns for various content types (simple, extended, and profile cards)
 * Events (1) - Event grids with date badges and registration
 * Portfolio (2) - Masonry grids and detailed case studies
-* Pages (1) - Coming soon pages with countdown timers
-* Shop/E-commerce (1) - Product grids optimized for WooCommerce
+* Pages (12) - Coming soon pages, full-page layouts, and specialized page templates
+
+**Industry Verticals:**
+* Spa & Wellness (11) - Treatment showcases, booking CTAs, wellness features, and product displays
+* Legal Services (9) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
 
 **Templates:**
-* 11 page templates (centered, full-width, wide, sidebars, hero, landing page)
-* 4 post templates (centered, wide, left sidebar, right sidebar)
+* 17 page and post templates (centered, full-width, wide, sidebars, hero, landing page)
 
 Browse the complete pattern library in **Appearance → Editor → Patterns**
 
@@ -157,6 +162,16 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.1.0 - 01/13/26 =
+* CHANGED: Pattern library totals and category breakdown updated to 81 patterns and 17 templates with new vertical groupings.
+* CHANGED: Hero Modern Light pattern copy refreshed for a stronger business message.
+* CHANGED: Stats Showcase pattern copy now references Elayne and uses tertiary accent colors for text/link styling.
+* ADDED: Image Card Grid pattern with three image-led cards, CTAs, and responsive grid layout.
+* ADDED: Industry Verticals (Spa & Wellness, Legal Services) listed in the pattern collection.
+* FIXED: Legal Services pattern group markup balanced to prevent block wrapper issues.
+* TECHNICAL: Theme screenshot updated to match current design set."
+
 
 = 2.0.1 - 01/13/26 =
 * CHANGED: Legal stats grid layout - Use minimumColumnWidth of 18rem for smoother 3→2→1 responsive columns."
