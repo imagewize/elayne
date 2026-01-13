@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -157,6 +157,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.0.1 - 01/13/26 =
+* CHANGED: Legal stats grid layout - Use minimumColumnWidth of 18rem for smoother 3→2→1 responsive columns."
+
 
 = 2.0.0 - 01/12/26 =
 * CHANGED: Pattern spacing now relies on blockGap instead of manual margins/spacers for more consistent layout.

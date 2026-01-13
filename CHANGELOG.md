@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2026-01-13
+
+### Changed - Legal stats layout responsiveness
+**Legal Stats Grid Responsiveness:**
+- Switched the pattern grid layout to use a `minimumColumnWidth` of 18rem
+- Enables more fluid 3→2→1 column behavior for better readability across breakpoints",
+
 ## [2.0.0] - 2026-01-12
 
 ### Changed

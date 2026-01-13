@@ -16,7 +16,7 @@
 		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( 'Proven Track Record of Success', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
+		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
 		<div class="wp-block-group alignwide">
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
