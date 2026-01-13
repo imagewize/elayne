@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.1] - 2026-01-13
+
+### Fixed - Pattern wrapper balance
+**Contact Details Pattern Markup:**
+- Removed stray closing group wrapper so block comments stay balanced
+- Prevents Gutenberg from inserting a Classic block due to mismatched wrappers
+**Legal Team Pattern Markup:**
+- Removed an extra closing group comment at the end of the pattern
+- Keeps the block structure valid and predictable in the editor",
+
 ## [2.1.0] - 2026-01-13
 
 ### Changed

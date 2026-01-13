@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.1.1 - 01/13/26 =
+* FIXED: Contact Details pattern - Removed stray closing group wrapper to keep block comments balanced and avoid Classic block insertion.
+* FIXED: Legal Team pattern - Removed extra closing group comment to keep markup valid in the editor."
+
 
 = 2.1.0 - 01/13/26 =
 * CHANGED: Pattern library totals and category breakdown updated to 81 patterns and 17 templates with new vertical groupings.
