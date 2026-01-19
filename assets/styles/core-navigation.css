@@ -103,11 +103,26 @@ header .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-na
 /* Ensure chevron SVG strokes are visible */
 .wp-block-navigation .wp-block-navigation__submenu-icon svg {
 	color: inherit;
+	transition: transform 0.2s ease;
 }
 
 .wp-block-navigation .wp-block-navigation__submenu-icon svg path {
 	stroke: currentColor;
 	fill: none;
+}
+
+/* Rotate chevron when submenu is open (desktop dropdown) */
+@media only screen and (min-width: 600px) {
+	.wp-block-navigation:not(.is-menu-open) .wp-block-navigation-item.has-child:hover > .wp-block-navigation-submenu__toggle .wp-block-navigation__submenu-icon svg,
+	.wp-block-navigation:not(.is-menu-open) .wp-block-navigation-item.has-child:focus-within > .wp-block-navigation-submenu__toggle .wp-block-navigation__submenu-icon svg {
+		transform: rotate(180deg);
+	}
+}
+
+/* Rotate chevron when submenu is open (mobile overlay) */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child[open] > .wp-block-navigation-submenu__toggle .wp-block-navigation__submenu-icon svg,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-submenu__toggle .wp-block-navigation__submenu-icon svg {
+	transform: rotate(180deg);
 }
 
 /* Override WordPress core hiding of chevrons in overlay - make them visible */
@@ -388,10 +403,16 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	display: block;
 	width: var(--nav-chevron-size);
 	height: var(--nav-chevron-size);
+	transition: transform 0.2s ease;
 }
 
 .has-clickable-parents .moiraine-nav-toggle svg path {
 	stroke: currentColor;
+}
+
+/* Rotate chevron when submenu is expanded */
+.has-clickable-parents .moiraine-nav-toggle[aria-expanded="true"] svg {
+	transform: rotate(180deg);
 }
 
 /* Overlay: Full-width wrapper */
@@ -418,11 +439,17 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	display: block !important;
 	width: var(--nav-chevron-size);
 	height: var(--nav-chevron-size);
+	transition: transform 0.2s ease;
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents .moiraine-nav-toggle svg path {
 	stroke: currentColor;
 	fill: none;
+}
+
+/* Rotate chevron in mobile overlay when expanded */
+.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents .moiraine-nav-toggle[aria-expanded="true"] svg {
+	transform: rotate(180deg);
 }
 
 /* --------------------------------------------

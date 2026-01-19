@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.1] - 2026-01-19
+
+### Changed
+
+**Navigation chevron rotation:**
+- Rotate submenu chevrons on desktop when dropdowns open via hover/focus
+- Rotate chevrons for expanded submenus in the mobile overlay
+- Keep chevrons visible in overlay mode so state changes are clear
+
 ## [2.2.0] - 2026-01-19
 
 ### Added
