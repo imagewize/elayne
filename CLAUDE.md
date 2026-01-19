@@ -196,9 +196,50 @@ trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- \
 4. ✅ Use `wp cache flush` after URL changes
 5. ✅ Hard refresh browser (Cmd+Shift+R) to clear cache
 
+#### Alternative: Updating Individual Pages/Posts with Pattern Content (WP-CLI Method)
+
+When updating a single page/post with pattern content (not a full database sync), you can use WP-CLI to directly update the post content with a pattern file. This avoids the search-replace step because the PHP pattern is evaluated on the production server.
+
+**Workflow:**
+```bash
+# STEP 1: Create/edit pattern file locally
+# The pattern file uses get_template_directory_uri() which will be evaluated server-side
+# Example: patterns/download-cta.php
+
+# STEP 2: Ensure pattern file is deployed to production
+# (Either via git deployment or manual sync)
+
+# STEP 3: Update post on production using WP-CLI
+# The pattern PHP is evaluated on the production server, so URLs are production URLs
+ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
+  wp post update 5086 --post_content=\"\$(cat web/app/themes/elayne/patterns/download-cta.php)\" --path=web/wp"
+
+# STEP 4: Flush cache
+ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
+  wp cache flush --path=web/wp"
+```
+
+**Why this works:**
+- Pattern PHP file is read on the production server (via `cat`)
+- `get_template_directory_uri()` evaluates in the production environment
+- URLs are production URLs from the start (no search-replace needed)
+- No intermediate file creation or corruption issues
+- Works for both single-site and multisite installations
+
+**When to use this approach:**
+- Updating single pages/posts with new pattern content
+- Pattern files already deployed to production server
+- Want to avoid full database operations
+- Need to update content without database sync
+
+**When NOT to use this approach:**
+- When pattern file doesn't exist on production yet (deploy pattern file first)
+- When you need to update multiple pages/posts (use database sync + search-replace instead)
+- When pattern contains dynamic content that shouldn't be hardcoded in database
+
 **See also:**
-- `/Users/j/code/imagewize.com/CLAUDE.md` - "CRITICAL: URL Sanitization After Database Operations"
-- `/Users/j/code/trellis-tools/content-creation/PAGE-CREATION.md` - "CRITICAL: URL Sanitization Before Production"
+- `/Users/jasperfrumau/code/imagewize.com/CLAUDE.md` - "CRITICAL: URL Sanitization After Database Operations"
+- `/Users/jasperfrumau/code/imagewize.com/CLAUDE.md` - "CRITICAL: Lima File Sync and Binary File Corruption" (for database sync workflows)
 
 ## Key Components
 

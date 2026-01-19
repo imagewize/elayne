@@ -377,6 +377,7 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	padding: 0.25rem;
 	color: inherit;
 	line-height: 1;
+	margin-bottom: 0.2rem;
 }
 
 .has-clickable-parents .moiraine-nav-toggle:hover {

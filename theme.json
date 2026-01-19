@@ -568,6 +568,16 @@
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"
+		},
+		{
+			"name": "mega-menu-template",
+			"title": "Mega Menu",
+			"area": "menu"
+		},
+		{
+			"name": "sidebar",
+			"title": "Sidebar",
+			"area": "sidebar"
 		}
 	]
 }
