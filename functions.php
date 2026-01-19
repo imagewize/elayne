@@ -24,6 +24,33 @@ function elayne_setup() {
 add_action( 'after_setup_theme', __NAMESPACE__ . '\elayne_setup' );
 
 /**
+ * Register custom template part areas.
+ *
+ * @param array $areas Existing template part areas.
+ * @return array Modified template part areas.
+ */
+function elayne_template_part_areas( $areas ) {
+	$areas[] = array(
+		'area'        => 'menu',
+		'area_tag'    => 'div',
+		'label'       => __( 'Menu', 'elayne' ),
+		'description' => __( 'The Menu template part area is used for mega menus and navigation templates.', 'elayne' ),
+		'icon'        => 'navigation',
+	);
+
+	$areas[] = array(
+		'area'        => 'sidebar',
+		'area_tag'    => 'aside',
+		'label'       => __( 'Sidebar', 'elayne' ),
+		'description' => __( 'The Sidebar template part area is used for sidebar content.', 'elayne' ),
+		'icon'        => 'layout',
+	);
+
+	return $areas;
+}
+add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\elayne_template_part_areas' );
+
+/**
  * Enqueue styles.
  */
 function elayne_enqueue_styles() {
