@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.2.0
+Stable tag: 2.2.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.2.1 - 01/19/26 =
+* CHANGED: Navigation chevrons now rotate when submenus open on desktop hover/focus and in the mobile overlay.
+* CHANGED: Chevron icons stay visible in overlay mode so submenu state is clear."
 
 = 2.2.0 - 01/19/26 =
 * ADDED: Custom template part areas - Menu (for mega menus/navigation) and Sidebar (for sidebar content) with appropriate semantic tags and icons.
