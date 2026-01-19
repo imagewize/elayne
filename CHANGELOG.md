@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2026-01-19
+
+### Added
+
+**Custom Template Part Areas:**
+- Registered two new template part areas: Menu and Sidebar
+- Menu area uses `<div>` tag for mega menus and navigation templates
+- Sidebar area uses `<aside>` tag for sidebar content
+- Both areas display in the Site Editor with appropriate icons (navigation and layout)
+
+**Mega Menu Template Part:**
+- Added `mega-menu-template.html` in parts directory
+- Template loads the `elayne-blocks/mega-menu-featured-content` pattern by default
+- Registered in theme.json as "Mega Menu" template part with menu area
+
+**Sidebar Template Part:**
+- Registered "Sidebar" template part in theme.json
+- Uses sidebar area for proper semantic markup
+
+### Technical
+
+**Template Part Registration:**
+- Implemented `elayne_template_part_areas()` function hooked to `default_wp_template_part_areas` filter
+- Extends WordPress core template part system with custom areas
+- Follows WordPress best practices for template part area registration",
+
 ## [2.1.1] - 2026-01-13
 
 ### Fixed - Pattern wrapper balance

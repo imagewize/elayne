@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.1.1
+Stable tag: 2.2.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.2.0 - 01/19/26 =
+* ADDED: Custom template part areas - Menu (for mega menus/navigation) and Sidebar (for sidebar content) with appropriate semantic tags and icons.
+* ADDED: Mega Menu template part - Default template loading mega-menu-featured-content pattern, registered in theme.json.
+* ADDED: Sidebar template part - Registered in theme.json with sidebar area.
+* TECHNICAL: Implemented elayne_template_part_areas() function to extend WordPress core template part system with custom areas."
+
 
 = 2.1.1 - 01/13/26 =
 * FIXED: Contact Details pattern - Removed stray closing group wrapper to keep block comments balanced and avoid Classic block insertion.
