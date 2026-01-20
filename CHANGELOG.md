@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.0] - 2026-01-20
+
+### Added
+
+**Navigation Dropdown Spacing Control:**
+- Added new "Dropdown spacing" setting in Navigation block Inspector Controls
+- Allows users to adjust the gap between parent menu items and their dropdown menus (desktop only)
+- Range slider control with values from 0px to 32px in 4px increments
+- Default value: 16px
+- Spacing is applied via CSS custom property `--nav-dropdown-spacing`
+
+### Technical
+
+**Block Extensions Enhancement:**
+- Added `dropdownSpacing` attribute to Navigation block (type: number, default: 16)
+- Implemented `RangeControl` component in navigation.js block extension
+- Added `elayne_add_nav_inline_style()` helper function to inject CSS custom properties into Navigation block output
+- Dynamic inline styles automatically applied to `<nav>` element via `render_block` filter
+- CSS variable fallback ensures backwards compatibility with existing navigation blocks",
+
 ## [2.2.2] - 2026-01-20
 
 ### Changed
