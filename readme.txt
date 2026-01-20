@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.3.0
+Stable tag: 2.3.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.3.1 - 01/20/26 =
+* CHANGED: Navigation UI rebranding - Updated all labels, CSS classes, and text domains from Moiraine to Elayne."
+
 
 = 2.3.0 - 01/20/26 =
 * ADDED: Navigation dropdown spacing control - Range slider (0-32px) to adjust gap between menu items and dropdowns on desktop.

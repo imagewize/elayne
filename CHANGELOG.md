@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.1] - 2026-01-20
+
+### Changed
+
+**Navigation UI Rebranding:**
+- Updated all UI labels and text strings from "Moiraine" to "Elayne" branding
+- Renamed CSS class from `moiraine-navigation-settings` to `elayne-navigation-settings`
+- Updated text domain from `moiraine` to `elayne` for all navigation extension strings",
+
 ## [2.3.0] - 2026-01-20
 
 ### Added
