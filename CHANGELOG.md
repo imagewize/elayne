@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.2] - 2026-01-20
+
+### Changed
+
+**Navigation Dropdown Spacing:**
+- Added consistent top margin to dropdown menus for better visual separation from parent items
+- Dropdowns now appear with 16px spacing below the parent menu item
+- Improves clickability and visual hierarchy in navigation menus",
+
 ## [2.2.1] - 2026-01-19
 
 ### Changed
