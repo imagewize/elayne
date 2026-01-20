@@ -53,15 +53,15 @@
                     createElement(
                         PanelBody,
                         {
-                            title: __('Moiraine Navigation', 'moiraine'),
+                            title: __('Elayne Navigation', 'elayne'),
                             initialOpen: false,
-                            className: "moiraine-navigation-settings"
+                            className: "elayne-navigation-settings"
                         },
                         createElement(
                             ToggleControl,
                             {
-                                label: __('Clickable parent items', 'moiraine'),
-                                help: __('Make parent menu items clickable links (click text = navigate, click chevron = toggle submenu)', 'moiraine'),
+                                label: __('Clickable parent items', 'elayne'),
+                                help: __('Make parent menu items clickable links (click text = navigate, click chevron = toggle submenu)', 'elayne'),
                                 checked: !!hasClickableParents,
                                 onChange: function() {
                                     setAttributes({ hasClickableParents: !hasClickableParents });
@@ -71,8 +71,8 @@
                         createElement(
                             ToggleControl,
                             {
-                                label: __('Improved chevron positioning', 'moiraine'),
-                                help: __('Better inline positioning of chevrons on mobile', 'moiraine'),
+                                label: __('Improved chevron positioning', 'elayne'),
+                                help: __('Better inline positioning of chevrons on mobile', 'elayne'),
                                 checked: !!hasImprovedChevrons,
                                 onChange: function() {
                                     setAttributes({ hasImprovedChevrons: !hasImprovedChevrons });
@@ -82,8 +82,8 @@
                         createElement(
                             RangeControl,
                             {
-                                label: __('Dropdown spacing', 'moiraine'),
-                                help: __('Gap between parent menu item and dropdown (desktop only)', 'moiraine'),
+                                label: __('Dropdown spacing', 'elayne'),
+                                help: __('Gap between parent menu item and dropdown (desktop only)', 'elayne'),
                                 value: dropdownSpacing,
                                 onChange: function(value) {
                                     setAttributes({ dropdownSpacing: value });
