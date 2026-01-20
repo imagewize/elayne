@@ -167,6 +167,7 @@ function elayne_filter_navigation_block_output( $block_content, $block ) {
 	$attributes            = $block['attrs'] ?? array();
 	$has_clickable_parents = $attributes['hasClickableParents'] ?? false;
 	$has_improved_chevrons = $attributes['hasImprovedChevrons'] ?? false;
+	$dropdown_spacing      = $attributes['dropdownSpacing'] ?? 16;
 
 	// Add CSS classes to the nav element.
 	if ( $has_clickable_parents ) {
@@ -176,6 +177,9 @@ function elayne_filter_navigation_block_output( $block_content, $block ) {
 	if ( $has_improved_chevrons ) {
 		$block_content = elayne_add_css_class_to_nav( $block_content, 'has-improved-chevrons' );
 	}
+
+	// Add CSS custom property for dropdown spacing.
+	$block_content = elayne_add_nav_inline_style( $block_content, '--nav-dropdown-spacing', $dropdown_spacing . 'px' );
 
 	return $block_content;
 }
@@ -195,6 +199,38 @@ function elayne_add_css_class_to_nav( $block_content, $class_name ) {
 		$block_content,
 		1
 	);
+	return $block_content;
+}
+
+/**
+ * Helper function to add inline style to navigation block.
+ *
+ * @param string $block_content The block content.
+ * @param string $property      The CSS property name.
+ * @param string $value         The CSS property value.
+ * @return string Modified block content.
+ */
+function elayne_add_nav_inline_style( $block_content, $property, $value ) {
+	// Check if style attribute already exists.
+	if ( preg_match( '/<nav\s+[^>]*style="([^"]*)"/', $block_content, $matches ) ) {
+		// Append to existing style.
+		$existing_style = $matches[1];
+		$new_style      = $existing_style . esc_attr( $property ) . ':' . esc_attr( $value ) . ';';
+		$block_content  = preg_replace(
+			'/<nav\s+([^>]*)style="[^"]*"/',
+			'<nav $1style="' . $new_style . '"',
+			$block_content,
+			1
+		);
+	} else {
+		// Add new style attribute.
+		$block_content = preg_replace(
+			'/<nav\s+/',
+			'<nav style="' . esc_attr( $property ) . ':' . esc_attr( $value ) . ';" ',
+			$block_content,
+			1
+		);
+	}
 	return $block_content;
 }
 

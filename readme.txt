@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.2.2
+Stable tag: 2.3.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.3.0 - 01/20/26 =
+* ADDED: Navigation dropdown spacing control - Range slider (0-32px) to adjust gap between menu items and dropdowns on desktop.
+* TECHNICAL: New dropdownSpacing attribute with RangeControl UI and CSS custom property injection via elayne_add_nav_inline_style() helper."
+
 
 = 2.2.2 - 01/20/26 =
 * CHANGED: Navigation dropdown spacing - Added 16px top margin to dropdown menus for better separation from parent items and improved visual hierarchy."

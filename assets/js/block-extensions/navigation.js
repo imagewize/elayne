@@ -4,7 +4,7 @@
     const { createHigherOrderComponent } = wp.compose;
     const { Fragment } = wp.element;
     const { InspectorControls } = wp.blockEditor;
-    const { PanelBody, ToggleControl } = wp.components;
+    const { PanelBody, ToggleControl, RangeControl } = wp.components;
     const { createElement } = wp.element;
 
     // Add attributes to the navigation block
@@ -24,6 +24,10 @@
                 hasImprovedChevrons: {
                     type: 'boolean',
                     default: false
+                },
+                dropdownSpacing: {
+                    type: 'number',
+                    default: 16
                 }
             }
         };
@@ -37,7 +41,7 @@
             }
 
             const { attributes, setAttributes } = props;
-            const { hasClickableParents, hasImprovedChevrons } = attributes;
+            const { hasClickableParents, hasImprovedChevrons, dropdownSpacing } = attributes;
 
             return createElement(
                 Fragment,
@@ -73,6 +77,20 @@
                                 onChange: function() {
                                     setAttributes({ hasImprovedChevrons: !hasImprovedChevrons });
                                 }
+                            }
+                        ),
+                        createElement(
+                            RangeControl,
+                            {
+                                label: __('Dropdown spacing', 'moiraine'),
+                                help: __('Gap between parent menu item and dropdown (desktop only)', 'moiraine'),
+                                value: dropdownSpacing,
+                                onChange: function(value) {
+                                    setAttributes({ dropdownSpacing: value });
+                                },
+                                min: 0,
+                                max: 32,
+                                step: 4
                             }
                         )
                     )
