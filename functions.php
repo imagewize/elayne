@@ -26,18 +26,13 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\elayne_setup' );
 /**
  * Register custom template part areas.
  *
+ * Note: The 'menu' area is registered by the Elayne Blocks plugin to ensure
+ * mega menu functionality works independently of the theme.
+ *
  * @param array $areas Existing template part areas.
  * @return array Modified template part areas.
  */
 function elayne_template_part_areas( $areas ) {
-	$areas[] = array(
-		'area'        => 'menu',
-		'area_tag'    => 'div',
-		'label'       => __( 'Menu', 'elayne' ),
-		'description' => __( 'The Menu template part area is used for mega menus and navigation templates.', 'elayne' ),
-		'icon'        => 'navigation',
-	);
-
 	$areas[] = array(
 		'area'        => 'sidebar',
 		'area_tag'    => 'aside',
