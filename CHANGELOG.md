@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.2] - 2026-01-21
+
+### Changed
+
+**Menu Template Part Area Registration:**
+- Removed menu template part area registration from theme
+- Menu area now registered by Elayne Blocks plugin instead
+- Ensures mega menu functionality works independently of the theme
+
+### Technical
+
+**Plugin Integration:**
+- Menu template part area (`area=menu`) moved to Elayne Blocks plugin for better separation of concerns
+- Added documentation comment explaining the architectural change
+- Sidebar template part area remains in theme",
+
 ## [2.3.1] - 2026-01-20
 
 ### Changed
