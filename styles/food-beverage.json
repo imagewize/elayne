@@ -1,0 +1,252 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Food & Beverage",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#034521",
+					"name": "Pine Green"
+				},
+				{
+					"slug": "primary-accent",
+					"color": "#169179",
+					"name": "Teal Deep"
+				},
+				{
+					"slug": "primary-alt",
+					"color": "#014521",
+					"name": "Header Green"
+				},
+				{
+					"slug": "primary-alt-accent",
+					"color": "#70ab8b",
+					"name": "Food Sharing Green"
+				},
+				{
+					"slug": "main",
+					"color": "#034521",
+					"name": "Main Text"
+				},
+				{
+					"slug": "main-accent",
+					"color": "#757575",
+					"name": "Secondary Text"
+				},
+				{
+					"slug": "base",
+					"color": "#ffffff",
+					"name": "Base White"
+				},
+				{
+					"slug": "secondary",
+					"color": "#f3efe4",
+					"name": "Light Cream"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#eadfbf",
+					"name": "Creamy Beige"
+				},
+				{
+					"slug": "border-light",
+					"color": "#dcb171",
+					"name": "Warm Gold"
+				},
+				{
+					"slug": "border-dark",
+					"color": "#484848",
+					"name": "Footer Gray"
+				}
+			],
+			"duotone": [
+				{
+					"colors": ["#014521", "#dcb171"],
+					"slug": "green-gold",
+					"name": "Green & Gold"
+				},
+				{
+					"colors": ["#034521", "#f3efe4"],
+					"slug": "pine-cream",
+					"name": "Pine & Cream"
+				},
+				{
+					"colors": ["#169179", "#eadfbf"],
+					"slug": "teal-beige",
+					"name": "Teal & Beige"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "warm-earth",
+					"gradient": "linear-gradient(135deg, #014521 0%, #169179 50%, #dcb171 100%)",
+					"name": "Warm Earth"
+				},
+				{
+					"slug": "cream-fade",
+					"gradient": "linear-gradient(180deg, #f3efe4 0%, #eadfbf 100%)",
+					"name": "Cream Fade"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Anton\", \"Mona Sans\", system-ui, sans-serif",
+					"slug": "heading",
+					"name": "Anton",
+					"fontFace": [
+						{
+							"fontFamily": "Anton",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/anton-v25-latin-regular.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Asap Condensed\", \"Open Sans\", system-ui, sans-serif",
+					"slug": "body",
+					"name": "Asap Condensed",
+					"fontFace": [
+						{
+							"fontFamily": "Asap Condensed",
+							"fontWeight": "200",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/asap-condensed-v17-latin-200.woff2"]
+						},
+						{
+							"fontFamily": "Asap Condensed",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/asap-condensed-v17-latin-300.woff2"]
+						},
+						{
+							"fontFamily": "Asap Condensed",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/asap-condensed-v17-latin-regular.woff2"]
+						},
+						{
+							"fontFamily": "Asap Condensed",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/asap-condensed-v17-latin-500.woff2"]
+						},
+						{
+							"fontFamily": "Asap Condensed",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/asap-condensed-v17-latin-600.woff2"]
+						},
+						{
+							"fontFamily": "Asap Condensed",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/asap-condensed-v17-latin-700.woff2"]
+						},
+						{
+							"fontFamily": "Asap Condensed",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/asap-condensed-v17-latin-800.woff2"]
+						},
+						{
+							"fontFamily": "Asap Condensed",
+							"fontWeight": "900",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/asap-condensed-v17-latin-900.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Inter\", system-ui, sans-serif",
+					"slug": "inter",
+					"name": "Inter",
+					"fontFace": [
+						{
+							"fontFamily": "Inter",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/Inter-VariableFont_opsz,wght.ttf"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Orbitron\", \"Mona Sans\", system-ui, sans-serif",
+					"slug": "decorative",
+					"name": "Orbitron",
+					"fontFace": [
+						{
+							"fontFamily": "Orbitron",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/fandb/Orbitron-VariableFont_wght.ttf"]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "var:preset|font-family|body",
+			"fontSize": "var:preset|font-size|medium",
+			"fontWeight": "400",
+			"lineHeight": "1.6"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|heading",
+					"fontWeight": "400",
+					"lineHeight": "1.2"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xx-large"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var:preset|font-size|x-large",
+					"fontFamily": "var:preset|font-family|decorative"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var:preset|font-size|large"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var:preset|color|border-light",
+					"text": "var:preset|color|primary-alt"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontWeight": "600"
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|primary-accent"
+					}
+				}
+			}
+		}
+	}
+}
