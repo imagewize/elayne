@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.3.2
+Stable tag: 2.4.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.4.0 - 02/03/26 =
+* ADDED: Food & Beverage style variation with warm earth-toned palette (Pine Green, Teal Deep, Warm Gold, Creamy Beige) and custom fonts (Anton, Asap Condensed, Orbitron, Inter).
+* ADDED: Drinks Menu Grid pattern - Four-section responsive menu with color-coded categories (Coffee/Tea, Wines, Beers, Snacks) and full-width background image.
+* ADDED: Food & Beverage pattern category (elayne/food-beverage) for restaurant/cafe-specific content.
+* TECHNICAL: Added 12 font files (Anton, Asap Condensed 8 weights, Inter variable, Orbitron variable) with font-display swap optimization."
+
 
 = 2.3.2 - 01/21/26 =
 * CHANGED: Menu template part area - Now registered by Elayne Blocks plugin instead of theme for better independence.

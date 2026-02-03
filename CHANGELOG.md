@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.0] - 2026-02-03
+
+### Added
+
+**Food & Beverage Style Variation:**
+- New "Food & Beverage" style variation for restaurant, cafe, and bar websites
+- Warm earth-toned color palette: Pine Green (#034521), Teal Deep (#169179), Warm Gold (#dcb171), Creamy Beige (#eadfbf)
+- Custom typography: Anton (headings), Asap Condensed (body), Orbitron (decorative), Inter (utility)
+- Duotone filters: Green & Gold, Pine & Cream, Teal & Beige
+- Gradient presets: Warm Earth, Cream Fade
+
+**Drinks Menu Pattern:**
+- Four-section responsive drinks menu grid (Coffee/Tea, Wines, Beers, Snacks)
+- Color-coded category cards with distinct backgrounds
+- Full-width cover block with background image overlay
+- Responsive grid layout adapts to mobile, tablet, and desktop
+- Pre-styled menu items with prices and country/origin labels
+
+**Pattern Category:**
+- New "Food & Beverage" pattern category (`elayne/food-beverage`) for industry-specific content
+
+### Technical
+
+**Font Assets:**
+- Added 12 new font files for Food & Beverage style:
+  - Anton regular (WOFF2)
+  - Asap Condensed (8 weights: 200-900)
+  - Inter variable font (TTF)
+  - Orbitron variable font (TTF)
+- All fonts optimized with `font-display: swap` for performance",
+
 ## [2.3.2] - 2026-01-21
 
 ### Changed
