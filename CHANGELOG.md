@@ -28,6 +28,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Pattern Category:**
 - New "Food & Beverage" pattern category (`elayne/food-beverage`) for industry-specific content
 
+**F&B Header Pattern:**
+- Custom header pattern (`header-fandb.php`) designed for Food & Beverage sites
+- Site logo/title on left, social media links on right
+- Responsive layout optimized for restaurant and cafe websites
+- Instagram and Facebook integration with custom SVG icons
+
+**Social Media Icons:**
+- Added Instagram and Facebook SVG icons (default and F&B variants)
+- F&B variants use Pine Green color (#034521) matching the style
+- Default variants use `currentColor` for theme flexibility
+- 24x24px viewBox for consistent sizing across patterns
+
+### Changed
+
+**Drinks Menu Pattern:**
+- Enhanced blockGap spacing for improved visual hierarchy
+- Refined padding and margins for better readability
+- Improved card layouts for menu sections
+- Better responsive behavior on mobile devices
+
 ### Technical
 
 **Font Assets:**

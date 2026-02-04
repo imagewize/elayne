@@ -7,27 +7,27 @@
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#034521",
-					"name": "Pine Green"
+					"color": "#046b3c",
+					"name": "Emerald"
 				},
 				{
 					"slug": "primary-accent",
-					"color": "#169179",
-					"name": "Teal Deep"
+					"color": "#18a58a",
+					"name": "Seafoam"
 				},
 				{
 					"slug": "primary-alt",
-					"color": "#014521",
-					"name": "Header Green"
+					"color": "#013d1a",
+					"name": "Dark Moss"
 				},
 				{
 					"slug": "primary-alt-accent",
-					"color": "#70ab8b",
-					"name": "Food Sharing Green"
+					"color": "#6fb591",
+					"name": "Sage Green"
 				},
 				{
 					"slug": "main",
-					"color": "#034521",
+					"color": "#046b3c",
 					"name": "Main Text"
 				},
 				{
@@ -52,36 +52,41 @@
 				},
 				{
 					"slug": "border-light",
-					"color": "#dcb171",
-					"name": "Warm Gold"
+					"color": "#d9b76a",
+					"name": "Harvest Gold"
 				},
 				{
 					"slug": "border-dark",
 					"color": "#484848",
-					"name": "Footer Gray"
+					"name": "Charcoal Gray"
+				},
+				{
+					"slug": "contact-bg",
+					"color": "#afdcc5",
+					"name": "Mint Background"
 				}
 			],
 			"duotone": [
 				{
-					"colors": ["#014521", "#dcb171"],
-					"slug": "green-gold",
-					"name": "Green & Gold"
+					"colors": ["#013d1a", "#d9b76a"],
+					"slug": "moss-gold",
+					"name": "Moss & Gold"
 				},
 				{
-					"colors": ["#034521", "#f3efe4"],
-					"slug": "pine-cream",
-					"name": "Pine & Cream"
+					"colors": ["#046b3c", "#f3efe4"],
+					"slug": "emerald-cream",
+					"name": "Emerald & Cream"
 				},
 				{
-					"colors": ["#169179", "#eadfbf"],
-					"slug": "teal-beige",
-					"name": "Teal & Beige"
+					"colors": ["#18a58a", "#eadfbf"],
+					"slug": "seafoam-beige",
+					"name": "Seafoam & Beige"
 				}
 			],
 			"gradients": [
 				{
 					"slug": "warm-earth",
-					"gradient": "linear-gradient(135deg, #014521 0%, #169179 50%, #dcb171 100%)",
+					"gradient": "linear-gradient(135deg, #013d1a 0%, #18a58a 50%, #d9b76a 100%)",
 					"name": "Warm Earth"
 				},
 				{
@@ -202,6 +207,10 @@
 		}
 	},
 	"styles": {
+		"color": {
+			"background": "var:preset|color|secondary",
+			"text": "var:preset|color|main"
+		},
 		"typography": {
 			"fontFamily": "var:preset|font-family|body",
 			"fontSize": "var:preset|font-size|medium",
