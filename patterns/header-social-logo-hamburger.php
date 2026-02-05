@@ -1,12 +1,13 @@
 <?php
 /**
- * Title: F&B Header with Social Icons
- * Slug: elayne/header-fandb
- * Description: Restaurant/cafe header with left social icons, centered logo, and hamburger menu
- * Categories: elayne/food-beverage
- * Keywords: header, navigation, menu, logo, social, restaurant, cafe, bar
+ * Title: Header with Social, Logo, and Hamburger (Dark)
+ * Slug: elayne/header-social-logo-hamburger
+ * Description: Clean dark header with left social icons, centered logo, and hamburger menu
+ * Categories: header
+ * Keywords: header, navigation, menu, logo, social, centered, hamburger, dark
  * Block Types: core/template-part/header
  * Viewport Width: 1200
+ * Inserter: true
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"primary-alt","textColor":"base","layout":{"type":"constrained"}} -->
