@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom typography: Anton (headings), Asap Condensed (body), Orbitron (decorative), Inter (utility)
 - Duotone filters: Green & Gold, Pine & Cream, Teal & Beige
 - Gradient presets: Warm Earth, Cream Fade
+- Global background and text colors: Secondary (Light Cream) background with Main text color
 
 **Drinks Menu Pattern:**
 - Four-section responsive drinks menu grid (Coffee/Tea, Wines, Beers, Snacks)
@@ -28,17 +29,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Pattern Category:**
 - New "Food & Beverage" pattern category (`elayne/food-beverage`) for industry-specific content
 
-**F&B Header Pattern:**
-- Custom header pattern (`header-fandb.php`) designed for Food & Beverage sites
-- Site logo/title on left, social media links on right
+**F&B Header Patterns:**
+- Three new header patterns designed for Food & Beverage sites:
+  - `header-social-logo-hamburger` (dark) - Dark background with Pine Green accents
+  - `header-social-logo-hamburger-light` - Light background with border bottom
+  - Original F&B header with top bar layout
+- Left social media icons, centered logo, hamburger menu on right
 - Responsive layout optimized for restaurant and cafe websites
 - Instagram and Facebook integration with custom SVG icons
+
+**F&B Blog Pattern:**
+- `blog-post-columns-fandb` - Three-column blog grid with Light Cream (secondary) background
+- Optimized for Food & Beverage content with brand colors
+- Responsive grid layout (3→2→1 columns)
 
 **Social Media Icons:**
 - Added Instagram and Facebook SVG icons (default and F&B variants)
 - F&B variants use Pine Green color (#034521) matching the style
 - Default variants use `currentColor` for theme flexibility
 - 24x24px viewBox for consistent sizing across patterns
+
+**Food Menu Pattern:**
+- `menu-food-grid.php` - Four-section responsive food menu (Appetizers, Mains, Desserts, Sides)
+- Color-coded sections with distinct backgrounds (Light Cream, Sage Green, Dark Moss, Creamy Beige)
+- Menu item descriptions with pricing and gold separators
+- Responsive grid layout (4→3→2→1 columns, 19rem minimum width)
+
+**Daily Specials Pattern:**
+- `menu-daily-specials.php` - Featured daily specials with large dish images
+- 2-column layout with alternating image placement
+- Chef's notes and detailed descriptions
+- Price and availability indicators
+- Full-width tertiary background for visual separation
+
+**Menu Pricing Table Pattern:**
+- `menu-pricing-table.php` - Simple, elegant pricing list for wine lists and quick menus
+- Category headers with decorative gold underlines
+- Item descriptions with dot separators
+- Clean typography hierarchy optimized for readability
+- Constrained 700px width for optimal scanning
 
 ### Changed
 
@@ -48,6 +77,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved card layouts for menu sections
 - Better responsive behavior on mobile devices
 
+**Page Template (Centered):**
+- Removed horizontal padding from main wrapper to allow full-width patterns to extend edge-to-edge
+- Maintains vertical padding (top only) for proper content spacing
+
 ### Technical
 
 **Font Assets:**
@@ -56,7 +89,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Asap Condensed (8 weights: 200-900)
   - Inter variable font (TTF)
   - Orbitron variable font (TTF)
-- All fonts optimized with `font-display: swap` for performance",
+- All fonts optimized with `font-display: swap` for performance
+
+**Template Part Spacing:**
+- Added CSS fix to remove global blockGap spacing for template parts (header/footer)
+- Prevents unwanted gaps between full-width patterns and template parts
+- Allows full-width patterns with background colors to be flush with header/footer",
 
 ## [2.3.2] - 2026-01-21
 

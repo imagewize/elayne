@@ -458,3 +458,13 @@ figure.is-avatar,
 #wp--skip-link--target {
     scroll-margin-top: 20px;
 }
+
+/* Remove global blockGap spacing for template parts (header/footer)
+ * theme.json sets blockGap: "1.2rem" which adds margin-block-start: 1.2rem to all direct children of .wp-site-blocks
+ * This creates unwanted gaps between full-width patterns and footer/header template parts
+ * Introduced in v2.0.0 pattern refactor (commit b08fd39c) for vertical rhythm between content sections
+ * This override allows full-width patterns with background colors to be flush with template parts
+ */
+.wp-site-blocks > .wp-block-template-part {
+    margin-block-start: 0;
+}

@@ -164,14 +164,20 @@ Elayne includes custom image sizes optimized for different layouts:
 == Changelog ==
 
 = 2.4.0 - 02/03/26 =
-* ADDED: Food & Beverage style variation with warm earth-toned palette (Pine Green, Teal Deep, Warm Gold, Creamy Beige) and custom fonts (Anton, Asap Condensed, Orbitron, Inter).
-* ADDED: Drinks Menu Grid pattern - Four-section responsive menu with color-coded categories (Coffee/Tea, Wines, Beers, Snacks) and full-width background image.
+* ADDED: Food & Beverage style variation with warm earth-toned palette (Pine Green, Teal Deep, Warm Gold, Creamy Beige), custom fonts (Anton, Asap Condensed, Orbitron, Inter), and global Light Cream background.
 * ADDED: Food & Beverage pattern category (elayne/food-beverage) for restaurant/cafe-specific content.
-* ADDED: F&B Header pattern (header-fandb.php) with site logo/title and social media links (Instagram, Facebook).
-* ADDED: Social media icon assets - Instagram and Facebook SVG icons in default and F&B color variants.
+* ADDED: Drinks Menu Grid pattern - Four-section responsive menu with color-coded categories (Coffee/Tea, Wines, Beers, Snacks) and full-width background image.
+* ADDED: Food Menu Grid pattern - Four-section responsive food menu (Appetizers, Mains, Desserts, Sides) with item descriptions, pricing, and color-coded sections.
+* ADDED: Daily Specials Menu pattern - Featured daily specials with large dish images, chef's notes, 2-column layout with alternating image placement, and tertiary background.
+* ADDED: Menu Pricing Table pattern - Simple, elegant pricing list perfect for wine lists and quick menus with category headers, decorative gold underlines, and constrained 700px width.
+* ADDED: Three F&B Header patterns - header-social-logo-hamburger (dark), header-social-logo-hamburger-light, and original top bar layout with left social icons, centered logo, and hamburger menu.
+* ADDED: Blog Post Columns (F&B) pattern - Three-column blog grid with Light Cream background optimized for F&B content.
+* ADDED: Social media icon assets - Instagram and Facebook SVG icons in default and F&B color variants (Pine Green).
 * CHANGED: Drinks Menu pattern - Enhanced blockGap spacing, refined padding/margins for better readability and responsive behavior.
+* CHANGED: Page Template (Centered) - Removed horizontal padding to allow full-width patterns to extend edge-to-edge.
 * TECHNICAL: Added 12 font files (Anton, Asap Condensed 8 weights, Inter variable, Orbitron variable) with font-display swap optimization.
-* TECHNICAL: Added 4 social media SVG icons (icon-instagram.svg, icon-instagram-fandb.svg, icon-facebook.svg, icon-facebook-fandb.svg) with 24x24px viewBox."
+* TECHNICAL: Added 4 social media SVG icons (icon-instagram.svg, icon-instagram-fandb.svg, icon-facebook.svg, icon-facebook-fandb.svg) with 24x24px viewBox.
+* TECHNICAL: CSS fix to remove global blockGap spacing for template parts, allowing flush full-width patterns."
 
 
 = 2.3.2 - 01/21/26 =
