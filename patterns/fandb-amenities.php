@@ -22,9 +22,9 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","lineHeight":"1"}},"textColor":"border-light"} -->
-			<p class="has-text-align-center has-border-light-color has-text-color" style="font-size:3rem;line-height:1">🅿️</p>
-			<!-- /wp:paragraph -->
+			<!-- wp:image {"align":"center","width":"48px","height":"48px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+			<figure class="wp-block-image aligncenter size-full is-style-default" style="width:48px;height:48px"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/icon-parking.svg" alt="" style="width:48px;height:48px"/></figure>
+			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"primary","fontFamily":"body"} -->
 			<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-body-font-family" style="font-size:1.5rem;font-weight:600">Free Parking</h3>
@@ -40,9 +40,9 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","lineHeight":"1"}},"textColor":"border-light"} -->
-			<p class="has-text-align-center has-border-light-color has-text-color" style="font-size:3rem;line-height:1">☀️</p>
-			<!-- /wp:paragraph -->
+			<!-- wp:image {"align":"center","width":"48px","height":"48px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+			<figure class="wp-block-image aligncenter size-full is-style-default" style="width:48px;height:48px"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/icon-outdoor.svg" alt="" style="width:48px;height:48px"/></figure>
+			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"primary","fontFamily":"body"} -->
 			<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-body-font-family" style="font-size:1.5rem;font-weight:600">Outdoor Seating</h3>
@@ -58,9 +58,9 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","lineHeight":"1"}},"textColor":"border-light"} -->
-			<p class="has-text-align-center has-border-light-color has-text-color" style="font-size:3rem;line-height:1">📶</p>
-			<!-- /wp:paragraph -->
+			<!-- wp:image {"align":"center","width":"48px","height":"48px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+			<figure class="wp-block-image aligncenter size-full is-style-default" style="width:48px;height:48px"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/icon-wifi.svg" alt="" style="width:48px;height:48px"/></figure>
+			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"primary","fontFamily":"body"} -->
 			<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-body-font-family" style="font-size:1.5rem;font-weight:600">Free WiFi</h3>
@@ -76,9 +76,9 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","lineHeight":"1"}},"textColor":"border-light"} -->
-			<p class="has-text-align-center has-border-light-color has-text-color" style="font-size:3rem;line-height:1">🎉</p>
-			<!-- /wp:paragraph -->
+			<!-- wp:image {"align":"center","width":"48px","height":"48px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+			<figure class="wp-block-image aligncenter size-full is-style-default" style="width:48px;height:48px"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/icon-events.svg" alt="" style="width:48px;height:48px"/></figure>
+			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"primary","fontFamily":"body"} -->
 			<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-body-font-family" style="font-size:1.5rem;font-weight:600">Private Events</h3>
@@ -94,9 +94,9 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","lineHeight":"1"}},"textColor":"border-light"} -->
-			<p class="has-text-align-center has-border-light-color has-text-color" style="font-size:3rem;line-height:1">♿</p>
-			<!-- /wp:paragraph -->
+			<!-- wp:image {"align":"center","width":"48px","height":"48px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+			<figure class="wp-block-image aligncenter size-full is-style-default" style="width:48px;height:48px"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/icon-accessible.svg" alt="" style="width:48px;height:48px"/></figure>
+			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"primary","fontFamily":"body"} -->
 			<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-body-font-family" style="font-size:1.5rem;font-weight:600">Wheelchair Accessible</h3>
@@ -112,9 +112,9 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","lineHeight":"1"}},"textColor":"border-light"} -->
-			<p class="has-text-align-center has-border-light-color has-text-color" style="font-size:3rem;line-height:1">🍷</p>
-			<!-- /wp:paragraph -->
+			<!-- wp:image {"align":"center","width":"48px","height":"48px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+			<figure class="wp-block-image aligncenter size-full is-style-default" style="width:48px;height:48px"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/icon-bar.svg" alt="" style="width:48px;height:48px"/></figure>
+			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"primary","fontFamily":"body"} -->
 			<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-body-font-family" style="font-size:1.5rem;font-weight:600">Full Bar</h3>
