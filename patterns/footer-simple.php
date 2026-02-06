@@ -16,7 +16,7 @@
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
 	<div class="wp-block-group alignwide">
 		<!-- wp:paragraph {"fontSize":"small"} -->
-		<p class="has-small-font-size">© <?php echo esc_html( date( 'Y' ) ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></p>
+		<p class="has-small-font-size">© <?php echo esc_html( date( 'Y' ) ); ?> Powered by WordPress and <a href="https://imagewize.com/resources/elayne-theme">Elayne</a></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:paragraph {"fontSize":"small"} -->
