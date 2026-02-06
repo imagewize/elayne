@@ -85,6 +85,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `cafe-terrace-hero.webp` - Outdoor cafe seating for hero sections
 - Added `cafe-interior-about.webp` - Cozy cafe interior for about sections
 - Added `chef-profile.webp` - Professional chef portrait for profile patterns
+- Added 6 amenity SVG icons for restaurant features:
+  - `icon-parking.svg` - Parking amenity icon
+  - `icon-outdoor.svg` - Outdoor seating icon
+  - `icon-wifi.svg` - WiFi amenity icon
+  - `icon-events.svg` - Private events icon
+  - `icon-accessible.svg` - Wheelchair accessibility icon
+  - `icon-bar.svg` - Bar/beverage service icon
 
 ### Changed
 

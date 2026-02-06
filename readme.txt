@@ -175,7 +175,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: Social media icon assets - Instagram and Facebook SVG icons in default and F&B color variants (Pine Green).
 * ADDED: F&B Hero patterns - hero-fandb-cover-fullwidth (full-width cover hero with overlay) and hero-fandb-split-layout (split-screen layout with image and content).
 * ADDED: F&B Content patterns - fandb-about-intro, fandb-amenities, fandb-chef-profile, fandb-hours-location, and fandb-testimonials-food for complete restaurant/cafe site building.
-* ADDED: F&B Image assets - cafe-terrace-hero.webp, cafe-interior-about.webp, and chef-profile.webp for pattern demonstrations.
+* ADDED: F&B Image assets - cafe-terrace-hero.webp, cafe-interior-about.webp, chef-profile.webp, and 6 amenity SVG icons (parking, outdoor seating, WiFi, events, accessibility, bar) for pattern demonstrations.
 * CHANGED: Drinks Menu pattern - Enhanced blockGap spacing, refined padding/margins for better readability and responsive behavior.
 * CHANGED: Page Template (Centered) - Removed horizontal padding to allow full-width patterns to extend edge-to-edge.
 * CHANGED: Footer patterns - Updated footer-simple, footer-standard, and footer-with-nav-columns to use Elayne branding with proper WordPress.org theme directory link.
