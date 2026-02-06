@@ -173,8 +173,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: Three F&B Header patterns - header-social-logo-hamburger (dark), header-social-logo-hamburger-light, and original top bar layout with left social icons, centered logo, and hamburger menu.
 * ADDED: Blog Post Columns (F&B) pattern - Three-column blog grid with Light Cream background optimized for F&B content.
 * ADDED: Social media icon assets - Instagram and Facebook SVG icons in default and F&B color variants (Pine Green).
+* ADDED: F&B Hero patterns - hero-fandb-cover-fullwidth (full-width cover hero with overlay) and hero-fandb-split-layout (split-screen layout with image and content).
+* ADDED: F&B Content patterns - fandb-about-intro, fandb-amenities, fandb-chef-profile, fandb-hours-location, and fandb-testimonials-food for complete restaurant/cafe site building.
+* ADDED: F&B Image assets - cafe-terrace-hero.webp, cafe-interior-about.webp, and chef-profile.webp for pattern demonstrations.
 * CHANGED: Drinks Menu pattern - Enhanced blockGap spacing, refined padding/margins for better readability and responsive behavior.
 * CHANGED: Page Template (Centered) - Removed horizontal padding to allow full-width patterns to extend edge-to-edge.
+* CHANGED: Footer patterns - Updated footer-simple, footer-standard, and footer-with-nav-columns to use Elayne branding with proper WordPress.org theme directory link.
 * TECHNICAL: Added 12 font files (Anton, Asap Condensed 8 weights, Inter variable, Orbitron variable) with font-display swap optimization.
 * TECHNICAL: Added 4 social media SVG icons (icon-instagram.svg, icon-instagram-fandb.svg, icon-facebook.svg, icon-facebook-fandb.svg) with 24x24px viewBox.
 * TECHNICAL: CSS fix to remove global blockGap spacing for template parts, allowing flush full-width patterns."
@@ -825,6 +829,50 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Attribution:** Not required (Pexels License)
 - **Description:** Boats on calm river at dusk, 4:3 banner for legal practice area headers (800×600)
 - **Note:** Same source image as banner-boats-16x9.webp, cropped to different aspect ratio
+
+---
+
+## Food & Beverage Theme Images (Pexels License - GPL-Compatible)
+
+### fandb/cafe-terrace-hero.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/charming-outdoor-cafe-seating-in-lage-vuursche-33239717/)
+- **Title:** Charming Outdoor Cafe Seating in Lage Vuursche
+- **Photographer:** [Haberdoedas](https://www.pexels.com/@haberdoedas-473348754/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Outdoor cafe terrace seating with restaurant in background, perfect for F&B hero sections
+
+### fandb/cafe-interior-about.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/cozy-outdoor-cafe-setting-in-lage-vuursche-33239715/)
+- **Title:** Cozy Outdoor Cafe Setting in Lage Vuursche
+- **Photographer:** [Haberdoedas](https://www.pexels.com/@haberdoedas-473348754/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Cozy outdoor cafe seating area with warm lighting, ideal for about sections and content blocks
+
+### fandb/pan-seared-halibut.webp
+- **Source:** ChatGPT (AI-generated, user-provided)
+- **Title:** Pan-seared halibut with garnish
+- **Photographer:** ChatGPT (AI-generated)
+- **License:** User-provided (AI-generated via ChatGPT)
+- **Attribution:** Not required (user-provided)
+- **Description:** AI-generated gourmet plated dish for daily specials pattern
+
+### fandb/placeholder-800x600.webp
+- **Source:** ChatGPT (AI-generated, user-provided)
+- **Title:** Menu placeholder image
+- **Photographer:** ChatGPT (AI-generated)
+- **License:** User-provided (AI-generated via ChatGPT)
+- **Attribution:** Not required (user-provided)
+- **Description:** AI-generated placeholder for menu pattern demonstrations
+
+### fandb/chef-profile.webp
+- **Source:** [Pexels - A Chef Cooking in the Kitchen](https://www.pexels.com/photo/a-chef-cooking-in-the-kitchen-8629106/)
+- **Title:** A Chef Cooking in the Kitchen
+- **Photographer:** RDNE Stock project
+- **License:** [Pexels License](https://www.pexels.com/license/) (Free to use, no attribution required)
+- **Attribution:** Not required (Pexels Free License)
+- **Description:** Professional chef portrait for F&B chef profile pattern
 
 ---
 

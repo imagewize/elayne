@@ -69,6 +69,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Clean typography hierarchy optimized for readability
 - Constrained 700px width for optimal scanning
 
+**F&B Hero Patterns:**
+- `hero-fandb-cover-fullwidth` - Full-width hero with large cover image, overlay, and centered content
+- `hero-fandb-split-layout` - Split-screen hero with image on left, content on right
+- Both patterns optimized for restaurant and cafe websites with F&B color palette
+
+**F&B Content Patterns:**
+- `fandb-about-intro` - About section with image and text introduction
+- `fandb-amenities` - Grid layout showcasing restaurant amenities and features
+- `fandb-chef-profile` - Chef profile section with photo and biography
+- `fandb-hours-location` - Operating hours and location information display
+- `fandb-testimonials-food` - Testimonials section specifically styled for food/beverage businesses
+
+**F&B Image Assets:**
+- Added `cafe-terrace-hero.webp` - Outdoor cafe seating for hero sections
+- Added `cafe-interior-about.webp` - Cozy cafe interior for about sections
+- Added `chef-profile.webp` - Professional chef portrait for profile patterns
+
 ### Changed
 
 **Drinks Menu Pattern:**
@@ -80,6 +97,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Page Template (Centered):**
 - Removed horizontal padding from main wrapper to allow full-width patterns to extend edge-to-edge
 - Maintains vertical padding (top only) for proper content spacing
+
+**Footer Patterns:**
+- Updated `footer-simple`, `footer-standard`, and `footer-with-nav-columns` to use Elayne branding
+- Changed theme link from Moiraine to Elayne with proper attribution
+- WordPress.org theme directory link updated to reflect Elayne theme
 
 ### Technical
 
