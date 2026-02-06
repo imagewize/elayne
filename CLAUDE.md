@@ -659,8 +659,6 @@ These categories appear in the WordPress block pattern inserter, making it easy 
 - ✅ Correct: `services-feature-cards.php`, `shop-overview-three-columns.php`
 - ✅ Fixed: `stats-list.php`, `stats-showcase.php`, `team-grid.php` (December 2025 update)
 
-**See:** [docs/elayne/RESPONSIVENESS.md](../../docs/elayne/RESPONSIVENESS.md) for complete analysis
-
 **Pattern Image Guidelines:**
 - **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
 - **NEVER use external URLs** (Unsplash, CDNs, etc.) - all images must be local files

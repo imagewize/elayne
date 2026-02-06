@@ -446,7 +446,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: New "Events" category (elayne/events) for event-related patterns.
 * ADDED: event-upcoming-grid pattern - Responsive 3-column event grid with date badges, time, location, and registration buttons.
 * ADDED: Calendar-style date display (month, day, weekday), event type badges (Online/In-person), and dual CTA buttons.
-* CHANGED: Moved theme documentation files from demo/web/app/themes/elayne/docs/ to docs/elayne/ for better project organization.
+* CHANGED: Reorganized theme documentation files for better project structure.
 * TECHNICAL: Pattern count increased from 20 to 21 original patterns.
 * TECHNICAL: Event pattern features responsive grid layout with minimumColumnWidth: 20rem and full translation support.
 

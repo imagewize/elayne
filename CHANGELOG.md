@@ -1185,10 +1185,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed - Documentation organization
 
-- Moved theme documentation files from `demo/web/app/themes/elayne/docs/` to `docs/elayne/`
-  - Follows same pattern as other theme documentation in project root
-  - Includes pattern analysis, implementation summaries, and planning documents
-  - Better organization for project-wide documentation access
+- Reorganized theme documentation files for better project structure
+  - Improved organization for development and planning documents
+  - Better separation between theme files and project documentation
 
 ### Technical
 
