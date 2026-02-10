@@ -32,7 +32,7 @@
 
 		<!-- wp:site-logo {"width":112,"shouldSyncIcon":false,"className":"is-style-default"} /-->
 
-		<!-- wp:navigation {"overlayMenu":"always","overlayBackgroundColor":"base","overlayTextColor":"main","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+		<!-- wp:navigation {"overlayMenu":"always","openSubmenusOnClick":true,"hasClickableParents":true,"hasImprovedChevrons":true,"overlayBackgroundColor":"base","overlayTextColor":"main","className":"has-right-aligned-overlay","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 			<!-- wp:navigation-link {"label":"Home","url":"/"} /-->
 			<!-- wp:navigation-link {"label":"Menu","url":"/menu"} /-->
 			<!-- wp:navigation-link {"label":"Events","url":"/events"} /-->
