@@ -4,12 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Important Git Commit Guidelines
 
-**Demo Site Theme - NO Claude Attribution**
-- This is the Elayne theme for the demo site (`demo/web/app/themes/elayne/`)
-- Do NOT include Claude Code attribution in commits
+**NO Claude Attribution in Any Commits**
+- Do NOT include Claude Code attribution in any commits
 - Do NOT add "🤖 Generated with Claude Code" or "Co-Authored-By: Claude" footers
-- Keep all commits professional and attribution-free for client-facing demo content
-- This applies to ALL changes in this theme directory
+- Keep all commits professional and attribution-free
+- This applies to ALL files and directories in the entire repository
+- Follow standard git commit message format
+
+**Changelog and Readme Updates**
+- When updating `CHANGELOG.md` or `readme.txt`, do NOT describe changes as "Changed" unless the file already existed in the main branch
+- New changelog entries are ADDITIONS, not changes to existing files
+- This convention ensures accurate git commit messages that reflect the nature of the work
 
 ## Project Overview
 
@@ -127,6 +132,47 @@ Config::define('WP_DEVELOPMENT_MODE', 'theme');
 - `''` - Development mode disabled
 
 **Important:** Disable in production environments for optimal performance.
+
+### Style Variation Changes (theme.json and Style Variations)
+
+**IMPORTANT**: WordPress aggressively caches compiled global styles from `theme.json` and style variation files (e.g., `styles/food-beverage.json`). Changes to these files require forcing WordPress to regenerate the compiled CSS.
+
+**When style variation changes don't appear:**
+
+1. **Clear WordPress cache:**
+   ```bash
+   # From Trellis VM or host
+   trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp cache flush --path=web/wp
+   ```
+
+2. **If cache flush doesn't work, switch style variations:**
+   - Visit WordPress admin: `http://demo.imagewize.test/wp-admin/site-editor.php`
+   - Open **Styles** → **Browse styles**
+   - Switch to a different style variation (e.g., "Default")
+   - Switch back to your original variation (e.g., "Food & Beverage")
+   - This forces WordPress to recompile global styles from the updated JSON files
+
+**Why this is needed:**
+- WordPress stores compiled global styles in the `wp_global_styles` custom post type
+- File changes are synced immediately via Lima, but WordPress doesn't auto-detect JSON changes
+- Switching style variations triggers a fresh compilation from the theme JSON files
+- `WP_DEVELOPMENT_MODE` helps but doesn't always prevent style variation caching
+
+**Alternative method (destructive - only if switching styles doesn't work):**
+```bash
+# Delete global styles post to force complete regeneration
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- bash -c "
+wp post list --post_type=wp_global_styles --format=ids --path=web/wp | \
+xargs -n1 wp post delete --force --path=web/wp && \
+wp cache flush --path=web/wp
+"
+```
+
+**Note**: This issue affects changes to:
+- Root-level `theme.json` file
+- Style variation files in `styles/` directory (e.g., `food-beverage.json`)
+- Global typography, colors, spacing settings
+- Any `styles.*` properties in theme.json files
 
 ### CRITICAL: Pattern URL Behavior and Database Content
 
@@ -659,6 +705,31 @@ These categories appear in the WordPress block pattern inserter, making it easy 
 - ✅ Correct: `services-feature-cards.php`, `shop-overview-three-columns.php`
 - ✅ Fixed: `stats-list.php`, `stats-showcase.php`, `team-grid.php` (December 2025 update)
 
+**Pattern Icon Guidelines (CRITICAL):**
+- **NEVER use emoji icons** (🅿️, 🍽️, 📶, ♿, 🎉, 🍷, etc.) in patterns - they render inconsistently across platforms and browsers
+- **ALWAYS use custom SVG icons** instead for visual consistency and professional appearance
+- **Store SVG icons** in `patterns/images/` or appropriate subdirectory (e.g., `patterns/images/fandb/icon-parking.svg`)
+- **Why avoid emojis?**
+  - Different rendering across operating systems (iOS, Android, Windows, macOS)
+  - No design control (color, size, stroke)
+  - Poor accessibility (screen reader inconsistency)
+  - Not brand-aligned
+- **Example - WRONG (emoji icons):**
+  ```html
+  <p>🅿️ Free Parking Available</p>
+  <p>📶 Free WiFi</p>
+  ```
+- **Example - CORRECT (SVG icons):**
+  ```html
+  <!-- wp:image {"width":"48px","height":"48px","sizeSlug":"full"} -->
+  <figure class="wp-block-image size-full is-resized">
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/patterns/images/fandb/icon-parking.svg" alt="" style="width:48px;height:48px"/>
+  </figure>
+  <!-- /wp:image -->
+  <p>Free Parking Available</p>
+  ```
+- **Reference**: See `fandb-amenities.php` pattern for proper SVG icon implementation
+
 **Pattern Image Guidelines:**
 - **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
 - **NEVER use external URLs** (Unsplash, CDNs, etc.) - all images must be local files
@@ -688,6 +759,26 @@ These categories appear in the WordPress block pattern inserter, making it easy 
   - Use appropriate dimensions for intended use (avoid oversized images)
 - Hardcoded IDs cause performance issues: database queries for non-existent media, blinking/flashing effects, console errors, and validation failures
 - Removing hardcoded IDs ensures patterns work consistently across all WordPress installations
+
+**Image Block Syntax (CRITICAL):**
+- **Correct block comment attribute order matters** for proper rendering
+- **The `is-resized` class is required** when using width/height attributes in JSON
+- **Wrong example** (causes images not to load):
+  ```html
+  <!-- wp:image {"align":"center","width":"48px","height":"48px","sizeSlug":"full"} -->
+  <figure class="wp-block-image aligncenter size-full is-style-default" style="width:48px;height:48px">
+  ```
+- **Correct example** (images load properly):
+  ```html
+  <!-- wp:image {"width":"48px","height":"48px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+  <figure class="wp-block-image aligncenter size-full is-resized is-style-default">
+  ```
+- **Key differences**:
+  - `align` attribute comes AFTER `width` and `height` in the JSON
+  - `<figure>` must have `is-resized` class when width/height are specified
+  - NO inline styles on `<figure>` tag (only on `<img>` tag)
+  - Inline styles on `<img>` remain: `<img src="..." style="width:48px;height:48px"/>`
+- **Reference**: See fixed pattern `fandb-amenities.php` (Feb 2026)
 
 **Full-Width Pattern Layout (CRITICAL):**
 - **Problem**: Full-width patterns (`align="full"`) with constrained layout on the outer group cause horizontal gaps/overflow
@@ -801,6 +892,62 @@ touch patterns/my-new-pattern.php
 # 2. Regenerate thumbnails (WordPress plugin or WP-CLI):
 wp media regenerate --yes
 ```
+
+### Adding Patterns to Pages via WP-CLI
+
+**CRITICAL**: When programmatically adding pattern content to pages using WP-CLI, you MUST use pattern references, NOT direct PHP pattern file inclusion.
+
+**Why this is important:**
+- Pattern PHP files use WordPress functions like `esc_url()`, `get_template_directory_uri()`, `esc_html_e()`, etc.
+- These functions are NOT available in standalone PHP execution contexts (like `php -r 'include ...'`)
+- WordPress must load the pattern through its pattern system to evaluate PHP properly
+
+**WRONG Method (causes fatal errors):**
+```bash
+# ❌ This FAILS - WordPress functions not available in standalone PHP
+wp post update 123 \
+  --post_content="$(php -r 'ob_start(); include "patterns/my-pattern.php"; echo ob_get_clean();')" \
+  --path=web/wp
+# Error: Call to undefined function esc_url()
+```
+
+**CORRECT Method (uses WordPress pattern system):**
+```bash
+# ✅ This WORKS - WordPress evaluates the pattern with all functions available
+wp post update 123 \
+  --post_content='<!-- wp:pattern {"slug":"elayne/my-pattern"} /-->' \
+  --url=http://demo.imagewize.test/ \
+  --path=web/wp
+
+# Multiple patterns on one page
+wp post update 123 \
+  --post_content='<!-- wp:pattern {"slug":"elayne/pattern-one"} /-->
+
+<!-- wp:pattern {"slug":"elayne/pattern-two"} /-->' \
+  --url=http://demo.imagewize.test/ \
+  --path=web/wp
+```
+
+**How it works:**
+1. The `<!-- wp:pattern {"slug":"..."} /-->` block reference tells WordPress to load and render the pattern
+2. WordPress loads the pattern through its pattern registry system
+3. All WordPress functions (`esc_url()`, `get_template_directory_uri()`, etc.) are available
+4. Pattern PHP is evaluated correctly with full WordPress context
+5. The rendered HTML is stored in the database
+
+**When to use pattern references:**
+- Creating demo pages programmatically
+- Bulk page creation with WP-CLI
+- Automated content setup scripts
+- Any WP-CLI workflow that adds pattern content to pages
+
+**Alternative for production content updates:**
+- Use the WordPress block editor UI (insert patterns visually)
+- Or use `wp post update` with pattern references as shown above
+
+**Reference:**
+- Fixed in kafe subsite pages (About, Daily Specials) - February 2026
+- See `/Users/jasperfrumau/code/imagewize.com/CLAUDE.md` for server-side pattern update method (when pattern files are already deployed)
 
 ## WP-CLI Usage
 
