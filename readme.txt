@@ -179,6 +179,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * CHANGED: Drinks Menu pattern - Enhanced blockGap spacing, refined padding/margins for better readability and responsive behavior.
 * CHANGED: Page Template (Centered) - Removed horizontal padding to allow full-width patterns to extend edge-to-edge.
 * CHANGED: Footer patterns - Updated footer-simple, footer-standard, and footer-with-nav-columns to use Elayne branding with proper WordPress.org theme directory link.
+* ADDED: Pattern development guidelines - Pattern Icon Guidelines (SVG over emojis), Image Block Syntax standards (attribute order, is-resized class), and expanded WP-CLI Pattern Integration documentation.
 * TECHNICAL: Added 12 font files (Anton, Asap Condensed 8 weights, Inter variable, Orbitron variable) with font-display swap optimization.
 * TECHNICAL: Added 4 social media SVG icons (icon-instagram.svg, icon-instagram-fandb.svg, icon-facebook.svg, icon-facebook-fandb.svg) with 24x24px viewBox.
 * TECHNICAL: CSS fix to remove global blockGap spacing for template parts, allowing flush full-width patterns."
