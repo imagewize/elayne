@@ -25,6 +25,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Full-width cover block with background image overlay
 - Responsive grid layout adapts to mobile, tablet, and desktop
 - Pre-styled menu items with prices and country/origin labels
+- Enhanced blockGap spacing for improved visual hierarchy
+- Refined padding and margins for better readability
+- Improved card layouts for menu sections
+- Better responsive behavior on mobile devices
 
 **Pattern Category:**
 - New "Food & Beverage" pattern category (`elayne/food-beverage`) for industry-specific content
@@ -93,13 +97,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `icon-accessible.svg` - Wheelchair accessibility icon
   - `icon-bar.svg` - Bar/beverage service icon
 
-### Changed
+**Pattern Development Guidelines:**
+- Pattern Icon Guidelines: Documentation emphasizing use of SVG icons over emojis for cross-platform consistency
+- Image Block Syntax: Critical guidelines for proper WordPress image block attribute order and `is-resized` class usage
+- WP-CLI Pattern Integration: Expanded documentation for programmatically adding patterns to pages using pattern references
 
-**Drinks Menu Pattern:**
-- Enhanced blockGap spacing for improved visual hierarchy
-- Refined padding and margins for better readability
-- Improved card layouts for menu sections
-- Better responsive behavior on mobile devices
+**Restaurant Amenities Pattern:**
+- Enhanced image block structure with correct attribute ordering for WordPress standards
+- Added `is-resized` class to figure elements for proper image sizing behavior
+- Improved pattern metadata with category, pattern name, and display name
+
+### Changed
 
 **Page Template (Centered):**
 - Removed horizontal padding from main wrapper to allow full-width patterns to extend edge-to-edge
