@@ -12,7 +12,7 @@ if [ ! -d "patterns" ]; then
 fi
 
 # Run the PHP compliance checker
-php "$(dirname "$0")/check-pattern-compliance.php"
+php "$(dirname "$0")/class-patterncompliancechecker.php"
 
 # Exit with the same code as the PHP script
 exit $?

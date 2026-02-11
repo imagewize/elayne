@@ -70,7 +70,7 @@ git commit -m "Update pattern"
 ```bash
 # From theme directory
 cd demo/web/app/themes/elayne
-php scripts/pattern-check/check-pattern-compliance.php /path/to/patterns
+php scripts/pattern-check/class-patterncompliancechecker.php /path/to/patterns
 ```
 
 ### Check Specific Pattern File
@@ -78,7 +78,7 @@ php scripts/pattern-check/check-pattern-compliance.php /path/to/patterns
 ```bash
 # From theme directory
 cd demo/web/app/themes/elayne
-php scripts/pattern-check/check-pattern-compliance.php patterns/hero-two-tone.php
+php scripts/pattern-check/class-patterncompliancechecker.php patterns/hero-two-tone.php
 ```
 
 ## Integration
@@ -137,7 +137,7 @@ Templates inherit WordPress Core block defaults (comments, avatars, metadata) wh
 
 ### Adding New Checks
 
-1. Edit `check-pattern-compliance.php`
+1. Edit `class-patterncompliancechecker.php`
 2. Add new validation methods to the `PatternComplianceChecker` class
 3. Follow existing pattern for consistency
 
@@ -148,10 +148,10 @@ Templates inherit WordPress Core block defaults (comments, avatars, metadata) wh
 cd demo/web/app/themes/elayne
 
 # Test with a known-good pattern
-php scripts/pattern-check/check-pattern-compliance.php patterns/hero-two-tone.php
+php scripts/pattern-check/class-patterncompliancechecker.php patterns/hero-two-tone.php
 
 # Test with a pattern that has issues
-php scripts/pattern-check/check-pattern-compliance.php patterns/fandb-events-grid.php
+php scripts/pattern-check/class-patterncompliancechecker.php patterns/fandb-events-grid.php
 ```
 
 ## Development Workflow
