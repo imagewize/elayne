@@ -183,9 +183,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: Pattern development guidelines - Pattern Icon Guidelines (SVG over emojis), Image Block Syntax standards (attribute order, is-resized class), and expanded WP-CLI Pattern Integration documentation.
 * TECHNICAL: Added 12 font files (Anton, Asap Condensed 8 weights, Inter variable, Orbitron variable) with font-display swap optimization.
 * TECHNICAL: Added 4 social media SVG icons (icon-instagram.svg, icon-instagram-fandb.svg, icon-facebook.svg, icon-facebook-fandb.svg) with 24x24px viewBox.
-* TECHNICAL: CSS fix to remove global blockGap spacing for template parts, allowing flush full-width patterns.
-* TECHNICAL: Pattern compliance checker added to scripts/pattern-check/ for automated design standards validation.
-* TECHNICAL: Pre-commit hook for pattern validation (temporarily disabled during pattern refactoring)."
+* TECHNICAL: CSS fix to remove global blockGap spacing for template parts, allowing flush full-width patterns."
 
 
 = 2.3.2 - 01/21/26 =

@@ -20,11 +20,11 @@
 		<div class="wp-block-group has-primary-alt-accent-color has-text-color has-link-color">
 
 			<!-- wp:image {"width":"24px","height":"24px","scale":"cover","sizeSlug":"full","linkDestination":"custom","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-resized is-style-default"><a href="https://facebook.com/cafejpcoen" target="_blank" rel="noopener"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-facebook-fandb.svg" alt="Facebook" style="object-fit:cover;width:24px;height:24px"/></a></figure>
+			<figure class="wp-block-image size-full is-resized is-style-default"><a href="#" target="_blank" rel="noopener"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-facebook-fandb.svg" alt="Facebook" style="object-fit:cover;width:24px;height:24px"/></a></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"width":"24px","height":"24px","scale":"cover","sizeSlug":"full","linkDestination":"custom","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-resized is-style-default"><a href="https://instagram.com/cafejpcoen" target="_blank" rel="noopener"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-instagram-fandb.svg" alt="Instagram" style="object-fit:cover;width:24px;height:24px"/></a></figure>
+			<figure class="wp-block-image size-full is-resized is-style-default"><a href="#" target="_blank" rel="noopener"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-instagram-fandb.svg" alt="Instagram" style="object-fit:cover;width:24px;height:24px"/></a></figure>
 			<!-- /wp:image -->
 
 		</div>

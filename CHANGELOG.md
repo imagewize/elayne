@@ -141,16 +141,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prevents unwanted gaps between full-width patterns and template parts
 - Allows full-width patterns with background colors to be flush with header/footer
 
-**Pattern Compliance Checker:**
-- Added automated pattern compliance checker in `scripts/pattern-check/`
-- Validates patterns against Elayne design standards (spacing, grid layouts, CSS values, HTML comments)
-- Template-aware rules: strict for content patterns, relaxed for templates/headers/footers
-- Smart detection: WordPress Core defaults allowed in templates (border-radius, blockGap)
-- Improved HTML comment detection: flags organizational comments, allows WordPress block comments
-- Shell wrapper script (`check-patterns.sh`) and PHP checker (`check-pattern-compliance.php`)
-- README documentation with usage examples and compliance rules
-- Pre-commit hook integration (currently disabled while fixing remaining patterns)",
-
 ## [2.3.2] - 2026-01-21
 
 ### Changed
