@@ -7,7 +7,7 @@
    3. Desktop Dropdown Navigation
    4. Mobile Navigation & Overlay
    5. Close Button & Hamburger Icon
-   6. Moiraine Navigation Extensions
+   6. Elayne Navigation Extensions
       6.1 Clickable Parents
       6.2 Improved Chevrons
 
@@ -81,15 +81,15 @@ header .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-na
 	top: 0;
 }
 
-/* Dropdown top/bottom padding and border radius */
+/* Dropdown top/bottom padding and border radius — desktop only, not in overlay */
 @media only screen and (min-width: 600px) {
-	header .wp-block-navigation :where(.wp-block-navigation__submenu-container) li:first-child {
+	header .wp-block-navigation:not(.is-menu-open) :where(.wp-block-navigation__submenu-container) li:first-child {
 		padding-top: var(--nav-spacing-small);
 		border-top-left-radius: var(--nav-border-radius);
 		border-top-right-radius: var(--nav-border-radius);
 	}
 
-	header .wp-block-navigation :where(.wp-block-navigation__submenu-container) li:last-child {
+	header .wp-block-navigation:not(.is-menu-open) :where(.wp-block-navigation__submenu-container) li:last-child {
 		padding-bottom: var(--nav-spacing-small);
 		border-bottom-left-radius: var(--nav-border-radius);
 		border-bottom-right-radius: var(--nav-border-radius);
@@ -165,6 +165,30 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 /* Remove excessive submenu padding in overlay */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
 	padding-top: 0;
+}
+
+/* Remove desktop first-child padding-top from submenu items in overlay */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container li:first-child {
+	padding-top: 0;
+}
+
+/* Hide submenus by default in overlay for standard navigation (not has-clickable-parents).
+   WP core forces opacity:1 + visibility:visible for all submenus in overlay mode.
+   We counter with opacity:0 + visibility:hidden, matching WP core's own hide/show pattern.
+   Only shows when the toggle button has aria-expanded="true" (WP Interactivity API). */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation:not(.has-clickable-parents) .has-child .wp-block-navigation__submenu-container {
+	opacity: 0 !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	overflow: hidden !important;
+	padding-top: 0 !important;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation:not(.has-clickable-parents) .has-child:has(.wp-block-navigation-submenu__toggle[aria-expanded="true"]) > .wp-block-navigation__submenu-container {
+	opacity: 1 !important;
+	visibility: visible !important;
+	height: auto !important;
+	overflow: visible !important;
 }
 
 /* Submenu link padding in overlay - tighter spacing */
@@ -305,11 +329,11 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 }
 
 /* ============================================
-   6. Moiraine Navigation Extensions
+   6. Elayne Navigation Extensions
    ============================================ */
 
 /* --------------------------------------------
-   6.1 Clickable Parents
+   6.1 Clickable Parents (`.has-clickable-parents`)
    -------------------------------------------- */
 
 /* Hide submenus by default
@@ -361,7 +385,6 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	box-shadow: none;
 	padding-top: var(--nav-spacing-small);
 	padding-left: var(--nav-spacing-medium);
-	margin-top: var(--nav-spacing-small);
 	border-radius: 0;
 }
 
@@ -500,4 +523,25 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 /* Only add spacing in overlay mode where touch targets need more room */
 .wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents.has-improved-chevrons .moiraine-nav-toggle {
 	margin-left: 0.25rem;
+}
+
+/* --------------------------------------------
+   6.3 Right-Aligned Overlay (`.has-right-aligned-overlay`)
+   For headers where hamburger is on the right (e.g. social-logo-hamburger patterns).
+   Aligns overlay menu items, chevrons, and submenus to the right.
+   -------------------------------------------- */
+.has-right-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+	align-items: flex-end;
+}
+
+.has-right-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation-item__content {
+	text-align: right;
+}
+
+.has-right-aligned-overlay .wp-block-navigation__responsive-container-content .moiraine-nav-parent-wrapper {
+	justify-content: flex-end;
+}
+
+.has-right-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
+	align-items: flex-end;
 }

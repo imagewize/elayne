@@ -105,6 +105,7 @@ function elayne_pattern_categories() {
 		'elayne/fintech'        => array( 'label' => __( 'Fintech & Technology', 'elayne' ) ),
 		'elayne/salon'          => array( 'label' => __( 'Beauty & Salon', 'elayne' ) ),
 		'elayne/retail'         => array( 'label' => __( 'Retail & E-commerce', 'elayne' ) ),
+		'elayne/food-beverage'  => array( 'label' => __( 'Food & Beverage', 'elayne' ) ),
 	);
 
 	foreach ( $block_pattern_categories as $name => $properties ) {

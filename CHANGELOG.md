@@ -7,6 +7,140 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.0] - 2026-02-03
+
+### Added
+
+**Food & Beverage Style Variation:**
+- New "Food & Beverage" style variation for restaurant, cafe, and bar websites
+- Warm earth-toned color palette: Pine Green (#034521), Teal Deep (#169179), Warm Gold (#dcb171), Creamy Beige (#eadfbf)
+- Custom typography: Anton (headings), Asap Condensed (body), Orbitron (decorative), Inter (utility)
+- Duotone filters: Green & Gold, Pine & Cream, Teal & Beige
+- Gradient presets: Warm Earth, Cream Fade
+- Global background and text colors: Secondary (Light Cream) background with Main text color
+
+**Drinks Menu Pattern:**
+- Four-section responsive drinks menu grid (Coffee/Tea, Wines, Beers, Snacks)
+- Color-coded category cards with distinct backgrounds
+- Full-width cover block with background image overlay
+- Responsive grid layout adapts to mobile, tablet, and desktop
+- Pre-styled menu items with prices and country/origin labels
+- Enhanced blockGap spacing for improved visual hierarchy
+- Refined padding and margins for better readability
+- Improved card layouts for menu sections
+- Better responsive behavior on mobile devices
+
+**Pattern Category:**
+- New "Food & Beverage" pattern category (`elayne/food-beverage`) for industry-specific content
+
+**F&B Header Patterns:**
+- Three new header patterns designed for Food & Beverage sites:
+  - `header-social-logo-hamburger` (dark) - Dark background with Pine Green accents
+  - `header-social-logo-hamburger-light` - Light background with border bottom
+  - Original F&B header with top bar layout
+- Left social media icons, centered logo, hamburger menu on right
+- Responsive layout optimized for restaurant and cafe websites
+- Instagram and Facebook integration with custom SVG icons
+
+**F&B Blog Pattern:**
+- `blog-post-columns-fandb` - Three-column blog grid with Light Cream (secondary) background
+- Optimized for Food & Beverage content with brand colors
+- Responsive grid layout (3→2→1 columns)
+
+**Social Media Icons:**
+- Added Instagram and Facebook SVG icons (default and F&B variants)
+- F&B variants use Pine Green color (#034521) matching the style
+- Default variants use `currentColor` for theme flexibility
+- 24x24px viewBox for consistent sizing across patterns
+
+**Food Menu Pattern:**
+- `menu-food-grid.php` - Four-section responsive food menu (Appetizers, Mains, Desserts, Sides)
+- Color-coded sections with distinct backgrounds (Light Cream, Sage Green, Dark Moss, Creamy Beige)
+- Menu item descriptions with pricing and gold separators
+- Responsive grid layout (4→3→2→1 columns, 19rem minimum width)
+
+**Daily Specials Pattern:**
+- `menu-daily-specials.php` - Featured daily specials with large dish images
+- 2-column layout with alternating image placement
+- Chef's notes and detailed descriptions
+- Price and availability indicators
+- Full-width tertiary background for visual separation
+
+**Menu Pricing Table Pattern:**
+- `menu-pricing-table.php` - Simple, elegant pricing list for wine lists and quick menus
+- Category headers with decorative gold underlines
+- Item descriptions with dot separators
+- Clean typography hierarchy optimized for readability
+- Constrained 700px width for optimal scanning
+
+**F&B Hero Patterns:**
+- `hero-fandb-cover-fullwidth` - Full-width hero with large cover image, overlay, and centered content
+- `hero-fandb-split-layout` - Split-screen hero with image on left, content on right
+- Both patterns optimized for restaurant and cafe websites with F&B color palette
+
+**F&B Content Patterns:**
+- `fandb-about-intro` - About section with image and text introduction
+- `fandb-amenities` - Grid layout showcasing restaurant amenities and features
+- `fandb-chef-profile` - Chef profile section with photo and biography
+- `fandb-hours-location` - Operating hours and location information display
+- `fandb-testimonials-food` - Testimonials section specifically styled for food/beverage businesses
+
+**F&B Events Pattern:**
+- `fandb-events-grid` - Responsive 3-column grid for restaurant events (wine tastings, live music, chef's tables)
+- Calendar-style date badges with month, day, and weekday display
+- Event type tags (Wine Tasting, Live Music, Chef's Table)
+- Time display and pricing information
+- Reservation CTAs with event-specific wording
+- Card-based design with 19rem minimum column width for complex event metadata
+
+**F&B Image Assets:**
+- Added `cafe-terrace-hero.webp` - Outdoor cafe seating for hero sections
+- Added `cafe-interior-about.webp` - Cozy cafe interior for about sections
+- Added `chef-profile.webp` - Professional chef portrait for profile patterns
+- Added 6 amenity SVG icons for restaurant features:
+  - `icon-parking.svg` - Parking amenity icon
+  - `icon-outdoor.svg` - Outdoor seating icon
+  - `icon-wifi.svg` - WiFi amenity icon
+  - `icon-events.svg` - Private events icon
+  - `icon-accessible.svg` - Wheelchair accessibility icon
+  - `icon-bar.svg` - Bar/beverage service icon
+
+**Pattern Development Guidelines:**
+- Pattern Icon Guidelines: Documentation emphasizing use of SVG icons over emojis for cross-platform consistency
+- Image Block Syntax: Critical guidelines for proper WordPress image block attribute order and `is-resized` class usage
+- WP-CLI Pattern Integration: Expanded documentation for programmatically adding patterns to pages using pattern references
+
+**Restaurant Amenities Pattern:**
+- Enhanced image block structure with correct attribute ordering for WordPress standards
+- Added `is-resized` class to figure elements for proper image sizing behavior
+- Improved pattern metadata with category, pattern name, and display name
+
+### Changed
+
+**Page Template (Centered):**
+- Removed horizontal padding from main wrapper to allow full-width patterns to extend edge-to-edge
+- Maintains vertical padding (top only) for proper content spacing
+
+**Footer Patterns:**
+- Updated `footer-simple`, `footer-standard`, and `footer-with-nav-columns` to use Elayne branding
+- Changed theme link from Moiraine to Elayne with proper attribution
+- WordPress.org theme directory link updated to reflect Elayne theme
+
+### Technical
+
+**Font Assets:**
+- Added 12 new font files for Food & Beverage style:
+  - Anton regular (WOFF2)
+  - Asap Condensed (8 weights: 200-900)
+  - Inter variable font (TTF)
+  - Orbitron variable font (TTF)
+- All fonts optimized with `font-display: swap` for performance
+
+**Template Part Spacing:**
+- Added CSS fix to remove global blockGap spacing for template parts (header/footer)
+- Prevents unwanted gaps between full-width patterns and template parts
+- Allows full-width patterns with background colors to be flush with header/footer
+
 ## [2.3.2] - 2026-01-21
 
 ### Changed
@@ -1067,10 +1201,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed - Documentation organization
 
-- Moved theme documentation files from `demo/web/app/themes/elayne/docs/` to `docs/elayne/`
-  - Follows same pattern as other theme documentation in project root
-  - Includes pattern analysis, implementation summaries, and planning documents
-  - Better organization for project-wide documentation access
+- Reorganized theme documentation files for better project structure
+  - Improved organization for development and planning documents
+  - Better separation between theme files and project documentation
 
 ### Technical
 

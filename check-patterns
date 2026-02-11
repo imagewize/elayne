@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Quick pattern check - run before rsync to theme repo
+# This is a convenience script for the main imagewize.com repo
+
+cd "$(dirname "$0")"
+
+echo "🔍 Running pattern compliance checks..."
+echo ""
+
+./scripts/pattern-check/check-patterns.sh
+
+exit_code=$?
+
+if [ $exit_code -eq 0 ]; then
+    echo ""
+    echo "✅ All patterns passed! Safe to rsync to theme repo."
+else
+    echo ""
+    echo "⚠️  Some patterns have issues. Fix them before rsync, or proceed anyway."
+    echo "   The theme repo pre-commit hook will catch these on commit."
+fi
+
+exit $exit_code

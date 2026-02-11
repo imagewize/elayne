@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const button = item.querySelector('.wp-block-navigation-submenu__toggle');
             const chevron = item.querySelector(':scope > .wp-block-navigation__submenu-icon');
 
-            // Move chevron inside button if both exist and chevron is orphaned outside button
-            if (button && chevron && chevron.parentNode === item) {
+            // Move chevron inside button if both exist, chevron is a direct child of item
+            // (orphaned outside button), and neither element is an ancestor of the other
+            if (button && chevron && chevron.parentNode === item && !button.contains(chevron) && !chevron.contains(button)) {
                 button.appendChild(chevron);
             }
         });

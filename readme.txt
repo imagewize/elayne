@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.3.2
+Stable tag: 2.4.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,29 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.4.0 - 02/03/26 =
+* ADDED: Food & Beverage style variation with warm earth-toned palette (Pine Green, Teal Deep, Warm Gold, Creamy Beige), custom fonts (Anton, Asap Condensed, Orbitron, Inter), and global Light Cream background.
+* ADDED: Food & Beverage pattern category (elayne/food-beverage) for restaurant/cafe-specific content.
+* ADDED: Drinks Menu Grid pattern - Four-section responsive menu with color-coded categories (Coffee/Tea, Wines, Beers, Snacks) and full-width background image.
+* ADDED: Food Menu Grid pattern - Four-section responsive food menu (Appetizers, Mains, Desserts, Sides) with item descriptions, pricing, and color-coded sections.
+* ADDED: Daily Specials Menu pattern - Featured daily specials with large dish images, chef's notes, 2-column layout with alternating image placement, and tertiary background.
+* ADDED: Menu Pricing Table pattern - Simple, elegant pricing list perfect for wine lists and quick menus with category headers, decorative gold underlines, and constrained 700px width.
+* ADDED: Three F&B Header patterns - header-social-logo-hamburger (dark), header-social-logo-hamburger-light, and original top bar layout with left social icons, centered logo, and hamburger menu.
+* ADDED: Blog Post Columns (F&B) pattern - Three-column blog grid with Light Cream background optimized for F&B content.
+* ADDED: Social media icon assets - Instagram and Facebook SVG icons in default and F&B color variants (Pine Green).
+* ADDED: F&B Hero patterns - hero-fandb-cover-fullwidth (full-width cover hero with overlay) and hero-fandb-split-layout (split-screen layout with image and content).
+* ADDED: F&B Content patterns - fandb-about-intro, fandb-amenities, fandb-chef-profile, fandb-hours-location, and fandb-testimonials-food for complete restaurant/cafe site building.
+* ADDED: F&B Events Grid pattern - Responsive 3-column event calendar grid with date badges, event types (wine tastings, live music, chef's tables), time/pricing metadata, and reservation CTAs.
+* ADDED: F&B Image assets - cafe-terrace-hero.webp, cafe-interior-about.webp, chef-profile.webp, and 6 amenity SVG icons (parking, outdoor seating, WiFi, events, accessibility, bar) for pattern demonstrations.
+* CHANGED: Drinks Menu pattern - Enhanced blockGap spacing, refined padding/margins for better readability and responsive behavior.
+* CHANGED: Page Template (Centered) - Removed horizontal padding to allow full-width patterns to extend edge-to-edge.
+* CHANGED: Footer patterns - Updated footer-simple, footer-standard, and footer-with-nav-columns to use Elayne branding with proper WordPress.org theme directory link.
+* ADDED: Pattern development guidelines - Pattern Icon Guidelines (SVG over emojis), Image Block Syntax standards (attribute order, is-resized class), and expanded WP-CLI Pattern Integration documentation.
+* TECHNICAL: Added 12 font files (Anton, Asap Condensed 8 weights, Inter variable, Orbitron variable) with font-display swap optimization.
+* TECHNICAL: Added 4 social media SVG icons (icon-instagram.svg, icon-instagram-fandb.svg, icon-facebook.svg, icon-facebook-fandb.svg) with 24x24px viewBox.
+* TECHNICAL: CSS fix to remove global blockGap spacing for template parts, allowing flush full-width patterns."
+
 
 = 2.3.2 - 01/21/26 =
 * CHANGED: Menu template part area - Now registered by Elayne Blocks plugin instead of theme for better independence.
@@ -425,7 +448,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: New "Events" category (elayne/events) for event-related patterns.
 * ADDED: event-upcoming-grid pattern - Responsive 3-column event grid with date badges, time, location, and registration buttons.
 * ADDED: Calendar-style date display (month, day, weekday), event type badges (Online/In-person), and dual CTA buttons.
-* CHANGED: Moved theme documentation files from demo/web/app/themes/elayne/docs/ to docs/elayne/ for better project organization.
+* CHANGED: Reorganized theme documentation files for better project structure.
 * TECHNICAL: Pattern count increased from 20 to 21 original patterns.
 * TECHNICAL: Event pattern features responsive grid layout with minimumColumnWidth: 20rem and full translation support.
 
@@ -808,6 +831,50 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Attribution:** Not required (Pexels License)
 - **Description:** Boats on calm river at dusk, 4:3 banner for legal practice area headers (800×600)
 - **Note:** Same source image as banner-boats-16x9.webp, cropped to different aspect ratio
+
+---
+
+## Food & Beverage Theme Images (Pexels License - GPL-Compatible)
+
+### fandb/cafe-terrace-hero.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/charming-outdoor-cafe-seating-in-lage-vuursche-33239717/)
+- **Title:** Charming Outdoor Cafe Seating in Lage Vuursche
+- **Photographer:** [Haberdoedas](https://www.pexels.com/@haberdoedas-473348754/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Outdoor cafe terrace seating with restaurant in background, perfect for F&B hero sections
+
+### fandb/cafe-interior-about.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/cozy-outdoor-cafe-setting-in-lage-vuursche-33239715/)
+- **Title:** Cozy Outdoor Cafe Setting in Lage Vuursche
+- **Photographer:** [Haberdoedas](https://www.pexels.com/@haberdoedas-473348754/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Cozy outdoor cafe seating area with warm lighting, ideal for about sections and content blocks
+
+### fandb/pan-seared-halibut.webp
+- **Source:** ChatGPT (AI-generated, user-provided)
+- **Title:** Pan-seared halibut with garnish
+- **Photographer:** ChatGPT (AI-generated)
+- **License:** User-provided (AI-generated via ChatGPT)
+- **Attribution:** Not required (user-provided)
+- **Description:** AI-generated gourmet plated dish for daily specials pattern
+
+### fandb/placeholder-800x600.webp
+- **Source:** ChatGPT (AI-generated, user-provided)
+- **Title:** Menu placeholder image
+- **Photographer:** ChatGPT (AI-generated)
+- **License:** User-provided (AI-generated via ChatGPT)
+- **Attribution:** Not required (user-provided)
+- **Description:** AI-generated placeholder for menu pattern demonstrations
+
+### fandb/chef-profile.webp
+- **Source:** [Pexels - A Chef Cooking in the Kitchen](https://www.pexels.com/photo/a-chef-cooking-in-the-kitchen-8629106/)
+- **Title:** A Chef Cooking in the Kitchen
+- **Photographer:** RDNE Stock project
+- **License:** [Pexels License](https://www.pexels.com/license/) (Free to use, no attribution required)
+- **Attribution:** Not required (Pexels Free License)
+- **Description:** Professional chef portrait for F&B chef profile pattern
 
 ---
 
