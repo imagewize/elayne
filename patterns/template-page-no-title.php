@@ -1,11 +1,11 @@
 <?php
 /**
- * Title: Page Full Width No Title
- * Slug: elayne/template-page-full
+ * Title: Page No Title
+ * Slug: elayne/template-page-no-title
  * Template Types: page
- * Description: This full page layout with no title, perfect for building pages with patterns.
+ * Description: Page template without title, perfect for building pages with patterns.
  * Categories: elayne/pages
- * Keywords: page, full-width
+ * Keywords: page, no-title, full-width
  * Viewport Width: 1500
  * Inserter: false
  */

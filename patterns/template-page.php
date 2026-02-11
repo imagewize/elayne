@@ -1,11 +1,11 @@
 <?php
 /**
- * Title: Page Centered
- * Slug: elayne/template-page-centered
+ * Title: Page
+ * Slug: elayne/template-page
  * Template Types: page
- * Description: A centered page layout where the content sits in a container in the middle of the page.
+ * Description: Default page template with title, centered content layout.
  * Categories: elayne/pages
- * Keywords: page, centered
+ * Keywords: page, title, default
  * Viewport Width: 1500
  * Inserter: false
  */

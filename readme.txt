@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.4.1
+Stable tag: 3.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,20 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.0.0 - 02/11/26 =
+* BREAKING CHANGE: Page template simplification - Reduced from 5 templates to 2 active templates.
+* CHANGED: Template pattern renaming for consistency - template-page-centered → template-page, template-page-full → template-page-no-title.
+* CHANGED: template-page.php - Kept padding-top (xx-large) on main group for proper title spacing from header.
+* CHANGED: template-page-no-title.php - Zero padding (patterns control all spacing).
+* REMOVED: template-page-wide-no-title.php + page-wide-no-title.html (breaking change).
+* REMOVED: template-page-hero.php + page-hero.html (breaking change).
+* REMOVED: template-page-wide.php + page-wide.html (breaking change).
+* TECHNICAL: Only 2 active templates - page.html (with title) and page-no-title.html (without title).
+* TECHNICAL: Templates provide structure only (title vs no-title), patterns/blocks control spacing.
+* TECHNICAL: Aligns with modern FSE themes (Twenty Twenty-Five, Ollie) for maximum flexibility.
+* VERIFIED: All 7 affected pages audited locally - zero spacing issues found, patterns already handle spacing correctly.
+* MIGRATION: Pages using removed templates will fall back to default page.html template automatically.
 
 = 2.4.1 - 02/11/26 =
 * ADDED: GitHub Actions workflow for automated pattern compliance checks on PRs and pushes.

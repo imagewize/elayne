@@ -43,15 +43,15 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Pattern Library
 
-Elayne includes **81 professionally designed patterns** across multiple categories:
+Elayne includes **94 professionally designed patterns** across multiple categories:
 
-**Core Patterns:** Hero Sections (10) • Headers & Footers (8) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (17) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (11)
+**Core Patterns:** Hero Sections (8) • Headers & Footers (10) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (17) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (11)
 
 **Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (12)
 
-**Industry Verticals:** Spa & Wellness (11) • Legal Services (9)
+**Industry Verticals:** Spa & Wellness (3) • Legal Services (8) • Food & Beverage (14)
 
-**Templates:** 17 page and post templates
+**Templates:** 14 page and post templates
 
 Browse the complete pattern library in **Appearance → Editor → Patterns**
 
@@ -59,13 +59,23 @@ Browse the complete pattern library in **Appearance → Editor → Patterns**
 
 Elayne provides specialized pattern sets for specific industries:
 
-- **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays
-- **Real Estate** - Property showcases, listing patterns, and professional service displays
-- **Legal Services** - Professional attorney profiles, practice area showcases, case statistics, client testimonials, and contact patterns optimized for law firms
+- **Food & Beverage** - Restaurant and café patterns with menu displays, chef profiles, event grids, hours/location info, testimonials, hero sections, and specialized header with top bar (14 patterns). Includes custom "Food & Beverage" style variation with Anton/Asap Condensed fonts and emerald/cream color palette
+- **Legal Services** - Professional attorney profiles, practice area showcases, case statistics, client testimonials, and contact patterns optimized for law firms (8 patterns)
+- **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays (3 patterns)
 
 ### Style Variations
 
-Switch your entire site's look with one click using **8 pre-configured color palettes**: Ink & Sand (Default) • Spa & Wellness (Teal & Sage) • Legal Blue • Gray & Gold • Denim & Copper • Forest & Sage • Orange • Teal Bay
+Switch your entire site's look with one click using **8 pre-configured color palettes**:
+
+- **Ink & Sand** (Default) - Modern, clean aesthetic
+- **Food & Beverage** - Emerald & cream with Anton/Asap Condensed fonts
+- **Spa & Wellness** (Teal & Sage) - Calming, wellness-focused
+- **Legal Blue** - Professional, trustworthy
+- **Gray & Gold** - Sophisticated elegance
+- **Denim & Copper** - Warm, approachable
+- **Forest & Sage** - Natural, organic
+- **Orange** - Energetic, vibrant
+- **Teal Bay** - Fresh, coastal
 
 Change styles in **Appearance → Editor → Styles**
 

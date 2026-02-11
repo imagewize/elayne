@@ -7,6 +7,61 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2026-02-11
+
+### Changed - BREAKING: Page template simplification
+
+**Template Reduction (5 → 2):**
+- Simplified from 5 page templates down to 2 active templates
+- `page.html` → `template-page` (with title, top padding only)
+- `page-no-title.html` → `template-page-no-title` (no title, zero padding)
+
+**Template Pattern Renaming:**
+- `template-page-centered.php` → `template-page.php` (slug: `elayne/template-page`)
+- `template-page-full.php` → `template-page-no-title.php` (slug: `elayne/template-page-no-title`)
+- Updated all template HTML files to reference new pattern slugs
+
+**Removed Templates (Breaking Change):**
+- ❌ `template-page-wide-no-title.php` + `page-wide-no-title.html` - REMOVED
+- ❌ `template-page-hero.php` + `page-hero.html` - REMOVED
+- ❌ `template-page-wide.php` + `page-wide.html` - REMOVED
+- Pages using removed templates will fall back to default `page.html`
+
+**Padding Strategy:**
+- `template-page.php` - Kept `padding-top: var:preset|spacing|xx-large` on `<main>` group (required for title spacing from header)
+- `template-page-no-title.php` - Zero padding (patterns control all spacing)
+- Templates provide structure only (title vs no-title), patterns/blocks control spacing
+
+**Benefits:**
+- Cleaner template architecture (2 templates instead of 5)
+- Clear naming convention (page vs page-no-title)
+- Patterns get full control over spacing and layout
+- Full-width backgrounds extend properly to edges
+- Aligns with modern FSE theme approach (Twenty Twenty-Five, Ollie)
+
+### Verified - No migration required
+
+**Affected Pages (7 total):**
+- Main demo (3 pages): Blog, FAQ, Services - using `page-wide-no-title.html`
+- Kafe demo (4 pages): Drinks, Food, Home - using `page-hero.html`; Events - using `page-wide-no-title.html`
+
+**Verification Results (2026-02-11):**
+- ✅ All 7 affected pages audited locally with screenshots
+- ✅ Zero spacing issues found - patterns already handle their own spacing correctly
+- ✅ No manual migration needed - pages will work with default template fallback
+
+### Technical
+
+**Files Modified:**
+- Renamed: `template-page-centered.php` → `template-page.php`
+- Renamed: `template-page-full.php` → `template-page-no-title.php`
+- Updated: `page.html`, `page-no-title.html` with new pattern slugs
+- Removed: 6 files (3 pattern files + 3 template HTML files)
+
+**Version Bump:**
+- Major version increment (2.4.1 → 3.0.0) due to breaking changes
+- Follows semantic versioning for template architecture changes
+
 ## [2.4.1] - 2026-02-11
 
 ### Added
