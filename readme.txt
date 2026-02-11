@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.4.0
+Stable tag: 2.4.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,14 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 2.4.1 - 02/11/26 =
+* ADDED: GitHub Actions workflow for automated pattern compliance checks on PRs and pushes.
+* ADDED: Pattern compliance validation - checks only modified patterns (new or edited files) instead of all patterns.
+* ADDED: Compliance checks for hardcoded CSS values, spacer blocks, emoji icons, margin reset, responsive grids, media IDs, and HTML comments.
+* CHANGED: Updated CONTRIBUTING.md with pattern compliance documentation, CI/CD integration, and common compliance issues.
+* REMOVED: Pre-commit git hook (replaced by GitHub Actions workflow).
+* TECHNICAL: Incremental enforcement allows gradual fixing of 67 existing pattern violations without blocking development.
 
 = 2.4.0 - 02/03/26 =
 * ADDED: Food & Beverage style variation with warm earth-toned palette (Pine Green, Teal Deep, Warm Gold, Creamy Beige), custom fonts (Anton, Asap Condensed, Orbitron, Inter), and global Light Cream background.

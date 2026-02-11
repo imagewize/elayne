@@ -230,6 +230,54 @@ Translation files are stored in `languages/` directory.
 - Ensure all patterns are accessible (WCAG 2.1 Level AA)
 - Test patterns across multiple viewport sizes
 
+### Pattern Compliance Checks
+
+Elayne enforces strict pattern quality standards through automated GitHub Actions workflows. All pull requests and pushes to `main` automatically run compliance checks.
+
+**Automated Checks:**
+- ✅ **No hardcoded CSS values** - Use semantic variables from `theme.json` (e.g., `var:preset|spacing|medium`)
+- ✅ **No spacer blocks** - Use semantic `blockGap` on parent containers instead
+- ✅ **No emoji icons** - Use SVG icons for visual consistency
+- ✅ **Proper margin reset** - Full-width patterns must include `"margin":{"top":"0","bottom":"0"}`
+- ✅ **Responsive grid layouts** - 3+ column patterns must use grid with `minimumColumnWidth`, not `wp:columns`
+- ✅ **No hardcoded media IDs** - Pattern images must use template functions, not database IDs
+- ✅ **No HTML comments between blocks** - Only WordPress block comments allowed (prevents validation errors)
+
+**CI/CD Integration:**
+- Pattern compliance workflow: `.github/workflows/pattern-compliance.yml`
+- WordPress.org theme review: `.github/workflows/theme-check.yml`
+- **Only checks modified patterns** - existing non-compliant patterns won't block PRs
+- New or edited patterns must pass compliance before merging
+- Pull requests cannot merge if compliance checks fail
+- View detailed error messages in the GitHub Actions tab
+
+**Running Checks Locally:**
+
+The compliance checker is embedded in the GitHub Actions workflow. To run checks before committing:
+
+```bash
+# From theme root directory
+# Requires PHP 8.0+
+
+# Quick test - shows which patterns have issues
+grep -l "wp:spacer" patterns/*.php
+grep -l '"id":[0-9]' patterns/*.php
+
+# Full compliance check
+# Copy the PHP checker script from .github/workflows/pattern-compliance.yml
+# and run it against your patterns directory
+```
+
+**Common Compliance Issues:**
+
+1. **Hardcoded spacing**: Use `var:preset|spacing|medium` instead of `padding:24px`
+2. **Spacer blocks**: Replace `<!-- wp:spacer -->` with `blockGap` on parent group
+3. **Media IDs**: Use `<?php echo esc_url(get_template_directory_uri()); ?>/patterns/images/file.webp`
+4. **Columns for grids**: Use `{"layout":{"type":"grid","minimumColumnWidth":"20rem"}}` for 3+ columns
+5. **Missing margin reset**: Add `"margin":{"top":"0","bottom":"0"}` to `alignfull` groups with backgrounds
+
+See [CLAUDE.md](CLAUDE.md) for detailed pattern development guidelines and best practices.
+
 ## Testing Checklist
 
 Before submitting patterns or modifications:
