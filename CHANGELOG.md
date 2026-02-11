@@ -85,6 +85,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `fandb-hours-location` - Operating hours and location information display
 - `fandb-testimonials-food` - Testimonials section specifically styled for food/beverage businesses
 
+**F&B Events Pattern:**
+- `fandb-events-grid` - Responsive 3-column grid for restaurant events (wine tastings, live music, chef's tables)
+- Calendar-style date badges with month, day, and weekday display
+- Event type tags (Wine Tasting, Live Music, Chef's Table)
+- Time display and pricing information
+- Reservation CTAs with event-specific wording
+- Card-based design with 19rem minimum column width for complex event metadata
+
 **F&B Image Assets:**
 - Added `cafe-terrace-hero.webp` - Outdoor cafe seating for hero sections
 - Added `cafe-interior-about.webp` - Cozy cafe interior for about sections
@@ -131,7 +139,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Template Part Spacing:**
 - Added CSS fix to remove global blockGap spacing for template parts (header/footer)
 - Prevents unwanted gaps between full-width patterns and template parts
-- Allows full-width patterns with background colors to be flush with header/footer",
+- Allows full-width patterns with background colors to be flush with header/footer
+
+**Pattern Compliance Checker:**
+- Added automated pattern compliance checker in `scripts/pattern-check/`
+- Validates patterns against Elayne design standards (spacing, grid layouts, CSS values, HTML comments)
+- Template-aware rules: strict for content patterns, relaxed for templates/headers/footers
+- Smart detection: WordPress Core defaults allowed in templates (border-radius, blockGap)
+- Improved HTML comment detection: flags organizational comments, allows WordPress block comments
+- Shell wrapper script (`check-patterns.sh`) and PHP checker (`check-pattern-compliance.php`)
+- README documentation with usage examples and compliance rules
+- Pre-commit hook integration (currently disabled while fixing remaining patterns)",
 
 ## [2.3.2] - 2026-01-21
 

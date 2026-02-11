@@ -175,6 +175,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: Social media icon assets - Instagram and Facebook SVG icons in default and F&B color variants (Pine Green).
 * ADDED: F&B Hero patterns - hero-fandb-cover-fullwidth (full-width cover hero with overlay) and hero-fandb-split-layout (split-screen layout with image and content).
 * ADDED: F&B Content patterns - fandb-about-intro, fandb-amenities, fandb-chef-profile, fandb-hours-location, and fandb-testimonials-food for complete restaurant/cafe site building.
+* ADDED: F&B Events Grid pattern - Responsive 3-column event calendar grid with date badges, event types (wine tastings, live music, chef's tables), time/pricing metadata, and reservation CTAs.
 * ADDED: F&B Image assets - cafe-terrace-hero.webp, cafe-interior-about.webp, chef-profile.webp, and 6 amenity SVG icons (parking, outdoor seating, WiFi, events, accessibility, bar) for pattern demonstrations.
 * CHANGED: Drinks Menu pattern - Enhanced blockGap spacing, refined padding/margins for better readability and responsive behavior.
 * CHANGED: Page Template (Centered) - Removed horizontal padding to allow full-width patterns to extend edge-to-edge.
@@ -182,7 +183,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: Pattern development guidelines - Pattern Icon Guidelines (SVG over emojis), Image Block Syntax standards (attribute order, is-resized class), and expanded WP-CLI Pattern Integration documentation.
 * TECHNICAL: Added 12 font files (Anton, Asap Condensed 8 weights, Inter variable, Orbitron variable) with font-display swap optimization.
 * TECHNICAL: Added 4 social media SVG icons (icon-instagram.svg, icon-instagram-fandb.svg, icon-facebook.svg, icon-facebook-fandb.svg) with 24x24px viewBox.
-* TECHNICAL: CSS fix to remove global blockGap spacing for template parts, allowing flush full-width patterns."
+* TECHNICAL: CSS fix to remove global blockGap spacing for template parts, allowing flush full-width patterns.
+* TECHNICAL: Pattern compliance checker added to scripts/pattern-check/ for automated design standards validation.
+* TECHNICAL: Pre-commit hook for pattern validation (temporarily disabled during pattern refactoring)."
 
 
 = 2.3.2 - 01/21/26 =
