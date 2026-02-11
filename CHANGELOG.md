@@ -7,6 +7,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.1] - 2026-02-11
+
+### Added
+
+**Pattern Compliance Automation:**
+- GitHub Actions workflow for automated pattern compliance checks
+- Checks only modified patterns (new or edited files) instead of all patterns
+- Validates patterns against CLAUDE.md coding standards
+- Prevents PRs from merging if modified patterns have violations
+- Allows gradual fixing of existing non-compliant patterns
+
+**Compliance Checks:**
+- No hardcoded CSS values (use semantic variables from theme.json)
+- No spacer blocks (use semantic blockGap instead)
+- No emoji icons (use SVG icons for consistency)
+- Proper margin reset on full-width patterns
+- Responsive grid layouts for 3+ column patterns
+- No hardcoded media IDs in patterns
+- No HTML comments between block markup
+
+### Changed
+
+**Development Workflow:**
+- Updated CONTRIBUTING.md with pattern compliance documentation
+- Documented CI/CD integration and common compliance issues
+- Added local testing commands for pattern validation
+
+### Removed
+
+**Git Hooks:**
+- Removed `.githooks/pre-commit` hook (replaced by GitHub Actions)
+- Eliminated path dependency issues with external scripts
+
+### Technical
+
+**CI/CD Integration:**
+- Pattern compliance workflow: `.github/workflows/pattern-compliance.yml`
+- Uses `tj-actions/changed-files@v44` to detect modified patterns
+- PHP 8.0+ compliance checker embedded in workflow YAML
+- Incremental enforcement allows fixing 67 existing violations gradually
+
 ## [2.4.0] - 2026-02-03
 
 ### Added
