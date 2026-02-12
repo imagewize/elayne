@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replaced emoji icons with SVG icons in the announcement banner and legal contact pattern for better visual consistency and accessibility
 - Added vertical alignment to the announcement banner group for improved layout
 
+### Fixed
+**Pattern Compliance:**
+- Removed hardcoded `border-radius:8px` values from legal-contact pattern to comply with semantic variable standards
+- Fixed compliance checker violations in legal-contact.php (outer container, button, and 4 contact info cards)
+
 ### Added
 **New SVG Icons:**
 - Added `icon-clock.svg` for office hours display

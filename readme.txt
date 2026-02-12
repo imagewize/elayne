@@ -166,6 +166,7 @@ Elayne includes custom image sizes optimized for different layouts:
 = 3.1.1 - 02/12/26 =
 * CHANGED: Pattern icons - Replaced emojis with SVG icons for better consistency
 * CHANGED: Announcement banner - Added vertical alignment to group layout
+* FIXED: Pattern compliance - Removed hardcoded border-radius:8px values from legal-contact pattern (outer container, button, and 4 contact info cards) to comply with semantic variable standards
 * ADDED: New SVG icons - icon-clock, icon-location, icon-star-celebration, icon-star-celebration-white, icon-phone, icon-email
 * ADDED: White star SVG variant (icon-star-celebration-white.svg) for visibility on dark backgrounds"
 
