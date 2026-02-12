@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.3] - 2026-02-12
+
+### Changed
+
+**Pattern Images - File Size Optimization:**
+- Reduced file sizes for three pattern images while maintaining visual quality
+- `banner-boats-16x9.webp`: Optimized general banner image
+- `cafe-terrace-hero.webp`: Optimized Food & Beverage demo hero image
+- `banner-boats-4x3.webp`: Optimized Legal demo banner image
+- Improves page load times and reduces bandwidth usage across demo pages
+
 ## [3.1.2] - 2026-02-12
 
 ### Removed
