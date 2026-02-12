@@ -164,7 +164,7 @@ Elayne includes custom image sizes optimized for different layouts:
 == Changelog ==
 
 = 3.1.3 - 02/12/26 =
-* CHANGED: Pattern images - Optimized file sizes for banner-boats-16x9.webp, cafe-terrace-hero.webp, and banner-boats-4x3.webp to improve page load performance."
+* CHANGED: Pattern images - Optimized file sizes for banner-boats-16x9.webp, cafe-terrace-hero.webp, and banner-boats-4x3.webp to improve page load performance.
 
 
 = 3.1.2 - 02/12/26 =
