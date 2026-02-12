@@ -12,10 +12,14 @@
 <div class="wp-block-group alignfull has-base-color has-primary-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
-		<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+		<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
 		<div class="wp-block-group alignwide">
+			<!-- wp:image {"width":"20px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+			<figure class="wp-block-image size-full is-resized is-style-default"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-star-celebration-white.svg" alt="" style="width:20px"/></figure>
+			<!-- /wp:image -->
+
 			<!-- wp:paragraph {"align":"center","textColor":"base","fontSize":"base","fontFamily":"open-sans"} -->
-			<p class="has-text-align-center has-base-color has-text-color has-open-sans-font-family has-base-font-size"><strong><?php esc_html_e( '🎉 New Service Launch:', 'elayne' ); ?></strong> <?php esc_html_e( 'Schedule your free consultation today', 'elayne' ); ?> <a href="#"><?php esc_html_e( 'Learn More →', 'elayne' ); ?></a></p>
+			<p class="has-text-align-center has-base-color has-text-color has-open-sans-font-family has-base-font-size"><strong><?php esc_html_e( 'New Service Launch:', 'elayne' ); ?></strong> <?php esc_html_e( 'Schedule your free consultation today', 'elayne' ); ?> <a href="#"><?php esc_html_e( 'Learn More →', 'elayne' ); ?></a></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
