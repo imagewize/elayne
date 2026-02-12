@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.0] - 2026-02-12
+
+### Added
+**Heading Block Styles:**
+- New dedicated CSS file `core-heading.css` for heading-specific styles
+- New 'Logo Link' heading style that removes underline decoration on hover/focus
+- Gradient Text style now available for heading blocks
+- Gradient Text Animated style now available for heading blocks
+- Underline Slide style now available for heading blocks
+
+**Accessibility Improvements:**
+- Enhanced focus states for logo link headings with visible outline
+- Fallback support for browsers without background-clip text support
+- Reduced motion support for all heading animations
+- Print-friendly styles that remove effects for printed documents
+- RTL (right-to-left) language support for underline animations
+
+### Changed
+**Code Organization:**
+- Moved heading-specific styles from `core-paragraph.css` to new `core-heading.css`
+- Cleaner separation of concerns between paragraph and heading styles
+- Improved maintainability with dedicated heading stylesheet
+
+### Technical
+- Created `assets/styles/core-heading.css` with 157 lines of heading-specific styles
+- Registered 'logo-link' block style for core/heading in `functions.php`
+- Removed 106 lines of heading styles from `core-paragraph.css`
+- All heading styles include accessibility features (reduced motion, print, RTL support)",
+
 ## [3.0.0] - 2026-02-11
 
 ### Changed - BREAKING: Page template simplification
