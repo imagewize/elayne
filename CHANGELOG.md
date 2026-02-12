@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.1] - 2026-02-12
+
+### Changed
+**Pattern Icons Replacement:**
+- Replaced emoji icons with SVG icons in the announcement banner and legal contact pattern for better visual consistency and accessibility
+- Added vertical alignment to the announcement banner group for improved layout
+
+### Added
+**New SVG Icons:**
+- Added `icon-clock.svg` for office hours display
+- Added `icon-location.svg` for office location display
+- Added `icon-star-celebration.svg` for announcement banners (currentColor)
+- Added `icon-star-celebration-white.svg` for announcement banners on dark backgrounds (white fill #FFFFFF)
+- Added `icon-phone.svg` for phone contact information
+- Added `icon-email.svg` for email contact information",
+
 ## [3.1.0] - 2026-02-12
 
 ### Added

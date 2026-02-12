@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.1.0
+Stable tag: 3.1.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.1.1 - 02/12/26 =
+* CHANGED: Pattern icons - Replaced emojis with SVG icons for better consistency
+* CHANGED: Announcement banner - Added vertical alignment to group layout
+* ADDED: New SVG icons - icon-clock, icon-location, icon-star-celebration, icon-star-celebration-white, icon-phone, icon-email
+* ADDED: White star SVG variant (icon-star-celebration-white.svg) for visibility on dark backgrounds"
+
 
 = 3.1.0 - 02/12/26 =
 * ADDED: New dedicated CSS file for heading block styles (core-heading.css)
