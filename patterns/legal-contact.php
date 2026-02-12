@@ -10,8 +10,8 @@
 ?>
 <!-- wp:group {"metadata":{"name":"Legal Contact Information","categories":["elayne/legal","elayne/contact"],"patternName":"elayne/legal-contact"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"},"blockGap":"var:preset|spacing|large"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"default"}} -->
-	<div class="wp-block-group alignwide has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"},"blockGap":"var:preset|spacing|large"}},"backgroundColor":"base","layout":{"type":"default"}} -->
+	<div class="wp-block-group alignwide has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
 		<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xx-large","left":"var:preset|spacing|xx-large"}}}} -->
 		<div class="wp-block-columns">
 			<!-- wp:column {"width":"40%","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}}} -->
@@ -26,8 +26,8 @@
 
 				<!-- wp:buttons {} -->
 				<div class="wp-block-buttons">
-					<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"}}} -->
-					<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Contact Us Today', 'elayne' ); ?></a></div>
+					<!-- wp:button {"backgroundColor":"primary","textColor":"base"} -->
+					<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button"><?php esc_html_e( 'Contact Us Today', 'elayne' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->
@@ -40,11 +40,11 @@
 				<div class="wp-block-columns">
 					<!-- wp:column -->
 					<div class="wp-block-column">
-						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}},"border":{"radius":"8px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-						<div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
-							<!-- wp:paragraph {"align":"left","style":{"typography":{"fontSize":"32px","lineHeight":"1"}},"textColor":"primary"} -->
-							<p class="has-text-align-left has-primary-color has-text-color" style="font-size:32px;line-height:1">📞</p>
-							<!-- /wp:paragraph -->
+						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+						<div class="wp-block-group has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
+							<!-- wp:image {"width":"32px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+							<figure class="wp-block-image size-full is-resized is-style-default"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-phone.svg" alt="" style="width:32px"/></figure>
+							<!-- /wp:image -->
 
 							<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}}} -->
 							<h4 class="wp-block-heading" style="font-weight:600"><?php esc_html_e( 'Phone', 'elayne' ); ?></h4>
@@ -60,11 +60,11 @@
 
 					<!-- wp:column -->
 					<div class="wp-block-column">
-						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}},"border":{"radius":"8px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-						<div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
-							<!-- wp:paragraph {"align":"left","style":{"typography":{"fontSize":"32px","lineHeight":"1"}},"textColor":"primary"} -->
-							<p class="has-text-align-left has-primary-color has-text-color" style="font-size:32px;line-height:1">✉️</p>
-							<!-- /wp:paragraph -->
+						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+						<div class="wp-block-group has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
+							<!-- wp:image {"width":"32px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+							<figure class="wp-block-image size-full is-resized is-style-default"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-email.svg" alt="" style="width:32px"/></figure>
+							<!-- /wp:image -->
 
 							<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}}} -->
 							<h4 class="wp-block-heading" style="font-weight:600"><?php esc_html_e( 'Email', 'elayne' ); ?></h4>
@@ -84,11 +84,11 @@
 				<div class="wp-block-columns">
 					<!-- wp:column -->
 					<div class="wp-block-column">
-						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}},"border":{"radius":"8px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-						<div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
-							<!-- wp:paragraph {"align":"left","style":{"typography":{"fontSize":"32px","lineHeight":"1"}},"textColor":"primary"} -->
-							<p class="has-text-align-left has-primary-color has-text-color" style="font-size:32px;line-height:1">📍</p>
-							<!-- /wp:paragraph -->
+						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+						<div class="wp-block-group has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
+							<!-- wp:image {"width":"32px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+							<figure class="wp-block-image size-full is-resized is-style-default"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-location.svg" alt="" style="width:32px"/></figure>
+							<!-- /wp:image -->
 
 							<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}}} -->
 							<h4 class="wp-block-heading" style="font-weight:600"><?php esc_html_e( 'Office Location', 'elayne' ); ?></h4>
@@ -104,11 +104,11 @@
 
 					<!-- wp:column -->
 					<div class="wp-block-column">
-						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}},"border":{"radius":"8px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-						<div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
-							<!-- wp:paragraph {"align":"left","style":{"typography":{"fontSize":"32px","lineHeight":"1"}},"textColor":"primary"} -->
-							<p class="has-text-align-left has-primary-color has-text-color" style="font-size:32px;line-height:1">🕐</p>
-							<!-- /wp:paragraph -->
+						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+						<div class="wp-block-group has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
+							<!-- wp:image {"width":"32px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+							<figure class="wp-block-image size-full is-resized is-style-default"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-clock.svg" alt="" style="width:32px"/></figure>
+							<!-- /wp:image -->
 
 							<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}}} -->
 							<h4 class="wp-block-heading" style="font-weight:600"><?php esc_html_e( 'Office Hours', 'elayne' ); ?></h4>

@@ -177,10 +177,51 @@ jobs:
           			// Note: wp:columns is acceptable for 2-column layouts (they stack to 1)
           			// Only flag when there are 3+ columns in CONTENT patterns (not templates).
           			if ( ! $is_structural && false !== strpos( $content, 'wp:columns' ) ) {
-          				// Count the number of column blocks.
-          				preg_match_all( '/<!-- wp:column/', $content, $matches );
-          				if ( count( $matches[0] ) >= 3 ) {
-          					$issues[] = 'Using wp:columns for 3+ columns instead of responsive grid layout (use minimumColumnWidth)';
+          				// Find top-level wp:columns blocks by tracking nesting depth
+          				// This prevents false positives from nested column layouts.
+          				$lines = explode( "\n", $content );
+          				$depth = 0;
+          				$current_block_lines = array();
+          				$top_level_blocks = array();
+
+          				foreach ( $lines as $line ) {
+          					if ( false !== strpos( $line, '<!-- wp:columns' ) ) {
+          						if ( 0 === $depth ) {
+          							$current_block_lines = array();
+          						}
+          						$current_block_lines[] = $line;
+          						$depth++;
+          					} elseif ( false !== strpos( $line, '<!-- /wp:columns -->' ) ) {
+          						$current_block_lines[] = $line;
+          						$depth--;
+          						if ( 0 === $depth ) {
+          							$top_level_blocks[] = implode( "\n", $current_block_lines );
+          						}
+          					} elseif ( $depth > 0 ) {
+          						$current_block_lines[] = $line;
+          					}
+          				}
+
+          				// Check each top-level columns block for direct column children.
+          				foreach ( $top_level_blocks as $block ) {
+          					$block_lines = explode( "\n", $block );
+          					$col_depth = 0;
+          					$direct_columns = 0;
+
+          					foreach ( $block_lines as $line ) {
+          						if ( false !== strpos( $line, '<!-- wp:columns' ) ) {
+          							$col_depth++;
+          						} elseif ( false !== strpos( $line, '<!-- /wp:columns -->' ) ) {
+          							$col_depth--;
+          						} elseif ( false !== strpos( $line, '<!-- wp:column' ) && 1 === $col_depth ) {
+          							$direct_columns++;
+          						}
+          					}
+
+          					if ( $direct_columns >= 3 ) {
+          						$issues[] = 'Using wp:columns for 3+ columns instead of responsive grid layout (use minimumColumnWidth)';
+          						break; // Only report once per pattern.
+          					}
           				}
           			}
 
