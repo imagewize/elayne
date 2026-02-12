@@ -1,0 +1,157 @@
+/**
+ * Elayne Theme - Heading Styles
+ * Pure CSS heading text effects and link styles
+ * Version: 1.0.0
+ */
+
+/* ===========================
+   HEADING STYLE: GRADIENT TEXT
+   Gradient background clipped to text
+   =========================== */
+
+.is-style-gradient-text {
+	background: linear-gradient(
+		135deg,
+		var(--wp--preset--color--primary) 0%,
+		var(--wp--preset--color--main) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: var(--wp--preset--color--primary); /* Fallback for browsers without support */
+	transition: filter 0.3s ease;
+}
+
+.is-style-gradient-text:hover {
+	filter: brightness(1.2);
+}
+
+/* ===========================
+   HEADING STYLE: GRADIENT TEXT ANIMATED
+   Animated gradient that shifts on hover
+   =========================== */
+
+.is-style-gradient-text-animated {
+	background: linear-gradient(
+		135deg,
+		var(--wp--preset--color--primary) 0%,
+		var(--wp--preset--color--main) 50%,
+		var(--wp--preset--color--primary) 100%
+	);
+	background-size: 200% 200%;
+	background-position: 0% 50%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: var(--wp--preset--color--primary); /* Fallback */
+	transition: background-position 0.5s ease;
+}
+
+.is-style-gradient-text-animated:hover {
+	background-position: 100% 50%;
+}
+
+/* ===========================
+   HEADING STYLE: UNDERLINE SLIDE
+   Animated underline for headings
+   =========================== */
+
+.is-style-underline-slide {
+	position: relative;
+	display: inline-block;
+	padding-bottom: 0.5em;
+}
+
+.is-style-underline-slide::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background: currentColor;
+	transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.is-style-underline-slide:hover::after {
+	width: 100%;
+}
+
+/* ===========================
+   HEADING STYLE: LOGO LINK
+   Link style for logo/brand headings
+   Removes underline decoration on hover
+   =========================== */
+
+.is-style-logo-link a {
+	text-decoration: none;
+}
+
+.is-style-logo-link a:hover,
+.is-style-logo-link a:focus {
+	text-decoration: none;
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+/* Enhanced focus states for logo links */
+.is-style-logo-link a:focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+/* Ensure gradient text remains readable */
+@supports not (background-clip: text) {
+	.is-style-gradient-text,
+	.is-style-gradient-text-animated {
+		background: none;
+		-webkit-text-fill-color: inherit;
+		color: var(--wp--preset--color--primary);
+	}
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	.is-style-underline-slide::after,
+	.is-style-gradient-text,
+	.is-style-gradient-text-animated {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* ===========================
+   PRINT STYLES
+   Remove all effects for print
+   =========================== */
+
+@media print {
+	.is-style-underline-slide::after {
+		display: none !important;
+	}
+
+	.is-style-gradient-text,
+	.is-style-gradient-text-animated {
+		background: none !important;
+		-webkit-text-fill-color: inherit !important;
+		color: var(--wp--preset--color--primary) !important;
+		filter: none !important;
+	}
+
+	.is-style-logo-link a {
+		text-decoration: none;
+	}
+}
+
+/* ===========================
+   RTL LANGUAGE SUPPORT
+   =========================== */
+
+[dir="rtl"] .is-style-underline-slide::after {
+	left: auto;
+	right: 0;
+}

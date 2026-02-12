@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.0.0
+Stable tag: 3.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,15 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.1.0 - 02/12/26 =
+* ADDED: New dedicated CSS file for heading block styles (core-heading.css)
+* ADDED: 'Logo Link' heading style - Removes underline on links for brand/logo headings
+* ADDED: Gradient Text, Gradient Text Animated, and Underline Slide styles now available for headings
+* ADDED: Enhanced accessibility - Focus states, reduced motion, print support, RTL language support for heading styles
+* CHANGED: Code organization - Moved heading-specific styles from core-paragraph.css to dedicated core-heading.css
+* TECHNICAL: Registered 'logo-link' block style in functions.php, improved code separation and maintainability"
+
 
 = 3.0.0 - 02/11/26 =
 * BREAKING CHANGE: Page template simplification - Reduced from 5 templates to 2 active templates.
