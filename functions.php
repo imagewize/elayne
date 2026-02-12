@@ -201,6 +201,7 @@ function elayne_register_effect_block_styles() {
 			'gradient-text'          => __( 'Gradient Text', 'elayne' ),
 			'gradient-text-animated' => __( 'Gradient Text Animated', 'elayne' ),
 			'underline-slide'        => __( 'Underline Slide', 'elayne' ),
+			'logo-link'              => __( 'Logo Link', 'elayne' ),
 		),
 		'core/list'      => array(
 			'animated-markers' => __( 'Animated Markers', 'elayne' ),
