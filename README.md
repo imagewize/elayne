@@ -23,7 +23,7 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 | Action | Link |
 | --- | --- |
 | **View Demo** | [demo.imagewize.com](https://demo.imagewize.com) |
-| **Documentation** | [imagewize.com/resources/elayne](https://imagewize.com/resources/elayne) |
+| **Documentation** | [imagewize.com/themes/elayne](https://imagewize.com/themes/elayne) |
 | **Support** | [imagewize.com/support](https://imagewize.com/support) |
 
 ### Requirements
@@ -95,7 +95,7 @@ All effects are pure CSS, accessible, and optimized for performance. Apply via *
 
 ## Getting Started
 
-Access the WordPress Site Editor at **Appearance → Editor** to customize your site. Insert patterns, edit templates, and adjust global styles — all with drag-and-drop simplicity. Visit the [documentation](https://imagewize.com/resources/elayne) for detailed tutorials.
+Access the WordPress Site Editor at **Appearance → Editor** to customize your site. Insert patterns, edit templates, and adjust global styles — all with drag-and-drop simplicity. Visit the [documentation](https://imagewize.com/themes/elayne) for detailed tutorials.
 
 ## Companion Plugin: Elayne Blocks
 
@@ -114,7 +114,7 @@ Download from the [Elayne Blocks repository](https://github.com/imagewize/elayne
 ## Community & Support
 
 - **Support**: [imagewize.com/support](https://imagewize.com/support)
-- **Documentation**: [imagewize.com/resources/elayne](https://imagewize.com/resources/elayne)
+- **Documentation**: [imagewize.com/themes/elayne](https://imagewize.com/themes/elayne)
 - **Website**: [imagewize.com](https://imagewize.com)
 - **Contributing**: See [CONTRIBUTING.md](CONTRIBUTING.md) for developer documentation
 

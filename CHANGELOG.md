@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.4] - 2026-02-13
+
+### Changed
+
+**Documentation URL Update:**
+- Updated theme documentation links from `/resources/elayne` to `/themes/elayne`
+- Affects README links in "Quick Links" table, "Getting Started" section, and "Community & Support" section
+- Reflects new documentation location on imagewize.com",
+
 ## [3.1.3] - 2026-02-12
 
 ### Changed

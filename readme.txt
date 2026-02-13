@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.1.3
+Stable tag: 3.1.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.1.4 - 02/13/26 =
+* CHANGED: Documentation URL - Updated links from imagewize.com/resources/elayne to imagewize.com/themes/elayne to reflect new documentation location."
+
 
 = 3.1.3 - 02/12/26 =
 * CHANGED: Pattern images - Optimized file sizes for banner-boats-16x9.webp, cafe-terrace-hero.webp, and banner-boats-4x3.webp to improve page load performance.
