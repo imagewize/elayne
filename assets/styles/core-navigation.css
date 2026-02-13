@@ -530,18 +530,93 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
    For headers where hamburger is on the right (e.g. social-logo-hamburger patterns).
    Aligns overlay menu items, chevrons, and submenus to the right.
    -------------------------------------------- */
+
+/* Position overlay content container on the right side
+   Note: !important needed to override WP core's centering styles */
+.has-right-aligned-overlay .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	margin-left: auto !important;
+	margin-right: 0 !important;
+	max-width: 400px;
+	padding-right: var(--nav-spacing-small);
+}
+
+/* Right-align the main navigation container
+   Note: !important needed to override WP core's align-items: center */
 .has-right-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-	align-items: flex-end;
+	align-items: flex-end !important;
 }
 
-.has-right-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation-item__content {
-	text-align: right;
+/* Right-align menu items
+   Note: !important needed to override WP core's centering */
+.has-right-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation-item {
+	text-align: right !important;
+	justify-content: flex-end !important;
 }
 
+/* Right-align parent wrappers for clickable parents feature */
 .has-right-aligned-overlay .wp-block-navigation__responsive-container-content .moiraine-nav-parent-wrapper {
 	justify-content: flex-end;
 }
 
+/* Right-align submenus */
 .has-right-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
-	align-items: flex-end;
+	align-items: flex-end !important;
+}
+
+/* Position close (X) button on the right
+   Note: !important needed to override WP core positioning */
+.has-right-aligned-overlay .wp-block-navigation__responsive-container-close {
+	position: absolute !important;
+	top: var(--nav-spacing-small) !important;
+	right: var(--nav-spacing-small) !important;
+	left: auto !important;
+	z-index: var(--nav-z-close-button);
+}
+
+/* --------------------------------------------
+   6.4 Left-Aligned Overlay (`.has-left-aligned-overlay`)
+   For headers where hamburger is on the left (e.g. header-mobile pattern).
+   Aligns overlay menu items, chevrons, and close button to the left.
+   -------------------------------------------- */
+
+/* Position overlay content container on the left side
+   Note: !important needed to override WP core's centering styles */
+.has-left-aligned-overlay .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	margin-left: 0 !important;
+	margin-right: auto !important;
+	max-width: 400px;
+	padding-left: var(--nav-spacing-small);
+}
+
+/* Left-align the main navigation container
+   Note: !important needed to override WP core's align-items: center */
+.has-left-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+	align-items: flex-start !important;
+}
+
+/* Left-align menu items
+   Note: !important needed to override WP core's centering */
+.has-left-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation-item {
+	text-align: left !important;
+	justify-content: flex-start !important;
+}
+
+/* Left-align parent wrappers for clickable parents feature */
+.has-left-aligned-overlay .wp-block-navigation__responsive-container-content .moiraine-nav-parent-wrapper {
+	justify-content: flex-start;
+}
+
+/* Left-align submenus */
+.has-left-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
+	align-items: flex-start !important;
+}
+
+/* Position close (X) button on the left
+   Note: !important needed to override WP core positioning */
+.has-left-aligned-overlay .wp-block-navigation__responsive-container-close {
+	position: absolute !important;
+	top: var(--nav-spacing-small) !important;
+	left: var(--nav-spacing-small) !important;
+	right: auto !important;
+	z-index: var(--nav-z-close-button);
 }
