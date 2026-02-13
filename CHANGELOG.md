@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Overlay content, menu items, chevrons, submenus, and close button now properly align based on hamburger menu position
 - Improved visual consistency for different header patterns
 
+### Fixed
+**Pattern Compliance:**
+- Fixed header-mobile pattern margin reset - Added complete margin reset (`"margin":{"top":"0","bottom":"0"}`) to full-width header group with background color to prevent gaps between patterns
+
 ### Technical
 **CSS Improvements:**
 - Added `.has-left-aligned-overlay` and `.has-right-aligned-overlay` classes for flexible overlay positioning

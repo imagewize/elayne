@@ -165,6 +165,7 @@ Elayne includes custom image sizes optimized for different layouts:
 
 = 3.1.5 - 02/13/26 =
 * CHANGED: Navigation overlay alignment - Added left/right alignment support for mobile menus
+* FIXED: Pattern compliance - Fixed header-mobile pattern margin reset to prevent gaps between patterns
 * TECHNICAL: CSS improvements - Added alignment classes and overrides for overlay positioning
 
 
