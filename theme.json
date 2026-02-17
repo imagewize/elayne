@@ -403,7 +403,13 @@
 				"elements": {
 					"link": {
 						"typography": {
-							"fontWeight": "500"
+							"fontWeight": "500",
+							"textDecoration": "underline"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
 						}
 					}
 				}
