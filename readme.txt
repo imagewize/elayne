@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.1.5
+Stable tag: 3.1.6
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,15 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.1.6 - 02/17/26 =
+* CHANGED: Post tag term button color updated from `secondary` to `main-accent` across all four post template patterns (centered, left sidebar, right sidebar, wide).
+* CHANGED: Comment action links (edit, reply) color updated from `secondary` to `main-accent` in all post templates.
+* ADDED: Link underline styles for post content, comment content, and widgets to meet WordPress.org requirements; nav/button contexts exempt.
+* ADDED: `textDecoration: underline` on body links in theme.json including hover state.
+* FIXED: Comment form submit button spacing - added 1rem top margin for better visual separation.
+* TECHNICAL: Removed redundant index.php from theme root."
+
 
 = 3.1.5 - 02/13/26 =
 * CHANGED: Navigation overlay alignment - Added left/right alignment support for mobile menus
