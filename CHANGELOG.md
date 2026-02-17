@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6] - 2026-02-17
+
+### Changed
+
+**Post Tag Colors - Replaced Secondary with Main Accent:**
+- Updated post tag term button color from `secondary` to `main-accent` across all post template patterns
+- Affects all four post layout templates: centered, left sidebar, right sidebar, and wide
+- Post tags and comment action links now consistently use the main accent color
+
+**Comment Action Links Color Consistency:**
+- Updated comment edit and reply link colors from `secondary` to `main-accent` in all post templates
+- CSS class updated from `has-secondary-color` to `has-main-accent-color` for proper styling
+
+**Link Underline Styles (WordPress.org Requirement):**
+- Added underline styles for links in post content (`.wp-block-post-content`), comment content, and widgets
+- Navigation-like contexts (menus, buttons, post titles) remain exempt from underline styling
+- Added `textDecoration: underline` to body link elements in `theme.json` including hover state
+
+### Fixed
+
+**Comment Form Submit Button Spacing:**
+- Added `margin-top: 1rem` to the comment form submit button for improved visual separation
+
+### Technical
+
+**Removed Redundant index.php:**
+- Deleted `index.php` from Elayne theme root (required file for WP.org review compliance — silence is golden placeholder removed as it is not needed for block themes)",
+
 ## [3.1.5] - 2026-02-13
 
 ### Changed

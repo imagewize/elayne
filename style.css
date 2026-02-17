@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 3.1.5
+Version: 3.1.6
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -276,6 +276,23 @@ figure.is-avatar,
     a {
         text-decoration-thickness: .1rem !important;
     }
+}
+
+/* WordPress.org requirement: links in body content must be underlined.
+   Covers block content, comments, and text widgets.
+   Navigation-like contexts (menus, buttons, post titles) remain exempt. */
+.wp-block-post-content a:not(.wp-element-button),
+.comment-content a:not(.wp-element-button),
+.widget a:not(.wp-element-button) {
+    text-decoration: underline;
+}
+
+/* ========================================================================
+   Comment Form Spacing
+   ======================================================================== */
+
+.wp-block-post-comments-form #submit {
+    margin-top: 1rem;
 }
 
 /* ========================================================================
