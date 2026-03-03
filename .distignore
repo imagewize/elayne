@@ -12,6 +12,9 @@ composer.json
 composer.lock
 package.json
 
+# AI guidance files
+.vibe/*
+
 # Documentation and scripts
 AGENTS.md
 CLAUDE.md
