@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.7] - 2026-03-03
+
+### Added
+- **Mistral Vibe AI Integration**: Added `.vibe/prompt.md` with project-specific instructions for working with Mistral Vibe AI agent
+- **Distribution Exclusion**: Added `.vibe/*` to `.distignore` to exclude AI guidance files from theme zip distributions
+
 ## [3.1.6] - 2026-02-17
 
 ### Changed
