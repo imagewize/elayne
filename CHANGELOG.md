@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.8] - 2026-03-04
+
+### Technical
+
+**Vibe Prompt Configuration:**
+- Added `.vibe/prompts/vibe.md` for Mistral Vibe prompting
+- Added `.vibe/config.toml` with Mistral Vibe Config
+- Vibe Tooling files excluded from theme builds
+
 ## [3.1.7] - 2026-03-03
 
 ### Added
