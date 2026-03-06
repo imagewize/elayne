@@ -7,6 +7,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.0] - 2026-03-06
+
+### Fixed
+
+**WordPress.org Review — Navigation Submenus (Issue 1):**
+- Removed `openSubmenusOnClick`, `hasClickableParents`, and `hasImprovedChevrons` attributes from all header patterns (`header-standard`, `header-mobile`, `header-double-bar`, `header-social-logo-hamburger`, `header-social-logo-hamburger-light`, `header-standard-with-tel-number`, `spa-home-hero`). WordPress native hover/focus behaviour now handles submenu visibility without theme interference.
+- Removed "prevent hover" CSS override block from `core-navigation.css` that was suppressing WP core `:hover`/`focus-within` submenu display.
+- Added `::before` pseudo-element bridge on desktop submenu containers so `:hover` is maintained across the `margin-top` gap between parent item and dropdown.
+- **Mobile overlay rebuild:** Replaced `opacity`/`visibility`/`height` submenu toggle with `display: none !important` / `display: flex !important` driven by `:has(.wp-block-navigation-submenu__toggle[aria-expanded="true"])`. Submenu icon (`.wp-block-navigation__submenu-icon`) repositioned absolutely at `right: 0; top: 0; width: 44px; height: 44px` within the `li`. Removed chevron-moving JS section (section 1 of `navigation-frontend.js`). Removed dash pseudo-element (`content: "\2014"`) prepended to submenu items in mobile overlay. Added `padding-right: 44px` on parent link content to prevent text running under icon.
+
+**WordPress.org Review — Template Part Area (Issue 2):**
+- Registered `"menu"` template part area in `functions.php` via `default_wp_template_part_areas` filter. Resolves PHP notice: `_filter_block_template_part_area(): "menu" is not a supported wp_template_part area value`.
+
+**WordPress.org Review — Translation-Ready Strings (Issue 3):**
+- Replaced all `'moiraine'` text domains with `'elayne'` in `assets/js/block-extensions/navigation.js` and `assets/js/block-extensions/post-excerpt.js`.
+- Localized frontend aria-label strings in `functions.php` via `wp_localize_script()`.
+
+**WordPress.org Review — External Image Sources (Issue 4):**
+- Removed hardcoded `imagewize.com` link from `parts/sidebar.html`. No external image or link sources remain in the theme package.
+
+**WordPress.org Review — JavaScript Prefixing (Issue 5):**
+- Renamed all `moiraine-*` CSS classes to `elayne-*` in `assets/styles/core-navigation.css` (`.moiraine-hamburger-large`, `.moiraine-nav-parent-wrapper`, `.moiraine-nav-parent-link`, `.moiraine-nav-toggle`).
+- Renamed all `moiraine/` filter name prefixes to `elayne/` in both block extension JS files.
+- Renamed `moiraine-linked-excerpt` CSS class and `moiraine-excerpt-link-settings` panel `className` to `elayne-*` equivalents.
+
+### Changed
+
+**`hasImprovedChevrons` feature removed entirely:**
+- Removed `hasImprovedChevrons` attribute and its `ToggleControl` from `assets/js/block-extensions/navigation.js` — no longer needed with icon-absolute mobile overlay positioning.
+- Removed `$has_improved_chevrons` PHP class injection from `inc/block-extensions.php`.
+- Removed CSS section 6.2 (Improved Chevrons, ~50 lines) from `core-navigation.css`.
+- Removed dead `has-clickable-parents` CSS section (~90 lines) from `core-navigation.css`.
+
+### Technical
+
+- Deleted `assets/js/navigation-frontend.js` (clickable parents DOM manipulation — no longer needed).
+- Added file-level docblock and inline comments to `assets/js/block-extensions/navigation.js` documenting the dropdown spacing feature, CSS custom property data flow, and enqueue location.
+
 ## [3.1.8] - 2026-03-04
 
 ### Technical
