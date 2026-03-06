@@ -8,8 +8,8 @@
    4. Mobile Navigation & Overlay
    5. Close Button & Hamburger Icon
    6. Elayne Navigation Extensions
-      6.1 Clickable Parents
-      6.2 Improved Chevrons
+      6.1 Right-Aligned Overlay
+      6.2 Left-Aligned Overlay
 
    ============================================ */
 
@@ -75,6 +75,18 @@
 	box-shadow: none !important;
 }
 
+/* Hover bridge: prevents dropdown from closing when cursor crosses the margin-top gap */
+@media only screen and (min-width: 600px) {
+	header .wp-block-navigation:not(.is-menu-open) .wp-block-navigation__submenu-container::before {
+		content: '';
+		position: absolute;
+		top: calc(var(--nav-dropdown-spacing, 16px) * -1);
+		left: 0;
+		right: 0;
+		height: var(--nav-dropdown-spacing, 16px);
+	}
+}
+
 /* Nested dropdown positioning */
 header .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation__submenu-container {
 	margin-left: 0;
@@ -105,6 +117,8 @@ header .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-na
 .wp-block-navigation .wp-block-navigation__submenu-icon svg {
 	color: inherit;
 	transition: transform 0.2s ease;
+	width: var(--nav-chevron-size);
+	height: var(--nav-chevron-size);
 }
 
 .wp-block-navigation .wp-block-navigation__submenu-icon svg path {
@@ -121,14 +135,45 @@ header .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-na
 }
 
 /* Rotate chevron when submenu is open (mobile overlay) */
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child[open] > .wp-block-navigation-submenu__toggle .wp-block-navigation__submenu-icon svg,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-submenu__toggle .wp-block-navigation__submenu-icon svg {
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle[aria-expanded="true"] .wp-block-navigation__submenu-icon svg {
+	/* transform: translateY(-50%) rotate(180deg); */
 	transform: rotate(180deg);
 }
 
 /* Override WordPress core hiding of chevrons in overlay - make them visible */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-icon {
 	display: inline-block;
+}
+
+/* Position context for chevron in overlay */
+.wp-block-navigation__responsive-container.is-menu-open .has-child {
+	position: relative;
+}
+
+/* Position the chevron at the right edge of the item */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-icon {
+	position: absolute;
+	right: 0;
+	/* top: 50%; */
+	/* transform: translateY(-50%); */
+	width: 32px;
+	height: 32px;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	z-index: 10;
+}
+
+/* Ensure chevron SVG uses the correct size */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-icon svg {
+	width: var(--nav-chevron-size);
+	height: var(--nav-chevron-size);
+}
+
+/* Right padding so link text does not run under the chevron */
+.wp-block-navigation__responsive-container.is-menu-open .has-child > .wp-block-navigation-item__content {
+	padding-right: 32px;
 }
 
 /* Dropdown link padding */
@@ -172,11 +217,11 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	padding-top: 0;
 }
 
-/* Hide submenus by default in overlay for standard navigation (not has-clickable-parents).
+/* Hide submenus by default in overlay.
    WP core forces opacity:1 + visibility:visible for all submenus in overlay mode.
    We counter with opacity:0 + visibility:hidden, matching WP core's own hide/show pattern.
    Only shows when the toggle button has aria-expanded="true" (WP Interactivity API). */
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation:not(.has-clickable-parents) .has-child .wp-block-navigation__submenu-container {
+.wp-block-navigation__responsive-container.is-menu-open .has-child .wp-block-navigation__submenu-container {
 	opacity: 0 !important;
 	visibility: hidden !important;
 	height: 0 !important;
@@ -184,7 +229,7 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	padding-top: 0 !important;
 }
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation:not(.has-clickable-parents) .has-child:has(.wp-block-navigation-submenu__toggle[aria-expanded="true"]) > .wp-block-navigation__submenu-container {
+.wp-block-navigation__responsive-container.is-menu-open .has-child:has(.wp-block-navigation-submenu__toggle[aria-expanded="true"]) > .wp-block-navigation__submenu-container {
 	opacity: 1 !important;
 	visibility: visible !important;
 	height: auto !important;
@@ -224,7 +269,7 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	}
 
 	.wp-block-navigation__responsive-container.is-menu-open.has-modal-open .wp-block-navigation__container > li {
-		width: auto;
+		width: 100%;
 		padding: 0;
 		position: relative;
 	}
@@ -232,15 +277,6 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	/* Submenu items auto width for proper chevron positioning */
 	.wp-block-navigation__responsive-container.is-menu-open.has-modal-open .wp-block-navigation__submenu-container li {
 		width: auto;
-	}
-
-	/* Dash before submenu items */
-	.wp-block-navigation__responsive-container.is-menu-open.has-modal-open .wp-block-navigation__container ul:not(.wp-block-page-list) li a:before {
-		content: "\2014";
-		position: absolute;
-		left: -30px;
-		line-height: 1;
-		opacity: .2;
 	}
 
 	.wp-block-navigation__responsive-container.is-menu-open.has-modal-open .wp-block-navigation__container ul li:hover a:hover:before {
@@ -317,14 +353,14 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 }
 
 /* Large hamburger icon */
-.moiraine-hamburger-large .wp-block-navigation__responsive-container-open svg,
-.moiraine-hamburger-large button[aria-label*="Open menu"] svg {
+.elayne-hamburger-large .wp-block-navigation__responsive-container-open svg,
+.elayne-hamburger-large button[aria-label*="Open menu"] svg {
 	width: 32px;
 	height: 32px;
 }
 
-.moiraine-hamburger-large .wp-block-navigation__responsive-container-open svg line,
-.moiraine-hamburger-large button[aria-label*="Open menu"] svg line {
+.elayne-hamburger-large .wp-block-navigation__responsive-container-open svg line,
+.elayne-hamburger-large button[aria-label*="Open menu"] svg line {
 	stroke-width: 2.5;
 }
 
@@ -333,200 +369,7 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
    ============================================ */
 
 /* --------------------------------------------
-   6.1 Clickable Parents (`.has-clickable-parents`)
-   -------------------------------------------- */
-
-/* Hide submenus by default
-   Note: !important required to override WP core's display rules for active/current menu items */
-.has-clickable-parents .wp-block-navigation-item .wp-block-navigation__submenu-container,
-.has-clickable-parents .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
-	display: none !important;
-}
-
-/* Prevent hover-based opening - only allow toggle click
-   Note: !important required to disable WP core's hover behavior */
-.has-clickable-parents .wp-block-navigation-item:hover > .wp-block-navigation__submenu-container,
-.has-clickable-parents .wp-block-navigation-item:focus-within > .wp-block-navigation__submenu-container,
-.has-clickable-parents .wp-block-navigation-submenu:hover > .wp-block-navigation__submenu-container,
-.has-clickable-parents .wp-block-navigation-submenu:focus-within > .wp-block-navigation__submenu-container {
-	display: none !important;
-}
-
-/* Show submenus when toggle is expanded
-   Note: !important required to override the hiding rules above */
-.has-clickable-parents li.has-child:has(.moiraine-nav-toggle[aria-expanded="true"]) > .wp-block-navigation__submenu-container,
-.has-clickable-parents li.wp-block-navigation-item.has-child:has(.moiraine-nav-toggle[aria-expanded="true"]) > .wp-block-navigation__submenu-container {
-	display: flex !important;
-	flex-direction: column !important;
-	visibility: visible !important;
-	opacity: 1 !important;
-	height: auto !important;
-	width: auto !important;
-	overflow: visible !important;
-}
-
-/* Desktop: Absolute positioning for dropdowns (not in overlay) */
-@media only screen and (min-width: 600px) {
-	.has-clickable-parents:not(.is-responsive) li.has-child:has(.moiraine-nav-toggle[aria-expanded="true"]) > .wp-block-navigation__submenu-container {
-		position: absolute;
-	}
-}
-
-/* Overlay: Relative positioning for natural flow
-   Note: !important on position needed to override desktop absolute positioning */
-.wp-block-navigation__responsive-container.is-menu-open.has-modal-open .has-clickable-parents li.has-child:has(.moiraine-nav-toggle[aria-expanded="true"]) > .wp-block-navigation__submenu-container {
-	position: relative !important;
-	width: 100%;
-}
-
-/* Overlay submenu styling (all screen sizes) */
-.wp-block-navigation__responsive-container.is-menu-open.has-modal-open .has-clickable-parents .wp-block-navigation__submenu-container {
-	background: var(--wp--preset--color--tertiary);
-	box-shadow: none;
-	padding-top: var(--nav-spacing-small);
-	padding-left: var(--nav-spacing-medium);
-	border-radius: 0;
-}
-
-/* Parent wrapper layout */
-.has-clickable-parents .moiraine-nav-parent-wrapper {
-	display: flex;
-	align-items: center;
-	gap: 0.25rem;
-	width: auto;
-}
-
-.has-clickable-parents .moiraine-nav-parent-link {
-	flex: 1;
-	text-decoration: inherit;
-	color: inherit;
-}
-
-.has-clickable-parents .moiraine-nav-parent-link:hover {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-}
-
-/* Toggle button */
-.has-clickable-parents .moiraine-nav-toggle {
-	flex-shrink: 0;
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 0.25rem;
-	color: inherit;
-	line-height: 1;
-	margin-bottom: 0.2rem;
-}
-
-.has-clickable-parents .moiraine-nav-toggle:hover {
-	opacity: 0.7;
-}
-
-.has-clickable-parents .moiraine-nav-toggle svg {
-	display: block;
-	width: var(--nav-chevron-size);
-	height: var(--nav-chevron-size);
-	transition: transform 0.2s ease;
-}
-
-.has-clickable-parents .moiraine-nav-toggle svg path {
-	stroke: currentColor;
-}
-
-/* Rotate chevron when submenu is expanded */
-.has-clickable-parents .moiraine-nav-toggle[aria-expanded="true"] svg {
-	transform: rotate(180deg);
-}
-
-/* Overlay: Full-width wrapper */
-.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents .moiraine-nav-parent-wrapper {
-	width: auto;
-	padding: var(--nav-spacing-half) 0;
-}
-
-/* Overlay: Ensure chevrons are visible
-   Note: !important on display needed to override WP core's chevron hiding in overlay */
-.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents .moiraine-nav-toggle {
-	display: flex !important;
-	align-items: center;
-	justify-content: center;
-}
-
-.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents .moiraine-nav-toggle .wp-block-navigation__submenu-icon {
-	display: inline-flex !important;
-	width: var(--nav-chevron-size);
-	height: var(--nav-chevron-size);
-}
-
-.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents .moiraine-nav-toggle svg {
-	display: block !important;
-	width: var(--nav-chevron-size);
-	height: var(--nav-chevron-size);
-	transition: transform 0.2s ease;
-}
-
-.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents .moiraine-nav-toggle svg path {
-	stroke: currentColor;
-	fill: none;
-}
-
-/* Rotate chevron in mobile overlay when expanded */
-.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents .moiraine-nav-toggle[aria-expanded="true"] svg {
-	transform: rotate(180deg);
-}
-
-/* --------------------------------------------
-   6.2 Improved Chevrons
-   -------------------------------------------- */
-
-/* Desktop: Inline chevron positioning */
-.has-improved-chevrons .wp-block-navigation-item {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.has-improved-chevrons .wp-block-navigation-item__content {
-	flex: 1;
-}
-
-.has-improved-chevrons .wp-block-navigation__submenu-icon {
-	flex-shrink: 0;
-	margin-left: 0.25rem;
-}
-
-/* Overlay: Inline chevrons on all screen sizes
-   Note: !important required here to override WordPress core's absolute positioning
-   that hides chevrons in overlay mode */
-.wp-block-navigation__responsive-container.is-menu-open .has-improved-chevrons .wp-block-navigation-item {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.wp-block-navigation__responsive-container.is-menu-open .has-improved-chevrons .wp-block-navigation__submenu-icon {
-	display: inline-flex !important;
-	margin-left: auto;
-	position: relative;
-	top: auto;
-	right: auto;
-}
-
-.wp-block-navigation__responsive-container.is-menu-open .has-improved-chevrons .wp-block-navigation-item__content {
-	width: auto;
-	flex: 1;
-}
-
-/* Combined: Clickable Parents + Improved Chevrons */
-/* Only add spacing in overlay mode where touch targets need more room */
-.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents.has-improved-chevrons .moiraine-nav-toggle {
-	margin-left: 0.25rem;
-}
-
-/* --------------------------------------------
-   6.3 Right-Aligned Overlay (`.has-right-aligned-overlay`)
+   6.1 Right-Aligned Overlay (`.has-right-aligned-overlay`)
    For headers where hamburger is on the right (e.g. social-logo-hamburger patterns).
    Aligns overlay menu items, chevrons, and submenus to the right.
    -------------------------------------------- */
@@ -553,11 +396,6 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 	justify-content: flex-end !important;
 }
 
-/* Right-align parent wrappers for clickable parents feature */
-.has-right-aligned-overlay .wp-block-navigation__responsive-container-content .moiraine-nav-parent-wrapper {
-	justify-content: flex-end;
-}
-
 /* Right-align submenus */
 .has-right-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
 	align-items: flex-end !important;
@@ -574,7 +412,7 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 }
 
 /* --------------------------------------------
-   6.4 Left-Aligned Overlay (`.has-left-aligned-overlay`)
+   6.2 Left-Aligned Overlay (`.has-left-aligned-overlay`)
    For headers where hamburger is on the left (e.g. header-mobile pattern).
    Aligns overlay menu items, chevrons, and close button to the left.
    -------------------------------------------- */
@@ -599,11 +437,6 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 .has-left-aligned-overlay .wp-block-navigation__responsive-container-content .wp-block-navigation-item {
 	text-align: left !important;
 	justify-content: flex-start !important;
-}
-
-/* Left-align parent wrappers for clickable parents feature */
-.has-left-aligned-overlay .wp-block-navigation__responsive-container-content .moiraine-nav-parent-wrapper {
-	justify-content: flex-start;
 }
 
 /* Left-align submenus */
