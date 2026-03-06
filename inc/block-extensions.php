@@ -69,22 +69,6 @@ function elayne_enqueue_block_extensions() {
         });',
 		'after'
 	);
-
-	// Navigation Extension.
-	$nav_js_file_path = $js_path . '/navigation.js';
-	$nav_asset_file   = get_theme_file_uri( '/assets/js/block-extensions/navigation.js' );
-
-	$nav_asset_version = file_exists( $nav_js_file_path )
-		? filemtime( $nav_js_file_path )
-		: wp_get_theme()->get( 'Version' );
-
-	wp_enqueue_script(
-		'elayne-navigation-extension',
-		$nav_asset_file,
-		array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-block-editor', 'wp-compose', 'wp-hooks', 'wp-i18n' ),
-		$nav_asset_version,
-		true
-	);
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\elayne_enqueue_block_extensions' );
 
