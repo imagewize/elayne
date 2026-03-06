@@ -49,14 +49,14 @@
                     createElement(
                         PanelBody,
                         {
-                            title: __('Link Settings', 'moiraine'),
+                            title: __('Link Settings', 'elayne'),
                             initialOpen: false,
-                            className: "moiraine-excerpt-link-settings"
+                            className: "elayne-excerpt-link-settings"
                         },
                         createElement(
                             ToggleControl,
                             {
-                                label: __('Link excerpt to post', 'moiraine'),
+                                label: __('Link excerpt to post', 'elayne'),
                                 checked: !!linkToPost,
                                 onChange: function() {
                                     setAttributes({ linkToPost: !linkToPost });
@@ -66,7 +66,7 @@
                         linkToPost && createElement(
                             ToggleControl,
                             {
-                                label: __('Underline link', 'moiraine'),
+                                label: __('Underline link', 'elayne'),
                                 checked: !!underlineLink,
                                 onChange: function() {
                                     setAttributes({ underlineLink: !underlineLink });
@@ -95,7 +95,7 @@
             }
 
             // Create the class name based on attributes
-            const className = 'moiraine-linked-excerpt' + (underlineLink ? ' has-underline' : ' no-underline');
+            const className = 'elayne-linked-excerpt' + (underlineLink ? ' has-underline' : ' no-underline');
 
             // Add custom class
             return createElement(BlockListBlock, {
@@ -108,19 +108,19 @@
     // Register our filters
     addFilter(
         'blocks.registerBlockType',
-        'moiraine/post-excerpt-link-attributes',
+        'elayne/post-excerpt-link-attributes',
         addAttributes
     );
 
     addFilter(
         'editor.BlockEdit',
-        'moiraine/post-excerpt-link-controls',
+        'elayne/post-excerpt-link-controls',
         withInspectorControls
     );
 
     addFilter(
         'editor.BlockListBlock',
-        'moiraine/post-excerpt-link-class',
+        'elayne/post-excerpt-link-class',
         withCustomClassName
     );
 })(window.wp);
