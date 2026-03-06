@@ -1,13 +1,34 @@
+/**
+ * Block Extension: core/navigation
+ *
+ * Adds an "Elayne Navigation" panel to the block inspector for core/navigation.
+ * Currently exposes one setting:
+ *
+ *   dropdownSpacing (number, default 16px)
+ *     Controls the gap between a top-level menu item and its dropdown container
+ *     on desktop. The value is written as an inline CSS custom property
+ *     (--elayne-dropdown-spacing) by the PHP render_block filter in
+ *     inc/block-extensions.php, which then applies it via core-navigation.css.
+ *     Has no effect in the mobile overlay (submenu opens inline, no gap needed).
+ *
+ * Why this file exists:
+ *   WordPress core does not expose dropdown spacing as a block attribute.
+ *   Rather than hardcoding a pixel value in CSS, this extension lets the editor
+ *   adjust the gap per navigation block instance directly from the sidebar.
+ *
+ * Enqueued by: inc/block-extensions.php → elayne_enqueue_block_extensions()
+ * Text domain: elayne
+ */
 (function(wp) {
     const { __ } = wp.i18n;
     const { addFilter } = wp.hooks;
     const { createHigherOrderComponent } = wp.compose;
     const { Fragment } = wp.element;
     const { InspectorControls } = wp.blockEditor;
-    const { PanelBody, ToggleControl, RangeControl } = wp.components;
+    const { PanelBody, RangeControl } = wp.components;
     const { createElement } = wp.element;
 
-    // Add attributes to the navigation block
+    // Registers the custom dropdownSpacing attribute on core/navigation.
     function addAttributes(settings, name) {
         if (name !== 'core/navigation') {
             return settings;
@@ -17,14 +38,6 @@
             ...settings,
             attributes: {
                 ...settings.attributes,
-                hasClickableParents: {
-                    type: 'boolean',
-                    default: false
-                },
-                hasImprovedChevrons: {
-                    type: 'boolean',
-                    default: false
-                },
                 dropdownSpacing: {
                     type: 'number',
                     default: 16
@@ -33,7 +46,7 @@
         };
     }
 
-    // Add inspector controls to the navigation block
+    // HOC: injects the "Elayne Navigation" panel into the block sidebar.
     const withInspectorControls = createHigherOrderComponent(function(BlockEdit) {
         return function(props) {
             if (props.name !== 'core/navigation') {
@@ -41,7 +54,7 @@
             }
 
             const { attributes, setAttributes } = props;
-            const { hasClickableParents, hasImprovedChevrons, dropdownSpacing } = attributes;
+            const { dropdownSpacing } = attributes;
 
             return createElement(
                 Fragment,
@@ -57,28 +70,6 @@
                             initialOpen: false,
                             className: "elayne-navigation-settings"
                         },
-                        createElement(
-                            ToggleControl,
-                            {
-                                label: __('Clickable parent items', 'elayne'),
-                                help: __('Make parent menu items clickable links (click text = navigate, click chevron = toggle submenu)', 'elayne'),
-                                checked: !!hasClickableParents,
-                                onChange: function() {
-                                    setAttributes({ hasClickableParents: !hasClickableParents });
-                                }
-                            }
-                        ),
-                        createElement(
-                            ToggleControl,
-                            {
-                                label: __('Improved chevron positioning', 'elayne'),
-                                help: __('Better inline positioning of chevrons on mobile', 'elayne'),
-                                checked: !!hasImprovedChevrons,
-                                onChange: function() {
-                                    setAttributes({ hasImprovedChevrons: !hasImprovedChevrons });
-                                }
-                            }
-                        ),
                         createElement(
                             RangeControl,
                             {
@@ -99,16 +90,16 @@
         };
     }, 'withInspectorControls');
 
-    // Register our filters
+    // Wire up both filters — attribute registration must run before BlockEdit HOC.
     addFilter(
         'blocks.registerBlockType',
-        'moiraine/navigation-attributes',
+        'elayne/navigation-attributes',
         addAttributes
     );
 
     addFilter(
         'editor.BlockEdit',
-        'moiraine/navigation-controls',
+        'elayne/navigation-controls',
         withInspectorControls
     );
 })(window.wp);

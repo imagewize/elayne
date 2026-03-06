@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.1.8
+Stable tag: 3.2.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,19 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.2.0 - 03/06/26 =
+* FIXED: Navigation submenus now open correctly on hover and keyboard focus (WP.org review requirement). Removed hasClickableParents, hasImprovedChevrons, and openSubmenusOnClick attributes from all header patterns — WordPress native hover/focus behaviour restored.
+* FIXED: Mobile overlay navigation rebuilt: replaced opacity/visibility/height toggle with display:none/flex driven by aria-expanded state; submenu icon positioned absolutely at right edge; removed chevron-moving JS section and dash pseudo-element prepended to submenu items.
+* FIXED: Registered "menu" template part area in functions.php via default_wp_template_part_areas filter — resolves PHP notice "_filter_block_template_part_area(): menu is not a supported wp_template_part area value".
+* FIXED: Replaced all moiraine text domains with elayne in block extension JS files (navigation.js, post-excerpt.js). Localized frontend aria-label strings via wp_localize_script().
+* FIXED: Renamed all moiraine-* CSS classes, JS filter names, and pattern class names to elayne-* to satisfy WordPress.org unique prefix requirement.
+* FIXED: Removed hardcoded imagewize.com link from sidebar.html — no external image or link sources remain in theme files.
+* CHANGED: Removed hasImprovedChevrons feature entirely — no longer needed with icon-absolute mobile overlay positioning. Removed attribute, ToggleControl, PHP class injection, and CSS section 6.2 (~50 lines).
+* CHANGED: Removed dead has-clickable-parents CSS section (~90 lines) and "prevent hover" override block from core-navigation.css.
+* CHANGED: Added ::before pseudo-element bridge on desktop submenu containers to maintain :hover across margin-top gap between parent item and dropdown.
+* TECHNICAL: Deleted assets/js/navigation-frontend.js (clickable parents implementation no longer needed).
+* TECHNICAL: Added docblock and inline comments to assets/js/block-extensions/navigation.js explaining the dropdown spacing feature and data flow.
 
 = 3.1.8 - 03/04/26 =
 * TECHNICAL: Vibe tooling .vibe/config.toml and prompt .vibe/prompts/vibe.md which loads from system_prompt_id added to repository. 
