@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.1] - 2026-03-06
+
+### Removed
+
+- Deleted `assets/js/block-extensions/navigation.js` — the `dropdownSpacing` attribute and editor UI panel it registered had no corresponding PHP `render_block` handler, so the setting was saved but never applied on the frontend. Dead code removed.
+- Removed the `elayne-navigation-extension` script enqueue from `inc/block-extensions.php`.
+
 ## [3.2.0] - 2026-03-06
 
 ### Fixed

@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.2.0
+Stable tag: 3.2.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.2.1 - 03/06/26 =
+* REMOVED: Deleted assets/js/block-extensions/navigation.js — dropdownSpacing attribute had no PHP render_block handler so the editor setting was never applied on the frontend. Dead code removed.
+* REMOVED: Removed elayne-navigation-extension script enqueue from inc/block-extensions.php.
 
 = 3.2.0 - 03/06/26 =
 * FIXED: Navigation submenus now open correctly on hover and keyboard focus (WP.org review requirement). Removed hasClickableParents, hasImprovedChevrons, and openSubmenusOnClick attributes from all header patterns — WordPress native hover/focus behaviour restored.
