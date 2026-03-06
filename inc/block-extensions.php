@@ -69,7 +69,6 @@ function elayne_enqueue_block_extensions() {
         });',
 		'after'
 	);
-
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\elayne_enqueue_block_extensions' );
 
