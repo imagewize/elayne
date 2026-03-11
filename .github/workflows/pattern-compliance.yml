@@ -61,6 +61,8 @@ jobs:
            * - Proper margin reset on full-width patterns
            * - Valid block comment structure
            * - Responsive grid layouts for 3+ columns
+           * - No hardcoded external URLs in src attributes (WP.org requirement)
+           * - All user-facing text wrapped in esc_html_e() / esc_attr__() (WP.org requirement)
            *
            * Template Exception Rules:
            * - Templates (template-*, header-*, footer-*) are allowed WordPress Core defaults
@@ -228,6 +230,43 @@ jobs:
           			// Check for hardcoded media IDs.
           			if ( preg_match( '/"id":\d+/', $content ) ) {
           				$issues[] = 'Hardcoded media IDs found';
+          			}
+
+          			// Check for hardcoded external URLs in src attributes (WP.org rejection).
+          			// All images must be bundled and loaded via get_template_directory_uri().
+          			if ( preg_match( '/src=["\']https?:\/\//', $content ) ) {
+          				$issues[] = 'Hardcoded external URL in src attribute — use get_template_directory_uri() instead';
+          			}
+
+          			// Check for untranslated text strings in HTML tags (WP.org rejection).
+          			// Every user-facing string must use esc_html_e() / esc_attr__() with the elayne domain.
+          			$has_untranslated_text = false;
+          			$has_untranslated_alt  = false;
+          			$lines = explode( "\n", $content );
+          			foreach ( $lines as $line ) {
+          				// Skip lines that are WordPress block comments (JSON attributes).
+          				if ( false !== strpos( $line, '<!-- wp:' ) || false !== strpos( $line, '<!-- /wp:' ) ) {
+          					continue;
+          				}
+          				// Skip lines that already contain a PHP translation call.
+          				if ( false !== strpos( $line, '<?php' ) ) {
+          					continue;
+          				}
+          				// Match text content directly inside common HTML tags (same-line open+close).
+          				// Looks for e.g. <h2 class="...">Some bare text</h2> without any PHP.
+          				if ( preg_match( '/<(?:h[1-6]|p|a|li|button|span|figcaption|cite|blockquote|td|th|dt|dd)[^>]*>[^<{?\n]*[a-zA-Z]{3,}[^<{?\n]*<\//', $line ) ) {
+          					$has_untranslated_text = true;
+          				}
+          				// Match non-empty alt attributes without PHP translation.
+          				if ( preg_match( '/alt="[A-Za-z][^"]*"/', $line ) ) {
+          					$has_untranslated_alt = true;
+          				}
+          			}
+          			if ( $has_untranslated_text ) {
+          				$issues[] = 'Untranslated text strings in HTML tags — wrap with esc_html_e( \'Text\', \'elayne\' )';
+          			}
+          			if ( $has_untranslated_alt ) {
+          				$issues[] = 'Untranslated alt attribute text — use alt="<?php echo esc_attr__( \'Desc\', \'elayne\' ); ?>"';
           			}
 
           			if ( empty( $issues ) ) {
