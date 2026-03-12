@@ -27,54 +27,54 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|large"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":"1200px"}} -->
 	<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
 
-		<!-- wp:group {"layout":{"type":"grid","minimumColumnWidth":"10rem","columnCount":null}} -->
+		<!-- wp:group {"layout":{"type":"grid","minimumColumnWidth":"12rem","columnCount":null}} -->
 		<div class="wp-block-group">
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-1.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-1.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-2.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-2.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-3.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-3.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-4.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-4.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-5.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-5.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-6.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-6.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-1.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-1.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-2.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-2.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-3.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-3.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-4.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-4.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-5.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-5.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 
-			<!-- wp:image {"width":"120px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-6.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:120px"/></figure>
+			<!-- wp:image {"width":"180px","sizeSlug":"large","linkDestination":"none","align":"center","style":{"color":{"duotone":["#6B7280","#F3F4F6"]}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/logo-6.webp" alt="<?php echo esc_attr__( 'Client logo', 'elayne' ); ?>" style="width:180px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:group -->
