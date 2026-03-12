@@ -17,18 +17,18 @@
 		<h1 class="wp-block-heading has-text-align-center has-white-color has-text-color" style="font-size:clamp(2.75rem, 6vw, 4.5rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1"><?php esc_html_e( 'Data to enrich your online business', 'elayne' ); ?></h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.25rem","lineHeight":"1.7"}},"textColor":"white","fontSize":"medium"} -->
-		<p class="has-text-align-center has-white-color has-text-color has-medium-font-size" style="font-size:1.25rem;line-height:1.7"><?php esc_html_e( 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.', 'elayne' ); ?></p>
+		<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.7"}},"textColor":"white","fontSize":"medium"} -->
+		<p class="has-text-align-center has-white-color has-text-color has-medium-font-size" style="line-height:1.7"><?php esc_html_e( 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.', 'elayne' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"white","textColor":"black","className":"has-custom-font-size","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600","fontSize":"1rem"}}} -->
-			<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-size:1rem;font-weight:600"><?php esc_html_e( 'Get started', 'elayne' ); ?></a></div>
+			<!-- wp:button {"backgroundColor":"white","textColor":"black","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600"}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background wp-element-button" style="border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-weight:600"><?php esc_html_e( 'Get started', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 
-			<!-- wp:button {"textColor":"white","className":"has-custom-font-size","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600","fontSize":"1rem"},"color":{"background":"rgba(255, 255, 255, 0.1)"}}} -->
-			<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-white-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:8px;background-color:rgba(255, 255, 255, 0.1);padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-size:1rem;font-weight:600"><?php esc_html_e( 'Learn more →', 'elayne' ); ?></a></div>
+			<!-- wp:button {"textColor":"white","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600"},"color":{"background":"rgba(255, 255, 255, 0.1)"}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background wp-element-button" style="border-radius:8px;background-color:rgba(255, 255, 255, 0.1);padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-weight:600"><?php esc_html_e( 'Learn more →', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
