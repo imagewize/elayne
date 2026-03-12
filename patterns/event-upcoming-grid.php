@@ -67,7 +67,7 @@
 <p class="has-main-accent-color has-text-color" style="font-size:var(--wp--preset--font-size--small);line-height:1.6"><?php esc_html_e( 'A guided learning session with activities and Q&A. Suitable for kids & parents.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xx-small"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
 <div class="wp-block-group">
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontWeight":"500"},"spacing":{"padding":{"top":"var:preset|spacing|xx-small","bottom":"var:preset|spacing|xx-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}},"border":{"radius":"999px","width":"var:preset|border|width"}},"borderColor":"border-light","backgroundColor":"tertiary","textColor":"main-accent"} -->
 <p class="has-main-accent-color has-tertiary-background-color has-text-color has-background has-border-color has-border-light-border-color" style="border-width:var(--wp--preset--border--width);border-radius:999px;padding-top:var(--wp--preset--spacing--xx-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--xx-small);padding-left:var(--wp--preset--spacing--small);font-size:var(--wp--preset--font-size--small);font-weight:500"><?php esc_html_e( '📍 Marina Bay / Sentosa', 'elayne' ); ?></p>
@@ -131,7 +131,7 @@
 <p class="has-main-accent-color has-text-color" style="font-size:var(--wp--preset--font-size--small);line-height:1.6"><?php esc_html_e( 'Fast sites, Core Web Vitals, caching, and real-case speed audits.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xx-small"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
 <div class="wp-block-group">
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontWeight":"500"},"spacing":{"padding":{"top":"var:preset|spacing|xx-small","bottom":"var:preset|spacing|xx-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}},"border":{"radius":"999px","width":"var:preset|border|width"}},"borderColor":"border-light","backgroundColor":"tertiary","textColor":"main-accent"} -->
 <p class="has-main-accent-color has-tertiary-background-color has-text-color has-background has-border-color has-border-light-border-color" style="border-width:var(--wp--preset--border--width);border-radius:999px;padding-top:var(--wp--preset--spacing--xx-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--xx-small);padding-left:var(--wp--preset--spacing--small);font-size:var(--wp--preset--font-size--small);font-weight:500"><?php esc_html_e( '📍 Amsterdam, NL', 'elayne' ); ?></p>
@@ -195,7 +195,7 @@
 <p class="has-main-accent-color has-text-color" style="font-size:var(--wp--preset--font-size--small);line-height:1.6"><?php esc_html_e( 'A practical checklist you can apply today. Includes Q&A and templates.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xx-small"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
 <div class="wp-block-group">
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontWeight":"500"},"spacing":{"padding":{"top":"var:preset|spacing|xx-small","bottom":"var:preset|spacing|xx-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}},"border":{"radius":"999px","width":"var:preset|border|width"}},"borderColor":"border-light","backgroundColor":"tertiary","textColor":"main-accent"} -->
 <p class="has-main-accent-color has-tertiary-background-color has-text-color has-background has-border-color has-border-light-border-color" style="border-width:var(--wp--preset--border--width);border-radius:999px;padding-top:var(--wp--preset--spacing--xx-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--xx-small);padding-left:var(--wp--preset--spacing--small);font-size:var(--wp--preset--font-size--small);font-weight:500"><?php esc_html_e( '📍 Live stream', 'elayne' ); ?></p>
