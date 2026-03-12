@@ -164,11 +164,17 @@ Elayne includes custom image sizes optimized for different layouts:
 == Changelog ==
 
 = 3.3.0 - 03/12/26 =
-* FIXED: Translation compliance - wrapped all user-facing text in esc_html_e() across card-call-to-action, case-study-detailed, client-logo-wall, and client-success-stories patterns (WP.org requirement).
-* FIXED: Translation compliance - wrapped all non-empty image alt attributes in esc_attr__() across affected patterns.
-* FIXED: External URL in client-success-stories.php - replaced hardcoded demo.imagewize.test avatar URLs with get_template_directory_uri() to pass WP.org review.
-* TECHNICAL: CLAUDE.md updated with comprehensive translation readiness reference table covering esc_html_e(), esc_attr__(), what to wrap, what not to wrap, and a quick grep check command.
-* TECHNICAL: CLAUDE.md pattern standards table updated with explicit rules against hardcoded external URLs and requiring esc_url( get_template_directory_uri() ) for all image src attributes."
+* FIXED: Translation compliance - wrapped all user-facing text in esc_html_e() across 12 pattern files: card-call-to-action, case-study-detailed, client-logo-wall, client-success-stories, hero-modern-dark, hero-modern-light, overlapping-feature-columns, overlapping-feature-columns-reversed, pricing-comparison, review-text-image-overlap, testimonials-grid, two-column-review (WP.org requirement).
+* FIXED: Translation compliance - wrapped all non-empty image alt attributes in esc_attr__() across all affected patterns.
+* FIXED: External URL in client-success-stories.php - replaced 4 hardcoded demo.imagewize.test avatar URLs with get_template_directory_uri() to pass WP.org review.
+* FIXED: Added missing full-width margin reset to outer alignfull groups in client-success-stories.php, client-logo-wall.php, and two-column-review.php.
+* FIXED: Removed duplicate inline font-size styles from hero-modern-dark.php and hero-modern-light.php (paragraphs already had semantic fontSize block attributes; buttons had no preset alternative).
+* FIXED: Replaced hardcoded font-size values (3rem, 3.5rem, 1.5rem, 1.25rem, 1.125rem) in case-study-detailed.php with semantic fontSize block attributes (xx-large, large, medium).
+* FIXED: Converted two wp:columns 3-column blocks in case-study-detailed.php to wp:group grid layout with minimumColumnWidth for proper 3→2→1 responsive behaviour.
+* FIXED: Increased metrics grid minimumColumnWidth from 10rem to 14rem in case-study-detailed.php to prevent large stat numbers from overflowing and overlapping.
+* FIXED: Added align="wide" to main content group in case-study-detailed.php so content expands beyond the outer constrained layout default contentSize.
+* FIXED: "Start Your Project" button textColor changed from undefined contrast to main (dark gray) for visibility on white background.
+* TECHNICAL: Pattern compliance workflow extended with checks for hardcoded external URLs in src attributes, untranslated text in HTML tags, and untranslated alt attributes. Hardcoded CSS check narrowed to font-size only (border-radius and padding have no WP semantic preset alternatives).
 
 
 = 3.2.1 - 03/06/26 =

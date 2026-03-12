@@ -28,7 +28,7 @@
 	</div></div>
 	<!-- /wp:cover -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
@@ -133,7 +133,7 @@
 			<p class="has-medium-font-size"><?php esc_html_e( 'The new analytics platform transformed how TechCorp makes data-driven decisions, delivering measurable improvements across key business metrics.', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"grid","minimumColumnWidth":"10rem"}} -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"grid","minimumColumnWidth":"14rem"}} -->
 			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
 				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group">
@@ -254,8 +254,8 @@
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"base","textColor":"contrast","style":{"border":{"radius":"100px"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}}} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-base-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:100px"><?php esc_html_e( 'Start Your Project', 'elayne' ); ?></a></div>
+			<!-- wp:button {"backgroundColor":"base","textColor":"main","style":{"border":{"radius":"100px"},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-main-color has-base-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:100px"><?php esc_html_e( 'Start Your Project', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 
 			<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"100px","width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"borderColor":"base","className":"is-style-outline"} -->

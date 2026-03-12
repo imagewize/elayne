@@ -12,16 +12,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 **WP.org Translation Compliance — Pattern Text Strings:**
-- Wrapped all user-facing text in `esc_html_e( 'Text', 'elayne' )` across four pattern files to meet WordPress.org theme review requirements
+- Wrapped all user-facing text in `esc_html_e( 'Text', 'elayne' )` across 12 pattern files to meet WordPress.org theme review requirements
 - Wrapped all non-empty image `alt` attributes in `esc_attr__( 'Text', 'elayne' )` for i18n compliance
-- Affected patterns: `card-call-to-action.php`, `case-study-detailed.php`, `client-logo-wall.php`, `client-success-stories.php`
+- Affected patterns: `card-call-to-action.php`, `case-study-detailed.php`, `client-logo-wall.php`, `client-success-stories.php`, `hero-modern-dark.php`, `hero-modern-light.php`, `overlapping-feature-columns.php`, `overlapping-feature-columns-reversed.php`, `pricing-comparison.php`, `review-text-image-overlap.php`, `testimonials-grid.php`, `two-column-review.php`
 - Covers headings, paragraphs, button labels, stat numbers, badge tags, testimonial quotes, job titles, and CTA text
 
 **WP.org External URL Compliance — Pattern Image Sources:**
 - Replaced hardcoded external URLs (`http://demo.imagewize.test/app/themes/elayne/patterns/images/...`) with `get_template_directory_uri()` calls in `client-success-stories.php`
 - Fixes WP.org theme review rejection caused by environment-specific URLs in avatar images
 
+**Pattern Compliance — Margin Reset:**
+- Added missing full-width margin reset (`"margin":{"top":"0","bottom":"0"}`) to outer `alignfull` groups in `client-success-stories.php`, `client-logo-wall.php`, and `two-column-review.php`
+- Corrects patterns that relied on `className="alignfull"` without the required block-level margin reset in the JSON attributes
+
+**Pattern Compliance — Hardcoded Font Sizes:**
+- Removed duplicate inline `font-size` styles from `hero-modern-dark.php` and `hero-modern-light.php` where paragraphs already had semantic `fontSize` block attributes (`medium`, `base`)
+- Removed `font-size` inline styles and `has-custom-font-size` class from button elements in both hero patterns
+- Replaced hardcoded `font-size:3rem`, `font-size:3.5rem`, `font-size:1.5rem`, `font-size:1.25rem`, and `font-size:1.125rem` in `case-study-detailed.php` with semantic `fontSize` block attributes (`xx-large`, `large`, `medium`)
+
+**Pattern Compliance — Responsive Grid Layout:**
+- Converted two `wp:columns` 3-column blocks in `case-study-detailed.php` to `wp:group` grid layout with `minimumColumnWidth` (18rem for phase steps, 14rem for phase metrics) for proper 3→2→1 responsive behaviour
+- Increased metrics grid `minimumColumnWidth` from `10rem` to `14rem` to prevent `xx-large` stat numbers from overflowing and overlapping at narrow widths
+- Added `align="wide"` to main content group in `case-study-detailed.php` so the content section expands beyond the outer constrained layout's default `contentSize` (740px)
+- Fixed "Start Your Project" CTA button `textColor` from undefined `contrast` to `main` (dark gray) so button text is visible on white (`base`) background
+
 ### Technical
+
+**Pattern Compliance Workflow — Extended Checks:**
+- Added check for hardcoded external URLs in `src` attributes: flags any `src="https?://..."` in pattern files (WP.org rejection cause)
+- Added check for untranslated user-facing text in HTML tags: detects bare text in `<h1-6>`, `<p>`, `<a>`, `<button>`, `<span>`, `<li>`, etc. on lines without `<?php`
+- Added check for untranslated non-empty `alt` attributes: flags `alt="..."` values without PHP translation call
+- Narrowed hardcoded CSS check from `(font-size|padding|margin|border-radius)` to `font-size` only — `border-radius` and `padding` have no WP semantic preset alternatives and produced false positives
 
 **CLAUDE.md — Translation Readiness Guidelines (CRITICAL):**
 - Expanded Translation Readiness section into a comprehensive reference table covering `esc_html_e()`, `esc_attr__()`, and `wp_kses_post( __() )` with usage examples
@@ -32,7 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **CLAUDE.md — External Image URL Rule:**
 - Added explicit rule to the pattern standards table: never use hardcoded external URLs (e.g. `http://demo.imagewize.test/...`) — flagged as WP.org rejection cause
 - Added rule that all image `src` attributes must use `get_template_directory_uri()` wrapped in `esc_url()`
-- Updated pattern creation checklist (steps 5–7) to include translation wrapping and URL requirements before testing",
+- Updated pattern creation checklist (steps 5–7) to include translation wrapping and URL requirements before testing
 
 ## [3.2.1] - 2026-03-06
 
