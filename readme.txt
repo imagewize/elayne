@@ -174,6 +174,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * FIXED: Increased metrics grid minimumColumnWidth from 10rem to 14rem in case-study-detailed.php to prevent large stat numbers from overflowing and overlapping.
 * FIXED: Added align="wide" to main content group in case-study-detailed.php so content expands beyond the outer constrained layout default contentSize.
 * FIXED: "Start Your Project" button textColor changed from undefined contrast to main (dark gray) for visibility on white background.
+* FIXED: Undefined contrast color slug in 4 patterns - root cause: WP core themes use contrast as a slug; Elayne renamed it to main but kept "Contrast" as the editor display name, causing copy-paste confusion. Fixed event-upcoming-grid.php (3 card backgrounds + 3 button backgrounds: contrast → base), legal-hero-split.php (3 stat label textColors: contrast → main-accent; divider border color: contrast → border-light; "Client Reviews" textColor: contrast → main), header-double-bar.php (2 link colors: contrast → main), page-coming-soon.php (countdown box backgroundColor: contrast-2 → tertiary).
 * TECHNICAL: Pattern compliance workflow extended with checks for hardcoded external URLs in src attributes, untranslated text in HTML tags, and untranslated alt attributes. Hardcoded CSS check narrowed to font-size only (border-radius and padding have no WP semantic preset alternatives).
 
 
