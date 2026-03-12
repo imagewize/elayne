@@ -36,6 +36,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `align="wide"` to main content group in `case-study-detailed.php` so the content section expands beyond the outer constrained layout's default `contentSize` (740px)
 - Fixed "Start Your Project" CTA button `textColor` from undefined `contrast` to `main` (dark gray) so button text is visible on white (`base`) background
 
+**Pattern Compliance — Undefined `contrast` Color Slug:**
+- Fixed patterns using `contrast` as a color slug, which does not exist in Elayne's theme palette. Root cause: WordPress core themes (Twenty Twenty-Three/Four/Five) use `contrast` as the slug for their dark color; Elayne renamed it to `main` but kept `"name": "Contrast"` as the editor display label, leading to `contrast` being used by mistake in several patterns
+- `event-upcoming-grid.php`: fixed `backgroundColor:"contrast"` on all 3 event cards → `base`; fixed `backgroundColor:"contrast"` on all 3 "Details" buttons → `base` (buttons on white cards now have a valid white background)
+- `legal-hero-split.php`: fixed `textColor:"contrast"` on 3 stat labels (Years, Cases Won, Success Rate) → `main-accent`; fixed border `color:"var:preset|color|contrast"` on stats divider → `border-light`; fixed `textColor:"contrast"` on "Client Reviews" label → `main`
+- `header-double-bar.php`: fixed link `color:"var:preset|color|contrast"` on email and phone links in top bar → `main`
+- `page-coming-soon.php`: fixed `backgroundColor:"contrast-2"` on countdown timer box → `tertiary` (`contrast-2` is also not a defined Elayne color slug)
+
 ### Technical
 
 **Pattern Compliance Workflow — Extended Checks:**
