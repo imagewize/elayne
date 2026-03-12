@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.3.0] - 2026-03-12
+
+### Fixed
+
+**WP.org Translation Compliance — Pattern Text Strings:**
+- Wrapped all user-facing text in `esc_html_e( 'Text', 'elayne' )` across four pattern files to meet WordPress.org theme review requirements
+- Wrapped all non-empty image `alt` attributes in `esc_attr__( 'Text', 'elayne' )` for i18n compliance
+- Affected patterns: `card-call-to-action.php`, `case-study-detailed.php`, `client-logo-wall.php`, `client-success-stories.php`
+- Covers headings, paragraphs, button labels, stat numbers, badge tags, testimonial quotes, job titles, and CTA text
+
+**WP.org External URL Compliance — Pattern Image Sources:**
+- Replaced hardcoded external URLs (`http://demo.imagewize.test/app/themes/elayne/patterns/images/...`) with `get_template_directory_uri()` calls in `client-success-stories.php`
+- Fixes WP.org theme review rejection caused by environment-specific URLs in avatar images
+
+### Technical
+
+**CLAUDE.md — Translation Readiness Guidelines (CRITICAL):**
+- Expanded Translation Readiness section into a comprehensive reference table covering `esc_html_e()`, `esc_attr__()`, and `wp_kses_post( __() )` with usage examples
+- Documented what to wrap (all headings, paragraphs, button labels, stat numbers, alt text, CTA text) and what NOT to wrap (empty `alt=""`, block JSON attributes, PHP expressions)
+- Added quick `grep` check command to find unwrapped strings before committing
+- Removed outdated mention of `__()` / `_e()` in favour of escaping variants
+
+**CLAUDE.md — External Image URL Rule:**
+- Added explicit rule to the pattern standards table: never use hardcoded external URLs (e.g. `http://demo.imagewize.test/...`) — flagged as WP.org rejection cause
+- Added rule that all image `src` attributes must use `get_template_directory_uri()` wrapped in `esc_url()`
+- Updated pattern creation checklist (steps 5–7) to include translation wrapping and URL requirements before testing",
+
 ## [3.2.1] - 2026-03-06
 
 ### Removed

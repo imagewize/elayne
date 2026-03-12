@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.2.1
+Stable tag: 3.3.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,14 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.3.0 - 03/12/26 =
+* FIXED: Translation compliance - wrapped all user-facing text in esc_html_e() across card-call-to-action, case-study-detailed, client-logo-wall, and client-success-stories patterns (WP.org requirement).
+* FIXED: Translation compliance - wrapped all non-empty image alt attributes in esc_attr__() across affected patterns.
+* FIXED: External URL in client-success-stories.php - replaced hardcoded demo.imagewize.test avatar URLs with get_template_directory_uri() to pass WP.org review.
+* TECHNICAL: CLAUDE.md updated with comprehensive translation readiness reference table covering esc_html_e(), esc_attr__(), what to wrap, what not to wrap, and a quick grep check command.
+* TECHNICAL: CLAUDE.md pattern standards table updated with explicit rules against hardcoded external URLs and requiring esc_url( get_template_directory_uri() ) for all image src attributes."
+
 
 = 3.2.1 - 03/06/26 =
 * REMOVED: Deleted assets/js/block-extensions/navigation.js — dropdownSpacing attribute had no PHP render_block handler so the editor setting was never applied on the frontend. Dead code removed.
