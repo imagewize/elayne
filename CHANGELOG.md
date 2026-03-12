@@ -75,6 +75,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `header-double-bar.php`: fixed link `color:"var:preset|color|contrast"` on email and phone links in top bar → `main`
 - `page-coming-soon.php`: fixed `backgroundColor:"contrast-2"` on countdown timer box → `tertiary` (`contrast-2` is also not a defined Elayne color slug)
 
+**Pattern — client-logo-wall.php:**
+- Increased logo image width from `120px` to `180px` for all 12 logos for better visual presence on frontend
+- Increased grid `minimumColumnWidth` from `10rem` to `12rem` to match larger logo size
+
+**Pattern — client-success-stories.php:**
+- Changed outer section background color from `base` (white) to `tertiary` (light gray) for better visual differentiation
+- Changed main testimonial block alignment from `wide` to `full` for edge-to-edge impact
+- Replaced `className:"alignwide"` on secondary testimonials grid with proper `align:"wide"` and `layout:{"type":"grid","minimumColumnWidth":"19rem"}` for correct 3→2→1 responsive behaviour
+
+**Pattern — event-upcoming-grid.php:**
+- Increased pill/tag group `blockGap` from `xx-small` to `small` for better spacing between location and detail tags (3 instances)
+
+**Pattern — legal-hero-split.php:**
+- Changed stats grid `minimumColumnWidth` from hardcoded `100px` to semantic `12rem` for proper responsive column behaviour
+- Reduced stats grid `blockGap` from `x-large` to `medium` to prevent excessive spacing between stat columns
+- Converted stat number headings (`35+`, `2,500+`, `98%`) from inline `fontSize` style to semantic `fontSize:"xx-large"` block attribute
+
+### CSS
+
+**style.css — Safari Scrollbar Visibility Fix:**
+- Added `::-webkit-scrollbar` rules to make scrollbar thumb visible in the block editor on Safari/macOS, where overlay scrollbars render with a near-invisible light gray thumb on white/light backgrounds
+- Scrollbar track: transparent; thumb: `rgba(0,0,0,0.35)` with `border-radius:4px`; hover: `rgba(0,0,0,0.55)`
+
 ### Technical
 
 **Pattern Compliance Workflow — Extended Checks:**
