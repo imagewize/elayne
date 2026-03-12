@@ -68,14 +68,14 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large","padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}},"border":{"top":{"color":"var:preset|color|contrast","width":"2px"}}},"layout":{"type":"grid","minimumColumnWidth":"100px"}} -->
-<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--contrast);border-top-width:2px;padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large","padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}},"border":{"top":{"color":"var:preset|color|border-light","width":"2px"}}},"layout":{"type":"grid","minimumColumnWidth":"100px"}} -->
+<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--border-light);border-top-width:2px;padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"2.25rem"}},"textColor":"primary"} -->
 <h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:2.25rem;font-weight:700;line-height:1">35+</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.5px","fontWeight":"600"}},"textColor":"contrast","fontSize":"xx-small"} -->
-<p class="has-text-align-center has-contrast-color has-text-color has-xx-small-font-size" style="font-weight:600;letter-spacing:0.5px;text-transform:uppercase">Years</p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.5px","fontWeight":"600"}},"textColor":"main-accent","fontSize":"xx-small"} -->
+<p class="has-text-align-center has-main-accent-color has-text-color has-xx-small-font-size" style="font-weight:600;letter-spacing:0.5px;text-transform:uppercase">Years</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -84,8 +84,8 @@
 <h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:2.25rem;font-weight:700;line-height:1">2,500+</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.5px","fontWeight":"600"}},"textColor":"contrast","fontSize":"xx-small"} -->
-<p class="has-text-align-center has-contrast-color has-text-color has-xx-small-font-size" style="font-weight:600;letter-spacing:0.5px;text-transform:uppercase">Cases Won</p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.5px","fontWeight":"600"}},"textColor":"main-accent","fontSize":"xx-small"} -->
+<p class="has-text-align-center has-main-accent-color has-text-color has-xx-small-font-size" style="font-weight:600;letter-spacing:0.5px;text-transform:uppercase">Cases Won</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -94,8 +94,8 @@
 <h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:2.25rem;font-weight:700;line-height:1">98%</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.5px","fontWeight":"600"}},"textColor":"contrast","fontSize":"xx-small"} -->
-<p class="has-text-align-center has-contrast-color has-text-color has-xx-small-font-size" style="font-weight:600;letter-spacing:0.5px;text-transform:uppercase">Success Rate</p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.5px","fontWeight":"600"}},"textColor":"main-accent","fontSize":"xx-small"} -->
+<p class="has-text-align-center has-main-accent-color has-text-color has-xx-small-font-size" style="font-weight:600;letter-spacing:0.5px;text-transform:uppercase">Success Rate</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -118,8 +118,8 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"legal-hero-split-reviews","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-small"},"border":{"radius":"12px"},"position":{"type":""},"dimensions":{"minHeight":""},"shadow":"0 10px 40px rgba(0, 0, 0, 0.2)"},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group legal-hero-split-reviews has-base-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium);box-shadow:0 10px 40px rgba(0, 0, 0, 0.2)"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"contrast","fontSize":"x-small"} -->
-<p class="has-contrast-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Client Reviews', 'elayne' ); ?></p>
+<div class="wp-block-group legal-hero-split-reviews has-base-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium);box-shadow:0 10px 40px rgba(0, 0, 0, 0.2)"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"main","fontSize":"x-small"} -->
+<p class="has-main-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Client Reviews', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
