@@ -19,8 +19,8 @@
 <figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-email.svg" alt="" style="width:20px;height:20px"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"fontSize":"small"} -->
-<p class="has-link-color has-small-font-size"><a href="mailto:info@example.com">Email</a></p>
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontSize":"small"} -->
+<p class="has-link-color has-small-font-size"><a href="mailto:info@example.com"><?php esc_html_e( 'Email', 'elayne' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -29,7 +29,7 @@
 <figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-phone.svg" alt="" style="width:20px;height:20px"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"fontSize":"small"} -->
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontSize":"small"} -->
 <p class="has-link-color has-small-font-size"><a href="tel:+31202103138">+31 20 – 210 31 38</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->

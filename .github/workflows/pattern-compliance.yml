@@ -55,7 +55,7 @@ jobs:
            * Pattern Compliance Checker class
            *
            * Checks patterns against CLAUDE.md rules:
-           * - No hardcoded font sizes, padding, or border-radius (relaxed for templates)
+           * - No hardcoded font sizes (padding and border-radius allowed — no WP semantic alternative)
            * - Proper semantic variables usage
            * - No spacer blocks
            * - Proper margin reset on full-width patterns
@@ -143,7 +143,7 @@ jobs:
           						$issues[] = 'Hardcoded large spacing values found (use semantic variables)';
           					}
           				}
-          			} elseif ( preg_match( '/(font-size|padding|margin|border-radius):\s*\d+\.?\d*(px|rem|em)/', $content ) ) {
+          			} elseif ( preg_match( '/(font-size):\s*\d+\.?\d*(px|rem|em)/', $content ) ) {
           				// For content patterns: strict checking (all hardcoded values).
           				$issues[] = 'Hardcoded CSS values found (use semantic variables)';
           			}

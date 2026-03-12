@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.2.1
+Stable tag: 3.3.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,28 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.3.0 - 03/12/26 =
+* FIXED: Pattern compliance - Replaced hardcoded CSS values with semantic variables in 4 pattern files: event-upcoming-grid.php (19px, 14px, 13px font-sizes), legal-hero-split.php (4px, 14px, 2.25rem, 1.25rem, 1.125rem, 8px, 12px), page-coming-soon.php (4rem, 1.25rem, 3rem, 0.875rem, 8px, 100px). All values now use var:preset|font-size|* and var:preset|spacing|* semantic variables.
+* FIXED: Pattern compliance - Wrapped all user-facing text strings with esc_html_e() for translation readiness: header-double-bar.php ("Email"), legal-hero-split.php ("Trusted Since 1985", "Years", "Cases Won", "Success Rate", "Client Reviews", "Based on 500+ verified client reviews", "Schedule Consultation", "Call Now"), page-coming-soon.php ("Coming Soon", "We're working on something amazing...", "Days", "Hours", "Minutes", "Seconds", "Get Notified When We Launch", "Notify Me", "We respect your privacy..."). All text strings now properly wrapped for WordPress translation system.
+* FIXED: Translation compliance - wrapped all user-facing text in esc_html_e() across 12 pattern files: card-call-to-action, case-study-detailed, client-logo-wall, client-success-stories, hero-modern-dark, hero-modern-light, overlapping-feature-columns, overlapping-feature-columns-reversed, pricing-comparison, review-text-image-overlap, testimonials-grid, two-column-review (WP.org requirement).
+* FIXED: Translation compliance - wrapped all non-empty image alt attributes in esc_attr__() across all affected patterns.
+* FIXED: External URL in client-success-stories.php - replaced 4 hardcoded demo.imagewize.test avatar URLs with get_template_directory_uri() to pass WP.org review.
+* FIXED: Added missing full-width margin reset to outer alignfull groups in client-success-stories.php, client-logo-wall.php, and two-column-review.php.
+* FIXED: Removed duplicate inline font-size styles from hero-modern-dark.php and hero-modern-light.php (paragraphs already had semantic fontSize block attributes; buttons had no preset alternative).
+* FIXED: Replaced hardcoded font-size values (3rem, 3.5rem, 1.5rem, 1.25rem, 1.125rem) in case-study-detailed.php with semantic fontSize block attributes (xx-large, large, medium).
+* FIXED: Converted two wp:columns 3-column blocks in case-study-detailed.php to wp:group grid layout with minimumColumnWidth for proper 3→2→1 responsive behaviour.
+* FIXED: Increased metrics grid minimumColumnWidth from 10rem to 14rem in case-study-detailed.php to prevent large stat numbers from overflowing and overlapping.
+* FIXED: Added align="wide" to main content group in case-study-detailed.php so content expands beyond the outer constrained layout default contentSize.
+* FIXED: "Start Your Project" button textColor changed from undefined contrast to main (dark gray) for visibility on white background.
+* FIXED: Undefined contrast color slug in 4 patterns - root cause: WP core themes use contrast as a slug; Elayne renamed it to main but kept "Contrast" as the editor display name, causing copy-paste confusion. Fixed event-upcoming-grid.php (3 card backgrounds + 3 button backgrounds: contrast → base), legal-hero-split.php (3 stat label textColors: contrast → main-accent; divider border color: contrast → border-light; "Client Reviews" textColor: contrast → main), header-double-bar.php (2 link colors: contrast → main), page-coming-soon.php (countdown box backgroundColor: contrast-2 → tertiary).
+* TECHNICAL: Pattern compliance workflow extended with checks for hardcoded external URLs in src attributes, untranslated text in HTML tags, and untranslated alt attributes. Hardcoded CSS check narrowed to font-size only (border-radius and padding have no WP semantic preset alternatives).
+* CHANGED: client-logo-wall.php - Increased logo image width from 120px to 180px and grid minimumColumnWidth from 10rem to 12rem for better logo visibility.
+* CHANGED: client-success-stories.php - Section background changed from base to tertiary; main testimonial block changed to full-width alignment; secondary testimonials grid converted to proper responsive grid layout (minimumColumnWidth: 19rem).
+* CHANGED: event-upcoming-grid.php - Increased pill/tag group blockGap from xx-small to small for better tag spacing (3 instances).
+* CHANGED: legal-hero-split.php - Stats grid minimumColumnWidth changed from hardcoded 100px to semantic 12rem; blockGap reduced from x-large to medium; stat headings converted to semantic fontSize block attribute.
+* ADDED: style.css - Safari scrollbar visibility fix using ::-webkit-scrollbar rules to render a visible scrollbar thumb in the block editor on macOS Safari.
+
 
 = 3.2.1 - 03/06/26 =
 * REMOVED: Deleted assets/js/block-extensions/navigation.js — dropdownSpacing attribute had no PHP render_block handler so the editor setting was never applied on the frontend. Dead code removed.

@@ -16,7 +16,7 @@
   <!-- wp:column {"width":"60%"} -->
   <div class="wp-block-column" style="flex-basis:60%">
     <!-- wp:image {"sizeSlug":"large","className":"is-style-default"} -->
-    <figure class="wp-block-image size-large is-style-default"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/yoga-pose.webp' ) ); ?>" alt="Spa treatment"/></figure>
+    <figure class="wp-block-image size-large is-style-default"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/yoga-pose.webp' ) ); ?>" alt="<?php echo esc_attr__( 'Spa treatment', 'elayne' ); ?>"/></figure>
     <!-- /wp:image -->
   </div>
   <!-- /wp:column -->
@@ -26,19 +26,19 @@
     <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"}},"backgroundColor":"base","className":"has-box-shadow"} -->
     <div class="wp-block-group has-box-shadow has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
       <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500","textTransform":"uppercase","letterSpacing":"2px"}},"textColor":"primary","fontSize":"small"} -->
-      <p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase">Wellness</p>
+      <p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase"><?php esc_html_e( 'Wellness', 'elayne' ); ?></p>
       <!-- /wp:paragraph -->
 
       <!-- wp:heading {"style":{"typography":{"fontFamily":"var:preset|font-family|cormorant-garamond"}}} -->
-      <h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--cormorant-garamond)">Discover Inner Peace Through Movement</h2>
+      <h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--cormorant-garamond)"><?php esc_html_e( 'Discover Inner Peace Through Movement', 'elayne' ); ?></h2>
       <!-- /wp:heading -->
 
       <!-- wp:paragraph -->
-      <p>Our holistic approach combines movement, mindfulness, and expert guidance to help you achieve balance in body and mind. Experience the transformation with our specialized programs.</p>
+      <p><?php esc_html_e( 'Our holistic approach combines movement, mindfulness, and expert guidance to help you achieve balance in body and mind. Experience the transformation with our specialized programs.', 'elayne' ); ?></p>
       <!-- /wp:paragraph -->
 
       <!-- wp:paragraph -->
-      <p><a href="#">Learn more →</a></p>
+      <p><a href="#"><?php esc_html_e( 'Learn more →', 'elayne' ); ?></a></p>
       <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->

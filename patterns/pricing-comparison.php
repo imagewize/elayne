@@ -100,7 +100,7 @@
 			<!-- /wp:separator -->
 
 			<!-- wp:heading {"level":4,"textAlign":"center","textColor":"base","fontSize":"x-large"} -->
-			<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color has-x-large-font-size">$480<span style="font-size:50%;opacity:0.7;">/month</span></h4>
+			<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( '$480', 'elayne' ); ?><span style="font-size:50%;opacity:0.7;"><?php esc_html_e( '/month', 'elayne' ); ?></span></h4>
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
@@ -152,7 +152,7 @@
 			<!-- /wp:separator -->
 
 			<!-- wp:heading {"level":4,"textAlign":"center","textColor":"primary","fontSize":"x-large"} -->
-			<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-x-large-font-size">$600<span style="font-size:50%;">/month</span></h4>
+			<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-x-large-font-size"><?php esc_html_e( '$600', 'elayne' ); ?><span style="font-size:50%;"><?php esc_html_e( '/month', 'elayne' ); ?></span></h4>
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->

@@ -17,24 +17,24 @@
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
 		<div class="wp-block-group">
 			<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"xxx-large"} -->
-			<h1 class="wp-block-heading has-text-align-center has-xxx-large-font-size">TechFlow Analytics Platform</h1>
+			<h1 class="wp-block-heading has-text-align-center has-xxx-large-font-size"><?php esc_html_e( 'TechFlow Analytics Platform', 'elayne' ); ?></h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.125rem"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base"} -->
-			<p class="has-text-align-center has-base-color has-text-color has-link-color" style="font-size:1.125rem">TechCorp Solutions • Technology • 6 Months</p>
+			<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"medium"} -->
+			<p class="has-text-align-center has-base-color has-text-color has-link-color has-medium-font-size"><?php esc_html_e( 'TechCorp Solutions • Technology • 6 Months', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 	</div></div>
 	<!-- /wp:cover -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group">
 			<!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700"}},"fontSize":"x-large"} -->
-			<h2 class="wp-block-heading has-x-large-font-size" style="font-weight:700">The Challenge</h2>
+			<h2 class="wp-block-heading has-x-large-font-size" style="font-weight:700"><?php esc_html_e( 'The Challenge', 'elayne' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:separator {"backgroundColor":"primary","className":"is-style-wide"} -->
@@ -42,11 +42,11 @@
 			<!-- /wp:separator -->
 
 			<!-- wp:paragraph {"fontSize":"medium"} -->
-			<p class="has-medium-font-size">TechCorp Solutions was struggling with fragmented data across multiple platforms, making it nearly impossible to get real-time insights into their business performance. Their team spent countless hours manually compiling reports, leading to delayed decision-making and missed opportunities.</p>
+			<p class="has-medium-font-size"><?php esc_html_e( 'TechCorp Solutions was struggling with fragmented data across multiple platforms, making it nearly impossible to get real-time insights into their business performance. Their team spent countless hours manually compiling reports, leading to delayed decision-making and missed opportunities.', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"fontSize":"medium"} -->
-			<p class="has-medium-font-size">Key pain points included inconsistent data formats, lack of automated reporting, no mobile access to dashboards, and difficulty visualizing complex datasets for stakeholder presentations.</p>
+			<p class="has-medium-font-size"><?php esc_html_e( 'Key pain points included inconsistent data formats, lack of automated reporting, no mobile access to dashboards, and difficulty visualizing complex datasets for stakeholder presentations.', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -54,7 +54,7 @@
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group">
 			<!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700"}},"fontSize":"x-large"} -->
-			<h2 class="wp-block-heading has-x-large-font-size" style="font-weight:700">Our Approach</h2>
+			<h2 class="wp-block-heading has-x-large-font-size" style="font-weight:700"><?php esc_html_e( 'Our Approach', 'elayne' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:separator {"backgroundColor":"primary","className":"is-style-wide"} -->
@@ -62,67 +62,67 @@
 			<!-- /wp:separator -->
 
 			<!-- wp:paragraph {"fontSize":"medium"} -->
-			<p class="has-medium-font-size">We implemented a three-phase strategy to transform TechCorp's data infrastructure and create a unified analytics platform that would empower their entire organization.</p>
+			<p class="has-medium-font-size"><?php esc_html_e( 'We implemented a three-phase strategy to transform TechCorp\'s data infrastructure and create a unified analytics platform that would empower their entire organization.', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|large","left":"var:preset|spacing|medium"},"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}}} -->
-			<div class="wp-block-columns" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
-				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
-				<div class="wp-block-column">
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"3rem","fontWeight":"700"}},"textColor":"primary"} -->
-					<h3 class="wp-block-heading has-primary-color has-text-color" style="font-size:3rem;font-weight:700">01</h3>
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
+			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+					<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"700"}},"textColor":"primary","fontSize":"xx-large"} -->
+					<h3 class="wp-block-heading has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700"><?php esc_html_e( '01', 'elayne' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:heading {"level":4,"fontSize":"medium"} -->
-					<h4 class="wp-block-heading has-medium-font-size">Discovery &amp; Planning</h4>
+					<h4 class="wp-block-heading has-medium-font-size"><?php esc_html_e( 'Discovery &amp; Planning', 'elayne' ); ?></h4>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"fontSize":"small"} -->
-					<p class="has-small-font-size">Conducted comprehensive audit of existing data sources and stakeholder interviews to understand reporting needs.</p>
+					<p class="has-small-font-size"><?php esc_html_e( 'Conducted comprehensive audit of existing data sources and stakeholder interviews to understand reporting needs.', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
-				<!-- /wp:column -->
+				<!-- /wp:group -->
 
-				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
-				<div class="wp-block-column">
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"3rem","fontWeight":"700"}},"textColor":"primary"} -->
-					<h3 class="wp-block-heading has-primary-color has-text-color" style="font-size:3rem;font-weight:700">02</h3>
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+					<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"700"}},"textColor":"primary","fontSize":"xx-large"} -->
+					<h3 class="wp-block-heading has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700"><?php esc_html_e( '02', 'elayne' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:heading {"level":4,"fontSize":"medium"} -->
-					<h4 class="wp-block-heading has-medium-font-size">Development &amp; Integration</h4>
+					<h4 class="wp-block-heading has-medium-font-size"><?php esc_html_e( 'Development &amp; Integration', 'elayne' ); ?></h4>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"fontSize":"small"} -->
-					<p class="has-small-font-size">Built custom analytics platform with API integrations, automated data pipelines, and responsive dashboard interface.</p>
+					<p class="has-small-font-size"><?php esc_html_e( 'Built custom analytics platform with API integrations, automated data pipelines, and responsive dashboard interface.', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
-				<!-- /wp:column -->
+				<!-- /wp:group -->
 
-				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
-				<div class="wp-block-column">
-					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"3rem","fontWeight":"700"}},"textColor":"primary"} -->
-					<h3 class="wp-block-heading has-primary-color has-text-color" style="font-size:3rem;font-weight:700">03</h3>
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+					<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"700"}},"textColor":"primary","fontSize":"xx-large"} -->
+					<h3 class="wp-block-heading has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700"><?php esc_html_e( '03', 'elayne' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:heading {"level":4,"fontSize":"medium"} -->
-					<h4 class="wp-block-heading has-medium-font-size">Training &amp; Rollout</h4>
+					<h4 class="wp-block-heading has-medium-font-size"><?php esc_html_e( 'Training &amp; Rollout', 'elayne' ); ?></h4>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"fontSize":"small"} -->
-					<p class="has-small-font-size">Provided comprehensive team training and documentation to ensure smooth adoption across the organization.</p>
+					<p class="has-small-font-size"><?php esc_html_e( 'Provided comprehensive team training and documentation to ensure smooth adoption across the organization.', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
-				<!-- /wp:column -->
+				<!-- /wp:group -->
 			</div>
-			<!-- /wp:columns -->
+			<!-- /wp:group -->
 		</div>
 		<!-- /wp:group -->
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group">
 			<!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700"}},"fontSize":"x-large"} -->
-			<h2 class="wp-block-heading has-x-large-font-size" style="font-weight:700">The Results</h2>
+			<h2 class="wp-block-heading has-x-large-font-size" style="font-weight:700"><?php esc_html_e( 'The Results', 'elayne' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:separator {"backgroundColor":"primary","className":"is-style-wide"} -->
@@ -130,79 +130,79 @@
 			<!-- /wp:separator -->
 
 			<!-- wp:paragraph {"fontSize":"medium"} -->
-			<p class="has-medium-font-size">The new analytics platform transformed how TechCorp makes data-driven decisions, delivering measurable improvements across key business metrics.</p>
+			<p class="has-medium-font-size"><?php esc_html_e( 'The new analytics platform transformed how TechCorp makes data-driven decisions, delivering measurable improvements across key business metrics.', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}}} -->
-			<div class="wp-block-columns" style="padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
-				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}}} -->
-				<div class="wp-block-column">
-					<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"3.5rem","fontWeight":"700","lineHeight":"1"}},"textColor":"primary"} -->
-					<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:3.5rem;font-weight:700;line-height:1">+150%</h3>
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"grid","minimumColumnWidth":"14rem"}} -->
+			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+					<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"primary","fontSize":"xx-large"} -->
+					<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '+150%', 'elayne' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
-					<p class="has-text-align-center has-small-font-size" style="font-weight:600">Data Processing Speed</p>
+					<p class="has-text-align-center has-small-font-size" style="font-weight:600"><?php esc_html_e( 'Data Processing Speed', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
-				<!-- /wp:column -->
+				<!-- /wp:group -->
 
-				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}}} -->
-				<div class="wp-block-column">
-					<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"3.5rem","fontWeight":"700","lineHeight":"1"}},"textColor":"primary"} -->
-					<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:3.5rem;font-weight:700;line-height:1">85%</h3>
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+					<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"primary","fontSize":"xx-large"} -->
+					<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '85%', 'elayne' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
-					<p class="has-text-align-center has-small-font-size" style="font-weight:600">Time Saved on Reporting</p>
+					<p class="has-text-align-center has-small-font-size" style="font-weight:600"><?php esc_html_e( 'Time Saved on Reporting', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
-				<!-- /wp:column -->
+				<!-- /wp:group -->
 
-				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}}} -->
-				<div class="wp-block-column">
-					<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"3.5rem","fontWeight":"700","lineHeight":"1"}},"textColor":"primary"} -->
-					<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:3.5rem;font-weight:700;line-height:1">$2.3M</h3>
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+					<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"primary","fontSize":"xx-large"} -->
+					<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '$2.3M', 'elayne' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
-					<p class="has-text-align-center has-small-font-size" style="font-weight:600">Revenue Growth (Year 1)</p>
+					<p class="has-text-align-center has-small-font-size" style="font-weight:600"><?php esc_html_e( 'Revenue Growth (Year 1)', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
-				<!-- /wp:column -->
+				<!-- /wp:group -->
 			</div>
-			<!-- /wp:columns -->
+			<!-- /wp:group -->
 		</div>
 		<!-- /wp:group -->
 
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"left":{"color":"var:preset|color|primary","width":"4px"}}},"backgroundColor":"neutral","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group has-neutral-background-color has-background" style="border-left-color:var(--wp--preset--color--primary);border-left-width:4px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
-			<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem","fontStyle":"italic","fontWeight":"400","lineHeight":"1.6"}}} -->
-			<p style="font-size:1.25rem;font-style:italic;font-weight:400;line-height:1.6">"Working with this team completely transformed how we understand our business. The analytics platform they built doesn't just show us data—it tells us the story behind the numbers. Decision-making has never been faster or more confident."</p>
+			<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","fontWeight":"400","lineHeight":"1.6"}},"fontSize":"medium"} -->
+			<p class="has-medium-font-size" style="font-style:italic;font-weight:400;line-height:1.6"><?php esc_html_e( '"Working with this team completely transformed how we understand our business. The analytics platform they built doesn\'t just show us data—it tells us the story behind the numbers. Decision-making has never been faster or more confident."', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="font-weight:600">— Sarah Chen, Chief Operating Officer at TechCorp Solutions</p>
+			<p class="has-small-font-size" style="font-weight:600"><?php esc_html_e( '— Sarah Chen, Chief Operating Officer at TechCorp Solutions', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"700","fontSize":"1.5rem"}}} -->
-		<h3 class="wp-block-heading" style="font-size:1.5rem;font-weight:700">Project Gallery</h3>
+		<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"700"}},"fontSize":"large"} -->
+		<h3 class="wp-block-heading has-large-font-size" style="font-weight:700"><?php esc_html_e( 'Project Gallery', 'elayne' ); ?></h3>
 		<!-- /wp:heading -->
 
 		<!-- wp:gallery {"linkTo":"none","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}}} -->
 		<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
 			<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/desktop.webp" alt="Analytics dashboard interface"/></figure>
+			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/desktop.webp" alt="<?php echo esc_attr__( 'Analytics dashboard interface', 'elayne' ); ?>"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/computer-hands.webp" alt="Data visualization screens"/></figure>
+			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/computer-hands.webp" alt="<?php echo esc_attr__( 'Data visualization screens', 'elayne' ); ?>"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/guy-laptop.webp" alt="Mobile dashboard view"/></figure>
+			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/guy-laptop.webp" alt="<?php echo esc_attr__( 'Mobile dashboard view', 'elayne' ); ?>"/></figure>
 			<!-- /wp:image -->
 		</figure>
 		<!-- /wp:gallery -->
@@ -210,29 +210,29 @@
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|large"}}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--large)">
 			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="font-weight:600">Services Provided</p>
+			<p class="has-small-font-size" style="font-weight:600"><?php esc_html_e( 'Services Provided', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 			<div class="wp-block-group">
 				<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"2px"},"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"primary","fontSize":"small"} -->
-				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)">UI/UX Design</p>
+				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)"><?php esc_html_e( 'UI/UX Design', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"2px"},"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"primary","fontSize":"small"} -->
-				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)">Custom Development</p>
+				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Custom Development', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"2px"},"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"primary","fontSize":"small"} -->
-				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)">API Integration</p>
+				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)"><?php esc_html_e( 'API Integration', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"2px"},"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"primary","fontSize":"small"} -->
-				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)">Data Visualization</p>
+				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Data Visualization', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"2px"},"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"primary","fontSize":"small"} -->
-				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)">Team Training</p>
+				<p class="has-border-color has-primary-border-color has-small-font-size" style="border-width:2px;border-radius:100px;padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--small)"><?php esc_html_e( 'Team Training', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -245,21 +245,21 @@
 	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained","contentSize":"800px"}} -->
 	<div class="wp-block-group alignfull has-base-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)">
 		<!-- wp:heading {"textAlign":"center","level":2,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"x-large"} -->
-		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-link-color has-x-large-font-size">Ready to Transform Your Business?</h2>
+		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-link-color has-x-large-font-size"><?php esc_html_e( 'Ready to Transform Your Business?', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base"} -->
-		<p class="has-text-align-center has-base-color has-text-color has-link-color">Let's discuss how we can help you achieve measurable results like these.</p>
+		<p class="has-text-align-center has-base-color has-text-color has-link-color"><?php esc_html_e( 'Let\'s discuss how we can help you achieve measurable results like these.', 'elayne' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"base","textColor":"contrast","style":{"border":{"radius":"100px"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}}} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-base-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:100px">Start Your Project</a></div>
+			<!-- wp:button {"backgroundColor":"base","textColor":"main","style":{"border":{"radius":"100px"},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-main-color has-base-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:100px"><?php esc_html_e( 'Start Your Project', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 
 			<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"100px","width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"borderColor":"base","className":"is-style-outline"} -->
-			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-link-color has-border-color has-base-border-color wp-element-button" style="border-width:2px;border-radius:100px">View More Work</a></div>
+			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-link-color has-border-color has-base-border-color wp-element-button" style="border-width:2px;border-radius:100px"><?php esc_html_e( 'View More Work', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

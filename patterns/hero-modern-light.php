@@ -14,21 +14,21 @@
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
 	<div class="wp-block-group">
 		<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"clamp(2.75rem, 6vw, 4.5rem)","fontWeight":"800","lineHeight":"1.1","letterSpacing":"-0.02em"}},"textColor":"main"} -->
-		<h1 class="wp-block-heading has-text-align-center has-main-color has-text-color" style="font-size:clamp(2.75rem, 6vw, 4.5rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em">Elevate your business presence online</h1>
+		<h1 class="wp-block-heading has-text-align-center has-main-color has-text-color" style="font-size:clamp(2.75rem, 6vw, 4.5rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em"><?php esc_html_e( 'Elevate your business presence online', 'elayne' ); ?></h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.25rem","lineHeight":"1.7"}},"textColor":"main-accent","fontSize":"medium"} -->
-		<p class="has-text-align-center has-main-accent-color has-text-color has-medium-font-size" style="font-size:1.25rem;line-height:1.7">Create engaging digital experiences that connect with your audience. Showcase your expertise, build trust, and grow your business with a professional web presence.</p>
+		<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.7"}},"textColor":"main-accent","fontSize":"medium"} -->
+		<p class="has-text-align-center has-main-accent-color has-text-color has-medium-font-size" style="line-height:1.7"><?php esc_html_e( 'Create engaging digital experiences that connect with your audience. Showcase your expertise, build trust, and grow your business with a professional web presence.', 'elayne' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600","fontSize":"1rem"}}} -->
-			<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-size:1rem;font-weight:600">Get started</a></div>
+			<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600"}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-weight:600"><?php esc_html_e( 'Get started', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 
-			<!-- wp:button {"backgroundColor":"tertiary","textColor":"main","style":{"border":{"radius":"8px","width":"1px","color":"var(--wp--preset--color--border-light)"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600","fontSize":"1rem"}}} -->
-			<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-main-color has-tertiary-background-color has-text-color has-background has-border-color has-custom-font-size wp-element-button" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-size:1rem;font-weight:600">Learn more →</a></div>
+			<!-- wp:button {"backgroundColor":"tertiary","textColor":"main","style":{"border":{"radius":"8px","width":"1px","color":"var(--wp--preset--color--border-light)"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600"}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-main-color has-tertiary-background-color has-text-color has-background has-border-color wp-element-button" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-weight:600"><?php esc_html_e( 'Learn more →', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -38,7 +38,7 @@
 	<!-- wp:group {"layout":{"type":"constrained","contentSize":"1200px"}} -->
 	<div class="wp-block-group">
 		<!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"12px"}}} -->
-		<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url(get_template_directory_uri() . '/patterns/images/desktop.webp'); ?>" alt="Dashboard preview" style="border-radius:12px"/></figure>
+		<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url(get_template_directory_uri() . '/patterns/images/desktop.webp'); ?>" alt="<?php echo esc_attr__( 'Dashboard preview', 'elayne' ); ?>" style="border-radius:12px"/></figure>
 		<!-- /wp:image -->
 	</div>
 	<!-- /wp:group -->

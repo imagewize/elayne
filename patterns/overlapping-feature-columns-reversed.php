@@ -18,19 +18,19 @@
     <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"}},"backgroundColor":"base","className":"has-box-shadow"} -->
     <div class="wp-block-group has-box-shadow has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
       <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500","textTransform":"uppercase","letterSpacing":"2px"}},"textColor":"primary","fontSize":"small"} -->
-      <p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase">Supplements</p>
+      <p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase"><?php esc_html_e( 'Supplements', 'elayne' ); ?></p>
       <!-- /wp:paragraph -->
 
       <!-- wp:heading {"style":{"typography":{"fontFamily":"var:preset|font-family|cormorant-garamond"}}} -->
-      <h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--cormorant-garamond)">Natural Supplements for Everyday Wellness</h2>
+      <h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--cormorant-garamond)"><?php esc_html_e( 'Natural Supplements for Everyday Wellness', 'elayne' ); ?></h2>
       <!-- /wp:heading -->
 
       <!-- wp:paragraph -->
-      <p>Our premium Turmeric & Ginger Tummies provide anti-inflammatory benefits while supporting digestion. Pair with our Pure Collagen supplement to promote skin elasticity and joint health for a complete wellness routine.</p>
+      <p><?php esc_html_e( 'Our premium Turmeric &amp; Ginger Tummies provide anti-inflammatory benefits while supporting digestion. Pair with our Pure Collagen supplement to promote skin elasticity and joint health for a complete wellness routine.', 'elayne' ); ?></p>
       <!-- /wp:paragraph -->
 
       <!-- wp:paragraph -->
-      <p><a href="#">Shop supplements →</a></p>
+      <p><a href="#"><?php esc_html_e( 'Shop supplements →', 'elayne' ); ?></a></p>
       <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->
@@ -40,7 +40,7 @@
   <!-- wp:column {"width":"60%"} -->
   <div class="wp-block-column" style="flex-basis:60%">
     <!-- wp:image {"sizeSlug":"large","className":"is-style-default"} -->
-    <figure class="wp-block-image size-large is-style-default"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/shop/supplements.webp' ) ); ?>" alt="Natural wellness supplements"/></figure>
+    <figure class="wp-block-image size-large is-style-default"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/shop/supplements.webp' ) ); ?>" alt="<?php echo esc_attr__( 'Natural wellness supplements', 'elayne' ); ?>"/></figure>
     <!-- /wp:image -->
   </div>
   <!-- /wp:column -->

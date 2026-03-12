@@ -177,7 +177,9 @@ Central configuration for:
 2. Add header comment: Title, Slug, Categories, Description, Keywords, Viewport Width, Grid Config
 3. Use semantic variables: `var:preset|color|primary`, `var:preset|spacing|medium`
 4. Register slug as: `elayne/pattern-name`
-5. Test in block editor inserter
+5. **Wrap ALL user-facing text** in `<?php esc_html_e( 'Text', 'elayne' ); ?>` — every heading, paragraph, button label, non-empty alt text (WP.org requirement)
+6. **Use `get_template_directory_uri()`** for all image `src` — never hardcode URLs
+7. Test in block editor inserter
 
 **Grid Layout Categories:**
 - `elayne/card-simple` — 18rem: icon + title + short description
@@ -195,7 +197,9 @@ Central configuration for:
 | **Page template** | `post-content` block must use `"layout":{"type":"constrained"}` — NOT `"default"` |
 | **Icons** | NEVER use emoji — always use SVG icons stored in `patterns/images/` |
 | **Images** | NEVER hardcode media IDs; ALWAYS use `get_template_directory_uri()` wrapped in `esc_url()` |
+| **External images** | NEVER use hardcoded external URLs (e.g. `http://demo.imagewize.test/...`) — WP.org rejection |
 | **Image block** | `is-resized` class required when width/height set; `align` comes after width/height in JSON |
+| **Translation strings** | ALL user-facing text in patterns MUST use `esc_html_e()` / `esc_attr__()` with `'elayne'` domain |
 | **WP-CLI patterns** | Use `<!-- wp:pattern {"slug":"elayne/slug"} /-->` — NEVER `php -r 'include ...'` |
 
 > **Full details with code examples**: `docs/elayne/PATTERN-GUIDELINES.md`
@@ -234,9 +238,36 @@ Central configuration for:
 2. **WordPress API usage** — use `wp.*` global objects
 3. **Server-side rendering** — filter `render_block` in PHP for output
 
-### Translation Readiness
+### Translation Readiness (CRITICAL — WP.org Review Requirement)
+
+**Every user-facing string in every pattern PHP file MUST be wrapped in a translation function.** Unwrapped strings will cause WP.org theme review rejection.
+
+| Content type | Function to use | Example |
+|---|---|---|
+| Text inside HTML tags | `esc_html_e( 'Text', 'elayne' )` | `<h2><?php esc_html_e( 'Our Team', 'elayne' ); ?></h2>` |
+| Text in HTML attributes (alt, title, aria-label) | `esc_attr__( 'Text', 'elayne' )` | `alt="<?php echo esc_attr__( 'Team photo', 'elayne' ); ?>"` |
+| HTML-containing strings | `wp_kses_post( __( 'Text', 'elayne' ) )` | Rare — only when string contains allowed HTML |
+
+**What to wrap:**
+- All headings, paragraphs, list items, button labels
+- All `alt` attribute values that are non-empty (leave `alt=""` empty decorative images as-is)
+- All stat numbers, labels, tags, badge text (e.g. "+150%", "Data Processing Speed")
+- All CTA text, testimonial quotes, names, job titles
+
+**What NOT to wrap:**
+- Empty `alt=""` attributes (decorative images — leave as-is)
+- Block comment JSON attributes (`<!-- wp:heading {"fontSize":"large"} -->`)
+- PHP expressions already using `get_template_directory_uri()` or similar
+- Unicode symbols used as icons (★, →, etc.) — wrap the surrounding label text instead
+
+**Quick check before committing any pattern:**
+```bash
+# Find any paragraph/heading/button/img text NOT using esc_html_e or esc_attr__
+# Look for bare text between HTML tags in pattern files:
+grep -n ">\s*[A-Z][^<]*\s*<" patterns/your-pattern.php
+```
+
 - Text domain: `'elayne'`
-- Use `__()`, `_e()`, `esc_html__()` for all user-facing strings
 - Translation files in `/languages/` directory
 
 ## Common Tasks

@@ -7,6 +7,116 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.3.0] - 2026-03-12
+
+### Fixed
+
+**Pattern Compliance — Hardcoded CSS Values:**
+- Replaced hardcoded CSS values with semantic variables in 4 pattern files:
+  - `event-upcoming-grid.php`: Fixed 19px, 14px, 13px font-sizes → semantic variables
+  - `legal-hero-split.php`: Fixed 4px, 14px, 2.25rem, 1.25rem, 1.125rem, 8px, 12px → semantic variables
+  - `page-coming-soon.php`: Fixed 4rem, 1.25rem, 3rem, 0.875rem, 8px, 100px → semantic variables
+- All hardcoded CSS values now use `var:preset|font-size|*` and `var:preset|spacing|*` semantic variables
+
+**Pattern Compliance — Untranslated Text Strings:**
+- Wrapped all user-facing text strings with `esc_html_e()` for translation readiness:
+  - `header-double-bar.php`: Wrapped "Email" text string
+  - `legal-hero-split.php`: Wrapped all text strings including "Trusted Since 1985", "Years", "Cases Won", "Success Rate", "Client Reviews", "Based on 500+ verified client reviews", "Schedule Consultation", "Call Now"
+  - `page-coming-soon.php`: Wrapped all text strings including "Coming Soon", "We're working on something amazing...", "Days", "Hours", "Minutes", "Seconds", "Get Notified When We Launch", "Notify Me", "We respect your privacy..."
+- All text strings now properly wrapped for WordPress translation system
+
+**WP.org Translation Compliance — Pattern Text Strings:**
+
+### Fixed
+
+**Pattern Compliance — Hardcoded CSS Values:**
+- Replaced hardcoded CSS values with semantic variables in 4 pattern files:
+  - `event-upcoming-grid.php`: Fixed 19px, 14px, 13px font-sizes → semantic variables
+  - `legal-hero-split.php`: Fixed 4px, 14px, 2.25rem, 1.25rem, 1.125rem, 8px, 12px → semantic variables
+  - `page-coming-soon.php`: Fixed 4rem, 1.25rem, 3rem, 0.875rem, 8px, 100px → semantic variables
+- All hardcoded CSS values now use `var:preset|font-size|*` and `var:preset|spacing|*` semantic variables
+
+**Pattern Compliance — Untranslated Text Strings:**
+- Wrapped all user-facing text strings with `esc_html_e()` for translation readiness:
+  - `header-double-bar.php`: Wrapped "Email" text string
+  - `legal-hero-split.php`: Wrapped all text strings including "Trusted Since 1985", "Years", "Cases Won", "Success Rate", "Client Reviews", "Based on 500+ verified client reviews", "Schedule Consultation", "Call Now"
+  - `page-coming-soon.php`: Wrapped all text strings including "Coming Soon", "We're working on something amazing...", "Days", "Hours", "Minutes", "Seconds", "Get Notified When We Launch", "Notify Me", "We respect your privacy..."
+- All text strings now properly wrapped for WordPress translation system
+
+**WP.org Translation Compliance — Pattern Text Strings:**
+- Wrapped all user-facing text in `esc_html_e( 'Text', 'elayne' )` across 12 pattern files to meet WordPress.org theme review requirements
+- Wrapped all non-empty image `alt` attributes in `esc_attr__( 'Text', 'elayne' )` for i18n compliance
+- Affected patterns: `card-call-to-action.php`, `case-study-detailed.php`, `client-logo-wall.php`, `client-success-stories.php`, `hero-modern-dark.php`, `hero-modern-light.php`, `overlapping-feature-columns.php`, `overlapping-feature-columns-reversed.php`, `pricing-comparison.php`, `review-text-image-overlap.php`, `testimonials-grid.php`, `two-column-review.php`
+- Covers headings, paragraphs, button labels, stat numbers, badge tags, testimonial quotes, job titles, and CTA text
+
+**WP.org External URL Compliance — Pattern Image Sources:**
+- Replaced hardcoded external URLs (`http://demo.imagewize.test/app/themes/elayne/patterns/images/...`) with `get_template_directory_uri()` calls in `client-success-stories.php`
+- Fixes WP.org theme review rejection caused by environment-specific URLs in avatar images
+
+**Pattern Compliance — Margin Reset:**
+- Added missing full-width margin reset (`"margin":{"top":"0","bottom":"0"}`) to outer `alignfull` groups in `client-success-stories.php`, `client-logo-wall.php`, and `two-column-review.php`
+- Corrects patterns that relied on `className="alignfull"` without the required block-level margin reset in the JSON attributes
+
+**Pattern Compliance — Hardcoded Font Sizes:**
+- Removed duplicate inline `font-size` styles from `hero-modern-dark.php` and `hero-modern-light.php` where paragraphs already had semantic `fontSize` block attributes (`medium`, `base`)
+- Removed `font-size` inline styles and `has-custom-font-size` class from button elements in both hero patterns
+- Replaced hardcoded `font-size:3rem`, `font-size:3.5rem`, `font-size:1.5rem`, `font-size:1.25rem`, and `font-size:1.125rem` in `case-study-detailed.php` with semantic `fontSize` block attributes (`xx-large`, `large`, `medium`)
+
+**Pattern Compliance — Responsive Grid Layout:**
+- Converted two `wp:columns` 3-column blocks in `case-study-detailed.php` to `wp:group` grid layout with `minimumColumnWidth` (18rem for phase steps, 14rem for phase metrics) for proper 3→2→1 responsive behaviour
+- Increased metrics grid `minimumColumnWidth` from `10rem` to `14rem` to prevent `xx-large` stat numbers from overflowing and overlapping at narrow widths
+- Added `align="wide"` to main content group in `case-study-detailed.php` so the content section expands beyond the outer constrained layout's default `contentSize` (740px)
+- Fixed "Start Your Project" CTA button `textColor` from undefined `contrast` to `main` (dark gray) so button text is visible on white (`base`) background
+
+**Pattern Compliance — Undefined `contrast` Color Slug:**
+- Fixed patterns using `contrast` as a color slug, which does not exist in Elayne's theme palette. Root cause: WordPress core themes (Twenty Twenty-Three/Four/Five) use `contrast` as the slug for their dark color; Elayne renamed it to `main` but kept `"name": "Contrast"` as the editor display label, leading to `contrast` being used by mistake in several patterns
+- `event-upcoming-grid.php`: fixed `backgroundColor:"contrast"` on all 3 event cards → `base`; fixed `backgroundColor:"contrast"` on all 3 "Details" buttons → `base` (buttons on white cards now have a valid white background)
+- `legal-hero-split.php`: fixed `textColor:"contrast"` on 3 stat labels (Years, Cases Won, Success Rate) → `main-accent`; fixed border `color:"var:preset|color|contrast"` on stats divider → `border-light`; fixed `textColor:"contrast"` on "Client Reviews" label → `main`
+- `header-double-bar.php`: fixed link `color:"var:preset|color|contrast"` on email and phone links in top bar → `main`
+- `page-coming-soon.php`: fixed `backgroundColor:"contrast-2"` on countdown timer box → `tertiary` (`contrast-2` is also not a defined Elayne color slug)
+
+**Pattern — client-logo-wall.php:**
+- Increased logo image width from `120px` to `180px` for all 12 logos for better visual presence on frontend
+- Increased grid `minimumColumnWidth` from `10rem` to `12rem` to match larger logo size
+
+**Pattern — client-success-stories.php:**
+- Changed outer section background color from `base` (white) to `tertiary` (light gray) for better visual differentiation
+- Changed main testimonial block alignment from `wide` to `full` for edge-to-edge impact
+- Replaced `className:"alignwide"` on secondary testimonials grid with proper `align:"wide"` and `layout:{"type":"grid","minimumColumnWidth":"19rem"}` for correct 3→2→1 responsive behaviour
+
+**Pattern — event-upcoming-grid.php:**
+- Increased pill/tag group `blockGap` from `xx-small` to `small` for better spacing between location and detail tags (3 instances)
+
+**Pattern — legal-hero-split.php:**
+- Changed stats grid `minimumColumnWidth` from hardcoded `100px` to semantic `12rem` for proper responsive column behaviour
+- Reduced stats grid `blockGap` from `x-large` to `medium` to prevent excessive spacing between stat columns
+- Converted stat number headings (`35+`, `2,500+`, `98%`) from inline `fontSize` style to semantic `fontSize:"xx-large"` block attribute
+
+### CSS
+
+**style.css — Safari Scrollbar Visibility Fix:**
+- Added `::-webkit-scrollbar` rules to make scrollbar thumb visible in the block editor on Safari/macOS, where overlay scrollbars render with a near-invisible light gray thumb on white/light backgrounds
+- Scrollbar track: transparent; thumb: `rgba(0,0,0,0.35)` with `border-radius:4px`; hover: `rgba(0,0,0,0.55)`
+
+### Technical
+
+**Pattern Compliance Workflow — Extended Checks:**
+- Added check for hardcoded external URLs in `src` attributes: flags any `src="https?://..."` in pattern files (WP.org rejection cause)
+- Added check for untranslated user-facing text in HTML tags: detects bare text in `<h1-6>`, `<p>`, `<a>`, `<button>`, `<span>`, `<li>`, etc. on lines without `<?php`
+- Added check for untranslated non-empty `alt` attributes: flags `alt="..."` values without PHP translation call
+- Narrowed hardcoded CSS check from `(font-size|padding|margin|border-radius)` to `font-size` only — `border-radius` and `padding` have no WP semantic preset alternatives and produced false positives
+
+**CLAUDE.md — Translation Readiness Guidelines (CRITICAL):**
+- Expanded Translation Readiness section into a comprehensive reference table covering `esc_html_e()`, `esc_attr__()`, and `wp_kses_post( __() )` with usage examples
+- Documented what to wrap (all headings, paragraphs, button labels, stat numbers, alt text, CTA text) and what NOT to wrap (empty `alt=""`, block JSON attributes, PHP expressions)
+- Added quick `grep` check command to find unwrapped strings before committing
+- Removed outdated mention of `__()` / `_e()` in favour of escaping variants
+
+**CLAUDE.md — External Image URL Rule:**
+- Added explicit rule to the pattern standards table: never use hardcoded external URLs (e.g. `http://demo.imagewize.test/...`) — flagged as WP.org rejection cause
+- Added rule that all image `src` attributes must use `get_template_directory_uri()` wrapped in `esc_url()`
+- Updated pattern creation checklist (steps 5–7) to include translation wrapping and URL requirements before testing
+
 ## [3.2.1] - 2026-03-06
 
 ### Removed
