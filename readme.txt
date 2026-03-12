@@ -164,6 +164,8 @@ Elayne includes custom image sizes optimized for different layouts:
 == Changelog ==
 
 = 3.3.0 - 03/12/26 =
+* FIXED: Pattern compliance - Replaced hardcoded CSS values with semantic variables in 4 pattern files: event-upcoming-grid.php (19px, 14px, 13px font-sizes), legal-hero-split.php (4px, 14px, 2.25rem, 1.25rem, 1.125rem, 8px, 12px), page-coming-soon.php (4rem, 1.25rem, 3rem, 0.875rem, 8px, 100px). All values now use var:preset|font-size|* and var:preset|spacing|* semantic variables.
+* FIXED: Pattern compliance - Wrapped all user-facing text strings with esc_html_e() for translation readiness: header-double-bar.php ("Email"), legal-hero-split.php ("Trusted Since 1985", "Years", "Cases Won", "Success Rate", "Client Reviews", "Based on 500+ verified client reviews", "Schedule Consultation", "Call Now"), page-coming-soon.php ("Coming Soon", "We're working on something amazing...", "Days", "Hours", "Minutes", "Seconds", "Get Notified When We Launch", "Notify Me", "We respect your privacy..."). All text strings now properly wrapped for WordPress translation system.
 * FIXED: Translation compliance - wrapped all user-facing text in esc_html_e() across 12 pattern files: card-call-to-action, case-study-detailed, client-logo-wall, client-success-stories, hero-modern-dark, hero-modern-light, overlapping-feature-columns, overlapping-feature-columns-reversed, pricing-comparison, review-text-image-overlap, testimonials-grid, two-column-review (WP.org requirement).
 * FIXED: Translation compliance - wrapped all non-empty image alt attributes in esc_attr__() across all affected patterns.
 * FIXED: External URL in client-success-stories.php - replaced 4 hardcoded demo.imagewize.test avatar URLs with get_template_directory_uri() to pass WP.org review.

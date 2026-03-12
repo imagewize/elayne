@@ -11,6 +11,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+**Pattern Compliance — Hardcoded CSS Values:**
+- Replaced hardcoded CSS values with semantic variables in 4 pattern files:
+  - `event-upcoming-grid.php`: Fixed 19px, 14px, 13px font-sizes → semantic variables
+  - `legal-hero-split.php`: Fixed 4px, 14px, 2.25rem, 1.25rem, 1.125rem, 8px, 12px → semantic variables
+  - `page-coming-soon.php`: Fixed 4rem, 1.25rem, 3rem, 0.875rem, 8px, 100px → semantic variables
+- All hardcoded CSS values now use `var:preset|font-size|*` and `var:preset|spacing|*` semantic variables
+
+**Pattern Compliance — Untranslated Text Strings:**
+- Wrapped all user-facing text strings with `esc_html_e()` for translation readiness:
+  - `header-double-bar.php`: Wrapped "Email" text string
+  - `legal-hero-split.php`: Wrapped all text strings including "Trusted Since 1985", "Years", "Cases Won", "Success Rate", "Client Reviews", "Based on 500+ verified client reviews", "Schedule Consultation", "Call Now"
+  - `page-coming-soon.php`: Wrapped all text strings including "Coming Soon", "We're working on something amazing...", "Days", "Hours", "Minutes", "Seconds", "Get Notified When We Launch", "Notify Me", "We respect your privacy..."
+- All text strings now properly wrapped for WordPress translation system
+
+**WP.org Translation Compliance — Pattern Text Strings:**
+
+### Fixed
+
+**Pattern Compliance — Hardcoded CSS Values:**
+- Replaced hardcoded CSS values with semantic variables in 4 pattern files:
+  - `event-upcoming-grid.php`: Fixed 19px, 14px, 13px font-sizes → semantic variables
+  - `legal-hero-split.php`: Fixed 4px, 14px, 2.25rem, 1.25rem, 1.125rem, 8px, 12px → semantic variables
+  - `page-coming-soon.php`: Fixed 4rem, 1.25rem, 3rem, 0.875rem, 8px, 100px → semantic variables
+- All hardcoded CSS values now use `var:preset|font-size|*` and `var:preset|spacing|*` semantic variables
+
+**Pattern Compliance — Untranslated Text Strings:**
+- Wrapped all user-facing text strings with `esc_html_e()` for translation readiness:
+  - `header-double-bar.php`: Wrapped "Email" text string
+  - `legal-hero-split.php`: Wrapped all text strings including "Trusted Since 1985", "Years", "Cases Won", "Success Rate", "Client Reviews", "Based on 500+ verified client reviews", "Schedule Consultation", "Call Now"
+  - `page-coming-soon.php`: Wrapped all text strings including "Coming Soon", "We're working on something amazing...", "Days", "Hours", "Minutes", "Seconds", "Get Notified When We Launch", "Notify Me", "We respect your privacy..."
+- All text strings now properly wrapped for WordPress translation system
+
 **WP.org Translation Compliance — Pattern Text Strings:**
 - Wrapped all user-facing text in `esc_html_e( 'Text', 'elayne' )` across 12 pattern files to meet WordPress.org theme review requirements
 - Wrapped all non-empty image `alt` attributes in `esc_attr__( 'Text', 'elayne' )` for i18n compliance
