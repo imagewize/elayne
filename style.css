@@ -485,3 +485,28 @@ figure.is-avatar,
 .wp-site-blocks > .wp-block-template-part {
     margin-block-start: 0;
 }
+
+/* ========================================================================
+   Safari Scrollbar Visibility Fix (Gutenberg Editor)
+   ======================================================================== */
+
+/* Safari renders overlay scrollbars with near-invisible light gray thumb on
+   white/light backgrounds. This makes the thumb visible in the block editor
+   canvas (style.css is enqueued via add_editor_style for the editor iframe). */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.55);
+}
