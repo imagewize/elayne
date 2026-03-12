@@ -20,7 +20,7 @@
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontSize":"small"} -->
-<p class="has-link-color has-small-font-size"><a href="mailto:info@example.com">Email</a></p>
+<p class="has-link-color has-small-font-size"><a href="mailto:info@example.com"><?php esc_html_e( 'Email', 'elayne' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
