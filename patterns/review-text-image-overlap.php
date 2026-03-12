@@ -19,7 +19,7 @@
     <div class="wp-block-group has-box-shadow has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 
       <!-- wp:paragraph -->
-      <p>"The treatment I received at this spa exceeded all my expectations. The staff was professional and attentive, making me feel valued throughout my visit."</p>
+      <p><?php esc_html_e( '"The treatment I received at this spa exceeded all my expectations. The staff was professional and attentive, making me feel valued throughout my visit."', 'elayne' ); ?></p>
       <!-- /wp:paragraph -->
 
       <!-- wp:separator {"className":"is-style-wide","backgroundColor":"border-light"} -->
@@ -29,17 +29,17 @@
       <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
       <div class="wp-block-group">
         <!-- wp:image {"width":"100px","height":"100px","scale":"cover","sizeSlug":"thumbnail","linkDestination":"none","className":"is-style-rounded-full is-style-rounded"} -->
-        <figure class="wp-block-image size-thumbnail is-resized is-style-rounded-full is-style-rounded"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/review-profile.webp' ) ); ?>" alt="Emma Johnson" style="object-fit:cover;width:100px;height:100px"/></figure>
+        <figure class="wp-block-image size-thumbnail is-resized is-style-rounded-full is-style-rounded"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/review-profile.webp' ) ); ?>" alt="<?php echo esc_attr__( 'Emma Johnson', 'elayne' ); ?>" style="object-fit:cover;width:100px;height:100px"/></figure>
         <!-- /wp:image -->
 
         <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
         <div class="wp-block-group">
           <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600","fontStyle":"normal"}}} -->
-          <p style="font-style:normal;font-weight:600">Emma Johnson</p>
+          <p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Emma Johnson', 'elayne' ); ?></p>
           <!-- /wp:paragraph -->
 
           <!-- wp:paragraph {"fontSize":"small"} -->
-          <p class="has-small-font-size">Regular Client</p>
+          <p class="has-small-font-size"><?php esc_html_e( 'Regular Client', 'elayne' ); ?></p>
           <!-- /wp:paragraph -->
         </div>
         <!-- /wp:group -->
@@ -53,7 +53,7 @@
   <!-- wp:column {"width":"60%"} -->
   <div class="wp-block-column" style="flex-basis:60%">
     <!-- wp:image {"sizeSlug":"large","className":"is-style-default"} -->
-    <figure class="wp-block-image size-large is-style-default"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-landscape.webp' ) ); ?>" alt="Natural wellness supplements"/></figure>
+    <figure class="wp-block-image size-large is-style-default"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-landscape.webp' ) ); ?>" alt="<?php echo esc_attr__( 'Natural wellness supplements', 'elayne' ); ?>"/></figure>
     <!-- /wp:image -->
   </div>
   <!-- /wp:column -->
