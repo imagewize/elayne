@@ -68,10 +68,10 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large","padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}},"border":{"top":{"color":"var:preset|color|border-light","width":"var:preset|border|width"}}},"layout":{"type":"grid","minimumColumnWidth":"100px"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}},"border":{"top":{"color":"var:preset|color|border-light","width":"var:preset|border|width"}}},"layout":{"type":"grid","minimumColumnWidth":"12rem"}} -->
 <div class="wp-block-group" style="border-top-color:var(--wp--preset--color--border-light);border-top-width:var(--wp--preset--border--width);padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"var:preset|font-size|xx-large"}},"textColor":"primary"} -->
-<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:var(--wp--preset--font-size--xx-large);font-weight:700;line-height:1"><?php esc_html_e( '35+', 'elayne' ); ?></h3>
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"primary","fontSize":"xx-large"} -->
+<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '35+', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"textColor":"main-accent","fontSize":"xx-small"} -->
@@ -80,8 +80,8 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"var:preset|font-size|xx-large"}},"textColor":"primary"} -->
-<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:var(--wp--preset--font-size--xx-large);font-weight:700;line-height:1"><?php esc_html_e( '2,500+', 'elayne' ); ?></h3>
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"primary","fontSize":"xx-large"} -->
+<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '2,500+', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"textColor":"main-accent","fontSize":"xx-small"} -->
@@ -90,8 +90,8 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"var:preset|font-size|xx-large"}},"textColor":"primary"} -->
-<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color" style="font-size:var(--wp--preset--font-size--xx-large);font-weight:700;line-height:1"><?php esc_html_e( '98%', 'elayne' ); ?></h3>
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"primary","fontSize":"xx-large"} -->
+<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '98%', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"textColor":"main-accent","fontSize":"xx-small"} -->
