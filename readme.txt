@@ -178,6 +178,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * FIXED: "Start Your Project" button textColor changed from undefined contrast to main (dark gray) for visibility on white background.
 * FIXED: Undefined contrast color slug in 4 patterns - root cause: WP core themes use contrast as a slug; Elayne renamed it to main but kept "Contrast" as the editor display name, causing copy-paste confusion. Fixed event-upcoming-grid.php (3 card backgrounds + 3 button backgrounds: contrast → base), legal-hero-split.php (3 stat label textColors: contrast → main-accent; divider border color: contrast → border-light; "Client Reviews" textColor: contrast → main), header-double-bar.php (2 link colors: contrast → main), page-coming-soon.php (countdown box backgroundColor: contrast-2 → tertiary).
 * TECHNICAL: Pattern compliance workflow extended with checks for hardcoded external URLs in src attributes, untranslated text in HTML tags, and untranslated alt attributes. Hardcoded CSS check narrowed to font-size only (border-radius and padding have no WP semantic preset alternatives).
+* CHANGED: client-logo-wall.php - Increased logo image width from 120px to 180px and grid minimumColumnWidth from 10rem to 12rem for better logo visibility.
+* CHANGED: client-success-stories.php - Section background changed from base to tertiary; main testimonial block changed to full-width alignment; secondary testimonials grid converted to proper responsive grid layout (minimumColumnWidth: 19rem).
+* CHANGED: event-upcoming-grid.php - Increased pill/tag group blockGap from xx-small to small for better tag spacing (3 instances).
+* CHANGED: legal-hero-split.php - Stats grid minimumColumnWidth changed from hardcoded 100px to semantic 12rem; blockGap reduced from x-large to medium; stat headings converted to semantic fontSize block attribute.
+* ADDED: style.css - Safari scrollbar visibility fix using ::-webkit-scrollbar rules to render a visible scrollbar thumb in the block editor on macOS Safari.
 
 
 = 3.2.1 - 03/06/26 =
