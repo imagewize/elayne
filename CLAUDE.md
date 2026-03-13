@@ -15,6 +15,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - When updating `CHANGELOG.md` or `readme.txt`, do NOT describe changes as "Changed" unless the file already existed in the main branch
 - New changelog entries are ADDITIONS, not changes to existing files
 
+## Efficiency
+- Avoid reading entire files when only a specific section is needed
+- Use `Grep` to locate relevant code before reading
+- Prefer targeted reads with `offset` and `limit` parameters over full file reads
+
 ## Project Overview
 
 Elayne is a premium WordPress block theme for professional business websites:
