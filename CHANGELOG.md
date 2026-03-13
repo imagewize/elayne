@@ -38,13 +38,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `styles/blocks/button/button-light.json`: New "Light" style — base/white background with tertiary hover
 - `styles/blocks/button/button-outline.json`: New "Outline" style — transparent background with 2px primary border, fills on hover
 
+**Pattern Compliance — image-card-grid.php:**
+- Replaced hardcoded `clamp(2rem, 5vw, 3rem)` heading font-size with `var:preset|font-size|xxx-large`
+- Replaced hardcoded `1.125rem` paragraph font-size with `var:preset|font-size|large`
+- Replaced hardcoded `12px` card border-radius with `var:preset|border-radius|lg` (3 cards)
+- Replaced hardcoded `8px` image border-radius with `var:preset|border-radius|sm` (3 images)
+- Replaced hardcoded `1.5rem` card heading (h3) font-size with `var:preset|font-size|x-large` (3 headings)
+- Replaced hardcoded `1.5rem`/`0.75rem` button padding with `var:preset|spacing|medium`/`var:preset|spacing|small` (3 buttons)
+- Replaced hardcoded `0.9375rem` button font-size with `var:preset|font-size|small` (3 buttons)
+- Removed hardcoded `contentSize: "800px"` from header group (reverts to theme default)
+
+**Pattern Compliance — shop-overview-three-columns.php:**
+- Replaced hardcoded `5px` border-radius with `var:preset|border-radius|sm` on all 3 card groups and 3 product images
+- Added block `metadata` (categories, patternName, name) to outer group block comment
+- Updated image dimension attributes to include `px` units (`"width":"300px","height":"400px"`) for valid block serialization
+- Wrapped all untranslated heading/button strings in `esc_html_e()`: "Shop", "Essential Serum", "Bath Salts", "Massage Oil", "Shop Now"
+- Wrapped untranslated image alt text in `esc_attr_e()`: "Product 1", "Product 2", "Product 3"
+
 ### Fixed
 - `download-cta.php`: Replaced hardcoded `12px` and `8px` border-radius values with border-radius presets (`var:preset|border-radius|lg` and `var:preset|border-radius|sm`).
 
 ### Technical
 
 **CLAUDE.md Efficiency Guidelines:**
-- Added efficiency section to `demo/web/app/themes/elayne/CLAUDE.md` with guidance to use `Grep` before reading files and prefer targeted reads with `offset`/`limit` parameters",
+- Added efficiency section to `demo/web/app/themes/elayne/CLAUDE.md` with guidance to use `Grep` before reading files and prefer targeted reads with `offset`/`limit` parameters
 
 ## [3.4.0] - 2026-03-13
 

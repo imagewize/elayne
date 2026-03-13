@@ -176,6 +176,8 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: button-outline.json - New "Outline" block style variant (transparent with 2px primary border, fills on hover).
 * FIXED: download-cta.php - Replaced hardcoded 12px and 8px border-radius values with border-radius presets (lg and sm).
 * CHANGED: fandb-events-grid.php - Increased grid minimumColumnWidth from 19rem to 22rem for better event card layout at mid-range viewports.
+* CHANGED: image-card-grid.php - Replaced all hardcoded CSS values with semantic presets: font-sizes (clamp(2rem, 5vw, 3rem), 1.125rem, 1.5rem, 0.9375rem) → font-size presets; border-radius (12px, 8px) → border-radius presets (lg, sm); button padding (1.5rem/0.75rem) → spacing presets; removed hardcoded contentSize from header group.
+* CHANGED: shop-overview-three-columns.php - Replaced hardcoded 5px border-radius with border-radius preset (sm) on all 3 card groups and 3 product images; added block metadata to outer group comment; updated image dimensions to include px units for valid block serialization; wrapped all untranslated strings in esc_html_e() and esc_attr_e() for translation compliance.
 * TECHNICAL: CLAUDE.md - Added efficiency guidelines for targeted file reads using Grep and offset/limit parameters.
 
 
