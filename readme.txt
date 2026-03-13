@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.4.0
+Stable tag: 3.5.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,22 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.5.0 - 03/13/26 =
+* CHANGED: Button border radius - Replaced all hardcoded pixel values (8px, 5px, 6px) and legacy border preset references with standardized border-radius presets (sm, lg) across all patterns.
+* CHANGED: theme.json button defaults - Background color changed to `primary`, padding standardized to 0.75rem/1.5rem, font-weight increased to 600, fontFamily added, hover updated to `primary-alt`.
+* CHANGED: gray-gold.json button styles - Migrated from raw CSS variable strings to preset references; standardized padding and added border-width: 0.
+* CHANGED: food-beverage.json button styles - Added border-radius preset, padding, font-size, and explicit hover text color.
+* CHANGED: spa-wellness.json button styles - Added complete button element definition with border-radius, padding, typography, and hover state.
+* CHANGED: Removed inline border-radius style attributes from buttons in contact-details, cta-newsletter, hero-two-tone, hero-with-cta, legal-hero, and shop-overview-three-columns patterns.
+* ADDED: button-brand.json - New "Brand" block style variant (primary background, primary-alt hover).
+* ADDED: button-dark.json - New "Dark" block style variant (main background, main-accent hover).
+* ADDED: button-light.json - New "Light" block style variant (base/white background, tertiary hover).
+* ADDED: button-outline.json - New "Outline" block style variant (transparent with 2px primary border, fills on hover).
+* FIXED: download-cta.php - Replaced hardcoded 12px and 8px border-radius values with border-radius presets (lg and sm).
+* CHANGED: fandb-events-grid.php - Increased grid minimumColumnWidth from 19rem to 22rem for better event card layout at mid-range viewports.
+* TECHNICAL: CLAUDE.md - Added efficiency guidelines for targeted file reads using Grep and offset/limit parameters.
+
 
 = 3.4.0 - 03/13/26 =
 * ADDED: theme.json border radius preset system (WordPress 6.9 radiusSizes API) — slugs sm (0.625rem), md (0.75rem), lg (1rem), pill (999px). Enables var:preset|border-radius|{slug} in all patterns.

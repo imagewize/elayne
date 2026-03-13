@@ -7,6 +7,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.0] - 2026-03-13
+
+### Changed
+
+**Button Border Radius Standardization:**
+- Replaced all hardcoded pixel values (`8px`, `5px`, `6px`) and legacy `var:preset|border|radius` references with proper border-radius presets (`var:preset|border-radius|sm`, `var:preset|border-radius|lg`)
+- Removed inline `style="border-radius:Xpx"` from button HTML in patterns: `contact-details`, `cta-newsletter`, `hero-two-tone`, `hero-with-cta`, `legal-hero`, `shop-overview-three-columns`
+- Updated `fandb-events-grid` date badge and action buttons to use `var:preset|border-radius|sm`
+- Updated `legal-hero-split` buttons and hero image to use `var:preset|border-radius|sm` and `var:preset|border-radius|lg` respectively
+- `fandb-events-grid.php`: Increased grid `minimumColumnWidth` from `19rem` to `22rem` for better event card layout at mid-range viewports
+
+**theme.json Default Button Styles:**
+- Changed default button background color from `main` to `primary`
+- Standardized padding from em-based (`.6em`/`1em`) to rem-based (`0.75rem`/`1.5rem`)
+- Updated font-weight from `500` to `600` for stronger visual presence
+- Added `fontFamily` preset reference (`var:preset|font-family|primary`) to default button typography
+- Updated hover state background from `primary` to `primary-alt`
+
+**Style Variant Button Updates:**
+- `gray-gold.json`: Migrated button styles from raw CSS variable strings (`var(--wp--preset--color--primary)`) to preset references (`var:preset|color|primary`); added `border-width: 0`; standardized padding to `0.75rem`/`1.5rem`
+- `food-beverage.json`: Added `border-radius`, `border-width`, padding, and font-size to button styles; added explicit hover text color
+- `spa-wellness.json`: Added complete button element styles with border-radius preset, padding, typography, and hover state
+
+### Added
+
+**Button Block Style Variants:**
+- `styles/blocks/button/button-brand.json`: New "Brand" style — primary background with primary-alt hover
+- `styles/blocks/button/button-dark.json`: New "Dark" style — main/dark background with main-accent hover
+- `styles/blocks/button/button-light.json`: New "Light" style — base/white background with tertiary hover
+- `styles/blocks/button/button-outline.json`: New "Outline" style — transparent background with 2px primary border, fills on hover
+
+### Fixed
+- `download-cta.php`: Replaced hardcoded `12px` and `8px` border-radius values with border-radius presets (`var:preset|border-radius|lg` and `var:preset|border-radius|sm`).
+
+### Technical
+
+**CLAUDE.md Efficiency Guidelines:**
+- Added efficiency section to `demo/web/app/themes/elayne/CLAUDE.md` with guidance to use `Grep` before reading files and prefer targeted reads with `offset`/`limit` parameters",
+
 ## [3.4.0] - 2026-03-13
 
 ### Added
