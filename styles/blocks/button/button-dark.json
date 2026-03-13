@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Dark",
+	"slug": "button-dark",
+	"blockTypes": ["core/button"],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|main",
+			"text": "var:preset|color|base"
+		},
+		":hover": {
+			"color": {
+				"background": "var:preset|color|main-accent",
+				"text": "var:preset|color|base"
+			}
+		}
+	}
+}

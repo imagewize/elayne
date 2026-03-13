@@ -503,28 +503,29 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "5px",
+					"radius": "var:preset|border-radius|sm",
 					"width": "0"
 				},
 				"color": {
-					"background": "var:preset|color|main",
+					"background": "var:preset|color|primary",
 					"text": "var:preset|color|base"
 				},
 				"spacing": {
 					"padding": {
-						"top": ".6em",
-						"right": "1em",
-						"bottom": ".6em",
-						"left": "1em"
+						"top": "0.75rem",
+						"right": "1.5rem",
+						"bottom": "0.75rem",
+						"left": "1.5rem"
 					}
 				},
 				"typography": {
 					"fontSize": "var:preset|font-size|small",
-					"fontWeight": "500"
+					"fontFamily": "var:preset|font-family|primary",
+					"fontWeight": "600"
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|primary",
+						"background": "var:preset|color|primary-alt",
 						"text": "var:preset|color|base"
 					}
 				}

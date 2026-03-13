@@ -83,8 +83,8 @@
 
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
-		<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"}},"fontSize":"base","fontFamily":"open-sans"} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-open-sans-font-family has-base-font-size has-custom-font-size wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Schedule a Consultation', 'elayne' ); ?></a></div>
+		<!-- wp:button {"backgroundColor":"primary","textColor":"base","fontSize":"base","fontFamily":"open-sans"} -->
+		<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-open-sans-font-family has-base-font-size has-custom-font-size wp-element-button"><?php esc_html_e( 'Schedule a Consultation', 'elayne' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

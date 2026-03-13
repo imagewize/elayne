@@ -7,6 +7,62 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.0] - 2026-03-13
+
+### Changed
+
+**Button Border Radius Standardization:**
+- Replaced all hardcoded pixel values (`8px`, `5px`, `6px`) and legacy `var:preset|border|radius` references with proper border-radius presets (`var:preset|border-radius|sm`, `var:preset|border-radius|lg`)
+- Removed inline `style="border-radius:Xpx"` from button HTML in patterns: `contact-details`, `cta-newsletter`, `hero-two-tone`, `hero-with-cta`, `legal-hero`, `shop-overview-three-columns`
+- Updated `fandb-events-grid` date badge and action buttons to use `var:preset|border-radius|sm`
+- Updated `legal-hero-split` buttons and hero image to use `var:preset|border-radius|sm` and `var:preset|border-radius|lg` respectively
+- `fandb-events-grid.php`: Increased grid `minimumColumnWidth` from `19rem` to `22rem` for better event card layout at mid-range viewports
+
+**theme.json Default Button Styles:**
+- Changed default button background color from `main` to `primary`
+- Standardized padding from em-based (`.6em`/`1em`) to rem-based (`0.75rem`/`1.5rem`)
+- Updated font-weight from `500` to `600` for stronger visual presence
+- Added `fontFamily` preset reference (`var:preset|font-family|primary`) to default button typography
+- Updated hover state background from `primary` to `primary-alt`
+
+**Style Variant Button Updates:**
+- `gray-gold.json`: Migrated button styles from raw CSS variable strings (`var(--wp--preset--color--primary)`) to preset references (`var:preset|color|primary`); added `border-width: 0`; standardized padding to `0.75rem`/`1.5rem`
+- `food-beverage.json`: Added `border-radius`, `border-width`, padding, and font-size to button styles; added explicit hover text color
+- `spa-wellness.json`: Added complete button element styles with border-radius preset, padding, typography, and hover state
+
+### Added
+
+**Button Block Style Variants:**
+- `styles/blocks/button/button-brand.json`: New "Brand" style — primary background with primary-alt hover
+- `styles/blocks/button/button-dark.json`: New "Dark" style — main/dark background with main-accent hover
+- `styles/blocks/button/button-light.json`: New "Light" style — base/white background with tertiary hover
+- `styles/blocks/button/button-outline.json`: New "Outline" style — transparent background with 2px primary border, fills on hover
+
+**Pattern Compliance — image-card-grid.php:**
+- Replaced hardcoded `clamp(2rem, 5vw, 3rem)` heading font-size with `var:preset|font-size|xxx-large`
+- Replaced hardcoded `1.125rem` paragraph font-size with `var:preset|font-size|large`
+- Replaced hardcoded `12px` card border-radius with `var:preset|border-radius|lg` (3 cards)
+- Replaced hardcoded `8px` image border-radius with `var:preset|border-radius|sm` (3 images)
+- Replaced hardcoded `1.5rem` card heading (h3) font-size with `var:preset|font-size|x-large` (3 headings)
+- Replaced hardcoded `1.5rem`/`0.75rem` button padding with `var:preset|spacing|medium`/`var:preset|spacing|small` (3 buttons)
+- Replaced hardcoded `0.9375rem` button font-size with `var:preset|font-size|small` (3 buttons)
+- Removed hardcoded `contentSize: "800px"` from header group (reverts to theme default)
+
+**Pattern Compliance — shop-overview-three-columns.php:**
+- Replaced hardcoded `5px` border-radius with `var:preset|border-radius|sm` on all 3 card groups and 3 product images
+- Added block `metadata` (categories, patternName, name) to outer group block comment
+- Updated image dimension attributes to include `px` units (`"width":"300px","height":"400px"`) for valid block serialization
+- Wrapped all untranslated heading/button strings in `esc_html_e()`: "Shop", "Essential Serum", "Bath Salts", "Massage Oil", "Shop Now"
+- Wrapped untranslated image alt text in `esc_attr_e()`: "Product 1", "Product 2", "Product 3"
+
+### Fixed
+- `download-cta.php`: Replaced hardcoded `12px` and `8px` border-radius values with border-radius presets (`var:preset|border-radius|lg` and `var:preset|border-radius|sm`).
+
+### Technical
+
+**CLAUDE.md Efficiency Guidelines:**
+- Added efficiency section to `demo/web/app/themes/elayne/CLAUDE.md` with guidance to use `Grep` before reading files and prefer targeted reads with `offset`/`limit` parameters
+
 ## [3.4.0] - 2026-03-13
 
 ### Added
