@@ -44,8 +44,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"0.75rem","bottom":"0.75rem"}},"typography":{"fontWeight":"600","fontSize":"0.9375rem","fontStyle":"normal"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:8px;padding-top:0.75rem;padding-right:1.5rem;padding-bottom:0.75rem;padding-left:1.5rem;font-size:0.9375rem;font-style:normal;font-weight:600"><?php esc_html_e( 'Learn More →', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"0.75rem","bottom":"0.75rem"}},"typography":{"fontWeight":"600","fontSize":"0.9375rem","fontStyle":"normal"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="padding-top:0.75rem;padding-right:1.5rem;padding-bottom:0.75rem;padding-left:1.5rem;font-size:0.9375rem;font-style:normal;font-weight:600"><?php esc_html_e( 'Learn More →', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -66,8 +66,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"0.75rem","bottom":"0.75rem"}},"typography":{"fontWeight":"600","fontSize":"0.9375rem","fontStyle":"normal"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:8px;padding-top:0.75rem;padding-right:1.5rem;padding-bottom:0.75rem;padding-left:1.5rem;font-size:0.9375rem;font-style:normal;font-weight:600"><?php esc_html_e( 'Learn More →', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"0.75rem","bottom":"0.75rem"}},"typography":{"fontWeight":"600","fontSize":"0.9375rem","fontStyle":"normal"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="padding-top:0.75rem;padding-right:1.5rem;padding-bottom:0.75rem;padding-left:1.5rem;font-size:0.9375rem;font-style:normal;font-weight:600"><?php esc_html_e( 'Learn More →', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -88,8 +88,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"0.75rem","bottom":"0.75rem"}},"typography":{"fontWeight":"600","fontSize":"0.9375rem","fontStyle":"normal"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:8px;padding-top:0.75rem;padding-right:1.5rem;padding-bottom:0.75rem;padding-left:1.5rem;font-size:0.9375rem;font-style:normal;font-weight:600"><?php esc_html_e( 'Learn More →', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"0.75rem","bottom":"0.75rem"}},"typography":{"fontWeight":"600","fontSize":"0.9375rem","fontStyle":"normal"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="padding-top:0.75rem;padding-right:1.5rem;padding-bottom:0.75rem;padding-left:1.5rem;font-size:0.9375rem;font-style:normal;font-weight:600"><?php esc_html_e( 'Learn More →', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

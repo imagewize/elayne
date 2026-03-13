@@ -75,8 +75,8 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-    <!-- wp:button {"style":{"border":{"radius":"5px"}}} -->
-    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" style="border-radius:5px">Shop Now</a></div>
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Shop Now</a></div>
     <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->

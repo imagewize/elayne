@@ -24,12 +24,12 @@
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"}},"fontSize":"base"} -->
-			<div class="wp-block-button has-custom-font-size has-base-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Get Started', 'elayne' ); ?></a></div>
+			<!-- wp:button {"backgroundColor":"primary","textColor":"base","fontSize":"base"} -->
+			<div class="wp-block-button has-custom-font-size has-base-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button"><?php esc_html_e( 'Get Started', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 
-			<!-- wp:button {"backgroundColor":"base","textColor":"primary","className":"is-style-outline","style":{"border":{"radius":"8px","width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"fontSize":"base","borderColor":"primary"} -->
-			<div class="wp-block-button has-custom-font-size has-base-font-size is-style-outline"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-link-color has-border-color has-primary-border-color wp-element-button" style="border-width:2px;border-radius:8px"><?php esc_html_e( 'Learn More', 'elayne' ); ?></a></div>
+			<!-- wp:button {"backgroundColor":"base","textColor":"primary","className":"is-style-outline","style":{"border":{"width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"fontSize":"base","borderColor":"primary"} -->
+			<div class="wp-block-button has-custom-font-size has-base-font-size is-style-outline"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-link-color has-border-color has-primary-border-color wp-element-button" style="border-width:2px"><?php esc_html_e( 'Learn More', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
