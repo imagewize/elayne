@@ -3,6 +3,31 @@
 	"version": 3,
 	"settings": {
 		"appearanceTools": true,
+		"border": {
+			"radius": true,
+			"radiusSizes": [
+				{
+					"name": "Small",
+					"slug": "sm",
+					"size": "0.625rem"
+				},
+				{
+					"name": "Medium",
+					"slug": "md",
+					"size": "0.75rem"
+				},
+				{
+					"name": "Large",
+					"slug": "lg",
+					"size": "1rem"
+				},
+				{
+					"name": "Pill",
+					"slug": "pill",
+					"size": "999px"
+				}
+			]
+		},
 		"color": {
 			"defaultDuotone": false,
 			"defaultGradients": false,
@@ -295,6 +320,15 @@
 				}
 			],
 			"fontSizes": [
+				{
+					"fluid": {
+						"min": "0.625rem",
+						"max": "0.6875rem"
+					},
+					"size": "0.6875rem",
+					"slug": "xx-small",
+					"name": "2X-Small"
+				},
 				{
 					"fluid": {
 						"min": ".825rem",
