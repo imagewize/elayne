@@ -18,9 +18,9 @@
 <!-- /wp:heading -->
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
-<div class="wp-block-group alignwide"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"var:preset|border-radius|sm","width":"0px","style":"none"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-base-background-color has-background" style="border-style:none;border-width:0px;border-radius:var(--wp--preset--border-radius--sm);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"width":"300px","height":"400px","align":"center","style":{"border":{"radius":"var:preset|border-radius|sm"}}} -->
-<figure class="wp-block-image aligncenter is-resized has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/shop/serum.webp' ) ); ?>" alt="<?php esc_attr_e( 'Product 1', 'elayne' ); ?>" style="border-radius:var(--wp--preset--border-radius--sm);width:300px;height:400px"/></figure>
+<div class="wp-block-group alignwide"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"var:preset|border-radius|sm","width":"0px","style":"none"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-style:none;border-width:0px;border-radius:var(--wp--preset--border-radius--sm);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"aspectRatio":"3/4","scale":"cover","style":{"border":{"radius":"var:preset|border-radius|sm"}}} -->
+<figure class="wp-block-image has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/shop/serum.webp' ) ); ?>" alt="<?php esc_attr_e( 'Product 1', 'elayne' ); ?>" style="border-radius:var(--wp--preset--border-radius--sm);aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":3} -->
@@ -32,9 +32,9 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"var:preset|border-radius|sm","width":"0px","style":"none"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-base-background-color has-background" style="border-style:none;border-width:0px;border-radius:var(--wp--preset--border-radius--sm);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"width":"300px","height":"400px","align":"center","style":{"border":{"radius":"var:preset|border-radius|sm"}}} -->
-<figure class="wp-block-image aligncenter is-resized has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/shop/bath-salt.webp' ) ); ?>" alt="<?php esc_attr_e( 'Product 2', 'elayne' ); ?>" style="border-radius:var(--wp--preset--border-radius--sm);width:300px;height:400px"/></figure>
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"var:preset|border-radius|sm","width":"0px","style":"none"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-style:none;border-width:0px;border-radius:var(--wp--preset--border-radius--sm);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"aspectRatio":"3/4","scale":"cover","style":{"border":{"radius":"var:preset|border-radius|sm"}}} -->
+<figure class="wp-block-image has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/shop/bath-salt.webp' ) ); ?>" alt="<?php esc_attr_e( 'Product 2', 'elayne' ); ?>" style="border-radius:var(--wp--preset--border-radius--sm);aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":3} -->
@@ -46,9 +46,9 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"var:preset|border-radius|sm","width":"0px","style":"none"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-base-background-color has-background" style="border-style:none;border-width:0px;border-radius:var(--wp--preset--border-radius--sm);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"width":"300px","height":"400px","align":"center","style":{"border":{"radius":"var:preset|border-radius|sm"}}} -->
-<figure class="wp-block-image aligncenter is-resized has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/shop/massage-oil.webp' ) ); ?>" alt="<?php esc_attr_e( 'Product 3', 'elayne' ); ?>" style="border-radius:var(--wp--preset--border-radius--sm);width:300px;height:400px"/></figure>
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"var:preset|border-radius|sm","width":"0px","style":"none"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-style:none;border-width:0px;border-radius:var(--wp--preset--border-radius--sm);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"aspectRatio":"3/4","scale":"cover","style":{"border":{"radius":"var:preset|border-radius|sm"}}} -->
+<figure class="wp-block-image has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/shop/massage-oil.webp' ) ); ?>" alt="<?php esc_attr_e( 'Product 3', 'elayne' ); ?>" style="border-radius:var(--wp--preset--border-radius--sm);aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":3} -->

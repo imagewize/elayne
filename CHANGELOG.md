@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.1] - 2026-03-13
+
+### Changed
+
+- `shop-overview-three-columns.php`: Removed `backgroundColor: base` from all three product card groups; updated all images to use `aspectRatio: 3/4` with `scale: cover` for consistent portrait display.
+
 ## [3.5.0] - 2026-03-13
 
 ### Changed
