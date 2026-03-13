@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Outline",
+	"slug": "button-outline",
+	"blockTypes": ["core/button"],
+	"styles": {
+		"border": {
+			"color": "var:preset|color|primary",
+			"width": "2px"
+		},
+		"color": {
+			"background": "transparent",
+			"text": "var:preset|color|primary"
+		},
+		":hover": {
+			"color": {
+				"background": "var:preset|color|primary",
+				"text": "var:preset|color|base"
+			}
+		}
+	}
+}
