@@ -186,6 +186,39 @@ Central configuration for:
 - `elayne/card-extended` — 19rem: nested cards, multiple CTAs, rich content
 - `elayne/card-profiles` — 20rem: photos + names + titles + bios
 
+### Border Radius Presets (WordPress 6.9+)
+
+WordPress 6.9 introduced `settings.border.radiusSizes` — use `var:preset|border-radius|{slug}` in patterns, **not** hardcoded px values and **not** the non-existent `var:preset|border|radius`.
+
+**Elayne radius scale** (defined in `theme.json → settings.border.radiusSizes`):
+
+| Slug   | Value    | Used for                            |
+|--------|----------|-------------------------------------|
+| `sm`   | 0.625rem | Buttons, small interactive elements |
+| `md`   | 0.75rem  | Date boxes, inner card elements     |
+| `lg`   | 1rem     | Card outer containers               |
+| `pill` | 999px    | Badges, tags, pill labels           |
+
+**Border width**: No preset system exists — always hardcode `1px`.
+
+```php
+<!-- Correct -->
+"style":{"border":{"radius":"var:preset|border-radius|lg","width":"1px"}}
+
+<!-- WRONG — preset does not exist -->
+"style":{"border":{"radius":"var:preset|border|radius","width":"var:preset|border|width"}}
+```
+
+> **Full details**: `docs/elayne/BORDER-PRESETS.md`
+
+### Valid Preset Slugs — Quick Reference
+
+**Spacing** (`var:preset|spacing|{slug}`): `2-x-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
+— ⚠️ `xx-small` does NOT exist. Use `2-x-small` or `x-small`.
+
+**Font sizes** (`var:preset|font-size|{slug}`): `x-small`, `small`, `base`, `medium`, `large`, `x-large`, `xx-large`
+— ⚠️ `xx-small` does NOT exist. Add it to `theme.json` if an ~11px size is needed.
+
 ### Critical Pattern Rules
 
 | Rule | Quick summary |
