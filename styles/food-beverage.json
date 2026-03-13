@@ -242,17 +242,31 @@
 				}
 			},
 			"button": {
+				"border": {
+					"radius": "var:preset|border-radius|sm",
+					"width": "0"
+				},
 				"color": {
 					"background": "var:preset|color|border-light",
 					"text": "var:preset|color|primary-alt"
 				},
+				"spacing": {
+					"padding": {
+						"top": "0.75rem",
+						"right": "1.5rem",
+						"bottom": "0.75rem",
+						"left": "1.5rem"
+					}
+				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|body",
-					"fontWeight": "600"
+					"fontWeight": "600",
+					"fontSize": "var:preset|font-size|small"
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|primary-accent"
+						"background": "var:preset|color|primary-accent",
+						"text": "var:preset|color|primary-alt"
 					}
 				}
 			}
