@@ -165,7 +165,7 @@ Central configuration for:
 - **Open Sans** (variable 300-800) — body text fallback
 - **Bitter** (variable 100-900, serif) — optional serif
 
-**Fluid Font Sizes**: `x-small` → `small` → `base` → `medium` → `large` → `x-large` → `xx-large`
+**Fluid Font Sizes**: `xx-small` → `x-small` → `small` → `base` → `medium` → `large` → `x-large` → `xx-large`
 
 ### Spacing Scale
 `small` → `medium` → `large` → `x-large` → `xx-large` → `xxx-large` (all use clamp() for responsive scaling)
@@ -216,8 +216,7 @@ WordPress 6.9 introduced `settings.border.radiusSizes` — use `var:preset|borde
 **Spacing** (`var:preset|spacing|{slug}`): `2-x-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
 — ⚠️ `xx-small` does NOT exist. Use `2-x-small` or `x-small`.
 
-**Font sizes** (`var:preset|font-size|{slug}`): `x-small`, `small`, `base`, `medium`, `large`, `x-large`, `xx-large`
-— ⚠️ `xx-small` does NOT exist. Add it to `theme.json` if an ~11px size is needed.
+**Font sizes** (`var:preset|font-size|{slug}`): `xx-small`, `x-small`, `small`, `base`, `medium`, `large`, `x-large`, `xx-large`
 
 ### Critical Pattern Rules
 
