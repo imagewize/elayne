@@ -101,19 +101,19 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"secondary","textColor":"primary","style":{"border":{"radius":"var:preset|border|radius"},"shadow":"var:preset|shadow|medium"},"fontSize":"base"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-secondary-background-color has-text-color has-background has-base-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border--radius);box-shadow:var(--wp--preset--shadow--medium)"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"secondary","textColor":"primary","style":{"border":{"radius":"var:preset|border-radius|sm"},"shadow":"var:preset|shadow|medium"},"fontSize":"base"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-secondary-background-color has-text-color has-background has-base-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);box-shadow:var(--wp--preset--shadow--medium)"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"backgroundColor":"base","textColor":"primary","style":{"border":{"radius":"var:preset|border|radius","width":"var:preset|border|width"}},"fontSize":"base","borderColor":"primary"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-border-color has-primary-border-color has-base-font-size has-custom-font-size wp-element-button" style="border-width:var(--wp--preset--border--width);border-radius:var(--wp--preset--border--radius)"><?php esc_html_e( 'Call Now', 'elayne' ); ?></a></div>
+<!-- wp:button {"backgroundColor":"base","textColor":"primary","style":{"border":{"radius":"var:preset|border-radius|sm","width":"1px"}},"fontSize":"base","borderColor":"primary"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-border-color has-primary-border-color has-base-font-size has-custom-font-size wp-element-button" style="border-width:1px;border-radius:var(--wp--preset--border-radius--sm)"><?php esc_html_e( 'Call Now', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"legal-hero-split-image","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group legal-hero-split-image" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var:preset|border|radius"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/hero-law-office.webp" alt="<?php esc_attr_e( 'Professional lawyers discussing case', 'elayne' ); ?>" style="border-radius:var(--wp--preset--border--radius);aspect-ratio:3/4;object-fit:cover"/></figure>
+<div class="wp-block-group legal-hero-split-image" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"var:preset|border-radius|lg"}}} -->
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/hero-law-office.webp" alt="<?php esc_attr_e( 'Professional lawyers discussing case', 'elayne' ); ?>" style="border-radius:var(--wp--preset--border-radius--lg);aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

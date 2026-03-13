@@ -6,7 +6,7 @@
  * Categories: elayne/food-beverage, elayne/events, elayne/card-extended
  * Keywords: events, calendar, upcoming, wine tasting, live music, special dinner, restaurant events
  * Viewport Width: 1200
- * Grid Config: 19rem - Complex event cards with metadata, tags, and CTAs
+ * Grid Config: 22rem - Complex event cards with metadata, tags, and CTAs
  */
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/food-beverage","elayne/events","elayne/card-extended"],"patternName":"elayne/fandb-events-grid","name":"F&B Events Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"secondary","textColor":"primary","layout":{"type":"constrained"}} -->
@@ -24,7 +24,7 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large","margin":{"top":"var:preset|spacing|large"}}},"layout":{"type":"grid","minimumColumnWidth":"19rem"}} -->
+<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large","margin":{"top":"var:preset|spacing|large"}}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
 <div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--large)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|spacing|large","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--spacing--large);padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|x-small","right":"var:preset|spacing|x-small"},"blockGap":"var:preset|spacing|2-x-small"},"border":{"radius":"var:preset|spacing|small"}},"backgroundColor":"primary-accent","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group has-base-color has-primary-accent-background-color has-text-color has-background" style="border-radius:var(--wp--preset--spacing--small);padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--x-small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--x-small)"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","letterSpacing":"0.12em","textTransform":"uppercase"}},"textColor":"base","fontSize":"x-small","fontFamily":"body"} -->
@@ -69,8 +69,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|spacing|small"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
-<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--spacing--small);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Reserve Now', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
+<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Reserve Now', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -119,8 +119,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|spacing|small"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
-<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--spacing--small);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Book Table', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
+<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Book Table', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -169,8 +169,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|spacing|small"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
-<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--spacing--small);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Reserve Seat', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
+<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Reserve Seat', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
