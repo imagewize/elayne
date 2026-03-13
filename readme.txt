@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.3.0
+Stable tag: 3.4.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.4.0 - 03/13/26 =
+* ADDED: theme.json border radius preset system (WordPress 6.9 radiusSizes API) — slugs sm (0.625rem), md (0.75rem), lg (1rem), pill (999px). Enables var:preset|border-radius|{slug} in all patterns.
+* ADDED: theme.json xx-small font size (fluid 0.625–0.6875rem) for small uppercase labels and event month badges.
+* FIXED: event-upcoming-grid.php — replaced all invalid var:preset|border|radius and var:preset|border|width references with correct var:preset|border-radius|{slug} and hardcoded 1px border-width.
+* FIXED: event-upcoming-grid.php — replaced all invalid var:preset|spacing|xx-small references with valid 2-x-small and x-small spacing slugs.
 
 = 3.3.0 - 03/12/26 =
 * FIXED: Pattern compliance - Replaced hardcoded CSS values with semantic variables in 4 pattern files: event-upcoming-grid.php (19px, 14px, 13px font-sizes), legal-hero-split.php (4px, 14px, 2.25rem, 1.25rem, 1.125rem, 8px, 12px), page-coming-soon.php (4rem, 1.25rem, 3rem, 0.875rem, 8px, 100px). All values now use var:preset|font-size|* and var:preset|spacing|* semantic variables.

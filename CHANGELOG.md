@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.0] - 2026-03-13
+
+### Added
+- `theme.json`: Border radius preset system (`settings.border.radiusSizes`) using WordPress 6.9 `radiusSizes` API — slugs `sm` (0.625rem), `md` (0.75rem), `lg` (1rem), `pill` (999px). Enables `var:preset|border-radius|{slug}` references across all patterns.
+- `theme.json`: Added `xx-small` font size (fluid 0.625–0.6875rem, ~11px) to `settings.typography.fontSizes` — sits below `x-small`, used for small uppercase labels and month labels in event patterns.
+- `docs/elayne/BORDER-PRESETS.md`: New reference document covering WP 6.9 border radius preset system, valid preset slugs, border-width conventions, and missing slug warnings.
+
+### Fixed
+- `event-upcoming-grid.php`: Replaced all invalid `var:preset|border|radius` and `var:preset|border|width` references (no such preset exists) with correct `var:preset|border-radius|{slug}` and hardcoded `1px` border-width.
+- `event-upcoming-grid.php`: Replaced all invalid `var:preset|spacing|xx-small` references (slug does not exist in theme.json) with valid `var:preset|spacing|2-x-small` (badge padding) and `var:preset|spacing|x-small` (tag padding, button padding, date box padding).
+- `event-upcoming-grid.php`: Replaced `var:preset|font-size|xx-small` references with the now-defined `xx-small` font size slug after adding it to theme.json.
+- `event-upcoming-grid.php`: Date box `blockGap` set to hardcoded `3px` (below minimum spacing preset granularity — valid exception).
+
 ## [3.3.0] - 2026-03-12
 
 ### Fixed
