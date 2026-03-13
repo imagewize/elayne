@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.5.0
+Stable tag: 3.5.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.5.1 - 03/13/26 =
+* CHANGED: shop-overview-three-columns.php - Removed base background color from all three product card groups; updated all images to use aspectRatio 3/4 with scale cover for consistent portrait display.
 
 = 3.5.0 - 03/13/26 =
 * CHANGED: Button border radius - Replaced all hardcoded pixel values (8px, 5px, 6px) and legacy border preset references with standardized border-radius presets (sm, lg) across all patterns.
