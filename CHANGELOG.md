@@ -18,6 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Translation compliance: Wrapped all bare user-facing strings in `esc_html_e()`, `esc_attr__()`, or `wp_kses_post(__())` across 17 pattern files (`footer-with-nav-columns.php`, `two-column-feature.php`, `fandb-amenities.php`, `fandb-chef-profile.php`, `fandb-hours-location.php`, `fandb-testimonials-food.php`, `spa-booking-cta.php`, `spa-home-hero.php`, `four-column-wellness-posts.php`, `wellness-cover-highlight.php`, `menu-pricing-table.php`, `menu-food-grid.php`, `menu-drinks-grid.php`, `menu-daily-specials.php`, `legal-hero-with-stats.php`, `header-social-logo-hamburger.php`, `header-social-logo-hamburger-light.php`).
 - `patterns/hero-modern-light.php`: Replaced marketing copy in paragraph with placeholder text (WP.org requirement).
 - `screenshot.png`: Updated theme screenshot to reflect current design.
+- Hardcoded font-size compliance: Replaced all inline `font-size` CSS values with semantic `fontSize` block attributes across 11 patterns (`fandb-amenities.php`, `fandb-chef-profile.php`, `fandb-hours-location.php`, `fandb-testimonials-food.php`, `legal-hero-with-stats.php`, `menu-daily-specials.php`, `menu-drinks-grid.php`, `menu-food-grid.php`, `menu-pricing-table.php`, `spa-booking-cta.php`, `wellness-cover-highlight.php`). Values such as `font-size:2.5rem`, `font-size:1.5rem`, and `font-size:0.9375rem` replaced with semantic presets (`large`, `medium`, `x-small`, etc.).
+- Full-width margin reset: Added missing `"margin":{"top":"0","bottom":"0"}` to `spa-booking-cta.php` (outer group) and `wellness-cover-highlight.php` (outer cover block) — both are `alignfull` patterns that were missing the required margin reset.
 
 ### Replaced (Image Licensing)
 
