@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.2] - 2026-03-15
+
+### Changed
+
+**WP.org Theme Review Compliance:**
+
+- `assets/js/block-extensions/post-excerpt.js`: Prefixed all JavaScript functions with `elaynePostExcerpt` namespace to prevent global scope conflicts (`elaynePostExcerptAddAttributes`, `elaynePostExcerptWithInspectorControls`, `elaynePostExcerptWithCustomClassName`).
+- `patterns/fandb-hours-location.php`: Replaced placeholder email `info@yourrestaurant.com` with `example@example.com`.
+- Translation compliance: Wrapped all bare user-facing strings in `esc_html_e()`, `esc_attr__()`, or `wp_kses_post(__())` across 17 pattern files (`footer-with-nav-columns.php`, `two-column-feature.php`, `fandb-amenities.php`, `fandb-chef-profile.php`, `fandb-hours-location.php`, `fandb-testimonials-food.php`, `spa-booking-cta.php`, `spa-home-hero.php`, `four-column-wellness-posts.php`, `wellness-cover-highlight.php`, `menu-pricing-table.php`, `menu-food-grid.php`, `menu-drinks-grid.php`, `menu-daily-specials.php`, `legal-hero-with-stats.php`, `header-social-logo-hamburger.php`, `header-social-logo-hamburger-light.php`).
+- `patterns/hero-modern-light.php`: Replaced marketing copy in paragraph with placeholder text (WP.org requirement).
+- `screenshot.png`: Updated theme screenshot to reflect current design.
+
+### Replaced (Image Licensing)
+
+Replaced all Pexels-licensed images with CC0 Public Domain alternatives from StockSnap.io to meet WP.org theme review requirements (CC0 or GPL only):
+
+- `wellness.webp` — StockSnap people-woman_IX4W28VSKO (Healthy Living)
+- `harbor-sunset.webp` — StockSnap sunset-boat_YYLZCMYXXF (Sergei Gussev)
+- `banner-boats-16x9.webp` — Same StockSnap source, 16:9 crop
+- `avatar-1.webp` through `avatar-7.webp` — StockSnap CC0 business portraits
+- `spa/review-profile.webp` — StockSnap smiling-woman_8GZGNCU0T6 (Authentic Stock)
+- `spa/back-massage.webp` — StockSnap woman-massage_ZRYMMTHIUP (Authentic Stock)
+- `spa/spa-treatment-zoomed.webp` — StockSnap woman-massage_VH22RVC5UT (Authentic Stock)
+- `legal/hero-law-office.webp` — StockSnap man-thinking_RI8VPT40DJ (Matt Moloney)
+- `legal/attorney-1.webp`, `attorney-2.webp`, `attorney-3.webp` — StockSnap CC0 business portraits
+- `legal/banner-boats-4x3.webp` — StockSnap sunset-boat_YYLZCMYXXF, 4:3 crop
+- `fandb/cafe-terrace-hero.webp` — StockSnap french-restaurant_EQVWRV7CPF (Julien Sister)
+- `fandb/cafe-interior-about.webp` — StockSnap cafe-restaurant_HOHJK6B7TD (donterase)
+- `fandb/chef-profile.webp` — StockSnap food-cook_1CB40GCIFG (Timur Saglambilek)
+
 ## [3.5.1] - 2026-03-13
 
 ### Changed
