@@ -35,7 +35,7 @@ Replaced all Pexels-licensed images with CC0 Public Domain alternatives from Sto
 - `legal/banner-boats-4x3.webp` — StockSnap sunset-boat_YYLZCMYXXF, 4:3 crop
 - `fandb/cafe-terrace-hero.webp` — StockSnap french-restaurant_EQVWRV7CPF (Julien Sister)
 - `fandb/cafe-interior-about.webp` — StockSnap cafe-restaurant_HOHJK6B7TD (donterase)
-- `fandb/chef-profile.webp` — StockSnap food-cook_1CB40GCIFG (Timur Saglambilek)
+- `fandb/chef-profile.webp` — StockSnap people-man_3PS1GVU42N (Nick Karvounis); added `fandb/chef-profile-portrait.webp` as alternate portrait crop (same source)
 
 ## [3.5.1] - 2026-03-13
 
