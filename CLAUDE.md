@@ -237,6 +237,8 @@ WordPress 6.9 introduced `settings.border.radiusSizes` — use `var:preset|borde
 | **External images** | NEVER use hardcoded external URLs (e.g. `http://demo.imagewize.test/...`) — WP.org rejection |
 | **Image block** | `is-resized` class required when width/height set; `align` comes after width/height in JSON |
 | **Translation strings** | ALL user-facing text in patterns MUST use `esc_html_e()` / `esc_attr__()` with `'elayne'` domain |
+| **Email addresses** | NEVER use real business emails in patterns — always use `example@example.com` (WP.org requirement) |
+| **Bundled images** | ALL bundled images MUST be CC0 or GPL-compatible — Pexels License is NOT accepted by WP.org |
 | **WP-CLI patterns** | Use `<!-- wp:pattern {"slug":"elayne/slug"} /-->` — NEVER `php -r 'include ...'` |
 
 > **Full details with code examples**: `docs/elayne/PATTERN-GUIDELINES.md`
