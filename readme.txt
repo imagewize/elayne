@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.5.1
+Stable tag: 3.5.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,17 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.5.2 - 03/15/26 =
+* CHANGED: post-excerpt.js - Prefixed all JavaScript functions with `elaynePostExcerpt` namespace to prevent global scope conflicts (WP.org requirement).
+* CHANGED: fandb-hours-location.php - Replaced placeholder email `info@yourrestaurant.com` with `example@example.com` (WP.org requirement).
+* CHANGED: Translation compliance - Wrapped all bare user-facing strings in `esc_html_e()`, `esc_attr__()`, or `wp_kses_post(__())` across 17 pattern files (WP.org requirement).
+* CHANGED: Replaced all Pexels-licensed images with CC0 Public Domain alternatives from StockSnap.io across 20 image files (WP.org requires CC0 or GPL-compatible licenses only).
+* CHANGED: readme.txt - Updated image attribution section to reflect new CC0 StockSnap.io sources.
+* CHANGED: hero-modern-light.php - Replaced marketing copy in paragraph with placeholder text (WP.org requirement).
+* CHANGED: screenshot.png - Updated theme screenshot to reflect current design.
+* CHANGED: Hardcoded font-size compliance - Replaced all inline font-size CSS values with semantic fontSize block attributes across 11 patterns (fandb-amenities.php, fandb-chef-profile.php, fandb-hours-location.php, fandb-testimonials-food.php, legal-hero-with-stats.php, menu-daily-specials.php, menu-drinks-grid.php, menu-food-grid.php, menu-pricing-table.php, spa-booking-cta.php, wellness-cover-highlight.php). Values such as font-size:2.5rem, font-size:1.5rem, and font-size:0.9375rem replaced with semantic presets (large, medium, x-small, etc.).
+* FIXED: Full-width margin reset - Added missing margin:top/bottom:0 to spa-booking-cta.php (outer group) and wellness-cover-highlight.php (outer cover block), both alignfull patterns that were missing the required margin reset.
 
 = 3.5.1 - 03/13/26 =
 * CHANGED: shop-overview-three-columns.php - Removed base background color from all three product card groups; updated all images to use aspectRatio 3/4 with scale cover for consistent portrait display.
@@ -737,82 +748,82 @@ GNU General Public License for more details.
 - **Description:** Team working together in colorful office space with laptops
 
 ### wellness.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/meditating-with-candles-and-incense-3822621/)
-- **Title:** Meditating with Candles and Incense
-- **Photographer:** [Elina Fairytale](https://www.pexels.com/@elly-fairytale/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Person meditating in lotus position with candles and incense, calm wellness setting
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/people-woman-IX4W28VSKO)
+- **Title:** People Woman
+- **Photographer:** Healthy Living
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Person in calm wellness setting, calm wellness scene
 
 ### harbor-sunset.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/assorted-boats-on-body-of-water-during-sunset-237289/)
-- **Title:** Assorted Boats on Body of Water during Sunset
-- **Photographer:** Pexels Contributor
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/sunset-boat-YYLZCMYXXF)
+- **Title:** Sunset Boat
+- **Photographer:** Sergei Gussev
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Harbor with boats at sunset, professional waterfront view
 
 ### banner-boats-16x9.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/photo-of-boats-parked-on-river-2031706/)
-- **Title:** Photo of Boats Parked on River
-- **Photographer:** [Chait Goli](https://www.pexels.com/@chaitaastic/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Boats on calm river at dusk, 16:9 landscape banner for general page headers (800×450)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/sunset-boat-YYLZCMYXXF)
+- **Title:** Sunset Boat
+- **Photographer:** Sergei Gussev
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Boats at sunset, 16:9 landscape banner for general page headers (800×450), cropped from harbor-sunset source
 
-## Team Member Avatars (Pexels License - GPL-Compatible)
+## Team Member Avatars (CC0 Public Domain)
 
 ### avatar-1.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/man-in-blue-dress-shirt-and-black-formal-suit-1043473/)
-- **Title:** Man in Blue Dress Shirt and Black Formal Suit
-- **Photographer:** [Chloe Kala](https://www.pexels.com/@chloekalaartist/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Professional man in business attire with sunglasses
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/businessman-thinking-TGG4JHNHB8)
+- **Title:** Businessman Thinking
+- **Photographer:** Burst
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Professional man in business attire
 
 ### avatar-2.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/a-man-reading-the-newspaper-while-drinking-coffee-10131170/)
-- **Title:** A Man Reading the Newspaper While Drinking Coffee
-- **Photographer:** Ron Lach
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Professional man in business attire reading newspaper
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/man-reading-NEJC2MVDAZ)
+- **Title:** Man Reading
+- **Photographer:** Kristin Hardwick
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Professional man reading
 
 ### avatar-3.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/a-woman-holding-a-phone-8067901/)
-- **Title:** A Woman Holding a Phone
-- **Photographer:** Alena Shekhovtcova
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Professional woman in business casual attire
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/woman-business-LERRJPTMHP)
+- **Title:** Woman Business
+- **Photographer:** Kristin Hardwick
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Professional woman in business attire
 
 ### avatar-4.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/man-in-blue-dress-shirt-and-black-formal-suit-1043473/)
-- **Title:** Man in Blue Dress Shirt and Black Formal Suit
-- **Photographer:** [Chloe Kala](https://www.pexels.com/@chloekalaartist/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Professional man in business attire with sunglasses (same as avatar-1)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/confident-business-ZMIFYSYFK8)
+- **Title:** Confident Business
+- **Photographer:** Matt Moloney
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Confident professional man in business attire
 
 ### avatar-5.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/woman-wearing-white-multi-colored-floral-top-1877913/)
-- **Title:** Woman Wearing White Multi Colored Floral Top
-- **Photographer:** [Chloe Kala](https://www.pexels.com/@chloekalaartist/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Professional woman in casual floral attire
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/woman-portrait-QESQAYAMNZ)
+- **Title:** Woman Portrait
+- **Photographer:** Matt Moloney
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Professional woman portrait
 
 ### avatar-7.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/woman-wearing-blue-shawl-lapel-suit-jacket-1036622/)
-- **Title:** Woman Wearing Blue Shawl Lapel Suit Jacket
-- **Photographer:** [Moose Photos](https://www.pexels.com/@moose-photos-170195/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Professional woman in blue business suit
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/business-woman-WC4TAUARZI)
+- **Title:** Business Woman
+- **Photographer:** Direct Media
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Professional woman in business attire
 
 ---
 
-## Spa Theme Images (CC0 / CC BY)
+## Spa Theme Images (CC0 Public Domain)
 
 Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 
@@ -849,19 +860,19 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Description:** Portrait of a female spa customer with soft studio lighting
 
 ### spa/review-profile.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/monochrome-photo-of-smiling-woman-2764975/)
-- **Title:** Monochrome Photo of Smiling Woman
-- **Photographer:** [Tubarones Photography](https://www.pexels.com/@tubarones/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Monochrome portrait of woman with warm smile
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/smiling-woman-8GZGNCU0T6)
+- **Title:** Smiling Woman
+- **Photographer:** Authentic Stock
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Portrait of smiling woman, used for spa review profile
 
 ### spa/back-massage.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/topless-woman-lying-on-bed-getting-massage-3757952/)
-- **Title:** Topless Woman Lying on Bed Getting Massage
-- **Photographer:** [Andrea Piacquadio](https://www.pexels.com/@olly/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/woman-massage-ZRYMMTHIUP)
+- **Title:** Woman Massage
+- **Photographer:** Authentic Stock
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Relaxing back massage treatment in spa setting
 
 ### spa/spa-treatment-hot-stones.webp
@@ -881,11 +892,11 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Description:** Wide spa treatment room interior
 
 ### spa/spa-treatment-zoomed.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/a-woman-having-a-massage-6663361/)
-- **Title:** A Woman Having a Massage
-- **Photographer:** [Arina Krasnikova](https://www.pexels.com/@arina-krasnikova/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/woman-massage-VH22RVC5UT)
+- **Title:** Woman Massage
+- **Photographer:** Authentic Stock
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Professional massage therapy treatment
 
 ### spa/yoga-pose.webp
@@ -930,68 +941,68 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 
 ---
 
-## Legal Theme Images (Pexels License - GPL-Compatible)
+## Legal Theme Images (CC0 Public Domain)
 
 ### legal/hero-law-office.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/businessman-in-his-office-looking-at-the-camera-4427630/)
-- **Title:** Businessman in His Office Looking at the Camera
-- **Photographer:** [August de Richelieu](https://www.pexels.com/@august-de-richelieu/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/man-thinking-RI8VPT40DJ)
+- **Title:** Man Thinking
+- **Photographer:** Matt Moloney
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Professional businessman in law office setting
 
 ### legal/attorney-1.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/businessman-looking-sideways-4427620/)
-- **Title:** Businessman Looking Sideways
-- **Photographer:** [August de Richelieu](https://www.pexels.com/@august-de-richelieu/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/businessman-thinking-TGG4JHNHB8)
+- **Title:** Businessman Thinking
+- **Photographer:** Burst
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Professional businessman attorney portrait
 
 ### legal/attorney-2.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/businesswoman-in-her-office-4427610/)
-- **Title:** Businesswoman in Her Office
-- **Photographer:** [August de Richelieu](https://www.pexels.com/@august-de-richelieu/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/woman-business-LERRJPTMHP)
+- **Title:** Woman Business
+- **Photographer:** Kristin Hardwick
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Professional businesswoman attorney portrait
 
 ### legal/attorney-3.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/man-wearing-black-formal-suit-jacket-32976/)
-- **Title:** Man Wearing Black Formal Suit Jacket
-- **Photographer:** [Pranav Digwal](https://www.pexels.com/@pranavdigwal/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Professional businessman in formal black suit
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/confident-business-ZMIFYSYFK8)
+- **Title:** Confident Business
+- **Photographer:** Matt Moloney
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Professional businessman attorney portrait
 
 ### legal/banner-boats-4x3.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/photo-of-boats-parked-on-river-2031706/)
-- **Title:** Photo of Boats Parked on River
-- **Photographer:** [Chait Goli](https://www.pexels.com/@chaitaastic/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Boats on calm river at dusk, 4:3 banner for legal practice area headers (800×600)
-- **Note:** Same source image as banner-boats-16x9.webp, cropped to different aspect ratio
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/sunset-boat-YYLZCMYXXF)
+- **Title:** Sunset Boat
+- **Photographer:** Sergei Gussev
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Boats at sunset, 4:3 banner for legal practice area headers (800×600), cropped from harbor-sunset source
+- **Note:** Same source image as harbor-sunset.webp and banner-boats-16x9.webp, cropped to different aspect ratio
 
 ---
 
-## Food & Beverage Theme Images (Pexels License - GPL-Compatible)
+## Food & Beverage Theme Images (CC0 Public Domain)
 
 ### fandb/cafe-terrace-hero.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/charming-outdoor-cafe-seating-in-lage-vuursche-33239717/)
-- **Title:** Charming Outdoor Cafe Seating in Lage Vuursche
-- **Photographer:** [Haberdoedas](https://www.pexels.com/@haberdoedas-473348754/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/french-restaurant-EQVWRV7CPF)
+- **Title:** French Restaurant
+- **Photographer:** Julien Sister
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Outdoor cafe terrace seating with restaurant in background, perfect for F&B hero sections
 
 ### fandb/cafe-interior-about.webp
-- **Source:** [Pexels](https://www.pexels.com/photo/cozy-outdoor-cafe-setting-in-lage-vuursche-33239715/)
-- **Title:** Cozy Outdoor Cafe Setting in Lage Vuursche
-- **Photographer:** [Haberdoedas](https://www.pexels.com/@haberdoedas-473348754/)
-- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
-- **Attribution:** Not required (Pexels License)
-- **Description:** Cozy outdoor cafe seating area with warm lighting, ideal for about sections and content blocks
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/cafe-restaurant-HOHJK6B7TD)
+- **Title:** Cafe Restaurant
+- **Photographer:** donterase
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Cozy cafe interior with warm lighting, ideal for about sections and content blocks
 
 ### fandb/pan-seared-halibut.webp
 - **Source:** ChatGPT (AI-generated, user-provided)
@@ -1010,12 +1021,20 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Description:** AI-generated placeholder for menu pattern demonstrations
 
 ### fandb/chef-profile.webp
-- **Source:** [Pexels - A Chef Cooking in the Kitchen](https://www.pexels.com/photo/a-chef-cooking-in-the-kitchen-8629106/)
-- **Title:** A Chef Cooking in the Kitchen
-- **Photographer:** RDNE Stock project
-- **License:** [Pexels License](https://www.pexels.com/license/) (Free to use, no attribution required)
-- **Attribution:** Not required (Pexels Free License)
-- **Description:** Professional chef portrait for F&B chef profile pattern
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/people-man-3PS1GVU42N)
+- **Title:** People Man
+- **Photographer:** Nick Karvounis
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Black and white photo of a chef plating dishes in a professional kitchen (landscape crop), for F&B chef profile pattern
+
+### fandb/chef-profile-portrait.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/people-man-3PS1GVU42N)
+- **Title:** People Man
+- **Photographer:** Nick Karvounis
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Black and white photo of a chef plating dishes in a professional kitchen (portrait crop), alternate version for F&B chef profile pattern
 
 ---
 

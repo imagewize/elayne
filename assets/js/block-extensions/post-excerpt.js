@@ -8,7 +8,7 @@
     const { createElement } = wp.element;
 
     // Add attributes to the post-excerpt block
-    function addAttributes(settings, name) {
+    function elaynePostExcerptAddAttributes(settings, name) {
         if (name !== 'core/post-excerpt') {
             return settings;
         }
@@ -30,7 +30,7 @@
     }
 
     // Add inspector controls to the post-excerpt block
-    const withInspectorControls = createHigherOrderComponent(function(BlockEdit) {
+    const elaynePostExcerptWithInspectorControls = createHigherOrderComponent(function(BlockEdit) {
         return function(props) {
             if (props.name !== 'core/post-excerpt') {
                 return createElement(BlockEdit, props);
@@ -77,10 +77,10 @@
                 )
             );
         };
-    }, 'withInspectorControls');
+    }, 'elaynePostExcerptWithInspectorControls');
 
     // Add custom class name to the block
-    const withCustomClassName = createHigherOrderComponent((BlockListBlock) => {
+    const elaynePostExcerptWithCustomClassName = createHigherOrderComponent((BlockListBlock) => {
         return (props) => {
             if (props.name !== 'core/post-excerpt') {
                 return createElement(BlockListBlock, props);
@@ -103,24 +103,24 @@
                 className: props.className ? props.className + ' ' + className : className
             });
         };
-    }, 'withCustomClassName');
+    }, 'elaynePostExcerptWithCustomClassName');
 
     // Register our filters
     addFilter(
         'blocks.registerBlockType',
         'elayne/post-excerpt-link-attributes',
-        addAttributes
+        elaynePostExcerptAddAttributes
     );
 
     addFilter(
         'editor.BlockEdit',
         'elayne/post-excerpt-link-controls',
-        withInspectorControls
+        elaynePostExcerptWithInspectorControls
     );
 
     addFilter(
         'editor.BlockListBlock',
         'elayne/post-excerpt-link-class',
-        withCustomClassName
+        elaynePostExcerptWithCustomClassName
     );
 })(window.wp);
