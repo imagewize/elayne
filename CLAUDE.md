@@ -309,6 +309,74 @@ grep -n ">\s*[A-Z][^<]*\s*<" patterns/your-pattern.php
 - Text domain: `'elayne'`
 - Translation files in `/languages/` directory
 
+## Pattern Compliance Checker
+
+Pattern compliance is enforced by a PHP checker script to catch issues before they reach WP.org review.
+
+**Script location** (in the imagewize.com monorepo):
+- Checker: `scripts/elayne/pattern-check/class-patterncompliancechecker.php`
+- Shell wrapper: `scripts/elayne/pattern-check/check-patterns.sh`
+
+**CI**: `.github/workflows/pattern-compliance.yml` in the Elayne theme repo runs the checker automatically on every PR/push against only the changed pattern files.
+
+### Running locally (from monorepo root)
+
+```bash
+# Check all patterns
+php scripts/elayne/pattern-check/class-patterncompliancechecker.php \
+  demo/web/app/themes/elayne/patterns/*.php
+
+# Check specific patterns only
+php scripts/elayne/pattern-check/class-patterncompliancechecker.php \
+  demo/web/app/themes/elayne/patterns/fandb-amenities.php \
+  demo/web/app/themes/elayne/patterns/spa-booking-cta.php
+```
+
+### What the checker validates
+
+| Check | Details |
+|---|---|
+| **Hardcoded font-size** | `font-size:1.5rem` etc. → use `"fontSize":"large"` semantic preset |
+| **Full-width margin reset** | `alignfull` patterns must have `"margin":{"top":"0","bottom":"0"}` |
+| **Spacer blocks** | `<!-- wp:spacer -->` → use parent `blockGap` instead |
+| **3+ column wp:columns** | Use `minimumColumnWidth` grid instead |
+| **HTML comments between blocks** | `<!-- Item 1 -->` between div and block comment causes validation errors |
+| **Hardcoded media IDs** | `"id":123` in image blocks must be removed |
+| **External image URLs** | `src="https://..."` — use `get_template_directory_uri()` |
+| **Untranslated text** | Bare text in HTML tags must use `esc_html_e()` / `esc_attr__()` or `wp_kses_post()` |
+| **Untranslated alt** | Non-empty `alt="..."` without PHP must use `esc_attr__()` |
+| **Emoji icons** | Use SVG icons stored in `patterns/images/` |
+
+**Template exception**: Files prefixed `template-`, `header-`, or `footer-` get relaxed rules
+(WordPress Core block defaults like `border-radius:5px` for avatars are allowed).
+
+**Note on hardcoded border-radius / padding**: The checker does NOT flag `border-radius` or
+`padding` values — `padding` always uses semantic CSS vars already, and `border-radius` has no
+WP semantic preset before 6.9. Use radius presets (`sm`/`md`/`lg`/`pill`) where practical.
+
+### Choosing the right translation wrapper
+
+| Situation | Function | Example |
+|---|---|---|
+| Plain text, no HTML | `esc_html_e( 'Text', 'elayne' )` | Headings, button labels, paragraph text |
+| Text with allowed HTML tags (`<strong>`, `<br>`, `<a>`) | `echo wp_kses_post( __( 'Text with <strong>bold</strong>', 'elayne' ) )` | Rich body text, hours with line breaks |
+| HTML attribute values | `echo esc_attr__( 'Alt text', 'elayne' )` | `alt=""`, `aria-label=""`, `title=""` |
+
+**When to use `wp_kses_post`**: Use it when the string contains HTML you want to preserve
+(e.g. `<strong>`, `<em>`, `<br>`, `<a>`). `esc_html_e` would strip those tags.
+`wp_kses_post` allows the same HTML WordPress allows in post content — safe and flexible.
+
+```php
+<!-- Plain text → esc_html_e -->
+<h2><?php esc_html_e( 'Our Menu', 'elayne' ); ?></h2>
+
+<!-- Contains <strong> and <br> → wp_kses_post -->
+<p><?php echo wp_kses_post( __( '<strong>Monday – Friday</strong><br>11:00 AM – 10:00 PM', 'elayne' ) ); ?></p>
+
+<!-- HTML attribute → esc_attr__ -->
+<img alt="<?php echo esc_attr__( 'Chef portrait', 'elayne' ); ?>">
+```
+
 ## Common Tasks
 
 ### Adding a New Pattern
