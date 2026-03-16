@@ -17,7 +17,7 @@
 <div class="wp-block-column"><!-- wp:site-title {"level":0,"isLink":false,"style":{"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"textColor":"main"} /-->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Experience relaxation and rejuvenation at Velora Spa and Retreat. Discover our luxurious treatments and unwind in a serene atmosphere. Your wellness journey starts here.</p>
+<p class="has-small-font-size"><?php esc_html_e( 'Experience relaxation and rejuvenation at Velora Spa and Retreat. Discover our luxurious treatments and unwind in a serene atmosphere. Your wellness journey starts here.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","iconBackgroundColor":"main","iconBackgroundColorValue":"#14111f","className":"is-style-default","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","justifyContent":"left"}} -->
@@ -35,72 +35,72 @@
 <div class="wp-block-column"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"metadata":{"name":"Nav Column"}} -->
 <div class="wp-block-column"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600">About Us</p>
+<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'About Us', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p>Our Story</p>
+<p><?php esc_html_e( 'Our Story', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Team</p>
+<p><?php esc_html_e( 'Team', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Careers</p>
+<p><?php esc_html_e( 'Careers', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Contact</p>
+<p><?php esc_html_e( 'Contact', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"metadata":{"name":"Nav Column"}} -->
 <div class="wp-block-column"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600">Services</p>
+<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Services', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p>Massages</p>
+<p><?php esc_html_e( 'Massages', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Facials</p>
+<p><?php esc_html_e( 'Facials', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Body Treatments</p>
+<p><?php esc_html_e( 'Body Treatments', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Wellness Classes</p>
+<p><?php esc_html_e( 'Wellness Classes', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"metadata":{"name":"Nav Column"}} -->
 <div class="wp-block-column"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600">Visit Us</p>
+<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Visit Us', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p>Book Now</p>
+<p><?php esc_html_e( 'Book Now', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Pricing</p>
+<p><?php esc_html_e( 'Pricing', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Gift Cards</p>
+<p><?php esc_html_e( 'Gift Cards', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Memberships</p>
+<p><?php esc_html_e( 'Memberships', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
@@ -116,15 +116,15 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p>Privacy Policy</p>
+<p><?php esc_html_e( 'Privacy Policy', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Terms of Service</p>
+<p><?php esc_html_e( 'Terms of Service', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Spa Etiquette</p>
+<p><?php esc_html_e( 'Spa Etiquette', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

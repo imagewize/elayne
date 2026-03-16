@@ -12,23 +12,23 @@
 ?>
 
 <!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-hot-stones.webp' ) ); ?>","alt":"Hot stone massage treatment at spa","dimRatio":50,"customOverlayColor":"#c8a993","isDark":false,"align":"full","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull is-light"><img class="wp-block-cover__image-background" alt="Hot stone massage treatment at spa" src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-hot-stones.webp' ) ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#c8a993"></span><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover alignfull is-light"><img class="wp-block-cover__image-background" alt="<?php echo esc_attr__( 'Hot stone massage treatment at spa', 'elayne' ); ?>" src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/spa-treatment-hot-stones.webp' ) ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#c8a993"></span><div class="wp-block-cover__inner-container">
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"backgroundColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--small)">
 
 <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-<p class="has-text-align-center has-small-font-size"><strong>TRENDING •</strong> WELLNESS</p>
+<p class="has-text-align-center has-small-font-size"><?php echo wp_kses_post( __( '<strong>TRENDING •</strong> WELLNESS', 'elayne' ) ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">How to Start Your Wellness Plan</h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'How to Start Your Wellness Plan', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
 <!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">READ MORE</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'READ MORE', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->

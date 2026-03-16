@@ -18,7 +18,7 @@
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.7"}},"textColor":"main-accent","fontSize":"medium"} -->
-		<p class="has-text-align-center has-main-accent-color has-text-color has-medium-font-size" style="line-height:1.7"><?php esc_html_e( 'Create engaging digital experiences that connect with your audience. Showcase your expertise, build trust, and grow your business with a professional web presence.', 'elayne' ); ?></p>
+		<p class="has-text-align-center has-main-accent-color has-text-color has-medium-font-size" style="line-height:1.7"><?php esc_html_e( 'Describe what you do, who you help, and why it matters. Replace this with your own message to connect with visitors and showcase what makes your business stand out.', 'elayne' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
