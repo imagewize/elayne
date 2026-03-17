@@ -232,6 +232,12 @@ jobs:
           				$issues[] = 'Hardcoded media IDs found';
           			}
 
+          			// Check for custom domain placeholder emails (WP.org rejection).
+          			// Only example@example.com is acceptable; real-looking domain emails are not.
+          			if ( preg_match( '/[a-zA-Z0-9._%+\-]+@(?!example\.com)[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/', $content ) ) {
+          				$issues[] = 'Custom domain email found — use example@example.com instead (WP.org requirement)';
+          			}
+
           			// Check for hardcoded external URLs in src attributes (WP.org rejection).
           			// All images must be bundled and loaded via get_template_directory_uri().
           			if ( preg_match( '/src=["\']https?:\/\//', $content ) ) {
@@ -248,8 +254,17 @@ jobs:
           				if ( false !== strpos( $line, '<!-- wp:' ) || false !== strpos( $line, '<!-- /wp:' ) ) {
           					continue;
           				}
-          				// Skip lines that already contain a PHP translation call.
+          				// For lines with PHP: check if the HTML portions still contain bare text.
+          				// A fully-translated line wraps ALL text in translation calls — no plain text
+          				// between HTML tags remains. A partially-translated line (e.g. copyright with
+          				// inline HTML like "Powered by WordPress and <a>Elayne</a>") will still have
+          				// bare alphabetic text outside PHP blocks after stripping PHP tags.
           				if ( false !== strpos( $line, '<?php' ) ) {
+          					// Strip PHP blocks and check the remaining HTML for bare text.
+          					$html_only = preg_replace( '/<\?php.*?\?>/s', '', $line );
+          					if ( preg_match( '/<(?:h[1-6]|p|a|li|button|span|figcaption|cite|blockquote|td|th|dt|dd)[^>]*>[^<{?\n]*[a-zA-Z]{3,}[^<{?\n]*<\//', $html_only ) ) {
+          						$has_untranslated_text = true;
+          					}
           					continue;
           				}
           				// Match text content directly inside common HTML tags (same-line open+close).
