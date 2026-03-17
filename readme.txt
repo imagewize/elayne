@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.5.2
+Stable tag: 3.5.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.5.3 - 03/17/26 =
+* FIXED: legal-contact.php - Replaced custom domain email `info@lawfirm.com` with `example@example.com` (WP.org requirement).
+* FIXED: header-standard-with-tel-number.php - Wrapped phone number text in `esc_html_e()` for translation readiness (WP.org requirement).
+* FIXED: footer-simple.php, footer-standard.php, footer-with-nav-columns.php - Wrapped copyright/attribution text in `__()` with `wp_kses_post()` for translation readiness (WP.org requirement).
+* FIXED: readme.txt - Updated AI-generated image licenses (spa/avatar-1, spa/avatar-3, spa/avatar-4, spa/spa-treatment-hot-stones, fandb/pan-seared-halibut, fandb/placeholder-800x600) from "Provided by client" to CC0 1.0 Universal (Public Domain) (WP.org requirement).
 
 = 3.5.2 - 03/15/26 =
 * CHANGED: post-excerpt.js - Prefixed all JavaScript functions with `elaynePostExcerpt` namespace to prevent global scope conflicts (WP.org requirement).
@@ -828,11 +834,11 @@ GNU General Public License for more details.
 Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 
 ### spa/avatar-1.webp
-- **Source:** User-provided AI image (ChatGPT, Dec 25, 2025)
+- **Source:** AI-generated image (ChatGPT, Dec 25, 2025)
 - **Title:** Spa customer portrait
 - **Photographer:** AI-generated
-- **License:** Provided by client (AI-generated)
-- **Attribution:** Not required
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Portrait of a male spa customer with soft studio lighting
 
 ### spa/avatar-2.webp
@@ -844,19 +850,19 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Description:** Studio portrait of woman
 
 ### spa/avatar-3.webp
-- **Source:** User-provided AI image (Dec 25, 2025)
+- **Source:** AI-generated image (Dec 25, 2025)
 - **Title:** Spa customer portrait
 - **Photographer:** AI-generated
-- **License:** Provided by client (AI-generated)
-- **Attribution:** Not required
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Portrait of a female spa customer with soft studio lighting
 
 ### spa/avatar-4.webp
-- **Source:** User-provided AI image (Dec 25, 2025)
+- **Source:** AI-generated image (Dec 25, 2025)
 - **Title:** Spa customer portrait
 - **Photographer:** AI-generated
-- **License:** Provided by client (AI-generated)
-- **Attribution:** Not required
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** Portrait of a female spa customer with soft studio lighting
 
 ### spa/review-profile.webp
@@ -876,11 +882,11 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Description:** Relaxing back massage treatment in spa setting
 
 ### spa/spa-treatment-hot-stones.webp
-- **Source:** ChatGPT (AI-generated, user-provided)
+- **Source:** AI-generated image (ChatGPT)
 - **Title:** Spa treatment with hot stones
-- **Photographer:** ChatGPT (AI-generated)
-- **License:** User-provided (AI-generated via ChatGPT)
-- **Attribution:** Not required (user-provided)
+- **Photographer:** AI-generated
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** AI-generated hot stone treatment on spa table
 
 ### spa/spa-treatment-landscape.webp
@@ -1005,19 +1011,19 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Description:** Cozy cafe interior with warm lighting, ideal for about sections and content blocks
 
 ### fandb/pan-seared-halibut.webp
-- **Source:** ChatGPT (AI-generated, user-provided)
+- **Source:** AI-generated image (ChatGPT)
 - **Title:** Pan-seared halibut with garnish
-- **Photographer:** ChatGPT (AI-generated)
-- **License:** User-provided (AI-generated via ChatGPT)
-- **Attribution:** Not required (user-provided)
+- **Photographer:** AI-generated
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** AI-generated gourmet plated dish for daily specials pattern
 
 ### fandb/placeholder-800x600.webp
-- **Source:** ChatGPT (AI-generated, user-provided)
+- **Source:** AI-generated image (ChatGPT)
 - **Title:** Menu placeholder image
-- **Photographer:** ChatGPT (AI-generated)
-- **License:** User-provided (AI-generated via ChatGPT)
-- **Attribution:** Not required (user-provided)
+- **Photographer:** AI-generated
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
 - **Description:** AI-generated placeholder for menu pattern demonstrations
 
 ### fandb/chef-profile.webp
