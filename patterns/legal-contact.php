@@ -71,7 +71,7 @@
 							<!-- /wp:heading -->
 
 							<!-- wp:paragraph {"fontSize":"small"} -->
-							<p class="has-small-font-size"><?php esc_html_e( 'info@lawfirm.com', 'elayne' ); ?></p>
+							<p class="has-small-font-size"><?php esc_html_e( 'example@example.com', 'elayne' ); ?></p>
 							<!-- /wp:paragraph -->
 						</div>
 						<!-- /wp:group -->
