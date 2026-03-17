@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.5.3] - 2026-03-17
+
+### Fixed
+
+**WP.org Theme Review Compliance:**
+
+- `patterns/legal-contact.php`: Replaced custom domain email `info@lawfirm.com` with `example@example.com`.
+- `patterns/header-standard-with-tel-number.php`: Wrapped phone number text `(123) 456-7890` in `esc_html_e()` for translation readiness; removed emoji from anchor text.
+- `patterns/footer-simple.php`, `patterns/footer-standard.php`, `patterns/footer-with-nav-columns.php`: Wrapped copyright/attribution line in `__()` with `wp_kses_post()` and `sprintf()` so the "Powered by WordPress and Elayne" string is fully translation-ready.
+- `readme.txt`: Updated license entries for AI-generated images (`spa/avatar-1.webp`, `spa/avatar-3.webp`, `spa/avatar-4.webp`, `spa/spa-treatment-hot-stones.webp`, `fandb/pan-seared-halibut.webp`, `fandb/placeholder-800x600.webp`) from "Provided by client (AI-generated)" to CC0 1.0 Universal (Public Domain).
+
 ## [3.5.2] - 2026-03-15
 
 ### Changed
