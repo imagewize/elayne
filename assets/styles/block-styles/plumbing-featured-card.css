@@ -1,0 +1,36 @@
+/**
+ * Block Style: Plumbing Featured Card
+ * Applied to core/group blocks via is-style-plumbing-featured-card
+ * Includes all service card base styles plus the featured amber border treatment.
+ */
+
+.wp-block-group.is-style-plumbing-featured-card {
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	border-color: rgba(230, 126, 34, 0.35) !important;
+	background: rgba(230, 126, 34, 0.06) !important;
+}
+
+.wp-block-group.is-style-plumbing-featured-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: linear-gradient(90deg, #E67E22, #f39c12);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease;
+	border-radius: 16px 16px 0 0;
+}
+
+.wp-block-group.is-style-plumbing-featured-card:hover::before {
+	transform: scaleX(1);
+}
+
+.wp-block-group.is-style-plumbing-featured-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}

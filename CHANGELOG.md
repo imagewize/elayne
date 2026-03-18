@@ -7,6 +7,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.6.0] - 2026-03-16
+
+### Added
+
+**Plumbing Industry Vertical:**
+
+- `patterns/plumbing-header.php`: Plumbing site header pattern with logo, phone number, and emergency CTA button.
+- `patterns/plumbing-hero.php`: Full-width hero section with headline, subtext, dual CTAs, and emergency availability badge. Floating badges use CSS Grid overlay (`plumbing-hero-card` class on the card group) so positioning works correctly in both the block editor and frontend.
+- `patterns/plumbing-services.php`: Services grid pattern with six service cards (drain cleaning, leak repair, pipe replacement, water heater, sewer, commercial) using SVG icons and responsive grid layout.
+- `patterns/plumbing-stats-bar.php`: Stats bar pattern with key business metrics (years experience, jobs completed, response time, satisfaction rate).
+- `patterns/plumbing-why-us.php`: Why-choose-us section with feature list, years badge, and supporting image.
+- `patterns/plumbing-testimonials.php`: Customer testimonials grid with star ratings and reviewer details.
+- `patterns/plumbing-emergency-cta.php`: Emergency call-to-action banner with urgent messaging and phone CTA.
+- `patterns/plumbing-contact.php`: Contact section with address, phone, hours, and contact form placeholder.
+- `patterns/plumbing-footer.php`: Plumbing site footer with logo, nav links, contact details, and emergency call CTA.
+- `assets/styles/block-styles/plumbing-service-card.css`: Block style for plumbing service card groups.
+- `assets/styles/block-styles/plumbing-featured-card.css`: Block style for featured plumbing card groups.
+- `assets/styles/block-styles/plumbing-badge.css`: Block style for plumbing badge elements.
+- `assets/styles/block-styles/plumbing-years-badge.css`: Block style for years-in-business circular badge — 110px diameter, amber background, heading/paragraph child selectors, plus overlay positioning context when nested inside `.plumbing-why-image-wrap`.
+- `assets/styles/block-styles/plumbing-section-label.css`: Block style for amber pill section labels (`core/paragraph`, `is-style-plumbing-section-label`).
+- `assets/styles/block-styles/plumbing-stat-block.css`: Block style for stat number/label pairs (`core/group`, `is-style-plumbing-stat-block`).
+- `assets/styles/block-styles/plumbing-check-icon.css`: Block style for circular amber check icon containers with SVG sizing (`core/group`, `is-style-plumbing-check-icon`).
+- `assets/styles/block-styles/plumbing-why-item.css`: Block style for flex-row icon + text items in the why-us section (`core/group`, `is-style-plumbing-why-item`).
+- `assets/styles/block-styles/plumbing-avatar.css`: Block style for circular gradient testimonial avatars (`core/group`, `is-style-plumbing-avatar`).
+- `assets/styles/block-styles/plumbing-contact-icon.css`: Block style for rounded contact icon containers (`core/group`, `is-style-plumbing-contact-icon`).
+- `assets/styles/block-styles/plumbing-call-btn.css`: Block style for the phone-icon CTA button (`core/button`, `is-style-plumbing-call-btn`); SVG phone icon injected via `::before` pseudo-element.
+- `patterns/images/plumbing/`: 22 plumbing SVG icons — six service icons (`icon-commercial.svg`, `icon-drain.svg`, `icon-leak.svg`, `icon-pipe.svg`, `icon-sewer.svg`, `icon-water-heater.svg`); four hero/badge icons for floating trust indicators (`icon-shield.svg`, `icon-lightning-amber.svg`, `icon-clock-amber.svg`, `icon-phone-white.svg`); five rating/testimonial icons (`icon-5-stars.svg`, `icon-star-amber.svg`, `icon-check-amber.svg`, `icon-google-amber.svg`, `icon-users-amber.svg`); seven UI icons for footer, contact, and CTA patterns (`icon-alert-white.svg`, `icon-arrow-right-white.svg`, `icon-contact-clock.svg`, `icon-contact-email.svg`, `icon-contact-location.svg`, `icon-contact-phone.svg`, `icon-phone-amber.svg`).
+- `styles/plumbing.json`: Plumbing style variation with navy/amber/emergency-red color palette, custom duotone filters, gradients, and heading typography overrides (uppercase, narrow font-stretch).
+- `style.css`: Plumbing utility CSS section (`.plumbing-*` classes) added for layout and animation rules that cannot be scoped to a single block: hero diagonal separator (`::after` clip-path), hero image wrapper CSS Grid overlay for floating badges, stats divider, why-us column/image-wrap layouts, always-on text, emergency pulse keyframes, header top bar, and header CTA hover. Self-contained component styles (section label, stat block, check icon, why item, avatar, contact icon, call button) are registered as block styles instead and load on demand.
+- `functions.php`: `elayne_register_plumbing_block_styles()` — registers and conditionally enqueues 11 plumbing block style variations across `core/group` (9), `core/paragraph` (1), and `core/button` (1). Patterns use `is-style-plumbing-*` class naming throughout.
+- `functions.php`: `elayne_enqueue_plumbing_editor_styles()` — enqueues `plumbing-variation-editor.css` via `enqueue_block_editor_assets`, keeping all plumbing variation style concerns in one place.
+- `assets/styles/plumbing-variation-editor.css`: Editor-only stylesheet applying `display: contents` to Gutenberg's intermediate `.block-editor-inner-blocks` and `.block-editor-block-list__layout` wrappers so the CSS Grid on `.overlay-grid-wrap` treats the card and badges as direct grid items in the editor.
+- `assets/styles/plumbing-variation.css`: New dedicated stylesheet for all plumbing style variation CSS, scoped entirely under `.style-variation-plumbing` body class. Replaces the former inline plumbing section in `style.css` — prevents bleed into other style variations. Includes header top bar, navigation hover states, header CTA, hamburger, mobile overlay, hero diagonal separator, hero image placeholder, testimonial highlight, contact form, footer phone icon, and CTA icon rules.
+- `styles/plumbing.json`: Added `settings.custom.styleVariation: "plumbing"` marker key — read by the new `body_class` filter to automatically add `.style-variation-plumbing` to the page body when this variation is active.
+- `functions.php`: `elayne_style_variation_body_class()` — reads `custom.styleVariation` from the merged theme.json via `wp_get_global_settings()` and adds `style-variation-{slug}` to the body class list; enables CSS scoping for any style variation. `elayne_enqueue_plumbing_variation_styles()` — enqueues `plumbing-variation.css` globally (self-isolated via body class scope).
+- Navigation hover: plumbing header navigation links now show a rectangular background (`border-radius: 6px`, `rgba(255,255,255,0.06)`) and white text on hover with no underline — matching the HTML design reference. Previously a leaky `.has-secondary-background-color` selector was used; now correctly scoped to `.style-variation-plumbing`.
+
+**Vibe IDE Tooling:**
+
+- `.vibe/skills/design/SKILL.md`: Design skill definition for Vibe CLI — generates production-grade HTML/CSS layouts and WordPress block patterns using the Elayne design system.
+- `.vibe/skills/design/README.md`: Usage documentation for the design skill.
+- `.vibe/config.toml`: Enabled `design` skill and added skill path for demo site.
+
 ## [3.5.3] - 2026-03-17
 
 ### Fixed

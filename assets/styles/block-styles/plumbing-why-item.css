@@ -1,0 +1,11 @@
+/**
+ * Block Style: Plumbing Why Item
+ * Applied to core/group blocks via is-style-plumbing-why-item
+ * Flex row layout for icon + text pairs in the why-us pattern.
+ */
+
+.wp-block-group.is-style-plumbing-why-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+}

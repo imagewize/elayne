@@ -136,4 +136,3 @@ function elayne_excerpt_link_styles() {
 add_action( 'wp_head', __NAMESPACE__ . '\\elayne_excerpt_link_styles' );
 add_action( 'admin_head', __NAMESPACE__ . '\\elayne_excerpt_link_styles' );
 
-

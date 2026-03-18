@@ -1,0 +1,23 @@
+/**
+ * Block Style: Plumbing Call Button
+ * Applied to core/button blocks via is-style-plumbing-call-btn
+ * Adds a phone icon before the button label via CSS.
+ */
+
+.wp-block-button.is-style-plumbing-call-btn .wp-block-button__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.wp-block-button.is-style-plumbing-call-btn .wp-block-button__link::before {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url( '../../../patterns/images/plumbing/icon-phone-white.svg' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	flex-shrink: 0;
+}

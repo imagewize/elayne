@@ -1,0 +1,42 @@
+/**
+ * Block Style: Plumbing Years Badge
+ * Applied to core/group blocks via is-style-plumbing-years-badge
+ * Circular amber badge showing years in business.
+ */
+
+.wp-block-group.is-style-plumbing-years-badge {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: #E67E22 !important;
+	color: #fff;
+	width: 110px;
+	height: 110px;
+	border-radius: 50% !important;
+	box-shadow: 0 8px 32px rgba( 230, 126, 34, 0.45 );
+	padding: 0 !important;
+}
+
+.wp-block-group.is-style-plumbing-years-badge .wp-block-heading {
+	margin: 0;
+	font-size: 1.6rem;
+	font-weight: 900;
+	line-height: 1;
+}
+
+.wp-block-group.is-style-plumbing-years-badge p {
+	margin: 0;
+	font-size: 0.6rem;
+	line-height: 1.3;
+}
+
+/* Overlay positioning when inside an overlay grid wrapper */
+.overlay-grid-wrap .wp-block-group.is-style-plumbing-years-badge {
+	align-self: end;
+	justify-self: end;
+	z-index: 10;
+	margin-bottom: -1.5rem;
+	margin-right: 1rem;
+}

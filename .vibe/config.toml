@@ -17,7 +17,9 @@ tool_paths = []
 mcp_servers = []
 enabled_tools = []
 disabled_tools = []
-
+skill_paths = ["~/code/imagewize.com/demo/web/app/themes/elayne/.vibe/skills",]
+# Enable specific skills
+enabled_skills = ["design"]
 [[providers]]
 name = "mistral"
 api_base = "https://api.mistral.ai/v1"
@@ -83,7 +85,6 @@ fuzzy_threshold = 0.9
 permission = "ask"
 allowlist = [
     "echo",
-    "find",
     "git diff",
     "git log",
     "git status",

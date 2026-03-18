@@ -1,0 +1,163 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Plumbing",
+	"settings": {
+		"custom": {
+			"styleVariation": "plumbing"
+		},
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [
+				{
+					"name": "Navy",
+					"slug": "primary",
+					"colors": ["#0B1628", "#e8edf4"]
+				},
+				{
+					"name": "Amber",
+					"slug": "secondary",
+					"colors": ["#E67E22", "#e8edf4"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
+			"gradients": [
+				{
+					"name": "Navy Dark",
+					"slug": "navy-dark",
+					"gradient": "linear-gradient(135deg, #0B1628 0%, #112240 50%, #0d1f3c 100%)"
+				},
+				{
+					"name": "Emergency Red",
+					"slug": "emergency-red",
+					"gradient": "linear-gradient(135deg, #B71C1C, #D32F2F)"
+				},
+				{
+					"name": "Amber Warm",
+					"slug": "amber-warm",
+					"gradient": "linear-gradient(135deg, #E67E22, #f39c12)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(11, 22, 40, 0.95), rgba(11, 22, 40, 0.85))"
+				}
+			],
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "primary",
+					"color": "#E67E22"
+				},
+				{
+					"name": "Brand Accent",
+					"slug": "primary-accent",
+					"color": "#90CAF9"
+				},
+				{
+					"name": "Brand Alt",
+					"slug": "primary-alt",
+					"color": "#cf6d17"
+				},
+				{
+					"name": "Brand Alt Accent",
+					"slug": "primary-alt-accent",
+					"color": "#f39c12"
+				},
+				{
+					"name": "Contrast",
+					"slug": "main",
+					"color": "#0B1628"
+				},
+				{
+					"name": "Contrast Accent",
+					"slug": "main-accent",
+					"color": "#8fa3bf"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#e8edf4"
+				},
+				{
+					"name": "Base Accent",
+					"slug": "secondary",
+					"color": "#112240"
+				},
+				{
+					"name": "Tint",
+					"slug": "tertiary",
+					"color": "#1a2f52"
+				},
+				{
+					"name": "Border Light",
+					"slug": "border-light",
+					"color": "#1e3558"
+				},
+				{
+					"name": "Border Dark",
+					"slug": "border-dark",
+					"color": "#2a4570"
+				},
+				{
+					"name": "Emergency Red",
+					"slug": "plumbing-emergency",
+					"color": "#D32F2F"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#ffffff"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|main",
+			"text": "var:preset|color|base"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var:preset|color|primary"
+				},
+				":hover": {
+					"color": {
+						"text": "var:preset|color|primary-alt-accent"
+					}
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "900",
+					"letterSpacing": "-0.01em",
+					"textTransform": "uppercase",
+					"fontStretch": "75%"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "800",
+					"letterSpacing": "0.02em",
+					"textTransform": "uppercase",
+					"fontStretch": "75%"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "700",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.03em",
+					"fontStretch": "75%"
+				}
+			}
+		}
+	}
+}

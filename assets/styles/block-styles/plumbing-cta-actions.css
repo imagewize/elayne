@@ -1,0 +1,23 @@
+/**
+ * Block Style: Plumbing CTA Actions
+ * Applied to core/group blocks via is-style-plumbing-cta-actions
+ * Flex row wrapper for the Emergency CTA buttons.
+ * Ensures "Call Now" pill and "Request a Callback" button stay side by side
+ * on tablet/desktop. Without this, WordPress flex-layout CSS can cause the
+ * inner wp:group child to expand to full width, pushing the button below.
+ */
+
+.wp-block-group.is-style-plumbing-cta-actions {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: wrap !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+
+.wp-block-group.is-style-plumbing-cta-actions > .wp-block-group,
+.wp-block-group.is-style-plumbing-cta-actions > .wp-block-button {
+	flex: 0 0 auto !important;
+	width: auto !important;
+	max-width: none !important;
+}

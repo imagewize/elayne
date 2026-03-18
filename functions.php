@@ -207,6 +207,113 @@ function elayne_register_effect_block_styles() {
 add_action( 'init', __NAMESPACE__ . '\elayne_register_effect_block_styles' );
 
 /**
+ * Register plumbing block style variations and enqueue their CSS on demand.
+ *
+ * CSS files live in assets/styles/block-styles/ and load only on pages where
+ * the corresponding block style is used — not globally.
+ */
+function elayne_register_plumbing_block_styles() {
+	$styles = array(
+		'core/group' => array(
+			'plumbing-service-card'  => __( 'Plumbing Service Card', 'elayne' ),
+			'plumbing-featured-card' => __( 'Plumbing Featured Card', 'elayne' ),
+			'plumbing-badge'         => __( 'Plumbing Badge', 'elayne' ),
+			'plumbing-years-badge'   => __( 'Plumbing Years Badge', 'elayne' ),
+			'plumbing-stat-block'    => __( 'Plumbing Stat Block', 'elayne' ),
+			'plumbing-check-icon'    => __( 'Plumbing Check Icon', 'elayne' ),
+			'plumbing-why-item'      => __( 'Plumbing Why Item', 'elayne' ),
+			'plumbing-avatar'        => __( 'Plumbing Avatar', 'elayne' ),
+			'plumbing-contact-icon'  => __( 'Plumbing Contact Icon', 'elayne' ),
+			'plumbing-cta-call-pill' => __( 'Plumbing CTA Call Pill', 'elayne' ),
+			'plumbing-cta-actions'   => __( 'Plumbing CTA Actions', 'elayne' ),
+		),
+		'core/paragraph' => array(
+			'plumbing-section-label' => __( 'Plumbing Section Label', 'elayne' ),
+		),
+		'core/button' => array(
+			'plumbing-call-btn'      => __( 'Plumbing Call Button', 'elayne' ),
+		),
+	);
+
+	foreach ( $styles as $block => $variations ) {
+		foreach ( $variations as $name => $label ) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => $name,
+					'label' => $label,
+				)
+			);
+
+			$css_file = "assets/styles/block-styles/{$name}.css";
+			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
+				wp_enqueue_block_style(
+					$block,
+					array(
+						'handle' => "elayne-{$name}",
+						'src'    => get_theme_file_uri( $css_file ),
+						'path'   => get_theme_file_path( $css_file ),
+					)
+				);
+			}
+		}
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_register_plumbing_block_styles' );
+
+/**
+ * Add a body class matching the active style variation slug.
+ *
+ * Reads `settings.custom.styleVariation` from the merged theme.json data
+ * (base theme.json + active variation JSON), so when plumbing.json is active
+ * the body gets class `style-variation-plumbing`.
+ *
+ * @param array $classes Existing body classes.
+ * @return array Modified body classes.
+ */
+function elayne_style_variation_body_class( array $classes ): array {
+	$custom = wp_get_global_settings( array( 'custom' ) );
+	if ( ! empty( $custom['styleVariation'] ) ) {
+		$classes[] = 'style-variation-' . sanitize_html_class( $custom['styleVariation'] );
+	}
+	return $classes;
+}
+add_filter( 'body_class', __NAMESPACE__ . '\elayne_style_variation_body_class' );
+
+/**
+ * Enqueue the plumbing style variation stylesheet.
+ *
+ * The file is scoped entirely under `.style-variation-plumbing` so it has
+ * zero impact on other style variations.
+ */
+function elayne_enqueue_plumbing_variation_styles(): void {
+	wp_enqueue_style(
+		'elayne-plumbing-variation',
+		get_template_directory_uri() . '/assets/styles/plumbing-variation.css',
+		array( 'elayne-style' ),
+		wp_get_theme()->get( 'Version' )
+	);
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_plumbing_variation_styles' );
+
+/**
+ * Enqueue the plumbing style variation editor stylesheet.
+ *
+ * Contains editor-only overrides — collapses Gutenberg's intermediate wrapper
+ * divs to display:contents so the plumbing hero CSS Grid sees the card and
+ * badges as direct grid items in the block editor.
+ */
+function elayne_enqueue_plumbing_editor_styles(): void {
+	wp_enqueue_style(
+		'elayne-plumbing-variation-editor',
+		get_template_directory_uri() . '/assets/styles/plumbing-variation-editor.css',
+		array( 'wp-edit-blocks' ),
+		wp_get_theme()->get( 'Version' )
+	);
+}
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\elayne_enqueue_plumbing_editor_styles' );
+
+/**
  * Include block extensions.
  */
 require_once get_template_directory() . '/inc/block-extensions.php';
