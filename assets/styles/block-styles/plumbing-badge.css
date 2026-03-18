@@ -1,0 +1,27 @@
+/**
+ * Block Style: Plumbing Badge
+ * Applied to core/group blocks via is-style-plumbing-badge
+ * Amber pill badge used in hero and other plumbing patterns.
+ */
+
+.wp-block-group.is-style-plumbing-badge {
+	background: rgba(230, 126, 34, 0.15) !important;
+	border-color: rgba(230, 126, 34, 0.35) !important;
+	color: #f39c12;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	width: fit-content;
+}
+
+/* Icon sizing inside the badge pill */
+.wp-block-group.is-style-plumbing-badge .wp-block-image {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.wp-block-group.is-style-plumbing-badge .wp-block-image img {
+	width: 14px;
+	height: 14px;
+	display: block;
+}

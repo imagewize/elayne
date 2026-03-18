@@ -1,0 +1,10 @@
+/**
+ * Block Style: Plumbing CTA Call Pill
+ * Applied to core/group blocks via is-style-plumbing-cta-call-pill
+ * White pill containing phone icon + tel link in the Emergency CTA.
+ * Removes the global paragraph-link underline from theme.json.
+ */
+
+.wp-block-group.is-style-plumbing-cta-call-pill a {
+	text-decoration: none !important;
+}

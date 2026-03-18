@@ -1,0 +1,20 @@
+/**
+ * Block Style: Plumbing Section Label
+ * Applied to core/paragraph blocks via is-style-plumbing-section-label
+ * Amber pill label used above headings in plumbing patterns.
+ */
+
+p.is-style-plumbing-section-label {
+	display: block;
+	width: fit-content;
+	margin: 0 auto 0.75rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #e67e22;
+	padding: 0.3rem 0.9rem;
+	background: rgba( 230, 126, 34, 0.1 );
+	border-radius: 999px;
+	border: 1px solid rgba( 230, 126, 34, 0.2 );
+}
