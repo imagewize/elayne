@@ -237,18 +237,24 @@ function elayne_register_plumbing_block_styles() {
 
 	foreach ( $styles as $block => $variations ) {
 		foreach ( $variations as $name => $label ) {
-			register_block_style( $block, array(
-				'name'  => $name,
-				'label' => $label,
-			) );
+			register_block_style(
+				$block,
+				array(
+					'name'  => $name,
+					'label' => $label,
+				)
+			);
 
 			$css_file = "assets/styles/block-styles/{$name}.css";
 			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
-				wp_enqueue_block_style( $block, array(
-					'handle' => "elayne-{$name}",
-					'src'    => get_theme_file_uri( $css_file ),
-					'path'   => get_theme_file_path( $css_file ),
-				) );
+				wp_enqueue_block_style(
+					$block,
+					array(
+						'handle' => "elayne-{$name}",
+						'src'    => get_theme_file_uri( $css_file ),
+						'path'   => get_theme_file_path( $css_file ),
+					)
+				);
 			}
 		}
 	}
@@ -261,6 +267,9 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_plumbing_block_styles' );
  * Reads `settings.custom.styleVariation` from the merged theme.json data
  * (base theme.json + active variation JSON), so when plumbing.json is active
  * the body gets class `style-variation-plumbing`.
+ *
+ * @param array $classes Existing body classes.
+ * @return array Modified body classes.
  */
 function elayne_style_variation_body_class( array $classes ): array {
 	$custom = wp_get_global_settings( array( 'custom' ) );
