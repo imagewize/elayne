@@ -7,7 +7,7 @@ Description: A premium business block theme with advanced patterns for professio
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 3.5.3
+Version: 3.6.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -16,6 +16,29 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Elayne WordPress Theme, (C) 2025 Jasper Frumau
 Elayne is distributed under the terms of the GNU GPL.
 */
+
+/**
+ * Table of Contents
+ *
+ *  1. Partial Underline (post titles)
+ *  2. Layout Helpers (alignfull bleed)
+ *  3. Checkmark List
+ *  4. Avatar
+ *  5. Spa & Wellness Style Variation
+ *  6. Cart Icon
+ *  7. Mobile Navigation
+ *  8. Portfolio Masonry Grid
+ *  9. WooCommerce Product Grid
+ * 10. Post Author & Date Alignment
+ * 11. Link Underline
+ * 12. Comment Form Spacing
+ * 13. Legal Hero Split Layout
+ * 14. Diagonal Hero Section
+ * 15. Diagonal Banner Section
+ * 16. Layout Utilities (overlay-grid-wrap, floating-badge, icon-pulse, stats-divider)
+ * 17. Skip Link Accessibility
+ * 18. Safari Scrollbar Fix
+ */
 
 /* Partial underline styling for post titles (matches Versifier) */
 .has-partial-underline a {
@@ -427,6 +450,96 @@ figure.is-avatar,
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
+
+/* ========================================================================
+   Layout Utilities
+   Reusable structural classes, not tied to any style variation.
+   ======================================================================== */
+
+/* Thin vertical divider between stat items */
+.stats-divider {
+	display: block;
+	width: 1px;
+	height: 36px;
+	background: rgba( 255, 255, 255, 0.1 );
+	align-self: center;
+}
+
+/* CSS Grid overlay — stack all children in the same cell (hero/image compositions) */
+.overlay-grid-wrap {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	overflow: visible;
+}
+
+.overlay-grid-wrap > .wp-block-group {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+/* Floating stat/social-proof badge overlaid on an image */
+.floating-badge {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: #112240;
+	border: 1px solid rgba( 255, 255, 255, 0.08 );
+	border-left: 3px solid #E67E22;
+	padding: 0.55rem 0.9rem;
+	border-radius: 10px;
+	z-index: 2;
+	white-space: nowrap;
+	width: fit-content;
+}
+
+/* Bottom-left badge position */
+.floating-badge--bl {
+	align-self: end;
+	justify-self: start;
+	margin-bottom: 1.5rem;
+	margin-left: -0.75rem;
+}
+
+/* Top-right badge position */
+.floating-badge--tr {
+	align-self: start;
+	justify-self: end;
+	margin-top: 1.5rem;
+	margin-right: -0.75rem;
+}
+
+/* Icon sizing inside floating badges */
+.floating-badge .wp-block-image {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.floating-badge .wp-block-image img {
+	width: 16px;
+	height: 16px;
+	display: block;
+}
+
+/* Pulsing icon — use on any "live" or "urgent" indicator */
+@keyframes icon-pulse {
+	0%,
+	100% {
+		transform: scale( 1 );
+	}
+
+	50% {
+		transform: scale( 1.1 );
+	}
+}
+
+.icon-pulse {
+	animation: icon-pulse 2s ease-in-out infinite;
+	display: inline-block;
+}
+
 
 /* ============================================
    Skip Link Accessibility Improvements
