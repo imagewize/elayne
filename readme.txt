@@ -4,13 +4,13 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.5.3
+Stable tag: 3.6.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 81 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 82 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
@@ -30,7 +30,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-Elayne includes **81 professionally designed patterns** across multiple categories:
+Elayne includes **82 professionally designed patterns** across multiple categories:
 
 **Core Patterns:**
 * Hero Sections (10) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs
@@ -162,6 +162,19 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.6.0 - 03/16/26 =
+* ADDED: Plumbing industry vertical — 9 new patterns (plumbing-header, plumbing-hero, plumbing-services, plumbing-stats-bar, plumbing-why-us, plumbing-testimonials, plumbing-emergency-cta, plumbing-contact, plumbing-footer) with full translation support.
+* ADDED: plumbing.json style variation — navy/amber/emergency-red color palette with custom duotone filters, gradients, and heading typography overrides.
+* ADDED: 11 plumbing block style variations with conditional CSS enqueue — 9 for core/group (plumbing-service-card, plumbing-featured-card, plumbing-badge, plumbing-years-badge, plumbing-stat-block, plumbing-check-icon, plumbing-why-item, plumbing-avatar, plumbing-contact-icon), 1 for core/paragraph (plumbing-section-label), 1 for core/button (plumbing-call-btn). All patterns use is-style-plumbing-* class naming.
+* ADDED: assets/styles/plumbing-variation.css — dedicated stylesheet for all plumbing style variation CSS, scoped under .style-variation-plumbing body class. Replaces former inline plumbing section in style.css, preventing bleed into other style variations.
+* ADDED: styles/plumbing.json custom key settings.custom.styleVariation — enables automatic body class injection (.style-variation-plumbing) when plumbing variation is active, via new body_class filter in functions.php.
+* ADDED: functions.php elayne_style_variation_body_class() and elayne_enqueue_plumbing_variation_styles() — architecture for variation-scoped CSS loading, extensible to future industry verticals.
+* ADDED: Navigation hover styles for plumbing header — rectangular background with border-radius and no underline on nav links, matching HTML design reference.
+* ADDED: 22 plumbing SVG icons — 6 service icons (icon-commercial, icon-drain, icon-leak, icon-pipe, icon-sewer, icon-water-heater), 4 hero/badge icons (icon-shield, icon-lightning-amber, icon-clock-amber, icon-phone-white), 5 rating/testimonial icons (icon-5-stars, icon-star-amber, icon-check-amber, icon-google-amber, icon-users-amber), 7 UI icons for footer/contact/CTA patterns (icon-alert-white, icon-arrow-right-white, icon-contact-clock, icon-contact-email, icon-contact-location, icon-contact-phone, icon-phone-amber).
+* ADDED: style.css plumbing section — layout and animation CSS for constructs that span multiple blocks (hero diagonal separator, hero image CSS Grid overlay, stats divider, why-us column/image-wrap, emergency pulse keyframes, header top bar). Self-contained component styles load on demand via block-style CSS files.
+* ADDED: assets/styles/plumbing-variation-editor.css — editor-only stylesheet enqueued via `enqueue_block_editor_assets` (functions.php `elayne_enqueue_plumbing_editor_styles()`) applying display:contents to Gutenberg's intermediate wrapper divs so the plumbing hero CSS Grid works correctly in the block editor.
+* ADDED: Vibe design skill (SKILL.md, README.md) for generating HTML/CSS layouts using the Elayne design system.
 
 = 3.5.3 - 03/17/26 =
 * FIXED: legal-contact.php - Replaced custom domain email `info@lawfirm.com` with `example@example.com` (WP.org requirement).
@@ -1078,6 +1091,144 @@ The following icons are from the Eva Icons collection via Blade UI Kit:
 - **Used in:** Header patterns for phone contact links
 
 The MIT License is GPL-compatible. Icons use `fill="currentColor"` to inherit text color for consistent theming.
+
+---
+
+### Plumbing Industry Icons (AI-generated, CC0 Public Domain)
+
+The following icons were created using AI tools (ChatGPT) for the plumbing industry vertical and are released as CC0:
+
+**patterns/images/plumbing/icon-commercial.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Commercial building outline icon for plumbing services
+
+**patterns/images/plumbing/icon-drain.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Drain/pulse waveform icon for drain cleaning service
+
+**patterns/images/plumbing/icon-leak.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Hexagon/package outline icon for leak repair service
+
+**patterns/images/plumbing/icon-pipe.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** House outline icon for pipe replacement service
+
+**patterns/images/plumbing/icon-sewer.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Database/cylinder outline icon for sewer service
+
+**patterns/images/plumbing/icon-water-heater.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Water heater tank outline icon for water heater service
+
+**patterns/images/plumbing/icon-shield.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Shield outline icon for trust/guarantee badge in hero section
+
+**patterns/images/plumbing/icon-lightning-amber.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Lightning bolt icon in amber for emergency/fast response badge
+
+**patterns/images/plumbing/icon-clock-amber.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Clock icon in amber for availability/response time badge
+
+**patterns/images/plumbing/icon-phone-white.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Phone handset icon in white for call-to-action button
+
+**patterns/images/plumbing/icon-5-stars.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Five amber stars rating row for testimonials
+
+**patterns/images/plumbing/icon-star-amber.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Single amber star for individual rating display
+
+**patterns/images/plumbing/icon-check-amber.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Checkmark icon in amber for verified review indicator
+
+**patterns/images/plumbing/icon-google-amber.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Google logo icon in amber for Google review attribution
+
+**patterns/images/plumbing/icon-users-amber.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Users/people icon in amber for customer count display
+
+**patterns/images/plumbing/icon-alert-white.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Alert/exclamation icon in white for emergency CTA section
+
+**patterns/images/plumbing/icon-arrow-right-white.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Right arrow icon in white for contact form submit button
+
+**patterns/images/plumbing/icon-contact-clock.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Clock icon for business hours contact detail row
+
+**patterns/images/plumbing/icon-contact-email.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Envelope icon for email contact detail row
+
+**patterns/images/plumbing/icon-contact-location.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Map pin icon for address contact detail row
+
+**patterns/images/plumbing/icon-contact-phone.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Phone icon for phone contact detail row
+
+**patterns/images/plumbing/icon-phone-amber.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Phone handset icon in amber for CTA call button inside white pill
 
 ---
 
