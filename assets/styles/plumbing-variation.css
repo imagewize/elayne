@@ -91,20 +91,6 @@
 	display: block;
 }
 
-/* Header top bar */
-.style-variation-plumbing .plumbing-top-bar a {
-	color: #fff !important;
-	text-decoration: none !important;
-}
-
-.style-variation-plumbing .plumbing-topbar-phone {
-	background: rgba( 255, 255, 255, 0.2 );
-}
-
-.style-variation-plumbing .plumbing-topbar-phone:hover {
-	background: rgba( 255, 255, 255, 0.35 );
-}
-
 /* Footer phone icon */
 .style-variation-plumbing .plumbing-footer-phone-icon {
 	margin: 0;
@@ -132,28 +118,6 @@
 	display: block;
 }
 
-/* Top bar phone icon */
-.style-variation-plumbing .plumbing-topbar-phone-icon {
-	margin: 0;
-}
-
-.style-variation-plumbing .plumbing-topbar-phone-icon img {
-	width: 14px;
-	height: 14px;
-	display: block;
-}
-
-/* CTA phone icon (inside amber pill button) */
-.style-variation-plumbing .plumbing-cta-phone-icon {
-	margin: 0;
-}
-
-.style-variation-plumbing .plumbing-cta-phone-icon img {
-	width: 20px;
-	height: 20px;
-	display: block;
-}
-
 /* Navigation links — no underline, rectangular hover background */
 .style-variation-plumbing .wp-block-navigation-item__content {
 	text-decoration: none !important;
@@ -168,40 +132,10 @@
 	text-decoration: none !important;
 }
 
-/* Header CTA button */
-.style-variation-plumbing .plumbing-header-cta a {
-	text-decoration: none !important;
-}
-
-.style-variation-plumbing .plumbing-header-cta {
-	transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.style-variation-plumbing .plumbing-header-cta:hover {
-	background: #cf6d17 !important;
-	transform: translateY( -1px );
-	box-shadow: 0 4px 16px rgba( 230, 126, 34, 0.4 );
-}
-
-/* Hide phone CTA on mobile — logo + hamburger only */
-/* Mobile top bar — center phone number, strip pill styling */
+/* Mobile top bar — center phone number on small screens */
 @media only screen and (max-width: 781px) {
-	.style-variation-plumbing .plumbing-header-cta {
-		display: none !important;
-	}
-
 	.style-variation-plumbing .plumbing-top-bar .wp-block-group.alignwide {
 		justify-content: center;
-	}
-
-	.style-variation-plumbing .plumbing-topbar-phone {
-		background: transparent !important;
-		padding: 0 !important;
-		border-radius: 0 !important;
-	}
-
-	.style-variation-plumbing .plumbing-topbar-phone:hover {
-		background: transparent !important;
 	}
 }
 

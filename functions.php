@@ -258,6 +258,25 @@ function elayne_register_plumbing_block_styles() {
 			}
 		}
 	}
+
+	// Component CSS files that are not registered block styles but are
+	// scoped to custom class names used only in plumbing header patterns.
+	// wp_enqueue_block_style loads these on both frontend and FSE editor
+	// iframe without needing a body-class or .editor-styles-wrapper scope.
+	$header_components = array( 'plumbing-topbar-phone', 'plumbing-header-cta' );
+	foreach ( $header_components as $name ) {
+		$css_file = "assets/styles/block-styles/{$name}.css";
+		if ( file_exists( get_theme_file_path( $css_file ) ) ) {
+			wp_enqueue_block_style(
+				'core/group',
+				array(
+					'handle' => "elayne-{$name}",
+					'src'    => get_theme_file_uri( $css_file ),
+					'path'   => get_theme_file_path( $css_file ),
+				)
+			);
+		}
+	}
 }
 add_action( 'init', __NAMESPACE__ . '\elayne_register_plumbing_block_styles' );
 
