@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.6.0
+Stable tag: 3.6.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,18 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.6.1 - 03/19/26 =
+* CHANGED: Plumbing variation styles - Merged editor-only CSS file into main plumbing-variation.css; deleted plumbing-variation-editor.css.
+* CHANGED: Plumbing variation enqueue - Switched to enqueue_block_assets hook so styles load on both frontend and in the FSE editor iframe with a single file.
+* CHANGED: Plumbing variation enqueue - Added active-variation guard so stylesheet only loads when plumbing variation is active.
+* ADDED: Plumbing header - White SVG phone icon added to top-bar phone pill group.
+* ADDED: Plumbing header - White SVG phone icon added to main CTA pill button.
+* ADDED: Plumbing header CSS - Top-bar phone icon styles (14×14 px, display:block, zero margin).
+* FIXED: Plumbing header mobile - "Licensed & Insured" text now hidden on mobile via hide-on-mobile class.
+* FIXED: Plumbing header mobile - Top bar centers on small screens (≤ 781 px).
+* FIXED: Plumbing header mobile - Phone pill styling stripped on mobile (transparent background, no padding/border-radius)."
+
 
 = 3.6.0 - 03/16/26 =
 * ADDED: Plumbing industry vertical — 9 new patterns (plumbing-header, plumbing-hero, plumbing-services, plumbing-stats-bar, plumbing-why-us, plumbing-testimonials, plumbing-emergency-cta, plumbing-contact, plumbing-footer) with full translation support.
