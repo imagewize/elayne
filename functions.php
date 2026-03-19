@@ -214,7 +214,7 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_effect_block_styles' );
  */
 function elayne_register_plumbing_block_styles() {
 	$styles = array(
-		'core/group' => array(
+		'core/group'     => array(
 			'plumbing-service-card'  => __( 'Plumbing Service Card', 'elayne' ),
 			'plumbing-featured-card' => __( 'Plumbing Featured Card', 'elayne' ),
 			'plumbing-badge'         => __( 'Plumbing Badge', 'elayne' ),
@@ -230,8 +230,8 @@ function elayne_register_plumbing_block_styles() {
 		'core/paragraph' => array(
 			'plumbing-section-label' => __( 'Plumbing Section Label', 'elayne' ),
 		),
-		'core/button' => array(
-			'plumbing-call-btn'      => __( 'Plumbing Call Button', 'elayne' ),
+		'core/button'    => array(
+			'plumbing-call-btn' => __( 'Plumbing Call Button', 'elayne' ),
 		),
 	);
 
@@ -283,35 +283,25 @@ add_filter( 'body_class', __NAMESPACE__ . '\elayne_style_variation_body_class' )
 /**
  * Enqueue the plumbing style variation stylesheet.
  *
- * The file is scoped entirely under `.style-variation-plumbing` so it has
- * zero impact on other style variations.
+ * Uses enqueue_block_assets so the file loads in both the frontend and the
+ * FSE editor iframe. Only enqueued when the plumbing variation is active.
+ * Styles are scoped under `.style-variation-plumbing` (frontend/iframe) and
+ * `.editor-styles-wrapper` (editor-only grid fixes), so there is zero impact
+ * on other style variations or pages.
  */
 function elayne_enqueue_plumbing_variation_styles(): void {
+	$custom = wp_get_global_settings( array( 'custom' ) );
+	if ( empty( $custom['styleVariation'] ) || 'plumbing' !== $custom['styleVariation'] ) {
+		return;
+	}
 	wp_enqueue_style(
 		'elayne-plumbing-variation',
 		get_template_directory_uri() . '/assets/styles/plumbing-variation.css',
-		array( 'elayne-style' ),
+		array(),
 		wp_get_theme()->get( 'Version' )
 	);
 }
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_plumbing_variation_styles' );
-
-/**
- * Enqueue the plumbing style variation editor stylesheet.
- *
- * Contains editor-only overrides — collapses Gutenberg's intermediate wrapper
- * divs to display:contents so the plumbing hero CSS Grid sees the card and
- * badges as direct grid items in the block editor.
- */
-function elayne_enqueue_plumbing_editor_styles(): void {
-	wp_enqueue_style(
-		'elayne-plumbing-variation-editor',
-		get_template_directory_uri() . '/assets/styles/plumbing-variation-editor.css',
-		array( 'wp-edit-blocks' ),
-		wp_get_theme()->get( 'Version' )
-	);
-}
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\elayne_enqueue_plumbing_editor_styles' );
+add_action( 'enqueue_block_assets', __NAMESPACE__ . '\elayne_enqueue_plumbing_variation_styles' );
 
 /**
  * Include block extensions.

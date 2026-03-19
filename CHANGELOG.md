@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.6.1] - 2026-03-19
+
+### Changed
+
+**Plumbing Variation — Style Enqueue Refactor:**
+- Merged `plumbing-variation-editor.css` into `plumbing-variation.css`; deleted the separate editor stylesheet
+- Switched enqueue hook from `wp_enqueue_scripts` + `enqueue_block_editor_assets` to `enqueue_block_assets` so a single file covers both frontend and FSE editor iframe
+- Added active-variation guard (`wp_get_global_settings`) so the stylesheet is only enqueued when the plumbing variation is actually active
+- Removed explicit `elayne-style` and `wp-edit-blocks` style dependencies (no longer needed with the unified hook)
+
+**Plumbing Header Pattern — Phone Icons:**
+- Added white SVG phone icon (`icon-phone-white.svg`) inside the top-bar phone pill group
+- Added white SVG phone icon (`icon-phone-white.svg`) inside the CTA amber pill button in the main header bar
+- Added `plumbing-topbar-phone-icon` CSS class and styles (14×14 px, `display:block`, zero margin) for the new top-bar icon
+
+**Plumbing Header Pattern — Mobile Responsiveness:**
+- Added `hide-on-mobile` class to the "Licensed & Insured · ROC #" text so it is hidden on small screens
+- Added mobile breakpoint rule to center the top-bar flex group on screens ≤ 781 px
+- Added mobile rule to strip pill styling (background, padding, border-radius) from `.plumbing-topbar-phone` on mobile, leaving only the icon + phone number visible",
+
 ## [3.6.0] - 2026-03-16
 
 ### Added
