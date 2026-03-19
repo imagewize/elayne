@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.6.3] - 2026-03-19
+
+### Changed
+
+**Legal Attorney Image Attribution:**
+- Updated `legal/attorney-3.webp` image source attribution from StockSnap.io photo "Confident Business" by Matt Moloney to "Classy Man" by Jonas Svidras (CC0 1.0)",
+
 ## [3.6.2] - 2026-03-19
 
 ### Changed

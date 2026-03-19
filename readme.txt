@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.6.2
+Stable tag: 3.6.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.6.3 - 03/19/26 =
+* CHANGED: Updated legal/attorney-3.webp image attribution to correct source - "Classy Man" by Jonas Svidras on StockSnap.io (CC0 1.0)."
+
 
 = 3.6.2 - 03/19/26 =
 * CHANGED: Plumbing header CTA and top bar phone styles extracted into dedicated CSS files (`plumbing-header-cta.css`, `plumbing-topbar-phone.css`).
@@ -1004,9 +1008,9 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **Description:** Professional businesswoman attorney portrait
 
 ### legal/attorney-3.webp
-- **Source:** [StockSnap.io](https://stocksnap.io/photo/confident-business-ZMIFYSYFK8)
-- **Title:** Confident Business
-- **Photographer:** Matt Moloney
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/classy-man-XKAZLYB5NV)
+- **Title:** Classy Man
+- **Photographer:** Jonas Svidras
 - **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 - **Attribution:** Not required (CC0)
 - **Description:** Professional businessman attorney portrait
