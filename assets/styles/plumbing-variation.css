@@ -1,8 +1,26 @@
 /* ========================================================================
-   Plumbing Style Variation — scoped to .style-variation-plumbing body class
-   Loaded via wp_enqueue_style() in functions.php; body class added via
-   body_class filter reading custom.styleVariation from plumbing.json.
+   Plumbing Style Variation
+   Loaded via enqueue_block_assets — applies on frontend and in the FSE
+   editor iframe. Only enqueued when the plumbing variation is active.
+   Scopes: .style-variation-plumbing (frontend + iframe body class)
+           .editor-styles-wrapper    (editor iframe DOM fixes)
    ======================================================================== */
+
+/* -----------------------------------------------------------------------
+   Editor iframe — collapse Gutenberg wrapper divs so CSS Grid on
+   .overlay-grid-wrap sees card and badges as direct grid items.
+   ----------------------------------------------------------------------- */
+.editor-styles-wrapper .overlay-grid-wrap > .block-editor-inner-blocks,
+.editor-styles-wrapper .overlay-grid-wrap > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	display: contents;
+}
+
+.editor-styles-wrapper .plumbing-hero-card,
+.editor-styles-wrapper .floating-badge--bl,
+.editor-styles-wrapper .floating-badge--tr {
+	grid-column: 1;
+	grid-row: 1;
+}
 
 /* Left column — vertically center the image wrap */
 .style-variation-plumbing .plumbing-why-col {
@@ -55,7 +73,8 @@
 }
 
 /* Remove browser default yellow highlight on <mark> in plumbing headings */
-.style-variation-plumbing .plumbing-hero-section .wp-block-heading mark {
+.style-variation-plumbing .plumbing-hero-section .wp-block-heading mark,
+.editor-styles-wrapper .plumbing-hero-section .wp-block-heading mark {
 	background: none;
 	background-color: transparent;
 }
@@ -113,7 +132,18 @@
 	display: block;
 }
 
-/* CTA phone icon (amber, inside white pill button) */
+/* Top bar phone icon */
+.style-variation-plumbing .plumbing-topbar-phone-icon {
+	margin: 0;
+}
+
+.style-variation-plumbing .plumbing-topbar-phone-icon img {
+	width: 14px;
+	height: 14px;
+	display: block;
+}
+
+/* CTA phone icon (inside amber pill button) */
 .style-variation-plumbing .plumbing-cta-phone-icon {
 	margin: 0;
 }
@@ -154,9 +184,24 @@
 }
 
 /* Hide phone CTA on mobile — logo + hamburger only */
+/* Mobile top bar — center phone number, strip pill styling */
 @media only screen and (max-width: 781px) {
 	.style-variation-plumbing .plumbing-header-cta {
 		display: none !important;
+	}
+
+	.style-variation-plumbing .plumbing-top-bar .wp-block-group.alignwide {
+		justify-content: center;
+	}
+
+	.style-variation-plumbing .plumbing-topbar-phone {
+		background: transparent !important;
+		padding: 0 !important;
+		border-radius: 0 !important;
+	}
+
+	.style-variation-plumbing .plumbing-topbar-phone:hover {
+		background: transparent !important;
 	}
 }
 
