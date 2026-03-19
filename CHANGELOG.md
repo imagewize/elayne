@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.6.2] - 2026-03-19
+
+### Changed
+
+**Plumbing Header Component Styles — Dedicated CSS Files:**
+- Extracted plumbing header CTA button styles into `assets/styles/block-styles/plumbing-header-cta.css`
+- Extracted plumbing top bar phone pill styles into `assets/styles/block-styles/plumbing-topbar-phone.css`
+- Removed these styles from `plumbing-variation.css` (previously scoped under `.style-variation-plumbing` body class)
+
+### Technical
+
+**Block Style Enqueue for FSE Editor Compatibility:**
+- Registered `plumbing-topbar-phone` and `plumbing-header-cta` component CSS via `wp_enqueue_block_style( 'core/group' )` in `functions.php`
+- Styles now load in both the frontend and the FSE editor iframe without requiring a body class or `.editor-styles-wrapper` scope
+- Fixes plumbing header CTA and top bar phone styles not rendering correctly in the Site Editor",
+
 ## [3.6.1] - 2026-03-19
 
 ### Changed

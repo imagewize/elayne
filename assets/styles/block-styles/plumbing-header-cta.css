@@ -1,0 +1,33 @@
+/* CTA phone pill in plumbing main navigation bar.
+   Loaded via wp_enqueue_block_style — applies on frontend and in the FSE
+   editor iframe without needing a body-class or editor-wrapper scope. */
+
+.plumbing-header-cta a {
+	text-decoration: none !important;
+}
+
+.plumbing-header-cta {
+	transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plumbing-header-cta:hover {
+	background: #cf6d17 !important;
+	transform: translateY( -1px );
+	box-shadow: 0 4px 16px rgba( 230, 126, 34, 0.4 );
+}
+
+.plumbing-cta-phone-icon {
+	margin: 0;
+}
+
+.plumbing-cta-phone-icon img {
+	width: 20px;
+	height: 20px;
+	display: block;
+}
+
+@media only screen and (max-width: 781px) {
+	.plumbing-header-cta {
+		display: none !important;
+	}
+}

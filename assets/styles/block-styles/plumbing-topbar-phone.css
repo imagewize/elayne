@@ -1,0 +1,38 @@
+/* Top bar phone pill and links in plumbing header.
+   Loaded via wp_enqueue_block_style — applies on frontend and in the FSE
+   editor iframe without needing a body-class or editor-wrapper scope. */
+
+.plumbing-top-bar a {
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
+.plumbing-topbar-phone {
+	background: rgba( 255, 255, 255, 0.2 );
+}
+
+.plumbing-topbar-phone:hover {
+	background: rgba( 255, 255, 255, 0.35 );
+}
+
+.plumbing-topbar-phone-icon {
+	margin: 0;
+}
+
+.plumbing-topbar-phone-icon img {
+	width: 14px;
+	height: 14px;
+	display: block;
+}
+
+@media only screen and (max-width: 781px) {
+	.plumbing-topbar-phone {
+		background: transparent !important;
+		padding: 0 !important;
+		border-radius: 0 !important;
+	}
+
+	.plumbing-topbar-phone:hover {
+		background: transparent !important;
+	}
+}

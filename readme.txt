@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.6.1
+Stable tag: 3.6.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.6.2 - 03/19/26 =
+* CHANGED: Plumbing header CTA and top bar phone styles extracted into dedicated CSS files (`plumbing-header-cta.css`, `plumbing-topbar-phone.css`).
+* TECHNICAL: Plumbing header component CSS now loaded via `wp_enqueue_block_style` for `core/group`, ensuring styles apply in both frontend and FSE editor iframe without body-class scoping."
+
 
 = 3.6.1 - 03/19/26 =
 * CHANGED: Plumbing variation styles - Merged editor-only CSS file into main plumbing-variation.css; deleted plumbing-variation-editor.css.
