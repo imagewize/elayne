@@ -7,6 +7,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.6.4] - 2026-03-20
+
+### Added
+
+**Hero Landscape SVG Illustration:**
+- Added new `elayne_hero_landscape.svg` — a detailed mountain landscape at sunrise/sunset scene featuring layered mountains, reflective lake, pine tree silhouettes, moon, stars, and cloud wisps
+- Illustration uses theme color palette (dark navy sky, warm orange sun/horizon glow)
+- Licensed CC0 (public domain), attributed to Claude AI (Mar 2026)
+
+**Theme.json Presets:**
+- Added "Warm Glow" duotone preset (`#1F2937` / `#F5C070`) for warm sunrise-toned image treatments
+- Added "Warm Diagonal" gradient preset (`linear-gradient(135deg, rgba(230,92,0,0.88), rgba(11,19,36,0.70))`)
+
+### Changed
+
+**Hero Modern Light Pattern:**
+- Replaced `desktop.webp` placeholder image with the new `elayne_hero_landscape.svg` illustration
+- Updated image alt text to describe the mountain landscape scene
+- Reduced outer vertical padding from `xxx-large` to `xx-large` for a more compact hero section
+
+**Agency Services Showcase Pattern:**
+- Added `tertiary` background color to the outer section container for visual contrast
+- Added `border-light` 1px border to all four service cards (Web Design, Digital Marketing, Brand Strategy, E-commerce) for improved card definition
+
+### Fixed
+
+**SVG Editor Display:**
+- SVG images without intrinsic pixel dimensions now render at full width inside the block editor, matching frontend behaviour
+- Implemented via editor-scoped inline CSS rule targeting `.editor-styles-wrapper .wp-block-image img[src$=".svg"]`
+
+### Technical
+
+**block-extensions.php:**
+- Added `elayne_editor_svg_styles()` function hooked to `enqueue_block_editor_assets`, injecting SVG width fix via `wp_add_inline_style` on the `wp-edit-blocks` handle
+
+**screenshot.png:**
+- Updated theme screenshot to reflect current design",
+
 ## [3.6.3] - 2026-03-19
 
 ### Changed
