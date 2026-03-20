@@ -47,6 +47,11 @@
 					"name": "High Contrast",
 					"slug": "high-contrast",
 					"colors": ["#000000", "#ffffff"]
+				},
+				{
+					"name": "Warm Glow",
+					"slug": "warm-glow",
+					"colors": ["#1F2937", "#F5C070"]
 				}
 			],
 			"gradients": [
@@ -69,6 +74,11 @@
 					"name": "Main Diagonal",
 					"slug": "main-diagonal",
 					"gradient": "linear-gradient(135deg, rgba(11, 19, 36, 0.95), rgba(11, 19, 36, 0.85))"
+				},
+				{
+					"name": "Warm Diagonal",
+					"slug": "warm-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(230, 92, 0, 0.88), rgba(11, 19, 36, 0.70))"
 				}
 			],
 			"palette": [
