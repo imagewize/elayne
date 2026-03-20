@@ -73,6 +73,20 @@ function elayne_enqueue_block_extensions() {
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\elayne_enqueue_block_extensions' );
 
 /**
+ * Fix SVG images in the block editor.
+ *
+ * SVGs without intrinsic pixel dimensions render at partial width in the editor.
+ * This rule forces them to fill their container, matching the frontend behaviour.
+ */
+function elayne_editor_svg_styles(): void {
+	wp_add_inline_style(
+		'wp-edit-blocks',
+		'.editor-styles-wrapper .wp-block-image img[src$=".svg"] { width: 100%; }'
+	);
+}
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\elayne_editor_svg_styles' );
+
+/**
  * Filter the post excerpt block output to add link functionality.
  *
  * @param string $block_content The block content.

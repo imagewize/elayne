@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.6.3
+Stable tag: 3.6.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -162,6 +162,19 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.6.4 - 03/20/26 =
+* ADDED: New elayne_hero_landscape.svg — mountain sunrise scene with layered mountains, lake, pine trees, moon, and stars (CC0).
+* ADDED: "Warm Glow" duotone preset (#1F2937 / #F5C070) to theme.json.
+* ADDED: "Warm Diagonal" gradient preset to theme.json.
+* CHANGED: Hero Modern Light pattern — replaced desktop.webp with new SVG landscape illustration.
+* CHANGED: Hero Modern Light pattern — reduced outer vertical padding from xxx-large to xx-large.
+* CHANGED: Agency Services Showcase pattern — added tertiary background color to outer section container.
+* CHANGED: Agency Services Showcase pattern — added 1px border-light border to all four service cards.
+* FIXED: SVG images now render at full width in the block editor via editor-scoped inline CSS (matched frontend behaviour).
+* TECHNICAL: Added elayne_editor_svg_styles() hooked to enqueue_block_editor_assets for SVG width fix.
+* TECHNICAL: Updated theme screenshot."
+
 
 = 3.6.3 - 03/19/26 =
 * CHANGED: Updated legal/attorney-3.webp image attribution to correct source - "Classy Man" by Jonas Svidras on StockSnap.io (CC0 1.0)."
@@ -1250,6 +1263,12 @@ The following icons were created using AI tools (ChatGPT) for the plumbing indus
 - **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 - **Attribution:** Not required (CC0)
 - **Description:** Phone handset icon in amber for CTA call button inside white pill
+
+**patterns/images/elayne_hero_landscape.svg**
+- **Source:** AI-generated (Claude AI, Mar 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Mountain landscape at sunset/sunrise hero illustration with stars, moon, and pine trees
 
 ---
 
