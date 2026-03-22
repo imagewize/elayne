@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.6.5] - 2026-03-22
+
+### Changed
+
+- Updated theme description to accurately reflect industry verticals (spa & wellness, legal, food & beverage, home services) and correct pattern/style variation counts
+- Replaced outdated "real estate" vertical reference with food & beverage and plumbing in description, README.md, and readme.txt
+- Updated pattern count from 82/95 to 103 across all documentation
+- Updated style variation count from 8 to 10 across all documentation
+- Added Food & Beverage and Plumbing to Industry Verticals section in readme.txt
+- Replaced `one-column` and `rtl-language-support` tags with `e-commerce` and `grid-layout` in style.css and readme.txt
+
 ## [3.6.4] - 2026-03-20
 
 ### Added

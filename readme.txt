@@ -1,26 +1,26 @@
 === Elayne WordPress Block Theme ===
 Contributors: Rhand
-Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, one-column, rtl-language-support, template-editing, threaded-comments, translation-ready, wide-blocks
+Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, grid-layout, template-editing, threaded-comments, translation-ready, wide-blocks
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.6.4
+Stable tag: 3.6.5
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 82 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 103 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 81 Professional Patterns - All 100% original, created specifically for Elayne
+* 103 Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
-* 8 Style Variations - Complete design systems including Spa & Wellness, Legal Blue, and more
+* 10 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Plumbing, and more
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
-* Industry-Specific Content - Pattern sets optimized for spa, wellness, real estate, and legal services
+* Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, and plumbing/home services
 * Sophisticated Design - Clean, modern patterns with professional aesthetics
 * Conversion Optimization - Built-in patterns designed to convert visitors into customers
 * Full Site Editing (FSE) - Complete control over your site design
@@ -30,7 +30,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-Elayne includes **82 professionally designed patterns** across multiple categories:
+Elayne includes **103 professionally designed patterns** across multiple categories:
 
 **Core Patterns:**
 * Hero Sections (10) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs
@@ -53,6 +53,8 @@ Elayne includes **82 professionally designed patterns** across multiple categori
 **Industry Verticals:**
 * Spa & Wellness (11) - Treatment showcases, booking CTAs, wellness features, and product displays
 * Legal Services (9) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
+* Food & Beverage (12) - Restaurant and café patterns with menus, chef profiles, event grids, hours/location, and hero sections
+* Plumbing & Home Services (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
 
 **Templates:**
 * 17 page and post templates (centered, full-width, wide, sidebars, hero, landing page)
@@ -64,14 +66,17 @@ Browse the complete pattern library in **Appearance → Editor → Patterns**
 Elayne provides specialized pattern sets for specific industries:
 
 * **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays
-* **Real Estate** - Property showcases, listing patterns, and professional service displays
 * **Legal Services** - Attorney profiles, practice area showcases, case statistics, and client testimonials optimized for law firms
+* **Food & Beverage** - Restaurant and café patterns with menu displays, chef profiles, event grids, hours/location info, testimonials, and hero sections
+* **Plumbing & Home Services** - Full-site pattern set for trade businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer
 
 = Style Variations =
 
-Switch your entire site's look with one click using **8 pre-configured color palettes**:
+Switch your entire site's look with one click using **10 pre-configured color palettes**:
 
 * Ink & Sand (Default) - Softer ink blue and warm sand tones
+* Food & Beverage - Emerald and cream with Anton/Asap Condensed fonts for restaurants and cafés
+* Plumbing - Navy, amber, and emergency-red for trade service businesses
 * Spa & Wellness (Teal & Sage) - Soothing spa colors with elegant Cormorant Garamond serif
 * Legal Blue - Professional navy blue and gold palette for law firms
 * Gray & Gold - Sophisticated grayscale with gold accents and Bodoni Moda serif
@@ -162,6 +167,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.6.5 - 03/22/26 =
+* CHANGED: Updated theme description to accurately list industry verticals (spa & wellness, legal, food & beverage, home services).
+* CHANGED: Removed incorrect "real estate" vertical reference from description, README.md, and readme.txt.
+* CHANGED: Updated pattern count to 103 across all documentation.
+* CHANGED: Updated style variation count to 10 across all documentation; added Food & Beverage and Plumbing variations.
+* CHANGED: Replaced `one-column` and `rtl-language-support` tags with `e-commerce` and `grid-layout`.
 
 = 3.6.4 - 03/20/26 =
 * ADDED: New elayne_hero_landscape.svg — mountain sunrise scene with layered mountains, lake, pine trees, moon, and stars (CC0).
