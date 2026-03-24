@@ -3,7 +3,7 @@
  * Title: Plumbing Contact Section
  * Slug: elayne/plumbing-contact
  * Description: Two-column contact section with business details and contact form shortcode
- * Categories: elayne/contact
+ * Categories: elayne/plumbing, elayne/contact
  * Keywords: contact, plumbing, phone, email, address, hours, form, quote
  * Viewport Width: 1200
  */
@@ -108,6 +108,11 @@
 <h3 class="wp-block-heading has-white-color has-text-color has-large-font-size"><?php esc_html_e( 'Send Us a Message', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
+<?php if ( function_exists( 'wpcf7' ) ) : ?>
+<!-- wp:contact-form-7/contact-form-selector {"id":2531,"hash":"38850a9","title":"Contact form 1"} -->
+<div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7 id="38850a9" title="Contact form 1"]</div>
+<!-- /wp:contact-form-7/contact-form-selector -->
+<?php else : ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Full Name', 'elayne' ); ?></p>
@@ -150,6 +155,7 @@
 <figure class="wp-block-image plumbing-contact-arrow"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-arrow-right-white.svg" alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
+<?php endif; ?>
 
 <!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-text-align-center has-main-accent-color has-text-color has-x-small-font-size"><?php esc_html_e( 'We typically respond within 1 hour during business hours.', 'elayne' ); ?></p>
