@@ -3,7 +3,7 @@
  * Title: Plumbing Emergency CTA
  * Slug: elayne/plumbing-emergency-cta
  * Description: Full-width emergency call-to-action with phone number for 24/7 plumbing service
- * Categories: elayne/call-to-action
+ * Categories: elayne/plumbing, elayne/call-to-action
  * Keywords: emergency, CTA, call, plumbing, 24/7, urgent, pipe burst
  * Viewport Width: 1200
  */

@@ -3,7 +3,7 @@
  * Title: Plumbing Why Choose Us
  * Slug: elayne/plumbing-why-us
  * Description: Two-column why choose us section with image and feature list for plumbing business
- * Categories: elayne/features
+ * Categories: elayne/plumbing, elayne/features
  * Keywords: why us, plumbing, licensed, insured, 24/7, guarantee, about
  * Viewport Width: 1200
  */

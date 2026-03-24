@@ -3,7 +3,7 @@
  * Title: Plumbing Stats Bar
  * Slug: elayne/plumbing-stats-bar
  * Description: Full-width amber statistics bar with five key plumbing business metrics
- * Categories: elayne/statistics
+ * Categories: elayne/plumbing, elayne/statistics
  * Keywords: stats, statistics, jobs, experience, rating, response, satisfaction
  * Viewport Width: 1200
  */
