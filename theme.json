@@ -458,6 +458,20 @@
 					}
 				}
 			},
+			"core/post-excerpt": {
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
+			},
 			"core/post-title": {
 				"elements": {
 					"link": {

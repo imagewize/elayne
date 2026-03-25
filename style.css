@@ -7,7 +7,7 @@ Description: A premium full-site-editing block theme with industry-specific patt
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 3.7.0
+Version: 3.7.1
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -304,7 +304,7 @@ figure.is-avatar,
 /* WordPress.org requirement: links in body content must be underlined.
    Covers block content, comments, and text widgets.
    Navigation-like contexts (menus, buttons, post titles) remain exempt. */
-.wp-block-post-content a:not(.wp-element-button),
+.wp-block-post-content a:not(.wp-element-button):not(.no-underline-link),
 .comment-content a:not(.wp-element-button),
 .widget a:not(.wp-element-button) {
     text-decoration: underline;
