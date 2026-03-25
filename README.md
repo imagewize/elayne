@@ -64,20 +64,18 @@ Elayne provides specialized pattern sets for specific industries:
 - **Plumbing** - Full-site pattern set for plumbing businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer (9 patterns). Includes a navy/amber style variation with emergency-red accents
 - **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays (3 patterns)
 
+> **Contact Form 7 support:** The `Contact With Form` and `Plumbing Contact Section` patterns include a live contact form when [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) is active. Without it, styled placeholder fields are shown automatically — no broken layouts.
+
 ### Style Variations
 
-Switch your entire site's look with one click using **10 pre-configured color palettes**:
+Switch your entire site's look with one click using **6 pre-configured color palettes**:
 
 - **Ink & Sand** (Default) - Modern, clean aesthetic
 - **Food & Beverage** - Emerald & cream with Anton/Asap Condensed fonts
 - **Plumbing** - Navy, amber & emergency-red for trade service businesses
 - **Spa & Wellness** (Teal & Sage) - Calming, wellness-focused
 - **Legal Blue** - Professional, trustworthy
-- **Gray & Gold** - Sophisticated elegance
-- **Denim & Copper** - Warm, approachable
-- **Forest & Sage** - Natural, organic
-- **Orange** - Energetic, vibrant
-- **Teal Bay** - Fresh, coastal
+- **Publicist** - Indigo & violet with Bodoni Moda serif for publications & blogs
 
 Change styles in **Appearance → Editor → Styles**
 
@@ -91,7 +89,7 @@ All effects are pure CSS, accessible, and optimized for performance. Apply via *
 
 ### Typography & Design
 
-**Fonts:** Mona Sans (primary) • Open Sans • Bitter (serif) • Monospace — all variable weight with fluid responsive scaling. Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness) • Bodoni Moda (Gray & Gold)
+**Fonts:** Mona Sans (primary) • Open Sans • Bitter (serif) • Monospace — all variable weight with fluid responsive scaling. Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness) • Bodoni Moda (Publicist)
 
 **Design System:** Professional color palettes • Custom shadow presets • Optimized image sizes for portrait and landscape layouts
 

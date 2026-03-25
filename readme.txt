@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.6.5
+Stable tag: 3.7.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,10 +17,10 @@ Launch a professional business website with the Elayne WordPress block theme! El
 * 103 Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
-* 10 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Plumbing, and more
+* 6 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Plumbing, and Publicist
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
-* Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, and plumbing/home services
+* Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, plumbing/home services, and publishing
 * Sophisticated Design - Clean, modern patterns with professional aesthetics
 * Conversion Optimization - Built-in patterns designed to convert visitors into customers
 * Full Site Editing (FSE) - Complete control over your site design
@@ -56,6 +56,8 @@ Elayne includes **103 professionally designed patterns** across multiple categor
 * Food & Beverage (12) - Restaurant and café patterns with menus, chef profiles, event grids, hours/location, and hero sections
 * Plumbing & Home Services (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
 
+Note: The "Contact With Form" and "Plumbing Contact Section" patterns display a live Contact Form 7 form when that plugin is active. Without it, styled placeholder fields are shown as a fallback — no broken layouts.
+
 **Templates:**
 * 17 page and post templates (centered, full-width, wide, sidebars, hero, landing page)
 
@@ -68,22 +70,18 @@ Elayne provides specialized pattern sets for specific industries:
 * **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays
 * **Legal Services** - Attorney profiles, practice area showcases, case statistics, and client testimonials optimized for law firms
 * **Food & Beverage** - Restaurant and café patterns with menu displays, chef profiles, event grids, hours/location info, testimonials, and hero sections
-* **Plumbing & Home Services** - Full-site pattern set for trade businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer
+* **Plumbing & Home Services** - Full-site pattern set for trade businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer. The contact pattern integrates with Contact Form 7 (optional — placeholder fields shown when inactive).
 
 = Style Variations =
 
-Switch your entire site's look with one click using **10 pre-configured color palettes**:
+Switch your entire site's look with one click using **6 pre-configured color palettes**:
 
 * Ink & Sand (Default) - Softer ink blue and warm sand tones
 * Food & Beverage - Emerald and cream with Anton/Asap Condensed fonts for restaurants and cafés
 * Plumbing - Navy, amber, and emergency-red for trade service businesses
 * Spa & Wellness (Teal & Sage) - Soothing spa colors with elegant Cormorant Garamond serif
 * Legal Blue - Professional navy blue and gold palette for law firms
-* Gray & Gold - Sophisticated grayscale with gold accents and Bodoni Moda serif
-* Denim & Copper - Modern denim blue with warm copper accents
-* Forest & Sage - Natural forest green with sage tones
-* Orange - Vibrant orange with Mona Sans variable font
-* Teal Bay - Bright teal and cyan tones
+* Publicist - Indigo and violet tones with elegant Bodoni Moda serif for modern publications and blogs
 
 Change styles in **Appearance → Editor → Styles**
 
@@ -112,7 +110,7 @@ All effects are pure CSS, accessible, and optimized for performance. Apply via *
 * Open Sans - Clean sans-serif with variable weight (300-800)
 * Bitter (serif) - Elegant serif option
 * Monospace - Code and technical content
-* Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness) • Bodoni Moda (Gray & Gold)
+* Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness) • Bodoni Moda (Publicist)
 
 **Design System:**
 * Professional color palettes for business websites
@@ -167,6 +165,19 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.7.0 - 03/24/26 =
+* CHANGED: Style variations reduced from 10 to 6 — removed Gray & Gold, Denim & Copper, Forest & Sage, Orange, and Teal Bay.
+* ADDED: Publicist style variation — indigo & violet palette with Bodoni Moda serif for publications and blogs.
+* ADDED: Plumbing & Trades pattern category registered; all plumbing patterns now cross-listed under elayne/plumbing for single-category browsing.
+* ADDED: New Contact With Form pattern (elayne/contact-with-form) — two-column layout with business info and Contact Form 7 integration, with static placeholder fallback.
+* ADDED: Contact Form 7 integration in plumbing-contact.php — live CF7 form when plugin is active, static fields as fallback.
+* ADDED: Global CF7 form styles in style.css — flex layout, label/input/button/validation/response styling using theme CSS custom properties.
+* ADDED: Plumbing-specific CF7 overrides in plumbing-variation.css — dark-card styling with amber accents matching the plumbing palette.
+* CHANGED: Theme description updated to reference 6 style variations and publishing as a supported industry.
+* TECHNICAL: Removed styles/gray-gold.json, styles/denim-copper.json, and styles/forest-sage.json.
+* TECHNICAL: CF7 plumbing styles use .style-variation-plumbing prefix for higher specificity over global CF7 rules."
+
 
 = 3.6.5 - 03/22/26 =
 * CHANGED: Updated theme description to accurately list industry verticals (spa & wellness, legal, food & beverage, home services).

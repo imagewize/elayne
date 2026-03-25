@@ -3,11 +3,11 @@ Theme Name: Elayne
 Theme URI: https://imagewize.com/themes/elayne
 Author: Jasper Frumau
 Author URI: https://imagewize.com
-Description: A premium full-site-editing block theme with industry-specific pattern sets for spa & wellness, legal, food & beverage, and home services. Includes 9 style variations and 100+ conversion-optimized block patterns for professional websites.
+Description: A premium full-site-editing block theme with industry-specific pattern sets for spa & wellness, legal, food & beverage, home services, and publishing. Includes 6 style variations and 100+ conversion-optimized block patterns for professional websites.
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 3.6.5
+Version: 3.7.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -622,4 +622,131 @@ figure.is-avatar,
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.55);
+}
+
+/* ========================================================================
+   Contact Form 7 — generic light-card context
+   Applies to all style variations. Plumbing-specific overrides in
+   plumbing-variation.css take priority via higher specificity.
+   Uses CSS custom properties so styles adapt to the active variation.
+   ======================================================================== */
+
+/* Remove CF7's default paragraph margin; gap is handled by flex layout */
+.wp-block-contact-form-7-contact-form-selector p {
+    margin: 0;
+}
+
+/* Stack fields with consistent gap */
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    gap: var( --wp--preset--spacing--medium );
+}
+
+/* Hide the hidden-inputs fieldset */
+.wp-block-contact-form-7-contact-form-selector .hidden-fields-container {
+    display: none;
+}
+
+/* Labels — scoped to .wpcf7-form to avoid styling the editor block UI */
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form label {
+    display: flex;
+    flex-direction: column;
+    gap: var( --wp--preset--spacing--x-small );
+    color: var( --wp--preset--color--main-accent );
+    font-size: var( --wp--preset--font-size--x-small );
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Text inputs and textarea — scoped to .wpcf7-form to avoid styling the editor block UI */
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="text"],
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="email"],
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: var( --wp--preset--color--secondary );
+    border: 1px solid var( --wp--preset--color--border-light );
+    border-radius: var( --wp--preset--border-radius--sm );
+    padding: var( --wp--preset--spacing--small ) var( --wp--preset--spacing--medium );
+    color: var( --wp--preset--color--main );
+    font-size: var( --wp--preset--font-size--small );
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="text"]:focus,
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="email"]:focus,
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea:focus {
+    border-color: var( --wp--preset--color--primary );
+}
+
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit button */
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="submit"] {
+    width: 100%;
+    background: var( --wp--preset--color--primary );
+    color: var( --wp--preset--color--base );
+    border: none;
+    border-radius: var( --wp--preset--border-radius--pill );
+    padding: 0.95em 2em;
+    font-size: var( --wp--preset--font-size--base );
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="submit"]:hover {
+    background: var( --wp--preset--color--primary-alt );
+}
+
+/* Spinner */
+.wp-block-contact-form-7-contact-form-selector .wpcf7-spinner {
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+/* Inline validation error tips */
+.wp-block-contact-form-7-contact-form-selector .wpcf7-not-valid-tip {
+    color: #c0392b;
+    font-size: var( --wp--preset--font-size--x-small );
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Invalid field highlight */
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form .wpcf7-not-valid {
+    border-color: #c0392b !important;
+}
+
+/* Success / error response bar */
+.wp-block-contact-form-7-contact-form-selector .wpcf7-response-output {
+    border-radius: var( --wp--preset--border-radius--sm );
+    padding: var( --wp--preset--spacing--small ) var( --wp--preset--spacing--medium );
+    font-size: var( --wp--preset--font-size--x-small );
+    border: 1px solid transparent;
+    margin: 0;
+}
+
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form.sent .wpcf7-response-output {
+    background: rgba( 46, 160, 67, 0.08 );
+    border-color: rgba( 46, 160, 67, 0.35 );
+    color: #1a7f37;
+}
+
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form.invalid .wpcf7-response-output,
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form.failed .wpcf7-response-output {
+    background: rgba( 192, 57, 43, 0.06 );
+    border-color: rgba( 192, 57, 43, 0.3 );
+    color: #c0392b;
 }
