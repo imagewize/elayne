@@ -1,0 +1,206 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Publicist",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#5344F4",
+					"name": "Indigo"
+				},
+				{
+					"slug": "primary-accent",
+					"color": "#e9e7ff",
+					"name": "Lavender"
+				},
+				{
+					"slug": "primary-alt",
+					"color": "#3d386b",
+					"name": "Deep Indigo"
+				},
+				{
+					"slug": "primary-alt-accent",
+					"color": "#DEC9FF",
+					"name": "Soft Violet"
+				},
+				{
+					"slug": "main",
+					"color": "#1E1E26",
+					"name": "Main Text"
+				},
+				{
+					"slug": "main-accent",
+					"color": "#545473",
+					"name": "Secondary Text"
+				},
+				{
+					"slug": "base",
+					"color": "#ffffff",
+					"name": "Base White"
+				},
+				{
+					"slug": "secondary",
+					"color": "#f8f7fc",
+					"name": "Light Tint"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#d4d4ec",
+					"name": "Soft Lilac"
+				},
+				{
+					"slug": "border-light",
+					"color": "#E3E3F0",
+					"name": "Border Light"
+				},
+				{
+					"slug": "border-dark",
+					"color": "#4E4E60",
+					"name": "Border Dark"
+				}
+			],
+			"duotone": [
+				{
+					"colors": ["#3d386b", "#e9e7ff"],
+					"slug": "indigo-lavender",
+					"name": "Indigo & Lavender"
+				},
+				{
+					"colors": ["#1E1E26", "#f8f7fc"],
+					"slug": "ink-tint",
+					"name": "Ink & Tint"
+				},
+				{
+					"colors": ["#5344F4", "#DEC9FF"],
+					"slug": "indigo-violet",
+					"name": "Indigo & Violet"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "indigo-fade",
+					"gradient": "linear-gradient(135deg, #3d386b 0%, #5344F4 50%, #DEC9FF 100%)",
+					"name": "Indigo Fade"
+				},
+				{
+					"slug": "lavender-tint",
+					"gradient": "linear-gradient(180deg, #e9e7ff 0%, #f8f7fc 100%)",
+					"name": "Lavender Tint"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Bodoni Moda\", Georgia, serif",
+					"slug": "heading",
+					"name": "Bodoni Moda",
+					"fontFace": [
+						{
+							"fontFamily": "Bodoni Moda",
+							"fontWeight": "400 900",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bodoni-moda/Bodoni-Moda.woff2"]
+						},
+						{
+							"fontFamily": "Bodoni Moda",
+							"fontWeight": "400 900",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bodoni-moda/Bodoni-Moda-Italic.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Open Sans\", system-ui, sans-serif",
+					"slug": "body",
+					"name": "Open Sans",
+					"fontFace": [
+						{
+							"fontFamily": "Open Sans",
+							"fontWeight": "300 800",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/Open-Sans.woff2"]
+						},
+						{
+							"fontFamily": "Open Sans",
+							"fontWeight": "300 800",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/Open-Sans-Italic.woff2"]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|base",
+			"text": "var:preset|color|main"
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|body",
+			"fontSize": "var:preset|font-size|base",
+			"fontWeight": "400",
+			"lineHeight": "1.6"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|heading",
+					"fontWeight": "700",
+					"lineHeight": "1.15"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xx-large"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var:preset|font-size|x-large"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var:preset|font-size|large"
+				}
+			},
+			"button": {
+				"border": {
+					"radius": "var:preset|border-radius|sm",
+					"width": "0"
+				},
+				"color": {
+					"background": "var:preset|color|primary",
+					"text": "var:preset|color|base"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.75rem",
+						"right": "1.5rem",
+						"bottom": "0.75rem",
+						"left": "1.5rem"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontWeight": "600",
+					"fontSize": "var:preset|font-size|small"
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|primary-alt",
+						"text": "var:preset|color|base"
+					}
+				}
+			}
+		}
+	}
+}
