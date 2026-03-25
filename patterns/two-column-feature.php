@@ -21,14 +21,14 @@
   </div>
   <!-- /wp:column -->
 
-  <!-- wp:column {"width":"50%","style":{"spacing":{"padding":{"top":"2rem","left":"2rem"}}}} -->
-  <div class="wp-block-column" style="padding-top:2rem;padding-left:2rem;flex-basis:50%">
-    <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500","textTransform":"uppercase","letterSpacing":"2px"}},"textColor":"primary","fontSize":"small"} -->
-    <p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase"><?php esc_html_e( 'Fitness', 'elayne' ); ?></p>
+  <!-- wp:column {"width":"50%","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}}} -->
+  <div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium);flex-basis:50%">
+    <!-- wp:paragraph {"className":"is-style-eyebrow","textColor":"primary","fontSize":"small"} -->
+    <p class="is-style-eyebrow has-primary-color has-text-color has-small-font-size"><?php esc_html_e( 'Fitness', 'elayne' ); ?></p>
     <!-- /wp:paragraph -->
 
-    <!-- wp:heading {"style":{"typography":{"fontFamily":"var:preset|font-family|cormorant-garamond"}}} -->
-    <h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--cormorant-garamond)"><?php esc_html_e( 'Build a Stronger Core with Us', 'elayne' ); ?></h2>
+    <!-- wp:heading -->
+    <h2 class="wp-block-heading"><?php esc_html_e( 'Build a Stronger Core with Us', 'elayne' ); ?></h2>
     <!-- /wp:heading -->
     
     <!-- wp:paragraph -->

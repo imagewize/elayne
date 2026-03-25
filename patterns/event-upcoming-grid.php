@@ -13,8 +13,8 @@
 <div class="wp-block-group alignfull has-main-color has-base-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","wideSize":"1260px"}} -->
 <div class="wp-block-group">
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|xx-small","fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase"},"elements":{"link":{"color":{"text":"var:preset|color|main-accent"}}}},"textColor":"main-accent"} -->
-<p class="has-main-accent-color has-text-color has-link-color" style="font-size:var(--wp--preset--font-size--xx-small);font-weight:600;letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'What\'s on', 'elayne' ); ?></p>
+<!-- wp:paragraph {"className":"is-style-eyebrow","style":{"elements":{"link":{"color":{"text":"var:preset|color|main-accent"}}}},"textColor":"main-accent","fontSize":"xx-small"} -->
+<p class="is-style-eyebrow has-main-accent-color has-text-color has-link-color has-xx-small-font-size"><?php esc_html_e( 'What\'s on', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"style":{"typography":{"fontWeight":"700","lineHeight":"1.1","letterSpacing":"-0.02em"}},"fontSize":"x-large"} -->

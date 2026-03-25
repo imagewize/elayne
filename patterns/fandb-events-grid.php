@@ -11,8 +11,8 @@
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/food-beverage","elayne/events","elayne/card-extended"],"patternName":"elayne/fandb-events-grid","name":"F&B Events Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"secondary","textColor":"primary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-primary-color has-secondary-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","wideSize":"1260px"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase"}},"textColor":"main-accent","fontSize":"x-small","fontFamily":"body"} -->
-<p class="has-main-accent-color has-text-color has-body-font-family has-x-small-font-size" style="font-weight:600;letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'What\'s happening', 'elayne' ); ?></p>
+<div class="wp-block-group"><!-- wp:paragraph {"className":"is-style-eyebrow","textColor":"main-accent","fontSize":"x-small","fontFamily":"body"} -->
+<p class="is-style-eyebrow has-main-accent-color has-text-color has-body-font-family has-x-small-font-size"><?php esc_html_e( 'What\'s happening', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"style":{"typography":{"fontWeight":"400"}},"textColor":"primary","fontSize":"x-large","fontFamily":"heading"} -->

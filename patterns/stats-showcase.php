@@ -16,8 +16,8 @@
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-right:0;padding-left:0"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-top:0;margin-bottom:0"><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="padding-right:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"metadata":{"name":"Content Section"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.05em","textTransform":"uppercase"}},"textColor":"main-accent","fontSize":"x-small"} -->
-<p class="has-main-accent-color has-text-color has-x-small-font-size" style="font-style:normal;font-weight:500;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Trusted by Thousands', 'elayne' ); ?></p>
+<div class="wp-block-group"><!-- wp:paragraph {"className":"is-style-eyebrow","textColor":"main-accent","fontSize":"x-small"} -->
+<p class="is-style-eyebrow has-main-accent-color has-text-color has-x-small-font-size"><?php esc_html_e( 'Trusted by Thousands', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textColor":"base","fontSize":"x-large"} -->
