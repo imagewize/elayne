@@ -81,8 +81,8 @@
 <!-- /wp:heading -->
 
 <?php if ( function_exists( 'wpcf7' ) ) : ?>
-<!-- wp:contact-form-7/contact-form-selector {"id":2531,"hash":"38850a9","title":"Contact form 1"} -->
-<div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7 id="38850a9" title="Contact form 1"]</div>
+<!-- wp:contact-form-7/contact-form-selector -->
+<div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7]</div>
 <!-- /wp:contact-form-7/contact-form-selector -->
 <?php else : ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
@@ -102,7 +102,7 @@
 <!-- /wp:paragraph -->
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"var:preset|border-radius|sm","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
-<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'your@email.com', 'elayne' ); ?></p>
+<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'example@example.com', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

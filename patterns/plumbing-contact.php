@@ -109,8 +109,8 @@
 <!-- /wp:heading -->
 
 <?php if ( function_exists( 'wpcf7' ) ) : ?>
-<!-- wp:contact-form-7/contact-form-selector {"id":2531,"hash":"38850a9","title":"Contact form 1"} -->
-<div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7 id="38850a9" title="Contact form 1"]</div>
+<!-- wp:contact-form-7/contact-form-selector -->
+<div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7]</div>
 <!-- /wp:contact-form-7/contact-form-selector -->
 <?php else : ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
