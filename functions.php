@@ -176,6 +176,7 @@ function elayne_register_effect_block_styles() {
 			'tilt-3d'          => __( 'Tilt 3D', 'elayne' ),
 		),
 		'core/paragraph' => array(
+			'eyebrow'                   => __( 'Eyebrow', 'elayne' ),
 			'animated-underline'        => __( 'Animated Underline', 'elayne' ),
 			'animated-underline-center' => __( 'Animated Underline Center', 'elayne' ),
 			'highlight-fade'            => __( 'Highlight Fade', 'elayne' ),
