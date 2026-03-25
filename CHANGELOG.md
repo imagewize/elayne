@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.7.1] - 2026-03-25
+
+### Added
+
+**Eyebrow Block Style for Paragraphs:**
+- Registered new `is-style-eyebrow` block style for `core/paragraph` blocks
+- Added `eyebrow.css` with dedicated styles: font-weight 500, letter-spacing 0.1em, uppercase text transform, normal font style
+- Style is now selectable in the block editor sidebar for any paragraph block
+
+### Changed
+
+**Pattern Eyebrow Refactor — Replaced Inline Styles with Block Style:**
+- Converted all eyebrow/label paragraphs across 9 patterns from manual inline typography attributes to the new `is-style-eyebrow` class
+- Affected patterns: `event-upcoming-grid`, `fandb-events-grid`, `image-card-grid`, `overlapping-feature-columns`, `overlapping-feature-columns-reversed`, `portfolio-grid-masonry`, `spa-home-hero`, `stats-list`, `stats-showcase`
+- Removes duplicated inline `fontWeight`, `letterSpacing`, `textTransform`, `fontStyle` declarations in favour of the centralised block style
+
+**Pattern Font Size Standardization — Replace Hard-coded Pixel Values:**
+- `portfolio-grid-masonry`: Replaced hard-coded pixel font sizes (`11px`, `12px`, `14px`, `22px`) with theme preset sizes (`x-small`, `xx-small`, `medium`) on eyebrow labels, filter pills, card titles, and tag badges
+- Filter pill and tag badge font sizes now use `x-small` / `xx-small` presets instead of literal `14px` / `12px` values
+- Portfolio card heading font size changed from inline `22px` to `medium` preset
+
+**Pattern Font Family Cleanup — Remove Hardcoded Cormorant Garamond:**
+- Removed explicit `cormorant-garamond` font family from headings in `overlapping-feature-columns`, `overlapping-feature-columns-reversed`, `spa-home-hero`, and `four-column-wellness-posts` patterns
+- Headings now inherit the theme default heading font, improving maintainability and allowing per-site font customisation without overriding pattern markup",
+
 ## [3.7.0] - 2026-03-24
 
 ### Changed

@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.7.0
+Stable tag: 3.7.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.7.1 - 03/25/26 =
+* ADDED: Eyebrow block style for core/paragraph - new `is-style-eyebrow` style registered with dedicated CSS (font-weight 500, letter-spacing 0.1em, uppercase).
+* CHANGED: Patterns eyebrow refactor - converted inline typography styles to `is-style-eyebrow` class across 9 patterns (event-upcoming-grid, fandb-events-grid, image-card-grid, overlapping-feature-columns, overlapping-feature-columns-reversed, portfolio-grid-masonry, spa-home-hero, stats-list, stats-showcase).
+* CHANGED: portfolio-grid-masonry - replaced hard-coded pixel font sizes (11px, 12px, 14px, 22px) with theme preset sizes (x-small, xx-small, medium) on labels, pills, and card headings.
+* CHANGED: Patterns font family cleanup - removed hardcoded cormorant-garamond font from headings in overlapping-feature-columns, overlapping-feature-columns-reversed, spa-home-hero, and four-column-wellness-posts; headings now inherit theme default."
+
 
 = 3.7.0 - 03/24/26 =
 * CHANGED: Style variations reduced from 10 to 6 — removed Gray & Gold, Denim & Copper, Forest & Sage, Orange, and Teal Bay.
