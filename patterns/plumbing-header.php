@@ -3,7 +3,7 @@
  * Title: Plumbing Header
  * Slug: elayne/plumbing-header
  * Description: Two-bar header for plumbing business with amber emergency top bar and dark navigation bar
- * Categories: elayne/header
+ * Categories: elayne/plumbing, elayne/header
  * Keywords: header, plumbing, emergency, phone, navigation, two-bar, amber
  * Viewport Width: 1500
  * Block Types: core/template-part/header

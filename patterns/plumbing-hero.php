@@ -3,7 +3,7 @@
  * Title: Plumbing Hero
  * Slug: elayne/plumbing-hero
  * Description: Two-column hero for plumbing business with badge, headline, CTA buttons, and trust stats
- * Categories: elayne/hero
+ * Categories: elayne/plumbing, elayne/hero
  * Keywords: hero, plumbing, emergency, pipes, 24/7, plumber
  * Viewport Width: 1200
  */

@@ -3,7 +3,7 @@
  * Title: Plumbing Footer
  * Slug: elayne/plumbing-footer
  * Description: Dark navy four-column footer for plumbing vertical with contact details and bottom bar
- * Categories: elayne/footer
+ * Categories: elayne/plumbing, elayne/footer
  * Keywords: footer, plumbing, dark, navigation, contact, phone
  * Viewport Width: 1500
  * Block Types: core/template-part/footer

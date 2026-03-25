@@ -3,7 +3,7 @@
  * Title: Plumbing Services Grid
  * Slug: elayne/plumbing-services
  * Description: Six-card responsive grid of plumbing services with SVG icons
- * Categories: elayne/features, elayne/card-simple
+ * Categories: elayne/plumbing, elayne/features, elayne/card-simple
  * Keywords: services, plumbing, leak, drain, water heater, pipes, sewer, commercial
  * Viewport Width: 1200
  * Grid Config: 18rem (simple cards: icon + title + short description)

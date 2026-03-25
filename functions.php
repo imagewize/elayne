@@ -86,6 +86,7 @@ function elayne_pattern_categories() {
 		'elayne/posts'          => array( 'label' => __( 'Posts', 'elayne' ) ),
 		'elayne/spa'            => array( 'label' => __( 'Spa & Wellness', 'elayne' ) ),
 		'elayne/legal'          => array( 'label' => __( 'Legal Services', 'elayne' ) ),
+		'elayne/plumbing'       => array( 'label' => __( 'Plumbing & Trades', 'elayne' ) ),
 		'elayne/fintech'        => array( 'label' => __( 'Fintech & Technology', 'elayne' ) ),
 		'elayne/salon'          => array( 'label' => __( 'Beauty & Salon', 'elayne' ) ),
 		'elayne/retail'         => array( 'label' => __( 'Retail & E-commerce', 'elayne' ) ),

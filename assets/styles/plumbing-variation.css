@@ -185,3 +185,124 @@
 	color: #fff !important;
 	fill: #fff !important;
 }
+
+/* -----------------------------------------------------------------------
+   Contact Form 7 — plumbing dark-card context
+   Targets the CF7 block inside the plumbing contact pattern.
+   ----------------------------------------------------------------------- */
+
+/* Remove CF7's default paragraph margin so spacing is controlled by blockGap */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector p {
+	margin: 0;
+}
+
+/* Stack fields with consistent gap */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form {
+	display: flex;
+	flex-direction: column;
+	gap: var( --wp--preset--spacing--medium );
+}
+
+/* Hide the fieldset of hidden inputs */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .hidden-fields-container {
+	display: none;
+}
+
+/* Labels — scoped to .wpcf7-form to avoid styling the editor block UI */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form label {
+	display: flex;
+	flex-direction: column;
+	gap: var( --wp--preset--spacing--x-small );
+	color: #8fa3bf;
+	font-size: var( --wp--preset--font-size--x-small );
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+/* Text inputs and textarea — scoped to .wpcf7-form to avoid styling the editor block UI */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="text"],
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="email"],
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea {
+	width: 100%;
+	box-sizing: border-box;
+	background: rgba( 255, 255, 255, 0.05 );
+	border: 1px solid #1e3558;
+	border-radius: var( --wp--preset--border-radius--sm );
+	padding: var( --wp--preset--spacing--small ) var( --wp--preset--spacing--medium );
+	color: #fff;
+	font-size: var( --wp--preset--font-size--small );
+	font-family: inherit;
+	outline: none;
+	transition: border-color 0.2s ease;
+}
+
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="text"]:focus,
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="email"]:focus,
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea:focus {
+	border-color: #E67E22;
+}
+
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+/* Submit button */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="submit"] {
+	width: 100%;
+	background: #E67E22;
+	color: #fff;
+	border: none;
+	border-radius: var( --wp--preset--border-radius--pill );
+	padding: 0.95em 2em;
+	font-size: var( --wp--preset--font-size--base );
+	font-weight: 700;
+	font-family: inherit;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="submit"]:hover {
+	background: #cf6d17;
+}
+
+/* Spinner — keep next to button */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-spinner {
+	margin-left: 0.5em;
+	vertical-align: middle;
+}
+
+/* Inline validation error tips */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-not-valid-tip {
+	color: #f08080;
+	font-size: var( --wp--preset--font-size--x-small );
+	margin-top: 4px;
+	display: block;
+}
+
+/* Invalid field highlight */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-not-valid {
+	border-color: #f08080 !important;
+}
+
+/* Success / error response bar */
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-response-output {
+	border-radius: var( --wp--preset--border-radius--sm );
+	padding: var( --wp--preset--spacing--small ) var( --wp--preset--spacing--medium );
+	font-size: var( --wp--preset--font-size--x-small );
+	border: 1px solid transparent;
+}
+
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form.sent .wpcf7-response-output {
+	background: rgba( 46, 160, 67, 0.15 );
+	border-color: rgba( 46, 160, 67, 0.4 );
+	color: #7ee787;
+}
+
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form.invalid .wpcf7-response-output,
+.style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form.failed .wpcf7-response-output {
+	background: rgba( 240, 128, 128, 0.1 );
+	border-color: rgba( 240, 128, 128, 0.35 );
+	color: #f08080;
+}

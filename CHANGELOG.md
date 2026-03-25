@@ -7,6 +7,67 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.7.0] - 2026-03-24
+
+### Changed
+
+**Style Variations Consolidated (10 → 6):**
+- Removed five style variations: Gray & Gold, Denim & Copper, Forest & Sage, Orange, and Teal Bay
+- Replaced with a single new **Publicist** variation — indigo & violet palette with elegant Bodoni Moda serif, designed for modern publications and blogs
+- Updated `style.css` description, `readme.txt`, and `README.md` to reflect 6 style variations
+- Bodoni Moda font now attributed to Publicist variation (previously Gray & Gold)
+
+**Plumbing Pattern Category:**
+- All plumbing-specific patterns now cross-listed under the new `elayne/plumbing` category in addition to their original categories
+  - `plumbing-contact.php` → added `elayne/plumbing`
+  - `plumbing-emergency-cta.php` → added `elayne/plumbing`
+  - `plumbing-footer.php` → added `elayne/plumbing`
+  - `plumbing-header.php` → added `elayne/plumbing`
+  - `plumbing-hero.php` → added `elayne/plumbing`
+  - `plumbing-services.php` → added `elayne/plumbing`
+  - `plumbing-stats-bar.php` → added `elayne/plumbing`
+  - `plumbing-testimonials.php` → added `elayne/plumbing`
+  - `plumbing-why-us.php` → added `elayne/plumbing`
+
+### Added
+
+**Plumbing & Trades Pattern Category:**
+- Registered new `elayne/plumbing` pattern category ("Plumbing & Trades") in `functions.php`
+- Provides a single-category view of all plumbing industry patterns in the block inserter
+
+**Contact With Form Pattern (`elayne/contact-with-form`):**
+- New generic two-column contact section pattern for all style variations
+- Left column: business details with phone, email, address, and hours using SVG icons
+- Right column: card with Contact Form 7 integration when plugin is active; falls back to static placeholder fields when CF7 is inactive
+- Uses theme color tokens and spacing presets for full style-variation compatibility
+
+**Contact Form 7 Integration — Plumbing Contact Pattern:**
+- `plumbing-contact.php` now conditionally renders a live CF7 form when the plugin is active
+- Falls back gracefully to the existing static placeholder fields when CF7 is not installed
+
+**Contact Form 7 Global Styles (`style.css`):**
+- Full CSS styling for CF7 forms in the generic light-card context
+- Flex column layout with consistent `--wp--preset--spacing--medium` gap between fields
+- Labels: uppercase, 600-weight, `x-small` font size using `main-accent` color token
+- Inputs and textarea: `secondary` background, `border-light` border, focus highlight with `primary` color
+- Submit button: full-width, pill-shaped, `primary` background with `primary-alt` hover
+- Validation error tips, invalid field highlight, and success/error response bar styling
+- Hidden-fields container suppressed via `display: none`
+
+**Contact Form 7 Plumbing-Specific Styles (`plumbing-variation.css`):**
+- Dark-card overrides for CF7 forms inside the plumbing style variation
+- Inputs use `rgba(255,255,255,0.05)` background with `#1e3558` border and white text
+- Focus highlight uses amber (`#E67E22`) to match the plumbing palette
+- Submit button in amber (`#E67E22`) with pill border-radius
+- Validation and response bar colors adjusted for dark backgrounds (light-red errors, green success)
+
+### Technical
+
+- Removed `styles/gray-gold.json`, `styles/denim-copper.json`, and `styles/forest-sage.json` style variation files
+- Industry-specific content description updated to include "publishing" alongside spa, legal, food & beverage, and plumbing
+- CF7 styles in `plumbing-variation.css` use higher specificity (`.style-variation-plumbing` prefix) to override global CF7 styles in `style.css`
+- All CF7 CSS scoped to `.wpcf7-form` to avoid unintended styling of the block editor UI",
+
 ## [3.6.5] - 2026-03-22
 
 ### Changed

@@ -3,7 +3,7 @@
  * Title: Plumbing Customer Testimonials
  * Slug: elayne/plumbing-testimonials
  * Description: Three-column testimonial grid with star ratings and review platform logos
- * Categories: elayne/testimonial
+ * Categories: elayne/plumbing, elayne/testimonial
  * Keywords: testimonials, reviews, customers, plumbing, google, yelp, ratings
  * Viewport Width: 1200
  */
