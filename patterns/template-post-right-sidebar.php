@@ -20,11 +20,11 @@
 
 <!-- wp:post-title {"level":1,"fontFamily":"secondary"} /-->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"10px"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"secondary","fontSize":"small","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group has-secondary-color has-text-color has-link-color has-small-font-size" style="font-style:normal;font-weight:500"><!-- wp:post-author {"showBio":false} /-->
+<!-- wp:group {"style":{"spacing":{"blockGap":"10px"},"elements":{"link":{"color":{"text":"var:preset|color|main-accent"}}},"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"main-accent","fontSize":"small","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group has-main-accent-color has-text-color has-link-color has-small-font-size" style="font-style:normal;font-weight:500"><!-- wp:post-author {"showBio":false} /-->
 
-<!-- wp:paragraph {"textColor":"secondary"} -->
-<p class="has-secondary-color has-text-color"><?php esc_html_e( '·', 'elayne' ); ?></p>
+<!-- wp:paragraph {"textColor":"main-accent"} -->
+<p class="has-main-accent-color has-text-color"><?php esc_html_e( '·', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:post-date /--></div>

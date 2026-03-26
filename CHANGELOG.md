@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.7.3] - 2026-03-26
+
+### Fixed
+
+**Post Author Meta Color in Right Sidebar Template:**
+- Changed author meta group color from `secondary` to `main-accent` for improved contrast and visual consistency
+- Updated separator dot paragraph color from `secondary` to `main-accent` to match author and date text
+- Updated link color within author meta group from `secondary` to `main-accent`
+
+**Post Author Meta Vertical Alignment:**
+- Added `verticalAlignment: center` to author meta flex container to properly align author name, separator, and date on the same baseline
+
+**Author Name Margin Reset:**
+- Removed default bottom margin from `.wp-block-post-author__name` to prevent vertical misalignment with adjacent meta elements (separator dot, post date)",
+
 ## [3.7.2] - 2026-03-26
 
 ### Changed
