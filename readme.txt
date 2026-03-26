@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.7.1
+Stable tag: 3.7.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.7.2 - 03/26/26 =
+* CHANGED: Publicist - Increased body line height from 1.6 to 1.75 for better editorial readability.
+* CHANGED: Publicist - Added default blockGap of 1.75rem for consistent vertical rhythm between blocks.
+* CHANGED: Publicist - Added top/bottom margins to h2 (2rem/0.75rem) and h3 (1.5rem/0.5rem) for clearer heading hierarchy.
+* ADDED: Publicist - Block-level paragraph margin (0 top, 1em bottom) for consistent paragraph spacing."
+
 
 = 3.7.1 - 03/25/26 =
 * ADDED: Eyebrow block style for core/paragraph - new `is-style-eyebrow` style registered with dedicated CSS (font-weight 500, letter-spacing 0.1em, uppercase).

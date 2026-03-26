@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.7.2] - 2026-03-26
+
+### Changed
+
+**Publicist Style: Body Typography**
+- Increased global line height from `1.6` to `1.75` for improved editorial readability
+- Added default `blockGap` of `1.75rem` to create consistent vertical rhythm between blocks
+
+**Publicist Style: Heading Spacing**
+- Added explicit top/bottom margins to `h2` (`2rem` top, `0.75rem` bottom) for clearer section separation
+- Added explicit top/bottom margins to `h3` (`1.5rem` top, `0.5rem` bottom) for improved content hierarchy
+
+**Publicist Style: Paragraph Spacing**
+- Added block-level paragraph margin (`0` top, `1em` bottom) to ensure consistent spacing between paragraphs across all editorial content",
+
 ## [3.7.1] - 2026-03-25
 
 ### Added
