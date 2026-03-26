@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.7.2
+Stable tag: 3.7.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.7.3 - 03/26/26 =
+* FIXED: Post right sidebar - Author meta color changed from secondary to main-accent for better contrast.
+* FIXED: Post right sidebar - Separator dot color updated to main-accent to match author/date text.
+* FIXED: Post right sidebar - Added vertical center alignment to author meta flex row.
+* FIXED: Author name margin reset to 0 to prevent misalignment with post date and separator."
+
 
 = 3.7.2 - 03/26/26 =
 * CHANGED: Publicist - Increased body line height from 1.6 to 1.75 for better editorial readability.
