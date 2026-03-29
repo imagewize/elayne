@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.7.4] - 2026-03-29
+
+### Fixed
+
+**Blog Post Columns Pattern - Query Inheritance:**
+- Set `inherit` to `true` in the query block of the blog-post-columns pattern
+- Ensures the query correctly inherits context (e.g., category, tag, author) from the current page/archive
+- Fixes cases where the pattern ignored URL query parameters on archive and taxonomy pages",
+
 ## [3.7.3] - 2026-03-26
 
 ### Fixed
