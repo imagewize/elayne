@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.8.0] - 2026-04-07
+
+### Added
+
+**Single Post Templates:**
+- Added `single-centered.html` template for centered single post layout, using the `elayne/template-post-centered` pattern
+- Added `single-wide.html` template for wide single post layout, using the `elayne/template-post-wide` pattern
+
+### Fixed
+
+**Responsive Table Overflow in Post Content:**
+- Tables inside post content (`wp-block-post-content`) now scroll horizontally on small screens instead of breaking the layout
+- Applied `overflow-x: auto` and `display: block` to the table wrapper
+- Set `min-width: 600px` on tables to preserve column structure on narrow viewports",
+
 ## [3.7.4] - 2026-03-29
 
 ### Fixed

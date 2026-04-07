@@ -7,7 +7,7 @@ Description: A premium full-site-editing block theme with industry-specific patt
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 3.7.4
+Version: 3.8.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -96,6 +96,16 @@ body.no-partial-underline .wp-block-post-title.has-partial-underline-center.has-
     margin-right: calc(-1 * var(--wp--style--root--padding-right, 0px));
     width: calc(100% + var(--wp--style--root--padding-left, 0px) + var(--wp--style--root--padding-right, 0px));
     max-width: 100vw;
+}
+
+/* Responsive table overflow in post content */
+.wp-block-post-content .wp-block-table {
+    overflow-x: auto;
+    display: block;
+}
+
+.wp-block-post-content .wp-block-table table {
+    min-width: 600px;
 }
 
 /* Checkmark list style for pricing tables */
