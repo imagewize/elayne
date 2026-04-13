@@ -1,0 +1,209 @@
+/* ========================================================================
+   Nail Salon Style Variation
+   Loaded via enqueue_block_assets — applies on frontend and in the FSE
+   editor iframe. Only enqueued when the nail-salon variation is active.
+   Scopes: .style-variation-nail-salon (frontend + iframe body class)
+           .editor-styles-wrapper       (editor iframe DOM fixes)
+   ======================================================================== */
+
+/* -----------------------------------------------------------------------
+   Editor iframe — collapse Gutenberg wrapper divs so CSS Grid on
+   .overlay-grid-wrap sees card and badges as direct grid items.
+   ----------------------------------------------------------------------- */
+.editor-styles-wrapper .overlay-grid-wrap > .block-editor-inner-blocks,
+.editor-styles-wrapper .overlay-grid-wrap > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	display: contents;
+}
+
+/* Hero right column — card and floating badge stack in overlay grid */
+.editor-styles-wrapper .nail-salon-hero-section .nail-salon-hero-card,
+.editor-styles-wrapper .nail-salon-hero-section .floating-badge--bl {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+/* Left column — vertically center the image wrap */
+.style-variation-nail-salon .nail-salon-why-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Extra sizing for the tall overlay layout in why-us */
+.style-variation-nail-salon .nail-salon-why-col .overlay-grid-wrap {
+	align-items: stretch;
+	min-height: 420px;
+}
+
+.style-variation-nail-salon .nail-salon-why-col .overlay-grid-wrap > .wp-block-group:first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Featured testimonial card — rose tint highlight */
+.style-variation-nail-salon .nail-salon-t-featured {
+	border-color: rgba( 201, 114, 124, 0.4 ) !important;
+	background: rgba( 201, 114, 124, 0.04 ) !important;
+}
+
+/* Hero right column — cover block clips to border-radius */
+.style-variation-nail-salon .nail-salon-hero-card {
+	overflow: hidden;
+	padding: 0 !important;
+}
+
+/* Floating badge — nail salon light style (override dark plumbing default) */
+.style-variation-nail-salon .floating-badge {
+	background: #fff;
+	border: 1px solid var( --wp--preset--color--border-light );
+	border-left: 3px solid var( --wp--preset--color--primary );
+	box-shadow: 0 4px 20px rgba( 44, 30, 34, 0.12 );
+}
+
+/* Remove browser default yellow highlight on <em> in hero headings */
+.style-variation-nail-salon .nail-salon-hero-section .wp-block-heading em,
+.editor-styles-wrapper .nail-salon-hero-section .wp-block-heading em {
+	background: none;
+	background-color: transparent;
+	color: var( --wp--preset--color--primary );
+	font-style: italic;
+}
+
+/* Navigation links — rose hover on light background */
+.style-variation-nail-salon .wp-block-navigation-item__content {
+	text-decoration: none !important;
+	padding: 0.4rem 0.8rem;
+	border-radius: 6px;
+	transition: color 0.25s ease, background 0.25s ease;
+}
+
+.style-variation-nail-salon .wp-block-navigation-item__content:hover {
+	color: var( --wp--preset--color--primary ) !important;
+	background: rgba( 201, 114, 124, 0.06 );
+	text-decoration: none !important;
+}
+
+/* Desktop dropdown submenu — light background */
+.style-variation-nail-salon .wp-block-navigation__submenu-container {
+	background-color: #fff !important;
+	border: 1px solid var( --wp--preset--color--border-light ) !important;
+}
+
+.style-variation-nail-salon .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+	color: var( --wp--preset--color--main-accent ) !important;
+}
+
+.style-variation-nail-salon .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover {
+	color: var( --wp--preset--color--primary ) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Contact Form 7 — nail salon light-card context
+   ----------------------------------------------------------------------- */
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector p {
+	margin: 0;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form {
+	display: flex;
+	flex-direction: column;
+	gap: var( --wp--preset--spacing--medium );
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .hidden-fields-container {
+	display: none;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form label {
+	display: flex;
+	flex-direction: column;
+	gap: var( --wp--preset--spacing--x-small );
+	color: var( --wp--preset--color--main-accent );
+	font-size: var( --wp--preset--font-size--x-small );
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="text"],
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="email"],
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea {
+	width: 100%;
+	box-sizing: border-box;
+	background: var( --wp--preset--color--tertiary );
+	border: 1px solid var( --wp--preset--color--border-light );
+	border-radius: var( --wp--preset--border-radius--sm );
+	padding: var( --wp--preset--spacing--small ) var( --wp--preset--spacing--medium );
+	color: var( --wp--preset--color--main );
+	font-size: var( --wp--preset--font-size--small );
+	font-family: inherit;
+	outline: none;
+	transition: border-color 0.2s ease;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="text"]:focus,
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="email"]:focus,
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea:focus {
+	border-color: #C9727C;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="submit"] {
+	width: 100%;
+	background: #C9727C;
+	color: #fff;
+	border: none;
+	border-radius: var( --wp--preset--border-radius--pill );
+	padding: 0.95em 2em;
+	font-size: var( --wp--preset--font-size--base );
+	font-weight: 700;
+	font-family: inherit;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="submit"]:hover {
+	background: #A85560;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-spinner {
+	margin-left: 0.5em;
+	vertical-align: middle;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-not-valid-tip {
+	color: #c0392b;
+	font-size: var( --wp--preset--font-size--x-small );
+	margin-top: 4px;
+	display: block;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-not-valid {
+	border-color: #c0392b !important;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-response-output {
+	border-radius: var( --wp--preset--border-radius--sm );
+	padding: var( --wp--preset--spacing--small ) var( --wp--preset--spacing--medium );
+	font-size: var( --wp--preset--font-size--x-small );
+	border: 1px solid transparent;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form.sent .wpcf7-response-output {
+	background: rgba( 46, 160, 67, 0.1 );
+	border-color: rgba( 46, 160, 67, 0.35 );
+	color: #2e7d32;
+}
+
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form.invalid .wpcf7-response-output,
+.style-variation-nail-salon .wp-block-contact-form-7-contact-form-selector .wpcf7-form.failed .wpcf7-response-output {
+	background: rgba( 192, 57, 43, 0.08 );
+	border-color: rgba( 192, 57, 43, 0.3 );
+	color: #c0392b;
+}

@@ -1,0 +1,206 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Nail Salon",
+	"settings": {
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [
+				{
+					"name": "Dusty Rose",
+					"slug": "primary",
+					"colors": ["#C9727C", "#F5E4E6"]
+				},
+				{
+					"name": "Warm Blush",
+					"slug": "secondary",
+					"colors": ["#2C1E22", "#FDF7F4"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
+			"gradients": [
+				{
+					"name": "Rose Hero",
+					"slug": "rose-hero",
+					"gradient": "linear-gradient(135deg, #2C1E22, #4E2D35)"
+				},
+				{
+					"name": "Rose CTA",
+					"slug": "rose-cta",
+					"gradient": "linear-gradient(135deg, #C9727C, #A85560)"
+				},
+				{
+					"name": "Gold Glow",
+					"slug": "gold-glow",
+					"gradient": "linear-gradient(135deg, #F5E4E6, #FDF7F4)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(44,30,34,0.95), rgba(44,30,34,0.85))"
+				}
+			],
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "primary",
+					"color": "#C9727C"
+				},
+				{
+					"name": "Brand Accent",
+					"slug": "primary-accent",
+					"color": "#F5E4E6"
+				},
+				{
+					"name": "Brand Alt",
+					"slug": "primary-alt",
+					"color": "#A85560"
+				},
+				{
+					"name": "Brand Alt Accent",
+					"slug": "primary-alt-accent",
+					"color": "#8B4350"
+				},
+				{
+					"name": "Contrast",
+					"slug": "main",
+					"color": "#2C1E22"
+				},
+				{
+					"name": "Contrast Accent",
+					"slug": "main-accent",
+					"color": "#8D757A"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#FEFBF9"
+				},
+				{
+					"name": "Base Accent",
+					"slug": "secondary",
+					"color": "#F7EDE8"
+				},
+				{
+					"name": "Tint",
+					"slug": "tertiary",
+					"color": "#FDF7F4"
+				},
+				{
+					"name": "Border Light",
+					"slug": "border-light",
+					"color": "#E8D5D0"
+				},
+				{
+					"name": "Border Dark",
+					"slug": "border-dark",
+					"color": "#7A5558"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Cormorant Garamond, serif",
+					"name": "Cormorant Garamond",
+					"slug": "heading",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Cormorant Garamond",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-VariableFont_wght.woff2"]
+						},
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Cormorant Garamond",
+							"fontStyle": "italic",
+							"fontWeight": "300 700",
+							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-Italic-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "Quicksand, sans-serif",
+					"name": "Quicksand",
+					"slug": "body",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Quicksand",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": ["file:./assets/fonts/quicksand/Quicksand-VariableFont_wght.woff2"]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)"
+		},
+		"elements": {
+			"button": {
+				"border": {
+					"radius": "var:preset|border-radius|pill",
+					"width": "0"
+				},
+				"color": {
+					"background": "var:preset|color|primary",
+					"text": "var:preset|color|base"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.75rem",
+						"right": "1.75rem",
+						"bottom": "0.75rem",
+						"left": "1.75rem"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontWeight": "600",
+					"fontSize": "var:preset|font-size|small"
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|primary-alt",
+						"text": "var:preset|color|base"
+					}
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"letterSpacing": "-0.02em",
+					"lineHeight": "1.1"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"letterSpacing": "-0.015em",
+					"lineHeight": "1.2"
+				}
+			}
+		}
+	}
+}
