@@ -7,6 +7,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.9.0] - 2026-04-13
+
+### Added
+
+**Nail Salon Industry Vertical — 7 New Patterns:**
+- `nail-salon-hero.php` — Split hero with cover block photo, floating stats badge, and rose-toned pill CTA
+- `nail-salon-services.php` — Service card grid (gel nails, acrylics, pedicure, nail art, paraffin) with icon badges and pricing
+- `nail-salon-stats-bar.php` — Full-width stats strip with happy clients, 5-star reviews, years experience, and nail art designs counters
+- `nail-salon-why-us.php` — Why-choose-us section with 4 benefit columns (icons, headings, descriptions)
+- `nail-salon-testimonials.php` — Client testimonials grid with star ratings, names, and treatment context
+- `nail-salon-cta.php` — Booking CTA with rose background, headline, and dual-button layout
+- `nail-salon-contact.php` — Contact section with address, phone, email, hours, and embedded map placeholder
+
+**Nail Salon Style Variation:**
+- `styles/nail-salon.json` — Rose and blush pink palette with Cormorant Garamond headings and Open Sans body; full design system including gradients, duotone filters, and border presets
+- `assets/styles/nail-salon-variation.css` — Component CSS scoped to `.style-variation-nail-salon`; card overflow, floating badge overrides, hero cover block clip
+- Block styles registered: `nail-salon-avatar` (circular portrait), `nail-salon-badge` (rose pill label), `nail-salon-years-badge` (large accent ring badge)
+- Dedicated CSS: `assets/styles/block-styles/nail-salon-avatar.css`, `nail-salon-badge.css`, `nail-salon-years-badge.css`
+
+**Nail Salon Assets — 11 SVG Icons:**
+- `icon-nail-polish.svg`, `icon-acrylic.svg`, `icon-gel-nails.svg`, `icon-nail-art.svg`, `icon-pedicure.svg`, `icon-paraffin.svg` — service icons
+- `icon-5-stars.svg`, `icon-star-rose.svg`, `icon-check-rose.svg`, `icon-badge-rose.svg` — quality/badge icons
+- `icon-phone-rose.svg`, `icon-clock-rose.svg`, `icon-email-rose.svg`, `icon-location-rose.svg`, `icon-arrow-right-white.svg` — contact/UI icons
+
+**Hero Photos (CC0):**
+- `patterns/images/nail-salon/hero-nail-salon.webp` — Woman with red manicured nails (StockSnap.io / María Victoria Heredia Reyes, CC0)
+- `patterns/images/plumbing/hero-plumbing.webp` — Gold plumbing taps on tiled wall (StockSnap.io / Studio 7042, CC0)
+
+### Fixed
+
+**Nail Salon Hero — Cover Block Replacement:**
+- Replaced placeholder SVG image block in `nail-salon-hero.php` with a `wp:cover` block using `hero-nail-salon.webp`; image fills the card with `object-fit: cover` and clips to the card's border-radius via `overflow: hidden`
+
+**Plumbing Hero — Cover Block Replacement:**
+- Replaced placeholder icon group in `plumbing-hero.php` with a `wp:cover` block using `hero-plumbing.webp`; same cover+clip approach as the nail salon hero
+- Removed stale `.plumbing-hero-placeholder-icon` opacity rule from `plumbing-variation.css`; added `.plumbing-hero-card { overflow: hidden; padding: 0 }` for correct cover block clipping
+
+**Overlay Grid — Cover Block Positioning:**
+- Extended `.overlay-grid-wrap` grid rule in `style.css` to also target `wp:cover` children (`.overlay-grid-wrap > .wp-block-cover`), ensuring floating badges layer correctly over cover-block hero images
+
+### Technical
+
+**Safari Scrollbar Fix — Extracted to Dedicated Editor Stylesheet:**
+- Moved Safari scrollbar visibility CSS (`::-webkit-scrollbar` rules) out of `style.css` into a new dedicated file `assets/css/editor.css`
+- Registered `assets/css/editor.css` via `add_editor_style()` in `functions.php`
+- Keeps `style.css` focused on frontend styles; editor-only fixes now live in their own stylesheet
+- No visual change — scrollbar appearance in the Gutenberg editor remains identical
+
 ## [3.8.0] - 2026-04-07
 
 ### Added

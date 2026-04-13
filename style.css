@@ -3,11 +3,11 @@ Theme Name: Elayne
 Theme URI: https://imagewize.com/themes/elayne
 Author: Jasper Frumau
 Author URI: https://imagewize.com
-Description: A premium full-site-editing block theme with industry-specific pattern sets for spa & wellness, legal, food & beverage, home services, and publishing. Includes 6 style variations and 100+ conversion-optimized block patterns for professional websites.
+Description: A premium full-site-editing block theme with industry-specific pattern sets for spa & wellness, legal, food & beverage, home services, nail salon, and publishing. Includes 7 style variations and 110+ conversion-optimized block patterns for professional websites.
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 3.8.0
+Version: 3.9.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -488,7 +488,8 @@ figure.is-avatar,
 	overflow: visible;
 }
 
-.overlay-grid-wrap > .wp-block-group {
+.overlay-grid-wrap > .wp-block-group,
+.overlay-grid-wrap > .wp-block-cover {
 	grid-column: 1;
 	grid-row: 1;
 }
@@ -614,30 +615,6 @@ figure.is-avatar,
     margin-block-start: 0;
 }
 
-/* ========================================================================
-   Safari Scrollbar Visibility Fix (Gutenberg Editor)
-   ======================================================================== */
-
-/* Safari renders overlay scrollbars with near-invisible light gray thumb on
-   white/light backgrounds. This makes the thumb visible in the block editor
-   canvas (style.css is enqueued via add_editor_style for the editor iframe). */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.55);
-}
 
 /* ========================================================================
    Contact Form 7 — generic light-card context

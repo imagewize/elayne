@@ -59,6 +59,29 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 `2-x-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
 — ⚠️ `xx-small` does NOT exist. Use `2-x-small` or `x-small`.
 
+**Actual spacing values (critical — prevents oversized pills/badges):**
+| Slug | Value |
+|---|---|
+| `2-x-small` | clamp(0.25rem → 0.5rem) ~4–8px |
+| `x-small` | clamp(0.375rem → 0.75rem) ~6–12px |
+| `small` | clamp(0.5rem → 1rem) ~8–16px |
+| `medium` | clamp(1.5rem → 2rem) ~24–32px ← LARGE, not "medium" |
+| `large` | clamp(2rem → 3rem) ~32–48px |
+| `x-large` | clamp(3rem → 5rem) ~48–80px |
+
+**Actual font-size values (critical — prevents oversized headings):**
+| Slug | Max value | Use for |
+|---|---|---|
+| `x-small` | 0.95rem | Labels, badges, captions |
+| `small` | 1.05rem | Small body, buttons |
+| `base` | 1.165rem | Body text |
+| `medium` | 1.65rem | Lead text, stat labels |
+| `large` | 2.75rem | H1 on dark hero, stat numbers |
+| `x-large` | 3.5rem | Display H1 only |
+| `xx-large` | 4.39rem | Rarely used — very large display only |
+
+**Pill/badge padding rule:** Always use `x-small` (vertical) + `small` (horizontal). Never `medium` — that is ~28px per side and will make any pill grotesquely wide.
+
 ## Pattern Structure
 
 ```php
