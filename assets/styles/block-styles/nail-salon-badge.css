@@ -1,0 +1,27 @@
+/**
+ * Block Style: Nail Salon Badge
+ * Applied to core/group blocks via is-style-nail-salon-badge
+ * Rose pill badge used in hero and other nail salon patterns.
+ */
+
+.wp-block-group.is-style-nail-salon-badge {
+	background: rgba( 201, 114, 124, 0.12 ) !important;
+	border-color: rgba( 201, 114, 124, 0.35 ) !important;
+	color: var( --wp--preset--color--primary );
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	width: fit-content;
+}
+
+/* Icon sizing inside the badge pill */
+.wp-block-group.is-style-nail-salon-badge .wp-block-image {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.wp-block-group.is-style-nail-salon-badge .wp-block-image img {
+	width: 14px;
+	height: 14px;
+	display: block;
+}

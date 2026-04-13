@@ -4,23 +4,23 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.8.0
+Stable tag: 3.9.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 103 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 110 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 103 Professional Patterns - All 100% original, created specifically for Elayne
+* 110 Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
-* 6 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Plumbing, and Publicist
+* 7 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Plumbing, Nail Salon, and Publicist
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
-* Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, plumbing/home services, and publishing
+* Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, plumbing/home services, nail salons, and publishing
 * Sophisticated Design - Clean, modern patterns with professional aesthetics
 * Conversion Optimization - Built-in patterns designed to convert visitors into customers
 * Full Site Editing (FSE) - Complete control over your site design
@@ -55,6 +55,7 @@ Elayne includes **103 professionally designed patterns** across multiple categor
 * Legal Services (9) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
 * Food & Beverage (12) - Restaurant and café patterns with menus, chef profiles, event grids, hours/location, and hero sections
 * Plumbing & Home Services (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
+* Nail Salon (7) - Hero with real photo, services grid, stats bar, why-us, testimonials, CTA, and contact patterns with rose palette
 
 Note: The "Contact With Form" and "Plumbing Contact Section" patterns display a live Contact Form 7 form when that plugin is active. Without it, styled placeholder fields are shown as a fallback — no broken layouts.
 
@@ -71,16 +72,18 @@ Elayne provides specialized pattern sets for specific industries:
 * **Legal Services** - Attorney profiles, practice area showcases, case statistics, and client testimonials optimized for law firms
 * **Food & Beverage** - Restaurant and café patterns with menu displays, chef profiles, event grids, hours/location info, testimonials, and hero sections
 * **Plumbing & Home Services** - Full-site pattern set for trade businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer. The contact pattern integrates with Contact Form 7 (optional — placeholder fields shown when inactive).
+* **Nail Salon** - Full-site pattern set with hero (CC0 photo), services grid, stats bar, why-us, testimonials, booking CTA, and contact. Includes a dedicated rose & blush pink style variation with Cormorant Garamond headings.
 
 = Style Variations =
 
-Switch your entire site's look with one click using **6 pre-configured color palettes**:
+Switch your entire site's look with one click using **7 pre-configured color palettes**:
 
 * Ink & Sand (Default) - Softer ink blue and warm sand tones
 * Food & Beverage - Emerald and cream with Anton/Asap Condensed fonts for restaurants and cafés
 * Plumbing - Navy, amber, and emergency-red for trade service businesses
 * Spa & Wellness (Teal & Sage) - Soothing spa colors with elegant Cormorant Garamond serif
 * Legal Blue - Professional navy blue and gold palette for law firms
+* Nail Salon - Rose and blush pink palette with Cormorant Garamond headings for beauty businesses
 * Publicist - Indigo and violet tones with elegant Bodoni Moda serif for modern publications and blogs
 
 Change styles in **Appearance → Editor → Styles**
@@ -165,6 +168,18 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.9.0 - 04/13/26 =
+* ADDED: Nail Salon industry vertical — 7 new block patterns: nail-salon-hero, nail-salon-services, nail-salon-stats-bar, nail-salon-why-us, nail-salon-testimonials, nail-salon-cta, nail-salon-contact.
+* ADDED: nail-salon.json style variation — rose and blush pink palette with Cormorant Garamond headings and full design system (gradients, duotone filters, border presets).
+* ADDED: assets/styles/nail-salon-variation.css — component CSS for the Nail Salon style variation, scoped under .style-variation-nail-salon.
+* ADDED: Block styles nail-salon-avatar (circular portrait), nail-salon-badge (rose pill label), nail-salon-years-badge (large accent ring badge) with dedicated CSS files.
+* ADDED: 11 custom SVG icons in patterns/images/nail-salon/ — service icons (nail polish, acrylic, gel nails, nail art, pedicure, paraffin) and contact/quality icons.
+* ADDED: Hero photos (CC0) — hero-nail-salon.webp (woman with red manicured nails) and hero-plumbing.webp (gold taps on tiled wall), replacing SVG placeholders in both hero patterns.
+* FIXED: Nail salon and plumbing hero patterns — switched from image/group placeholder to cover block with real CC0 photo and overflow:hidden clipping to border-radius.
+* FIXED: style.css overlay-grid-wrap rule — extended to include .wp-block-cover children so floating badges layer correctly over cover-block hero images.
+* TECHNICAL: Safari scrollbar fix - Moved editor scrollbar CSS from style.css into a dedicated assets/css/editor.css file, enqueued separately via add_editor_style(). No visual change.
+
 
 = 3.8.0 - 04/07/26 =
 * ADDED: Single post template `single-centered.html` - centered layout via `elayne/template-post-centered` pattern.
@@ -1317,6 +1332,20 @@ The following icons were created using AI tools (ChatGPT) for the plumbing indus
 - **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 - **Attribution:** Not required (CC0)
 - **Description:** Phone handset icon in amber for CTA call button inside white pill
+
+**patterns/images/plumbing/hero-plumbing.webp**
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/taps-gold-WIFG1MZOKJ)
+- **Photographer:** [Studio 7042](https://stocksnap.io/author/studio7042)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Gold plumbing taps on a tiled wall — hero image for the Plumbing style variation
+
+**patterns/images/nail-salon/hero-nail-salon.webp**
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/girl-woman-4D181PL4BO)
+- **Photographer:** [María Victoria Heredia Reyes](https://stocksnap.io/author/6540)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Woman with red manicured nails — hero image for the Nail Salon style variation
 
 **patterns/images/elayne_hero_landscape.svg**
 - **Source:** AI-generated (Claude AI, Mar 2026)

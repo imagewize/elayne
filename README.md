@@ -43,13 +43,13 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Pattern Library
 
-Elayne includes **103 professionally designed patterns** across multiple categories:
+Elayne includes **110 professionally designed patterns** across multiple categories:
 
 **Core Patterns:** Hero Sections (8) • Headers & Footers (10) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (17) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (11)
 
 **Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (12)
 
-**Industry Verticals:** Spa & Wellness (11) • Legal Services (9) • Food & Beverage (12) • Plumbing (9)
+**Industry Verticals:** Spa & Wellness (11) • Legal Services (9) • Food & Beverage (12) • Plumbing (9) • Nail Salon (7)
 
 **Templates:** 14 page and post templates
 
@@ -63,12 +63,13 @@ Elayne provides specialized pattern sets for specific industries:
 - **Legal Services** - Professional attorney profiles, practice area showcases, case statistics, client testimonials, and contact patterns optimized for law firms (8 patterns)
 - **Plumbing** - Full-site pattern set for plumbing businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer (9 patterns). Includes a navy/amber style variation with emergency-red accents
 - **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays (3 patterns)
+- **Nail Salon** - Elegant rose/blush pattern set for nail studios: hero, services grid, stats bar, why-us, testimonials, booking CTA, and contact (7 patterns). Includes a "Nail Salon" style variation with Cormorant Garamond/Quicksand fonts and a rose & warm-white color palette
 
 > **Contact Form 7 support:** The `Contact With Form` and `Plumbing Contact Section` patterns include a live contact form when [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) is active. Without it, styled placeholder fields are shown automatically — no broken layouts.
 
 ### Style Variations
 
-Switch your entire site's look with one click using **6 pre-configured color palettes**:
+Switch your entire site's look with one click using **7 pre-configured color palettes**:
 
 - **Ink & Sand** (Default) - Modern, clean aesthetic
 - **Food & Beverage** - Emerald & cream with Anton/Asap Condensed fonts
@@ -76,6 +77,7 @@ Switch your entire site's look with one click using **6 pre-configured color pal
 - **Spa & Wellness** (Teal & Sage) - Calming, wellness-focused
 - **Legal Blue** - Professional, trustworthy
 - **Publicist** - Indigo & violet with Bodoni Moda serif for publications & blogs
+- **Nail Salon** - Rose & warm-white with Cormorant Garamond/Quicksand fonts for beauty businesses
 
 Change styles in **Appearance → Editor → Styles**
 
@@ -89,7 +91,7 @@ All effects are pure CSS, accessible, and optimized for performance. Apply via *
 
 ### Typography & Design
 
-**Fonts:** Mona Sans (primary) • Open Sans • Bitter (serif) • Monospace — all variable weight with fluid responsive scaling. Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness) • Bodoni Moda (Publicist)
+**Fonts:** Mona Sans (primary) • Open Sans • Bitter (serif) • Monospace — all variable weight with fluid responsive scaling. Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness, Nail Salon) • Bodoni Moda (Publicist)
 
 **Design System:** Professional color palettes • Custom shadow presets • Optimized image sizes for portrait and landscape layouts
 

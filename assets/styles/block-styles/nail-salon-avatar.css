@@ -1,0 +1,28 @@
+/**
+ * Block Style: Nail Salon Avatar
+ * Applied to core/group blocks via is-style-nail-salon-avatar
+ * Circular rose avatar used in testimonial patterns.
+ */
+
+.wp-block-group.is-style-nail-salon-avatar {
+	width: 42px;
+	height: 42px;
+	min-width: 42px;
+	border-radius: 50%;
+	background: linear-gradient( 135deg, #C9727C, #A85560 );
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.78rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+.wp-block-group.is-style-nail-salon-avatar p {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 0.78rem;
+	font-weight: 700;
+	color: #fff;
+}

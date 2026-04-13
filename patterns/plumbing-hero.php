@@ -83,17 +83,11 @@
 
 <!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:group {"className":"overlay-grid-wrap","layout":{"type":"default"}} -->
-<div class="wp-block-group overlay-grid-wrap"><!-- wp:group {"className":"plumbing-hero-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"tertiary","borderColor":"border-light","layout":{"type":"constrained"}} -->
-<div class="wp-block-group plumbing-hero-card has-border-color has-border-light-border-color has-tertiary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:group {"className":"plumbing-hero-placeholder-icon","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group plumbing-hero-placeholder-icon"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-<figure class="wp-block-image aligncenter size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-shield.svg" alt=""/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"small"} -->
-<p class="has-text-align-center has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Hero Image', 'elayne' ); ?></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group -->
+<div class="wp-block-group overlay-grid-wrap"><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/hero-plumbing.webp","dimRatio":0,"minHeight":480,"minHeightUnit":"px","className":"plumbing-hero-card","style":{"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"borderColor":"border-light"} -->
+<div class="wp-block-cover plumbing-hero-card has-border-color has-border-light-border-color" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);min-height:480px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/hero-plumbing.webp" alt="<?php echo esc_attr__( 'Gold plumbing taps', 'elayne' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
+<p class="has-text-align-center"></p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:cover -->
 
 <!-- wp:group {"className":"floating-badge floating-badge--bl","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group floating-badge floating-badge--bl"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->

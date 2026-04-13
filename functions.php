@@ -17,6 +17,7 @@ function elayne_setup() {
 
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );
+	add_editor_style( 'assets/css/editor.css' );
 
 	// Remove core block patterns.
 	remove_theme_support( 'core-block-patterns' );
@@ -65,6 +66,12 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_styles' );
 
 /**
  * Register pattern categories.
+ *
+ * Uses register_block_pattern_category() — not the block_categories_all filter.
+ * block_categories_all registers categories in the block inserter (for custom
+ * registered block types). Elayne is a pattern-only theme with no custom blocks,
+ * so those categories would never appear in the inserter. Pattern categories live
+ * in the patterns browser and are the correct API here.
  */
 function elayne_pattern_categories() {
 	$block_pattern_categories = array(
@@ -93,8 +100,8 @@ function elayne_pattern_categories() {
 		'elayne/food-beverage'  => array( 'label' => __( 'Food & Beverage', 'elayne' ) ),
 	);
 
-	foreach ( $block_pattern_categories as $name => $properties ) {
-		register_block_pattern_category( $name, $properties );
+	foreach ( $block_pattern_categories as $slug => $args ) {
+		register_block_pattern_category( $slug, $args );
 	}
 }
 add_action( 'init', __NAMESPACE__ . '\elayne_pattern_categories', 9 );
@@ -283,6 +290,78 @@ function elayne_register_plumbing_block_styles() {
 	}
 }
 add_action( 'init', __NAMESPACE__ . '\elayne_register_plumbing_block_styles' );
+
+/**
+ * Register nail salon block style variations and enqueue their CSS on demand.
+ *
+ * CSS files live in assets/styles/block-styles/ and load only on pages where
+ * the corresponding block style is used — not globally.
+ */
+function elayne_register_nail_salon_block_styles() {
+	$styles = array(
+		'core/group'     => array(
+			'nail-salon-service-card'  => __( 'Nail Salon Service Card', 'elayne' ),
+			'nail-salon-featured-card' => __( 'Nail Salon Featured Card', 'elayne' ),
+			'nail-salon-badge'         => __( 'Nail Salon Badge', 'elayne' ),
+			'nail-salon-years-badge'   => __( 'Nail Salon Years Badge', 'elayne' ),
+			'nail-salon-stat-block'    => __( 'Nail Salon Stat Block', 'elayne' ),
+			'nail-salon-check-icon'    => __( 'Nail Salon Check Icon', 'elayne' ),
+			'nail-salon-why-item'      => __( 'Nail Salon Why Item', 'elayne' ),
+			'nail-salon-avatar'        => __( 'Nail Salon Avatar', 'elayne' ),
+			'nail-salon-contact-icon'  => __( 'Nail Salon Contact Icon', 'elayne' ),
+		),
+		'core/paragraph' => array(
+			'nail-salon-section-label' => __( 'Nail Salon Section Label', 'elayne' ),
+		),
+	);
+
+	foreach ( $styles as $block => $variations ) {
+		foreach ( $variations as $name => $label ) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => $name,
+					'label' => $label,
+				)
+			);
+
+			$css_file = "assets/styles/block-styles/{$name}.css";
+			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
+				wp_enqueue_block_style(
+					$block,
+					array(
+						'handle' => "elayne-{$name}",
+						'src'    => get_theme_file_uri( $css_file ),
+						'path'   => get_theme_file_path( $css_file ),
+					)
+				);
+			}
+		}
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_register_nail_salon_block_styles' );
+
+/**
+ * Enqueue the nail salon style variation stylesheet.
+ *
+ * Uses enqueue_block_assets so the file loads in both the frontend and the
+ * FSE editor iframe. Only enqueued when the nail-salon variation is active.
+ * Styles are scoped under `.style-variation-nail-salon` so there is zero
+ * impact on other style variations or pages.
+ */
+function elayne_enqueue_nail_salon_variation_styles(): void {
+	$custom = wp_get_global_settings( array( 'custom' ) );
+	if ( empty( $custom['styleVariation'] ) || 'nail-salon' !== $custom['styleVariation'] ) {
+		return;
+	}
+	wp_enqueue_style(
+		'elayne-nail-salon-variation',
+		get_template_directory_uri() . '/assets/styles/nail-salon-variation.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+}
+add_action( 'enqueue_block_assets', __NAMESPACE__ . '\elayne_enqueue_nail_salon_variation_styles' );
 
 /**
  * Add a body class matching the active style variation slug.
