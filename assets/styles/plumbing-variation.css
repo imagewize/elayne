@@ -79,9 +79,10 @@
 	background-color: transparent;
 }
 
-/* Large faint shield in hero image placeholder */
-.style-variation-plumbing .plumbing-hero-placeholder-icon .wp-block-image {
-	opacity: 0.2;
+/* Hero right column — cover block clips to border-radius */
+.style-variation-plumbing .plumbing-hero-card {
+	overflow: hidden;
+	padding: 0 !important;
 }
 
 .style-variation-plumbing .plumbing-hero-placeholder-icon .wp-block-image img {
