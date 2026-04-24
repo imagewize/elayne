@@ -7,7 +7,7 @@ Description: A premium full-site-editing block theme with industry-specific patt
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 3.9.0
+Version: 3.9.1
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -492,6 +492,22 @@ figure.is-avatar,
 .overlay-grid-wrap > .wp-block-cover {
 	grid-column: 1;
 	grid-row: 1;
+}
+
+/* When the first child of overlay-grid-wrap contains an image, clip it to the group's border-radius */
+.overlay-grid-wrap > .wp-block-group:first-child:has(.wp-block-image) {
+	overflow: hidden;
+}
+
+.overlay-grid-wrap > .wp-block-group:first-child .wp-block-image {
+	margin: 0;
+}
+
+.overlay-grid-wrap > .wp-block-group:first-child .wp-block-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
 }
 
 /* Floating stat/social-proof badge overlaid on an image */
