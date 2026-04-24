@@ -13,10 +13,10 @@
 <div class="wp-block-group"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|xx-large","left":"var:preset|spacing|xx-large"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"45%","className":"nail-salon-why-col"} -->
 <div class="wp-block-column nail-salon-why-col" style="flex-basis:45%"><!-- wp:group {"className":"overlay-grid-wrap","layout":{"type":"default"}} -->
-<div class="wp-block-group overlay-grid-wrap"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"small"} -->
-<p class="has-text-align-center has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Salon Photo', 'elayne' ); ?></p>
-<!-- /wp:paragraph --></div>
+<div class="wp-block-group overlay-grid-wrap"><!-- wp:group {"style":{"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"borderColor":"border-light","layout":{"type":"default"}} -->
+<div class="wp-block-group has-border-color has-border-light-border-color" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg)"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/why-nail-salon.webp" alt="<?php echo esc_attr__( 'Nail technician giving a manicure', 'elayne' ); ?>"/></figure>
+<!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-nail-salon-years-badge","layout":{"type":"constrained"}} -->

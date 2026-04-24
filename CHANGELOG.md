@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.9.1] - 2026-04-24
+
+### Added
+
+**Nail Salon "Why Choose Us" Real Photo:**
+- Added `why-nail-salon.webp` — a CC0-licensed photo (StockSnap.io / Freestocks.org) showing hands receiving a nail treatment
+- Replaces the previous placeholder text block in the nail salon Why Us pattern image column
+- Image credited and documented in `readme.txt` under image attributions
+
+### Changed
+
+**Nail Salon Why Us Pattern — Image Column:**
+- Replaced the static placeholder group (with centered "Salon Photo" text, large padding, and constrained layout) with a real `wp:image` block inside a borderless default-layout group
+- Removed explicit padding and `blockGap` from the image container group; border and border-radius are retained
+- Layout type changed from `constrained` to `default` so the image fills the container naturally
+
+### Technical
+
+**`overlay-grid-wrap` Image Rendering CSS:**
+- Added `overflow: hidden` on the first child of `.overlay-grid-wrap` when it contains a `wp-block-image`, ensuring the image is clipped to the group's `border-radius`
+- Reset `margin: 0` on `.wp-block-image` inside the first child to prevent unintended spacing
+- Set `width: 100%`, `height: 100%`, `object-fit: cover`, and `display: block` on the `img` element so the photo fills the overlay grid cell without distortion",
+
 ## [3.9.0] - 2026-04-13
 
 ### Added

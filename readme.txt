@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.9.0
+Stable tag: 3.9.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 3.9.1 - 04/24/26 =
+* ADDED: Nail Salon Why Us pattern - Real CC0 photo (why-nail-salon.webp, StockSnap.io) replacing placeholder text in the image column.
+* CHANGED: Nail Salon Why Us pattern - Image container group simplified; removed explicit padding/blockGap, switched layout to default so image fills column naturally.
+* TECHNICAL: Added overlay-grid-wrap CSS rules - overflow:hidden for border-radius clipping on image children, margin reset, and object-fit:cover for full-bleed image rendering."
+
 
 = 3.9.0 - 04/13/26 =
 * ADDED: Nail Salon industry vertical — 7 new block patterns: nail-salon-hero, nail-salon-services, nail-salon-stats-bar, nail-salon-why-us, nail-salon-testimonials, nail-salon-cta, nail-salon-contact.
@@ -1346,6 +1352,13 @@ The following icons were created using AI tools (ChatGPT) for the plumbing indus
 - **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 - **Attribution:** Not required (CC0)
 - **Description:** Woman with red manicured nails — hero image for the Nail Salon style variation
+
+**patterns/images/nail-salon/why-nail-salon.webp**
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/people-hands-XX356Q6EI4)
+- **Photographer:** [Freestocks.org](https://stocksnap.io/author/20064)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Hands receiving a nail treatment — why choose us image for the Nail Salon style variation
 
 **patterns/images/elayne_hero_landscape.svg**
 - **Source:** AI-generated (Claude AI, Mar 2026)
