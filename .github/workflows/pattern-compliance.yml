@@ -47,65 +47,24 @@ jobs:
            *
            * Checks patterns against CLAUDE.md rules for code quality and WordPress standards.
            *
+           * Validation-only build for CI: this file is in sync with the canonical checker
+           * at scripts/elayne/pattern-check/class-patterncompliancechecker.php in the
+           * monorepo, but with the --autofix path stripped (CI must report, never mutate)
+           * and WooCommerce-specific checks removed (the standalone elayne distribution
+           * repo carries no woo-* patterns).
+           *
            * @package Elayne
            * @since 1.0.0
            */
-
-          /**
-           * Pattern Compliance Checker class
-           *
-           * Checks patterns against CLAUDE.md rules:
-           * - No hardcoded font sizes (padding and border-radius allowed — no WP semantic alternative)
-           * - Proper semantic variables usage
-           * - No spacer blocks
-           * - Proper margin reset on full-width patterns
-           * - Valid block comment structure
-           * - Responsive grid layouts for 3+ columns
-           * - No hardcoded external URLs in src attributes (WP.org requirement)
-           * - All user-facing text wrapped in esc_html_e() / esc_attr__() (WP.org requirement)
-           *
-           * Template Exception Rules:
-           * - Templates (template-*, header-*, footer-*) are allowed WordPress Core defaults
-           * - Allowed in templates: border-radius:5px, border-radius:100px, blockGap:0.5rem/10px
-           * - These are WordPress Core block defaults for comments, avatars, and metadata
-           */
           class PatternComplianceChecker {
-          	/**
-          	 * Pattern directory path
-          	 *
-          	 * @var string
-          	 */
           	private $pattern_dir;
-
-          	/**
-          	 * Array of compliance issues
-          	 *
-          	 * @var array
-          	 */
           	private $issues = array();
-
-          	/**
-          	 * Array of patterns that passed
-          	 *
-          	 * @var array
-          	 */
           	private $passed = array();
 
-          	/**
-          	 * Constructor
-          	 *
-          	 * @param string $pattern_dir Path to patterns directory.
-          	 */
           	public function __construct( $pattern_dir ) {
           		$this->pattern_dir = rtrim( $pattern_dir, '/' );
           	}
 
-          	/**
-          	 * Check specific pattern files
-          	 *
-          	 * @param array $files Optional array of specific files to check.
-          	 * @return void
-          	 */
           	public function check_all_patterns( $files = array() ) {
           		if ( empty( $files ) ) {
           			$patterns = glob( $this->pattern_dir . '/*.php' );
@@ -115,76 +74,48 @@ jobs:
 
           		foreach ( $patterns as $pattern_file ) {
           			$pattern_name = basename( $pattern_file );
-          			$content = file_get_contents( $pattern_file );
+          			$content      = file_get_contents( $pattern_file );
 
           			$issues = array();
 
-          			// Determine if this is a template pattern (different rules apply).
           			$is_template   = 0 === strpos( $pattern_name, 'template-' );
           			$is_header     = 0 === strpos( $pattern_name, 'header-' );
           			$is_footer     = 0 === strpos( $pattern_name, 'footer-' );
           			$is_structural = $is_template || $is_header || $is_footer;
 
-          			// Check for hardcoded values
-          			// Templates are allowed specific WordPress Core defaults:
-          			// - border-radius:5px (comment boxes)
-          			// - border-radius:100px (avatars)
-          			// - blockGap:0.5rem or 10px (metadata spacing).
-          			if ( $is_structural ) {
-          				// For templates: only check for hardcoded font-size and large spacing values
-          				// Allow small border-radius and blockGap values (WordPress Core defaults).
-          				if ( preg_match( '/(font-size):\s*\d+\.?\d*(px|rem|em)/', $content ) ) {
-          					$issues[] = 'Hardcoded font-size values found (use semantic variables)';
-          				}
-          				// Flag large padding/margin values but allow WordPress Core defaults.
-          				if ( preg_match( '/(padding|margin):\s*\d{2,}\.?\d*(px|rem|em)/', $content ) ) {
-          					// Exclude common WordPress Core spacing patterns.
-          					if ( ! preg_match( '/margin-(top|bottom|left|right):0/', $content ) ) {
-          						$issues[] = 'Hardcoded large spacing values found (use semantic variables)';
-          					}
-          				}
-          			} elseif ( preg_match( '/(font-size):\s*\d+\.?\d*(px|rem|em)/', $content ) ) {
-          				// For content patterns: strict checking (all hardcoded values).
+          			// Hardcoded font-size values (font-size only — padding/margin/border-radius come from semantic vars).
+          			if ( preg_match( '/(font-size):\s*\d+\.?\d*(px|rem|em)/', $content ) ) {
           				$issues[] = 'Hardcoded CSS values found (use semantic variables)';
           			}
 
-          			// Check for spacer blocks.
+          			// Spacer blocks.
           			if ( false !== strpos( $content, '<!-- wp:spacer ' ) ) {
           				$issues[] = 'Spacer blocks found (use blockGap instead)';
           			}
 
-          			// Check for emoji icons.
+          			// Emoji icons.
           			if ( preg_match( '/[🅿🍽📶♿🎉🍷🅿️🍽️📶️♿️🎉️🍷️]/u', $content ) ) {
           				$issues[] = 'Emoji icons found (use SVG icons instead)';
           			}
 
-          			// Check for HTML comments between tags
-          			// Only flag organizational HTML comments (not WordPress block comments)
-          			// Problematic: <div>\n<!-- Attorney 1 -->\n<!-- wp:group
-          			// Valid: <div><!-- wp:avatar /-->\n<!-- wp:group
-          			// Valid: <div><!-- /wp:image -->\n<!-- wp:group
-          			// Match: <div> followed by whitespace, then comment NOT starting with "wp:" or "/wp:".
+          			// HTML comments between an opening tag and a wp:* block comment.
           			if ( preg_match( '/<div[^>]*>\s+<!--\s*(?!\/?\s*wp:)[^-]/', $content ) ) {
           				$issues[] = 'HTML comments between opening tags and block comments (causes validation errors)';
           			}
 
-          			// Check for proper margin reset on full-width patterns.
+          			// Margin reset on full-width patterns.
           			if ( false !== strpos( $content, 'alignfull' ) &&
           				( false === strpos( $content, '"margin":{"top":"0","bottom":"0"}' ) &&
           				false === strpos( $content, 'margin-top:0;margin-bottom:0' ) ) ) {
           				$issues[] = 'Full-width pattern missing margin reset';
           			}
 
-          			// Check for wp:columns in 3+ column grid patterns
-          			// Note: wp:columns is acceptable for 2-column layouts (they stack to 1)
-          			// Only flag when there are 3+ columns in CONTENT patterns (not templates).
+          			// wp:columns with 3+ direct columns in content patterns.
           			if ( ! $is_structural && false !== strpos( $content, 'wp:columns' ) ) {
-          				// Find top-level wp:columns blocks by tracking nesting depth
-          				// This prevents false positives from nested column layouts.
-          				$lines = explode( "\n", $content );
-          				$depth = 0;
+          				$lines               = explode( "\n", $content );
+          				$depth               = 0;
           				$current_block_lines = array();
-          				$top_level_blocks = array();
+          				$top_level_blocks    = array();
 
           				foreach ( $lines as $line ) {
           					if ( false !== strpos( $line, '<!-- wp:columns' ) ) {
@@ -204,10 +135,9 @@ jobs:
           					}
           				}
 
-          				// Check each top-level columns block for direct column children.
           				foreach ( $top_level_blocks as $block ) {
-          					$block_lines = explode( "\n", $block );
-          					$col_depth = 0;
+          					$block_lines    = explode( "\n", $block );
+          					$col_depth      = 0;
           					$direct_columns = 0;
 
           					foreach ( $block_lines as $line ) {
@@ -222,57 +152,257 @@ jobs:
 
           					if ( $direct_columns >= 3 ) {
           						$issues[] = 'Using wp:columns for 3+ columns instead of responsive grid layout (use minimumColumnWidth)';
-          						break; // Only report once per pattern.
+          						break;
           					}
           				}
           			}
 
-          			// Check for hardcoded media IDs.
+          			// Hardcoded media IDs.
           			if ( preg_match( '/"id":\d+/', $content ) ) {
           				$issues[] = 'Hardcoded media IDs found';
           			}
 
-          			// Check for custom domain placeholder emails (WP.org rejection).
-          			// Only example@example.com is acceptable; real-looking domain emails are not.
+          			// Custom-domain placeholder emails (only example@example.com is acceptable).
           			if ( preg_match( '/[a-zA-Z0-9._%+\-]+@(?!example\.com)[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/', $content ) ) {
           				$issues[] = 'Custom domain email found — use example@example.com instead (WP.org requirement)';
           			}
 
-          			// Check for hardcoded external URLs in src attributes (WP.org rejection).
-          			// All images must be bundled and loaded via get_template_directory_uri().
+          			// Hardcoded external URLs in src attributes.
           			if ( preg_match( '/src=["\']https?:\/\//', $content ) ) {
           				$issues[] = 'Hardcoded external URL in src attribute — use get_template_directory_uri() instead';
           			}
 
-          			// Check for untranslated text strings in HTML tags (WP.org rejection).
-          			// Every user-facing string must use esc_html_e() / esc_attr__() with the elayne domain.
+          			// wp:button with root-level fontSize preset slug (silently ignored — must be nested under style.typography).
+          			if ( preg_match( '/<!-- wp:button\s[^\n]*"fontSize":"(?:xx-small|x-small|small|base|medium|large|x-large|xx-large)"/', $content ) ) {
+          				$issues[] = 'wp:button has root-level fontSize — use "style":{"typography":{"fontSize":"var:preset|font-size|base"}} instead; root fontSize on wp:button causes block validation errors';
+          			}
+
+          			// wp:button with className after style in JSON (root attrs must come before style).
+          			if ( preg_match_all( '/<!-- wp:button\s+(\{[^\n]+\})\s*(?:\/)?-->/', $content, $btn_attr_matches ) ) {
+          				foreach ( $btn_attr_matches[1] as $btn_json ) {
+          					$btn_style_pos = strpos( $btn_json, '"style":' );
+          					$btn_class_pos = strpos( $btn_json, '"className":' );
+          					if ( false !== $btn_style_pos && false !== $btn_class_pos && $btn_style_pos < $btn_class_pos ) {
+          						$issues[] = 'wp:button has className after style in JSON — move className before style (root-level attributes must come first)';
+          						break;
+          					}
+          				}
+          			}
+
+          			// Cover with style.dimensions.minHeight but missing root-level minHeight integer.
+          			foreach ( explode( "\n", $content ) as $cover_ln ) {
+          				if ( false === strpos( $cover_ln, '<!-- wp:cover' ) ) {
+          					continue;
+          				}
+          				if ( preg_match( '/"minHeight":"[0-9]+px"/', $cover_ln ) && ! preg_match( '/"minHeight":[0-9]+[,}]/', $cover_ln ) ) {
+          					$issues[] = 'Cover block has style.dimensions.minHeight but missing root minHeight/minHeightUnit — rendered div will be missing min-height inline style, causing block validation failure';
+          					break;
+          				}
+          			}
+
+          			// Group with overflow:hidden as inline style (not a WP block attribute).
+          			if ( preg_match( '/<div[^>]+class="[^"]*wp-block-group[^"]*"[^>]*style="[^"]*overflow:\s*hidden/', $content ) ) {
+          				$issues[] = 'Group block has overflow:hidden as inline style — not a WP block attribute, causes JSON/HTML validation mismatch. Move to a CSS class via className instead.';
+          			}
+
+          			// Element with opacity as inline style (not a standard block attribute).
+          			if ( preg_match( '/<(?:p|div|h[1-6]|span)[^>]+style="[^"]*opacity:\s*0\.[0-9]+/', $content ) ) {
+          				$issues[] = 'Element has opacity as inline style — not a standard WP block attribute, causes JSON/HTML validation mismatch. Use a className with CSS instead.';
+          			}
+
+          			// Heading/paragraph with root-level fontSize / fontFamily preset missing the matching has-* class on the element.
+          			$font_preset_issues = array();
+          			$font_size_slugs    = array( 'xx-small', 'x-small', 'small', 'base', 'medium', 'large', 'x-large', 'xx-large' );
+          			$lines              = explode( "\n", $content );
+          			$total_lines        = count( $lines );
+          			for ( $i = 0; $i < $total_lines; $i++ ) {
+          				$line = $lines[ $i ];
+          				if ( false === strpos( $line, '<!-- wp:heading' ) && false === strpos( $line, '<!-- wp:paragraph' ) ) {
+          					continue;
+          				}
+          				foreach ( $font_size_slugs as $slug ) {
+          					if ( false !== strpos( $line, '"fontSize":"' . $slug . '"' ) ) {
+          						if ( false !== strpos( $line, '"typography"' ) ) {
+          							continue;
+          						}
+          						$expected_class = 'has-' . $slug . '-font-size';
+          						$found_class    = false;
+          						for ( $j = $i + 1; $j <= $i + 3 && $j < $total_lines; $j++ ) {
+          							$html_line = $lines[ $j ];
+          							if ( preg_match( '/<(?:h[1-6]|p)[^>]*class="[^"]*' . preg_quote( $expected_class, '/' ) . '[^"]*"/', $html_line ) ) {
+          								$found_class = true;
+          								break;
+          							}
+          							if ( false !== strpos( $html_line, '<!-- wp:' ) ) {
+          								break;
+          							}
+          						}
+          						if ( ! $found_class ) {
+          							$issue_msg = 'Block has root-level "fontSize":"' . $slug . '" but HTML element is missing class "' . $expected_class . '" — causes block validation mismatch';
+          							if ( ! in_array( $issue_msg, $font_preset_issues, true ) ) {
+          								$font_preset_issues[] = $issue_msg;
+          							}
+          						}
+          					}
+          				}
+          				if ( preg_match( '/"fontFamily":"var:preset\|font-family\|([a-z0-9_-]+)"/', $line, $ff_match ) ) {
+          					if ( false !== strpos( $line, '"typography"' ) ) {
+          						continue;
+          					}
+          					$ff_slug        = $ff_match[1];
+          					$expected_class = 'has-' . str_replace( array( ':', '|', '/' ), '-', 'var:preset|font-family|' . $ff_slug ) . '-font-family';
+          					$found_class    = false;
+          					for ( $j = $i + 1; $j <= $i + 3 && $j < $total_lines; $j++ ) {
+          						$html_line = $lines[ $j ];
+          						if ( preg_match( '/<(?:h[1-6]|p)[^>]*class="[^"]*' . preg_quote( $expected_class, '/' ) . '[^"]*"/', $html_line ) ) {
+          							$found_class = true;
+          							break;
+          						}
+          						if ( false !== strpos( $html_line, '<!-- wp:' ) ) {
+          							break;
+          						}
+          					}
+          					if ( ! $found_class ) {
+          						$issue_msg = 'Block has root-level fontFamily preset "' . $ff_slug . '" but HTML element is missing class "' . $expected_class . '" — causes block validation mismatch';
+          						if ( ! in_array( $issue_msg, $font_preset_issues, true ) ) {
+          							$font_preset_issues[] = $issue_msg;
+          						}
+          					}
+          				}
+          			}
+          			$issues = array_merge( $issues, $font_preset_issues );
+
+          			// WP 6.6+ inline gap/margin rules for groups and columns.
+          			$blockgap_issues = array();
+          			$lines           = explode( "\n", $content );
+          			$total_lines     = count( $lines );
+          			for ( $i = 0; $i < $total_lines; $i++ ) {
+          				$line       = $lines[ $i ];
+          				$is_group   = false !== strpos( $line, '<!-- wp:group' );
+          				$is_columns = false !== strpos( $line, '<!-- wp:columns' );
+          				if ( false !== strpos( $line, '<!-- wp:column ' ) || '<!-- wp:column-->' === trim( $line ) ) {
+          					continue;
+          				}
+          				if ( ! $is_group && ! $is_columns ) {
+          					continue;
+          				}
+          				if ( ! preg_match( '/"blockGap":"([^"]+)"/', $line, $bg_match ) ) {
+          					continue;
+          				}
+          				$block_gap_value = $bg_match[1];
+
+          				$layout_type = 'default';
+          				if ( $is_group && preg_match( '/"layout":\s*\{"type":"([^"]+)"/', $line, $layout_match ) ) {
+          					$layout_type = $layout_match[1];
+          				}
+
+          				if ( 0 === strpos( $block_gap_value, 'var:preset|' ) ) {
+          					$css_gap = 'var(--wp--' . str_replace( array( 'var:preset|', '|' ), array( 'preset--', '--' ), $block_gap_value ) . ')';
+          				} else {
+          					$css_gap = $block_gap_value;
+          				}
+
+          				$has_inline_gap    = false;
+          				$has_inline_margin = false;
+          				$found_div         = false;
+          				for ( $j = $i + 1; $j <= $i + 3 && $j < $total_lines; $j++ ) {
+          					$html_line      = $lines[ $j ];
+          					$is_group_div   = false !== strpos( $html_line, '<div class="wp-block-group' ) || false !== strpos( $html_line, "<div class='wp-block-group" );
+          					$is_columns_div = false !== strpos( $html_line, '<div class="wp-block-columns' ) || false !== strpos( $html_line, "<div class='wp-block-columns" );
+          					if ( $is_group_div || $is_columns_div ) {
+          						$found_div = true;
+          						if ( false !== strpos( $html_line, 'gap:' ) ) {
+          							$has_inline_gap = true;
+          						}
+          						if ( false !== strpos( $html_line, 'margin' ) && ( false !== strpos( $html_line, 'margin:' ) || false !== strpos( $html_line, 'margin-' ) ) ) {
+          							$has_inline_margin = true;
+          						}
+          						break;
+          					}
+          					if ( false !== strpos( $html_line, '<!-- wp:' ) ) {
+          						break;
+          					}
+          				}
+
+          				if ( $is_group ) {
+          					$is_zero_gap = '0' === $block_gap_value;
+
+          					if ( 'flex' === $layout_type && ! $has_inline_gap && ! $is_zero_gap ) {
+          						$issue_msg = 'Group with layout:flex has "blockGap":"' . $block_gap_value . '" but HTML div is missing gap:' . $css_gap . ' in style attribute — flex layout requires inline gap';
+          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
+          							$blockgap_issues[] = $issue_msg;
+          						}
+          					}
+          					if ( ( 'constrained' === $layout_type || 'default' === $layout_type ) && $has_inline_gap ) {
+          						$issue_msg = 'Group with layout:' . $layout_type . ' has inline gap: style but WordPress 6.6+ handles gap via layout CSS — remove gap: from HTML style attribute';
+          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
+          							$blockgap_issues[] = $issue_msg;
+          						}
+          					}
+          					if ( 'flex' === $layout_type && $is_zero_gap && $has_inline_gap ) {
+          						$issue_msg = 'Group with layout:flex and blockGap:0 has inline gap: style but WordPress 6.6+ does not output gap for zero values — remove gap:0 from HTML style attribute';
+          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
+          							$blockgap_issues[] = $issue_msg;
+          						}
+          					}
+          					if ( 'flex' === $layout_type && $has_inline_margin ) {
+          						$issue_msg = 'Group with layout:flex has inline margin: style but WordPress 6.6+ handles flex group margins via layout CSS — remove margin: from HTML style attribute';
+          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
+          							$blockgap_issues[] = $issue_msg;
+          						}
+          					}
+          				} elseif ( $is_columns ) {
+          					if ( $has_inline_gap ) {
+          						$issue_msg = 'Columns block has inline gap: style but WordPress 6.6+ handles column gap via block CSS — remove gap: from HTML style attribute';
+          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
+          							$blockgap_issues[] = $issue_msg;
+          						}
+          					}
+          					$has_inline_margin = false;
+          					for ( $j = $i + 1; $j <= $i + 3 && $j < $total_lines; $j++ ) {
+          						$html_line      = $lines[ $j ];
+          						$is_columns_div = false !== strpos( $html_line, '<div class="wp-block-columns' ) || false !== strpos( $html_line, "<div class='wp-block-columns" );
+          						if ( $is_columns_div && false !== strpos( $html_line, 'margin' ) && ( false !== strpos( $html_line, 'margin:' ) || false !== strpos( $html_line, 'margin-' ) ) ) {
+          							$has_inline_margin = true;
+          							break;
+          						}
+          						if ( false !== strpos( $html_line, '<!-- wp:' ) ) {
+          							break;
+          						}
+          					}
+          					if ( $has_inline_margin ) {
+          						$issue_msg = 'Columns block has inline margin: style but WordPress 6.6+ handles column margins via layout CSS — remove margin: from HTML style attribute';
+          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
+          							$blockgap_issues[] = $issue_msg;
+          						}
+          					}
+          				}
+          			}
+          			$issues = array_merge( $issues, $blockgap_issues );
+
+          			// Untranslated text strings (WP.org requirement).
           			$has_untranslated_text = false;
           			$has_untranslated_alt  = false;
-          			$lines = explode( "\n", $content );
+          			$lines                 = explode( "\n", $content );
           			foreach ( $lines as $line ) {
-          				// Skip lines that are WordPress block comments (JSON attributes).
           				if ( false !== strpos( $line, '<!-- wp:' ) || false !== strpos( $line, '<!-- /wp:' ) ) {
           					continue;
           				}
-          				// For lines with PHP: check if the HTML portions still contain bare text.
-          				// A fully-translated line wraps ALL text in translation calls — no plain text
-          				// between HTML tags remains. A partially-translated line (e.g. copyright with
-          				// inline HTML like "Powered by WordPress and <a>Elayne</a>") will still have
-          				// bare alphabetic text outside PHP blocks after stripping PHP tags.
+          				if ( 0 === strpos( trim( $line ), '$' ) ) {
+          					continue;
+          				}
           				if ( false !== strpos( $line, '<?php' ) ) {
-          					// Strip PHP blocks and check the remaining HTML for bare text.
           					$html_only = preg_replace( '/<\?php.*?\?>/s', '', $line );
+          					$html_only = preg_replace( '/&[a-zA-Z#][a-zA-Z0-9]*;/', '', $html_only );
           					if ( preg_match( '/<(?:h[1-6]|p|a|li|button|span|figcaption|cite|blockquote|td|th|dt|dd)[^>]*>[^<{?\n]*[a-zA-Z]{3,}[^<{?\n]*<\//', $html_only ) ) {
           						$has_untranslated_text = true;
           					}
           					continue;
           				}
-          				// Match text content directly inside common HTML tags (same-line open+close).
-          				// Looks for e.g. <h2 class="...">Some bare text</h2> without any PHP.
-          				if ( preg_match( '/<(?:h[1-6]|p|a|li|button|span|figcaption|cite|blockquote|td|th|dt|dd)[^>]*>[^<{?\n]*[a-zA-Z]{3,}[^<{?\n]*<\//', $line ) ) {
+          				$clean_line = preg_replace( '/&[a-zA-Z#][a-zA-Z0-9]*;/', '', $line );
+          				if ( preg_match( '/<(?:h[1-6]|p|a|li|button|span|figcaption|cite|blockquote|td|th|dt|dd)[^>]*>[^<{?\n]*[a-zA-Z]{3,}[^<{?\n]*<\//', $clean_line ) ) {
           					$has_untranslated_text = true;
           				}
-          				// Match non-empty alt attributes without PHP translation.
           				if ( preg_match( '/alt="[A-Za-z][^"]*"/', $line ) ) {
           					$has_untranslated_alt = true;
           				}
@@ -292,11 +422,6 @@ jobs:
           		}
           	}
 
-          	/**
-          	 * Get check results
-          	 *
-          	 * @return array Results with 'passed' and 'issues' keys.
-          	 */
           	public function get_results() {
           		return array(
           			'passed' => $this->passed,
@@ -304,11 +429,6 @@ jobs:
           		);
           	}
 
-          	/**
-          	 * Print results to console
-          	 *
-          	 * @return void
-          	 */
           	public function print_results() {
           		$results = $this->get_results();
 
@@ -337,14 +457,12 @@ jobs:
 
           // Run the checker.
           if ( 'cli' === php_sapi_name() ) {
-          	// Get specific files from command line arguments (space-separated)
           	$files = array_slice( $argv, 1 );
 
           	if ( empty( $files ) ) {
           		die( "No pattern files specified.\n" );
           	}
 
-          	// Verify all files exist
           	foreach ( $files as $file ) {
           		if ( ! file_exists( $file ) ) {
           			die( "Pattern file not found: " . $file . "\n" );
@@ -355,7 +473,6 @@ jobs:
           	$checker->check_all_patterns( $files );
           	$checker->print_results();
 
-          	// Exit with error code if issues found.
           	$results = $checker->get_results();
           	exit( empty( $results['issues'] ) ? 0 : 1 );
           } else {
