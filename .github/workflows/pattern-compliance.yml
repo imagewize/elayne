@@ -414,6 +414,17 @@ jobs:
           				$issues[] = 'Untranslated alt attribute text — use alt="<?php echo esc_attr__( \'Desc\', \'elayne\' ); ?>"';
           			}
 
+          			// Missing patternName in outermost block metadata (templates exempt).
+          			if ( ! $is_template ) {
+          				if ( ! preg_match( '/"patternName":"elayne\/[^"]*"/', $content ) ) {
+          					$slug_hint = '';
+          					if ( preg_match( '/\*\s+Slug:\s+elayne\/([^\s]+)/', $content, $slug_m ) ) {
+          						$slug_hint = ' — expected: "patternName":"elayne/' . trim( $slug_m[1] ) . '" in outermost block metadata';
+          					}
+          					$issues[] = 'Missing "patternName" in block metadata' . $slug_hint;
+          				}
+          			}
+
           			if ( empty( $issues ) ) {
           				$this->passed[] = $pattern_name;
           			} else {
