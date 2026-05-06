@@ -93,6 +93,15 @@ jobs:
           				$issues[] = 'Spacer blocks found (use blockGap instead)';
           			}
 
+          			// wp:template-part missing "theme":"elayne" attribute.
+          			foreach ( explode( "\n", $content ) as $tpl_ln ) {
+          				if ( false !== strpos( $tpl_ln, '<!-- wp:template-part' ) &&
+          					false === strpos( $tpl_ln, '"theme":' ) ) {
+          					$issues[] = 'wp:template-part missing "theme":"elayne" attribute — WordPress may resolve to wrong theme parts in multisite';
+          					break;
+          				}
+          			}
+
           			// Emoji icons.
           			if ( preg_match( '/[🅿🍽📶♿🎉🍷🅿️🍽️📶️♿️🎉️🍷️]/u', $content ) ) {
           				$issues[] = 'Emoji icons found (use SVG icons instead)';
@@ -200,6 +209,12 @@ jobs:
           				}
           			}
 
+          			// Empty border side objects {} in block JSON.
+          			// WordPress serializes these as [] causing a type mismatch and validation errors.
+          			if ( preg_match( '/"border"\s*:\s*\{[^}]*"(?:right|bottom|left|top)"\s*:\s*\{\}/', $content ) ) {
+          				$issues[] = 'Empty border side objects {} found in block JSON — WordPress serializes these as [] causing a validation mismatch. Remove the empty sides entirely (e.g. "border":{"top":{...}} not "border":{"top":{...},"right":{}})';
+          			}
+
           			// Group with overflow:hidden as inline style (not a WP block attribute).
           			if ( preg_match( '/<div[^>]+class="[^"]*wp-block-group[^"]*"[^>]*style="[^"]*overflow:\s*hidden/', $content ) ) {
           				$issues[] = 'Group block has overflow:hidden as inline style — not a WP block attribute, causes JSON/HTML validation mismatch. Move to a CSS class via className instead.';
@@ -272,7 +287,9 @@ jobs:
           			}
           			$issues = array_merge( $issues, $font_preset_issues );
 
-          			// WP 6.6+ inline gap/margin rules for groups and columns.
+          			// Inline gap/margin rules for groups and columns.
+          			// WordPress generates gap via runtime CSS (wp-container-* for flex, layout CSS for others).
+          			// No group layout type should ever have inline gap: in pattern files.
           			$blockgap_issues = array();
           			$lines           = explode( "\n", $content );
           			$total_lines     = count( $lines );
@@ -289,28 +306,19 @@ jobs:
           				if ( ! preg_match( '/"blockGap":"([^"]+)"/', $line, $bg_match ) ) {
           					continue;
           				}
-          				$block_gap_value = $bg_match[1];
 
           				$layout_type = 'default';
           				if ( $is_group && preg_match( '/"layout":\s*\{"type":"([^"]+)"/', $line, $layout_match ) ) {
           					$layout_type = $layout_match[1];
           				}
 
-          				if ( 0 === strpos( $block_gap_value, 'var:preset|' ) ) {
-          					$css_gap = 'var(--wp--' . str_replace( array( 'var:preset|', '|' ), array( 'preset--', '--' ), $block_gap_value ) . ')';
-          				} else {
-          					$css_gap = $block_gap_value;
-          				}
-
           				$has_inline_gap    = false;
           				$has_inline_margin = false;
-          				$found_div         = false;
           				for ( $j = $i + 1; $j <= $i + 3 && $j < $total_lines; $j++ ) {
           					$html_line      = $lines[ $j ];
           					$is_group_div   = false !== strpos( $html_line, '<div class="wp-block-group' ) || false !== strpos( $html_line, "<div class='wp-block-group" );
           					$is_columns_div = false !== strpos( $html_line, '<div class="wp-block-columns' ) || false !== strpos( $html_line, "<div class='wp-block-columns" );
           					if ( $is_group_div || $is_columns_div ) {
-          						$found_div = true;
           						if ( false !== strpos( $html_line, 'gap:' ) ) {
           							$has_inline_gap = true;
           						}
@@ -325,35 +333,22 @@ jobs:
           				}
 
           				if ( $is_group ) {
-          					$is_zero_gap = '0' === $block_gap_value;
-
-          					if ( 'flex' === $layout_type && ! $has_inline_gap && ! $is_zero_gap ) {
-          						$issue_msg = 'Group with layout:flex has "blockGap":"' . $block_gap_value . '" but HTML div is missing gap:' . $css_gap . ' in style attribute — flex layout requires inline gap';
-          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
-          							$blockgap_issues[] = $issue_msg;
-          						}
-          					}
-          					if ( ( 'constrained' === $layout_type || 'default' === $layout_type ) && $has_inline_gap ) {
-          						$issue_msg = 'Group with layout:' . $layout_type . ' has inline gap: style but WordPress 6.6+ handles gap via layout CSS — remove gap: from HTML style attribute';
-          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
-          							$blockgap_issues[] = $issue_msg;
-          						}
-          					}
-          					if ( 'flex' === $layout_type && $is_zero_gap && $has_inline_gap ) {
-          						$issue_msg = 'Group with layout:flex and blockGap:0 has inline gap: style but WordPress 6.6+ does not output gap for zero values — remove gap:0 from HTML style attribute';
+          					// ALL group layouts: MUST NOT have inline gap.
+          					if ( $has_inline_gap ) {
+          						$issue_msg = 'Group with layout:' . $layout_type . ' has inline gap: style — WordPress generates gap via CSS (wp-container-* for flex, layout CSS for others); remove gap: from HTML style attribute';
           						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
           							$blockgap_issues[] = $issue_msg;
           						}
           					}
           					if ( 'flex' === $layout_type && $has_inline_margin ) {
-          						$issue_msg = 'Group with layout:flex has inline margin: style but WordPress 6.6+ handles flex group margins via layout CSS — remove margin: from HTML style attribute';
+          						$issue_msg = 'Group with layout:flex has inline margin: style but WordPress handles flex group margins via layout CSS — remove margin: from HTML style attribute';
           						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
           							$blockgap_issues[] = $issue_msg;
           						}
           					}
           				} elseif ( $is_columns ) {
           					if ( $has_inline_gap ) {
-          						$issue_msg = 'Columns block has inline gap: style but WordPress 6.6+ handles column gap via block CSS — remove gap: from HTML style attribute';
+          						$issue_msg = 'Columns block has inline gap: style but WordPress handles column gap via block CSS — remove gap: from HTML style attribute';
           						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
           							$blockgap_issues[] = $issue_msg;
           						}
@@ -371,7 +366,7 @@ jobs:
           						}
           					}
           					if ( $has_inline_margin ) {
-          						$issue_msg = 'Columns block has inline margin: style but WordPress 6.6+ handles column margins via layout CSS — remove margin: from HTML style attribute';
+          						$issue_msg = 'Columns block has inline margin: style but WordPress handles column margins via layout CSS — remove margin: from HTML style attribute';
           						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
           							$blockgap_issues[] = $issue_msg;
           						}
