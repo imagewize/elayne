@@ -215,6 +215,30 @@ jobs:
           				$issues[] = 'Empty border side objects {} found in block JSON — WordPress serializes these as [] causing a validation mismatch. Remove the empty sides entirely (e.g. "border":{"top":{...}} not "border":{"top":{...},"right":{}})';
           			}
 
+          			// wp:buttons missing <div class="wp-block-buttons"> HTML wrapper.
+          			$lines_tmp  = explode( "\n", $content );
+          			$total_tmp  = count( $lines_tmp );
+          			for ( $bi = 0; $bi < $total_tmp; $bi++ ) {
+          				$bl = $lines_tmp[ $bi ];
+          				if ( false === strpos( $bl, '<!-- wp:buttons' ) || false !== strpos( $bl, '<!-- /wp:buttons' ) ) {
+          					continue;
+          				}
+          				$wrapper_found = false;
+          				for ( $bj = $bi; $bj <= $bi + 2 && $bj < $total_tmp; $bj++ ) {
+          					if ( false !== strpos( $lines_tmp[ $bj ], 'wp-block-buttons' ) ) {
+          						$wrapper_found = true;
+          						break;
+          					}
+          					if ( $bj > $bi && false !== strpos( $lines_tmp[ $bj ], '<!-- wp:button' ) ) {
+          						break;
+          					}
+          				}
+          				if ( ! $wrapper_found ) {
+          					$issues[] = 'wp:buttons block missing <div class="wp-block-buttons"> HTML wrapper — causes core/buttons save() mismatch and stray </div> tags that break surrounding layout';
+          					break;
+          				}
+          			}
+
           			// Group with overflow:hidden as inline style (not a WP block attribute).
           			if ( preg_match( '/<div[^>]+class="[^"]*wp-block-group[^"]*"[^>]*style="[^"]*overflow:\s*hidden/', $content ) ) {
           				$issues[] = 'Group block has overflow:hidden as inline style — not a WP block attribute, causes JSON/HTML validation mismatch. Move to a CSS class via className instead.';
@@ -340,12 +364,9 @@ jobs:
           							$blockgap_issues[] = $issue_msg;
           						}
           					}
-          					if ( 'flex' === $layout_type && $has_inline_margin ) {
-          						$issue_msg = 'Group with layout:flex has inline margin: style but WordPress handles flex group margins via layout CSS — remove margin: from HTML style attribute';
-          						if ( ! in_array( $issue_msg, $blockgap_issues, true ) ) {
-          							$blockgap_issues[] = $issue_msg;
-          						}
-          					}
+          					// Note: inline margin IS correct for ALL group layout types including flex.
+          					// WordPress save() generates margin-top/margin-bottom as inline style
+          					// whenever style.spacing.margin is set — regardless of layout type.
           				} elseif ( $is_columns ) {
           					if ( $has_inline_gap ) {
           						$issue_msg = 'Columns block has inline gap: style but WordPress handles column gap via block CSS — remove gap: from HTML style attribute';
@@ -409,14 +430,29 @@ jobs:
           				$issues[] = 'Untranslated alt attribute text — use alt="<?php echo esc_attr__( \'Desc\', \'elayne\' ); ?>"';
           			}
 
-          			// Missing patternName in outermost block metadata (templates exempt).
+          			// Missing patternName in outermost block metadata — three failure modes (templates exempt).
           			if ( ! $is_template ) {
-          				if ( ! preg_match( '/"patternName":"elayne\/[^"]*"/', $content ) ) {
-          					$slug_hint = '';
-          					if ( preg_match( '/\*\s+Slug:\s+elayne\/([^\s]+)/', $content, $slug_m ) ) {
-          						$slug_hint = ' — expected: "patternName":"elayne/' . trim( $slug_m[1] ) . '" in outermost block metadata';
-          					}
+          				$slug_hint = '';
+          				if ( preg_match( '/\*\s+Slug:\s+elayne\/([^\s]+)/', $content, $slug_m ) ) {
+          					$slug_hint = ' — expected: "metadata":{"patternName":"elayne/' . trim( $slug_m[1] ) . '","name":"..."} on outermost block';
+          				}
+
+          				$first_block_json = '';
+          				if ( preg_match( '/<!--\s*wp:[a-z\/-]+\s+(\{[^\n]+\})\s*(?:\/)?-->/', $content, $fb_m ) ) {
+          					$first_block_json = $fb_m[1];
+          				}
+
+          				$has_pattern_name_anywhere   = (bool) preg_match( '/"patternName"\s*:\s*"elayne\/[^"]*"/', $content );
+          				$has_metadata_anywhere       = (bool) preg_match( '/"metadata"\s*:\s*\{[^}]*"patternName"\s*:\s*"elayne\/[^"]*"/', $content );
+          				$has_metadata_on_first_block = '' !== $first_block_json &&
+          					(bool) preg_match( '/"metadata"\s*:\s*\{[^}]*"patternName"\s*:\s*"elayne\/[^"]*"/', $first_block_json );
+
+          				if ( ! $has_pattern_name_anywhere ) {
           					$issues[] = 'Missing "patternName" in block metadata' . $slug_hint;
+          				} elseif ( $has_pattern_name_anywhere && ! $has_metadata_anywhere ) {
+          					$issues[] = '"patternName" found at root block level but must be inside "metadata":{} — WordPress ignores root-level patternName (block shows as unnamed in editor)' . $slug_hint;
+          				} elseif ( $has_metadata_anywhere && ! $has_metadata_on_first_block ) {
+          					$issues[] = '"patternName" found in inner block metadata but must be on the OUTERMOST block — WordPress only reads the name from the first block comment (outer block shows as unnamed in editor)' . $slug_hint;
           				}
           			}
 
