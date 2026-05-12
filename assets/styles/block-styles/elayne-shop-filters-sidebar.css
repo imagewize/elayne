@@ -1,0 +1,384 @@
+/* ── Elayne Shop Filters Sidebar ── */
+
+/* Base sidebar container */
+.wp-block-group.elayne-shop-filters-sidebar {
+	border-right: 1px solid var(--wp--preset--color--border-light);
+	background: var(--wp--preset--color--tertiary);
+	position: sticky;
+	top: 128px;
+	height: calc(100vh - 128px);
+	overflow-y: auto;
+	overflow-x: clip; /* clip prevents horizontal scrollbar without creating a BFC that traps position:fixed children */
+	padding: var(--wp--preset--spacing--large) var(--wp--preset--spacing--medium);
+}
+
+/* Sticky sidebar positioning */
+.elayne-shop-filters-sidebar {
+	position: sticky;
+	top: 2rem;
+	align-self: flex-start;
+}
+
+/* ── Product Filters Container ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar {
+	--wc-product-filter-price-slider: #E65C00;
+	--wc-product-filter-price-slider-handle: #E65C00;
+	--wc-product-filter-price-slider-handle-border: #E65C00;
+	--wc-product-filter-checkbox-list-option-element-border: currentColor;
+	--wc-product-filter-checkbox-list-option-element-selected: #E65C00;
+}
+
+/* Filter group sections — divider + spacing */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filters__overlay-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wp-block-woocommerce-product-filter-price,
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wp-block-woocommerce-product-filter-attribute {
+	padding-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid var(--wp--preset--color--border-light);
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wp-block-woocommerce-product-filter-attribute:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+/* ── Filter group headings ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wp-block-heading,
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar legend {
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--primary);
+	margin-top: 0;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+/* ── Price Filter Container - Remove horizontal overflow ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wp-block-woocommerce-product-filter-price {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* ── Price slider labels ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider .text input[type="text"] {
+	font-size: var(--wp--preset--font-size--x-small);
+	border: 1px solid var(--wp--preset--color--border-light);
+	border-radius: 0;
+	padding: var(--wp--preset--spacing--x-small) var(--wp--preset--spacing--small);
+	max-width: 64px;
+	width: 64px;
+	color: var(--wp--preset--color--primary);
+	background: var(--wp--preset--color--tertiary);
+	margin: 0;
+}
+
+/* Price range input container - ensure it doesn't overflow */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider .wc-block-components-price-slider__range-input-range {
+	margin-bottom: var(--wp--preset--spacing--small);
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Individual range input wrapper */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider .wc-block-components-price-slider__range-input-range__label {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--main-accent);
+	flex: 1;
+	min-width: 0; /* Prevent flex items from overflowing */
+}
+
+/* ── Price slider track and handle ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider input[type="range"] {
+	width: 100%;
+	height: 2px;
+	background: var(--wp--preset--color--base-accent);
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 14px;
+	height: 14px;
+	background: var(--wp--preset--color--orange);
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider input[type="range"]::-moz-range-thumb {
+	width: 14px;
+	height: 14px;
+	background: var(--wp--preset--color--orange);
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+}
+
+/* Price range labels */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider .wc-block-components-price-slider__range-input-range {
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider .wc-block-components-price-slider__range-input-range .wc-block-components-price-slider__range-input-range__label {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--main-accent);
+}
+
+/* ── Checkbox list ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__item {
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__text-wrapper {
+	font-size: var(--wp--preset--font-size--base);
+	color: var(--wp--preset--color--main-accent);
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__count {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--main-accent);
+	opacity: 0.65;
+}
+
+/* Checkbox styling */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__item input[type="checkbox"] {
+	width: 14px;
+	height: 14px;
+	accent-color: var(--wp--preset--color--orange);
+	cursor: pointer;
+	margin-right: var(--wp--preset--spacing--small);
+}
+
+/* ── Price amounts row — override WC 3-column grid to fit sidebar ── */
+/* WC sets grid-template-columns: 147px 0px 147px — override so both inputs share available width */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar
+.wc-block-product-filter-price-slider__content {
+	grid-template-columns: 1fr 0px 1fr !important;
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar
+.wc-block-product-filter-price-slider__left.text input,
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar
+.wc-block-product-filter-price-slider__right.text input {
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
+	box-sizing: border-box;
+}
+
+/* ── Colour swatches (chips display for leather colour filter) ── */
+/* Target both the block wrapper and the WooCommerce items list */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips,
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips__items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--small);
+}
+
+/* Override WooCommerce pill/text chip styling — render as 28×28 colour squares */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips__item {
+	width: 28px !important;
+	height: 28px !important;
+	min-width: 28px !important;
+	border-radius: 0 !important;
+	border: 2px solid transparent !important;
+	padding: 0 !important;
+	font-size: 0 !important;
+	overflow: hidden;
+	transition: border-color 0.2s;
+	cursor: pointer;
+}
+
+/* Swatch colours — store in a custom property so hover and active states can reuse it */
+button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-tan"]      { --swatch-bg: #C4956A; background: #C4956A; }
+button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-black"]    { --swatch-bg: #1A1A1A; background: #1A1A1A; }
+button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-cognac"]   { --swatch-bg: #9B4E2F; background: #9B4E2F; }
+button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-chestnut"] { --swatch-bg: #954535; background: #954535; }
+button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-navy"]     { --swatch-bg: #1B2B5E; background: #1B2B5E; }
+
+/* Preserve swatch colour on hover and when active/selected */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips__item:hover,
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips__item:is([aria-pressed="true"], [aria-checked="true"], .is-active) {
+	background: var(--swatch-bg) !important;
+}
+
+/* Active/selected swatch — orange border on top of preserved colour */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips__item:is([aria-pressed="true"], [aria-checked="true"], .is-active) {
+	border-color: var(--wp--preset--color--orange) !important;
+}
+
+/* Remove focus outline — colour + border is sufficient active indicator */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips__item:focus {
+	outline: none !important;
+}
+
+/* ── Clear filters link (injected by JS when filter params are active) ── */
+.elayne-clear-filters-btn {
+	display: block;
+	font-size: var(--wp--preset--font-size--x-small);
+	font-family: var(--wp--preset--font-family--body);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--orange);
+	text-decoration: none;
+	margin-bottom: var(--wp--preset--spacing--medium);
+	padding-bottom: var(--wp--preset--spacing--medium);
+	border-bottom: 1px solid var(--wp--preset--color--border-light);
+}
+
+.elayne-clear-filters-btn:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+/* ── Reset browser default fieldset groove border on WooCommerce filter groups ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* ── Remove WooCommerce inlaid/shadow from checkbox items ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__item,
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__item label {
+	box-shadow: none !important;
+	background: transparent !important;
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__item input[type="checkbox"] {
+	box-shadow: none !important;
+}
+
+/* ── Active filters block (shown when a filter is applied) ── */
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wp-block-woocommerce-product-filter-active {
+	padding-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid var(--wp--preset--color--border-light);
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-active__clear {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--orange);
+	text-decoration: none;
+	letter-spacing: 0.05em;
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-active__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--x-small);
+	margin-top: var(--wp--preset--spacing--x-small);
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-active__list-item button {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--main-accent);
+	background: var(--wp--preset--color--secondary);
+	border: 1px solid var(--wp--preset--color--border-light);
+	padding: 2px 8px;
+	cursor: pointer;
+}
+
+.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-active__list-item button:hover {
+	border-color: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--orange);
+}
+
+/* ── Hide mobile drawer buttons at desktop ── */
+@media (min-width: 769px) {
+	.elayne-filter-close-btn,
+	.elayne-filter-apply-btn {
+		display: none;
+	}
+}
+
+/* ── Mobile: force WooCommerce overlay inline inside our sidebar drawer.
+   WooCommerce renders filters as a position:fixed modal on mobile, but our sidebar
+   is position:fixed with overflow-y:auto which traps fixed children.
+   Override to position:static so filters render inline — the sidebar is the drawer. ── */
+@media (max-width: 768px) {
+	.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filters__open-overlay {
+		display: none !important;
+	}
+
+	.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filters__overlay {
+		position: static !important;
+		display: block !important;
+		background: transparent !important;
+		z-index: auto !important;
+		inset: auto !important;
+	}
+
+	.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filters__overlay-wrapper,
+	.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filters__overlay-dialog {
+		position: static !important;
+		transform: none !important;
+		height: auto !important;
+		width: auto !important;
+		max-height: none !important;
+		overflow: visible !important;
+		background: transparent !important;
+	}
+
+	.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filters__overlay-content {
+		display: block !important;
+		overflow: visible !important;
+		padding: 0 !important;
+	}
+
+	.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filters__overlay-header,
+	.wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filters__overlay-footer {
+		display: none !important;
+	}
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet <= 1024px */
+@media (max-width: 1024px) {
+	.wp-block-group.elayne-shop-filters-sidebar {
+		width: 200px;
+		padding: var(--wp--preset--spacing--large) var(--wp--preset--spacing--medium);
+	}
+}
+
+/* Mobile <= 768px — sidebar becomes a slide-in drawer.
+   Use left instead of transform so position:fixed children (WooCommerce overlay)
+   remain relative to the viewport, not this container. */
+@media (max-width: 768px) {
+	.wp-block-group.elayne-shop-filters-sidebar {
+		position: fixed !important;
+		top: 0 !important;
+		left: calc(-1 * min(300px, 85vw));
+		bottom: 0;
+		width: min(300px, 85vw) !important;
+		height: 100% !important;
+		z-index: 120;
+		overflow-y: auto;
+		transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		background: var(--wp--preset--color--tertiary) !important;
+		border-right: 1px solid var(--wp--preset--color--border-light);
+		padding: 3.5rem var(--wp--preset--spacing--medium) var(--wp--preset--spacing--large) !important;
+		box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+	}
+
+	.wp-block-group.elayne-shop-filters-sidebar.mobile-open {
+		left: 0;
+	}
+}

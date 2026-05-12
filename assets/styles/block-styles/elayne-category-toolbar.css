@@ -1,0 +1,245 @@
+/* Category Toolbar Block Style */
+
+/* Toolbar base styling */
+.wp-block-group.is-style-elayne-category-toolbar {
+	background-color: var(--wp--preset--color--tertiary);
+	border-bottom: 1px solid var(--wp--preset--color--border-light);
+	position: sticky;
+	top: 72px;
+	z-index: 50;
+}
+
+.wp-block-group.is-style-elayne-category-toolbar > .wp-block-group {
+	padding-top: var(--wp--preset--spacing--medium);
+	padding-right: var(--wp--preset--spacing--xx-large);
+	padding-bottom: var(--wp--preset--spacing--medium);
+	padding-left: var(--wp--preset--spacing--xx-large);
+}
+
+/* Toolbar inner - flex layout */
+.wp-block-group.elayne-toolbar-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	gap: var(--wp--preset--spacing--medium);
+}
+
+/* Toolbar left */
+.wp-block-group.elayne-toolbar-left {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--medium);
+	flex-wrap: nowrap;
+}
+
+/* Toolbar right */
+.wp-block-group.elayne-toolbar-right {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--medium);
+	flex-wrap: nowrap;
+}
+
+/* Filter button */
+.wp-block-button.elayne-filter-btn {
+	margin: 0;
+}
+
+.wp-block-button.elayne-filter-btn .wp-block-button__link {
+	font-size: var(--wp--preset--font-size--x-small);
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	border: 1px solid var(--wp--preset--color--border-light);
+	background-color: var(--wp--preset--color--tertiary);
+	color: var(--wp--preset--color--primary);
+	padding: var(--wp--preset--spacing--small) var(--wp--preset--spacing--medium);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.wp-block-button.elayne-filter-btn .wp-block-button__link:hover {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	border-color: var(--wp--preset--color--primary);
+}
+
+/* Active filter button state */
+.wp-block-button.elayne-filter-btn.active .wp-block-button__link {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	border-color: var(--wp--preset--color--primary);
+}
+
+/* Active filters container */
+.wp-block-group.elayne-active-filters {
+	display: flex;
+	gap: var(--wp--preset--spacing--small);
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+/* Clear filters link injected into toolbar (desktop only) */
+.elayne-clear-filters-toolbar-btn {
+	font-size: var(--wp--preset--font-size--x-small);
+	font-family: var(--wp--preset--font-family--body);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--orange);
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.elayne-clear-filters-toolbar-btn:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+/* Result count */
+.elayne-result-count {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--main-accent);
+	margin: 0;
+}
+
+/* Sort select - restyle WooCommerce catalog sorting */
+.wc-block-catalog-sorting.elayne-sort-select {
+	margin: 0;
+}
+
+.wc-block-catalog-sorting.elayne-sort-select select {
+	font-family: var(--wp--preset--font-family--body);
+	font-size: var(--wp--preset--font-size--x-small);
+	letter-spacing: 0.1em;
+	border: 1px solid var(--wp--preset--color--border-light);
+	padding: var(--wp--preset--spacing--small) var(--wp--preset--spacing--medium) var(--wp--preset--spacing--small) var(--wp--preset--spacing--small);
+	background: var(--wp--preset--color--tertiary);
+	color: var(--wp--preset--color--primary);
+	cursor: pointer;
+	outline: none;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231A1A1A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.6rem center;
+}
+
+.wc-block-catalog-sorting.elayne-sort-select select:hover,
+.wc-block-catalog-sorting.elayne-sort-select select:focus {
+	border-color: var(--wp--preset--color--primary);
+}
+
+/* ===== MOBILE FILTER DRAWER ELEMENTS (injected by JS) ===== */
+
+.elayne-filter-backdrop {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(10, 8, 5, 0.5);
+	z-index: 119;
+	opacity: 0;
+	transition: opacity 0.35s ease;
+}
+
+.elayne-filter-backdrop.is-visible {
+	display: block;
+	opacity: 1;
+}
+
+.elayne-filter-close-btn {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	width: 40px;
+	height: 40px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.3rem;
+	color: var(--wp--preset--color--main-accent);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	line-height: 1;
+}
+
+.elayne-filter-close-btn:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+.elayne-filter-apply-btn {
+	display: block;
+	width: 100%;
+	margin-top: var(--wp--preset--spacing--large);
+	padding: var(--wp--preset--spacing--medium);
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	border: none;
+	font-family: var(--wp--preset--font-family--body);
+	font-size: var(--wp--preset--font-size--x-small);
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.elayne-filter-apply-btn:hover {
+	background: var(--wp--preset--color--orange);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Desktop >= 769px: sidebar is always visible, hide the mobile filter button */
+@media (min-width: 769px) {
+	.wp-block-button.elayne-filter-btn {
+		display: none;
+	}
+}
+
+/* Tablet <= 1024px */
+@media (max-width: 1024px) {
+	.wp-block-group.is-style-elayne-category-toolbar > .wp-block-group {
+		padding-left: var(--wp--preset--spacing--xx-large);
+		padding-right: var(--wp--preset--spacing--xx-large);
+	}
+
+	.wp-block-group.elayne-toolbar-inner {
+		gap: var(--wp--preset--spacing--medium);
+	}
+}
+
+/* Mobile <= 768px */
+@media (max-width: 768px) {
+	.wp-block-group.is-style-elayne-category-toolbar {
+		top: 60px;
+	}
+
+	.wp-block-group.is-style-elayne-category-toolbar > .wp-block-group {
+		padding-top: var(--wp--preset--spacing--small);
+		padding-bottom: var(--wp--preset--spacing--small);
+		padding-left: var(--wp--preset--spacing--medium);
+		padding-right: var(--wp--preset--spacing--medium);
+	}
+
+	.wp-block-group.elayne-toolbar-inner {
+		flex-wrap: wrap;
+		gap: var(--wp--preset--spacing--small);
+	}
+
+	/* Hide result count on mobile */
+	.elayne-result-count {
+		display: none;
+	}
+
+	/* Hide active filters and toolbar clear button on mobile */
+	.wp-block-group.elayne-active-filters,
+	.elayne-clear-filters-toolbar-btn {
+		display: none;
+	}
+
+	.wp-block-button.elayne-filter-btn .wp-block-button__link {
+		padding: var(--wp--preset--spacing--small) var(--wp--preset--spacing--medium);
+		font-size: var(--wp--preset--font-size--x-small);
+	}
+}

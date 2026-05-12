@@ -1,0 +1,38 @@
+/**
+ * Block Style: Elayne Woo Newsletter Search
+ * Applied to core/search block via elayne-woo-newsletter-search className
+ * Custom styling for newsletter signup form in woo-newsletter pattern.
+ */
+
+.elayne-woo-newsletter-search {
+	border-radius: 0;
+	padding: 1rem;
+}
+
+.elayne-woo-newsletter-search .wp-block-search__inside-wrapper {
+	background: transparent !important;
+}
+
+.elayne-woo-newsletter-search .wp-block-search__input {
+	font-size: 0.85rem;
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(200, 169, 110, 0.3);
+	color: var(--wp--preset--color--base);
+	border-right: none;
+}
+
+.elayne-woo-newsletter-search .wp-block-search__input::placeholder {
+	color: rgba(253, 251, 247, 0.35);
+}
+
+.elayne-woo-newsletter-search .wp-block-search__button {
+	border-radius: 0;
+	background: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--tertiary);
+	border: 1px solid var(--wp--preset--color--orange);
+	font-size: 0.72rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	padding: 1rem 2rem;
+	white-space: nowrap;
+}

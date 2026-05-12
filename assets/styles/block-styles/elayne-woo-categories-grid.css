@@ -1,0 +1,62 @@
+/* Reset is-layout-flow margin injection on grid children */
+.wp-block-group.is-style-elayne-woo-categories-grid.is-layout-flow > * {
+	margin-block-start: 0 !important;
+}
+
+/* Desktop: 3-column CSS grid */
+.wp-block-group.is-style-elayne-woo-categories-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	grid-template-rows: auto auto;
+	gap: 1.5px;
+}
+
+.wp-block-group.is-style-elayne-woo-categories-grid > .wp-block-cover:first-child {
+	grid-row: span 2;
+	min-height: 680px !important;
+}
+
+.wp-block-group.is-style-elayne-woo-categories-grid > .wp-block-cover:not(:first-child) {
+	min-height: 330px !important;
+}
+
+/* Tablet ≤1024px */
+@media (max-width: 1024px) {
+	.wp-block-group.is-style-elayne-woo-categories-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.wp-block-group.is-style-elayne-woo-categories-grid > .wp-block-cover:first-child {
+		grid-row: auto;
+		grid-column: span 2;
+		min-height: 420px !important;
+	}
+
+	.wp-block-group.is-style-elayne-woo-categories-grid > .wp-block-cover:not(:first-child) {
+		min-height: 260px !important;
+	}
+}
+
+/* Mobile ≤767px */
+@media (max-width: 767px) {
+	.wp-block-group.is-style-elayne-woo-categories-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-group.is-style-elayne-woo-categories-grid > .wp-block-cover:first-child {
+		grid-column: auto;
+		min-height: 340px !important;
+	}
+
+	.wp-block-group.is-style-elayne-woo-categories-grid > .wp-block-cover:not(:first-child) {
+		min-height: 210px !important;
+	}
+
+	.wp-block-group.is-style-elayne-woo-categories-grid > .wp-block-cover:first-child .wp-block-heading {
+		font-size: 2rem !important;
+	}
+
+	.wp-block-group.is-style-elayne-woo-categories-grid > .wp-block-cover:not(:first-child) .wp-block-heading {
+		font-size: 1.45rem !important;
+	}
+}
