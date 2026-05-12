@@ -231,6 +231,7 @@ ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
 | **Cover block minHeight** | NEVER use `style.dimensions.minHeight` without root `minHeight` — causes validation failure |
 | **overflow:hidden** | NEVER use as inline style on groups — use className with CSS instead |
 | **opacity** | NEVER use as inline style — use className with CSS instead |
+| **Custom block types** | NEVER use `register_block_type()` in a theme — WP.org plugin-territory violation. Use the `render_block` filter on `core/group` with a specific `className` instead (same pattern as the ticker). |
 
 > **Full details with code examples**: `docs/elayne/PATTERN-GUIDELINES.md`
 

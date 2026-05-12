@@ -195,6 +195,7 @@ WooCommerce core plugin includes official patterns in `wp-content/plugins/woocom
 | **Hardcoded font-size** | NEVER `font-size:1.5rem` — use `"fontSize":"large"` semantic preset |
 | **Button font-size** | `wp:button` does NOT support root-level `fontSize` — use `"style":{"typography":{"fontSize":"var:preset\|font-size\|base"}}` → generates `has-custom-font-size` + inline `font-size` style. Root-level `"fontSize":"base"` causes block validation errors on buttons. |
 | **Spacer blocks** | NEVER `<!-- wp:spacer -->` — use parent `blockGap` instead |
+| **Custom block types** | NEVER use `register_block_type()` in a theme — WP.org plugin-territory violation. Use the `render_block` filter on `core/group` blocks with a specific `className` instead (same pattern as the ticker). |
 
 > Full details with code examples: `docs/elayne/PATTERN-GUIDELINES.md`
 
