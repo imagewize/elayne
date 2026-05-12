@@ -598,69 +598,66 @@ function elayne_register_woocommerce_block_styles() {
 add_action( 'init', __NAMESPACE__ . '\elayne_register_woocommerce_block_styles' );
 
 /**
- * Register dynamic server-side blocks for the product accordion tabs.
+ * Render product attributes spec table inside elayne-product-attributes-table group blocks.
+ *
+ * Uses render_block filter instead of register_block_type() — themes must not register
+ * custom block types (plugin territory per WP.org theme guidelines). The same dynamic
+ * rendering is achieved by intercepting core/group blocks with this specific className.
  */
-function elayne_register_product_dynamic_blocks(): void {
-	if ( ! function_exists( 'register_block_type' ) ) {
-		return;
+function elayne_render_product_attributes_table( string $block_content, array $block, \WP_Block $instance ): string {
+	if ( 'core/group' !== $block['blockName'] || empty( $block['attrs']['className'] ) || false === strpos( $block['attrs']['className'], 'elayne-product-attributes-table' ) ) {
+		return $block_content;
 	}
-
-	register_block_type(
-		'elayne/product-attributes-table',
-		array(
-			'uses_context'    => array( 'postId', 'postType' ),
-			'render_callback' => function ( array $_attrs, string $_content, \WP_Block $block ): string {
-				if ( ! function_exists( 'wc_get_product' ) ) {
-					return '';
-				}
-				$product_id = $block->context['postId'] ?? get_the_ID();
-				$product    = wc_get_product( $product_id );
-				if ( ! $product ) {
-					return '';
-				}
-				$product_attributes = $product->get_attributes();
-				$rows               = '';
-				foreach ( $product_attributes as $attribute ) {
-					if ( ! $attribute->get_visible() ) {
-						continue;
-					}
-					$name = wc_attribute_label( $attribute->get_name() );
-					if ( $attribute->is_taxonomy() ) {
-						$terms  = wc_get_product_terms( $product_id, $attribute->get_name(), array( 'fields' => 'names' ) );
-						$values = implode( ', ', $terms );
-					} else {
-						$values = implode( ', ', $attribute->get_options() );
-					}
-					if ( ! $values ) {
-						continue;
-					}
-					$rows .= '<tr><td>' . esc_html( $name ) . '</td><td>' . esc_html( $values ) . '</td></tr>';
-				}
-				if ( ! $rows ) {
-					return '';
-				}
-				return '<figure class="wp-block-table elayne-spec-table" style="margin-top:0;margin-bottom:0"><table><tbody>' . $rows . '</tbody></table></figure>';
-			},
-		)
-	);
-
-	register_block_type(
-		'elayne/shipping-returns-content',
-		array(
-			'render_callback' => function (): string {
-				$fallback = '<p class="has-main-accent-color has-text-color" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;line-height:1.8">'
-					. esc_html__( 'Orders dispatched within 3–5 business days. Complimentary shipping on orders over $250. Standard items may be returned within 30 days in original condition.', 'elayne' )
-					. '</p>';
-				$page = get_page_by_path( 'shipping-returns' );
-				if ( ! $page || 'publish' !== $page->post_status ) {
-					return $fallback;
-				}
-				return apply_filters( 'the_content', $page->post_content );
-			},
-		)
-	);
+	if ( ! function_exists( 'wc_get_product' ) ) {
+		return $block_content;
+	}
+	$product_id = $instance->context['postId'] ?? get_the_ID();
+	$product    = wc_get_product( $product_id );
+	if ( ! $product ) {
+		return $block_content;
+	}
+	$product_attributes = $product->get_attributes();
+	$rows               = '';
+	foreach ( $product_attributes as $attribute ) {
+		if ( ! $attribute->get_visible() ) {
+			continue;
+		}
+		$name = wc_attribute_label( $attribute->get_name() );
+		if ( $attribute->is_taxonomy() ) {
+			$terms  = wc_get_product_terms( $product_id, $attribute->get_name(), array( 'fields' => 'names' ) );
+			$values = implode( ', ', $terms );
+		} else {
+			$values = implode( ', ', $attribute->get_options() );
+		}
+		if ( ! $values ) {
+			continue;
+		}
+		$rows .= '<tr><td>' . esc_html( $name ) . '</td><td>' . esc_html( $values ) . '</td></tr>';
+	}
+	if ( ! $rows ) {
+		return $block_content;
+	}
+	return '<figure class="wp-block-table elayne-spec-table" style="margin-top:0;margin-bottom:0"><table><tbody>' . $rows . '</tbody></table></figure>';
 }
-add_action( 'init', __NAMESPACE__ . '\elayne_register_product_dynamic_blocks' );
+add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_product_attributes_table', 10, 3 );
+
+/**
+ * Render shipping & returns content inside elayne-shipping-returns-content group blocks.
+ */
+function elayne_render_shipping_returns_content( string $block_content, array $block ): string {
+	if ( 'core/group' !== $block['blockName'] || empty( $block['attrs']['className'] ) || false === strpos( $block['attrs']['className'], 'elayne-shipping-returns-content' ) ) {
+		return $block_content;
+	}
+	$fallback = '<p class="has-main-accent-color has-text-color" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;line-height:1.8">'
+		. esc_html__( 'Orders dispatched within 3–5 business days. Complimentary shipping on orders over $250. Standard items may be returned within 30 days in original condition.', 'elayne' )
+		. '</p>';
+	$page = get_page_by_path( 'shipping-returns' );
+	if ( ! $page || 'publish' !== $page->post_status ) {
+		return $fallback;
+	}
+	return apply_filters( 'the_content', $page->post_content );
+}
+add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_shipping_returns_content', 10, 2 );
 
 /**
  * Include block extensions.

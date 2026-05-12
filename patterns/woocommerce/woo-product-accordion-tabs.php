@@ -37,7 +37,7 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"elayne-accordion-content","style":{"spacing":{"padding":{"top":"0","bottom":"var:preset|spacing|small"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group elayne-accordion-content" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--small)"><!-- wp:elayne/product-attributes-table /--></div>
+<div class="wp-block-group elayne-accordion-content" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--small)"><!-- wp:group {"className":"elayne-product-attributes-table","layout":{"type":"default"}} --><div class="wp-block-group elayne-product-attributes-table"></div><!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
@@ -51,7 +51,7 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"elayne-accordion-content","style":{"spacing":{"padding":{"top":"0","bottom":"var:preset|spacing|small"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group elayne-accordion-content" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--small)"><!-- wp:elayne/shipping-returns-content /--></div>
+<div class="wp-block-group elayne-accordion-content" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--small)"><!-- wp:group {"className":"elayne-shipping-returns-content","layout":{"type":"default"}} --><div class="wp-block-group elayne-shipping-returns-content"></div><!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
