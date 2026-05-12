@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.9.1
+Stable tag: 4.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,29 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.0.0 - 05/12/26 =
+* ADDED: WooCommerce store subsite integration at /store/ with shop, category archive, and single product templates.
+* ADDED: Three-tier WooCommerce strategy — plugin patterns used as-is (exempt from compliance), CSS overrides, custom theme patterns as last resort.
+* ADDED: Mobile filter drawer JS (category-filter-drawer.js) — slide-in sidebar, backdrop, Apply button, dynamic "Clear filters" link.
+* ADDED: Product page JS (woocommerce-product-page.js) — gallery switcher, colour swatches, style picker, engraving toggle, accordion tabs, wishlist button.
+* ADDED: elayne-avatar-circle block style — 44×44px circular avatar container for testimonial patterns.
+* ADDED: elayne-category-hero block style — two-column hero with charcoal grid-pattern background and companion meta bar.
+* ADDED: Jost variable font (regular + italic WOFF2) for store pages.
+* ADDED: Pattern validation upgraded to three-pass — Pass 1 Gutenberg structural (wp pattern validate), Pass 2 pt-cli compliance, Pass 3 HTML template checker for .html files.
+* ADDED: wp_kses_post() translation helper documented for inline-HTML text strings.
+* CHANGED: Removed front-page.html template — caused content override on multisite subsites; homepage set via WP page editor instead.
+* CHANGED: Vertical workflow updated — scaffold via pt-cli Options A/B/C; never write block JSON from scratch.
+* CHANGED: Spacing and font-size scale reference tables expanded with exact clamp/max values and pill/badge padding rules.
+* FIXED: Block validation — whitespace between <div> and wp block comments is strictly forbidden.
+* FIXED: Block validation — wp:button does not support root-level fontSize; must use style.typography.fontSize.
+* FIXED: Block validation — theme-bundled SVGs in wp:image must not have width/height on <img> (no media ID).
+* FIXED: blockGap inline gap rules — constrained/default groups omit inline gap; flex groups require it; columns blocks never have it.
+* FIXED: metadata.name must only appear on the outermost block of a pattern file.
+* FIXED: fontSize/fontFamily as root-level attributes generate CSS classes, not inline styles — HTML must match.
+* FIXED: Unicode escape sequences — PHP single-quoted strings do not process \uXXXX; use actual UTF-8 characters.
+* FIXED: WooCommerce taxQuery must be [] (array) not {} (object); product-collection must never use standalone query-pagination.
+* TECHNICAL: Vibe CLI model updated to mistral-medium-3.5 with thinking:high; bash allowlist sorted alphabetically.
 
 = 3.9.1 - 04/24/26 =
 * ADDED: Nail Salon Why Us pattern - Real CC0 photo (why-nail-salon.webp, StockSnap.io) replacing placeholder text in the image column.
@@ -1365,6 +1388,15 @@ The following icons were created using AI tools (ChatGPT) for the plumbing indus
 - **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 - **Attribution:** Not required (CC0)
 - **Description:** Mountain landscape at sunset/sunrise hero illustration with stars, moon, and pine trees
+
+## Store Vertical Images (CC0 Public Domain)
+
+**patterns/images/store/leather-bag.webp**
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/leather-bag-4JYA4A4D64)
+- **Photographer:** [Snufkin](https://stocksnap.io/author/34675)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Leather bag on wooden surface — hero cover image for the Store vertical (woo-hero pattern)
 
 ---
 

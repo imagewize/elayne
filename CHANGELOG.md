@@ -7,6 +7,93 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.0] - 2026-05-12
+
+### Added
+
+**WooCommerce Store Integration:**
+- Full WooCommerce subsite support at `/store/` with shop, category archive, and single product page templates
+- Three-tier implementation strategy: use plugin patterns as-is (Tier 1), style with CSS (Tier 2), custom theme patterns only if needed (Tier 3)
+- WooCommerce plugin patterns explicitly exempted from Elayne compliance rules
+- Verified filter block taxonomy IDs documented (Leather Colour = 1, Style = 2)
+
+**Mobile Filter Drawer (`category-filter-drawer.js`):**
+- Touch-friendly slide-in sidebar drawer for shop filters on mobile
+- Backdrop overlay, close button, and Apply button injected dynamically
+- "Clear filters" link auto-injected when active `filter_*` URL params are detected
+- Escape key and backdrop click both dismiss the drawer
+- Accessibility: `aria-expanded` toggled on filter trigger button
+
+**Product Page Interactivity (`woocommerce-product-page.js`):**
+- Custom gallery thumbnail switcher synced across desktop and mobile gallery sections
+- Colour swatch selector with active-state tracking and selected label update
+- Style option picker with unavailable-state exclusion
+- Engraving option toggle (selected/deselected)
+- Accordion tabs: open/close with `+`/`−` icon and single-open constraint
+- Wishlist button toggle
+
+**New Block Styles:**
+- `elayne-avatar-circle` — 44 × 44 px circular container for testimonial avatars
+- `elayne-category-hero` — full two-column hero with charcoal grid-pattern background, breadcrumb, description, and visual area; includes companion meta bar style
+
+**New Fonts:**
+- Jost variable font (regular + italic WOFF2) added to `assets/fonts/store/` for store pages
+
+**Pattern Validation — Three-Pass Workflow:**
+- Pass 1: Gutenberg structural validator (`wp pattern validate --fix`) via Trellis VM
+- Pass 2: pt-cli compliance checker (`composer check` / `pt-cli check`) on host
+- Pass 3: HTML template checker (`pt-cli check:templates`) for `.html` template and part files; catches WooCommerce filter block wrapper drift, `taxQuery:{}` vs `[]`, missing `"theme"` on `wp:template-part`
+
+**New Translation Helper:**
+- `wp_kses_post( __( '...', 'elayne' ) )` documented for text containing inline HTML (`<strong>`, `<br>`, `<a>`)
+
+### Changed
+
+**Template: `front-page.html` Removed:**
+- Removed `front-page.html` template — it caused content override issues on other multisite subsites
+- Homepage is now assigned via the WordPress page editor; `home.html` covers blog index and static homepage
+
+**Vertical Workflow — pt-cli Scaffold Commands:**
+- Three scaffold options documented: Option A (layout-based via `composer layout:create`), Option B (WooCommerce template via `composer pattern:create`), Option C (shell-only editor-first)
+- Entry point is always pt-cli scaffold — never write block JSON from scratch
+- Read validation-guard snippets from `vendor/imagewize/pt-cli/snippets/` before editing cover, columns, button, or heading blocks
+
+**Spacing & Font Scale Documentation:**
+- Exact clamp values for all spacing presets (`2-x-small` through `x-large`) added to reference tables
+- Exact max values for all font-size presets (`x-small` through `xx-large`) added
+- Warning: `xx-small` does NOT exist — use `2-x-small` or `x-small`
+- Pill/badge padding rule: always `x-small` (vertical) + `small` (horizontal); never `medium`
+
+### Fixed
+
+**Block Validation Rules (Critical):**
+- Whitespace-strict rule: NEVER add tabs, newlines, or spaces between an opening/closing `<div>` and adjacent `<!-- wp:... -->` comments — causes block serialization mismatch
+- Button `fontSize`: `wp:button` does NOT support root-level `fontSize` — must use `"style":{"typography":{"fontSize":"var:preset|font-size|base"}}`
+- SVG images: NEVER add `width`/`height` attributes to `<img>` inside `wp:image` for theme-bundled SVGs (no media ID means WP cannot validate dimensions)
+- `blockGap` inline gap behavior: `constrained`/`default` groups must NOT have inline `gap`; flex groups must have it; columns blocks never have inline gap
+- `metadata.name` should only appear on the outermost (root) block of a pattern file
+- `fontSize`/`fontFamily` as root-level block attributes generate CSS classes, not inline styles
+
+**Unicode in PHP Strings:**
+- Documented that PHP single-quoted strings do NOT process `\u` escapes — always use actual UTF-8 characters or double-quoted strings with `"\u{XXXX}"`
+
+**WooCommerce Pattern Pitfalls:**
+- `product-title` inside `product-template` must use `post-title` with `__woocommerceNamespace`
+- Never add `__woocommerceNamespace` to native WC blocks (product-image, product-price, etc.)
+- `product-collection` handles its own pagination — never use standalone `query-pagination`
+- `taxQuery` must be `[]` (array), not `{}` (object)
+
+### Technical
+
+**Vibe CLI Config:**
+- Switched active model from `devstral-2` to `mistral-medium-3.5` with `thinking: "high"`
+- Updated temperature (0.2 → 1.0) and pricing to match new model
+- Bash tool allowlist sorted alphabetically; added `file`, `find` entries
+
+**Documentation:**
+- `CLAUDE.md`, `AGENTS.md`, and `.vibe/prompts/vibe.md` all updated with WooCommerce subsite URLs, filter block IDs, three-tier strategy, three-pass validation workflow, and critical block rules
+- CI note: GitHub Actions runs Pass 2 automatically on every PR; Passes 1 and 3 are local-only
+
 ## [3.9.1] - 2026-04-24
 
 ### Added
