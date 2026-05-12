@@ -99,11 +99,14 @@ function elayne_enqueue_product_page_scripts() {
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_product_page_scripts' );
 
+/**
+ * Enqueue category filter drawer script on WooCommerce taxonomy archives.
+ */
 function elayne_enqueue_category_filter_drawer() {
 	if ( ! class_exists( 'WooCommerce' ) ) {
 		return;
 	}
-	// Load on product category archives, product tag archives, and any product taxonomy
+	// Load on product category archives, product tag archives, and any product taxonomy.
 	if ( is_product_category() || is_product_tag() || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) {
 		wp_enqueue_script(
 			'elayne-category-filter-drawer',
@@ -604,8 +607,8 @@ function elayne_register_product_dynamic_blocks(): void {
 
 	register_block_type(
 		'elayne/product-attributes-table',
-		[
-			'uses_context'    => [ 'postId', 'postType' ],
+		array(
+			'uses_context'    => array( 'postId', 'postType' ),
 			'render_callback' => function ( array $_attrs, string $_content, \WP_Block $block ): string {
 				if ( ! function_exists( 'wc_get_product' ) ) {
 					return '';
@@ -623,7 +626,7 @@ function elayne_register_product_dynamic_blocks(): void {
 					}
 					$name = wc_attribute_label( $attribute->get_name() );
 					if ( $attribute->is_taxonomy() ) {
-						$terms  = wc_get_product_terms( $product_id, $attribute->get_name(), [ 'fields' => 'names' ] );
+						$terms  = wc_get_product_terms( $product_id, $attribute->get_name(), array( 'fields' => 'names' ) );
 						$values = implode( ', ', $terms );
 					} else {
 						$values = implode( ', ', $attribute->get_options() );
@@ -638,12 +641,12 @@ function elayne_register_product_dynamic_blocks(): void {
 				}
 				return '<figure class="wp-block-table elayne-spec-table" style="margin-top:0;margin-bottom:0"><table><tbody>' . $rows . '</tbody></table></figure>';
 			},
-		]
+		)
 	);
 
 	register_block_type(
 		'elayne/shipping-returns-content',
-		[
+		array(
 			'render_callback' => function (): string {
 				$fallback = '<p class="has-main-accent-color has-text-color" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;line-height:1.8">'
 					. esc_html__( 'Orders dispatched within 3–5 business days. Complimentary shipping on orders over $250. Standard items may be returned within 30 days in original condition.', 'elayne' )
@@ -654,7 +657,7 @@ function elayne_register_product_dynamic_blocks(): void {
 				}
 				return apply_filters( 'the_content', $page->post_content );
 			},
-		]
+		)
 	);
 }
 add_action( 'init', __NAMESPACE__ . '\elayne_register_product_dynamic_blocks' );
