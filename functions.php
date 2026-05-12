@@ -604,9 +604,9 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_woocommerce_block_styles' 
  * custom block types (plugin territory per WP.org theme guidelines). The same dynamic
  * rendering is achieved by intercepting core/group blocks with this specific className.
  *
- * @param string   $block_content The block content.
- * @param array    $block         The block attributes.
- * @param \WP_Block $instance     The block instance.
+ * @param string    $block_content The block content.
+ * @param array     $block         The block attributes.
+ * @param \WP_Block $instance      The block instance.
  * @return string Modified block content with product attributes table.
  */
 function elayne_render_product_attributes_table( string $block_content, array $block, \WP_Block $instance ): string {
@@ -660,7 +660,7 @@ function elayne_render_shipping_returns_content( string $block_content, array $b
 	$fallback = '<p class="has-main-accent-color has-text-color" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;line-height:1.8">'
 		. esc_html__( 'Orders dispatched within 3–5 business days. Complimentary shipping on orders over $250. Standard items may be returned within 30 days in original condition.', 'elayne' )
 		. '</p>';
-	$page = get_page_by_path( 'shipping-returns' );
+	$page     = get_page_by_path( 'shipping-returns' );
 	if ( ! $page || 'publish' !== $page->post_status ) {
 		return $fallback;
 	}
