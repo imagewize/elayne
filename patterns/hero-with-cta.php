@@ -8,7 +8,7 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/hero","elayne/call-to-action"],"patternName":"elayne/hero-with-cta","name":"Hero Section with Call to Action"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
@@ -23,15 +23,13 @@
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"primary","textColor":"base","fontSize":"base"} -->
-			<div class="wp-block-button has-custom-font-size has-base-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button"><?php esc_html_e( 'Get Started', 'elayne' ); ?></a></div>
-			<!-- /wp:button -->
+			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Get Started', 'elayne' ); ?></a></div>
+<!-- /wp:button -->
 
-			<!-- wp:button {"backgroundColor":"base","textColor":"primary","className":"is-style-outline","style":{"border":{"width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"fontSize":"base","borderColor":"primary"} -->
-			<div class="wp-block-button has-custom-font-size has-base-font-size is-style-outline"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-link-color has-border-color has-primary-border-color wp-element-button" style="border-width:2px"><?php esc_html_e( 'Learn More', 'elayne' ); ?></a></div>
-			<!-- /wp:button -->
-			</div>
+<!-- wp:button {"backgroundColor":"base","textColor":"primary","className":"is-style-outline","style":{"border":{"width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"typography":{"fontSize":"var:preset|font-size|base"}},"borderColor":"primary"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-link-color has-border-color has-primary-border-color has-custom-font-size wp-element-button" style="border-width:2px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Learn More', 'elayne' ); ?></a></div>
+<!-- /wp:button --></div>
 			<!-- /wp:buttons -->
 		</div>
 		<!-- /wp:group -->

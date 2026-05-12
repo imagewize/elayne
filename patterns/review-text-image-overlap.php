@@ -11,7 +11,7 @@
  */
 ?>
 
-<!-- wp:columns {"align":"wide","className":"is-style-overlap-columns-reversed","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"},"blockGap":{"top":"0","left":"0"}}}} -->
+<!-- wp:columns {"metadata":{"categories":["elayne/testimonials","elayne/spa"],"patternName":"elayne/review-text-image-overlap","name":"Overlapping Review"},"align":"wide","className":"is-style-overlap-columns-reversed","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"},"blockGap":{"top":"0","left":"0"}}}} -->
 <div class="wp-block-columns alignwide is-style-overlap-columns-reversed" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
   <!-- wp:column {"width":"50%","className":"overlap-column"} -->
   <div class="wp-block-column overlap-column" style="flex-basis:50%">

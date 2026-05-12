@@ -15,8 +15,8 @@
 <h1 class="wp-block-heading has-base-color has-text-color has-open-sans-font-family" style="font-size:clamp(2rem, 5vw, 3.5rem);font-weight:700;letter-spacing:-0.5px;line-height:1.2;text-transform:uppercase"><?php esc_html_e( 'Experienced Legal Counsel You Can Trust', 'elayne' ); ?></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.165rem","lineHeight":"1.8","fontWeight":"300"}},"textColor":"base","fontFamily":"open-sans"} -->
-<p class="has-base-color has-text-color has-open-sans-font-family" style="font-size:1.165rem;font-weight:300;line-height:1.8"><?php esc_html_e( 'Sterling & Associates is a full-service law firm dedicated to protecting your interests and advancing your goals. With over 30 years of combined experience, our team of skilled attorneys provides comprehensive legal solutions across corporate law, litigation, real estate, and family matters. We combine deep legal expertise with a personalized approach, ensuring every client receives the attention and strategic counsel they deserve. Let us guide you through complex legal challenges with confidence and clarity.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.8","fontWeight":"300"}},"textColor":"base","fontFamily":"open-sans","fontSize":"base"} -->
+<p class="has-base-color has-text-color has-open-sans-font-family has-base-font-size" style="font-weight:300;line-height:1.8"><?php esc_html_e( 'Sterling & Associates is a full-service law firm dedicated to protecting your interests and advancing your goals. With over 30 years of combined experience, our team of skilled attorneys provides comprehensive legal solutions across corporate law, litigation, real estate, and family matters. We combine deep legal expertise with a personalized approach, ensuring every client receives the attention and strategic counsel they deserve. Let us guide you through complex legal challenges with confidence and clarity.', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div></div>

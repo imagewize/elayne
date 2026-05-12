@@ -69,8 +69,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
-<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Reserve Now', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}},"typography":{"fontSize":"var:preset|font-size|small"}},"fontFamily":"body"} -->
+<div class="wp-block-button has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium);font-size:var(--wp--preset--font-size--small)"><?php esc_html_e( 'Reserve Now', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -119,8 +119,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
-<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Book Table', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}},"typography":{"fontSize":"var:preset|font-size|small"}},"fontFamily":"body"} -->
+<div class="wp-block-button has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium);font-size:var(--wp--preset--font-size--small)"><?php esc_html_e( 'Book Table', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -169,8 +169,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-small-font-size has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","fontFamily":"body"} -->
-<div class="wp-block-button has-small-font-size has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium)"><?php esc_html_e( 'Reserve Seat', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-body-font-family","style":{"border":{"radius":"var:preset|border-radius|sm"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}},"typography":{"fontSize":"var:preset|font-size|small"}},"fontFamily":"body"} -->
+<div class="wp-block-button has-body-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-body-font-family has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);padding-top:var(--wp--preset--spacing--x-small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--medium);font-size:var(--wp--preset--font-size--small)"><?php esc_html_e( 'Reserve Seat', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

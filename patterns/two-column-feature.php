@@ -11,7 +11,7 @@
  */
 ?>
 
-<!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}}} -->
+<!-- wp:columns {"metadata":{"categories":["elayne/features","elayne/spa"],"patternName":"elayne/two-column-feature","name":"Two Column Feature"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}}} -->
 <div class="wp-block-columns alignwide" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
   <!-- wp:column {"width":"50%"} -->
   <div class="wp-block-column" style="flex-basis:50%">

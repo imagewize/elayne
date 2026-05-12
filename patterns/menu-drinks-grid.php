@@ -8,7 +8,7 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/food-beverage","elayne/card-extended"],"patternName":"elayne/menu-drinks-grid","name":"Drinks Menu Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained","contentSize":"900px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"400","fontStyle":"normal"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontFamily":"heading","fontSize":"large"} -->
 <h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-link-color has-heading-font-family has-large-font-size" style="font-style:normal;font-weight:400"><?php esc_html_e( 'Drinks', 'elayne' ); ?></h2>
 <!-- /wp:heading -->

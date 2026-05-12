@@ -101,12 +101,12 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"secondary","textColor":"primary","style":{"border":{"radius":"var:preset|border-radius|sm"},"shadow":"var:preset|shadow|medium"},"fontSize":"base"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-secondary-background-color has-text-color has-background has-base-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);box-shadow:var(--wp--preset--shadow--medium)"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"secondary","textColor":"primary","style":{"border":{"radius":"var:preset|border-radius|sm"},"shadow":"var:preset|shadow|medium","typography":{"fontSize":"var:preset|font-size|base"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-secondary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);box-shadow:var(--wp--preset--shadow--medium);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"backgroundColor":"base","textColor":"primary","style":{"border":{"radius":"var:preset|border-radius|sm","width":"1px"}},"fontSize":"base","borderColor":"primary"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-border-color has-primary-border-color has-base-font-size has-custom-font-size wp-element-button" style="border-width:1px;border-radius:var(--wp--preset--border-radius--sm)"><?php esc_html_e( 'Call Now', 'elayne' ); ?></a></div>
+<!-- wp:button {"backgroundColor":"base","textColor":"primary","style":{"border":{"radius":"var:preset|border-radius|sm","width":"1px"},"typography":{"fontSize":"var:preset|font-size|base"}},"borderColor":"primary"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background has-border-color has-primary-border-color has-custom-font-size wp-element-button" style="border-width:1px;border-radius:var(--wp--preset--border-radius--sm);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Call Now', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

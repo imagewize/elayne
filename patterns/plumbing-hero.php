@@ -31,17 +31,17 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","justifyContent":"left"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill is-style-plumbing-call-btn","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"}},"fontSize":"base"} -->
-<div class="wp-block-button is-style-fill is-style-plumbing-call-btn"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background has-base-font-size has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill)"><?php esc_html_e( 'Call Now: (555) 123-4567', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill is-style-plumbing-call-btn","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+<div class="wp-block-button is-style-fill is-style-plumbing-call-btn"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Call Now: (555) 123-4567', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"textColor":"base","className":"is-style-outline","style":{"border":{"radius":"var:preset|border-radius|pill","width":"1px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"fontSize":"base","borderColor":"border-light"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-text-color has-link-color has-border-color has-border-light-border-color has-base-font-size has-custom-font-size wp-element-button" style="border-width:1px;border-radius:var(--wp--preset--border-radius--pill)"><?php esc_html_e( 'Schedule Service →', 'elayne' ); ?></a></div>
+<!-- wp:button {"textColor":"base","className":"is-style-outline","style":{"border":{"radius":"var:preset|border-radius|pill","width":"1px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"var:preset|font-size|base"}},"borderColor":"border-light"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-text-color has-link-color has-border-color has-border-light-border-color has-custom-font-size wp-element-button" style="border-width:1px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Schedule Service →', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large","padding":{"top":"var:preset|spacing|large","bottom":"0"},"margin":{"top":"0"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"left"}} -->
-<div class="wp-block-group" style="margin-top:0;padding-top:var(--wp--preset--spacing--large);padding-bottom:0"><!-- wp:group {"className":"is-style-plumbing-stat-block","style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-bottom:0"><!-- wp:group {"className":"is-style-plumbing-stat-block","style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-plumbing-stat-block"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"primary","fontSize":"large"} -->
 <h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '4.9★', 'elayne' ); ?></h3>
 <!-- /wp:heading -->

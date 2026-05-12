@@ -10,7 +10,7 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"primary-alt","textColor":"base","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["header"],"patternName":"elayne/header-social-logo-hamburger","name":"Header with Social, Logo, and Hamburger (Dark)"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"primary-alt","textColor":"base","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-base-color has-primary-alt-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)">
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
@@ -32,12 +32,7 @@
 
 		<!-- wp:site-logo {"width":112,"shouldSyncIcon":false,"className":"is-style-default"} /-->
 
-		<!-- wp:navigation {"overlayMenu":"always","overlayBackgroundColor":"primary-alt","overlayTextColor":"base","className":"has-right-aligned-overlay","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
-			<!-- wp:navigation-link {"label":"Home","url":"/"} /-->
-			<!-- wp:navigation-link {"label":"Menu","url":"/menu"} /-->
-			<!-- wp:navigation-link {"label":"Events","url":"/events"} /-->
-			<!-- wp:navigation-link {"label":"Contact","url":"/contact"} /-->
-		<!-- /wp:navigation -->
+		<!-- wp:navigation {"overlayMenu":"always","overlayBackgroundColor":"primary-alt","overlayTextColor":"base","className":"has-right-aligned-overlay","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} /-->
 
 	</div>
 	<!-- /wp:group -->

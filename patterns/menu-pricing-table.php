@@ -8,7 +8,7 @@
  * Viewport Width: 800
  */
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained","contentSize":"700px"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/food-beverage"],"patternName":"elayne/menu-pricing-table","name":"Menu Pricing Table"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained","contentSize":"700px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"400"}},"textColor":"primary","fontFamily":"heading","fontSize":"large"} -->
 <h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-font-family has-large-font-size" style="font-weight:400"><?php esc_html_e( 'Wine List', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
