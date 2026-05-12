@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [4.0.0] - 2026-05-12
 
+### Fixed
+
+- Replace `register_block_type()` calls with `render_block` filter pattern to comply with WP.org theme guidelines (plugin-territory rule); product attributes table and shipping/returns content now use `core/group` placeholders with specific classNames
+- Improve skip link focus state visibility: high-contrast white outline with black box-shadow ring, meeting WCAG focus indicator requirements
+
 ### Added
 
 **WooCommerce Store Integration:**

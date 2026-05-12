@@ -191,6 +191,8 @@ Elayne includes custom image sizes optimized for different layouts:
 * FIXED: Unicode escape sequences — PHP single-quoted strings do not process \uXXXX; use actual UTF-8 characters.
 * FIXED: WooCommerce taxQuery must be [] (array) not {} (object); product-collection must never use standalone query-pagination.
 * TECHNICAL: Vibe CLI model updated to mistral-medium-3.5 with thinking:high; bash allowlist sorted alphabetically.
+* FIXED: Replace register_block_type() calls with render_block filter — WP.org plugin-territory compliance; product attributes table and shipping/returns content now use core/group placeholders with specific classNames.
+* FIXED: Skip link focus state — high-contrast white outline with black box-shadow ring for WCAG focus indicator compliance.
 
 = 3.9.1 - 04/24/26 =
 * ADDED: Nail Salon Why Us pattern - Real CC0 photo (why-nail-salon.webp, StockSnap.io) replacing placeholder text in the image column.
