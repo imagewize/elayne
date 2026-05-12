@@ -603,6 +603,11 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_woocommerce_block_styles' 
  * Uses render_block filter instead of register_block_type() — themes must not register
  * custom block types (plugin territory per WP.org theme guidelines). The same dynamic
  * rendering is achieved by intercepting core/group blocks with this specific className.
+ *
+ * @param string   $block_content The block content.
+ * @param array    $block         The block attributes.
+ * @param \WP_Block $instance     The block instance.
+ * @return string Modified block content with product attributes table.
  */
 function elayne_render_product_attributes_table( string $block_content, array $block, \WP_Block $instance ): string {
 	if ( 'core/group' !== $block['blockName'] || empty( $block['attrs']['className'] ) || false === strpos( $block['attrs']['className'], 'elayne-product-attributes-table' ) ) {
@@ -643,6 +648,10 @@ add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_product_attributes_t
 
 /**
  * Render shipping & returns content inside elayne-shipping-returns-content group blocks.
+ *
+ * @param string $block_content The block content.
+ * @param array  $block         The block attributes.
+ * @return string Modified block content with shipping and returns information.
  */
 function elayne_render_shipping_returns_content( string $block_content, array $block ): string {
 	if ( 'core/group' !== $block['blockName'] || empty( $block['attrs']['className'] ) || false === strpos( $block['attrs']['className'], 'elayne-shipping-returns-content' ) ) {
