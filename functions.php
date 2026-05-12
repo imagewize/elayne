@@ -65,6 +65,72 @@ function elayne_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_styles' );
 
 /**
+ * Enqueue WooCommerce styles.
+ */
+function elayne_enqueue_woocommerce_styles() {
+	if ( class_exists( 'WooCommerce' ) ) {
+		// Main WooCommerce CSS.
+		if ( file_exists( get_template_directory() . '/assets/styles/woocommerce.css' ) ) {
+			wp_enqueue_style(
+				'elayne-woocommerce-style',
+				get_template_directory_uri() . '/assets/styles/woocommerce.css',
+				array(),
+				(string) filemtime( get_template_directory() . '/assets/styles/woocommerce.css' )
+			);
+		}
+	}
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_woocommerce_styles' );
+
+/**
+ * Enqueue single product page script.
+ */
+function elayne_enqueue_product_page_scripts() {
+	if ( ! function_exists( 'is_product' ) || ! is_product() ) {
+		return;
+	}
+	wp_enqueue_script(
+		'elayne-woocommerce-product-page',
+		get_template_directory_uri() . '/assets/js/woocommerce-product-page.js',
+		array(),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_product_page_scripts' );
+
+function elayne_enqueue_category_filter_drawer() {
+	if ( ! class_exists( 'WooCommerce' ) ) {
+		return;
+	}
+	// Load on product category archives, product tag archives, and any product taxonomy
+	if ( is_product_category() || is_product_tag() || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) {
+		wp_enqueue_script(
+			'elayne-category-filter-drawer',
+			get_template_directory_uri() . '/assets/js/category-filter-drawer.js',
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			true
+		);
+	}
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_category_filter_drawer' );
+
+// Change sale badge label to "Best Seller" on the store.
+add_filter(
+	'woocommerce_sale_flash',
+	function () {
+		return '<span class="onsale">' . esc_html__( 'Best Seller', 'elayne' ) . '</span>';
+	}
+);
+
+// Note: WP 6.9 emits a console warning "woocommerce-blocktheme-css was added to the
+// iframe incorrectly" when WooCommerce enqueues this stylesheet outside of block hooks.
+// WooCommerce fixed this in core via PR #62048 (merged 2025-11-21, shipped in 10.4.0).
+// If the warning reappears it is likely a different code path or a plugin conflict —
+// WC 10.4.0+ already uses enqueue_block_assets, so no theme workaround is needed.
+
+/**
  * Register pattern categories.
  *
  * Uses register_block_pattern_category() — not the block_categories_all filter.
@@ -98,6 +164,10 @@ function elayne_pattern_categories() {
 		'elayne/salon'          => array( 'label' => __( 'Beauty & Salon', 'elayne' ) ),
 		'elayne/retail'         => array( 'label' => __( 'Retail & E-commerce', 'elayne' ) ),
 		'elayne/food-beverage'  => array( 'label' => __( 'Food & Beverage', 'elayne' ) ),
+		'elayne/woocommerce'    => array( 'label' => __( 'Store', 'elayne' ) ),
+		'elayne/product'        => array( 'label' => __( 'Products', 'elayne' ) ),
+		'elayne/grid'           => array( 'label' => __( 'Grids', 'elayne' ) ),
+		'elayne/responsive'     => array( 'label' => __( 'Responsive', 'elayne' ) ),
 	);
 
 	foreach ( $block_pattern_categories as $slug => $args ) {
@@ -115,6 +185,9 @@ function elayne_custom_image_sizes() {
 	add_image_size( 'elayne-portrait-small', 380, 570, true );  // 2:3 aspect ratio.
 	add_image_size( 'elayne-portrait-medium', 380, 507, true ); // 3:4 aspect ratio.
 	add_image_size( 'elayne-portrait-large', 380, 475, true );  // 4:5 aspect ratio.
+
+	// Landscape image sizes for grid/archive layouts.
+	add_image_size( 'elayne-landscape-small', 400, 225, true ); // 16:9 aspect ratio.
 
 	// Landscape hero image for single post/page templates.
 	add_image_size( 'elayne-single-hero', 700, 400, true );     // 16:9-ish.
@@ -404,6 +477,187 @@ function elayne_enqueue_plumbing_variation_styles(): void {
 	);
 }
 add_action( 'enqueue_block_assets', __NAMESPACE__ . '\elayne_enqueue_plumbing_variation_styles' );
+
+/**
+ * Render ticker content for elayne-ticker group block.
+ *
+ * Uses render_block filter to inject PHP-generated marquee content
+ * into the group block with elayne-ticker className.
+ *
+ * @param string $block_content The block content.
+ * @param array  $block         The block attributes.
+ * @return string Modified block content with ticker HTML.
+ */
+function elayne_render_ticker_block( $block_content, $block ) {
+	// Only process core/group blocks with elayne-ticker className.
+	if ( 'core/group' !== $block['blockName'] || empty( $block['attrs']['className'] ) || false === strpos( $block['attrs']['className'], 'elayne-ticker' ) ) {
+		return $block_content;
+	}
+
+	// Build ticker items — live WC product categories with hardcoded fallback.
+	$terms = taxonomy_exists( 'product_cat' ) ? get_terms(
+		array(
+			'taxonomy'   => 'product_cat',
+			'hide_empty' => true,
+			'number'     => 12,
+			'orderby'    => 'count',
+			'order'      => 'DESC',
+		)
+	) : array();
+
+	if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) {
+		$ticker_items = array_map(
+			function ( $term ) {
+				return esc_html( $term->name );
+			},
+			$terms
+		);
+	} else {
+		$ticker_items = array(
+			esc_html__( 'Premium Leather Goods', 'elayne' ),
+			esc_html__( 'Legal Stationery', 'elayne' ),
+			esc_html__( 'Executive Accessories', 'elayne' ),
+			esc_html__( 'Bespoke Briefcases', 'elayne' ),
+			esc_html__( 'Fine Writing Instruments', 'elayne' ),
+			esc_html__( 'Corporate Gifting', 'elayne' ),
+		);
+	}
+
+	$ticker_html = '<strong>' . implode( '</strong><span aria-hidden="true">✦</span><strong>', $ticker_items ) . '</strong>';
+
+	// Wrap in ticker track with duplicated content for seamless scrolling.
+	$ticker_track = sprintf(
+		'<div class="elayne-ticker__track" role="marquee" aria-label="%s"><span class="elayne-ticker__item">%s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="elayne-ticker__item" aria-hidden="true">%s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>',
+		esc_attr__( 'Product categories', 'elayne' ),
+		$ticker_html,
+		$ticker_html
+	);
+
+	// Insert ticker track before the closing div tag.
+	$block_content = str_replace( '</div>', $ticker_track . '</div>', $block_content );
+
+	return $block_content;
+}
+add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_ticker_block', 10, 2 );
+
+/**
+ * Register WooCommerce block style variations and enqueue their CSS on demand.
+ *
+ * CSS files live in assets/styles/block-styles/ and load only on pages where
+ * the corresponding block style is used — not globally.
+ */
+function elayne_register_woocommerce_block_styles() {
+	$styles = array(
+		'core/group'                  => array(
+			'elayne-ticker'              => __( 'Store Ticker', 'elayne' ),
+			'elayne-avatar-circle'       => __( 'Avatar Circle', 'elayne' ),
+			'elayne-woo-categories-grid' => __( 'Categories Grid', 'elayne' ),
+			'elayne-category-hero'       => __( 'Category Hero', 'elayne' ),
+			'elayne-category-toolbar'    => __( 'Category Toolbar', 'elayne' ),
+			'elayne-category-products'   => __( 'Category Products', 'elayne' ),
+			'elayne-category-meta-bar'   => __( 'Category Meta Bar', 'elayne' ),
+		),
+		'core/paragraph'              => array(
+			'elayne-woo-our-story-watermark' => __( 'Our Story Watermark', 'elayne' ),
+		),
+		'core/search'                 => array(
+			'elayne-woo-newsletter-search' => __( 'Newsletter Search', 'elayne' ),
+		),
+		'woocommerce/product-filters' => array(
+			'elayne-shop-filters-sidebar' => __( 'Shop Filters Sidebar', 'elayne' ),
+		),
+	);
+
+	foreach ( $styles as $block => $variations ) {
+		foreach ( $variations as $name => $label ) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => $name,
+					'label' => $label,
+				)
+			);
+
+			$css_file = "assets/styles/block-styles/{$name}.css";
+			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
+				wp_enqueue_block_style(
+					$block,
+					array(
+						'handle' => "elayne-{$name}",
+						'src'    => get_theme_file_uri( $css_file ),
+						'path'   => get_theme_file_path( $css_file ),
+					)
+				);
+			}
+		}
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_register_woocommerce_block_styles' );
+
+/**
+ * Register dynamic server-side blocks for the product accordion tabs.
+ */
+function elayne_register_product_dynamic_blocks(): void {
+	if ( ! function_exists( 'register_block_type' ) ) {
+		return;
+	}
+
+	register_block_type(
+		'elayne/product-attributes-table',
+		[
+			'uses_context'    => [ 'postId', 'postType' ],
+			'render_callback' => function ( array $_attrs, string $_content, \WP_Block $block ): string {
+				if ( ! function_exists( 'wc_get_product' ) ) {
+					return '';
+				}
+				$product_id = $block->context['postId'] ?? get_the_ID();
+				$product    = wc_get_product( $product_id );
+				if ( ! $product ) {
+					return '';
+				}
+				$product_attributes = $product->get_attributes();
+				$rows               = '';
+				foreach ( $product_attributes as $attribute ) {
+					if ( ! $attribute->get_visible() ) {
+						continue;
+					}
+					$name = wc_attribute_label( $attribute->get_name() );
+					if ( $attribute->is_taxonomy() ) {
+						$terms  = wc_get_product_terms( $product_id, $attribute->get_name(), [ 'fields' => 'names' ] );
+						$values = implode( ', ', $terms );
+					} else {
+						$values = implode( ', ', $attribute->get_options() );
+					}
+					if ( ! $values ) {
+						continue;
+					}
+					$rows .= '<tr><td>' . esc_html( $name ) . '</td><td>' . esc_html( $values ) . '</td></tr>';
+				}
+				if ( ! $rows ) {
+					return '';
+				}
+				return '<figure class="wp-block-table elayne-spec-table" style="margin-top:0;margin-bottom:0"><table><tbody>' . $rows . '</tbody></table></figure>';
+			},
+		]
+	);
+
+	register_block_type(
+		'elayne/shipping-returns-content',
+		[
+			'render_callback' => function (): string {
+				$fallback = '<p class="has-main-accent-color has-text-color" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;line-height:1.8">'
+					. esc_html__( 'Orders dispatched within 3–5 business days. Complimentary shipping on orders over $250. Standard items may be returned within 30 days in original condition.', 'elayne' )
+					. '</p>';
+				$page = get_page_by_path( 'shipping-returns' );
+				if ( ! $page || 'publish' !== $page->post_status ) {
+					return $fallback;
+				}
+				return apply_filters( 'the_content', $page->post_content );
+			},
+		]
+	);
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_register_product_dynamic_blocks' );
 
 /**
  * Include block extensions.
