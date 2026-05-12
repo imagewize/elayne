@@ -18,11 +18,11 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: '8.4'
           coverage: none
 
       - name: Install Composer Dependencies
-        run: composer install --dev --no-interaction --prefer-dist
+        run: composer install --no-interaction --prefer-dist
 
       # Pass 1 (wp pattern validate via WP-CLI) requires a live WordPress
       # database and must be run locally before merging. It is not run in CI.
