@@ -1,5 +1,22 @@
 /* Category Products Block Style */
 
+/* Sidebar "× Clear filters" link injected by JS when filters are active */
+.elayne-clear-filters-btn {
+	display: block;
+	margin-bottom: var(--wp--preset--spacing--small);
+	font-size: var(--wp--preset--font-size--x-small);
+	font-family: var(--wp--preset--font-family--body);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--orange);
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.elayne-clear-filters-btn:hover {
+	color: var(--wp--preset--color--primary);
+}
+
 /* Reset is-layout-flow margin injection */
 .wp-block-group.is-style-elayne-category-products.is-layout-flow > * {
 	margin-block-start: 0 !important;
@@ -87,8 +104,8 @@
 	height: 100%;
 }
 
-/* Product image wrap */
-.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-image {
+/* Product image wrap — 3-class specificity (0,3,0) beats WooCommerce's aspect-ratio:1/1 (0,2,0) */
+.wp-block-woocommerce-product-collection .wc-block-product .wp-block-woocommerce-product-image {
 	position: relative;
 	overflow: hidden;
 	aspect-ratio: 3/4;
@@ -96,7 +113,7 @@
 	background-color: var(--wp--preset--color--base);
 }
 
-.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-image img {
+.wp-block-woocommerce-product-collection .wc-block-product .wp-block-woocommerce-product-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -104,7 +121,7 @@
 	display: block;
 }
 
-.wp-block-woocommerce-product-collection .wc-block-grid__product:hover .wp-block-woocommerce-product-image img {
+.wp-block-woocommerce-product-collection .wc-block-product:hover .wp-block-woocommerce-product-image img {
 	transform: scale(1.04);
 }
 
@@ -192,9 +209,9 @@
 	color: var(--wp--preset--color--primary);
 }
 
-/* Add to cart button - restyle as Quick Add */
+/* Add to cart button — WooCommerce places this at grid-area:1/1 align-self:end (overlays image bottom) */
 .wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button {
-	text-align: left;
+	width: 100%;
 }
 
 .wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button .wp-block-button__link {
@@ -210,6 +227,7 @@
 	text-align: center;
 	cursor: pointer;
 	margin: 0;
+	display: block;
 }
 
 .wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button .wp-block-button__link:hover {
