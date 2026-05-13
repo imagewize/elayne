@@ -4,7 +4,7 @@
 .wp-block-group.is-style-elayne-category-toolbar {
 	background-color: var(--wp--preset--color--tertiary);
 	border-bottom: 1px solid var(--wp--preset--color--border-light);
-	position: sticky;
+	/* position: sticky; */
 	top: 72px;
 	z-index: 50;
 }
