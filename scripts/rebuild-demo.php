@@ -17,7 +17,7 @@
  *
  * IMPORTANT for multisite: page IDs are per-subsite blog, not global.
  * Always pass --url= so WP-CLI switches to the right blog context before
- * reading $map. Without it, get_template_directory() and page IDs may
+ * reading $page_map. Without it, get_template_directory() and page IDs may
  * resolve against the wrong subsite.
  *
  * Dry-run (shows what would be updated, no writes):
@@ -25,10 +25,12 @@
  *     eval-file web/app/themes/elayne/scripts/rebuild-demo.php
  * -------------------------------------------------------------------------
  *
- * CUSTOMIZE: Update $map below with your own page IDs and pattern paths.
+ * CUSTOMIZE: Update $page_map below with your own page IDs and pattern paths.
  * Page IDs are per-subsite — discover them with:
  *   wp post list --post_type=page --fields=ID,post_title,post_name \
  *     --path=web/wp --url=example.com/store/
+ *
+ * @package Elayne
  */
 
 // Security: never execute via a web request.
@@ -38,27 +40,27 @@ if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) {
 
 $dry_run = getenv( 'WP_REBUILD_DRY_RUN' ) === '1';
 
-// ---------------------------------------------------------------------------
-// CUSTOMIZE: map page IDs to one or more pattern files (relative to theme root).
-// Multiple patterns are concatenated in order to build the full page content.
-//
-// Example:
-//   5 => array(
-//       'patterns/hero-with-cta.php',
-//       'patterns/two-column-feature.php',
-//   ),
-// ---------------------------------------------------------------------------
-$map = array(
+/*
+ * CUSTOMIZE: map page IDs to one or more pattern files (relative to theme root).
+ * Multiple patterns are concatenated in order to build the full page content.
+ *
+ * Example:
+ *   5 => array(
+ *       'patterns/hero-with-cta.php',
+ *       'patterns/two-column-feature.php',
+ *   ),
+ */
+$page_map = array(
 	// Add your page ID => pattern file mappings here.
 );
 
-if ( empty( $map ) ) {
-	WP_CLI::error( 'No pages configured. Edit $map in scripts/rebuild-demo.php with your page IDs and pattern paths.' );
+if ( empty( $page_map ) ) {
+	WP_CLI::error( 'No pages configured. Edit $page_map in scripts/rebuild-demo.php with your page IDs and pattern paths.' );
 }
 
 $theme_dir = get_template_directory();
 
-foreach ( $map as $post_id => $pattern_files ) {
+foreach ( $page_map as $page_id => $pattern_files ) {
 	$content = '';
 
 	foreach ( $pattern_files as $rel_path ) {
@@ -78,40 +80,40 @@ foreach ( $map as $post_id => $pattern_files ) {
 	}
 
 	if ( empty( trim( $content ) ) ) {
-		WP_CLI::warning( "Post $post_id — no content captured, skipping" );
+		WP_CLI::warning( "Post $page_id — no content captured, skipping" );
 		continue;
 	}
 
 	if ( $dry_run ) {
-		WP_CLI::log( "DRY-RUN  post $post_id ← " . implode( ' + ', $pattern_files ) );
+		WP_CLI::log( "DRY-RUN  post $page_id ← " . implode( ' + ', $pattern_files ) );
 		continue;
 	}
 
 	$result = wp_update_post(
 		array(
-			'ID'           => $post_id,
+			'ID'           => $page_id,
 			'post_content' => $content,
 		),
 		true
 	);
 
 	if ( is_wp_error( $result ) ) {
-		WP_CLI::warning( "Post $post_id — update failed: " . $result->get_error_message() );
+		WP_CLI::warning( "Post $page_id — update failed: " . $result->get_error_message() );
 	} else {
-		WP_CLI::success( "Post $post_id ← " . implode( ' + ', $pattern_files ) );
+		WP_CLI::success( "Post $page_id ← " . implode( ' + ', $pattern_files ) );
 	}
 }
 
-// ---------------------------------------------------------------------------
-// OPTIONAL: Push custom .html templates to the WP database.
-// Useful for demo-specific template variants (e.g. archive-product-store.html)
-// that should not replace the theme's base template file.
-//
-// Format: template_slug => 'templates/my-template.html'
-//
-// Example:
-//   'archive-product' => 'templates/archive-product-custom.html',
-// ---------------------------------------------------------------------------
+/*
+ * OPTIONAL: Push custom .html templates to the WP database.
+ * Useful for demo-specific template variants (e.g. archive-product-store.html)
+ * that should not replace the theme's base template file.
+ *
+ * Format: template_slug => 'templates/my-template.html'
+ *
+ * Example:
+ *   'archive-product' => 'templates/archive-product-custom.html',
+ */
 $templates = array();
 
 if ( ! empty( $templates ) ) {
@@ -130,15 +132,17 @@ if ( ! empty( $templates ) ) {
 		}
 
 		$content     = file_get_contents( $file );
-		$existing_id = $wpdb->get_var( $wpdb->prepare(
-			"SELECT ID FROM {$wpdb->posts}
-			 WHERE post_type = 'wp_template'
-			   AND post_status != 'trash'
-			   AND (post_name = %s OR post_name = %s)
-			 ORDER BY post_modified DESC LIMIT 1",
-			$template_slug,
-			get_stylesheet() . '//' . $template_slug
-		) );
+		$existing_id = $wpdb->get_var(
+			$wpdb->prepare(
+				"SELECT ID FROM {$wpdb->posts}
+				 WHERE post_type = 'wp_template'
+				   AND post_status != 'trash'
+				   AND (post_name = %s OR post_name = %s)
+				 ORDER BY post_modified DESC LIMIT 1",
+				$template_slug,
+				get_stylesheet() . '//' . $template_slug
+			)
+		);
 
 		if ( $existing_id ) {
 			$result = wp_update_post(
