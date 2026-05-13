@@ -106,8 +106,8 @@ function elayne_enqueue_category_filter_drawer() {
 	if ( ! class_exists( 'WooCommerce' ) ) {
 		return;
 	}
-	// Load on product category archives, product tag archives, and any product taxonomy.
-	if ( is_product_category() || is_product_tag() || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) {
+	// Load on shop page, product category archives, product tag archives, and any product taxonomy.
+	if ( is_shop() || is_product_category() || is_product_tag() || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) {
 		wp_enqueue_script(
 			'elayne-category-filter-drawer',
 			get_template_directory_uri() . '/assets/js/category-filter-drawer.js',
