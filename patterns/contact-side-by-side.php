@@ -11,7 +11,7 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Contact Card Side by Side"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"5px"}},"backgroundColor":"base","layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/contact"],"patternName":"elayne/contact-side-by-side","name":"Contact Card Side by Side"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"5px"}},"backgroundColor":"base","layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide has-base-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
 
 <!-- wp:columns {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}}} -->

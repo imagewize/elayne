@@ -1,0 +1,16 @@
+/**
+ * Block Style: Elayne Avatar Circle
+ * Applied to core/group blocks via elayne-avatar-circle className
+ * Circular avatar container used in testimonial patterns.
+ */
+
+.elayne-avatar-circle {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	padding: 0.25rem;
+}

@@ -11,7 +11,7 @@
  */
 ?>
 
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"constrained","contentSize":"1400px"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/features","elayne/posts","elayne/spa"],"patternName":"elayne/four-column-wellness-posts","name":"Four Column Wellness Posts"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"constrained","contentSize":"1400px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
   <!-- wp:heading {"textAlign":"center","fontSize":"x-large","style":{"typography":{"fontWeight":"600"}}} -->
   <h2 class="wp-block-heading has-text-align-center has-x-large-font-size" style="font-weight:600"><?php esc_html_e( 'Wellness', 'elayne' ); ?></h2>

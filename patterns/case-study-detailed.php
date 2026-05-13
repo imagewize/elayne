@@ -9,7 +9,7 @@
  */
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/portfolio"],"patternName":"elayne/case-study-detailed","name":"Case Study Detailed"},"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0">
 
 	<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/desktop.webp","dimRatio":30,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":500,"minHeightUnit":"px","contentPosition":"center center","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}}} -->
@@ -258,7 +258,7 @@
 			<div class="wp-block-button"><a class="wp-block-button__link has-main-color has-base-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:100px"><?php esc_html_e( 'Start Your Project', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 
-			<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"100px","width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"borderColor":"base","className":"is-style-outline"} -->
+			<!-- wp:button {"className":"is-style-outline","backgroundColor":"primary","textColor":"base","borderColor":"base","style":{"border":{"radius":"100px","width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}}} -->
 			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-link-color has-border-color has-base-border-color wp-element-button" style="border-width:2px;border-radius:100px"><?php esc_html_e( 'View More Work', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>

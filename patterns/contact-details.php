@@ -52,7 +52,7 @@
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"main","fontSize":"base"} -->
-			<p class="has-main-color has-text-color has-link-color has-base-font-size"><strong><?php esc_html_e( 'Email:', 'elayne' ); ?></strong> <a href="mailto:hello@example.com">hello@example.com</a></p>
+			<p class="has-main-color has-text-color has-link-color has-base-font-size"><strong><?php esc_html_e( 'Email:', 'elayne' ); ?></strong> <a href="mailto:hello@example.com"><?php esc_html_e( 'hello@example.com', 'elayne' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"textColor":"main","fontSize":"base"} -->
@@ -83,8 +83,8 @@
 
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
-		<!-- wp:button {"backgroundColor":"primary","textColor":"base","fontSize":"base","fontFamily":"open-sans"} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-open-sans-font-family has-base-font-size has-custom-font-size wp-element-button"><?php esc_html_e( 'Schedule a Consultation', 'elayne' ); ?></a></div>
+<!-- wp:button {"backgroundColor":"primary","textColor":"base","fontFamily":"open-sans","style":{"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+		<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-open-sans-font-family has-custom-font-size wp-element-button" style="font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Schedule a Consultation', 'elayne' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

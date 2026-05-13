@@ -15,8 +15,8 @@
 <h1 class="wp-block-heading has-base-color has-text-color has-open-sans-font-family" style="font-size:clamp(2rem, 5vw, 3.5rem);font-weight:700;letter-spacing:-0.5px;line-height:1.2;text-transform:uppercase"><?php esc_html_e( 'Transform Your Vision Into Reality', 'elayne' ); ?></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.165rem","lineHeight":"1.8","fontWeight":"300"}},"textColor":"base","fontFamily":"open-sans"} -->
-<p class="has-base-color has-text-color has-open-sans-font-family" style="font-size:1.165rem;font-weight:300;line-height:1.8"><?php esc_html_e( 'We are a creative agency dedicated to crafting exceptional digital experiences. Our team combines strategic thinking with innovative design to help businesses stand out in the digital landscape. From brand identity to web development, we deliver solutions that drive results and inspire action. Partner with us to elevate your brand and connect with your audience in meaningful ways.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.8","fontWeight":"300"}},"textColor":"base","fontFamily":"open-sans","fontSize":"base"} -->
+<p class="has-base-color has-text-color has-open-sans-font-family has-base-font-size" style="font-weight:300;line-height:1.8"><?php esc_html_e( 'We are a creative agency dedicated to crafting exceptional digital experiences. Our team combines strategic thinking with innovative design to help businesses stand out in the digital landscape. From brand identity to web development, we deliver solutions that drive results and inspire action. Partner with us to elevate your brand and connect with your audience in meaningful ways.', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div></div>

@@ -20,8 +20,8 @@
 		<div class="wp-block-group alignwide">
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"}},"textColor":"secondary"} -->
-				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '25+', 'elayne' ); ?></h3>
+				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
+				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '25+', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"base","fontSize":"small"} -->
@@ -36,8 +36,8 @@
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"}},"textColor":"secondary"} -->
-				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '500+', 'elayne' ); ?></h3>
+				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
+				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '500+', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"base","fontSize":"small"} -->
@@ -52,8 +52,8 @@
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1","fontSize":"4rem"}},"textColor":"secondary"} -->
-				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color" style="font-size:4rem;font-weight:700;line-height:1"><?php esc_html_e( '98%', 'elayne' ); ?></h3>
+				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
+				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '98%', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"base","fontSize":"small"} -->

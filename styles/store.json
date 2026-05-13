@@ -1,0 +1,271 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Store",
+	"settings": {
+		"color": {
+			"defaultPalette": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"palette": [
+				{
+					"name": "Charcoal",
+					"slug": "primary",
+					"color": "#1A1A1A"
+				},
+				{
+					"name": "Charcoal Accent",
+					"slug": "primary-accent",
+					"color": "#2A2A2A"
+				},
+				{
+					"name": "Charcoal Alt",
+					"slug": "primary-alt",
+					"color": "#0A0A0A"
+				},
+				{
+					"name": "Charcoal Alt Accent",
+					"slug": "primary-alt-accent",
+					"color": "#000000"
+				},
+				{
+					"name": "Main Text",
+					"slug": "main",
+					"color": "#1A1A1A"
+				},
+				{
+					"name": "Secondary Text",
+					"slug": "main-accent",
+					"color": "#6B6560"
+				},
+				{
+					"name": "Cream",
+					"slug": "base",
+					"color": "#FDFBF7"
+				},
+				{
+					"name": "Cream Dark",
+					"slug": "base-accent",
+					"color": "#EDE7D8"
+				},
+				{
+					"name": "White",
+					"slug": "tertiary",
+					"color": "#FFFFFF"
+				},
+				{
+					"name": "Orange",
+					"slug": "orange",
+					"color": "#E65C00"
+				},
+				{
+					"name": "Orange Light",
+					"slug": "orange-light",
+					"color": "#F5A623"
+				},
+				{
+					"name": "Gold",
+					"slug": "gold",
+					"color": "#C8A96E"
+				},
+				{
+					"name": "Success",
+					"slug": "success",
+					"color": "#2d6a4f"
+				},
+				{
+					"name": "Error",
+					"slug": "error",
+					"color": "#c0392b"
+				},
+				{
+					"name": "Border Solid",
+					"slug": "border-light",
+					"color": "#e2dac8"
+				},
+				{
+					"name": "Border Transparent",
+					"slug": "border-dark",
+					"color": "rgba(200, 169, 110, 0.25)"
+				}
+			],
+			"duotone": [
+				{
+					"name": "Charcoal to Cream",
+					"slug": "charcoal-cream",
+					"colors": ["#1A1A1A", "#FDFBF7"]
+				},
+				{
+					"name": "Orange to Gold",
+					"slug": "orange-gold",
+					"colors": ["#E65C00", "#C8A96E"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
+			"gradients": [
+				{
+					"name": "Cream Fade",
+					"slug": "cream-fade",
+					"gradient": "linear-gradient(180deg, var(--wp--preset--color--base) 0%, var(--wp--preset--color--base-accent) 100%)"
+				},
+				{
+					"name": "Charcoal to Orange",
+					"slug": "charcoal-orange",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--orange) 100%)"
+				},
+				{
+					"name": "Gold Shimmer",
+					"slug": "gold-shimmer",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--gold) 0%, var(--wp--preset--color--orange-light) 100%)"
+				},
+				{
+					"name": "Main Diagonal",
+					"slug": "main-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.85))"
+				},
+				{
+					"name": "Warm Diagonal",
+					"slug": "warm-diagonal",
+					"gradient": "linear-gradient(135deg, rgba(230, 92, 0, 0.88), rgba(26, 26, 26, 0.70))"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Cormorant Garamond\", Georgia, serif",
+					"slug": "heading",
+					"name": "Cormorant Garamond",
+					"fontFace": [
+						{
+							"fontFamily": "Cormorant Garamond",
+							"fontWeight": "300 700",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-VariableFont_wght.woff2"]
+						},
+						{
+							"fontFamily": "Cormorant Garamond",
+							"fontWeight": "300 700",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-Italic-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Jost\", sans-serif",
+					"slug": "body",
+					"name": "Jost",
+					"fontFace": [
+						{
+							"fontFamily": "Jost",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/store/jost-v20-latin-variable.woff2"]
+						},
+						{
+							"fontFamily": "Jost",
+							"fontWeight": "100 900",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/store/jost-v20-latin-italic-variable.woff2"]
+						}
+					]
+				}
+			],
+			"fontSizes": [
+				{ "slug": "x-small",  "size": "0.72rem",                    "name": "X-Small" },
+				{ "slug": "small",    "size": "0.875rem",                   "name": "Small" },
+				{ "slug": "base",     "size": "1rem",                       "name": "Base" },
+				{ "slug": "medium",   "size": "1.15rem",                    "name": "Medium" },
+				{ "slug": "large",    "size": "clamp(1.5rem, 2.5vw, 2rem)", "name": "Large" },
+				{ "slug": "x-large",  "size": "clamp(2rem, 3.5vw, 3.6rem)", "name": "X-Large" },
+				{ "slug": "xx-large", "size": "clamp(3rem, 5vw, 5.5rem)",   "name": "XX-Large" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|base",
+			"text": "var:preset|color|primary"
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|body",
+			"fontSize": "1rem",
+			"fontWeight": "400",
+			"lineHeight": "1.6"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|heading",
+					"fontWeight": "400",
+					"lineHeight": "1.2"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xx-large"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var:preset|font-size|x-large"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var:preset|font-size|large"
+				}
+			},
+			"button": {
+				"border": {
+					"radius": "var:preset|border-radius|sm",
+					"width": "0"
+				},
+				"color": {
+					"background": "var:preset|color|orange",
+					"text": "var:preset|color|base"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.75rem",
+						"right": "1.5rem",
+						"bottom": "0.75rem",
+						"left": "1.5rem"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontWeight": "600",
+					"fontSize": "var:preset|font-size|small"
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|orange-light",
+						"text": "var:preset|color|base"
+					}
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var:preset|color|primary"
+				},
+				"typography": {
+					"textDecoration": "none"
+				},
+				":hover": {
+					"color": {
+						"text": "var:preset|color|orange"
+					}
+				}
+			}
+		}
+	}
+}

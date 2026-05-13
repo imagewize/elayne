@@ -1,0 +1,9 @@
+/**
+ * Block Style: Elayne Woo Our Story Watermark
+ * Applied to paragraph blocks with elayne-woo-our-story-watermark className
+ * Low opacity watermark for the "E" character in the our-story pattern.
+ */
+
+.elayne-woo-our-story-watermark {
+	opacity: 0.12;
+}

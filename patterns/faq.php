@@ -11,8 +11,8 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Frequently Asked Questions"},"align":"full","className":"faq-section","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull faq-section has-tertiary-background-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"left":"auto","right":"auto"}}},"className":"has-max-width-constrained"} -->
+<!-- wp:group {"metadata":{"categories":["elayne/faq"],"patternName":"elayne/faq","name":"Frequently Asked Questions"},"align":"full","className":"faq-section","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull faq-section has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"left":"auto","right":"auto"}}},"className":"has-max-width-constrained"} -->
 <h2 class="wp-block-heading has-text-align-center has-max-width-constrained" style="margin-left:auto;margin-right:auto"><?php esc_html_e( 'Frequently Asked Questions', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 

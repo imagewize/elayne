@@ -16,13 +16,13 @@
 <h1 class="wp-block-heading has-primary-color has-text-color has-heading-font-family" style="font-size:clamp(2.5rem, 6vw, 4rem);font-weight:400;line-height:1.1"><?php esc_html_e( 'Fresh Coffee & Artisan Pastries', 'elayne' ); ?></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.125rem","lineHeight":"1.7","fontWeight":"400"}},"textColor":"primary-accent","fontFamily":"body"} -->
-<p class="has-primary-accent-color has-text-color has-body-font-family" style="font-size:1.125rem;font-weight:400;line-height:1.7"><?php esc_html_e( 'Start your day with expertly brewed coffee and house-made pastries. We source local ingredients and craft each cup with care.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.7","fontWeight":"400"}},"textColor":"primary-accent","fontFamily":"body","fontSize":"base"} -->
+<p class="has-primary-accent-color has-text-color has-body-font-family has-base-font-size" style="font-weight:400;line-height:1.7"><?php esc_html_e( 'Start your day with expertly brewed coffee and house-made pastries. We source local ingredients and craft each cup with care.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"border-light","textColor":"primary-alt","className":"has-custom-font-size has-body-font-family","style":{"border":{"radius":"4px"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}},"typography":{"fontWeight":"600","fontSize":"1rem","fontStyle":"normal"}},"fontFamily":"body"} -->
-<div class="wp-block-button has-custom-font-size has-body-font-family"><a class="wp-block-button__link has-primary-alt-color has-border-light-background-color has-text-color has-background has-body-font-family has-custom-font-size wp-element-button" style="border-radius:4px;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium);font-size:1rem;font-style:normal;font-weight:600"><?php esc_html_e( 'Order Online', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"border-light","textColor":"primary-alt","className":"has-custom-font-size has-body-font-family","style":{"border":{"radius":"4px"},"spacing":{"padding":{"left":"var:preset|spacing|medium","right":"var:preset|spacing|medium","top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}},"typography":{"fontWeight":"600","fontSize":"var:preset|font-size|small","fontStyle":"normal"}},"fontFamily":"body"} -->
+<div class="wp-block-button has-custom-font-size has-body-font-family"><a class="wp-block-button__link has-primary-alt-color has-border-light-background-color has-text-color has-background has-body-font-family has-custom-font-size wp-element-button" style="border-radius:4px;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium);font-size:var(--wp--preset--font-size--small);font-style:normal;font-weight:600"><?php esc_html_e( 'Order Online', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->

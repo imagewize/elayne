@@ -43,7 +43,7 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Pattern Library
 
-Elayne includes **110 professionally designed patterns** across multiple categories:
+Elayne includes **140+ professionally designed patterns** across multiple categories:
 
 **Core Patterns:** Hero Sections (8) • Headers & Footers (10) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (17) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (11)
 
@@ -51,7 +51,9 @@ Elayne includes **110 professionally designed patterns** across multiple categor
 
 **Industry Verticals:** Spa & Wellness (11) • Legal Services (9) • Food & Beverage (12) • Plumbing (9) • Nail Salon (7)
 
-**Templates:** 14 page and post templates
+**WooCommerce Store:** 24 patterns covering the full shopping journey — shop landing, category archives, product detail pages, cart, checkout, and more (requires WooCommerce plugin)
+
+**Templates:** 19 page, post, and WooCommerce templates
 
 Browse the complete pattern library in **Appearance → Editor → Patterns**
 
@@ -64,8 +66,11 @@ Elayne provides specialized pattern sets for specific industries:
 - **Plumbing** - Full-site pattern set for plumbing businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer (9 patterns). Includes a navy/amber style variation with emergency-red accents
 - **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays (3 patterns)
 - **Nail Salon** - Elegant rose/blush pattern set for nail studios: hero, services grid, stats bar, why-us, testimonials, booking CTA, and contact (7 patterns). Includes a "Nail Salon" style variation with Cormorant Garamond/Quicksand fonts and a rose & warm-white color palette
+- **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category hero & toolbar, product gallery with colour swatches & style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile sticky ATC bar, cart, checkout, ticker, featured products, testimonials, and newsletter (requires WooCommerce plugin)
 
 > **Contact Form 7 support:** The `Contact With Form` and `Plumbing Contact Section` patterns include a live contact form when [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) is active. Without it, styled placeholder fields are shown automatically — no broken layouts.
+
+> **WooCommerce attribute filters:** The product category and shop archive templates include an unconfigured attribute filter placeholder in the sidebar. Select the block in **Appearance → Editor → Templates** and choose which product attribute to filter by — no hardcoded IDs, fully compatible with any store configuration.
 
 ### Style Variations
 

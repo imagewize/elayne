@@ -61,12 +61,12 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","justifyContent":"left"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary-alt","textColor":"base","className":"is-style-fill","style":{"border":{"radius":"6px","width":"2px"}},"fontSize":"base"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-base-color has-primary-alt-background-color has-text-color has-background has-base-font-size has-custom-font-size wp-element-button" style="border-width:2px;border-radius:6px"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary-alt","textColor":"base","className":"is-style-fill","style":{"border":{"radius":"6px","width":"2px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-base-color has-primary-alt-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:2px;border-radius:6px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"backgroundColor":"primary-alt","textColor":"base","className":"is-style-outline","style":{"border":{"radius":"6px","width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"fontSize":"base","borderColor":"border-light"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-primary-alt-background-color has-text-color has-background has-link-color has-border-color has-border-light-border-color has-base-font-size has-custom-font-size wp-element-button" style="border-width:2px;border-radius:6px"><?php esc_html_e( 'Our Practice Areas', 'elayne' ); ?></a></div>
+<!-- wp:button {"backgroundColor":"primary-alt","textColor":"base","className":"is-style-outline","style":{"border":{"radius":"6px","width":"2px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"var:preset|font-size|base"}},"borderColor":"border-light"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-primary-alt-background-color has-text-color has-background has-link-color has-border-color has-border-light-border-color has-custom-font-size wp-element-button" style="border-width:2px;border-radius:6px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Our Practice Areas', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

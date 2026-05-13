@@ -43,6 +43,69 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 
 **Style variation cache:** If `theme.json`/`styles/*.json` changes don't appear, switch away and back in Site Editor (`Styles → Browse styles`).
 
+### Demo Rebuild Script (`scripts/rebuild-demo.php`)
+
+Rebuilds demo pages by rendering pattern PHP files in the live WP context and overwriting `post_content` — equivalent to a fresh block-editor insert. Works on both **single-site** and **multisite** WordPress installs.
+
+**Security:** Checks `defined('WP_CLI')` at the top — will not execute via a web request even if the file is publicly reachable.
+
+**Excluded from WP.org distribution** via `.distignore` (`scripts/*`).
+
+**Single-site** (most users):
+```bash
+# Dry-run first (no writes)
+WP_REBUILD_DRY_RUN=1 wp --path=web/wp \
+  eval-file web/app/themes/elayne/scripts/rebuild-demo.php
+
+# Live run
+wp --path=web/wp eval-file web/app/themes/elayne/scripts/rebuild-demo.php
+```
+
+**Multisite** — pass `--url=` so WP-CLI switches to the correct subsite blog before reading page IDs. Page IDs are per-subsite, not global:
+```bash
+wp --path=web/wp --url=example.com/store/ \
+  eval-file web/app/themes/elayne/scripts/rebuild-demo.php
+```
+
+**Customization:** Edit `$map` in the script to map your page IDs to pattern files. Discover page IDs with:
+```bash
+# Single-site
+wp post list --post_type=page --fields=ID,post_title,post_name --path=web/wp
+
+# Multisite subsite
+wp post list --post_type=page --fields=ID,post_title,post_name \
+  --path=web/wp --url=example.com/store/
+```
+
+The optional `$templates` array pushes custom `.html` template variants to the WP database (e.g. a demo-store-specific `archive-product-store.html`) without replacing the theme's base template file.
+
+### WooCommerce Store Subsite
+
+The demo site runs WooCommerce on a **subsite** mounted at `/store/`. All shop URLs are prefixed:
+
+| Page | URL |
+|---|---|
+| Shop (product catalog) | `http://demo.imagewize.test/store/shop/` |
+| Product category | `http://demo.imagewize.test/store/product-category/{slug}/` |
+| Single product | `http://demo.imagewize.test/store/product/{slug}/` |
+| WP Admin | `http://demo.imagewize.test/store/wp-admin/` |
+
+**WooCommerce template hierarchy** (block theme, files in `templates/`):
+- `archive-product.html` → shop page (`/store/shop/`) and fallback for all product archives
+- `taxonomy-product_cat.html` → product category archives (`/store/product-category/*/`)
+- `taxonomy-product_tag.html` → product tag archives
+- `single-product.html` → single product pages
+
+**WooCommerce filter blocks** (WooCommerce 10.7+):
+- `woocommerce/product-filter-taxonomy` — filter by any taxonomy; use `{"taxonomy":"product_cat"}` for categories. **NOT** `product-filter-category` (does not exist).
+- `woocommerce/product-filter-attribute` — filter by product attribute; omit `attributeId` to ship an unconfigured placeholder (Ollie pattern — client selects their attribute via Site Editor). Include `attributeId` only when building demo-specific templates. Verify IDs via `wp wc product_attribute list --path=web/wp --user=1`
+- `woocommerce/product-filter-price` — price range slider
+
+**Demo store attribute IDs** (demo site, May 2026 — do NOT hardcode in distributable templates):
+- `attributeId: 1` → Leather Colour (`pa_leather-colour`)
+- `attributeId: 2` → Style (`pa_style`)
+- `attributeId: 3` → Features (`pa_features`)
+
 ## Design System
 
 ### Color Palette
@@ -99,6 +162,54 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 
 **Pattern categories**: `elayne/hero`, `elayne/features`, `elayne/call-to-action`, `elayne/testimonial`, `elayne/team`, `elayne/statistics`, `elayne/contact`, `elayne/posts`, `elayne/card-simple` (18rem), `elayne/card-extended` (19rem), `elayne/card-profiles` (20rem)
 
+## WooCommerce Implementation
+
+### Three-Tier Strategy
+
+**Always follow this decision flow when implementing WooCommerce features:**
+
+**Tier 1 - Use As-Is:** Use WooCommerce plugin patterns directly from `demo/web/app/plugins/woocommerce/patterns/` (e.g., `product-collection-{2,3,4}-columns.php`). These are **EXEMPT from Elayne's semantic variable rules** per PatternComplianceChecker configuration.
+
+**Tier 2 - Style with CSS:** Override styling via `theme.json` or `style.css` when WooCommerce output doesn't match Elayne designs.
+
+**Tier 3 - Custom Patterns:** Create custom Elayne patterns in `patterns/woocommerce/` **ONLY IF** Tiers 1-2 fail (cannot be styled to match via CSS alone).
+
+### Plugin Patterns Exemption
+
+**WooCommerce plugin-provided patterns are exempt from Elayne's strict compliance rules.**
+
+WooCommerce core plugin includes official patterns in `wp-content/plugins/woocommerce/patterns/` (e.g., `product-collection-3-columns.php`). These patterns follow WordPress/WooCommerce block editor standards and **may contain hardcoded CSS values, custom layouts, and other attributes that would fail Elayne's PatternComplianceChecker**.
+
+**Rule:** Use WooCommerce plugin patterns **as-is** without modification. Do NOT apply Elayne's semantic variable rules or spacing constraints to WooCommerce plugin patterns.
+
+- ✅ Use `demo/web/app/plugins/woocommerce/patterns/*.php` directly
+- ✅ Import via pattern inserter or copy to theme patterns with `woocommerce/` prefix
+- ❌ Do NOT re-write WooCommerce patterns to use semantic spacing variables
+- ❌ Do NOT flag WooCommerce plugin patterns in compliance checks
+
+**Rationale:** WooCommerce is a first-party WordPress plugin. Its patterns are maintained by Automattic/WooCommerce core team and follow WordPress block editor conventions. Forcing these patterns to comply with theme-specific rules creates maintenance burden and divergence from upstream.
+
+**Exception:** The PatternComplianceChecker MUST skip WooCommerce plugin patterns (`demo/web/app/plugins/woocommerce/patterns/*.php`). Theme patterns that use WooCommerce blocks must still follow Elayne rules.
+
+### Common Pitfalls & Fixes
+
+| Issue | Wrong | Right |
+|-------|-------|-------|
+| **Color references** | `"textColor":"charcoal"` | `"textColor":"main"` (use registered theme.json colors) |
+| **Single product wrapper** | `<!-- wp:woocommerce/product-template -->` | Use product blocks directly (no wrapper) |
+| **Pagination context** | Standalone `<!-- wp:query-pagination -->` | `product-collection` handles its own pagination |
+| **Button attributes** | `"style":{...},"className":"..."` | `"className":"...","style":{...}` (root-level first) |
+| **Full-width layout** | Outer `alignfull` with `constrained` | Outer `alignfull` with `"layout":{"type":"default"}` |
+| **Unregistered categories** | `elayne/cart`, `elayne/checkout` | Use only `elayne/woocommerce` |
+
+### Pattern Conventions
+
+- **Naming:** Use `woo-` prefix for WooCommerce-specific patterns (e.g., `woo-cart.php`, `woo-checkout.php`, `woo-shop-landing.php`)
+- **Categories:** Use only registered `elayne/woocommerce` category
+- **Inserter:** Set `Inserter: false` for page-level patterns (cart, checkout) that shouldn't appear in inserter
+
+---
+
 ## Critical Pattern Rules
 
 | Rule | Quick summary |
@@ -121,12 +232,49 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 | **Hardcoded font-size** | NEVER `font-size:1.5rem` — use `"fontSize":"large"` semantic preset |
 | **Button font-size** | `wp:button` does NOT support root-level `fontSize` — use `"style":{"typography":{"fontSize":"var:preset\|font-size\|base"}}` → generates `has-custom-font-size` + inline `font-size` style. Root-level `"fontSize":"base"` causes block validation errors on buttons. |
 | **Spacer blocks** | NEVER `<!-- wp:spacer -->` — use parent `blockGap` instead |
+| **Custom block types** | NEVER use `register_block_type()` in a theme — WP.org plugin-territory violation. Use the `render_block` filter on `core/group` blocks with a specific `className` instead (same pattern as the ticker). |
 
 > Full details with code examples: `docs/elayne/PATTERN-GUIDELINES.md`
 
 ## New Vertical Development
 
 When creating a new industry vertical (plumbing, legal, fintech, etc.), follow the full workflow in `docs/elayne/VERTICAL-WORKFLOW.md`.
+
+**Entry point: always scaffold via pt-cli, never write block JSON from scratch.** Choose the right command per section:
+
+**Option A — Layout-based** (recommended for general structural patterns): use when the section fits one of the 8 structural layouts (`full-width`, `two-column`, `three-column`, `sidebar-left`, `sidebar-right`, `hero-image-left`, `hero-image-right`, `landing-page`). Produces valid block markup immediately; remaining work is content + CSS only.
+
+```bash
+cd demo/web/app/themes/elayne && composer layout:create -- \
+  --title="..." --slug="elayne/..." \
+  --layout=<matching-layout> --category="elayne/..." --output-dir=patterns/
+```
+
+**Option B — WooCommerce template** (for WooCommerce-specific block types: product-collection, filters, cart, checkout, ticker):
+
+```bash
+cd demo/web/app/themes/elayne && composer pattern:create -- \
+  --template=<template> --title="..." --slug="elayne/..." \
+  --category="elayne/..." --output-dir=patterns/ \
+  --with-style --style-dir=assets/styles/block-styles/
+```
+
+Template → section mapping: `hero-cover` → hero, `feature-grid-3col` → services, `two-column-text-image` → why-us, `stats-bar-fullwidth` → stats, `testimonials-grid` → testimonials, `cta-fullwidth` → cta, `blank` → contact.
+
+**Option C — Shell-only** (editor-first, for complex or non-standard sections with no matching layout or template):
+
+```bash
+cd demo/web/app/themes/elayne && composer pattern:create -- \
+  --template=woo-hero --shell-only --title="..." --slug="elayne/..." \
+  --category="elayne/..." --output-dir=patterns/ \
+  --with-style --style-dir=assets/styles/block-styles/
+```
+
+Build in the WP block editor → Copy all blocks → paste over the `<!-- PASTE BLOCKS HERE -->` marker.
+
+---
+
+After scaffolding, customise content only — do not restructure the block JSON shape. Read validation-guard snippets from `vendor/imagewize/pt-cli/snippets/valid-*.txt` and `responsive-grid-min-width.txt` before touching cover, columns, button, or heading blocks.
 
 **Critical: always complete Phase 2.5 (Component Prep) before writing any PHP patterns.** This phase maps font sizes to presets, sources SVGs, audits unicode characters, and flags complex CSS — preventing the multi-pass fix cycles that come from direct HTML → pattern conversion.
 
@@ -207,19 +355,66 @@ Every user-facing string MUST be wrapped. Unwrapped strings cause WP.org rejecti
 
 > ⚠️ **Unicode in PHP strings**: PHP single-quoted strings do NOT process `\u` escape sequences — `'\u2013'` outputs the literal text `\u2013`, not `–`. Always use the actual UTF-8 character (e.g. `'Mon–Fri · Sat'`) or a double-quoted string with `"\u{2013}"`. Never copy `\uXXXX` escapes from JavaScript into PHP single-quoted strings.
 
-## Pattern Compliance Checker
+## Pattern Validation (three-pass)
+
+Always run all three validators. Use Pass 1 first — it fixes structural issues that regex cannot catch.
+
+**Pass 1 — Gutenberg structural validator** (requires the Trellis VM; database lives there):
 
 ```bash
-# From monorepo root — check all patterns
-php scripts/elayne/pattern-check/class-patterncompliancechecker.php \
-  demo/web/app/themes/elayne/patterns/*.php
+# Dry run
+cd ~/code/imagewize.com/trellis && trellis vm shell \
+  --workdir /srv/www/demo.imagewize.com/current -- \
+  wp pattern validate web/app/themes/elayne/patterns/my-pattern.php
 
-# Check specific file
-php scripts/elayne/pattern-check/class-patterncompliancechecker.php \
-  demo/web/app/themes/elayne/patterns/my-pattern.php
+# Auto-fix structural issues (unbalanced delimiters, malformed JSON, bad nesting)
+cd ~/code/imagewize.com/trellis && trellis vm shell \
+  --workdir /srv/www/demo.imagewize.com/current -- \
+  wp pattern validate web/app/themes/elayne/patterns/my-pattern.php --fix
+
+# All patterns
+cd ~/code/imagewize.com/trellis && trellis vm shell \
+  --workdir /srv/www/demo.imagewize.com/current -- \
+  wp pattern validate web/app/themes/elayne/patterns/ --fix
 ```
 
-CI runs automatically on every PR via `.github/workflows/pattern-compliance.yml`.
+**Pass 2 — pt-cli compliance checker** (run on the host from the theme directory; no WordPress required):
+
+```bash
+# Check all patterns
+composer check
+
+# Or directly via pt-cli
+pt-cli check patterns/ --theme=elayne
+
+# Check specific file
+pt-cli check patterns/my-pattern.php --theme=elayne
+
+# With autofix
+pt-cli check patterns/ --theme=elayne --autofix
+```
+
+**Pass 3 — HTML template compliance checker** (run on the host; checks `templates/` and `parts/` .html files):
+
+Catches client-side block validation drift that PHP compliance cannot detect: WooCommerce filter blocks missing `<div>` wrappers, `product-filters` missing CSS custom properties, `taxQuery:{}` vs `[]`, missing `"theme"` on `wp:template-part`, and unbalanced HTML tags.
+
+```bash
+# Check templates directory
+pt-cli check:templates demo/web/app/themes/elayne/templates/ --theme=elayne
+
+# Check parts directory
+pt-cli check:templates demo/web/app/themes/elayne/parts/ --theme=elayne
+
+# With autofix (repairs taxQuery and template-part theme automatically)
+pt-cli check:templates demo/web/app/themes/elayne/templates/ --theme=elayne --autofix
+
+# Check a single template file
+pt-cli check:templates demo/web/app/themes/elayne/templates/archive-product.html --theme=elayne
+```
+
+> Pass 1 requires the Trellis VM (`cd trellis && trellis vm shell`) because WordPress needs a database connection — the VM runs the database. Files sync automatically via Lima so patterns edited on the host are immediately available in the VM.
+
+CI runs Pass 2 automatically on every PR via `.github/workflows/pattern-compliance.yml`.
 
 ## Version Management
 
@@ -234,8 +429,7 @@ Update all three on every release:
 |---|---|---|
 | `404.html` | `elayne/template-page-404` | 404 error page |
 | `archive.html` | `elayne/template-page-archive` | Archives |
-| `front-page.html` | `elayne/template-index-grid` | Static homepage (overrides page content) |
-| `home.html` | `elayne/template-index-grid` | Blog index |
+| `home.html` | `elayne/template-index-grid` | Blog index / static homepage |
 | `index.html` | `elayne/template-index-grid` | Fallback |
 | `page.html` | `elayne/template-page` | Default page |
 | `page-no-title.html` | `elayne/template-page-no-title` | Page without title |
@@ -243,6 +437,6 @@ Update all three on every release:
 | `search.html` | `elayne/template-page-search` | Search results |
 | `single.html` | `elayne/template-post-centered` | Single post |
 
-⚠️ `front-page.html` overrides page content — block editor content won't appear on frontend.
+⚠️ `front-page.html` has been removed — it caused override issues on other multisite subsites. Homepage is assigned via the WordPress page editor. A `home.html` template (Ollie-style) may be added in future.
 
 Each template references one pattern: `<!-- wp:pattern {"slug":"elayne/pattern-name"} /-->`.

@@ -1,0 +1,420 @@
+/* Category Products Block Style */
+
+/* Sidebar "× Clear filters" link injected by JS when filters are active */
+.elayne-clear-filters-btn {
+	display: block;
+	margin-bottom: var(--wp--preset--spacing--small);
+	font-size: var(--wp--preset--font-size--x-small);
+	font-family: var(--wp--preset--font-family--body);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--orange);
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.elayne-clear-filters-btn:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+/* Reset is-layout-flow margin injection */
+.wp-block-group.is-style-elayne-category-products.is-layout-flow > * {
+	margin-block-start: 0 !important;
+	margin-block-end: 0 !important;
+}
+
+/* Products area - 2-column grid layout */
+.wp-block-group.is-style-elayne-category-products {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	min-height: 70vh;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Sidebar area */
+.wp-block-group.elayne-shop-filters-sidebar {
+	border-right: 1px solid var(--wp--preset--color--border-light);
+	background: var(--wp--preset--color--tertiary);
+	position: sticky;
+	top: 128px;
+	height: calc(100vh - 128px);
+	overflow-y: auto;
+}
+
+/* Product collection - placed in column 2 of the body grid */
+.wp-block-woocommerce-product-collection {
+	grid-column: 2;
+	padding: var(--wp--preset--spacing--x-large) var(--wp--preset--spacing--x-large) 0 var(--wp--preset--spacing--x-large);
+	min-height: 70vh;
+}
+
+/* Product grid — override WooCommerce flex layout with 3-column grid */
+.wp-block-woocommerce-product-collection .wc-block-product-template,
+.wp-block-woocommerce-product-collection .wp-block-post-template,
+.wp-block-woocommerce-product-collection .wc-block-grid {
+	display: grid !important;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2px;
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/* Ensure all grid items stretch to same height */
+	align-items: stretch;
+}
+
+/* Reset is-layout-flow margin on product grid items — WordPress injects margin-block-start
+   via .is-layout-flow > * + * which skips :first-child, causing col 1 to sit higher */
+.wp-block-woocommerce-product-collection .wc-block-product-template > li,
+.wp-block-woocommerce-product-collection .wp-block-post-template > li {
+	margin-block-start: 0 !important;
+	margin-block-end: 0 !important;
+}
+
+.wp-block-woocommerce-product-collection .wc-block-grid .wc-block-grid__product {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: var(--wp--preset--color--base);
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: box-shadow 0.3s ease;
+	/* Fill the grid cell height */
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	/* Reset list item styling */
+	list-style: none;
+}
+
+.wp-block-woocommerce-product-collection .wc-block-grid .wc-block-grid__product:hover {
+	box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Product template */
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-template {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: transparent;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Product image wrap — 3-class specificity (0,3,0) beats WooCommerce's aspect-ratio:1/1 (0,2,0) */
+.wp-block-woocommerce-product-collection .wc-block-product .wp-block-woocommerce-product-image {
+	position: relative;
+	overflow: hidden;
+	aspect-ratio: 3/4;
+	margin: 0;
+	background-color: var(--wp--preset--color--base);
+}
+
+.wp-block-woocommerce-product-collection .wc-block-product .wp-block-woocommerce-product-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	display: block;
+}
+
+.wp-block-woocommerce-product-collection .wc-block-product:hover .wp-block-woocommerce-product-image img {
+	transform: scale(1.04);
+}
+
+/* Product image container */
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-image > .wp-block-woocommerce-product-image__container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+/* Sale badge */
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-sale-badge {
+	position: absolute;
+	top: var(--wp--preset--spacing--small);
+	left: var(--wp--preset--spacing--small);
+	z-index: 2;
+	margin: 0;
+	padding: 0.28rem 0.6rem;
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 500;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	background-color: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--tertiary);
+}
+
+/* Product info area */
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-template > .wp-block-group:last-child {
+	padding: var(--wp--preset--spacing--medium);
+	flex: 1;
+	background-color: var(--wp--preset--color--base);
+}
+
+/* Product title */
+.wp-block-woocommerce-product-collection .wp-block-post-title {
+	font-family: var(--wp--preset--font-family--heading);
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 400;
+	line-height: 1.3;
+	color: var(--wp--preset--color--primary);
+	margin-top: 0;
+	margin-bottom: var(--wp--preset--spacing--small);
+	text-align: left;
+}
+
+.wp-block-woocommerce-product-collection .wp-block-post-title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Product category - needs to be added via custom markup */
+.wp-block-woocommerce-product-collection .product-category {
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 400;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--main-accent);
+	margin: 0 0 var(--wp--preset--spacing--small) 0;
+}
+
+/* Product price */
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-price {
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 500;
+	color: var(--wp--preset--color--primary);
+	text-align: left;
+	margin: 0 0 var(--wp--preset--spacing--small) 0;
+}
+
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-price .price {
+	font-weight: 500;
+}
+
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-price del {
+	text-decoration: line-through;
+	color: var(--wp--preset--color--main-accent);
+	font-weight: 300;
+}
+
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-price ins {
+	text-decoration: none;
+	color: var(--wp--preset--color--primary);
+}
+
+/* Add to cart button — WooCommerce places this at grid-area:1/1 align-self:end (overlays image bottom) */
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button {
+	width: 100%;
+}
+
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button .wp-block-button__link {
+	width: 100%;
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	border: none;
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 500;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	padding: var(--wp--preset--spacing--small);
+	text-align: center;
+	cursor: pointer;
+	margin: 0;
+	display: block;
+}
+
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button .wp-block-button__link:hover {
+	background-color: var(--wp--preset--color--orange);
+}
+
+/* Color dots placeholder */
+.wp-block-woocommerce-product-collection .product-color-dots {
+	margin-top: var(--wp--preset--spacing--small);
+	margin-bottom: 0;
+	display: flex;
+	gap: var(--wp--preset--spacing--x-small);
+	flex-wrap: wrap;
+}
+
+.wp-block-woocommerce-product-collection .color-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 1.5px solid var(--wp--preset--color--primary);
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	min-height: 10px;
+	background-color: var(--wp--preset--color--base-accent);
+}
+
+.color-dot.has-tertiary-background-color {
+	background-color: var(--wp--preset--color--tertiary);
+}
+
+.color-dot.has-base-background-color {
+	background-color: var(--wp--preset--color--base);
+}
+
+/* Pagination */
+.wp-block-query-pagination {
+	grid-column: 1 / -1;
+	padding: var(--wp--preset--spacing--xx-large) 0 var(--wp--preset--spacing--xx-large) 0;
+	border-top: 1px solid var(--wp--preset--color--border-light);
+}
+
+.wp-block-query-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--wp--preset--spacing--x-small);
+	flex-wrap: wrap;
+}
+
+.wp-block-query-pagination .wp-block-query-pagination-previous,
+.wp-block-query-pagination .wp-block-query-pagination-next,
+.wp-block-query-pagination .wp-block-query-pagination-numbers {
+	margin: 0;
+}
+
+/* Page buttons styling */
+.wp-block-query-pagination-previous a,
+.wp-block-query-pagination-next a,
+.wp-block-query-pagination-numbers a {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--wp--preset--font-size--x-small);
+	border: 1px solid var(--wp--preset--color--border-light);
+	background: var(--wp--preset--color--tertiary);
+	color: var(--wp--preset--color--primary);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-decoration: none;
+	font-family: var(--wp--preset--font-family--body);
+}
+
+.wp-block-query-pagination-numbers a {
+	min-width: 40px;
+}
+
+.wp-block-query-pagination-previous a:hover,
+.wp-block-query-pagination-next a:hover,
+.wp-block-query-pagination-numbers a:hover {
+	border-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-query-pagination-numbers a:hover:not(.current) {
+	background: transparent;
+}
+
+.wp-block-query-pagination-numbers .current {
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	border-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-query-pagination-previous a:focus,
+.wp-block-query-pagination-next a:focus,
+.wp-block-query-pagination-numbers a:focus {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 2px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet <= 1024px */
+@media (max-width: 1024px) {
+	.wp-block-group.is-style-elayne-category-products {
+		grid-template-columns: 200px 1fr;
+	}
+
+	.wp-block-woocommerce-product-collection {
+		padding: var(--wp--preset--spacing--x-large) var(--wp--preset--spacing--x-large) 0 var(--wp--preset--spacing--medium);
+	}
+
+	.wp-block-woocommerce-product-collection .wc-block-product-template,
+	.wp-block-woocommerce-product-collection .wp-block-post-template,
+	.wp-block-woocommerce-product-collection .wc-block-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2px;
+	}
+
+	.wp-block-group.elayne-shop-filters-sidebar {
+		top: 128px;
+	}
+
+	.wp-block-query-pagination {
+		padding: var(--wp--preset--spacing--xx-large) 0 var(--wp--preset--spacing--xx-large) var(--wp--preset--spacing--medium);
+	}
+}
+
+/* Mobile <= 768px */
+@media (max-width: 768px) {
+	.wp-block-group.is-style-elayne-category-products {
+		grid-template-columns: 1fr;
+		min-height: auto;
+	}
+
+	/* Hide sidebar on mobile - will show as drawer */
+	.wp-block-group.elayne-shop-filters-sidebar {
+		display: none;
+		position: static;
+		height: auto;
+		border: none;
+		background: transparent;
+	}
+
+	/* Sidebar shows when mobile filter is open */
+	.wp-block-group.elayne-shop-filters-sidebar.mobile-open {
+		display: block;
+		position: fixed;
+		inset: 0;
+		z-index: 120;
+		overflow-y: auto;
+		background: var(--wp--preset--color--tertiary);
+		border-right: none;
+	}
+
+	.wp-block-group.elayne-shop-filters-sidebar.mobile-open > .wp-block-group {
+		padding: var(--wp--preset--spacing--xx-large) var(--wp--preset--spacing--medium);
+		position: static;
+		height: auto;
+		border-right: none;
+	}
+
+	.wp-block-woocommerce-product-collection {
+		grid-column: 1;
+		padding: var(--wp--preset--spacing--medium);
+		min-height: auto;
+	}
+
+	.wp-block-woocommerce-product-collection .wc-block-product-template,
+	.wp-block-woocommerce-product-collection .wp-block-post-template,
+	.wp-block-woocommerce-product-collection .wc-block-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5px;
+	}
+
+	.wp-block-query-pagination {
+		padding: var(--wp--preset--spacing--large) var(--wp--preset--spacing--medium) var(--wp--preset--spacing--xx-large);
+	}
+
+	/* Mobile pagination */
+	.wp-block-query-pagination-previous a,
+	.wp-block-query-pagination-next a,
+	.wp-block-query-pagination-numbers a {
+		width: 36px;
+		height: 36px;
+		font-size: var(--wp--preset--font-size--x-small);
+	}
+}

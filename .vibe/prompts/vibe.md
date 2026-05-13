@@ -66,6 +66,27 @@ The demo site uses **Trellis VM** (Lima-based, NOT Vagrant).
 - **File sync**: Automatic real-time sync via Lima — no manual rsync needed
 - **Common issue**: Changes not appearing → WordPress cache, not file sync
 
+### WooCommerce Store Subsite
+
+WooCommerce runs on a **subsite at `/store/`**. All shop URLs are prefixed:
+
+| Page | URL |
+|---|---|
+| Shop (product catalog) | `http://demo.imagewize.test/store/shop/` |
+| Product category | `http://demo.imagewize.test/store/product-category/{slug}/` |
+| Single product | `http://demo.imagewize.test/store/product/{slug}/` |
+
+**Block theme template hierarchy** (`templates/` directory):
+- `archive-product.html` → shop page + fallback for all product archives
+- `taxonomy-product_cat.html` → category archive pages (different filter set, no category filter)
+- `single-product.html` → single product pages
+
+**WooCommerce filter blocks** (WooCommerce 10.7+):
+- Use `woocommerce/product-filter-taxonomy` with `{"taxonomy":"product_cat"}` for category filtering — `product-filter-category` does NOT exist
+- Use `woocommerce/product-filter-attribute` **without** `attributeId` for distributable templates — renders as an unconfigured placeholder the client configures via Site Editor (Ollie pattern; no hardcoded IDs). Only include `attributeId` when building demo-specific templates.
+
+**Demo store attribute IDs** (May 2026 — do NOT hardcode in distributable templates): `1` = Leather Colour, `2` = Style, `3` = Features
+
 **Clear cache:**
 ```bash
 cd ~/code/imagewize.com/trellis
@@ -113,8 +134,43 @@ ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
 
 **Fluid Font Sizes**: `xx-small` → `x-small` → `small` → `base` → `medium` → `large` → `x-large` → `xx-large`
 
+**Actual font-size values (critical — prevents oversized headings):**
+| Slug | Max value | Use for |
+|---|---|---|
+| `x-small` | 0.95rem | Labels, badges, captions |
+| `small` | 1.05rem | Small body, buttons |
+| `base` | 1.165rem | Body text |
+| `medium` | 1.65rem | Lead text, stat labels |
+| `large` | 2.75rem | H1 on dark hero, stat numbers |
+| `x-large` | 3.5rem | Display H1 only |
+| `xx-large` | 4.39rem | Rarely used — very large display only |
+
 ### Spacing Scale
-`small` → `medium` → `large` → `x-large` → `xx-large` → `xxx-large` (all use clamp() for responsive scaling)
+`2-x-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large` (all use clamp() for responsive scaling)
+— ⚠️ `xx-small` does NOT exist. Use `2-x-small` or `x-small`.
+
+**Actual spacing values (critical — prevents oversized pills/badges):**
+| Slug | Value |
+|---|---|
+| `2-x-small` | clamp(0.25rem → 0.5rem) ~4–8px |
+| `x-small` | clamp(0.375rem → 0.75rem) ~6–12px |
+| `small` | clamp(0.5rem → 1rem) ~8–16px |
+| `medium` | clamp(1.5rem → 2rem) ~24–32px ← LARGE, not "medium" |
+| `large` | clamp(2rem → 3rem) ~32–48px |
+| `x-large` | clamp(3rem → 5rem) ~48–80px |
+
+**Pill/badge padding rule:** Always use `x-small` (vertical) + `small` (horizontal). Never `medium` — that is ~28px per side and will make any pill grotesquely wide.
+
+### WooCommerce Implementation
+- **Three-tier strategy:** Tier 1 = Use WooCommerce plugin patterns as-is (EXEMPT from Elayne rules), Tier 2 = Style with theme CSS, Tier 3 = Custom Elayne patterns only if needed
+- **Plugin patterns:** Use `demo/web/app/plugins/woocommerce/patterns/*.php` directly via `<!---->`
+- **Naming:** Use `woo-` prefix for WooCommerce patterns (e.g., `woo-cart.php`)
+- **Categories:** Use only `elayne/woocommerce` (registered in functions.php)
+- **Colors:** Use registered palette (`primary`, `main`, `base`, `tertiary`, `primary-accent`) - **NEVER use charcoal or cream**
+- **Single product:** Use product blocks directly - **NEVER wrap in `woocommerce/product-template`**
+- **Archive:** `product-collection` handles own pagination - **NEVER use standalone `query-pagination`**
+- **Buttons:** Root-level attributes first (`className` before `style`)
+- **Full-width:** Outer `alignfull` group must use `"layout":{"type":"default"}`
 
 ## Pattern Development
 
@@ -155,6 +211,7 @@ ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
 |---|---|
 | **Native blocks** | NEVER use `wp:html` — always use `wp:list`, `wp:group`, `wp:heading`, etc. |
 | **HTML comments** | NEVER add `<!-- comment -->` between `<div>` tags and block comments — causes validation failure |
+| **Whitespace between blocks** | NEVER add tabs, newlines, or spaces between an opening/closing `<div>` and the adjacent `<!-- wp:... -->` / `<!-- /wp:... -->` comment — block serialization is whitespace-strict |
 | **Block attributes** | `backgroundColor`, `layout`, `align` are root-level — NEVER nest inside `style` object |
 | **Full-width layout** | Outer `alignfull` group: ALWAYS `"layout":{"type":"default"}`; inner groups use `"constrained"` |
 | **Page template** | `post-content` block must use `"layout":{"type":"constrained"}` — NOT `"default"` |
@@ -162,10 +219,87 @@ ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
 | **Images** | NEVER hardcode media IDs; ALWAYS use `get_template_directory_uri()` wrapped in `esc_url()` |
 | **External images** | NEVER use hardcoded external URLs (e.g. `http://demo.imagewize.test/...`) — WP.org rejection |
 | **Image block** | `is-resized` class required when width/height set; `align` comes after width/height in JSON |
+| **Image block — theme SVGs** | NEVER add `width`/`height` attributes to `<img>` inside `wp:image` for theme-bundled SVGs — no media ID means WP can't validate dimensions and throws a block validation error. Use `<img src="..." alt=""/>` only. |
 | **Translation strings** | ALL user-facing text in patterns MUST use `esc_html_e()` / `esc_attr__()` with `'elayne'` domain |
+| **Translation alt text** | ALL alt attributes MUST use `esc_attr__()` — NEVER bare text |
 | **WP-CLI patterns** | Use `<!-- wp:pattern {"slug":"elayne/slug"} /-->` — NEVER `php -r 'include ...'` |
+| **Font sizes** | NEVER hardcode `font-size: 10px` — use semantic variables (`var:preset|font-size|*`) |
+| **Spacer blocks** | NEVER use `wp:spacer` — use `blockGap` on parent containers |
+| **Emails** | NEVER use custom domains — use `example@example.com` only (WP.org requirement) |
+| **Button fontSize** | NEVER use root-level `"fontSize":"base"` on `wp:button` — use `"style":{"typography":{"fontSize":"var:preset|font-size|base"}}` |
+| **Button attribute order** | NEVER put `className` after `style` — root-level attributes first |
+| **Cover block minHeight** | NEVER use `style.dimensions.minHeight` without root `minHeight` — causes validation failure |
+| **overflow:hidden** | NEVER use as inline style on groups — use className with CSS instead |
+| **opacity** | NEVER use as inline style — use className with CSS instead |
+| **Custom block types** | NEVER use `register_block_type()` in a theme — WP.org plugin-territory violation. Use the `render_block` filter on `core/group` with a specific `className` instead (same pattern as the ticker). |
 
 > **Full details with code examples**: `docs/elayne/PATTERN-GUIDELINES.md`
+
+### Block HTML Validation Rules (Critical)
+
+WordPress validates blocks by comparing the `save` function output against the stored HTML in the pattern. Mismatches cause `Block validation failed` errors in the editor console. Three classes of error are common in Elayne patterns:
+
+**1. fontSize / fontFamily as block attributes → must use CSS classes, not inline styles**
+
+When `fontSize` or `fontFamily` appear as ROOT-level block attributes (outside `"style":{...}`), WordPress's save function generates CSS classes — NOT inline `style` values. The HTML must match.
+
+| Block JSON | Required HTML class | Wrong HTML (causes error) |
+|---|---|---|
+| `"fontSize":"x-large"` | `has-x-large-font-size` | `style="font-size:var(--wp--preset--font-size--x-large)"` |
+| `"fontFamily":"var:preset\|font-family\|heading"` | `has-var-preset-font-family-heading-font-family` | `style="font-family:var(--wp--preset--font-family--heading)"` |
+
+This is different from `"style":{"typography":{"fontSize":"var:preset|font-size|large"}}` which intentionally produces an inline style.
+
+**2. blockGap and WordPress 6.6+ inline gap behavior**
+
+WordPress 6.6+ **stopped** outputting inline `gap` for most layouts. The `blockGap` attribute in JSON is now handled by WordPress's layout CSS system (`--wp--style--block-gap`) for constrained/default layouts.
+
+| Block type | Layout | HTML gap requirement |
+|---|---|---|
+| `core/group` | `flex` | **Must have** `style="gap:..."` — flex layout still needs inline gap |
+| `core/group` | `constrained` or `default` | **Must NOT have** `gap` inline — WP layout CSS handles it |
+| `core/columns` | any | **Must NEVER have** `gap` inline — block CSS handles column gap |
+
+```html
+<!-- CORRECT for constrained/default group -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">  <!-- NO gap: inline style -->
+
+<!-- CORRECT for flex group -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex"}} -->
+<div class="wp-block-group" style="gap:var(--wp--preset--spacing--small)">  <!-- gap: required -->
+
+<!-- CORRECT for columns -->
+<!-- wp:columns {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+<div class="wp-block-columns">  <!-- NO gap: inline style -->
+```
+
+**3. metadata.name — only on the root block**
+
+The `"metadata":{"name":"...","patternName":"..."}` attributes identify a block as the root of a named pattern. They should only appear on the OUTERMOST block of a standalone pattern file. Adding `metadata` to inner/nested blocks causes those blocks to appear as named patterns in the editor and can confuse WordPress's pattern tracking.
+
+```html
+<!-- WRONG — metadata on an inner group block: -->
+<!-- wp:group {"metadata":{"name":"My Section",...}} -->  ← nested inside another block
+
+<!-- CORRECT — metadata only on the root (outermost) block of the pattern file: -->
+<!-- wp:group {"metadata":{"name":"My Section","patternName":"elayne/my-section",...}} -->
+<div ...> ← this IS the first block in the .php file
+```
+
+> **Pattern Validation** uses a two-pass approach: (1) Gutenberg structural validator — `cd demo && wp pattern validate web/wp/wp-content/themes/elayne/patterns/*.php --fix`; (2) Elayne compliance checker — `php scripts/elayne/pattern-check/class-patterncompliancechecker.php demo/web/app/themes/elayne/patterns/*.php`. Always run Pass 1 first.
+
+### WooCommerce Pattern Rules
+
+**Note:** WooCommerce plugin patterns (`woocommerce/patterns/*.php`) are **EXEMPT** from Elayne's strict compliance rules per CLAUDE.md. These rules apply only to **theme-specific patterns** that use WooCommerce blocks.
+
+| Rule | Quick summary |
+|---|---|
+| **product-title in template** | NEVER use `woocommerce/product-title` inside `product-template` — use `post-title` with `__woocommerceNamespace` |
+| **Native WC blocks** | NEVER add `__woocommerceNamespace` to `product-image`, `product-price`, `product-rating`, `product-button`, `product-sale-badge` |
+| **product-collection query** | ALWAYS include full `"query":{...}` metadata |
+| **product-collection wrapper** | ALWAYS include `<div class="wp-block-woocommerce-product-collection">` after opening block comment |
+| **product-collection layout** | NEVER use both `layout` and `displayLayout` — use only `displayLayout` for WooCommerce blocks |
 
 ### Grid Layouts
 
@@ -198,6 +332,7 @@ ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
 | Content type | Function to use | Example |
 |---|---|---|
 | Text inside HTML tags | `esc_html_e( 'Text', 'elayne' )` | `<h2><?php esc_html_e( 'Our Team', 'elayne' ); ?></h2>` |
+| Text with inline HTML (`<strong>`, `<br>`, `<a>`) | `wp_kses_post( __( 'Text', 'elayne' ) )` | `<p><?php echo wp_kses_post( __( 'Powered by <strong>Elayne</strong>', 'elayne' ) ); ?></p>` |
 | Text in HTML attributes (alt, title, aria-label) | `esc_attr__( 'Text', 'elayne' )` | `alt="<?php echo esc_attr__( 'Team photo', 'elayne' ); ?>"` |
 
 **What to wrap:** all headings, paragraphs, list items, button labels, non-empty `alt` text, stat numbers, badge text, CTA text, testimonial quotes, names, job titles.
@@ -212,6 +347,8 @@ grep -n ">\s*[A-Z][^<]*\s*<" patterns/your-pattern.php
 
 - Text domain: `'elayne'`
 - Translation files in `/languages/` directory
+
+> ⚠️ **Unicode in PHP strings**: PHP single-quoted strings do NOT process `\u` escape sequences — `'–'` outputs the literal text `–`, not `–`. Always use the actual UTF-8 character (e.g. `'Mon–Fri · Sat'`) or a double-quoted string with `"\u{2013}"`. Never copy `\uXXXX` escapes from JavaScript into PHP single-quoted strings.
 
 ### Border Radius Presets (WordPress 6.9+)
 
@@ -325,15 +462,65 @@ File contains:
 ```
 A search pattern with `"margin":{"top":"0"}},"backgroundColor"` (missing one `}`) fails with ~99.8% similarity. The correct pattern needs three closing braces: `"margin":{"top":"0"}}},"backgroundColor"`.
 
-## Pattern Compliance Checking
+## Pattern Validation (three-pass)
 
-**Local Testing:**
+Always run all three validators. Pass 1 fixes structural issues (unbalanced delimiters, malformed JSON, bad nesting) that regex cannot catch. Pass 2 enforces Elayne-specific rules. Pass 3 catches client-side block validation drift in .html template and part files.
+
+**Pass 1 — Gutenberg structural validator** (requires Trellis VM — database lives there):
 ```bash
-cd ~/imagewize.com/demo/web/app/themes/elayne
-php ~/code/imagewize.com/scripts/elayne/pattern-check/class-patterncompliancechecker.php patterns/*.php
+# From project root - dry run
+cd ~/code/imagewize.com
+  trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp pattern validate web/wp/wp-content/themes/elayne/patterns/my-pattern.php
+
+# Auto-fix structural issues
+cd ~/code/imagewize.com
+  trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp pattern validate web/wp/wp-content/themes/elayne/patterns/my-pattern.php --fix
+
+# All patterns
+cd ~/code/imagewize.com
+  trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp pattern validate web/wp/wp-content/themes/elayne/patterns/ --fix
+
+# Using limactl directly (--workdir BEFORE VM name, no trailing --):
+limactl shell --workdir /srv/www/demo.imagewize.com/current imagewize.com wp pattern validate web/wp/wp-content/themes/elayne/patterns/my-pattern.php --fix
 ```
 
-The GitHub Actions workflow at `~/code/elayne/.github/workflows/pattern-compliance.yml` runs automatically on GitHub.
+**Pass 2 — pt-cli compliance checker** (from theme directory; no WordPress required):
+```bash
+# Run from theme directory
+cd ~/code/imagewize.com/demo/web/app/themes/elayne
+
+# Check all patterns (via composer shortcut)
+composer check
+
+# Or directly via pt-cli (same thing)
+./vendor/bin/pt-cli check patterns/ --theme=elayne
+
+# Check a specific file
+./vendor/bin/pt-cli check patterns/woocommerce/my-pattern.php --theme=elayne
+
+# With autofix
+./vendor/bin/pt-cli check patterns/ --theme=elayne --autofix
+```
+
+**Pass 3 — HTML template compliance checker** (host machine; checks `templates/` and `parts/` .html files):
+
+Run after modifying any `.html` template or part file. Catches WooCommerce filter blocks missing `<div>` wrappers (WooCommerce 9.x+ save() change), `product-filters` div missing CSS custom properties, `taxQuery:{}` (object) that must be `[]` (array), missing `"theme"` attribute on `wp:template-part`, and unbalanced HTML tags.
+
+```bash
+# Check templates and parts directories
+pt-cli check:templates demo/web/app/themes/elayne/templates/ --theme=elayne
+pt-cli check:templates demo/web/app/themes/elayne/parts/ --theme=elayne
+
+# With autofix (repairs taxQuery:{} → taxQuery:[] and adds missing "theme" to wp:template-part)
+pt-cli check:templates demo/web/app/themes/elayne/templates/ --theme=elayne --autofix
+
+# Check a single template file
+pt-cli check:templates demo/web/app/themes/elayne/templates/archive-product.html --theme=elayne
+```
+
+> Pass 1 requires the Trellis VM because WordPress needs a live database connection — the VM runs the database. Files sync automatically via Lima so patterns edited on the host are immediately available in the VM. **Important**: `limactl shell` does NOT support `--workdir` flag — use `trellis vm shell` or place `--workdir` BEFORE the VM name with `limactl shell`. macOS paths do not exist in the VM — always use VM-side paths like `/srv/www/demo.imagewize.com/current`. The `--compliance` flag on `wp pattern validate` warns that the compliance checker is not accessible inside the VM; always run Pass 2 separately on the host.
+
+The GitHub Actions workflow runs Pass 2 automatically on every PR. Passes 1 and 3 require the local environment and run locally only.
 
 ## Key Components
 

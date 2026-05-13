@@ -4,17 +4,17 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 3.9.1
+Stable tag: 4.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 110 beautiful pattern designs, 32 interactive CSS effects, WooCommerce integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 140+ beautiful pattern designs, 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 110 Professional Patterns - All 100% original, created specifically for Elayne
+* 140+ Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
 * 7 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Plumbing, Nail Salon, and Publicist
@@ -30,7 +30,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-Elayne includes **103 professionally designed patterns** across multiple categories:
+Elayne includes **140+ professionally designed patterns** across multiple categories:
 
 **Core Patterns:**
 * Hero Sections (10) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs
@@ -56,6 +56,7 @@ Elayne includes **103 professionally designed patterns** across multiple categor
 * Food & Beverage (12) - Restaurant and café patterns with menus, chef profiles, event grids, hours/location, and hero sections
 * Plumbing & Home Services (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
 * Nail Salon (7) - Hero with real photo, services grid, stats bar, why-us, testimonials, CTA, and contact patterns with rose palette
+* WooCommerce Store (24) - Complete e-commerce pattern set: shop landing, category hero & toolbar, product gallery, colour swatches, style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile ATC bar, cart, checkout, ticker, featured products, testimonials, newsletter, and more
 
 Note: The "Contact With Form" and "Plumbing Contact Section" patterns display a live Contact Form 7 form when that plugin is active. Without it, styled placeholder fields are shown as a fallback — no broken layouts.
 
@@ -73,6 +74,9 @@ Elayne provides specialized pattern sets for specific industries:
 * **Food & Beverage** - Restaurant and café patterns with menu displays, chef profiles, event grids, hours/location info, testimonials, and hero sections
 * **Plumbing & Home Services** - Full-site pattern set for trade businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer. The contact pattern integrates with Contact Form 7 (optional — placeholder fields shown when inactive).
 * **Nail Salon** - Full-site pattern set with hero (CC0 photo), services grid, stats bar, why-us, testimonials, booking CTA, and contact. Includes a dedicated rose & blush pink style variation with Cormorant Garamond headings.
+* **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category archives with hero and toolbar, product detail pages (gallery, swatches, options, engraving, trust badges, tabs), cart, checkout, and supporting sections (ticker, featured products, testimonials, newsletter). Requires WooCommerce plugin.
+
+Note: The product category and shop archive templates include an unconfigured attribute filter placeholder in the sidebar. Select the block in Appearance → Editor → Templates and choose which product attribute to filter by — no hardcoded IDs, works with any store configuration.
 
 = Style Variations =
 
@@ -168,6 +172,39 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.0.0 - 05/12/26 =
+* ADDED: WooCommerce store subsite integration at /store/ with shop, category archive, and single product templates.
+* ADDED: Three-tier WooCommerce strategy — plugin patterns used as-is (exempt from compliance), CSS overrides, custom theme patterns as last resort.
+* ADDED: product-filter-rating block added to base shop archive (archive-product.html) and category archive (taxonomy-product_cat.html) sidebars for star rating filtering.
+* ADDED: product-filter-taxonomy (Categories) added to taxonomy-product_cat.html sidebar — shoppers can switch between product categories from within a category archive page.
+* ADDED: archive-product-store.html and taxonomy-product_cat-store.html — demo-store-specific templates with Leather Colour (chip display), Style, and Features (checkboxes) attribute filters pre-wired; pushed to store DB via rebuild script.
+* ADDED: Mobile filter drawer JS (category-filter-drawer.js) — slide-in sidebar, backdrop, Apply button, dynamic "Clear filters" link.
+* ADDED: elayne-clear-filters-btn CSS styles for the sidebar "× Clear filters" link (uppercase, orange brand colour, hover to primary).
+* ADDED: Product page JS (woocommerce-product-page.js) — gallery switcher, colour swatches, style picker, engraving toggle, accordion tabs, wishlist button, custom gallery lightbox (full-screen overlay with prev/next navigation, keyboard and backdrop-click to close).
+* ADDED: elayne-avatar-circle block style — 44×44px circular avatar container for testimonial patterns.
+* ADDED: elayne-category-hero block style — two-column hero with charcoal grid-pattern background and companion meta bar.
+* ADDED: Jost variable font (regular + italic WOFF2) for store pages.
+* ADDED: Ten CC0 product placeholder images (product-placeholder-I.webp through product-placeholder-X.webp) in patterns/images/store/ — AI-generated by Claude Code, public domain.
+* ADDED: Pattern validation upgraded to three-pass — Pass 1 Gutenberg structural (wp pattern validate), Pass 2 pt-cli compliance, Pass 3 HTML template checker for .html files.
+* ADDED: wp_kses_post() translation helper documented for inline-HTML text strings.
+* CHANGED: rebuild-demo-subsite.php — store subsite now pushes both archive-product-store.html and taxonomy-product_cat-store.html to the WP DB on each rebuild run; idempotent (attributes, categories, and products skipped when already present).
+* CHANGED: Removed front-page.html template — caused content override on multisite subsites; homepage set via WP page editor instead.
+* CHANGED: Vertical workflow updated — scaffold via pt-cli Options A/B/C; never write block JSON from scratch.
+* CHANGED: Spacing and font-size scale reference tables expanded with exact clamp/max values and pill/badge padding rules.
+* CHANGED: Product button set to full width (width:100, centred alignment) in archive-product.html, archive-product-spa.html, and taxonomy-product_cat.html.
+* FIXED: Block validation — whitespace between <div> and wp block comments is strictly forbidden.
+* FIXED: Block validation — wp:button does not support root-level fontSize; must use style.typography.fontSize.
+* FIXED: Block validation — theme-bundled SVGs in wp:image must not have width/height on <img> (no media ID).
+* FIXED: blockGap inline gap rules — constrained/default groups omit inline gap; flex groups require it; columns blocks never have it.
+* FIXED: metadata.name must only appear on the outermost block of a pattern file.
+* FIXED: fontSize/fontFamily as root-level attributes generate CSS classes, not inline styles — HTML must match.
+* FIXED: Unicode escape sequences — PHP single-quoted strings do not process \uXXXX; use actual UTF-8 characters.
+* FIXED: WooCommerce taxQuery must be [] (array) not {} (object); product-collection must never use standalone query-pagination.
+* FIXED: Product image CSS selector specificity raised to (0,3,0) to beat WooCommerce's default aspect-ratio:1/1 rule and preserve the custom 3/4 portrait ratio.
+* TECHNICAL: Vibe CLI model updated to mistral-medium-3.5 with thinking:high; bash allowlist sorted alphabetically.
+* FIXED: Replace register_block_type() calls with render_block filter — WP.org plugin-territory compliance; product attributes table and shipping/returns content now use core/group placeholders with specific classNames.
+* FIXED: Skip link focus state — high-contrast white outline with black box-shadow ring for WCAG focus indicator compliance.
 
 = 3.9.1 - 04/24/26 =
 * ADDED: Nail Salon Why Us pattern - Real CC0 photo (why-nail-salon.webp, StockSnap.io) replacing placeholder text in the image column.
@@ -1365,6 +1402,21 @@ The following icons were created using AI tools (ChatGPT) for the plumbing indus
 - **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 - **Attribution:** Not required (CC0)
 - **Description:** Mountain landscape at sunset/sunrise hero illustration with stars, moon, and pine trees
+
+## Store Vertical Images (CC0 Public Domain)
+
+**patterns/images/store/leather-bag.webp**
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/leather-bag-4JYA4A4D64)
+- **Photographer:** [Snufkin](https://stocksnap.io/author/34675)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Leather bag on wooden surface — hero cover image for the Store vertical (woo-hero pattern)
+
+**patterns/images/store/product-placeholder-I.webp through product-placeholder-X.webp**
+- **Source:** AI-generated (Claude Code, May 2026)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Ten neutral product placeholder images used across WooCommerce product archive and single product patterns as demo imagery
 
 ---
 

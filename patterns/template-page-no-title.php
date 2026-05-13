@@ -10,10 +10,10 @@
  * Inserter: false
  */
 ?>
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:template-part {"slug":"header","tagName":"header","theme":"elayne"} /-->
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
 <main class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:post-content {"layout":{"type":"constrained"}} /--></main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","tagName":"footer","theme":"elayne"} /-->

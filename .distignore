@@ -41,8 +41,3 @@ ziDHI0kh
 *.log
 .htaccess
 __MACOSX
-
-
-# pattern and snippet templates
-patterns/_templates/
-patterns/_snippets/

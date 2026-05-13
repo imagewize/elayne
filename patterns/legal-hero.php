@@ -28,12 +28,12 @@
 
 				<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
 				<div class="wp-block-buttons">
-					<!-- wp:button {"backgroundColor":"primary","textColor":"base","fontSize":"base","fontFamily":"open-sans"} -->
-					<div class="wp-block-button has-custom-font-size has-open-sans-font-family has-base-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
+<!-- wp:button {"backgroundColor":"primary","textColor":"base","fontFamily":"open-sans","style":{"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+					<div class="wp-block-button has-custom-font-size has-open-sans-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Schedule Consultation', 'elayne' ); ?></a></div>
 					<!-- /wp:button -->
 
-					<!-- wp:button {"backgroundColor":"tertiary","textColor":"primary","style":{"border":{"radius":"8px"}},"fontSize":"base","fontFamily":"open-sans"} -->
-					<div class="wp-block-button has-custom-font-size has-open-sans-font-family has-base-font-size"><a class="wp-block-button__link has-primary-color has-tertiary-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Our Services', 'elayne' ); ?></a></div>
+<!-- wp:button {"backgroundColor":"tertiary","textColor":"primary","style":{"border":{"radius":"8px"},"typography":{"fontSize":"var:preset|font-size|base"}},"fontFamily":"open-sans"} -->
+					<div class="wp-block-button has-custom-font-size has-open-sans-font-family"><a class="wp-block-button__link has-primary-color has-tertiary-background-color has-text-color has-background wp-element-button" style="border-radius:8px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Our Services', 'elayne' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->

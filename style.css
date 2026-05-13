@@ -7,7 +7,7 @@ Description: A premium full-site-editing block theme with industry-specific patt
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 3.9.1
+Version: 4.0.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -207,10 +207,6 @@ figure.is-avatar,
 
 /* Mobile navigation adjustments */
 @media (max-width: 781px) {
-    .wp-block-site-title {
-        padding-left: 2.8rem;
-    }
-
     .mobile-centered-nav .wp-block-navigation__responsive-container-open {
         margin: 0 auto;
     }
@@ -224,6 +220,25 @@ figure.is-avatar,
         position: relative;
         left: 0;
         transform: translateX(0);
+    }
+
+    /* Store header: logo left | cart | hamburger right */
+    .elayne-light-header-standard .wp-block-site-title {
+        padding-left: 0;
+        flex: 1;
+    }
+
+    .elayne-light-header-standard .wp-block-woocommerce-customer-account {
+        display: none !important;
+    }
+
+    .elayne-light-header-standard .wc-block-mini-cart {
+        order: 2;
+    }
+
+    .elayne-light-header-standard .wp-block-navigation {
+        order: 3;
+        flex: none;
     }
 }
 
@@ -253,15 +268,39 @@ figure.is-avatar,
     }
 }
 
-/* WooCommerce Product Collection responsive grid (3-2-1 columns) */
+/* Shop landing — remove WordPress is-layout-flow block gap between section patterns */
+.elayne-shop-landing.is-layout-flow > * {
+    margin-block-start: 0 !important;
+}
+
+/* WooCommerce Product Collection responsive grid */
 .wc-block-product-template.is-flex-container {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 2rem !important;
 }
 
+.wc-block-product-template.is-flex-container.columns-4 {
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
 .wc-block-product-template.is-flex-container > li {
     width: auto !important;
+    background-color: var(--wp--preset--color--base);
+}
+
+/* Product card text area padding — image fills full width, text gets horizontal padding */
+.wc-block-product-template.is-flex-container > li > :not(.wc-block-components-product-image) {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.wc-block-product-template.is-flex-container > li > .wp-block-post-title {
+    padding-top: 1.25rem;
+}
+
+.wc-block-product-template.is-flex-container > li > :last-child {
+    padding-bottom: 1.25rem;
 }
 
 @media (max-width: 1024px) {
@@ -611,9 +650,9 @@ figure.is-avatar,
     line-height: 1.5;
     text-decoration: none;
     border-radius: 3px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    outline: 3px solid var(--wp--preset--color--primary-alt, #005a87);
+    outline: 3px solid #fff;
     outline-offset: 2px;
+    box-shadow: 0 0 0 6px #000;
 }
 
 /* Ensure skip link target is visible */
@@ -758,3 +797,30 @@ figure.is-avatar,
     border-color: rgba( 192, 57, 43, 0.3 );
     color: #c0392b;
 }
+
+/* === Store ticker marquee === */
+.elayne-ticker {
+	overflow: hidden;
+}
+.elayne-ticker__track {
+	display: flex;
+	width: max-content;
+	will-change: transform;
+	animation: elayne-ticker-scroll 40s linear infinite;
+}
+.elayne-ticker__item {
+	white-space: nowrap;
+	display: inline-block;
+}
+@keyframes elayne-ticker-scroll {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+	.elayne-ticker__track {
+		animation: none;
+		justify-content: center;
+	}
+}
+.elayne-story-initial { opacity: 0.12; }
+.elayne-hero-watermark { opacity: 0.2; }

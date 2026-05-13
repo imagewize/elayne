@@ -24,7 +24,7 @@
 				<p class="has-main-accent-color has-text-color"><?php esc_html_e( 'Contact us today to discuss your legal needs. We offer free initial consultations for most practice areas.', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:buttons {} -->
+				<!-- wp:buttons -->
 				<div class="wp-block-buttons">
 					<!-- wp:button {"backgroundColor":"primary","textColor":"base"} -->
 					<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button"><?php esc_html_e( 'Contact Us Today', 'elayne' ); ?></a></div>
