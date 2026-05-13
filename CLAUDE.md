@@ -43,6 +43,42 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 
 **Style variation cache:** If `theme.json`/`styles/*.json` changes don't appear, switch away and back in Site Editor (`Styles → Browse styles`).
 
+### Demo Rebuild Script (`scripts/rebuild-demo.php`)
+
+Rebuilds demo pages by rendering pattern PHP files in the live WP context and overwriting `post_content` — equivalent to a fresh block-editor insert. Works on both **single-site** and **multisite** WordPress installs.
+
+**Security:** Checks `defined('WP_CLI')` at the top — will not execute via a web request even if the file is publicly reachable.
+
+**Excluded from WP.org distribution** via `.distignore` (`scripts/*`).
+
+**Single-site** (most users):
+```bash
+# Dry-run first (no writes)
+WP_REBUILD_DRY_RUN=1 wp --path=web/wp \
+  eval-file web/app/themes/elayne/scripts/rebuild-demo.php
+
+# Live run
+wp --path=web/wp eval-file web/app/themes/elayne/scripts/rebuild-demo.php
+```
+
+**Multisite** — pass `--url=` so WP-CLI switches to the correct subsite blog before reading page IDs. Page IDs are per-subsite, not global:
+```bash
+wp --path=web/wp --url=example.com/store/ \
+  eval-file web/app/themes/elayne/scripts/rebuild-demo.php
+```
+
+**Customization:** Edit `$map` in the script to map your page IDs to pattern files. Discover page IDs with:
+```bash
+# Single-site
+wp post list --post_type=page --fields=ID,post_title,post_name --path=web/wp
+
+# Multisite subsite
+wp post list --post_type=page --fields=ID,post_title,post_name \
+  --path=web/wp --url=example.com/store/
+```
+
+The optional `$templates` array pushes custom `.html` template variants to the WP database (e.g. a demo-store-specific `archive-product-store.html`) without replacing the theme's base template file.
+
 ### WooCommerce Store Subsite
 
 The demo site runs WooCommerce on a **subsite** mounted at `/store/`. All shop URLs are prefixed:
@@ -62,12 +98,13 @@ The demo site runs WooCommerce on a **subsite** mounted at `/store/`. All shop U
 
 **WooCommerce filter blocks** (WooCommerce 10.7+):
 - `woocommerce/product-filter-taxonomy` — filter by any taxonomy; use `{"taxonomy":"product_cat"}` for categories. **NOT** `product-filter-category` (does not exist).
-- `woocommerce/product-filter-attribute` — filter by product attribute; requires `attributeId` (verify IDs via `wp wc product_attribute list --path=web/wp --user=1`)
+- `woocommerce/product-filter-attribute` — filter by product attribute; omit `attributeId` to ship an unconfigured placeholder (Ollie pattern — client selects their attribute via Site Editor). Include `attributeId` only when building demo-specific templates. Verify IDs via `wp wc product_attribute list --path=web/wp --user=1`
 - `woocommerce/product-filter-price` — price range slider
 
-**Verified attribute IDs** (demo site, May 2026):
+**Demo store attribute IDs** (demo site, May 2026 — do NOT hardcode in distributable templates):
 - `attributeId: 1` → Leather Colour (`pa_leather-colour`)
 - `attributeId: 2` → Style (`pa_style`)
+- `attributeId: 3` → Features (`pa_features`)
 
 ## Design System
 

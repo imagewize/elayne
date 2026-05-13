@@ -53,7 +53,7 @@ Elayne includes **140+ professionally designed patterns** across multiple catego
 
 **WooCommerce Store:** 24 patterns covering the full shopping journey — shop landing, category archives, product detail pages, cart, checkout, and more (requires WooCommerce plugin)
 
-**Templates:** 17 page, post, and WooCommerce templates
+**Templates:** 19 page, post, and WooCommerce templates
 
 Browse the complete pattern library in **Appearance → Editor → Patterns**
 
@@ -69,6 +69,8 @@ Elayne provides specialized pattern sets for specific industries:
 - **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category hero & toolbar, product gallery with colour swatches & style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile sticky ATC bar, cart, checkout, ticker, featured products, testimonials, and newsletter (requires WooCommerce plugin)
 
 > **Contact Form 7 support:** The `Contact With Form` and `Plumbing Contact Section` patterns include a live contact form when [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) is active. Without it, styled placeholder fields are shown automatically — no broken layouts.
+
+> **WooCommerce attribute filters:** The product category and shop archive templates include an unconfigured attribute filter placeholder in the sidebar. Select the block in **Appearance → Editor → Templates** and choose which product attribute to filter by — no hardcoded IDs, fully compatible with any store configuration.
 
 ### Style Variations
 

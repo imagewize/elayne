@@ -83,9 +83,9 @@ WooCommerce runs on a **subsite at `/store/`**. All shop URLs are prefixed:
 
 **WooCommerce filter blocks** (WooCommerce 10.7+):
 - Use `woocommerce/product-filter-taxonomy` with `{"taxonomy":"product_cat"}` for category filtering — `product-filter-category` does NOT exist
-- Use `woocommerce/product-filter-attribute` with verified `attributeId` for attribute filters
+- Use `woocommerce/product-filter-attribute` **without** `attributeId` for distributable templates — renders as an unconfigured placeholder the client configures via Site Editor (Ollie pattern; no hardcoded IDs). Only include `attributeId` when building demo-specific templates.
 
-**Verified attribute IDs** (May 2026): `1` = Leather Colour, `2` = Style
+**Demo store attribute IDs** (May 2026 — do NOT hardcode in distributable templates): `1` = Leather Colour, `2` = Style, `3` = Features
 
 **Clear cache:**
 ```bash

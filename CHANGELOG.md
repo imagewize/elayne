@@ -20,7 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Full WooCommerce subsite support at `/store/` with shop, category archive, and single product page templates
 - Three-tier implementation strategy: use plugin patterns as-is (Tier 1), style with CSS (Tier 2), custom theme patterns only if needed (Tier 3)
 - WooCommerce plugin patterns explicitly exempted from Elayne compliance rules
-- Verified filter block taxonomy IDs documented (Leather Colour = 1, Style = 2)
+- Verified filter block taxonomy IDs documented (Leather Colour = 1, Style = 2, Features = 3)
+
+**WooCommerce Filter Sidebar Enhancements:**
+- `product-filter-rating` added to base `archive-product.html` and `taxonomy-product_cat.html` sidebars — star rating filter via checkbox list
+- `product-filter-taxonomy` (Categories) added to `taxonomy-product_cat.html` sidebar — lets shoppers switch between product categories from within a category archive
+- `archive-product-store.html` — demo-store-specific shop archive template with three pre-wired attribute filters: Leather Colour (chip display, `attributeId:1`), Style (checkbox list, `attributeId:2`), Features (checkbox list, `attributeId:3`); pushed to store DB via rebuild script
+- `taxonomy-product_cat-store.html` — matching demo-store-specific category archive template with the same three attribute filters
 
 **Mobile Filter Drawer (`category-filter-drawer.js`):**
 - Touch-friendly slide-in sidebar drawer for shop filters on mobile
@@ -63,6 +69,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Template: `front-page.html` Removed:**
 - Removed `front-page.html` template — it caused content override issues on other multisite subsites
 - Homepage is now assigned via the WordPress page editor; `home.html` covers blog index and static homepage
+
+**Rebuild Script (`rebuild-demo-subsite.php`):**
+- `store` subsite extended with `$templates` map entry — pushes `archive-product-store.html` and `taxonomy-product_cat-store.html` to the store subsite DB on each rebuild run; idempotent (attributes, categories, and products skipped if already present)
 
 **Vertical Workflow — pt-cli Scaffold Commands:**
 - Three scaffold options documented: Option A (layout-based via `composer layout:create`), Option B (WooCommerce template via `composer pattern:create`), Option C (shell-only editor-first)
