@@ -110,6 +110,110 @@
 		} );
 	}
 
+	function initGalleryLightbox() {
+		const gallery = document.querySelector( '.elayne-product-gallery' );
+		if ( ! gallery ) return;
+
+		const lightbox  = gallery.querySelector( '.elayne-lightbox' );
+		if ( ! lightbox ) return;
+
+		const lightboxImg = lightbox.querySelector( '.elayne-lightbox-img' );
+		const closeBtn    = lightbox.querySelector( '.elayne-lightbox-close' );
+		const prevBtn     = lightbox.querySelector( '.elayne-lightbox-prev' );
+		const nextBtn     = lightbox.querySelector( '.elayne-lightbox-next' );
+
+		// Build image list from desktop slides (each has an <a href> pointing to the full-size URL).
+		const desktopSlides = Array.from(
+			gallery.querySelectorAll( '.elayne-main-image-wrapper .woocommerce-product-gallery__image' )
+		);
+
+		const images = desktopSlides.map( function ( slide ) {
+			const a   = slide.querySelector( 'a' );
+			const img = slide.querySelector( 'img' );
+			return {
+				src: a   ? a.getAttribute( 'href' )    : '',
+				alt: img ? img.getAttribute( 'alt' )   : '',
+			};
+		} );
+
+		if ( ! images.length ) return;
+
+		// Move lightbox to <body> so no ancestor stacking context can clip it.
+		document.body.appendChild( lightbox );
+
+		let currentIndex = 0;
+
+		function showImage( index ) {
+			lightboxImg.src = images[ index ].src;
+			lightboxImg.alt = images[ index ].alt;
+			prevBtn.hidden  = index === 0;
+			nextBtn.hidden  = index === images.length - 1;
+		}
+
+		function openLightbox( index ) {
+			currentIndex = index;
+			showImage( currentIndex );
+			lightbox.hidden = false;
+			document.body.style.overflow = 'hidden';
+			closeBtn.focus();
+		}
+
+		function closeLightbox() {
+			lightbox.hidden = true;
+			document.body.style.overflow = '';
+		}
+
+		// Open on click — desktop and mobile slides both map to the same image index.
+		desktopSlides.forEach( function ( slide, i ) {
+			slide.addEventListener( 'click', function ( e ) {
+				e.preventDefault();
+				openLightbox( i );
+			} );
+		} );
+
+		const mobileSlides = Array.from(
+			gallery.querySelectorAll( '.elayne-gallery-mobile .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image' )
+		);
+		mobileSlides.forEach( function ( slide, i ) {
+			slide.addEventListener( 'click', function ( e ) {
+				e.preventDefault();
+				openLightbox( i );
+			} );
+		} );
+
+		closeBtn.addEventListener( 'click', closeLightbox );
+
+		prevBtn.addEventListener( 'click', function () {
+			if ( currentIndex > 0 ) {
+				showImage( --currentIndex );
+			}
+		} );
+
+		nextBtn.addEventListener( 'click', function () {
+			if ( currentIndex < images.length - 1 ) {
+				showImage( ++currentIndex );
+			}
+		} );
+
+		// Close on backdrop click (anything that is not the image or a button).
+		lightbox.addEventListener( 'click', function ( e ) {
+			if ( e.target === lightbox ) {
+				closeLightbox();
+			}
+		} );
+
+		// Keyboard: Escape closes, arrows navigate.
+		lightbox.addEventListener( 'keydown', function ( e ) {
+			if ( e.key === 'Escape' ) {
+				closeLightbox();
+			} else if ( e.key === 'ArrowLeft' && currentIndex > 0 ) {
+				showImage( --currentIndex );
+			} else if ( e.key === 'ArrowRight' && currentIndex < images.length - 1 ) {
+				showImage( ++currentIndex );
+			}
+		} );
+	}
+
 	function initWishlistButton() {
 		const wishlist = document.querySelector( '.elayne-wishlist-button' );
 		if ( ! wishlist ) return;
@@ -120,6 +224,7 @@
 
 	function init() {
 		initProductGallery();
+		initGalleryLightbox();
 		initColorSwatches();
 		initStyleOptions();
 		initEngravingOption();

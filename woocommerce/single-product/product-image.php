@@ -104,3 +104,16 @@ if ( empty( $all_ids ) ) {
 	</div>
 
 </div>
+
+<div class="elayne-lightbox" role="dialog" aria-modal="true" tabindex="-1" hidden>
+	<button class="elayne-lightbox-close" aria-label="<?php echo esc_attr__( 'Close image viewer', 'elayne' ); ?>">
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+	</button>
+	<button class="elayne-lightbox-prev" aria-label="<?php echo esc_attr__( 'Previous image', 'elayne' ); ?>" hidden>
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+	</button>
+	<button class="elayne-lightbox-next" aria-label="<?php echo esc_attr__( 'Next image', 'elayne' ); ?>" hidden>
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+	</button>
+	<img class="elayne-lightbox-img" src="" alt="">
+</div>

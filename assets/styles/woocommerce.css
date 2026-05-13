@@ -651,6 +651,77 @@
 }
 
 /* ============================================
+   Single Product Page — Gallery Lightbox
+   ============================================ */
+
+.elayne-lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 99999;
+	background: rgba( 0, 0, 0, 0.92 );
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.elayne-lightbox[hidden] {
+	display: none;
+}
+
+.elayne-lightbox-img {
+	max-width: 90vw;
+	max-height: 90vh;
+	object-fit: contain;
+	display: block;
+	border-radius: var( --wp--preset--border-radius--md );
+}
+
+.elayne-lightbox-close,
+.elayne-lightbox-prev,
+.elayne-lightbox-next {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	background: rgba( 255, 255, 255, 0.12 );
+	border: none;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+.elayne-lightbox-prev[hidden],
+.elayne-lightbox-next[hidden] {
+	display: none;
+}
+.elayne-lightbox-close:hover,
+.elayne-lightbox-prev:hover,
+.elayne-lightbox-next:hover {
+	background: rgba( 255, 255, 255, 0.28 );
+}
+
+.elayne-lightbox-close {
+	top: 1.25rem;
+	right: 1.25rem;
+}
+.elayne-lightbox-prev {
+	left: 1.25rem;
+	top: 50%;
+	transform: translateY( -50% );
+}
+.elayne-lightbox-next {
+	right: 1.25rem;
+	top: 50%;
+	transform: translateY( -50% );
+}
+
+.elayne-main-image-wrapper .woocommerce-product-gallery__image,
+.elayne-gallery-mobile .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image {
+	cursor: zoom-in;
+}
+
+/* ============================================
    Single Product Page — Top Section
    ============================================ */
 
