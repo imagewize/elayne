@@ -43,6 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Engraving option toggle (selected/deselected)
 - Accordion tabs: open/close with `+`/`−` icon and single-open constraint
 - Wishlist button toggle
+- Custom product gallery lightbox: click any gallery image to open a full-screen overlay with prev/next navigation, keyboard (Escape / arrow keys) support, and backdrop-click to close; appended to `<body>` to avoid stacking-context issues
 
 **New Block Styles:**
 - `elayne-avatar-circle` — 44 × 44 px circular container for testimonial avatars

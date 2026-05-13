@@ -181,7 +181,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: archive-product-store.html and taxonomy-product_cat-store.html — demo-store-specific templates with Leather Colour (chip display), Style, and Features (checkboxes) attribute filters pre-wired; pushed to store DB via rebuild script.
 * ADDED: Mobile filter drawer JS (category-filter-drawer.js) — slide-in sidebar, backdrop, Apply button, dynamic "Clear filters" link.
 * ADDED: elayne-clear-filters-btn CSS styles for the sidebar "× Clear filters" link (uppercase, orange brand colour, hover to primary).
-* ADDED: Product page JS (woocommerce-product-page.js) — gallery switcher, colour swatches, style picker, engraving toggle, accordion tabs, wishlist button.
+* ADDED: Product page JS (woocommerce-product-page.js) — gallery switcher, colour swatches, style picker, engraving toggle, accordion tabs, wishlist button, custom gallery lightbox (full-screen overlay with prev/next navigation, keyboard and backdrop-click to close).
 * ADDED: elayne-avatar-circle block style — 44×44px circular avatar container for testimonial patterns.
 * ADDED: elayne-category-hero block style — two-column hero with charcoal grid-pattern background and companion meta bar.
 * ADDED: Jost variable font (regular + italic WOFF2) for store pages.
