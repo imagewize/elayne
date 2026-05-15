@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.2] - 2026-05-15
+
+### Fixed
+
+**Theme Description Ampersands:**
+- Replaced `&` with `and` in theme description for industry verticals (spa and wellness, food and beverage) to ensure compatibility with WordPress.org theme guidelines and XML parsing
+
+**WooCommerce Text Domain:**
+- Corrected text domain for "Awaiting product image" placeholder string in `product-image.php` from `woocommerce` to `elayne`
+- Ensures the string is translatable within the theme's own translation files",
+
 ## [4.0.1] - 2026-05-15
 
 ### Changed

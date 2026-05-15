@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 4.0.1
+Stable tag: 4.0.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.0.2 - 05/15/26 =
+* FIXED: Theme description - replaced ampersands with 'and' in industry vertical names for XML/WordPress.org compatibility.
+* FIXED: WooCommerce product image placeholder text domain corrected from 'woocommerce' to 'elayne' for proper theme translations."
+
 
 = 4.0.1 - 05/15/26 =
 * CHANGED: Renamed pattern elayne/woo-featured-products to elayne/woo-signature-pieces — update any pages or templates referencing the old slug.
