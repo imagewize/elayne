@@ -19,8 +19,7 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group">
-<!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"1.15","letterSpacing":"-0.02em"}},"textColor":"primary","fontSize":"xxx-large"} -->
+<div class="wp-block-group"><!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"1.15","letterSpacing":"-0.02em"}},"textColor":"primary","fontSize":"xxx-large"} -->
 <h1 class="wp-block-heading has-primary-color has-text-color has-xxx-large-font-size" style="letter-spacing:-0.02em;line-height:1.15"><?php esc_html_e( 'Expert Legal Counsel for', 'elayne' ); ?> <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-secondary-color"><?php esc_html_e( 'Complex Matters', 'elayne' ); ?></mark></h1>
 <!-- /wp:heading -->
 

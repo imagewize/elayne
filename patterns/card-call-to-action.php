@@ -8,7 +8,6 @@
  * Viewport Width: 600
  */
 ?>
-
 <!-- wp:group {"metadata":{"categories":["elayne/call-to-action"],"patternName":"elayne/card-call-to-action","name":"Card Call to Action"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":"400px"}} -->
 <div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"large"} -->

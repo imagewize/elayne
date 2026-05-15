@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 4.0.0
+Stable tag: 4.0.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,23 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.0.1 - 05/15/26 =
+* CHANGED: Renamed pattern elayne/woo-featured-products to elayne/woo-signature-pieces — update any pages or templates referencing the old slug.
+* FIXED: WooCommerce quick-add button margin changed to `margin: 0` (all sides) — prevents 12px image strip showing below button on hover.
+* FIXED: WooCommerce product category terms padding-top reduced from 1rem to 0 — terms now sit flush under product image.
+* FIXED: Fixed block attribute errors in woo-signature-pieces pattern.
+* FIXED: Fixed JSON/HTML font-size desync in WooCommerce store patterns.
+* FIXED: Fixed woo-hero block markup to pass structural validation.
+* TECHNICAL: Removed blank lines between PHP closing tag and first WP block comment in 15+ pattern files to prevent block validation mismatches.
+* TECHNICAL: Removed stray whitespace between HTML element closing tags and WP block comments across all 142 pattern files.
+* TECHNICAL: Fixed backgroundColor attribute order (moved after style, before layout) in agency-services-showcase, banner-page-header-accent, and banner-page-header patterns.
+* TECHNICAL: Updated imagewize/pt-cli from v2.2.3 to v2.3.1.
+* TECHNICAL: Updated symfony/console from v7.4.9 to v7.4.11.
+* TECHNICAL: Updated symfony/string from v8.0.8 to v8.0.11.
+* TECHNICAL: Removed python/python3 from vibe config denylist.
+* TECHNICAL: Updated CLAUDE.md docs with --log flag usage and audit log output path for pattern validator.
+
 
 = 4.0.0 - 05/12/26 =
 * ADDED: WooCommerce store subsite integration at /store/ with shop, category archive, and single product templates.

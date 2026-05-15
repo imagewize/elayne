@@ -8,12 +8,9 @@
  * Description: A modern centered hero with dark gradient background, headline, tagline, CTA buttons and image below
  */
 ?>
-
 <!-- wp:group {"metadata":{"categories":["banner"],"patternName":"elayne/hero-modern-dark","name":"Modern Hero - Dark"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"},"color":{"gradient":"linear-gradient(135deg,rgb(11,19,36) 0%,rgb(101,106,113) 100%)"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg,rgb(11,19,36) 0%,rgb(101,106,113) 100%);margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
-	<div class="wp-block-group">
-		<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"clamp(2.75rem, 6vw, 4.5rem)","fontWeight":"800","lineHeight":"1.1","letterSpacing":"-0.02em"}},"textColor":"white"} -->
+<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg,rgb(11,19,36) 0%,rgb(101,106,113) 100%);margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+	<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"clamp(2.75rem, 6vw, 4.5rem)","fontWeight":"800","lineHeight":"1.1","letterSpacing":"-0.02em"}},"textColor":"white"} -->
 		<h1 class="wp-block-heading has-text-align-center has-white-color has-text-color" style="font-size:clamp(2.75rem, 6vw, 4.5rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1"><?php esc_html_e( 'Data to enrich your online business', 'elayne' ); ?></h1>
 		<!-- /wp:heading -->
 
@@ -22,8 +19,7 @@
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","justifyContent":"center"}} -->
-		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"white","textColor":"black","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600"}}} -->
+		<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"white","textColor":"black","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600"}}} -->
 			<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background wp-element-button" style="border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-weight:600"><?php esc_html_e( 'Get started', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 
@@ -36,8 +32,7 @@
 	<!-- /wp:group -->
 
 	<!-- wp:group {"layout":{"type":"constrained","contentSize":"1200px"}} -->
-	<div class="wp-block-group">
-		<!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"12px"}}} -->
+	<div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"12px"}}} -->
 		<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url(get_template_directory_uri() . '/patterns/images/desktop.webp'); ?>" alt="<?php echo esc_attr__( 'Dashboard preview', 'elayne' ); ?>" style="border-radius:12px"/></figure>
 		<!-- /wp:image -->
 	</div>

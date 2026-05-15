@@ -80,12 +80,10 @@
 <h3 class="wp-block-heading has-main-color has-text-color has-medium-font-size"><?php esc_html_e( 'Send a Message', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<?php if ( function_exists( 'wpcf7' ) ) : ?>
-<!-- wp:contact-form-7/contact-form-selector -->
+<?php if ( function_exists( 'wpcf7' ) ) : ?><!-- wp:contact-form-7/contact-form-selector -->
 <div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7]</div>
 <!-- /wp:contact-form-7/contact-form-selector -->
-<?php else : ?>
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
+<?php else : ?><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Your Name', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
@@ -123,9 +121,7 @@
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Send Message', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
-<?php endif; ?>
-
-<!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"x-small"} -->
+<?php endif; ?><!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-text-align-center has-main-accent-color has-text-color has-x-small-font-size"><?php esc_html_e( 'We typically respond within 1 business day.', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>

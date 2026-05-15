@@ -9,18 +9,14 @@
  */
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/legal","elayne/statistics"],"patternName":"elayne/legal-stats","name":"Legal Stats - Experience & Success"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"primary","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-primary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"x-large"} -->
+<div class="wp-block-group alignfull has-primary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"x-large"} -->
 		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( 'Proven Track Record of Success', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
-		<div class="wp-block-group alignwide">
-			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
+		<div class="wp-block-group alignwide"><!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
 				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '25+', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
@@ -35,8 +31,7 @@
 			<!-- /wp:group -->
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
+			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
 				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '500+', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 
@@ -51,8 +46,7 @@
 			<!-- /wp:group -->
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|x-large","blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)">
-				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
+			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--x-large)"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"secondary","fontSize":"xx-large"} -->
 				<h3 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-xx-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '98%', 'elayne' ); ?></h3>
 				<!-- /wp:heading -->
 

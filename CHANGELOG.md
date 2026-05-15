@@ -7,6 +7,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.1] - 2026-05-15
+
+### Changed
+
+**WooCommerce Featured Products Renamed to Signature Pieces:**
+- Renamed pattern file `woo-featured-products.php` → `woo-signature-pieces.php`
+- Pattern slug changed from `elayne/woo-featured-products` to `elayne/woo-signature-pieces`
+- Update any pages or templates that reference the old slug
+
+### Fixed
+
+**WooCommerce Quick Add Button Coverage:**
+- Changed `margin-block-start: 0` to `margin: 0` on the product collection quick-add button
+- Previously a 12px strip of the product image remained visible below the button on hover (caused by `wp-block-button` default `margin-bottom: 12px`)
+- Button now fully covers the image bottom edge during the slide-up reveal animation
+
+**WooCommerce Product Category Terms Spacing:**
+- Removed `padding-top: 1rem` from `.wp-block-post-terms` inside product collections (set to `0`)
+- Terms now sit flush directly under the product image with no breathing strip
+
+**WooCommerce Store Pattern Fixes:**
+- Fixed block attribute errors in `woo-signature-pieces` pattern
+- Fixed JSON/HTML font-size desync in WooCommerce store patterns — aligns inline `fontSize` values with theme.json presets
+- Fixed `woo-hero` block markup to pass structural validation
+
+### Technical
+
+**Pattern Block Comment Whitespace Cleanup (Pass 1 Validator):**
+- Removed blank lines between the PHP closing tag (`?>`) and the first WordPress block comment across 15+ pattern files
+- Eliminates whitespace that can cause WordPress block validation mismatches
+- Affected patterns: agency-services-showcase, author-box, banner-announcement-bar, banner-page-header-accent, banner-page-header-slanted, banner-page-header, blog-post-columns-fandb, blog-post-columns-landscape, blog-post-columns-portrait, blog-post-list, card-call-to-action, career-opportunities, and others
+
+**Pattern HTML Closing Tag Whitespace Cleanup:**
+- Removed stray whitespace between HTML element closing tags and adjacent WordPress block comments across all 142 pattern files
+- Prevents block serialization mismatches caused by unexpected whitespace nodes
+
+**Pattern `backgroundColor` Attribute Order Fix:**
+- Moved `backgroundColor` attribute after `style` and before `layout` in the block JSON for multiple patterns
+- Corrects attribute ordering to match WordPress canonical serialization and prevent block validation warnings
+- Affected patterns: agency-services-showcase, banner-page-header-accent, banner-page-header
+
+**Dependency Updates:**
+- Updated `imagewize/pt-cli` from v2.2.3 to v2.3.1
+- Updated `symfony/console` from v7.4.9 to v7.4.11
+- Updated `symfony/string` from v8.0.8 to v8.0.11
+
+**Developer Tooling:**
+- Removed `python` and `python3` from the vibe config denylist, allowing Python scripts in the development environment
+- Updated CLAUDE.md pattern validator docs: clarified dry-run label, documented `--log` flag for writing audit logs, added note that `summary.md` is git-tracked while `*.php.diff` files are gitignored",
+
 ## [4.0.0] - 2026-05-12
 
 ### Fixed

@@ -10,10 +10,8 @@
  */
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/features","elayne/call-to-action"],"patternName":"elayne/pricing-comparison","name":"Pricing Comparison"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
 		<h2 class="wp-block-heading has-text-align-center has-x-large-font-size"><?php esc_html_e( 'Choose Your Perfect Plan', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
@@ -24,10 +22,8 @@
 	<!-- /wp:group -->
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"19rem"}} -->
-	<div class="wp-block-group alignwide">
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"16px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);border-radius:16px">
-			<!-- wp:heading {"level":3,"textAlign":"center","textColor":"primary","fontSize":"large"} -->
+	<div class="wp-block-group alignwide"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"16px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);border-radius:16px"><!-- wp:heading {"level":3,"textAlign":"center","textColor":"primary","fontSize":"large"} -->
 			<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-large-font-size"><?php esc_html_e( 'Guardian', 'elayne' ); ?></h3>
 			<!-- /wp:heading -->
 
@@ -36,8 +32,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:list {"className":"is-style-checkmark-list","textColor":"main"} -->
-			<ul class="is-style-checkmark-list has-main-color has-text-color">
-				<!-- wp:list-item -->
+			<ul class="is-style-checkmark-list has-main-color has-text-color"><!-- wp:list-item -->
 				<li><?php esc_html_e( 'Edit up to 10 hours of podcast audio files.', 'elayne' ); ?></li>
 				<!-- /wp:list-item -->
 
@@ -56,8 +51,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"4px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"4px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
 				<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:4px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
@@ -66,8 +60,7 @@
 		<!-- /wp:group -->
 
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"margin":{"top":"-2rem","bottom":"0"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"16px"},"shadow":"var:preset|shadow|large"},"backgroundColor":"primary-alt","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-primary-alt-background-color has-background" style="margin-top:-2rem;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);border-radius:16px;box-shadow:var(--wp--preset--shadow--large)">
-			<!-- wp:heading {"level":3,"textAlign":"center","textColor":"base","fontSize":"large"} -->
+		<div class="wp-block-group has-primary-alt-background-color has-background" style="margin-top:-2rem;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);border-radius:16px;box-shadow:var(--wp--preset--shadow--large)"><!-- wp:heading {"level":3,"textAlign":"center","textColor":"base","fontSize":"large"} -->
 			<h3 class="wp-block-heading has-text-align-center has-base-color has-text-color has-large-font-size"><?php esc_html_e( 'Mage', 'elayne' ); ?></h3>
 			<!-- /wp:heading -->
 
@@ -76,8 +69,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:list {"className":"is-style-checkmark-list","textColor":"base"} -->
-			<ul class="is-style-checkmark-list has-base-color has-text-color">
-				<!-- wp:list-item -->
+			<ul class="is-style-checkmark-list has-base-color has-text-color"><!-- wp:list-item -->
 				<li><?php esc_html_e( 'Edit up to 1,000 hours of podcast audio files.', 'elayne' ); ?></li>
 				<!-- /wp:list-item -->
 
@@ -104,8 +96,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"50px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"50px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
 				<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:50px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
@@ -114,8 +105,7 @@
 		<!-- /wp:group -->
 
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"16px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);border-radius:16px">
-			<!-- wp:heading {"level":3,"textAlign":"center","textColor":"primary","fontSize":"large"} -->
+		<div class="wp-block-group has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);border-radius:16px"><!-- wp:heading {"level":3,"textAlign":"center","textColor":"primary","fontSize":"large"} -->
 			<h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-large-font-size"><?php esc_html_e( 'Phantom', 'elayne' ); ?></h3>
 			<!-- /wp:heading -->
 
@@ -124,8 +114,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:list {"className":"is-style-checkmark-list","textColor":"main"} -->
-			<ul class="is-style-checkmark-list has-main-color has-text-color">
-				<!-- wp:list-item -->
+			<ul class="is-style-checkmark-list has-main-color has-text-color"><!-- wp:list-item -->
 				<li><?php esc_html_e( 'Edit up to 4,000 hours of podcast audio files.', 'elayne' ); ?></li>
 				<!-- /wp:list-item -->
 
@@ -156,8 +145,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"4px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"4px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
 				<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:4px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>

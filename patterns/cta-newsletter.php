@@ -9,16 +9,11 @@
  */
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/call-to-action"],"patternName":"elayne/cta-newsletter","name":"Newsletter Signup CTA"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"primary-accent","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-primary-accent-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:columns {"align":"wide","verticalAlignment":"center"} -->
-		<div class="wp-block-columns alignwide are-vertically-aligned-center">
-		<!-- wp:column {"verticalAlignment":"center","width":"60%"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:60%">
-			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group">
-				<!-- wp:heading {"level":2,"textColor":"main","style":{"typography":{"fontSize":"xx-large","lineHeight":"1.1"},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontFamily":"open-sans"} -->
+<div class="wp-block-group alignfull has-primary-accent-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:columns {"align":"wide","verticalAlignment":"center"} -->
+		<div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"60%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:60%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":2,"textColor":"main","style":{"typography":{"fontSize":"xx-large","lineHeight":"1.1"},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontFamily":"open-sans"} -->
 				<h2 class="wp-block-heading has-main-color has-text-color has-link-color has-open-sans-font-family" style="font-size:xx-large;line-height:1.1"><?php esc_html_e( 'Get Weekly Business Growth ', 'elayne' ); ?><span class="has-inline-color has-primary-color"><?php esc_html_e( 'Insights', 'elayne' ); ?></span></h2>
 				<!-- /wp:heading -->
 
@@ -31,8 +26,7 @@
 		<!-- /wp:column -->
 
 		<!-- wp:column {"verticalAlignment":"center","width":"40%"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%">
-			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"has-custom-font-size has-open-sans-font-family","style":{"typography":{"fontSize":"var:preset|font-size|base"}},"fontFamily":"open-sans"} -->
 <div class="wp-block-button has-custom-font-size has-open-sans-font-family"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-open-sans-font-family has-custom-font-size wp-element-button" style="font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Subscribe Now', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>

@@ -10,20 +10,16 @@
  * Inserter: true
  */
 ?>
-
 <!-- wp:columns {"metadata":{"categories":["elayne/features","elayne/spa"],"patternName":"elayne/two-column-feature","name":"Two Column Feature"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}}} -->
-<div class="wp-block-columns alignwide" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
-  <!-- wp:column {"width":"50%"} -->
-  <div class="wp-block-column" style="flex-basis:50%">
-    <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+<div class="wp-block-columns alignwide" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)"><!-- wp:column {"width":"50%"} -->
+  <div class="wp-block-column" style="flex-basis:50%"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
     <figure class="wp-block-image size-large is-style-default"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/spa/yoga-pose.webp' ) ); ?>" alt="<?php echo esc_attr__( 'Spa treatment', 'elayne' ); ?>"/></figure>
     <!-- /wp:image -->
   </div>
   <!-- /wp:column -->
 
   <!-- wp:column {"width":"50%","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}}} -->
-  <div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium);flex-basis:50%">
-    <!-- wp:paragraph {"className":"is-style-eyebrow","textColor":"primary","fontSize":"small"} -->
+  <div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium);flex-basis:50%"><!-- wp:paragraph {"className":"is-style-eyebrow","textColor":"primary","fontSize":"small"} -->
     <p class="is-style-eyebrow has-primary-color has-text-color has-small-font-size"><?php esc_html_e( 'Fitness', 'elayne' ); ?></p>
     <!-- /wp:paragraph -->
 
