@@ -11,8 +11,7 @@
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/features","elayne/card-simple"],"patternName":"elayne/plumbing-services","name":"Plumbing Services Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"main","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-background-color has-background is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:paragraph {"align":"center","className":"is-style-plumbing-section-label","style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em","textTransform":"uppercase"}},"textColor":"primary","fontSize":"x-small"} -->
+		<div class="wp-block-group"><!-- wp:paragraph {"align":"center","className":"is-style-plumbing-section-label","style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em","textTransform":"uppercase"}},"textColor":"primary","fontSize":"x-small"} -->
 			<p class="has-text-align-center is-style-plumbing-section-label has-primary-color has-text-color has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'What We Do', 'elayne' ); ?></p>
 			<!-- /wp:paragraph -->
 
@@ -27,10 +26,8 @@
 		<!-- /wp:group -->
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
-	<div class="wp-block-group alignwide">
-		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)">
-			<!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
+	<div class="wp-block-group alignwide"><!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-leak.svg" alt="<?php esc_attr_e( 'Leak Detection and Repair', 'elayne' ); ?>" style="width:40px"/></figure>
 			<!-- /wp:image -->
 
@@ -49,8 +46,7 @@
 		<!-- /wp:group -->
 
 		<!-- wp:group {"className":"is-style-plumbing-featured-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"primary","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-plumbing-featured-card has-border-color has-primary-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)">
-			<!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-group is-style-plumbing-featured-card has-border-color has-primary-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-drain.svg" alt="<?php esc_attr_e( 'Drain Cleaning', 'elayne' ); ?>" style="width:40px"/></figure>
 			<!-- /wp:image -->
 
@@ -69,8 +65,7 @@
 		<!-- /wp:group -->
 
 		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)">
-			<!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-water-heater.svg" alt="<?php esc_attr_e( 'Water Heater Services', 'elayne' ); ?>" style="width:40px"/></figure>
 			<!-- /wp:image -->
 
@@ -89,8 +84,7 @@
 		<!-- /wp:group -->
 
 		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)">
-			<!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-pipe.svg" alt="<?php esc_attr_e( 'Pipe Repair and Replacement', 'elayne' ); ?>" style="width:40px"/></figure>
 			<!-- /wp:image -->
 
@@ -109,8 +103,7 @@
 		<!-- /wp:group -->
 
 		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)">
-			<!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-sewer.svg" alt="<?php esc_attr_e( 'Sewer Line Services', 'elayne' ); ?>" style="width:40px"/></figure>
 			<!-- /wp:image -->
 
@@ -129,8 +122,7 @@
 		<!-- /wp:group -->
 
 		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)">
-			<!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
+		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-commercial.svg" alt="<?php esc_attr_e( 'Commercial Plumbing', 'elayne' ); ?>" style="width:40px"/></figure>
 			<!-- /wp:image -->
 

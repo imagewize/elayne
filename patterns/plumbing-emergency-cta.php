@@ -9,10 +9,8 @@
  */
 ?>
 <!-- wp:group {"metadata":{"name":"Plumbing Emergency CTA","patternName":"elayne/plumbing-emergency-cta"},"align":"full","style":{"color":{"gradient":"linear-gradient(135deg, #B71C1C, #D32F2F)"},"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg, #B71C1C, #D32F2F);margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:image {"align":"center","className":"icon-pulse"} -->
+<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg, #B71C1C, #D32F2F);margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:image {"align":"center","className":"icon-pulse"} -->
 		<figure class="wp-block-image aligncenter icon-pulse"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-alert-white.svg" alt=""/></figure>
 		<!-- /wp:image -->
 
@@ -25,10 +23,8 @@
 		<!-- /wp:paragraph -->
 
 		<!-- wp:group {"className":"is-style-plumbing-cta-actions","style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center","flexWrap":"wrap"}} -->
-		<div class="wp-block-group is-style-plumbing-cta-actions">
-			<!-- wp:group {"className":"is-style-plumbing-cta-call-pill","backgroundColor":"white","textColor":"primary","fontSize":"base","style":{"border":{"radius":"999px"},"spacing":{"padding":{"top":"0.75em","bottom":"0.75em","left":"1.5em","right":"1.5em"},"blockGap":"var:preset|spacing|small"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group is-style-plumbing-cta-call-pill has-primary-color has-white-background-color has-text-color has-background has-link-color has-base-font-size" style="border-radius:999px;padding-top:0.75em;padding-right:1.5em;padding-bottom:0.75em;padding-left:1.5em">
-				<!-- wp:image {"className":"plumbing-cta-phone-icon"} -->
+		<div class="wp-block-group is-style-plumbing-cta-actions"><!-- wp:group {"className":"is-style-plumbing-cta-call-pill","backgroundColor":"white","textColor":"primary","fontSize":"base","style":{"border":{"radius":"999px"},"spacing":{"padding":{"top":"0.75em","bottom":"0.75em","left":"1.5em","right":"1.5em"},"blockGap":"var:preset|spacing|small"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group is-style-plumbing-cta-call-pill has-primary-color has-white-background-color has-text-color has-background has-link-color has-base-font-size" style="border-radius:999px;padding-top:0.75em;padding-right:1.5em;padding-bottom:0.75em;padding-left:1.5em"><!-- wp:image {"className":"plumbing-cta-phone-icon"} -->
 				<figure class="wp-block-image plumbing-cta-phone-icon"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-phone-amber.svg" alt=""/></figure>
 				<!-- /wp:image -->
 
