@@ -15,11 +15,10 @@
  */
 ?>
 <!-- wp:group {"className":"elayne-shop-landing","metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-shop-landing","name":"Shop Landing"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull elayne-shop-landing">
-<!-- wp:pattern {"slug":"elayne/woocommerce/woo-hero"} /-->
+<div class="wp-block-group alignfull elayne-shop-landing"><!-- wp:pattern {"slug":"elayne/woocommerce/woo-hero"} /-->
 <!-- wp:pattern {"slug":"elayne/woocommerce/woo-ticker"} /-->
 <!-- wp:pattern {"slug":"elayne/woocommerce/woo-shop-categories"} /-->
-<!-- wp:pattern {"slug":"elayne/woocommerce/woo-featured-products"} /-->
+<!-- wp:pattern {"slug":"elayne/woocommerce/woo-signature-pieces"} /-->
 <!-- wp:pattern {"slug":"elayne/woocommerce/woo-our-story"} /-->
 <!-- wp:pattern {"slug":"elayne/woocommerce/woo-testimonials"} /-->
 <!-- wp:pattern {"slug":"elayne/woocommerce/woo-newsletter"} /-->
