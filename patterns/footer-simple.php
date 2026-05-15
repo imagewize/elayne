@@ -12,10 +12,8 @@
  */
 ?>
 <!-- wp:group {"tagName":"footer","metadata":{"categories":["footer"],"patternName":"elayne/footer-simple","name":"Footer Simple"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|main"},":hover":{"color":{"text":"var:preset|color|primary"}}}},"border":{"top":{"color":"var:preset|color|border-light","width":"1px"},"right":[],"bottom":[],"left":[]}},"backgroundColor":"base","textColor":"main","layout":{"type":"constrained"}} -->
-<footer class="wp-block-group alignfull has-main-color has-base-background-color has-text-color has-background has-link-color" style="border-top-color:var(--wp--preset--color--border-light);border-top-width:1px;margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
-	<div class="wp-block-group alignwide">
-		<!-- wp:paragraph {"fontSize":"small"} -->
+<footer class="wp-block-group alignfull has-main-color has-base-background-color has-text-color has-background has-link-color" style="border-top-color:var(--wp--preset--color--border-light);border-top-width:1px;margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:paragraph {"fontSize":"small"} -->
 		<p class="has-small-font-size"><?php echo wp_kses_post( sprintf( /* translators: %1$s: year, %2$s: theme link */ __( '© %1$s Powered by WordPress and %2$s', 'elayne' ), esc_html( date( 'Y' ) ), '<a href="https://wordpress.org/themes/elayne/">Elayne</a>' ) ); ?></p>
 		<!-- /wp:paragraph -->
 
