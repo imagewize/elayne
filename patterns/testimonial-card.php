@@ -9,18 +9,14 @@
  */
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/testimonial"],"patternName":"elayne/testimonial-card","name":"Client Testimonial Card"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
+<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
 		<h2 class="wp-block-heading has-text-align-center has-x-large-font-size"><?php esc_html_e( 'What Our Clients Say', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}}} -->
-		<div class="wp-block-columns alignwide">
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","color":"#ebeced"}},"backgroundColor":"base"} -->
-		<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-color:#ebeced;border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
-			<!-- wp:paragraph {"fontSize":"medium"} -->
+		<div class="wp-block-columns alignwide"><!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","color":"#ebeced"}},"backgroundColor":"base"} -->
+		<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-color:#ebeced;border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:paragraph {"fontSize":"medium"} -->
 			<p class="has-medium-font-size">"<?php esc_html_e( 'Working with this team has transformed our approach to customer acquisition. We\'ve seen a 150% increase in qualified leads within just three months.', 'elayne' ); ?>"</p>
 			<!-- /wp:paragraph -->
 
@@ -39,8 +35,7 @@
 		<!-- /wp:column -->
 
 		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","color":"#ebeced"}},"backgroundColor":"base"} -->
-		<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-color:#ebeced;border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
-			<!-- wp:paragraph {"fontSize":"medium"} -->
+		<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-color:#ebeced;border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:paragraph {"fontSize":"medium"} -->
 			<p class="has-medium-font-size">"<?php esc_html_e( 'The ROI speaks for itself. Professional service, strategic thinking, and genuine partnership. Couldn\'t recommend them more highly.', 'elayne' ); ?>"</p>
 			<!-- /wp:paragraph -->
 
