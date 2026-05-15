@@ -9,12 +9,9 @@
  */
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/hero","elayne/call-to-action"],"patternName":"elayne/hero-with-cta","name":"Hero Section with Call to Action"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:heading {"textAlign":"center","level":1,"textColor":"main","fontSize":"x-large","fontFamily":"open-sans"} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":1,"textColor":"main","fontSize":"x-large","fontFamily":"open-sans"} -->
 			<h1 class="wp-block-heading has-text-align-center has-main-color has-text-color has-open-sans-font-family has-x-large-font-size"><?php esc_html_e( 'Launch your idea with confidence', 'elayne' ); ?></h1>
 			<!-- /wp:heading -->
 
