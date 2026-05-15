@@ -380,14 +380,16 @@
 	transform: none;
 }
 
-/* QUICK ADD button: row 1, aligned to bottom — slides up over image on hover */
+/* QUICK ADD button: row 1, aligned to bottom — slides up over image on hover.
+   Zero margins on every axis: wp-block-button defaults to margin-bottom: 12px,
+   which would leave a 12px image strip uncovered below the button. */
 .wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button,
 .wp-block-woocommerce-product-collection .wc-block-components-product-button {
 	grid-row: 1;
 	grid-column: 1;
 	align-self: end;
 	z-index: 2;
-	margin-block-start: 0;
+	margin: 0;
 	clip-path: inset(100% 0 0 0);
 	transition: clip-path 0.3s ease;
 }
@@ -446,9 +448,9 @@
 	padding-right: 0 !important;
 }
 
-/* Product category terms */
+/* Product category terms — sit flush under the image, no breathing strip */
 .wp-block-woocommerce-product-collection .wp-block-post-terms {
-	padding-top: 1rem;
+	padding-top: 0;
 	margin-top: 0 !important;
 	margin-bottom: 0;
 	font-size: 0.65rem;
