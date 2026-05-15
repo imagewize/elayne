@@ -12,7 +12,7 @@
  * Grid Config: 18rem (simple cards: icon + heading + description)
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/features","elayne/card","elayne/card-simple"],"patternName":"elayne/agency-services-showcase","name":"Agency Services Showcase"},"align":"full","backgroundColor":"tertiary","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"inherit":true,"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/features","elayne/card","elayne/card-simple"],"patternName":"elayne/agency-services-showcase","name":"Agency Services Showcase"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"primary","fontSize":"small"} -->
 <p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500"><?php esc_html_e( 'Our Expertise', 'elayne' ); ?></p>
@@ -28,12 +28,9 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"metadata":{"name":"Services Grid"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
-<div class="wp-block-group alignwide">
-	<!-- wp:group {"metadata":{"name":"Web Design"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var(--wp--preset--color--border-light)","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
+<div class="wp-block-group alignwide"><!-- wp:group {"metadata":{"name":"Web Design"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var(--wp--preset--color--border-light)","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group"><!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-web.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing web design and development', 'elayne' ); ?>" style="width:48px"/></figure>
 			<!-- /wp:image -->
 
@@ -50,10 +47,8 @@
 	<!-- /wp:group -->
 
 	<!-- wp:group {"metadata":{"name":"Digital Marketing"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var(--wp--preset--color--border-light)","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
+	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group"><!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-marketing.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing performance marketing', 'elayne' ); ?>" style="width:48px"/></figure>
 			<!-- /wp:image -->
 
@@ -70,10 +65,8 @@
 	<!-- /wp:group -->
 
 	<!-- wp:group {"metadata":{"name":"Brand Strategy"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var(--wp--preset--color--border-light)","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
+	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group"><!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-strategy.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing brand strategy', 'elayne' ); ?>" style="width:48px"/></figure>
 			<!-- /wp:image -->
 
@@ -90,10 +83,8 @@
 	<!-- /wp:group -->
 
 	<!-- wp:group {"metadata":{"name":"E-commerce"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var(--wp--preset--color--border-light)","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
-		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-			<!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
+	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group"><!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-commerce.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing e-commerce solutions', 'elayne' ); ?>" style="width:48px"/></figure>
 			<!-- /wp:image -->
 
