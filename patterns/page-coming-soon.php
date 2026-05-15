@@ -8,7 +8,6 @@
  * Viewport Width: 1400
  */
 ?>
-
 <!-- wp:group {"metadata":{"categories":["elayne/pages"],"patternName":"elayne/page-coming-soon","name":"Page Coming Soon"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}},"dimensions":{"minHeight":"100vh"}},"backgroundColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"center","verticalAlignment":"center"}} -->
 <div class="wp-block-group alignfull has-base-background-color has-background" style="min-height:100vh;margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained","contentSize":"600px"}} -->
 <div class="wp-block-group"><!-- wp:site-logo {"width":200,"shouldSyncIcon":true,"align":"center"} /-->

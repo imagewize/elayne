@@ -108,12 +108,10 @@
 <h3 class="wp-block-heading has-white-color has-text-color has-large-font-size"><?php esc_html_e( 'Send Us a Message', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<?php if ( function_exists( 'wpcf7' ) ) : ?>
-<!-- wp:contact-form-7/contact-form-selector -->
+<?php if ( function_exists( 'wpcf7' ) ) : ?><!-- wp:contact-form-7/contact-form-selector -->
 <div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7]</div>
 <!-- /wp:contact-form-7/contact-form-selector -->
-<?php else : ?>
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<?php else : ?><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Full Name', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->

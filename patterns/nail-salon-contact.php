@@ -104,17 +104,13 @@
 <h3 class="wp-block-heading has-main-color has-text-color has-large-font-size"><?php esc_html_e( 'Book an Appointment', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<?php if ( function_exists( 'wpcf7' ) ) : ?>
-<!-- wp:contact-form-7/contact-form-selector -->
+<?php if ( function_exists( 'wpcf7' ) ) : ?><!-- wp:contact-form-7/contact-form-selector -->
 <div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7]</div>
 <!-- /wp:contact-form-7/contact-form-selector -->
-<?php else : ?>
-<!-- wp:shortcode -->
+<?php else : ?><!-- wp:shortcode -->
 <div class="wp-block-shortcode">[booking_form]</div>
 <!-- /wp:shortcode -->
-<?php endif; ?>
-
-<!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"x-small"} -->
+<?php endif; ?><!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-text-align-center has-main-accent-color has-text-color has-x-small-font-size"><?php esc_html_e( 'We typically confirm within a few hours during business hours.', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
