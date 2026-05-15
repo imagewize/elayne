@@ -10,10 +10,8 @@
  */
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/legal","elayne/features"],"patternName":"elayne/legal-services","name":"Legal Services Grid"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)">
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
+<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
 		<h2 class="wp-block-heading has-text-align-center has-x-large-font-size"><?php esc_html_e( 'Our Legal Services', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
@@ -25,8 +23,7 @@
 
 		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
 		<div class="wp-block-group alignwide"><!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
-				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
+			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/family-law.svg" alt="<?php esc_attr_e( 'Family Law', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
@@ -41,8 +38,7 @@
 			<!-- /wp:group -->
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
-				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
+			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/business-law.svg" alt="<?php esc_attr_e( 'Business Law', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
@@ -57,8 +53,7 @@
 			<!-- /wp:group -->
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
-				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
+			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/real-estate-law.svg" alt="<?php esc_attr_e( 'Real Estate Law', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
@@ -73,8 +68,7 @@
 			<!-- /wp:group -->
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
-				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
+			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/estate-planning.svg" alt="<?php esc_attr_e( 'Estate Planning', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
@@ -89,8 +83,7 @@
 			<!-- /wp:group -->
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
-				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
+			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/litigation.svg" alt="<?php esc_attr_e( 'Litigation', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
@@ -105,8 +98,7 @@
 			<!-- /wp:group -->
 
 			<!-- wp:group {"style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"width":"1px","radius":"8px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)">
-				<!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
+			<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:8px;padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"64px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1a56db","#1a56db"]}}} -->
 				<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/legal/criminal-defense.svg" alt="<?php esc_attr_e( 'Criminal Defense', 'elayne' ); ?>" style="width:64px"/></figure>
 				<!-- /wp:image -->
 
