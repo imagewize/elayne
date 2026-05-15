@@ -15,12 +15,11 @@ package.json
 # AI guidance files
 .vibe/*
 
-# Documentation and scripts
+# Documentation
 AGENTS.md
 CLAUDE.md
 README.md
 *.sh
-scripts/*
 
 # Translation source files (not part of distribution)
 messages.mo

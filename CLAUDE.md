@@ -43,31 +43,29 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 
 **Style variation cache:** If `theme.json`/`styles/*.json` changes don't appear, switch away and back in Site Editor (`Styles → Browse styles`).
 
-### Demo Rebuild Script (`scripts/rebuild-demo.php`)
+### Demo Rebuild Script
 
 Rebuilds demo pages by rendering pattern PHP files in the live WP context and overwriting `post_content` — equivalent to a fresh block-editor insert. Works on both **single-site** and **multisite** WordPress installs.
 
-**Security:** Checks `defined('WP_CLI')` at the top — will not execute via a web request even if the file is publicly reachable.
-
-**Excluded from WP.org distribution** via `.distignore` (`scripts/*`).
+**Location:** `vendor/imagewize/pt-cli/scripts/rebuild-demo.php` (shipped with pt-cli, not in the theme itself — keeps it off the production web server).
 
 **Single-site** (most users):
 ```bash
 # Dry-run first (no writes)
 WP_REBUILD_DRY_RUN=1 wp --path=web/wp \
-  eval-file web/app/themes/elayne/scripts/rebuild-demo.php
+  eval-file web/app/themes/elayne/vendor/imagewize/pt-cli/scripts/rebuild-demo.php
 
 # Live run
-wp --path=web/wp eval-file web/app/themes/elayne/scripts/rebuild-demo.php
+wp --path=web/wp eval-file web/app/themes/elayne/vendor/imagewize/pt-cli/scripts/rebuild-demo.php
 ```
 
 **Multisite** — pass `--url=` AND a subsite slug argument. The slug selects the right entry from the nested `$page_map`. Page IDs are per-subsite, not global:
 ```bash
 wp --path=web/wp --url=example.com/store/ \
-  eval-file web/app/themes/elayne/scripts/rebuild-demo.php store
+  eval-file web/app/themes/elayne/vendor/imagewize/pt-cli/scripts/rebuild-demo.php store
 ```
 
-**Customization:** Edit the arrays in the script. Discover page IDs with:
+**Customization:** Edit the arrays in the script (in your local `vendor/` copy). Discover page IDs with:
 ```bash
 # Single-site
 wp post list --post_type=page --fields=ID,post_title,post_name --path=web/wp
