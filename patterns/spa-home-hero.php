@@ -10,7 +10,6 @@
  * Inserter: true
  */
 ?>
-
 <!-- wp:columns {"metadata":{"categories":["elayne/features"],"patternName":"elayne/spa-home-hero","name":"Spa Home Hero"},"align":"full","className":"is-style-overlap-columns","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|medium"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"tertiary"} -->
 <div class="wp-block-columns alignfull is-style-overlap-columns has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--medium)"><!-- wp:column {"width":"60%"} -->
 <div class="wp-block-column" style="flex-basis:60%"><!-- wp:image {"sizeSlug":"large","className":"is-style-default"} -->
