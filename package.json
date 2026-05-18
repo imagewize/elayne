@@ -1,7 +1,7 @@
 {
 	"name": "elayne",
-	"version": "1.0.0-beta.2",
-	"description": "A modern WordPress block theme with 80+ patterns for building professional health & wellness websites.",
+	"version": "4.0.2",
+	"description": "A modern WordPress block theme with 100+ patterns for building professional business websites.",
 	"keywords": [
 		"wordpress",
 		"theme",
@@ -10,5 +10,17 @@
 		"sme"
 	],
 	"author": "Jasper Frumau",
-	"license": "GPL-2.0-or-later"
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"setup": "npx playwright install chromium",
+		"validate": "sentinel --log patterns/",
+		"validate:woo": "sentinel --log --url=http://demo.imagewize.test/store patterns/woocommerce/",
+		"validate:file": "sentinel",
+		"validate:new": "sentinel --cache --log patterns/",
+		"validate:new:woo": "sentinel --cache --log --url=http://demo.imagewize.test/store patterns/woocommerce/",
+		"validate:clear-cache": "sentinel --clear-cache"
+	},
+	"dependencies": {
+		"@imwz/wp-pattern-sentinel": "^1.0.2"
+	}
 }

@@ -26,7 +26,12 @@
 		"pattern:create": "@php ./vendor/bin/pt-cli pattern:create",
 		"layout:create": "@php ./vendor/bin/pt-cli layout:create",
 		"style:create": "@php ./vendor/bin/pt-cli style:create",
-		"check": "@php ./vendor/bin/pt-cli check patterns/ --theme=elayne"
+		"check": "@php ./vendor/bin/pt-cli check patterns/ --theme=elayne",
+		"validate": "npm run validate",
+		"validate:woo": "npm run validate:woo",
+		"validate:new": "npm run validate:new",
+		"validate:new:woo": "npm run validate:new:woo",
+		"validate:clear-cache": "npm run validate:clear-cache"
 	},
 	"config": {
 		"allow-plugins": {
