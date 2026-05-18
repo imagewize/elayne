@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Plumbing Hero
+ * Title: Home Improvement Hero
  * Slug: elayne/plumbing-hero
- * Description: Two-column hero for plumbing business with badge, headline, CTA buttons, and trust stats
+ * Description: Two-column hero for home improvement business with badge, headline, CTA buttons, and trust stats
  * Categories: elayne/plumbing, elayne/hero
- * Keywords: hero, plumbing, emergency, pipes, 24/7, plumber
+ * Keywords: hero, home improvement, contractor, emergency, trades, 24/7
  * Viewport Width: 1200
  */
 ?>
@@ -89,8 +89,8 @@
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
 
-<!-- wp:group {"className":"floating-badge floating-badge--bl","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-<div class="wp-block-group floating-badge floating-badge--bl"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:group {"className":"floating-badge floating-badge-bl","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group floating-badge floating-badge-bl"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-shield.svg" alt=""/></figure>
 <!-- /wp:image -->
 
@@ -99,8 +99,8 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"floating-badge floating-badge--tr","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-<div class="wp-block-group floating-badge floating-badge--tr"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:group {"className":"floating-badge floating-badge-tr","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group floating-badge floating-badge-tr"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-clock-amber.svg" alt=""/></figure>
 <!-- /wp:image -->
 
