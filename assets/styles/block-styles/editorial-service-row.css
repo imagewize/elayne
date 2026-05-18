@@ -1,0 +1,86 @@
+.wp-block-group.is-style-editorial-service-row {
+	position: relative;
+	align-items: baseline;
+	gap: var(--wp--preset--spacing--medium);
+	padding-top: var(--wp--preset--spacing--large);
+	padding-bottom: var(--wp--preset--spacing--large);
+	border-bottom: 1px solid var(--wp--preset--color--border-light);
+	cursor: pointer;
+	transition: padding-left 380ms cubic-bezier(.2, .7, .2, 1);
+}
+
+.wp-block-group.is-style-editorial-service-row::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 1px;
+	background: var(--wp--preset--color--accent-warm);
+	transform: translateY(-50%);
+	transition: width 380ms cubic-bezier(.2, .7, .2, 1);
+}
+
+.wp-block-group.is-style-editorial-service-row:hover {
+	padding-left: 56px;
+}
+.wp-block-group.is-style-editorial-service-row:hover::before {
+	width: 40px;
+}
+.wp-block-group.is-style-editorial-service-row:hover .editorial-service-num {
+	color: var(--wp--preset--color--accent-warm);
+}
+.wp-block-group.is-style-editorial-service-row:hover .editorial-service-go {
+	transform: translateX(4px);
+	color: var(--wp--preset--color--accent-warm);
+}
+
+.wp-block-group.is-style-editorial-service-row .editorial-service-num {
+	min-width: 3ch;
+	flex-shrink: 0;
+	transition: color 240ms;
+	line-height: 1.2;
+}
+
+.wp-block-group.is-style-editorial-service-row .editorial-service-body {
+	flex: 1;
+	min-width: 0;
+}
+
+.wp-block-group.is-style-editorial-service-row .editorial-service-body .wp-block-heading {
+	font-stretch: 85%;
+	line-height: 1;
+}
+
+.wp-block-group.is-style-editorial-service-row .editorial-service-go {
+	flex-shrink: 0;
+	color: var(--wp--preset--color--main-accent);
+	transition: transform 240ms cubic-bezier(.2, .7, .2, 1), color 240ms;
+	line-height: 1.2;
+	align-self: flex-start;
+	padding-top: 0.15em;
+	font-variant-emoji: text;
+}
+
+@media (max-width: 600px) {
+	.wp-block-group.is-style-editorial-service-row {
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--small);
+		align-items: flex-start;
+	}
+	.wp-block-group.is-style-editorial-service-row:hover {
+		padding-left: 0;
+	}
+	.wp-block-group.is-style-editorial-service-row::before {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-group.is-style-editorial-service-row,
+	.wp-block-group.is-style-editorial-service-row::before,
+	.wp-block-group.is-style-editorial-service-row .editorial-service-num,
+	.wp-block-group.is-style-editorial-service-row .editorial-service-go {
+		transition: none;
+	}
+}

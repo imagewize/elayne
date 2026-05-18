@@ -1,0 +1,26 @@
+.wp-block-group.is-style-editorial-services-stack .editorial-section-kicker {
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	font-weight: 600;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-block-group.is-style-editorial-services-stack > .wp-block-columns > .wp-block-column .wp-block-heading {
+	font-stretch: 75%;
+	line-height: 0.9;
+}
+
+.wp-block-group.is-style-editorial-services-stack .wp-block-heading em,
+.wp-block-group.is-style-editorial-services-stack .wp-block-heading mark.has-serif-font-family,
+.wp-block-group.is-style-editorial-services-stack .wp-block-heading span.has-serif-font-family {
+	font-style: italic;
+	font-stretch: 100%;
+	font-weight: 400;
+	text-transform: none;
+	letter-spacing: -0.01em;
+	color: var(--wp--preset--color--accent-warm);
+}
+
+.wp-block-group.is-style-editorial-services-stack .editorial-service-list {
+	border-top: 1px solid var(--wp--preset--color--border-light);
+}

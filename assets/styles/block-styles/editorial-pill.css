@@ -1,0 +1,12 @@
+.wp-block-paragraph.is-style-editorial-pill {
+	font-size: var(--wp--preset--font-size--xx-small);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--wp--preset--color--main-accent);
+	padding: var(--wp--preset--spacing--2-x-small) var(--wp--preset--spacing--x-small);
+	border: 1px solid var(--wp--preset--color--border-light);
+	border-radius: 999px;
+	line-height: 1.4;
+	margin: 0;
+}
