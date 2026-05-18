@@ -81,13 +81,13 @@
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
 
-<!-- wp:group {"className":"floating-badge floating-badge--bl","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-<div class="wp-block-group floating-badge floating-badge--bl"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:group {"className":"floating-badge floating-badge-bl","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group floating-badge floating-badge-bl"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-check-rose.svg" alt=""/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"main","fontSize":"x-small"} -->
-<p class="has-main-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Certified Nail Artists', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"primary-accent","fontSize":"x-small"} -->
+<p class="has-primary-accent-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Certified Nail Artists', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
