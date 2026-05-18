@@ -11,6 +11,7 @@ phpcs.xml
 composer.json
 composer.lock
 package.json
+package-lock.json
 
 # AI guidance files
 .vibe/*
