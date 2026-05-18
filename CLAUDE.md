@@ -230,6 +230,12 @@ WooCommerce core plugin includes official patterns in `wp-content/plugins/woocom
 | **Translation strings** | ALL user-facing text MUST use `esc_html_e()` / `esc_attr__()` with `'elayne'` domain |
 | **Email addresses** | NEVER use real emails — always `example@example.com` (WP.org requirement) |
 | **Bundled images** | MUST be CC0 or GPL-compatible — Pexels License NOT accepted by WP.org |
+| **CSS vars in block JSON** | NEVER `"color":"var(--wp--preset--color--border-light)"` in block comment JSON — the WordPress serializer Unicode-escapes `--` as `-`, causing content mismatch. Use `"color":"var:preset|color|border-light"` instead. CSS vars in HTML `style="..."` attributes are fine. |
+| **Ampersand in block JSON** | NEVER use `&` in block comment JSON attribute values (e.g. `metadata.name`) — the WordPress serializer escapes it as `&`. Use `and` or `+` instead (e.g. `"F+B Events Grid"`, `"Experience and Success"`). |
+| **Double-dash in className** | NEVER use `--` in `className` values in block comment JSON (e.g. BEM modifiers like `floating-badge--bl`) — the WordPress serializer escapes `--` as `--`. Use a single dash instead: `floating-badge-bl`. Also update the corresponding CSS selectors. |
+| **Button border-radius** | When setting `border.radius` on `wp:button` without `border.color`/`border.width`, the JS serializer injects `border-top-style:solid` causing block validation errors. Always pair `radius` with `"width":"0px"` and use preset notation: `"border":{"radius":"var:preset|border-radius|sm","width":"0px"}`. |
+| **Navigation block `ref`** | NEVER include `"ref":N` in distributable `wp:navigation` blocks — it is site-specific. Sentinel will always report a `content_mismatch` for navigation blocks without a ref because the live WP editor auto-assigns the default saved menu ref on save. This is a known limitation, not a pattern bug. |
+| **Navigation block attr order** | In `wp:navigation`, `style` must come before `layout` in the JSON attribute object (canonical WordPress serializer order). |
 | **Hardcoded font-size** | NEVER `font-size:1.5rem` — use `"fontSize":"large"` semantic preset |
 | **Button font-size** | `wp:button` does NOT support root-level `fontSize` — use `"style":{"typography":{"fontSize":"var:preset\|font-size\|base"}}` → generates `has-custom-font-size` + inline `font-size` style. Root-level `"fontSize":"base"` causes block validation errors on buttons. |
 | **Spacer blocks** | NEVER `<!-- wp:spacer -->` — use parent `blockGap` instead |
@@ -239,7 +245,9 @@ WooCommerce core plugin includes official patterns in `wp-content/plugins/woocom
 
 ## New Vertical Development
 
-When creating a new industry vertical (plumbing, legal, fintech, etc.), follow the full workflow in `docs/elayne/VERTICAL-WORKFLOW.md`.
+When creating a new industry vertical (home-improvement, legal, fintech, etc.), follow the full workflow in `docs/elayne/VERTICAL-WORKFLOW.md`.
+
+> **Naming note:** The Home Improvement vertical uses `plumbing` as its internal slug throughout (files, CSS classes, style JSON, pattern slugs). The display label was changed to "Home Improvement" in May 2026 but internal identifiers were not renamed to avoid a database migration. Do not "fix" the plumbing naming — it is intentional.
 
 **Entry point: always scaffold via pt-cli, never write block JSON from scratch.** Choose the right command per section:
 
@@ -306,6 +314,24 @@ Border width: no preset — always hardcode `1px`.
 
 > Full details: `docs/elayne/GRID-LAYOUT-STANDARDS.md`
 
+## PHP Code Quality (functions.php)
+
+Always run phpcs/phpcbf **from the theme directory** so `phpcs.xml` (WordPress standards) is picked up automatically. Using the wrong working directory silently applies a different standard and can introduce hundreds of new violations.
+
+```bash
+# Check
+cd demo/web/app/themes/elayne && vendor/bin/phpcs functions.php
+
+# Auto-fix (run check again after to confirm clean)
+cd demo/web/app/themes/elayne && vendor/bin/phpcbf functions.php
+```
+
+**WordPress coding standard rules for functions.php** (common traps):
+- Use `array()` — **never** `[]` short array syntax
+- Indent with **tabs**, not spaces
+- Multi-line function calls: opening `(` must be last on the line, each argument on its own line, closing `)` on its own line
+- Array alignment: values must align with the longest key in the array
+
 ## CSS: Block Styles vs. style.css
 
 **ALWAYS prefer block-style CSS files over `style.css` for pattern-specific styles.**
@@ -356,9 +382,11 @@ Every user-facing string MUST be wrapped. Unwrapped strings cause WP.org rejecti
 
 > ⚠️ **Unicode in PHP strings**: PHP single-quoted strings do NOT process `\u` escape sequences — `'\u2013'` outputs the literal text `\u2013`, not `–`. Always use the actual UTF-8 character (e.g. `'Mon–Fri · Sat'`) or a double-quoted string with `"\u{2013}"`. Never copy `\uXXXX` escapes from JavaScript into PHP single-quoted strings.
 
-## Pattern Validation (three-pass)
+## Pattern Validation (four-pass)
 
-Always run all three validators. Use Pass 1 first — it fixes structural issues that regex cannot catch.
+Always run all four validators. Use Pass 1 first — it fixes structural issues that regex cannot catch.
+
+> **Pass 1 vs Pass 3 — critical distinction:** `wp pattern validate` (Pass 1) uses PHP `parse_blocks()` + `serialize_blocks()`. It does NOT run Gutenberg's JavaScript `save()` function. Issues only the JS serializer produces — `border-top-style:solid` auto-injection, `has-text-color` before `has-{preset}-font-size` class ordering, button link class ordering (`wp-block-button__link has-custom-font-size wp-element-button`), `backgroundColor:"base"` being dropped — will pass Pass 1 but fail in the browser. Pass 3 (sentinel) catches all of these.
 
 **Pass 1 — Gutenberg structural validator** (requires the Trellis VM; database lives there):
 
@@ -397,7 +425,28 @@ pt-cli check patterns/my-pattern.php --theme=elayne
 pt-cli check patterns/ --theme=elayne --autofix
 ```
 
-**Pass 3 — HTML template compliance checker** (run on the host; checks `templates/` and `parts/` .html files):
+**Pass 3 — sentinel runtime validator** (run from the theme directory; launches a real browser, logs into WP admin, inserts the pattern into a draft page, saves, reads back JS block validation errors and content mismatches):
+
+```bash
+# From theme directory
+cd ~/code/imagewize.com/demo/web/app/themes/elayne
+
+# Single file
+npm run validate:file -- patterns/my-pattern.php
+
+# All patterns
+npm run validate
+
+# WooCommerce patterns
+npm run validate:woo
+
+# Or directly via npx
+npx sentinel patterns/my-pattern.php
+npx sentinel patterns/
+npx sentinel --url=http://demo.imagewize.test/store patterns/woocommerce/
+```
+
+**Pass 4 — HTML template compliance checker** (run on the host; checks `templates/` and `parts/` .html files):
 
 Catches client-side block validation drift that PHP compliance cannot detect: WooCommerce filter blocks missing `<div>` wrappers, `product-filters` missing CSS custom properties, `taxQuery:{}` vs `[]`, missing `"theme"` on `wp:template-part`, and unbalanced HTML tags.
 

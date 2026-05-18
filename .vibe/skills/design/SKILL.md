@@ -60,7 +60,7 @@ When creating a new vertical, first create its style JSON file before generating
 
 ### Step 1: Gather Requirements
 Before generating, confirm:
-- **Vertical** (e.g., plumbing, restaurant, photography)
+- **Vertical** (e.g., home-improvement, restaurant, photography) — note: the Home Improvement vertical uses `plumbing` as its internal slug
 - **Color palette** — check existing style file or define new one
 - **Required sections** (list all: hero, services, testimonials, CTA, contact, footer)
 - **Tone** (e.g., professional, emergency-focused, luxury, friendly)

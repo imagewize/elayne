@@ -3,3 +3,6 @@ rsync
 vendor
 node_modules
 create-pr.sh
+.env
+sentinel-*.log.json
+.sentinel-cache.json

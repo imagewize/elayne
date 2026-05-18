@@ -7,6 +7,93 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.0] - 2026-05-17
+
+### Added
+
+**Sentinel Runtime Validator (Pass 3):**
+- Added `@imwz/wp-pattern-sentinel` as a dev dependency — a Playwright-based browser validator that logs into WP admin, inserts each pattern into a draft page, saves, and reads back JS block validation errors
+- Catches issues PHP-only validation cannot: `border-top-style:solid` auto-injection, `has-text-color` vs `has-{preset}-font-size` class ordering, button link class ordering, `backgroundColor:"base"` being dropped
+- Added npm scripts: `validate`, `validate:woo`, `validate:file`, `validate:new`, `validate:new:woo`, `validate:clear-cache`
+- Added composer.json bridge scripts for sentinel commands
+
+**Brand Element + Editorial Header:**
+- New `brand-logo` block style for `core/site-title` — orange dot via `::before` on the `<a>`, Mona Sans condensed 900 at the `medium` preset, all typography set directly on the link element to bypass WordPress inheritance blocking
+- New `status-pill` block style for `core/paragraph` — pill border, uppercase tracking, pulsing orange dot via `::before` with 2.2s ease-out keyframe animation
+- New `header-editorial` pattern — minimal sticky header with brand logo left, centered nav, status pill right; frosted-glass effect via `backdrop-filter: saturate(140%) blur(14px)` scoped to `.elayne-editorial-header`
+- All three CSS files (`brand-logo.css`, `status-pill.css`, `editorial-header.css`) in `assets/styles/block-styles/` and loaded conditionally via `wp_enqueue_block_style()` — zero cost on pages not using these styles
+
+**Main-Hero Pattern:**
+- New `main-hero.php` — editorial homepage hero for agency and corporate sites; `editorial-eyebrow` label above the headline, `editorial-hero-heading` block style with staggered per-line rise animation
+
+**Editorial Block Styles (main-hero redesign):**
+- New paragraph styles: `editorial-eyebrow` (uppercase label with decorative line prefix), `editorial-pill`
+- New heading styles: `editorial-hero-heading` (condensed/900-weight with staggered per-line rise animation), `editorial-footer-wordmark`
+- New group styles: `editorial-services-stack`, `editorial-service-row`, `editorial-work-grid`, `editorial-work-card`, `editorial-pull-quote`, `editorial-stats`, `editorial-cta`
+- New CSS: `assets/styles/block-styles/editorial-eyebrow.css`, `assets/styles/block-styles/editorial-hero-heading.css`
+- Hero animation system: `elayne-page-loaded` class injected synchronously into `<html>` via inline head script; animations disabled in FSE editor (`is_admin()` guard) and `prefers-reduced-motion`
+
+**Block Attribute Rules Documentation:**
+- Documented six new serializer pitfalls in CLAUDE.md: CSS vars in block JSON (`var:preset|color|x` not `var(--wp--...)`), ampersand escaping, double-dash in className, button border-radius pairing, navigation `ref` distribution rule, navigation attr order (`style` before `layout`)
+
+### Changed
+
+**Home Improvement Vertical Rename:**
+- Renamed display label from "Plumbing & Trades" to "Home Improvement" in `functions.php`, README.md, CONTRIBUTING.md, and all documentation
+- Internal slug, file names, CSS classes, and style JSON intentionally kept as `plumbing-*` to avoid database migration
+- README style variation list updated: "Plumbing" → "Home Improvement"
+- Contact Form 7 note updated: "Plumbing Contact Section" → "Home Improvement Contact Section"
+
+**Pattern Library Counts:**
+- Total count updated from 140+ to 125+ following retirement pass
+- Hero Sections: 8 → 6; Blog & Posts: 11 → 6; Pages: 12 → 11
+- Spa & Wellness: expanded description from "3 patterns" to full 10-pattern set including wellness posts
+- Food & Beverage: 14 → 13 patterns; Legal Services: 9 → 8 patterns
+- README note added for new `main-hero` pattern for agency and corporate homepages
+
+**Four-Pass Validation Process:**
+- Validation workflow expanded from three-pass to four-pass
+- Former Pass 3 (HTML template compliance checker) promoted to Pass 4
+- New Pass 3 is the sentinel runtime validator
+- Added critical distinction note: Pass 1 (`wp pattern validate`) uses PHP only; Pass 3 (sentinel) runs the full Gutenberg JS `save()` function
+
+**PHP Code Quality Standards:**
+- Added phpcs/phpcbf guidance to CLAUDE.md and vibe.md: must run from theme directory so `phpcs.xml` is picked up; use `array()` not `[]`; tabs not spaces; multi-line call formatting; array alignment rules
+
+### Fixed
+
+**CSS Var Notation in Block JSON (`agency-services-showcase.php`):**
+- Changed four service card border color attributes from `"color":"var(--wp--preset--color--border-light)"` to `"color":"var:preset|color|border-light"`
+- Prevents WordPress serializer from Unicode-escaping `--` as `-`, which caused block content mismatch errors
+
+**BEM Double-Dash Class Names (nail salon & plumbing heroes):**
+- Renamed `floating-badge--bl` → `floating-badge-bl` and `floating-badge--tr` → `floating-badge-tr` in CSS selectors (`nail-salon-variation.css`, `plumbing-variation.css`)
+- BEM `--` modifier syntax is escaped by the WordPress serializer in `className` values, causing block validation failures
+
+**WooCommerce Related Products (`woo-product-related.php`):**
+- Fixed empty space below the related products section caused by incorrect group wrapper structure
+- Added hover reveal add-to-cart button on product cards
+
+**WooCommerce Hero Mobile Stacking (`woo-hero.php`):**
+- Removed `is-not-stacked-on-mobile` class to restore correct single-column stacking on mobile viewports
+
+**Header Pattern Serialization:**
+- Compacted closing tag whitespace in `header-social-logo-hamburger.php` to match WordPress block serializer output
+- Added missing newline between image block closer and paragraph opener in `plumbing-header.php` to resolve block content mismatch
+
+**Editorial Header Navigation (`editorial-header.css`):**
+- Fixed nav overlay clipping that was cutting off dropdown menus
+- Fixed mobile hamburger icon vertical alignment
+
+### Technical
+
+- Added `package-lock.json` (lockfileVersion 3) with `@imwz/wp-pattern-sentinel@1.0.0` and its dependency tree (playwright 1.60.0, p-queue, js-yaml)
+- Updated `@imwz/wp-pattern-sentinel` from 1.0.0 to 1.0.2
+- Updated `package.json` version from `1.0.0-beta.2` to `4.0.2` and description to reflect 100+ patterns
+- Added `.env`, `sentinel-*.log.json`, `.sentinel-cache.json` to `.gitignore`
+- Retired patterns: `author-box.php`, `blog-post-columns-fandb.php`
+- Updated `.vibe/skills/design/README.md` and `SKILL.md` to document plumbing slug as Home Improvement internal identifier",
+
 ## [4.0.2] - 2026-05-15
 
 ### Fixed

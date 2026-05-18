@@ -23,7 +23,7 @@ All design assets (JPG, HTML, CSS) live in the centralized designs directory at 
 │   ├── designs/   # Final JPG mockups
 │   ├── html/      # HTML/CSS implementations
 │   └── images/    # Image assets and source files
-└── plumbing/
+└── plumbing/           # Home Improvement vertical (internal slug kept as 'plumbing')
     ├── designs/
     ├── html/
     └── images/
