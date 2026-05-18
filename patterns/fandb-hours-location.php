@@ -8,7 +8,7 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/food-beverage"],"patternName":"elayne/fandb-hours-location","name":"Hours & Location"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"secondary","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/food-beverage"],"patternName":"elayne/fandb-hours-location","name":"Hours and Location"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"secondary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-secondary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"400"},"spacing":{"margin":{"bottom":"var:preset|spacing|large"}}},"textColor":"primary","fontFamily":"heading","fontSize":"large"} -->
 	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-font-family has-large-font-size" style="margin-bottom:var(--wp--preset--spacing--large);font-weight:400"><?php esc_html_e( 'Visit Us', 'elayne' ); ?></h2>
 	<!-- /wp:heading -->

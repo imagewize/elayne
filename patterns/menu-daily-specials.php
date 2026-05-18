@@ -10,7 +10,7 @@
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/food-beverage","elayne/features"],"patternName":"elayne/menu-daily-specials","name":"Daily Specials Menu"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"400"}},"textColor":"primary","fontFamily":"heading","fontSize":"large"} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"400"}},"textColor":"primary","fontSize":"large","fontFamily":"heading"} -->
 <h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-font-family has-large-font-size" style="font-weight:400"><?php esc_html_e( 'Chef\'s Daily Specials', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
@@ -23,13 +23,15 @@
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"0"},"border":{"radius":"12px"}},"backgroundColor":"base","layout":{"type":"default"}} -->
 <div class="wp-block-group has-base-background-color has-background" style="border-radius:12px"><!-- wp:columns {"verticalAlignment":"stretch","style":{"spacing":{"blockGap":{"left":"0"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-stretch"><!-- wp:column {"verticalAlignment":"stretch","width":"45%"} -->
-<div class="wp-block-column is-vertically-aligned-stretch" style="flex-basis:45%"><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/pan-seared-halibut.webp","dimRatio":0,"minHeight":100,"minHeightUnit":"%","isDark":false,"style":{"border":{"radius":{"topLeft":"12px","bottomLeft":"12px"}}}} -->
-<div class="wp-block-cover is-light" style="border-top-left-radius:12px;border-bottom-left-radius:12px;min-height:100%"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background" alt="<?php echo esc_attr__( 'Pan-Seared Halibut', 'elayne' ); ?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/pan-seared-halibut.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"></div></div>
+<div class="wp-block-column is-vertically-aligned-stretch" style="flex-basis:45%"><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/pan-seared-halibut.webp","alt":"<?php echo esc_attr__( 'Pan-Seared Halibut', 'elayne' ); ?>","dimRatio":0,"minHeight":100,"minHeightUnit":"%","isDark":false,"style":{"border":{"radius":{"topLeft":"12px","bottomLeft":"12px"}}}} -->
+<div class="wp-block-cover is-light" style="border-top-left-radius:12px;border-bottom-left-radius:12px;min-height:100%"><img class="wp-block-cover__image-background" alt="<?php echo esc_attr__( 'Pan-Seared Halibut', 'elayne' ); ?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/pan-seared-halibut.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size"></p>
+<!-- /wp:paragraph --></div></div>
 <!-- /wp:cover --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"55%","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","right":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|small"}}} -->
-<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);flex-basis:55%"><!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"500"}},"textColor":"primary","fontFamily":"decorative","fontSize":"medium"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);flex-basis:55%"><!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"500"}},"textColor":"primary","fontSize":"medium","fontFamily":"decorative"} -->
 <h3 class="wp-block-heading has-primary-color has-text-color has-decorative-font-family has-medium-font-size" style="font-weight:500"><?php esc_html_e( 'Pan-Seared Halibut', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
@@ -61,7 +63,7 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"},"border":{"radius":"12px"}},"backgroundColor":"base","layout":{"type":"default"}} -->
 <div class="wp-block-group has-base-background-color has-background" style="border-radius:12px"><!-- wp:columns {"verticalAlignment":"stretch","style":{"spacing":{"blockGap":{"left":"0"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-stretch"><!-- wp:column {"verticalAlignment":"center","width":"55%","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|small"}}} -->
-<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);flex-basis:55%"><!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"500"}},"textColor":"primary","fontFamily":"decorative","fontSize":"medium"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);flex-basis:55%"><!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"500"}},"textColor":"primary","fontSize":"medium","fontFamily":"decorative"} -->
 <h3 class="wp-block-heading has-primary-color has-text-color has-decorative-font-family has-medium-font-size" style="font-weight:500"><?php esc_html_e( 'Wild Mushroom Ravioli', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
@@ -89,8 +91,10 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"stretch","width":"45%"} -->
-<div class="wp-block-column is-vertically-aligned-stretch" style="flex-basis:45%"><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/placeholder-800x600.webp","dimRatio":0,"minHeight":100,"minHeightUnit":"%","isDark":false,"style":{"border":{"radius":{"topRight":"12px","bottomRight":"12px"}}}} -->
-<div class="wp-block-cover is-light" style="border-top-right-radius:12px;border-bottom-right-radius:12px;min-height:100%"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background" alt="<?php echo esc_attr__( 'Wild Mushroom Ravioli', 'elayne' ); ?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/placeholder-800x600.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"></div></div>
+<div class="wp-block-column is-vertically-aligned-stretch" style="flex-basis:45%"><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/placeholder-800x600.webp","alt":"<?php echo esc_attr__( 'Wild Mushroom Ravioli', 'elayne' ); ?>","dimRatio":0,"minHeight":100,"minHeightUnit":"%","isDark":false,"style":{"border":{"radius":{"topRight":"12px","bottomRight":"12px"}}}} -->
+<div class="wp-block-cover is-light" style="border-top-right-radius:12px;border-bottom-right-radius:12px;min-height:100%"><img class="wp-block-cover__image-background" alt="<?php echo esc_attr__( 'Wild Mushroom Ravioli', 'elayne' ); ?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/placeholder-800x600.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size"></p>
+<!-- /wp:paragraph --></div></div>
 <!-- /wp:cover --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
