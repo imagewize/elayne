@@ -45,9 +45,9 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 Elayne includes **125+ professionally designed patterns** across multiple categories:
 
-**Core Patterns:** Hero Sections (6) • Headers & Footers (11) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (17) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (6)
+**Core Patterns:** Hero Sections (6) • Headers & Footers (11) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (18) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (6)
 
-> Hero sections include the new `main-hero` pattern for agency and corporate homepages alongside `hero-modern-light` and the full set of industry-specific heroes.
+> Hero sections include the new `main-hero` pattern for agency and corporate homepages alongside `hero-modern-light` and the full set of industry-specific heroes. Features includes the new `main-services-stack` pattern — an editorial numbered services list with hover slide-in effect, pill tags, and two-column header.
 
 **Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (11)
 

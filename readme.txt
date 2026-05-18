@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 4.1.0
+Stable tag: 4.2.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,16 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.2.0 - 05/18/26 =
+* ADDED: New pattern `elayne/main-services-stack` — editorial numbered services list (FSE builds, Headless+Sage, Vertical kits, Performance+SEO) with two-column header and pill tags.
+* ADDED: Block style `is-style-editorial-service-row` — animated service row with hover slide-in padding (56 px), extending warm-accent line (40 px), arrow indicator colour shift, 380 ms cubic-bezier transitions, mobile stack collapse, and `prefers-reduced-motion` support.
+* ADDED: Block style `is-style-editorial-services-stack` — container style for services stack; kicker uppercase/wide-tracking, condensed heading with italic serif accent in `accent-warm`.
+* ADDED: Block style `is-style-editorial-pill` — inline tag chip for paragraphs; bold uppercase `xx-small` text, `main-accent` colour, `border-light` border, pill radius.
+* CHANGED: Hero pattern stat column version number updated from v4.0.2 to v4.2.0.
+* CHANGED: Hero pattern description copy updated — "Patterns that compose." replaced with "Content that pops."
+* CHANGED: Theme screenshot updated to reflect current hero and services stack design."
+
 
 = 4.1.0 - 05/17/26 =
 * ADDED: Sentinel runtime validator (Pass 3) — @imwz/wp-pattern-sentinel Playwright tool validates patterns in a real browser, catching JS save() mismatches PHP cannot detect (border-style injection, class ordering, backgroundColor drops).

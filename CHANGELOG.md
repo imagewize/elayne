@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.2.0] - 2026-05-18
+
+### Added
+
+**Services Stack Pattern (`elayne/main-services-stack`):**
+- New editorial pattern featuring a numbered services list with four service entries: FSE theme builds, Headless + Sage, Vertical kits, and Performance + SEO
+- Two-column header section with uppercase kicker text, condensed display heading with italic serif accent, and a companion description paragraph
+- Each service row includes an italic serif number, uppercase heading, short description, and pill-tag group
+- Animated arrow indicator (`↗`) per row that shifts on hover
+
+**Editorial Block Styles (CSS):**
+- `is-style-editorial-services-stack` — Container style for the services stack; styles kicker text (uppercase, wide letter-spacing) and condensed heading with italic serif `<em>` and `<mark>` accents in `accent-warm`
+- `is-style-editorial-service-row` — Row style with bottom border, flex layout, and hover animation: `padding-left` slides in 56 px and a 40 px warm-accent line extends from the left edge; arrow indicator translates and changes colour; transitions use `cubic-bezier(.2, .7, .2, 1)` at 380 ms; stack collapses to column at ≤600 px; all transitions suppressed under `prefers-reduced-motion`
+- `is-style-editorial-pill` — Paragraph block style rendering inline tag chips: `xx-small` bold uppercase text, `main-accent` colour, `border-light` border, `999px` border-radius, and zero margin
+
+### Changed
+
+**Hero Pattern (`elayne/main-hero`):**
+- Updated displayed version number in hero stats column from `v4.0.2` to `v4.2.0`
+- Revised hero description copy: replaced "Patterns that compose." with "Content that pops."
+
+**Theme Screenshot:**
+- Updated `screenshot.png` to reflect the current hero design including the new services stack section",
+
 ## [4.1.0] - 2026-05-17
 
 ### Added
