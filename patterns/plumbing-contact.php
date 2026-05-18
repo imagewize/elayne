@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Plumbing Contact Section
+ * Title: Home Improvement Contact Section
  * Slug: elayne/plumbing-contact
  * Description: Two-column contact section with business details and contact form shortcode
  * Categories: elayne/plumbing, elayne/contact
- * Keywords: contact, plumbing, phone, email, address, hours, form, quote
+ * Keywords: contact, home improvement, contractor, phone, email, address, hours, form, quote
  * Viewport Width: 1200
  */
 ?>

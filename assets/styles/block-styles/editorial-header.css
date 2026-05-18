@@ -1,0 +1,30 @@
+/* Editorial Header — sticky frosted-glass effect for .elayne-editorial-header */
+
+.elayne-editorial-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+
+/*
+ * backdrop-filter on a stacking context becomes a containing block for
+ * position:fixed descendants (nav overlay), clipping it to the header bounds.
+ * Move the frosted-glass effect to ::before so the header itself stays clean.
+ */
+.elayne-editorial-header::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgba(253, 251, 247, 0.78);
+	backdrop-filter: saturate(140%) blur(14px);
+	-webkit-backdrop-filter: saturate(140%) blur(14px);
+	z-index: -1;
+	pointer-events: none;
+}
+
+/* Mobile: hide status pill so hamburger right-aligns via flex space-between */
+@media (max-width: 781px) {
+	.elayne-editorial-header .is-style-status-pill {
+		display: none;
+	}
+}

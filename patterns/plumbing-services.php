@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Plumbing Services Grid
+ * Title: Home Improvement Services Grid
  * Slug: elayne/plumbing-services
- * Description: Six-card responsive grid of plumbing services with SVG icons
+ * Description: Six-card responsive grid of home improvement services with SVG icons
  * Categories: elayne/plumbing, elayne/features, elayne/card-simple
- * Keywords: services, plumbing, leak, drain, water heater, pipes, sewer, commercial
+ * Keywords: services, home improvement, contractor, trades, repairs, commercial
  * Viewport Width: 1200
  * Grid Config: 18rem (simple cards: icon + title + short description)
  */

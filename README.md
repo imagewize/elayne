@@ -10,7 +10,7 @@ Design better, build faster, publish sooner. Elayne is a professional WordPress 
 ## Why Choose Elayne?
 
 - **Business-Focused**: Professional patterns specifically designed for corporate websites, service providers, and modern businesses
-- **Industry-Specific Content**: Pattern sets optimized for spa & wellness, legal services, food & beverage, and plumbing/home services
+- **Industry-Specific Content**: Pattern sets optimized for spa & wellness, legal services, food & beverage, and home improvement trades
 - **Conversion Optimized**: Built-in patterns designed to convert visitors into customers
 - **Mobile-First Design**: Every pattern is responsive and optimized for all devices
 - **Clean, Modern Aesthetic**: Sophisticated design with professional color palettes and typography
@@ -43,13 +43,15 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Pattern Library
 
-Elayne includes **140+ professionally designed patterns** across multiple categories:
+Elayne includes **125+ professionally designed patterns** across multiple categories:
 
-**Core Patterns:** Hero Sections (8) • Headers & Footers (10) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (17) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (11)
+**Core Patterns:** Hero Sections (6) • Headers & Footers (11) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (17) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (6)
 
-**Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (12)
+> Hero sections include the new `main-hero` pattern for agency and corporate homepages alongside `hero-modern-light` and the full set of industry-specific heroes.
 
-**Industry Verticals:** Spa & Wellness (11) • Legal Services (9) • Food & Beverage (12) • Plumbing (9) • Nail Salon (7)
+**Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (11)
+
+**Industry Verticals:** Spa & Wellness (10) • Legal Services (7) • Food & Beverage (13) • Home Improvement (9) • Nail Salon (7)
 
 **WooCommerce Store:** 24 patterns covering the full shopping journey — shop landing, category archives, product detail pages, cart, checkout, and more (requires WooCommerce plugin)
 
@@ -61,14 +63,14 @@ Browse the complete pattern library in **Appearance → Editor → Patterns**
 
 Elayne provides specialized pattern sets for specific industries:
 
-- **Food & Beverage** - Restaurant and café patterns with menu displays, chef profiles, event grids, hours/location info, testimonials, hero sections, and specialized header with top bar (14 patterns). Includes custom "Food & Beverage" style variation with Anton/Asap Condensed fonts and emerald/cream color palette
-- **Legal Services** - Professional attorney profiles, practice area showcases, case statistics, client testimonials, and contact patterns optimized for law firms (8 patterns)
-- **Plumbing** - Full-site pattern set for plumbing businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer (9 patterns). Includes a navy/amber style variation with emergency-red accents
-- **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays (3 patterns)
+- **Food & Beverage** - Restaurant and café patterns with menu displays, chef profile, event grids, hours/location info, testimonials, hero sections, and specialized header with top bar (13 patterns). Includes custom "Food & Beverage" style variation with Anton/Asap Condensed fonts and emerald/cream color palette
+- **Legal Services** - Professional attorney profiles, practice area showcases, case statistics, client testimonials, and contact patterns optimized for law firms (7 patterns)
+- **Home Improvement** - Full-site pattern set for home improvement businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer (9 patterns). Includes a navy/amber style variation with emergency-red accents
+- **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and wellness posts (10 patterns)
 - **Nail Salon** - Elegant rose/blush pattern set for nail studios: hero, services grid, stats bar, why-us, testimonials, booking CTA, and contact (7 patterns). Includes a "Nail Salon" style variation with Cormorant Garamond/Quicksand fonts and a rose & warm-white color palette
 - **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category hero & toolbar, product gallery with colour swatches & style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile sticky ATC bar, cart, checkout, ticker, featured products, testimonials, and newsletter (requires WooCommerce plugin)
 
-> **Contact Form 7 support:** The `Contact With Form` and `Plumbing Contact Section` patterns include a live contact form when [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) is active. Without it, styled placeholder fields are shown automatically — no broken layouts.
+> **Contact Form 7 support:** The `Contact With Form` and `Home Improvement Contact Section` patterns include a live contact form when [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) is active. Without it, styled placeholder fields are shown automatically — no broken layouts.
 
 > **WooCommerce attribute filters:** The product category and shop archive templates include an unconfigured attribute filter placeholder in the sidebar. Select the block in **Appearance → Editor → Templates** and choose which product attribute to filter by — no hardcoded IDs, fully compatible with any store configuration.
 
@@ -78,7 +80,7 @@ Switch your entire site's look with one click using **7 pre-configured color pal
 
 - **Ink & Sand** (Default) - Modern, clean aesthetic
 - **Food & Beverage** - Emerald & cream with Anton/Asap Condensed fonts
-- **Plumbing** - Navy, amber & emergency-red for trade service businesses
+- **Home Improvement** - Navy, amber & emergency-red for trade service businesses
 - **Spa & Wellness** (Teal & Sage) - Calming, wellness-focused
 - **Legal Blue** - Professional, trustworthy
 - **Publicist** - Indigo & violet with Bodoni Moda serif for publications & blogs
@@ -91,6 +93,8 @@ Change styles in **Appearance → Editor → Styles**
 Transform your content with **32 interactive block styles** — pure CSS animations with zero JavaScript:
 
 **Button Effects** (6) • **Card & Group Effects** (7) • **Image Effects** (9) • **Text & Link Effects** (10)
+
+**Editorial Identity Styles** — 13 additional block styles for the editorial brand system: `brand-logo` (animated site title), `status-pill` (pulsing paragraph label), `editorial-eyebrow`, `editorial-pill`, `editorial-hero-heading` (staggered animation), `editorial-footer-wordmark`, and seven editorial group layout styles (`editorial-services-stack`, `editorial-service-row`, `editorial-work-grid`, `editorial-work-card`, `editorial-pull-quote`, `editorial-stats`, `editorial-cta`)
 
 All effects are pure CSS, accessible, and optimized for performance. Apply via **Appearance → Editor → Select Block → Styles Panel**
 

@@ -1,0 +1,35 @@
+/* Status Pill — loads only on pages where is-style-status-pill is in use */
+
+.wp-block-paragraph.is-style-status-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5ch;
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	padding: 0.4rem 0.8rem;
+	border: 1px solid var(--wp--preset--color--border-light);
+	border-radius: 999px;
+	background: var(--wp--preset--color--base);
+	white-space: nowrap;
+	margin: 0;
+}
+
+.wp-block-paragraph.is-style-status-pill::before {
+	content: '';
+	display: inline-block;
+	flex-shrink: 0;
+	width: 6px;
+	height: 6px;
+	border-radius: 999px;
+	background: var(--wp--preset--color--accent-warm);
+	box-shadow: 0 0 0 0 rgba(230, 92, 0, 0.6);
+	animation: elayne-status-pulse 2.2s ease-out infinite;
+}
+
+@keyframes elayne-status-pulse {
+	0%   { box-shadow: 0 0 0 0 rgba(230, 92, 0, 0.55); }
+	70%  { box-shadow: 0 0 0 8px rgba(230, 92, 0, 0); }
+	100% { box-shadow: 0 0 0 0 rgba(230, 92, 0, 0); }
+}

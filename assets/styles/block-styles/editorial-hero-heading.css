@@ -1,0 +1,102 @@
+.wp-block-heading.is-style-editorial-hero-heading {
+	font-stretch: 75%;
+	line-height: 0.86;
+	font-weight: 900;
+	letter-spacing: -0.035em;
+	text-transform: uppercase;
+}
+
+/* Each line wraps as a block element */
+.wp-block-heading.is-style-editorial-hero-heading .line {
+	display: block;
+}
+
+/* Mobile floor — prevents 4-line wrap on 375px viewports */
+@media (max-width: 480px) {
+	.wp-block-heading.is-style-editorial-hero-heading {
+		font-size: 2.5rem;
+	}
+}
+
+/* Editor default: lines visible (no html class in FSE iframe) */
+html:not(.elayne-page-loaded) .wp-block-heading.is-style-editorial-hero-heading .line {
+	opacity: 1;
+	transform: none;
+}
+
+/* Frontend: hide before animation fires (class applied synchronously in <head>) */
+html.elayne-page-loaded .wp-block-heading.is-style-editorial-hero-heading .line {
+	opacity: 0;
+	transform: translateY(40px);
+	animation: editorial-rise 900ms cubic-bezier(.16, .84, .3, 1) forwards;
+}
+
+html.elayne-page-loaded .wp-block-heading.is-style-editorial-hero-heading .line:nth-child(1) {
+	animation-delay: 80ms;
+}
+html.elayne-page-loaded .wp-block-heading.is-style-editorial-hero-heading .line:nth-child(2) {
+	animation-delay: 180ms;
+}
+html.elayne-page-loaded .wp-block-heading.is-style-editorial-hero-heading .line:nth-child(3) {
+	animation-delay: 280ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html.elayne-page-loaded .wp-block-heading.is-style-editorial-hero-heading .line {
+		opacity: 1;
+		transform: none;
+		animation: none;
+	}
+}
+
+@keyframes editorial-rise {
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/* Accent/italic word — counters the heading's condensed/uppercase/900 settings */
+.wp-block-heading.is-style-editorial-hero-heading mark.has-serif-font-family,
+.wp-block-heading.is-style-editorial-hero-heading span.has-serif-font-family,
+.wp-block-heading.is-style-editorial-hero-heading em.has-serif-font-family {
+	font-style: italic;
+	font-stretch: 100%;
+	font-weight: 400;
+	text-transform: none;
+	letter-spacing: -0.015em;
+	color: var(--wp--preset--color--accent-warm);
+}
+
+/* Stats column — hidden on narrow viewports, visible at ≥1000px */
+.editorial-hero-stats {
+	display: none;
+}
+@media (min-width: 1000px) {
+	.editorial-hero-stats {
+		display: block !important;
+	}
+}
+
+/* Stats label styling */
+.editorial-hero-stats p {
+	font-size: var(--wp--preset--font-size--x-small);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--main-accent);
+}
+.editorial-hero-stats p strong {
+	display: block;
+	font-family: var(--wp--preset--font-family--serif);
+	font-weight: 400;
+	font-style: italic;
+	font-size: var(--wp--preset--font-size--medium);
+	text-transform: none;
+	letter-spacing: -0.01em;
+	color: var(--wp--preset--color--main);
+}
+
+/* Keep stats visible in the block editor canvas */
+.wp-admin .editor-styles-wrapper .editorial-hero-stats {
+	display: block !important;
+}

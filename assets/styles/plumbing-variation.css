@@ -16,8 +16,8 @@
 }
 
 .editor-styles-wrapper .plumbing-hero-card,
-.editor-styles-wrapper .floating-badge--bl,
-.editor-styles-wrapper .floating-badge--tr {
+.editor-styles-wrapper .floating-badge-bl,
+.editor-styles-wrapper .floating-badge-tr {
 	grid-column: 1;
 	grid-row: 1;
 }

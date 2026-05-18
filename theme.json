@@ -79,6 +79,16 @@
 					"name": "Warm Diagonal",
 					"slug": "warm-diagonal",
 					"gradient": "linear-gradient(135deg, rgba(230, 92, 0, 0.88), rgba(11, 19, 36, 0.70))"
+				},
+				{
+					"name": "Editorial Glow",
+					"slug": "editorial-glow",
+					"gradient": "radial-gradient(800px 500px at 80% 30%, rgba(230, 92, 0, 0.15), transparent 60%), #F3EDE6"
+				},
+				{
+					"name": "Editorial Stripe",
+					"slug": "editorial-stripe",
+					"gradient": "repeating-linear-gradient(-45deg, transparent 0 22px, rgba(31, 41, 55, 0.04) 22px 23px)"
 				}
 			],
 			"palette": [
@@ -136,6 +146,16 @@
 					"name": "Border Dark",
 					"slug": "border-dark",
 					"color": "#D3CBC0"
+				},
+				{
+					"name": "Accent Warm",
+					"slug": "accent-warm",
+					"color": "#E65C00"
+				},
+				{
+					"name": "Accent Warm Light",
+					"slug": "accent-warm-light",
+					"color": "#FF8C42"
 				}
 			],
 			"link": true
@@ -401,6 +421,15 @@
 					"size": "4.3875rem",
 					"slug": "xx-large",
 					"name": "Extra Extra Large"
+				},
+				{
+					"fluid": {
+						"min": "3.5rem",
+						"max": "11rem"
+					},
+					"size": "11rem",
+					"slug": "display",
+					"name": "Display"
 				}
 			],
 			"lineHeight": true

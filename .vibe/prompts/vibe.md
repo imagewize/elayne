@@ -117,6 +117,24 @@ ssh web@demo.imagewize.com "cd /srv/www/demo.imagewize.com/current && \
   --all-tables --precise --path=web/wp && wp cache flush --path=web/wp"
 ```
 
+## PHP Code Quality (functions.php)
+
+Always run phpcs/phpcbf **from the theme directory** so `phpcs.xml` (WordPress standards) is picked up automatically. Using the wrong working directory silently applies a different standard and can introduce hundreds of new violations.
+
+```bash
+# Check
+cd demo/web/app/themes/elayne && vendor/bin/phpcs functions.php
+
+# Auto-fix (run check again after to confirm clean)
+cd demo/web/app/themes/elayne && vendor/bin/phpcbf functions.php
+```
+
+**WordPress coding standard rules for functions.php** (common traps):
+- Use `array()` — **never** `[]` short array syntax
+- Indent with **tabs**, not spaces
+- Multi-line function calls: opening `(` must be last on the line, each argument on its own line, closing `)` on its own line
+- Array alignment: values must align with the longest key in the array
+
 ## Design System
 
 ### Color Palette (theme.json)
@@ -462,9 +480,11 @@ File contains:
 ```
 A search pattern with `"margin":{"top":"0"}},"backgroundColor"` (missing one `}`) fails with ~99.8% similarity. The correct pattern needs three closing braces: `"margin":{"top":"0"}}},"backgroundColor"`.
 
-## Pattern Validation (three-pass)
+## Pattern Validation (four-pass)
 
-Always run all three validators. Pass 1 fixes structural issues (unbalanced delimiters, malformed JSON, bad nesting) that regex cannot catch. Pass 2 enforces Elayne-specific rules. Pass 3 catches client-side block validation drift in .html template and part files.
+Always run all four validators. Pass 1 fixes structural issues that regex cannot catch. Pass 3 (sentinel) catches JS `save()` mismatches that Pass 1 cannot see.
+
+> **Pass 1 vs Pass 3 — critical distinction:** `wp pattern validate` (Pass 1) uses PHP `parse_blocks()` + `serialize_blocks()`. It does NOT run Gutenberg's JavaScript `save()` function. Issues only the JS serializer produces — `border-top-style:solid` auto-injection, `has-text-color` before `has-{preset}-font-size` class ordering, button link class ordering (`wp-block-button__link has-custom-font-size wp-element-button`), `backgroundColor:"base"` being dropped — will pass Pass 1 but fail in the browser. Pass 3 (sentinel) catches all of these.
 
 **Pass 1 — Gutenberg structural validator** (requires Trellis VM — database lives there):
 ```bash
@@ -502,7 +522,28 @@ composer check
 ./vendor/bin/pt-cli check patterns/ --theme=elayne --autofix
 ```
 
-**Pass 3 — HTML template compliance checker** (host machine; checks `templates/` and `parts/` .html files):
+**Pass 3 — sentinel runtime validator** (run from the theme directory; launches a real browser, logs into WP admin, inserts pattern into a draft page, saves, reads back JS block validation errors and content mismatches):
+
+```bash
+# From theme directory
+cd ~/code/imagewize.com/demo/web/app/themes/elayne
+
+# Single file
+npm run validate:file -- patterns/my-pattern.php
+
+# All patterns
+npm run validate
+
+# WooCommerce patterns
+npm run validate:woo
+
+# Or directly via npx
+npx sentinel patterns/my-pattern.php
+npx sentinel patterns/
+npx sentinel --url=http://demo.imagewize.test/store patterns/woocommerce/
+```
+
+**Pass 4 — HTML template compliance checker** (host machine; checks `templates/` and `parts/` .html files):
 
 Run after modifying any `.html` template or part file. Catches WooCommerce filter blocks missing `<div>` wrappers (WooCommerce 9.x+ save() change), `product-filters` div missing CSS custom properties, `taxQuery:{}` (object) that must be `[]` (array), missing `"theme"` attribute on `wp:template-part`, and unbalanced HTML tags.
 
@@ -520,7 +561,7 @@ pt-cli check:templates demo/web/app/themes/elayne/templates/archive-product.html
 
 > Pass 1 requires the Trellis VM because WordPress needs a live database connection — the VM runs the database. Files sync automatically via Lima so patterns edited on the host are immediately available in the VM. **Important**: `limactl shell` does NOT support `--workdir` flag — use `trellis vm shell` or place `--workdir` BEFORE the VM name with `limactl shell`. macOS paths do not exist in the VM — always use VM-side paths like `/srv/www/demo.imagewize.com/current`. The `--compliance` flag on `wp pattern validate` warns that the compliance checker is not accessible inside the VM; always run Pass 2 separately on the host.
 
-The GitHub Actions workflow runs Pass 2 automatically on every PR. Passes 1 and 3 require the local environment and run locally only.
+The GitHub Actions workflow runs Pass 2 automatically on every PR. Passes 1, 3, and 4 require the local environment and run locally only.
 
 ## Key Components
 

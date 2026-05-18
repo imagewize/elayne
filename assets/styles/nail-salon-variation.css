@@ -17,7 +17,7 @@
 
 /* Hero right column — card and floating badge stack in overlay grid */
 .editor-styles-wrapper .nail-salon-hero-section .nail-salon-hero-card,
-.editor-styles-wrapper .nail-salon-hero-section .floating-badge--bl {
+.editor-styles-wrapper .nail-salon-hero-section .floating-badge-bl {
 	grid-column: 1;
 	grid-row: 1;
 }

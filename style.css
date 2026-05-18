@@ -7,7 +7,7 @@ Description: A premium full-site-editing block theme with industry-specific patt
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Version: 4.0.2
+Version: 4.1.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -565,19 +565,21 @@ figure.is-avatar,
 }
 
 /* Bottom-left badge position */
-.floating-badge--bl {
+.floating-badge-bl {
 	align-self: end;
 	justify-self: start;
 	margin-bottom: 1.5rem;
 	margin-left: -0.75rem;
+	height: fit-content;
 }
 
 /* Top-right badge position */
-.floating-badge--tr {
+.floating-badge-tr {
 	align-self: start;
 	justify-self: end;
 	margin-top: 1.5rem;
 	margin-right: -0.75rem;
+	height: fit-content;
 }
 
 /* Icon sizing inside floating badges */
@@ -823,4 +825,12 @@ figure.is-avatar,
 	}
 }
 .elayne-story-initial { opacity: 0.12; }
+
+/* Main hero: no side padding at desktop (wide align provides auto-margins);
+   restore breathing room on mobile */
+@media (max-width: 781px) {
+	.wp-block-group.main-hero {
+		padding-inline: var(--wp--preset--spacing--medium);
+	}
+}
 .elayne-hero-watermark { opacity: 0.2; }

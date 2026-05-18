@@ -23,7 +23,7 @@
 			<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-weight:600"><?php esc_html_e( 'Get started', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 
-			<!-- wp:button {"backgroundColor":"tertiary","textColor":"main","style":{"border":{"radius":"8px","width":"1px","color":"var(--wp--preset--color--border-light)"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600"}}} -->
+			<!-- wp:button {"backgroundColor":"tertiary","textColor":"main","style":{"border":{"radius":"8px","width":"1px","color":"var:preset|color|border-light"},"spacing":{"padding":{"left":"2rem","right":"2rem","top":"0.875rem","bottom":"0.875rem"}},"typography":{"fontWeight":"600"}}} -->
 			<div class="wp-block-button"><a class="wp-block-button__link has-main-color has-tertiary-background-color has-text-color has-background has-border-color wp-element-button" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:0.875rem;padding-right:2rem;padding-bottom:0.875rem;padding-left:2rem;font-weight:600"><?php esc_html_e( 'Learn more →', 'elayne' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>

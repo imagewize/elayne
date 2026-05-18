@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Plumbing Stats Bar
+ * Title: Home Improvement Stats Bar
  * Slug: elayne/plumbing-stats-bar
- * Description: Full-width amber statistics bar with five key plumbing business metrics
+ * Description: Full-width amber statistics bar with five key home improvement business metrics
  * Categories: elayne/plumbing, elayne/statistics
- * Keywords: stats, statistics, jobs, experience, rating, response, satisfaction
+ * Keywords: stats, statistics, jobs, experience, rating, response, satisfaction, home improvement
  * Viewport Width: 1200
  */
 ?>

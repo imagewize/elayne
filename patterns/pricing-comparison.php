@@ -51,8 +51,8 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"4px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
-				<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:4px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
+			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"var:preset|border-radius|sm","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);border-width:0px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -96,8 +96,8 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"50px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
-				<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:50px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
+			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--pill);border-width:0px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -145,8 +145,8 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"4px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
-				<div class="wp-block-button has-custom-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:4px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
+			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"var:preset|border-radius|sm","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:var(--wp--preset--border-radius--sm);border-width:0px;font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Choose', 'elayne' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

@@ -4,23 +4,23 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 4.0.2
+Stable tag: 4.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 140+ beautiful pattern designs, 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 125+ beautiful pattern designs, 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 140+ Professional Patterns - All 100% original, created specifically for Elayne
+* 125+ Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
-* 7 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Plumbing, Nail Salon, and Publicist
+* 7 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Home Improvement, Nail Salon, and Publicist
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
-* Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, plumbing/home services, nail salons, and publishing
+* Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, home improvement trades, nail salons, and publishing
 * Sophisticated Design - Clean, modern patterns with professional aesthetics
 * Conversion Optimization - Built-in patterns designed to convert visitors into customers
 * Full Site Editing (FSE) - Complete control over your site design
@@ -30,11 +30,11 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-Elayne includes **140+ professionally designed patterns** across multiple categories:
+Elayne includes **125+ professionally designed patterns** across multiple categories:
 
 **Core Patterns:**
-* Hero Sections (10) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs
-* Headers & Footers (8) - Responsive navigation options from mobile hamburger to desktop inline menus, including advanced two-bar layouts with contact information
+* Hero Sections (8) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs. Includes the new main-hero pattern for agency and corporate homepages
+* Headers & Footers (9) - Responsive navigation options from mobile hamburger to desktop inline menus, including advanced two-bar layouts with contact information, and a minimal editorial header with frosted-glass effect
 * Banners (4) - Announcement bars, page headers with solid or slanted backgrounds
 * Call-to-Action (11) - Newsletter signups, contact forms, booking CTAs, and conversion-focused blocks
 * Contact (2) - Professional contact information displays with office hours, phone, email, and address
@@ -42,23 +42,23 @@ Elayne includes **140+ professionally designed patterns** across multiple catego
 * Testimonials (7) - Client reviews, success stories with ratings, and detailed feedback layouts
 * Statistics (1) - Statistics displays and feature lists with visual emphasis
 * Team (1) - Team member grids with photos and bios
-* Blog & Posts (11) - Grid layouts, list views, featured posts, author boxes, and portrait-oriented displays
+* Blog & Posts (6) - Featured post layouts and portrait-oriented displays
 
 **Specialized Patterns:**
 * Cards (13) - Versatile card patterns for various content types (simple, extended, and profile cards)
 * Events (1) - Event grids with date badges and registration
-* Portfolio (2) - Masonry grids and detailed case studies
-* Pages (12) - Coming soon pages, full-page layouts, and specialized page templates
+* Portfolio (1) - Masonry grid portfolio layouts
+* Pages (11) - Full-page layouts and specialized page templates
 
 **Industry Verticals:**
-* Spa & Wellness (11) - Treatment showcases, booking CTAs, wellness features, and product displays
-* Legal Services (9) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
-* Food & Beverage (12) - Restaurant and café patterns with menus, chef profiles, event grids, hours/location, and hero sections
-* Plumbing & Home Services (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
+* Spa & Wellness (10) - Treatment showcases, booking CTAs, wellness features, and product displays
+* Legal Services (6) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
+* Food & Beverage (11) - Restaurant and café patterns with menus, chef profile, event grids, hours/location, and hero sections
+* Home Improvement (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
 * Nail Salon (7) - Hero with real photo, services grid, stats bar, why-us, testimonials, CTA, and contact patterns with rose palette
 * WooCommerce Store (24) - Complete e-commerce pattern set: shop landing, category hero & toolbar, product gallery, colour swatches, style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile ATC bar, cart, checkout, ticker, featured products, testimonials, newsletter, and more
 
-Note: The "Contact With Form" and "Plumbing Contact Section" patterns display a live Contact Form 7 form when that plugin is active. Without it, styled placeholder fields are shown as a fallback — no broken layouts.
+Note: The "Contact With Form" and "Home Improvement Contact Section" patterns display a live Contact Form 7 form when that plugin is active. Without it, styled placeholder fields are shown as a fallback — no broken layouts.
 
 **Templates:**
 * 17 page and post templates (centered, full-width, wide, sidebars, hero, landing page)
@@ -72,7 +72,7 @@ Elayne provides specialized pattern sets for specific industries:
 * **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays
 * **Legal Services** - Attorney profiles, practice area showcases, case statistics, and client testimonials optimized for law firms
 * **Food & Beverage** - Restaurant and café patterns with menu displays, chef profiles, event grids, hours/location info, testimonials, and hero sections
-* **Plumbing & Home Services** - Full-site pattern set for trade businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer. The contact pattern integrates with Contact Form 7 (optional — placeholder fields shown when inactive).
+* **Home Improvement** - Full-site pattern set for home improvement businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer. The contact pattern integrates with Contact Form 7 (optional — placeholder fields shown when inactive).
 * **Nail Salon** - Full-site pattern set with hero (CC0 photo), services grid, stats bar, why-us, testimonials, booking CTA, and contact. Includes a dedicated rose & blush pink style variation with Cormorant Garamond headings.
 * **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category archives with hero and toolbar, product detail pages (gallery, swatches, options, engraving, trust badges, tabs), cart, checkout, and supporting sections (ticker, featured products, testimonials, newsletter). Requires WooCommerce plugin.
 
@@ -84,7 +84,7 @@ Switch your entire site's look with one click using **7 pre-configured color pal
 
 * Ink & Sand (Default) - Softer ink blue and warm sand tones
 * Food & Beverage - Emerald and cream with Anton/Asap Condensed fonts for restaurants and cafés
-* Plumbing - Navy, amber, and emergency-red for trade service businesses
+* Home Improvement - Navy, amber, and emergency-red for trade service businesses
 * Spa & Wellness (Teal & Sage) - Soothing spa colors with elegant Cormorant Garamond serif
 * Legal Blue - Professional navy blue and gold palette for law firms
 * Nail Salon - Rose and blush pink palette with Cormorant Garamond headings for beauty businesses
@@ -172,6 +172,28 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.1.0 - 05/17/26 =
+* ADDED: Sentinel runtime validator (Pass 3) — @imwz/wp-pattern-sentinel Playwright tool validates patterns in a real browser, catching JS save() mismatches PHP cannot detect (border-style injection, class ordering, backgroundColor drops).
+* ADDED: npm validation scripts — validate, validate:woo, validate:file, validate:new, validate:clear-cache; composer.json bridge scripts added.
+* ADDED: Brand-logo block style for core/site-title — orange dot via CSS ::before on the link element, Mona Sans condensed 900 at medium preset, loaded conditionally via wp_enqueue_block_style.
+* ADDED: Status-pill block style for core/paragraph — pill border, uppercase tracking, pulsing orange dot animation (2.2s ease-out keyframes).
+* ADDED: Header Editorial pattern — sticky frosted-glass header with brand logo, centered nav, and status pill; backdrop-filter: saturate(140%) blur(14px).
+* ADDED: Editorial block styles for main-hero redesign — editorial-eyebrow (uppercase label with line prefix), editorial-hero-heading (condensed 900-weight with staggered per-line animation), editorial-pill, editorial-footer-wordmark, and 7 group styles.
+* ADDED: Hero animation system — elayne-page-loaded class injected into <html> via inline head script; respects prefers-reduced-motion and is disabled in FSE editor.
+* ADDED: Documented 6 new WordPress serializer pitfalls in CLAUDE.md: CSS var notation, ampersand escaping, double-dash className, button radius pairing, navigation ref distribution, navigation attr order.
+* CHANGED: Home Improvement vertical — display label renamed from "Plumbing & Trades" to "Home Improvement" in UI, README, and docs; internal slug/files kept as plumbing-* to avoid DB migration.
+* CHANGED: README style variation list — "Plumbing" renamed to "Home Improvement".
+* CHANGED: Pattern library count updated from 140+ to 125+; per-category counts revised (Hero 8→6, Blog 11→6, Pages 12→11, F&B 14→13, Legal 9→8, Spa expanded to 10).
+* CHANGED: Validation workflow expanded from three-pass to four-pass; former Pass 3 (HTML template checker) is now Pass 4; new Pass 3 is the sentinel runtime validator.
+* CHANGED: PHP code quality standards added to CLAUDE.md — phpcs/phpcbf must run from theme dir; array() not []; tabs not spaces; multi-line formatting rules.
+* FIXED: CSS var notation in agency-services-showcase.php — 4 service card borders changed from var(--wp--preset--color--border-light) to var:preset|color|border-light to prevent serializer Unicode-escaping.
+* FIXED: BEM double-dash class names — floating-badge--bl and floating-badge--tr renamed to floating-badge-bl / floating-badge-tr in nail-salon-variation.css and plumbing-variation.css to prevent WordPress serializer escaping causing block validation failures.
+* TECHNICAL: Added package-lock.json (lockfileVersion 3) with @imwz/wp-pattern-sentinel@1.0.0 dependency tree (playwright 1.60.0, p-queue, js-yaml).
+* TECHNICAL: Updated package.json version to 4.0.2 and description.
+* TECHNICAL: Added .env, sentinel-*.log.json, .sentinel-cache.json to .gitignore.
+* TECHNICAL: Retired patterns — author-box.php, blog-post-columns-fandb.php."
+
 
 = 4.0.2 - 05/15/26 =
 * FIXED: Theme description - replaced ampersands with 'and' in industry vertical names for XML/WordPress.org compatibility.

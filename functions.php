@@ -162,7 +162,7 @@ function elayne_pattern_categories() {
 		'elayne/posts'          => array( 'label' => __( 'Posts', 'elayne' ) ),
 		'elayne/spa'            => array( 'label' => __( 'Spa & Wellness', 'elayne' ) ),
 		'elayne/legal'          => array( 'label' => __( 'Legal Services', 'elayne' ) ),
-		'elayne/plumbing'       => array( 'label' => __( 'Plumbing & Trades', 'elayne' ) ),
+		'elayne/plumbing'       => array( 'label' => __( 'Home Improvement', 'elayne' ) ), // slug kept as 'plumbing' intentionally — renaming would require a DB migration.
 		'elayne/fintech'        => array( 'label' => __( 'Fintech & Technology', 'elayne' ) ),
 		'elayne/salon'          => array( 'label' => __( 'Beauty & Salon', 'elayne' ) ),
 		'elayne/retail'         => array( 'label' => __( 'Retail & E-commerce', 'elayne' ) ),
@@ -667,6 +667,87 @@ function elayne_render_shipping_returns_content( string $block_content, array $b
 	return apply_filters( 'the_content', $page->post_content );
 }
 add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_shipping_returns_content', 10, 2 );
+
+/**
+ * Register editorial block styles for the main-site redesign hero.
+ */
+function elayne_register_editorial_block_styles() {
+	$styles = array(
+		'core/site-title' => array(
+			'brand-logo' => __( 'Brand Logo', 'elayne' ),
+		),
+		'core/paragraph'  => array(
+			'status-pill'       => __( 'Status Pill', 'elayne' ),
+			'editorial-eyebrow' => __( 'Editorial Eyebrow', 'elayne' ),
+			'editorial-pill'    => __( 'Editorial Pill', 'elayne' ),
+		),
+		'core/heading'    => array(
+			'editorial-hero-heading'    => __( 'Editorial Hero Heading', 'elayne' ),
+			'editorial-footer-wordmark' => __( 'Editorial Footer Wordmark', 'elayne' ),
+		),
+		'core/group'      => array(
+			'editorial-services-stack' => __( 'Editorial Services Stack', 'elayne' ),
+			'editorial-service-row'    => __( 'Editorial Service Row', 'elayne' ),
+			'editorial-work-grid'      => __( 'Editorial Work Grid', 'elayne' ),
+			'editorial-work-card'      => __( 'Editorial Work Card', 'elayne' ),
+			'editorial-pull-quote'     => __( 'Editorial Pull Quote', 'elayne' ),
+			'editorial-stats'          => __( 'Editorial Stats', 'elayne' ),
+			'editorial-cta'            => __( 'Editorial CTA', 'elayne' ),
+		),
+	);
+
+	foreach ( $styles as $block_name => $block_styles ) {
+		foreach ( $block_styles as $style_name => $label ) {
+			register_block_style(
+				$block_name,
+				array(
+					'name'  => $style_name,
+					'label' => $label,
+				)
+			);
+			$css_path = get_theme_file_path( "assets/styles/block-styles/{$style_name}.css" );
+			if ( file_exists( $css_path ) ) {
+				wp_enqueue_block_style(
+					$block_name,
+					array(
+						'handle' => "elayne-{$style_name}",
+						'src'    => get_theme_file_uri( "assets/styles/block-styles/{$style_name}.css" ),
+						'path'   => $css_path,
+					)
+				);
+			}
+		}
+	}
+
+	// Editorial header sticky + frosted-glass CSS — not a user-visible block style,
+	// just loaded conditionally via core/group whenever the group block is present.
+	$editorial_header_css = get_theme_file_path( 'assets/styles/block-styles/editorial-header.css' );
+	if ( file_exists( $editorial_header_css ) ) {
+		wp_enqueue_block_style(
+			'core/group',
+			array(
+				'handle' => 'elayne-editorial-header',
+				'src'    => get_theme_file_uri( 'assets/styles/block-styles/editorial-header.css' ),
+				'path'   => $editorial_header_css,
+			)
+		);
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_register_editorial_block_styles' );
+
+/**
+ * Add elayne-page-loaded class to <html> in <head> to enable hero animations.
+ * Excluded from FSE editor via is_admin() check.
+ *
+ * @return void
+ */
+function elayne_page_loaded_head_script() {
+	if ( is_admin() ) {
+		return;
+	}
+	echo '<script>document.documentElement.classList.add("elayne-page-loaded");</script>';
+}
+add_action( 'wp_head', __NAMESPACE__ . '\elayne_page_loaded_head_script', 1 );
 
 /**
  * Include block extensions.

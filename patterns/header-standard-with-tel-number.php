@@ -19,7 +19,7 @@
 		<p class="hide-on-desktop has-link-color has-base-font-size" style="font-weight:600"><a href="tel:+1234567890"><?php esc_html_e( '(123) 456-7890', 'elayne' ); ?></a></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","layout":{"type":"flex","justifyContent":"left"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"},"layout":{"selfStretch":"fit","flexSize":null}},"fontSize":"base"} /-->
+		<!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","style":{"spacing":{"blockGap":"var:preset|spacing|small"},"layout":{"selfStretch":"fit","flexSize":null}},"layout":{"type":"flex","justifyContent":"left"},"fontSize":"base"} /-->
 
 		<!-- wp:paragraph {"align":"right","className":"hide-on-mobile","style":{"typography":{"fontWeight":"600"},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontSize":"base"} -->
 		<p class="has-text-align-right hide-on-mobile has-link-color has-base-font-size" style="font-weight:600"><a href="tel:+1234567890"><?php esc_html_e( '(123) 456-7890', 'elayne' ); ?></a></p>

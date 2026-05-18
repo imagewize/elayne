@@ -166,6 +166,7 @@ When creating patterns for specific industries:
 
 1. **Naming Convention**: Use prefix format: `{industry}-{pattern-type}.php`
    - Examples: `legal-hero.php`, `spa-services.php`, `legal-testimonials.php`
+   - **Exception — Home Improvement**: Files, slugs, CSS classes, and the style JSON are all named `plumbing-*` internally (e.g. `plumbing-hero.php`, `elayne/plumbing-hero`, `styles/plumbing.json`). The display label was renamed to "Home Improvement" in May 2026; internal identifiers were intentionally kept to avoid database migration.
 
 2. **Image Organization**: Store images in `patterns/images/{industry}/`
    - Legal: `patterns/images/legal/`
