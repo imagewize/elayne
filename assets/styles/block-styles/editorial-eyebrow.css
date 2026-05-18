@@ -1,0 +1,18 @@
+.wp-block-paragraph.is-style-editorial-eyebrow {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.wp-block-paragraph.is-style-editorial-eyebrow::before {
+	content: "";
+	display: block;
+	width: 28px;
+	height: 2px;
+	background-color: currentColor;
+	flex-shrink: 0;
+}

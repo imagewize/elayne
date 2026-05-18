@@ -1,0 +1,25 @@
+/* Brand Logo — loads only on pages where is-style-brand-logo is in use */
+
+.wp-block-site-title.is-style-brand-logo a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5ch;
+	text-decoration: none;
+	font-family: var(--wp--preset--font-family--primary);
+	font-stretch: 75%;
+	font-weight: 900;
+	font-size: var(--wp--preset--font-size--medium);
+	letter-spacing: -0.02em;
+	line-height: 1;
+}
+
+.wp-block-site-title.is-style-brand-logo a::before {
+	content: '';
+	display: inline-block;
+	width: 0.55em;
+	height: 0.55em;
+	background: var(--wp--preset--color--accent-warm);
+	border-radius: 999px;
+	transform: translateY(-0.05em);
+	flex-shrink: 0;
+}
