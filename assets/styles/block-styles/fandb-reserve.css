@@ -1,0 +1,83 @@
+/* fandb-reserve.css — Reserve / hours section on deep cobalt. Scoped to .is-style-fandb-reserve. */
+
+/* Eyebrow with amber dash (on dark bg) */
+.is-style-fandb-reserve .fandb-eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	color: var(--wp--preset--color--border-light);
+}
+
+.is-style-fandb-reserve .fandb-eyebrow::before {
+	content: "";
+	display: inline-block;
+	width: 28px;
+	height: 1.5px;
+	flex-shrink: 0;
+	background: var(--wp--preset--color--border-light);
+}
+
+/* Hours table */
+.is-style-fandb-reserve .fandb-hours-table {
+	border-top: 1px solid rgba(184, 196, 245, 0.25);
+}
+
+/* Each row: day / dotted leader / time */
+.is-style-fandb-reserve .fandb-hours-row {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 1rem;
+	padding: 1rem 0;
+	border-bottom: 1px solid rgba(184, 196, 245, 0.15);
+	align-items: baseline;
+}
+
+.is-style-fandb-reserve .fandb-hours-day {
+	font-family: var(--wp--preset--font-family--heading) !important;
+	font-size: 1.3rem !important;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	color: var(--wp--preset--color--secondary);
+	line-height: 1;
+	margin: 0;
+}
+
+.is-style-fandb-reserve .fandb-hours-leader {
+	border-bottom: 1.5px dotted rgba(184, 196, 245, 0.3);
+	align-self: end;
+	margin-bottom: 0.45rem;
+	height: 0;
+	padding: 0;
+	margin-top: 0;
+}
+
+.is-style-fandb-reserve .fandb-hours-time {
+	font-size: var(--wp--preset--font-size--small) !important;
+	font-weight: 500;
+	color: var(--wp--preset--color--primary-alt-accent);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+/* Today — amber highlight */
+.is-style-fandb-reserve .fandb-hours-today .fandb-hours-day,
+.is-style-fandb-reserve .fandb-hours-today .fandb-hours-time {
+	color: var(--wp--preset--color--border-light);
+}
+
+/* Closed row — italic time */
+.is-style-fandb-reserve .fandb-hours-closed .fandb-hours-time {
+	font-style: italic;
+}
+
+/* Reservation column — flex stack for child spacing */
+.is-style-fandb-reserve .wp-block-columns > .wp-block-column:first-child {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--medium);
+}

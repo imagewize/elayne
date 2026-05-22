@@ -418,6 +418,50 @@ function elayne_register_nail_salon_block_styles() {
 add_action( 'init', __NAMESPACE__ . '\elayne_register_nail_salon_block_styles' );
 
 /**
+ * Register Food & Beverage block style variations and enqueue their CSS on demand.
+ *
+ * Five styles on core/group — one per bistro-design pattern section. Each CSS
+ * file loads only on pages where the corresponding section is used.
+ */
+function elayne_register_fandb_block_styles() {
+	$styles = array(
+		'core/group' => array(
+			'fandb-header'  => __( 'F&B Header', 'elayne' ),
+			'fandb-hero'    => __( 'F&B Hero', 'elayne' ),
+			'fandb-marquee' => __( 'F&B Marquee', 'elayne' ),
+			'fandb-story'   => __( 'F&B Story', 'elayne' ),
+			'fandb-menu'    => __( 'F&B Menu', 'elayne' ),
+			'fandb-reserve' => __( 'F&B Reserve', 'elayne' ),
+		),
+	);
+
+	foreach ( $styles as $block => $variations ) {
+		foreach ( $variations as $name => $label ) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => $name,
+					'label' => $label,
+				)
+			);
+
+			$css_file = "assets/styles/block-styles/{$name}.css";
+			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
+				wp_enqueue_block_style(
+					$block,
+					array(
+						'handle' => "elayne-{$name}",
+						'src'    => get_theme_file_uri( $css_file ),
+						'path'   => get_theme_file_path( $css_file ),
+					)
+				);
+			}
+		}
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_register_fandb_block_styles' );
+
+/**
  * Enqueue the nail salon style variation stylesheet.
  *
  * Uses enqueue_block_assets so the file loads in both the frontend and the

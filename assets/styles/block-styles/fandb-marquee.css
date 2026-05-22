@@ -1,0 +1,46 @@
+/* fandb-marquee.css — Scrolling marquee strip. Scoped to .is-style-fandb-marquee. */
+
+@keyframes fandb-marquee {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-50%); }
+}
+
+.is-style-fandb-marquee {
+	overflow: hidden;
+}
+
+/* The scrolling track — a paragraph styled as a flex row */
+.is-style-fandb-marquee p.fandb-marquee-track {
+	display: flex;
+	gap: 3rem;
+	white-space: nowrap;
+	width: max-content;
+	margin: 0;
+	animation: fandb-marquee 45s linear infinite;
+	font-family: var(--wp--preset--font-family--heading);
+	font-weight: 600;
+	font-size: clamp(1.5rem, 3vw, 2.25rem);
+	letter-spacing: -0.02em;
+	align-items: center;
+}
+
+/* Star separator */
+.is-style-fandb-marquee .fandb-marquee-star {
+	color: var(--wp--preset--color--border-light);
+	font-size: 0.7em;
+}
+
+/* Ghost / outline text variant */
+.is-style-fandb-marquee .fandb-marquee-ghost {
+	-webkit-text-stroke: 1.5px currentColor;
+	color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.is-style-fandb-marquee p.fandb-marquee-track {
+		animation: none;
+		flex-wrap: wrap;
+		width: auto;
+		white-space: normal;
+	}
+}

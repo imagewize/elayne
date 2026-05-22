@@ -1,0 +1,119 @@
+/* fandb-menu.css — Editorial menu section. Scoped to .is-style-fandb-menu. */
+
+/* Large ghost watermark */
+.is-style-fandb-menu {
+	position: relative;
+	overflow: hidden;
+}
+
+.is-style-fandb-menu::before {
+	content: "MENU";
+	position: absolute;
+	top: -2rem;
+	right: -2rem;
+	font-family: var(--wp--preset--font-family--heading);
+	font-weight: 800;
+	font-size: clamp(8rem, 22vw, 22rem);
+	color: rgba(45, 63, 140, 0.05);
+	letter-spacing: -0.04em;
+	pointer-events: none;
+	line-height: 1;
+	z-index: 0;
+}
+
+.is-style-fandb-menu > .wp-block-group {
+	position: relative;
+	z-index: 1;
+}
+
+/* Column heading */
+.is-style-fandb-menu .fandb-menu-col-title {
+	font-size: var(--wp--preset--font-size--x-small) !important;
+	font-weight: 700;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--primary);
+	border-bottom: 1px solid rgba(10, 16, 36, 0.15);
+	padding-bottom: 0.75rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Menu item row — 3-column grid: name / dotted leader / price */
+.is-style-fandb-menu .fandb-menu-item {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 0.75rem;
+	align-items: baseline;
+	padding: 1.1rem 0;
+	border-bottom: 1px solid rgba(10, 16, 36, 0.08);
+	transition: padding 0.25s ease;
+}
+
+.is-style-fandb-menu .fandb-menu-item:last-child {
+	border-bottom: none;
+}
+
+.is-style-fandb-menu .fandb-menu-item:hover {
+	padding-left: 0.5rem;
+}
+
+.is-style-fandb-menu .fandb-menu-item-name {
+	font-family: var(--wp--preset--font-family--heading) !important;
+	font-size: 1.5rem !important;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	color: var(--wp--preset--color--main);
+	line-height: 1;
+	margin: 0;
+}
+
+/* Dotted leader line — filler between name and price */
+.is-style-fandb-menu .fandb-menu-item-leader {
+	border-bottom: 1.5px dotted rgba(10, 16, 36, 0.25);
+	align-self: end;
+	margin-bottom: 0.5rem;
+	min-width: 1rem;
+	height: 0;
+	padding: 0;
+	margin-top: 0;
+}
+
+.is-style-fandb-menu .fandb-menu-item-price {
+	font-family: var(--wp--preset--font-family--heading) !important;
+	font-size: 1.25rem !important;
+	font-weight: 700;
+	color: var(--wp--preset--color--primary);
+	letter-spacing: -0.01em;
+	margin: 0;
+}
+
+/* Description — spans full grid row */
+.is-style-fandb-menu .fandb-menu-item-desc {
+	grid-column: 1 / -1;
+	font-family: var(--wp--preset--font-family--serif);
+	font-style: italic;
+	font-size: 1rem;
+	color: var(--wp--preset--color--main-accent);
+	line-height: 1.4;
+	margin: 0;
+}
+
+/* Dietary / feature tags */
+.is-style-fandb-menu .fandb-menu-tag {
+	display: inline-block;
+	font-size: 0.55rem;
+	font-weight: 700;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	padding: 3px 7px;
+	background: var(--wp--preset--color--primary);
+	color: #fff;
+	vertical-align: middle;
+	margin-left: 0.5rem;
+	border-radius: 999px;
+}
+
+.is-style-fandb-menu .fandb-menu-tag-veg {
+	background: var(--wp--preset--color--border-light);
+	color: var(--wp--preset--color--main);
+}
