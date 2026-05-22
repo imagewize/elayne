@@ -7,6 +7,63 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.3.0] - 2026-05-22
+
+### Added
+
+**Bistro Style Variation:**
+- New 8th style variation "Bistro" — ink-blue editorial palette (Bricolage Grotesque, Instrument Sans, Instrument Serif) for modern restaurants and wine bars
+- Bistro font assets added: Bricolage Grotesque variable (woff2), Instrument Sans variable + italic (woff2), Instrument Serif regular + italic (woff2), Inter variable (ttf)
+
+**Food & Beverage Block Styles (6 new):**
+- `fandb-header` — Sticky frosted-glass header with dark topbar, 3-column brand-center grid layout, underline nav hover animation, and mobile hamburger
+- `fandb-hero` — Full-bleed hero with clamp-scaled display heading, floating rating/open-status chips, 4:5 image column with amber editorial bar, and service badge pill
+- `fandb-marquee` — Infinite CSS-animation scrolling strip with ghost/outline text variant and `prefers-reduced-motion` fallback
+- `fandb-menu` — Editorial menu section with ghost MENU watermark, dotted leader rows (name / leader / price grid), dietary tags, and hover indent animation
+- `fandb-reserve` — Reservations and hours section on deep cobalt, dotted leader hours table with today/closed state highlights, and amber eyebrow dash
+- `fandb-story` — Magazine-layout chef story with sticky text column (desktop), pull quote (serif italic + amber border), image tag overlay, and signature block
+
+**F&B Header Pattern:**
+- New `elayne/fandb-header` pattern — bistro header with dark topbar (hours, social links, phone), frosted-glass sticky main bar, desktop nav with underline animation, and mobile-responsive hamburger menu
+
+**AI Pattern Builder (beta):**
+- Preview feature available via the [Waygate](https://github.com/imagewize/waygate) companion plugin — install via GitHub or Composer (`imagewize/waygate` on Packagist); requires WP 7.0+
+
+### Changed
+
+**Food & Beverage Vertical:**
+- Pattern count increased from 13 to 14
+- Vertical description updated to reflect marquee strip, reservations, and chef story patterns
+- Now ships two style variations: classic Food & Beverage (emerald/cream, Anton/Asap Condensed) and new Bistro (ink-blue, Bricolage Grotesque/Instrument Sans)
+
+**Style Variation Count:**
+- Total pre-configured palettes increased from 7 to 8 (Bistro added)
+
+**Typography Documentation:**
+- Font list updated to include Bistro fonts (Bricolage Grotesque, Instrument Sans, Instrument Serif) alongside existing variation fonts
+
+**Documentation:**
+- README streamlined to essentials (what/why/install/companion plugins); detailed pattern inventory, industry vertical descriptions, style variation list, and typography moved to CONTRIBUTING
+- CONTRIBUTING expanded with full pattern library counts, complete industry vertical descriptions, all 8 style variation details, and Waygate AI Builder installation instructions
+
+### Fixed
+
+**Pill/Badge Shrink-Wrap in WP Columns:**
+- Pills and badges inside `wp:column` blocks now correctly shrink-wrap to content width
+- Added `align-self: flex-start` and `width: fit-content` to `fandb-hero-stamp` CSS rule
+- WordPress `is-layout-flow` columns are `flex-direction: column` containers; children are blockified regardless of `display: inline-block` or `display: inline-flex` — only CSS `align-self` prevents the default stretch behaviour
+
+### Technical
+
+**Block Style Registration:**
+- Added `elayne_register_fandb_block_styles()` on `init` — registers 6 `core/group` style variations and conditionally enqueues each CSS file via `wp_enqueue_block_style()` (loads only on pages using the style)
+
+**Development Workflow Documentation:**
+- `fse-dev-mode.php` mu-plugin documented: hooks `pre_get_block_template`, returns filesystem templates when `WP_ENV=development`, eliminating manual cache flushes for template/template-part changes
+- `rebuild-demo-subsite.php` workflow documented with dry-run flag and available subsite list
+- Playwright testing section added to `vibe.md` with all actions, viewport options, and recommended workflow order
+- Clarified that `WP_DEVELOPMENT_MODE=theme` + mu-plugin together mean `wp cache flush` is no longer needed for normal theme development",
+
 ## [4.2.0] - 2026-05-18
 
 ### Added

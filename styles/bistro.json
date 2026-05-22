@@ -1,0 +1,279 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Bistro",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#2D3F8C",
+					"name": "Ink Blue"
+				},
+				{
+					"slug": "primary-accent",
+					"color": "#4A5DA8",
+					"name": "Ink Light"
+				},
+				{
+					"slug": "primary-alt",
+					"color": "#1A2654",
+					"name": "Deep Ink"
+				},
+				{
+					"slug": "primary-alt-accent",
+					"color": "#C8CFE3",
+					"name": "Ink Fog"
+				},
+				{
+					"slug": "main",
+					"color": "#0A1024",
+					"name": "Ink Text"
+				},
+				{
+					"slug": "main-accent",
+					"color": "#5B6378",
+					"name": "Slate"
+				},
+				{
+					"slug": "base",
+					"color": "#FFFFFF",
+					"name": "Pure White"
+				},
+				{
+					"slug": "secondary",
+					"color": "#F8F4EB",
+					"name": "Ivory"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#EFE6D2",
+					"name": "Warm Cream"
+				},
+				{
+					"slug": "border-light",
+					"color": "#E8A82C",
+					"name": "Amber"
+				},
+				{
+					"slug": "border-dark",
+					"color": "#1A1F2E",
+					"name": "Near Black"
+				},
+				{
+					"slug": "contact-bg",
+					"color": "#FFE9A8",
+					"name": "Soft Amber"
+				}
+			],
+			"duotone": [
+				{
+					"colors": ["#1A2654", "#E8A82C"],
+					"slug": "ink-amber",
+					"name": "Ink & Amber"
+				},
+				{
+					"colors": ["#2D3F8C", "#F8F4EB"],
+					"slug": "ink-ivory",
+					"name": "Ink & Ivory"
+				},
+				{
+					"colors": ["#4A5DA8", "#EFE6D2"],
+					"slug": "blue-cream",
+					"name": "Blue & Cream"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "warm-earth",
+					"gradient": "linear-gradient(135deg, #1A2654 0%, #2D3F8C 50%, #E8A82C 100%)",
+					"name": "Ink to Amber"
+				},
+				{
+					"slug": "cream-fade",
+					"gradient": "linear-gradient(180deg, #F8F4EB 0%, #EFE6D2 100%)",
+					"name": "Ivory Fade"
+				},
+				{
+					"slug": "editorial-glow",
+					"gradient": "radial-gradient(circle at 30% 20%, rgba(232,168,44,0.08) 0%, transparent 50%), radial-gradient(circle at 85% 85%, rgba(45,63,140,0.06) 0%, transparent 50%)",
+					"name": "Editorial Glow"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Bricolage Grotesque\", \"Mona Sans\", system-ui, sans-serif",
+					"slug": "heading",
+					"name": "Bricolage Grotesque",
+					"fontFace": [
+						{
+							"fontFamily": "Bricolage Grotesque",
+							"fontWeight": "200 800",
+							"fontStretch": "75% 100%",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bistro/bricolage-grotesque-variable.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Instrument Sans\", \"Open Sans\", system-ui, sans-serif",
+					"slug": "body",
+					"name": "Instrument Sans",
+					"fontFace": [
+						{
+							"fontFamily": "Instrument Sans",
+							"fontWeight": "400 700",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bistro/instrument-sans-variable.woff2"]
+						},
+						{
+							"fontFamily": "Instrument Sans",
+							"fontWeight": "400 700",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bistro/instrument-sans-italic-variable.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Bricolage Grotesque\", \"Mona Sans\", system-ui, sans-serif",
+					"slug": "decorative",
+					"name": "Bricolage Grotesque Wide",
+					"fontFace": [
+						{
+							"fontFamily": "Bricolage Grotesque",
+							"fontWeight": "200 800",
+							"fontStretch": "75% 100%",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bistro/bricolage-grotesque-variable.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Instrument Serif\", Georgia, serif",
+					"slug": "serif",
+					"name": "Instrument Serif",
+					"fontFace": [
+						{
+							"fontFamily": "Instrument Serif",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bistro/instrument-serif-regular.woff2"]
+						},
+						{
+							"fontFamily": "Instrument Serif",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bistro/instrument-serif-italic.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Inter\", system-ui, sans-serif",
+					"slug": "inter",
+					"name": "Inter",
+					"fontFace": [
+						{
+							"fontFamily": "Inter",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": ["file:./assets/fonts/bistro/Inter-VariableFont_opsz,wght.ttf"]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|secondary",
+			"text": "var:preset|color|main"
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|body",
+			"fontSize": "var:preset|font-size|base",
+			"fontWeight": "400",
+			"lineHeight": "1.55"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|heading",
+					"fontWeight": "700",
+					"lineHeight": "0.92",
+					"letterSpacing": "-0.03em"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xx-large"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var:preset|font-size|x-large",
+					"fontFamily": "var:preset|font-family|decorative"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var:preset|font-size|large",
+					"fontWeight": "600"
+				}
+			},
+			"button": {
+				"border": {
+					"radius": "999px",
+					"width": "1.5px",
+					"style": "solid",
+					"color": "var:preset|color|primary"
+				},
+				"color": {
+					"background": "var:preset|color|primary",
+					"text": "var:preset|color|base"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.95rem",
+						"right": "1.6rem",
+						"bottom": "0.95rem",
+						"left": "1.6rem"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontWeight": "600",
+					"fontSize": "var:preset|font-size|small",
+					"letterSpacing": "0.02em"
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|primary-alt",
+						"text": "var:preset|color|base"
+					},
+					"border": {
+						"color": "var:preset|color|primary-alt"
+					}
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var:preset|color|primary"
+				},
+				":hover": {
+					"color": {
+						"text": "var:preset|color|primary-alt"
+					}
+				}
+			}
+		}
+	}
+}

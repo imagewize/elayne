@@ -1,0 +1,99 @@
+/* fandb-story.css — Magazine-layout story section. Scoped to .is-style-fandb-story. */
+
+/* Image column — relative for the chapter tag overlay */
+.is-style-fandb-story .fandb-story-imagewrap {
+	position: relative;
+	overflow: hidden;
+	aspect-ratio: 4 / 5;
+}
+
+.is-style-fandb-story .fandb-story-imagewrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Chapter / tag pill overlaid on the image */
+.is-style-fandb-story .fandb-image-tag {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	background: #fff;
+	padding: 0.5rem 0.9rem;
+	border-radius: 999px;
+	font-size: 0.7rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--wp--preset--color--main);
+	pointer-events: none;
+}
+
+/* Eyebrow with amber dash */
+.is-style-fandb-story .fandb-eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	color: var(--wp--preset--color--primary);
+}
+
+.is-style-fandb-story .fandb-eyebrow::before {
+	content: "";
+	display: inline-block;
+	width: 28px;
+	height: 1.5px;
+	flex-shrink: 0;
+	background: var(--wp--preset--color--border-light);
+}
+
+/* Story text column — flex stack for child spacing */
+.is-style-fandb-story .fandb-story-text {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--medium);
+}
+
+/* Sticky text column — desktop only */
+@media (min-width: 800px) {
+	.is-style-fandb-story .fandb-story-text {
+		position: sticky;
+		top: 6rem;
+	}
+}
+
+/* Pull quote — serif italic with amber left border */
+.is-style-fandb-story .fandb-pull-quote {
+	margin: 2rem 0;
+	padding: 1.5rem 0 1.5rem 1.75rem;
+	border-left: 3px solid var(--wp--preset--color--border-light);
+	font-family: var(--wp--preset--font-family--serif);
+	font-style: italic;
+	font-size: var(--wp--preset--font-size--large);
+	line-height: 1.2;
+	color: var(--wp--preset--color--primary);
+}
+
+/* Signature name — serif italic */
+.is-style-fandb-story .fandb-sig-name {
+	font-family: var(--wp--preset--font-family--serif);
+	font-style: italic;
+	font-size: 1.85rem;
+	color: var(--wp--preset--color--main);
+	line-height: 1;
+	margin: 0;
+}
+
+/* Signature role — small caps */
+.is-style-fandb-story .fandb-sig-role {
+	font-size: 0.75rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--main-accent);
+	font-weight: 600;
+	margin: 0;
+}

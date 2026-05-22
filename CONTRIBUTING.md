@@ -43,6 +43,12 @@ git clone https://github.com/imagewize/elayne-blocks.git
 - **No Build Required**: Works out of the box
 - **Custom Pattern Categories**: Organized pattern library
 
+### Typography
+
+**Fonts:** Mona Sans (primary) • Open Sans • Bitter (serif) • Monospace — all variable weight with fluid responsive scaling.
+
+Style variations include additional fonts: Bricolage Grotesque, Instrument Sans & Instrument Serif (Bistro) • Anton & Asap Condensed (Food & Beverage) • Cormorant Garamond & Quicksand (Spa & Wellness, Nail Salon) • Bodoni Moda (Publicist)
+
 ## Project Structure
 
 ```
@@ -53,7 +59,7 @@ elayne/
 │   └── styles/         # Block-specific styles
 ├── languages/          # Translation files
 ├── parts/              # Template parts (header, footer)
-├── patterns/           # Block patterns (65 content patterns)
+├── patterns/           # Block patterns (125+ content patterns)
 │   ├── images/         # Pattern-specific images
 │   │   ├── legal/      # Legal vertical images
 │   │   └── spa/        # Spa/wellness vertical images
@@ -75,6 +81,22 @@ Elayne registers custom image sizes optimized for various layouts:
 - **Portrait Large** (380×475) - 4:5 aspect ratio
 - **Single Hero** (700×400) - 16:9-ish landscape
 
+## Pattern Library
+
+Elayne includes **125+ professionally designed patterns** across multiple categories:
+
+**Core Patterns:** Hero Sections (6) • Headers & Footers (11) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (18) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (6)
+
+> Hero sections include the `main-hero` pattern for agency and corporate homepages alongside `hero-modern-light` and the full set of industry-specific heroes. Features includes the `main-services-stack` pattern — an editorial numbered services list with hover slide-in effect, pill tags, and two-column header.
+
+**Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (11)
+
+**Industry Verticals:** Spa & Wellness (10) • Legal Services (7) • Food & Beverage (14) • Home Improvement (9) • Nail Salon (7)
+
+**WooCommerce Store:** 24 patterns covering the full shopping journey — shop landing, category archives, product detail pages, cart, checkout, and more (requires WooCommerce plugin)
+
+**Templates:** 19 page, post, and WooCommerce templates
+
 ## Pattern Categories
 
 Elayne registers custom pattern categories for better organization:
@@ -93,6 +115,21 @@ Elayne registers custom pattern categories for better organization:
 - **Posts** - Blog-related patterns
 - **Shop** - E-commerce and product displays
 
+## Industry Verticals
+
+Elayne provides specialized pattern sets for specific industries:
+
+- **Food & Beverage** - Restaurant and café patterns with hero, marquee strip, menu display, reservations, chef story, event grids, hours/location info, testimonials, and specialized header with top bar (14 patterns). Includes two style variations: classic "Food & Beverage" (emerald/cream, Anton/Asap Condensed) and "Bistro" (ink-blue editorial palette, Bricolage Grotesque/Instrument Sans/Instrument Serif) for modern restaurants and wine bars
+- **Legal Services** - Professional attorney profiles, practice area showcases, case statistics, client testimonials, and contact patterns optimized for law firms (7 patterns)
+- **Home Improvement** - Full-site pattern set for home improvement businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer (9 patterns). Includes a navy/amber style variation with emergency-red accents
+- **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and wellness posts (10 patterns)
+- **Nail Salon** - Elegant rose/blush pattern set for nail studios: hero, services grid, stats bar, why-us, testimonials, booking CTA, and contact (7 patterns). Includes a "Nail Salon" style variation with Cormorant Garamond/Quicksand fonts and a rose & warm-white color palette
+- **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category hero & toolbar, product gallery with colour swatches & style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile sticky ATC bar, cart, checkout, ticker, featured products, testimonials, and newsletter (requires WooCommerce plugin)
+
+> **Contact Form 7 support:** The `Contact With Form` and `Home Improvement Contact Section` patterns include a live contact form when [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) is active. Without it, styled placeholder fields are shown automatically — no broken layouts.
+
+> **WooCommerce attribute filters:** The product category and shop archive templates include an unconfigured attribute filter placeholder in the sidebar. Select the block in **Appearance → Editor → Templates** and choose which product attribute to filter by — no hardcoded IDs, fully compatible with any store configuration.
+
 ## CSS Effects & Block Styles
 
 Elayne includes **32 interactive block styles** organized into 4 categories:
@@ -101,6 +138,8 @@ Elayne includes **32 interactive block styles** organized into 4 categories:
 - **Card & Group Effects** (7 styles) - Elevate on Hover, Glow Border, Image Zoom, Tilt Card, Scale Hover, Border Pulse, Slide Border
 - **Image Effects** (9 styles) - Zoom Hover, Grayscale to Color, Rotate Icon, Blur, Brightness, Sepia, Lift Shadow, Border Reveal, Tilt 3D
 - **Text & Link Effects** (10 styles) - Animated Underline, Gradient Text, Highlight Fade, Link Hover Shift, and more
+
+**Editorial Identity Styles** — 13 additional block styles for the editorial brand system: `brand-logo` (animated site title), `status-pill` (pulsing paragraph label), `editorial-eyebrow`, `editorial-pill`, `editorial-hero-heading` (staggered animation), `editorial-footer-wordmark`, and seven editorial group layout styles (`editorial-services-stack`, `editorial-service-row`, `editorial-work-grid`, `editorial-work-card`, `editorial-pull-quote`, `editorial-stats`, `editorial-cta`)
 
 ### Technical Implementation
 
@@ -160,7 +199,7 @@ For patterns with full-width backgrounds (`align="full"`), apply horizontal padd
 <!-- /wp:group -->
 ```
 
-## Industry Vertical Patterns
+## Industry Vertical Development
 
 When creating patterns for specific industries:
 
@@ -187,14 +226,18 @@ When creating patterns for specific industries:
 
 ## Style Variations
 
-Elayne supports multiple style variations defined in `styles/` directory. Each variation includes:
+Elayne includes **8 pre-configured style variations** — switch your entire site's look with one click in **Appearance → Editor → Styles**:
 
-- Color palette definitions
-- Typography settings (font families, sizes, line heights)
-- Spacing scale
-- Shadow presets
+- **Ink & Sand** (Default) - Modern, clean aesthetic
+- **Bistro** - Ink-blue editorial palette with Bricolage Grotesque & Instrument Sans for modern restaurants and wine bars
+- **Food & Beverage** - Emerald & cream with Anton/Asap Condensed fonts
+- **Home Improvement** - Navy, amber & emergency-red for trade service businesses
+- **Spa & Wellness** (Teal & Sage) - Calming, wellness-focused
+- **Legal Blue** - Professional, trustworthy
+- **Publicist** - Indigo & violet with Bodoni Moda serif for publications & blogs
+- **Nail Salon** - Rose & warm-white with Cormorant Garamond/Quicksand fonts for beauty businesses
 
-To create a new style variation:
+Variations are defined in the `styles/` directory. Each includes color palette, typography settings, spacing scale, and shadow presets. To create a new style variation:
 
 1. Create a new JSON file in `styles/` directory
 2. Define color palette, typography, and spacing
@@ -253,8 +296,6 @@ Elayne enforces strict pattern quality standards through automated GitHub Action
 - View detailed error messages in the GitHub Actions tab
 
 **Running Checks Locally:**
-
-The compliance checker is embedded in the GitHub Actions workflow. To run checks before committing:
 
 ```bash
 # From theme root directory

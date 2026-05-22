@@ -39,88 +39,43 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## Features & Capabilities
+## What's Included
 
-### Pattern Library
+**125+ patterns** across hero sections, features, CTAs, testimonials, cards, blog, portfolio, and more — plus 24 WooCommerce patterns covering the full shopping journey. Includes 19 page, post, and WooCommerce templates.
 
-Elayne includes **125+ professionally designed patterns** across multiple categories:
+**Industry verticals** with complete, ready-to-use pattern sets: Food & Beverage • Legal Services • Home Improvement • Spa & Wellness • Nail Salon • WooCommerce Store
 
-**Core Patterns:** Hero Sections (6) • Headers & Footers (11) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (18) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (6)
+**8 style variations** — switch your entire site's look with one click in **Appearance → Editor → Styles**
 
-> Hero sections include the new `main-hero` pattern for agency and corporate homepages alongside `hero-modern-light` and the full set of industry-specific heroes. Features includes the new `main-services-stack` pattern — an editorial numbered services list with hover slide-in effect, pill tags, and two-column header.
+**32+ CSS block styles** — interactive animations and effects with zero JavaScript, applied via the Styles panel in the block editor
 
-**Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (11)
-
-**Industry Verticals:** Spa & Wellness (10) • Legal Services (7) • Food & Beverage (13) • Home Improvement (9) • Nail Salon (7)
-
-**WooCommerce Store:** 24 patterns covering the full shopping journey — shop landing, category archives, product detail pages, cart, checkout, and more (requires WooCommerce plugin)
-
-**Templates:** 19 page, post, and WooCommerce templates
-
-Browse the complete pattern library in **Appearance → Editor → Patterns**
-
-### Industry Verticals
-
-Elayne provides specialized pattern sets for specific industries:
-
-- **Food & Beverage** - Restaurant and café patterns with menu displays, chef profile, event grids, hours/location info, testimonials, hero sections, and specialized header with top bar (13 patterns). Includes custom "Food & Beverage" style variation with Anton/Asap Condensed fonts and emerald/cream color palette
-- **Legal Services** - Professional attorney profiles, practice area showcases, case statistics, client testimonials, and contact patterns optimized for law firms (7 patterns)
-- **Home Improvement** - Full-site pattern set for home improvement businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer (9 patterns). Includes a navy/amber style variation with emergency-red accents
-- **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and wellness posts (10 patterns)
-- **Nail Salon** - Elegant rose/blush pattern set for nail studios: hero, services grid, stats bar, why-us, testimonials, booking CTA, and contact (7 patterns). Includes a "Nail Salon" style variation with Cormorant Garamond/Quicksand fonts and a rose & warm-white color palette
-- **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category hero & toolbar, product gallery with colour swatches & style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile sticky ATC bar, cart, checkout, ticker, featured products, testimonials, and newsletter (requires WooCommerce plugin)
-
-> **Contact Form 7 support:** The `Contact With Form` and `Home Improvement Contact Section` patterns include a live contact form when [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) is active. Without it, styled placeholder fields are shown automatically — no broken layouts.
-
-> **WooCommerce attribute filters:** The product category and shop archive templates include an unconfigured attribute filter placeholder in the sidebar. Select the block in **Appearance → Editor → Templates** and choose which product attribute to filter by — no hardcoded IDs, fully compatible with any store configuration.
-
-### Style Variations
-
-Switch your entire site's look with one click using **7 pre-configured color palettes**:
-
-- **Ink & Sand** (Default) - Modern, clean aesthetic
-- **Food & Beverage** - Emerald & cream with Anton/Asap Condensed fonts
-- **Home Improvement** - Navy, amber & emergency-red for trade service businesses
-- **Spa & Wellness** (Teal & Sage) - Calming, wellness-focused
-- **Legal Blue** - Professional, trustworthy
-- **Publicist** - Indigo & violet with Bodoni Moda serif for publications & blogs
-- **Nail Salon** - Rose & warm-white with Cormorant Garamond/Quicksand fonts for beauty businesses
-
-Change styles in **Appearance → Editor → Styles**
-
-### CSS Effects & Block Styles
-
-Transform your content with **32 interactive block styles** — pure CSS animations with zero JavaScript:
-
-**Button Effects** (6) • **Card & Group Effects** (7) • **Image Effects** (9) • **Text & Link Effects** (10)
-
-**Editorial Identity Styles** — 13 additional block styles for the editorial brand system: `brand-logo` (animated site title), `status-pill` (pulsing paragraph label), `editorial-eyebrow`, `editorial-pill`, `editorial-hero-heading` (staggered animation), `editorial-footer-wordmark`, and seven editorial group layout styles (`editorial-services-stack`, `editorial-service-row`, `editorial-work-grid`, `editorial-work-card`, `editorial-pull-quote`, `editorial-stats`, `editorial-cta`)
-
-All effects are pure CSS, accessible, and optimized for performance. Apply via **Appearance → Editor → Select Block → Styles Panel**
-
-### Typography & Design
-
-**Fonts:** Mona Sans (primary) • Open Sans • Bitter (serif) • Monospace — all variable weight with fluid responsive scaling. Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness, Nail Salon) • Bodoni Moda (Publicist)
-
-**Design System:** Professional color palettes • Custom shadow presets • Optimized image sizes for portrait and landscape layouts
+Browse the complete pattern library in **Appearance → Editor → Patterns**. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full pattern inventory and developer documentation.
 
 ## Getting Started
 
 Access the WordPress Site Editor at **Appearance → Editor** to customize your site. Insert patterns, edit templates, and adjust global styles — all with drag-and-drop simplicity. Visit the [documentation](https://imagewize.com/themes/elayne) for detailed tutorials.
 
-## Companion Plugin: Elayne Blocks
+## Companion Plugins
 
-Elayne works seamlessly with the **[Elayne Blocks](https://github.com/imagewize/elayne-blocks)** plugin, which provides 5 custom blocks designed to enhance your site:
+### Elayne Blocks
 
-- **Mega Menu** - Advanced navigation with multi-column dropdown menus
-- **Carousel** - Image and content carousels with smooth transitions
-- **Slide** - Individual carousel slides with flexible content layouts
-- **FAQ Tabs** - Tabbed FAQ interface with accordion-style answers
-- **Search Overlay Trigger** - Customizable search overlay with smooth animations and mobile-optimized design
-
-While designed as companions to Elayne, these blocks are **theme-agnostic** and work with any WordPress theme. WordPress.org Theme Review requirements prohibit custom block registration in themes, so blocks are provided via a separate plugin for compliance while maintaining powerful functionality.
+Elayne works seamlessly with the **[Elayne Blocks](https://github.com/imagewize/elayne-blocks)** plugin, which adds 5 custom blocks: Mega Menu, Carousel, Slide, FAQ Tabs, and Search Overlay Trigger. These blocks are theme-agnostic and work with any WordPress theme.
 
 Download from the [Elayne Blocks repository](https://github.com/imagewize/elayne-blocks) and install via **Plugins → Add New → Upload Plugin**.
+
+### Waygate AI Builder (Beta)
+
+[Waygate](https://github.com/imagewize/waygate) is an AI-powered pattern page builder for Elayne. Describe a page or section in plain language and Waygate assembles it from Elayne's pattern library.
+
+> **Beta notice:** Waygate is under active development. Expect breaking changes between releases.
+
+**Install from GitHub:** Download from [github.com/imagewize/waygate/releases](https://github.com/imagewize/waygate/releases) and upload via **Plugins → Add New → Upload Plugin**.
+
+**Install via Composer** (Bedrock / developer setup):
+
+```bash
+composer require imagewize/waygate
+```
 
 ## Community & Support
 

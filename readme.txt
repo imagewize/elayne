@@ -2,9 +2,9 @@
 Contributors: Rhand
 Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, grid-layout, template-editing, threaded-comments, translation-ready, wide-blocks
 Requires at least: 6.6
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.2.0
+Stable tag: 4.3.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,7 +17,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 * 125+ Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
-* 7 Style Variations - Complete design systems including Food & Beverage, Spa & Wellness, Legal Blue, Home Improvement, Nail Salon, and Publicist
+* 8 Style Variations - Complete design systems including Bistro, Food & Beverage, Spa & Wellness, Legal Blue, Home Improvement, Nail Salon, and Publicist
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
 * Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, home improvement trades, nail salons, and publishing
@@ -53,7 +53,7 @@ Elayne includes **125+ professionally designed patterns** across multiple catego
 **Industry Verticals:**
 * Spa & Wellness (10) - Treatment showcases, booking CTAs, wellness features, and product displays
 * Legal Services (6) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
-* Food & Beverage (11) - Restaurant and café patterns with menus, chef profile, event grids, hours/location, and hero sections
+* Food & Beverage (14) - Restaurant and café patterns with hero, marquee, menu display, reservations, chef story, event grids, hours/location, and amenities. Includes Bistro (ink-blue editorial) and classic emerald/cream style variations
 * Home Improvement (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
 * Nail Salon (7) - Hero with real photo, services grid, stats bar, why-us, testimonials, CTA, and contact patterns with rose palette
 * WooCommerce Store (24) - Complete e-commerce pattern set: shop landing, category hero & toolbar, product gallery, colour swatches, style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile ATC bar, cart, checkout, ticker, featured products, testimonials, newsletter, and more
@@ -71,7 +71,7 @@ Elayne provides specialized pattern sets for specific industries:
 
 * **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and product displays
 * **Legal Services** - Attorney profiles, practice area showcases, case statistics, and client testimonials optimized for law firms
-* **Food & Beverage** - Restaurant and café patterns with menu displays, chef profiles, event grids, hours/location info, testimonials, and hero sections
+* **Food & Beverage** - Restaurant and café patterns with menu displays, hero sections, marquee strip, reservations, chef story, event grids, hours/location info, and testimonials. Includes two style variations: classic "Food & Beverage" (emerald/cream, Anton/Asap Condensed) and "Bistro" (ink-blue editorial palette, Bricolage Grotesque/Instrument Sans) for modern restaurants and wine bars
 * **Home Improvement** - Full-site pattern set for home improvement businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer. The contact pattern integrates with Contact Form 7 (optional — placeholder fields shown when inactive).
 * **Nail Salon** - Full-site pattern set with hero (CC0 photo), services grid, stats bar, why-us, testimonials, booking CTA, and contact. Includes a dedicated rose & blush pink style variation with Cormorant Garamond headings.
 * **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category archives with hero and toolbar, product detail pages (gallery, swatches, options, engraving, trust badges, tabs), cart, checkout, and supporting sections (ticker, featured products, testimonials, newsletter). Requires WooCommerce plugin.
@@ -80,9 +80,10 @@ Note: The product category and shop archive templates include an unconfigured at
 
 = Style Variations =
 
-Switch your entire site's look with one click using **7 pre-configured color palettes**:
+Switch your entire site's look with one click using **8 pre-configured color palettes**:
 
 * Ink & Sand (Default) - Softer ink blue and warm sand tones
+* Bistro - Ink-blue editorial palette with Bricolage Grotesque and Instrument Sans for modern restaurants and wine bars
 * Food & Beverage - Emerald and cream with Anton/Asap Condensed fonts for restaurants and cafés
 * Home Improvement - Navy, amber, and emergency-red for trade service businesses
 * Spa & Wellness (Teal & Sage) - Soothing spa colors with elegant Cormorant Garamond serif
@@ -117,7 +118,7 @@ All effects are pure CSS, accessible, and optimized for performance. Apply via *
 * Open Sans - Clean sans-serif with variable weight (300-800)
 * Bitter (serif) - Elegant serif option
 * Monospace - Code and technical content
-* Style variations include additional fonts: Cormorant Garamond & Quicksand (Spa & Wellness) • Bodoni Moda (Publicist)
+* Style variations include additional fonts: Bricolage Grotesque, Instrument Sans & Instrument Serif (Bistro) • Anton & Asap Condensed (Food & Beverage) • Cormorant Garamond & Quicksand (Spa & Wellness, Nail Salon) • Bodoni Moda (Publicist)
 
 **Design System:**
 * Professional color palettes for business websites
@@ -172,6 +173,25 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.3.0 - 05/22/26 =
+* ADDED: Bistro style variation — ink-blue editorial palette with Bricolage Grotesque, Instrument Sans & Instrument Serif fonts for modern restaurants and wine bars (8th palette total).
+* ADDED: Bistro font assets — Bricolage Grotesque variable, Instrument Sans variable + italic, Instrument Serif regular + italic, Inter variable (woff2/ttf).
+* ADDED: fandb-header block style — sticky frosted-glass header with dark topbar (hours, socials, phone), 3-column brand-center grid, underline nav animation, mobile hamburger.
+* ADDED: fandb-hero block style — display-scale heading, floating rating/open chips, 4:5 image with amber editorial bar, service badge pill.
+* ADDED: fandb-marquee block style — infinite CSS-animation scrolling strip with ghost text variant and prefers-reduced-motion fallback.
+* ADDED: fandb-menu block style — editorial menu section with ghost watermark, dotted leader rows (name/price grid), dietary tags, hover indent.
+* ADDED: fandb-reserve block style — hours/reservations section on cobalt, dotted leader table with today/closed highlights, amber eyebrow dash.
+* ADDED: fandb-story block style — magazine-layout chef story with sticky text column, pull quote, image tag overlay, signature block.
+* ADDED: elayne/fandb-header pattern — bistro header template part with dark topbar and frosted sticky main bar.
+* ADDED: AI Page Builder (beta) — preview feature available via the Waygate companion plugin (github.com/imagewize/waygate, or via Composer: imagewize/waygate); requires WP 7.0+.
+* CHANGED: README trimmed to essentials; detailed pattern inventory, vertical descriptions, style variation list, and typography reference moved to CONTRIBUTING.
+* CHANGED: CONTRIBUTING expanded with full pattern library, industry vertical descriptions, all 8 style variations, and Waygate AI Builder install instructions.
+* CHANGED: Food & Beverage vertical pattern count from 13 to 14.
+* CHANGED: Style variation count from 7 to 8 (Bistro added).
+* FIXED: Pill/badge inside wp:column now shrink-wraps correctly — added align-self: flex-start + width: fit-content to fandb-hero-stamp; WP is-layout-flow blockifies display:inline-* so only CSS align-self prevents full-width stretch.
+* TECHNICAL: elayne_register_fandb_block_styles() on init registers 6 core/group variations and enqueues each CSS via wp_enqueue_block_style() (loads on-demand)."
+
 
 = 4.2.0 - 05/18/26 =
 * ADDED: New pattern `elayne/main-services-stack` — editorial numbered services list (FSE builds, Headless+Sage, Vertical kits, Performance+SEO) with two-column header and pill tags.
@@ -1254,6 +1274,30 @@ Spa avatar images (spa/avatar-1.webp through spa/avatar-4.webp) are 400×400.
 - **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 - **Attribution:** Not required (CC0)
 - **Description:** Black and white photo of a chef plating dishes in a professional kitchen (portrait crop), alternate version for F&B chef profile pattern
+
+### bistro/kitchen-interior.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/chef-cook-J2W0D3CO2L)
+- **Title:** Chef Cook
+- **Photographer:** Fabrizio Magoni
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Chef at work in a professional kitchen, portrait-cropped for the F+B story pattern
+
+### bistro/chef-profile.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/people-man-3PS1GVU42N)
+- **Title:** People Man
+- **Photographer:** Nick Karvounis
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Black and white photo of a chef plating dishes in a professional kitchen, bistro directory copy used in F&B patterns
+
+### bistro/hero-wine-bar.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/friends-family-EI9BBWFMXB)
+- **Title:** Friends Family
+- **Photographer:** Helena Lopes
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Friends gathered around a table with wine glasses and food, bistro and wine bar ambience, portrait-cropped for F&B hero pattern
 
 ---
 
