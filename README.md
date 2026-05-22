@@ -1,11 +1,8 @@
-<div align="center">
-  <img src="assets/images/logos/elayne-logo-primary.svg" alt="Elayne Theme" width="120" height="140">
+# Elayne — Professional WordPress Block Theme for Full Site Editing
 
-  # Elayne
-</div>
-<div align="center">
+![Elayne Theme](assets/images/readme-banner.jpg)
+
 Design better, build faster, publish sooner. Elayne is a professional WordPress block theme designed for modern businesses, offering sophisticated patterns and conversion-optimized layouts — no coding or expensive page builders required.
-</div>
 
 ## Why Choose Elayne?
 

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.3.2] - 2026-05-22
+
+### Changed
+
+**README Banner Image:**
+- Replaced `readme-banner.png` with `readme-banner.jpg` for the theme's README banner
+- Updated `README.md` to reference the new JPG banner using standard Markdown image syntax
+- Removed centered `<div>` wrapper layout in favour of a plain Markdown `# h1` heading with inline image
+- Simplified README header structure: eliminated two `<div align="center">` blocks and the nested SVG logo reference",
+
 ## [4.3.1] - 2026-05-22
 
 ### Fixed
