@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.3.1] - 2026-05-22
+
+### Fixed
+
+**Plumbing Hero Pattern — Stats Row Inline Style Mismatch:**
+- Added missing `margin-top:0` and `padding-top:var(--wp--preset--spacing--large)` to the stats row container's inline style in `plumbing-hero.php`
+- The block attributes specified both margin and padding-top via `"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|large",...}}`, but the serialized HTML omitted them, causing a block validation mismatch
+- Inline style now correctly reflects all spacing attributes declared on the group block",
+
 ## [4.3.0] - 2026-05-22
 
 ### Added

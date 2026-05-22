@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.3.0
+Stable tag: 4.3.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.3.1 - 05/22/26 =
+* FIXED: Plumbing Hero pattern - Corrected stats row inline style to include margin-top:0 and padding-top matching the block's spacing attributes, resolving block validation mismatch."
+
 
 = 4.3.0 - 05/22/26 =
 * ADDED: Bistro style variation — ink-blue editorial palette with Bricolage Grotesque, Instrument Sans & Instrument Serif fonts for modern restaurants and wine bars (8th palette total).
