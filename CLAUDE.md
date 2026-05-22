@@ -38,10 +38,13 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 
 - Protocol: `http://demo.imagewize.test/` (HTTP, not HTTPS)
 - File sync: automatic via Lima — no rsync needed
-- Cache: `trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp cache flush --path=web/wp`
-- Enable `WP_DEVELOPMENT_MODE=theme` in `config/environments/development.php` for instant pattern changes
+- Cache: `trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp cache flush --path=web/wp` — rarely needed; see mu-plugin note below
+- `WP_DEVELOPMENT_MODE=theme` is set in `config/environments/development.php` — bypasses theme.json/style transients on every request
+- **mu-plugin active:** `demo/web/app/mu-plugins/fse-dev-mode.php` hooks `pre_get_block_template` and returns the filesystem `WP_Block_Template` via `get_block_file_template()` when `WP_ENV=development`. This bypasses `wp_template`/`wp_template_part` DB overrides entirely — no manual `wp post delete` or cache flush needed for template and template-part changes. Templates with no matching filesystem file (WooCommerce archives, plugin templates) fall through to the DB normally.
 
-**Style variation cache:** If `theme.json`/`styles/*.json` changes don't appear, switch away and back in Site Editor (`Styles → Browse styles`).
+**With both active:** template/part edits → plain refresh. theme.json edits → hard refresh (Cmd+Shift+R) in Site Editor to update React state. `wp cache flush` is no longer needed for normal theme development.
+
+**Style variation cache:** If `theme.json`/`styles/*.json` changes don't appear in the Site Editor, switch away and back (`Styles → Browse styles`) to force a React state reload.
 
 ### Demo Rebuild Script
 
@@ -145,6 +148,20 @@ The demo site runs WooCommerce on a **subsite** mounted at `/store/`. All shop U
 | `xx-large` | 4.39rem | Rarely used — very large display only |
 
 **Pill/badge padding rule:** Always use `x-small` (vertical) + `small` (horizontal). Never `medium` — that is ~28px per side and will make any pill grotesquely wide.
+
+**Pill/badge shrink-wrap rule (CRITICAL — prevents full-column-width pills):** WordPress `is-layout-flow` columns are internally `flex-direction: column` flex containers. Any child element is a flex item and gets its `display` blockified — `display: inline-block` and `display: inline-flex` both compute to `block` regardless of inline styles or CSS. The default `align-items: normal` acts as `stretch`, making every child span the full column width. To make a pill/badge shrink-wrap inside a `wp:column`, you MUST add `align-self: flex-start` (and `width: fit-content`) to its **CSS rule**.
+
+```css
+/* CORRECT — pill/badge inside a wp:column */
+.my-context .my-pill {
+    align-self: flex-start; /* prevents stretch in WP's flex-direction:column column */
+    width: fit-content;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+}
+```
+
+**Why `is-style-status-pill` works without this fix:** The editorial header uses a `flex-direction: row` container. In row-flex, the cross-axis is vertical, so children only stretch vertically — width is content-driven naturally. If `is-style-status-pill` were placed inside a `wp:column`, it would have the same stretching problem and also need `align-self: flex-start`.
 
 ## Pattern Structure
 

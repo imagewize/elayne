@@ -1,6 +1,6 @@
-# vibe.md for Elayne Theme
+# Elayne Theme Development Guide
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides development guidelines for the Elayne WordPress block theme.
 
 ## Important Git Commit Guidelines
 
@@ -87,18 +87,31 @@ WooCommerce runs on a **subsite at `/store/`**. All shop URLs are prefixed:
 
 **Demo store attribute IDs** (May 2026 — do NOT hardcode in distributable templates): `1` = Leather Colour, `2` = Style, `3` = Features
 
-**Clear cache:**
+**Clear cache** (rarely needed — see mu-plugin note below):
 ```bash
 cd ~/code/imagewize.com/trellis
 trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp cache flush --path=web/wp
 ```
 
-### WordPress Development Mode
-For pattern and theme.json changes to appear immediately, enable in `config/environments/development.php`:
-```php
-Config::define('WP_DEVELOPMENT_MODE', 'theme');
+**mu-plugin active:** `demo/web/app/mu-plugins/fse-dev-mode.php` hooks `pre_get_block_template` (fires before WordPress queries the DB) and returns the filesystem `WP_Block_Template` via `get_block_file_template()` when `WP_ENV=development`. This bypasses `wp_template`/`wp_template_part` DB overrides entirely — template and template-part file edits appear on plain refresh with no WP-CLI required. Templates with no matching filesystem file (WooCommerce archives, plugin templates) fall through to the DB normally.
+
+**Rebuild demo subsites from patterns:** After modifying pattern PHP files, you **must** run `demo/scripts/rebuild-demo-subsite.php` to rebuild demo site pages from the latest pattern files before testing with Playwright. This is vital for testing pattern changes locally without manual reloading. The rebuild script captures each pattern within the live WP context and overwrites post_content — identical to a fresh block-editor insert. Run it from the VM:
+```bash
+# Rebuild a single subsite (dev environment)
+cd /srv/www/demo.imagewize.com/current
+wp --path=web/wp --url=demo.imagewize.test/kafe/ eval-file scripts/rebuild-demo-subsite.php kafe
+
+# Dry run first to see what would change
+WP_REBUILD_DRY_RUN=1 wp --path=web/wp --url=demo.imagewize.test/kafe/ eval-file scripts/rebuild-demo-subsite.php kafe
+
+# Available subsites: main, legal, kafe, nail-salon, plumbing, store, spa
 ```
-Disable in production for optimal performance.
+**Workflow:** Modify pattern → rebuild with `rebuild-demo-subsite.php` → flush cache → test with Playwright (`test.js`). Run this locally often — it saves time by avoiding manual page reloads in the editor.
+
+### WordPress Development Mode
+`WP_DEVELOPMENT_MODE=theme` is set in `config/environments/development.php` — bypasses theme.json/style transients on every request. Combined with the `fse-dev-mode.php` mu-plugin, `wp cache flush` is no longer needed for normal theme development. The only remaining manual step is a hard refresh (Cmd+Shift+R) in the Site Editor after theme.json changes, to update React's client-side state.
+
+Disable `WP_DEVELOPMENT_MODE` in production for optimal performance.
 
 ### Style Variation Caching
 WordPress aggressively caches compiled global styles. When `theme.json` or `styles/*.json` changes don't appear:
@@ -178,6 +191,18 @@ cd demo/web/app/themes/elayne && vendor/bin/phpcbf functions.php
 | `x-large` | clamp(3rem → 5rem) ~48–80px |
 
 **Pill/badge padding rule:** Always use `x-small` (vertical) + `small` (horizontal). Never `medium` — that is ~28px per side and will make any pill grotesquely wide.
+
+**Pill/badge shrink-wrap rule (CRITICAL — prevents full-column-width pills):** WordPress `is-layout-flow` columns are internally `flex-direction: column` flex containers. Any child element is a flex item — CSS blockifies it to `display: block` regardless of any `display: inline-block` or `display: inline-flex` rule or inline style. The default `align-items: normal` acts as `stretch`, making every child span the full column width. To make a pill/badge shrink-wrap inside a `wp:column`, add `align-self: flex-start` and `width: fit-content` to its **CSS rule** — NOT as an inline style.
+
+```css
+/* CORRECT — pill/badge inside a wp:column */
+.my-context .my-pill {
+    align-self: flex-start; /* prevents stretch in WP's flex-direction:column column */
+    width: fit-content;
+}
+```
+
+`is-style-status-pill` works in the editorial header because the header uses a `flex-direction: row` container — in row-flex the cross-axis is vertical, so width is content-driven naturally. If the same pill were inside a `wp:column`, it would need this fix too. Never chase `display: inline-*` for shrink-wrapping inside WP columns — it doesn't work.
 
 ### WooCommerce Implementation
 - **Three-tier strategy:** Tier 1 = Use WooCommerce plugin patterns as-is (EXEMPT from Elayne rules), Tier 2 = Style with theme CSS, Tier 3 = Custom Elayne patterns only if needed
@@ -562,6 +587,37 @@ pt-cli check:templates demo/web/app/themes/elayne/templates/archive-product.html
 > Pass 1 requires the Trellis VM because WordPress needs a live database connection — the VM runs the database. Files sync automatically via Lima so patterns edited on the host are immediately available in the VM. **Important**: `limactl shell` does NOT support `--workdir` flag — use `trellis vm shell` or place `--workdir` BEFORE the VM name with `limactl shell`. macOS paths do not exist in the VM — always use VM-side paths like `/srv/www/demo.imagewize.com/current`. The `--compliance` flag on `wp pattern validate` warns that the compliance checker is not accessible inside the VM; always run Pass 2 separately on the host.
 
 The GitHub Actions workflow runs Pass 2 automatically on every PR. Passes 1, 3, and 4 require the local environment and run locally only.
+
+## Visual & Functional Testing
+
+### Playwright Browser Testing Script
+The repository includes a Playwright-based browser testing script at `.playwright/scripts/test.js` for visual regression and CSS verification. This is **vital for testing** pattern rendering on the demo site.
+
+**Usage:**
+```bash
+# From repository root
+node .playwright/scripts/test.js <url> [action] [selector] [options]
+
+# Examples:
+node .playwright/scripts/test.js http://demo.imagewize.test/kafe/ screenshot
+node .playwright/scripts/test.js http://demo.imagewize.test/kafe/ css .fandb-hero-stamp --desktop
+node .playwright/scripts/test.js http://demo.imagewize.test/ html
+```
+
+**Actions:**
+- `screenshot [name]` — Take a full-page screenshot (optionally with custom name)
+- `html` — Get page HTML for inspection
+- `css <selector>` — Check computed styles for a specific selector
+- `eval <functionName>` — Run predefined evaluation functions
+- `check <blockName>` — Check specific block configurations
+
+**Viewport Options:**
+- `--mobile` (390×844)
+- `--tablet` (768×1024)
+- `--desktop` (1920×1080, default)
+- `--viewport=WxH` (custom dimensions)
+
+**Tip:** Always run the rebuild script first, then Sentinel (Pass 3) after pattern changes, then use Playwright to verify the visual output matches designs. Sentinel validates block structure; Playwright validates visual rendering.
 
 ## Key Components
 
