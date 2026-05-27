@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.4.0] - 2026-05-27
+
+### Added
+
+**Post Loop Grid Pattern (`elayne/post-loop-grid`):**
+- New pattern for displaying posts on index and archive pages with a responsive three-column grid
+- Uses `core/query` block with `inherit: true` to pull query context from the current archive/index page
+- Grid layout with `minimumColumnWidth: 20rem` for true 3→2→1 responsive column behaviour
+- Portrait-oriented featured images using `elayne-portrait-small` size at 2/3 aspect ratio with rounded corners
+- Each card shows post date, category taxonomy links, and a linked post title
+- Includes query pagination block with previous/next navigation
+- Marked `Inserter: false` — intended for template use only, not manual insertion
+
+### Changed
+
+**Template Patterns Switched to Post Loop Grid:**
+- `template-index-grid`: References `elayne/post-loop-grid` instead of `elayne/blog-post-columns-portrait`
+- `template-page-archive`: References `elayne/post-loop-grid` instead of `elayne/blog-post-columns-portrait`
+
+### Fixed
+
+**Redundant Inline Style Removal:**
+- `main-services-stack`: Removed duplicate `margin-bottom` inline style from the columns wrapper; spacing is already governed by block attributes
+- `plumbing-hero`: Removed redundant `margin-top:0` inline style from the stats flex group; the block attribute still controls the value", "readme_txt": "* ADDED: New elayne/post-loop-grid pattern — responsive 3-column post grid with portrait images, date/category meta, and pagination; inherits archive/index query context automatically.
+* CHANGED: template-index-grid — now uses elayne/post-loop-grid instead of elayne/blog-post-columns-portrait.
+* CHANGED: template-page-archive — now uses elayne/post-loop-grid instead of elayne/blog-post-columns-portrait.
+* FIXED: main-services-stack — removed redundant margin-bottom inline style from columns wrapper.
+* FIXED: plumbing-hero — removed redundant margin-top:0 inline style from stats group."}
+
 ## [4.3.2] - 2026-05-22
 
 ### Changed

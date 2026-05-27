@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.3.2
+Stable tag: 4.4.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,14 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.4.0 - 05/27/26 =
+* ADDED: New elayne/post-loop-grid pattern — responsive 3-column post grid with portrait images, date/category meta, and pagination; inherits archive/index query context automatically.
+* CHANGED: template-index-grid — now uses elayne/post-loop-grid instead of elayne/blog-post-columns-portrait.
+* CHANGED: template-page-archive — now uses elayne/post-loop-grid instead of elayne/blog-post-columns-portrait.
+* FIXED: main-services-stack — removed redundant margin-bottom inline style from columns wrapper.
+* FIXED: plumbing-hero — removed redundant margin-top:0 inline style from stats group.
+
 
 = 4.3.2 - 05/22/26 =
 * CHANGED: README banner - Replaced readme-banner.png with readme-banner.jpg and simplified header layout to standard Markdown (removed centered div wrappers and SVG logo)."
