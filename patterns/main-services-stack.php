@@ -11,7 +11,7 @@
 ?>
 <!-- wp:group {"metadata":{"patternName":"elayne/main-services-stack","name":"Main - Services Stack"},"align":"wide","className":"is-style-editorial-services-stack","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide is-style-editorial-services-stack" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium)"><!-- wp:columns {"verticalAlignment":"bottom","style":{"spacing":{"blockGap":{"top":"0","left":"var:preset|spacing|large"},"margin":{"bottom":"var:preset|spacing|x-large"}}}} -->
-<div class="wp-block-columns are-vertically-aligned-bottom" style="margin-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:column -->
+<div class="wp-block-columns are-vertically-aligned-bottom"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph {"className":"editorial-section-kicker","textColor":"accent-warm","style":{"typography":{"fontWeight":"600"}},"fontSize":"xx-small"} -->
 <p class="editorial-section-kicker has-accent-warm-color has-text-color has-xx-small-font-size" style="font-weight:600"><?php esc_html_e( '§ What we build', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
