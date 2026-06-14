@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.5.0] - 2026-06-14
+
+### Added
+**WooCommerce Product Structured Data:**
+- Added Product JSON-LD structured data to block-based single product pages
+- Hooked into `wp_footer` to generate schema.org Product markup via `WC_Structured_Data::generate_product_data()`
+- Fixes missing rich results (price, availability, ratings) in search engines for block-theme product pages, since the classic `woocommerce_single_product_summary` hook never fires in block themes
+
 ## [4.4.0] - 2026-05-27
 
 ### Added
