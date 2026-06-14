@@ -127,6 +127,28 @@ add_filter(
 	}
 );
 
+/**
+ * Generate WooCommerce Product structured data on block-based single product pages.
+ *
+ * WC_Structured_Data::generate_product_data() is normally triggered by the
+ * woocommerce_single_product_summary hook in the classic single-product
+ * template. Block themes render the product via WooCommerce blocks and never
+ * fire that hook, so Product JSON-LD is silently skipped even though
+ * output_structured_data() still runs on wp_footer.
+ */
+function elayne_add_product_structured_data() {
+	if ( ! is_product() ) {
+		return;
+	}
+
+	$product = wc_get_product( get_the_ID() );
+
+	if ( $product instanceof \WC_Product ) {
+		WC()->structured_data->generate_product_data( $product );
+	}
+}
+add_action( 'wp_footer', __NAMESPACE__ . '\elayne_add_product_structured_data', 5 );
+
 // Note: WP 6.9 emits a console warning "woocommerce-blocktheme-css was added to the
 // iframe incorrectly" when WooCommerce enqueues this stylesheet outside of block hooks.
 // WooCommerce fixed this in core via PR #62048 (merged 2025-11-21, shipped in 10.4.0).

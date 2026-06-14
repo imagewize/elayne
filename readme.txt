@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.4.0
+Stable tag: 4.5.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.5.0 - 06/14/26 =
+* ADDED: WooCommerce Product structured data (JSON-LD) on block-based single product pages - improves SEO rich results for price, availability, and ratings.
 
 = 4.4.0 - 05/27/26 =
 * ADDED: New elayne/post-loop-grid pattern — responsive 3-column post grid with portrait images, date/category meta, and pagination; inherits archive/index query context automatically.

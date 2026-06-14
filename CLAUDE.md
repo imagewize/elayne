@@ -256,6 +256,7 @@ WooCommerce core plugin includes official patterns in `wp-content/plugins/woocom
 | **Hardcoded font-size** | NEVER `font-size:1.5rem` — use `"fontSize":"large"` semantic preset |
 | **Button font-size** | `wp:button` does NOT support root-level `fontSize` — use `"style":{"typography":{"fontSize":"var:preset\|font-size\|base"}}` → generates `has-custom-font-size` + inline `font-size` style. Root-level `"fontSize":"base"` causes block validation errors on buttons. |
 | **Spacer blocks** | NEVER `<!-- wp:spacer -->` — use parent `blockGap` instead |
+| **Inline gap/margin/padding** | NEVER emit `gap:`, `margin-top/bottom`, or spacing `padding` as inline `style="..."` on a `<div>` when a parent `blockGap` or a flex/grid layout already controls it. WordPress applies flex/grid gap via runtime `wp-container-*` classes, NOT inline styles — an inline `gap:` is dead markup that sentinel strips, forcing a re-validation round. Likewise drop `margin-top:0`/`margin-bottom:0` on grid/flex children: it's already the layout default. This is the single highest-volume post-generation cleanup (205 occurrences stripped across 46 patterns in one pass) — get it right at generation time. Set spacing on the PARENT via `blockGap`, not per-child inline. |
 | **Custom block types** | NEVER use `register_block_type()` in a theme — WP.org plugin-territory violation. Use the `render_block` filter on `core/group` blocks with a specific `className` instead (same pattern as the ticker). |
 
 > Full details with code examples: `docs/elayne/PATTERN-GUIDELINES.md`
