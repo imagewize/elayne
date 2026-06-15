@@ -148,12 +148,14 @@
 
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__text-wrapper {
 	font-size: var(--wp--preset--font-size--base);
-	color: var(--wp--preset--color--main-accent);
+	/* Use the dark body color (main), not main-accent — on some style variations
+	   (e.g. spa) main-accent is a light tint that is unreadable as text. */
+	color: var(--wp--preset--color--main);
 }
 
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__count {
 	font-size: var(--wp--preset--font-size--x-small);
-	color: var(--wp--preset--color--main-accent);
+	color: var(--wp--preset--color--main);
 	opacity: 0.65;
 }
 

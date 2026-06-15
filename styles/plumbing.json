@@ -106,6 +106,16 @@
 					"color": "#2a4570"
 				},
 				{
+					"name": "Orange",
+					"slug": "orange",
+					"color": "#E65C00"
+				},
+				{
+					"name": "Orange Light",
+					"slug": "orange-light",
+					"color": "#F5A623"
+				},
+				{
 					"name": "Emergency Red",
 					"slug": "plumbing-emergency",
 					"color": "#D32F2F"

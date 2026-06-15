@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.5.0
+Stable tag: 4.6.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,15 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.6.0 - 06/15/26 =
+* CHANGED: Spa product archive rebuilt to match main store layout with category toolbar and left filters sidebar (Categories, Price, Rating, Scent, Fragrance, Formula); responsive 3-column filterable grid with left-aligned cards and 3/4 images.
+* ADDED: Orange (#E65C00) and Orange Light (#F5A623) palette colors to all style variations (Bistro, Food & Beverage, Legal Blue, Nail Salon, Plumbing, Publicist, Spa & Wellness).
+* FIXED: Add-to-cart button now stays locked to image bottom on cards without a price via grid-template-rows auto auto 1fr.
+* FIXED: Sale badge positioning - wrapper set to display:contents, squared off (no border/radius), and correctly placed top-left on product cards; hid default oval onsale badge on single product galleries.
+* FIXED: Filter sidebar label/count text color changed from main-accent to main for readability on light style variations like Spa.
+* TECHNICAL: Scoped category-product badge and grid-row CSS under .wc-block-product for correct targeting."
+
 
 = 4.5.0 - 06/14/26 =
 * ADDED: WooCommerce Product structured data (JSON-LD) on block-based single product pages - improves SEO rich results for price, availability, and ratings.
