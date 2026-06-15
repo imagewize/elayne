@@ -61,6 +61,16 @@
 					"name": "Near Black"
 				},
 				{
+					"slug": "orange",
+					"color": "#E65C00",
+					"name": "Orange"
+				},
+				{
+					"slug": "orange-light",
+					"color": "#F5A623",
+					"name": "Orange Light"
+				},
+				{
 					"slug": "contact-bg",
 					"color": "#FFE9A8",
 					"name": "Soft Amber"

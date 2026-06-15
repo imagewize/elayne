@@ -101,6 +101,16 @@
 					"name": "Border Dark",
 					"slug": "border-dark",
 					"color": "#51757A"
+				},
+				{
+					"name": "Orange",
+					"slug": "orange",
+					"color": "#E65C00"
+				},
+				{
+					"name": "Orange Light",
+					"slug": "orange-light",
+					"color": "#F5A623"
 				}
 			]
 		},

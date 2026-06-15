@@ -61,6 +61,16 @@
 					"name": "Charcoal Gray"
 				},
 				{
+					"slug": "orange",
+					"color": "#E65C00",
+					"name": "Orange"
+				},
+				{
+					"slug": "orange-light",
+					"color": "#F5A623",
+					"name": "Orange Light"
+				},
+				{
 					"slug": "contact-bg",
 					"color": "#afdcc5",
 					"name": "Mint Background"
