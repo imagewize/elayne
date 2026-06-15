@@ -104,6 +104,16 @@
 	height: 100%;
 }
 
+/* WooCommerce lays each product card out as a grid and overlays the add-to-cart
+   button at grid-row 1 / align-self:end (over the image bottom). When a product has
+   no price the price row collapses and the card grid stretches the image row to keep
+   card heights equal, dropping the button below the image. Pinning the first two rows
+   to content size and letting the trailing 1fr absorb the slack keeps the image row —
+   and therefore the overlaid button — locked to the image bottom on every card. */
+.wp-block-woocommerce-product-collection .wc-block-product {
+	grid-template-rows: auto auto 1fr;
+}
+
 /* Product image wrap — 3-class specificity (0,3,0) beats WooCommerce's aspect-ratio:1/1 (0,2,0) */
 .wp-block-woocommerce-product-collection .wc-block-product .wp-block-woocommerce-product-image {
 	position: relative;
@@ -135,11 +145,18 @@
 	position: relative;
 }
 
+/* Sale badge wrapper — remove from layout so the inner badge positions
+   against the image container instead of this near-zero-size flex box */
+.wp-block-woocommerce-product-collection .wc-block-product .wp-block-woocommerce-product-sale-badge {
+	display: contents;
+}
+
 /* Sale badge */
-.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-sale-badge {
+.wp-block-woocommerce-product-collection .wc-block-product .wc-block-components-product-sale-badge {
 	position: absolute;
 	top: var(--wp--preset--spacing--small);
 	left: var(--wp--preset--spacing--small);
+	right: auto;
 	z-index: 2;
 	margin: 0;
 	padding: 0.28rem 0.6rem;
@@ -149,6 +166,14 @@
 	text-transform: uppercase;
 	background-color: var(--wp--preset--color--orange);
 	color: var(--wp--preset--color--tertiary);
+	border: none;
+	border-radius: 0;
+}
+
+/* Single product gallery — hide the default oval "onsale" badge
+   (WooCommerce core woocommerce.css .woocommerce span.onsale) */
+.wp-block-woocommerce-product-image-gallery .onsale {
+	display: none;
 }
 
 /* Product info area */
