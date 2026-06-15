@@ -7,6 +7,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.6.0] - 2026-06-15
+
+### Changed - Spa shop archive layout
+
+**Spa Product Archive (`archive-product-spa.html`):**
+- Rebuilt the spa shop/category archive to match the main store layout with a category toolbar pattern (`elayne/woocommerce/woo-category-toolbar`) and a left filters sidebar.
+- Added a dedicated filters sidebar (`elayne-shop-filters-sidebar`) with Categories, Price Range, Rating, and product attribute filters (Scent chips, Fragrance, Formula) using the WooCommerce Product Filters block.
+- Switched the product collection from a flex layout to a responsive 3-column grid with `filterable` enabled so sidebar filters drive results.
+- Updated product cards to left-aligned titles and prices, full-size images with a `3/4` aspect ratio, and a sale badge overlaid on the image.
+- Removed the old breadcrumbs/query-title header block, store notices, and the trailing two-column review pattern in favor of the unified toolbar + sidebar structure.
+
+### Added - Orange color palette across style variations
+
+**Orange Colors:**
+- Added `Orange` (#E65C00) and `Orange Light` (#F5A623) palette colors to all style variations: Bistro, Food & Beverage, Legal Blue, Nail Salon, Plumbing, Publicist, and Spa & Wellness.
+- Provides a consistent accent color (used by sale badges) across every vertical.
+
+### Fixed - Product card and filter rendering
+
+**Add-to-Cart Button Alignment:**
+- Pinned product card grid rows (`grid-template-rows: auto auto 1fr`) so the overlaid add-to-cart button stays locked to the image bottom even on products without a price, where the card grid previously stretched the image row and dropped the button below the image.
+
+**Sale Badge Positioning:**
+- Set the sale badge wrapper to `display: contents` so the inner badge positions against the image container instead of a near-zero-size flex box.
+- Re-targeted badge styles to `.wc-block-components-product-sale-badge`, squared off the badge (`border-radius: 0`, `border: none`), and reset `right: auto` for correct top-left placement.
+- Hid the default oval "onsale" badge on single product galleries (`.wp-block-woocommerce-product-image-gallery .onsale`).
+
+**Filter Sidebar Readability:**
+- Changed filter checkbox label and count text color from `main-accent` to `main` (dark body color), fixing unreadable light-tinted text on style variations such as Spa where `main-accent` is a light tint.
+
+### Technical
+
+**CSS Specificity & Scoping:**
+- Scoped category-product sale badge and grid-row rules under `.wc-block-product` for correct targeting within the product collection block.",
+
 ## [4.5.0] - 2026-06-14
 
 ### Added
