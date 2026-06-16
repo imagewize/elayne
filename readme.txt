@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.6.0
+Stable tag: 4.6.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.6.1 - 06/16/26 =
+* CHANGED: Theme description rewritten for WordPress.org discoverability — leads with theme name, action-oriented copy, reordered selling points, added Global Styles callout and demo link.
+* FIXED: Pattern count in style.css description corrected from 110+ to 125+.
+* FIXED: Style variation count in style.css description corrected from 7 to 8.
+
 
 = 4.6.0 - 06/15/26 =
 * CHANGED: Spa product archive rebuilt to match main store layout with category toolbar and left filters sidebar (Categories, Price, Rating, Scent, Fragrance, Formula); responsive 3-column filterable grid with left-aligned cards and 3/4 images.
