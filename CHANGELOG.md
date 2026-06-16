@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.6.1] - 2026-06-16
+
+### Changed
+
+**Theme Description (WordPress.org):**
+- Rewrote theme description for improved discoverability and conversion on WordPress.org
+- Description now leads with the theme name and action-oriented language ("Launch a fast, pixel-perfect site")
+- Reordered key selling points: patterns and style variations promoted ahead of industry-specific sets
+- Added "Fully customizable with Global Styles — no page builder required" to clarify the no-plugin value proposition
+- Added demo site link (`https://demo.imagewize.com`) directly in the description
+- Corrected pattern count in style.css description from 110+ to 125+
+- Corrected style variation count in style.css description from 7 to 8
+
 ## [4.6.0] - 2026-06-15
 
 ### Changed - Spa shop archive layout
