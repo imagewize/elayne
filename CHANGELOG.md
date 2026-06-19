@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.6.2] - 2026-06-20
+
+### Fixed
+
+**WooCommerce Function Guards:**
+- Added `function_exists()` checks around all WooCommerce-specific functions in `functions.php`
+- Prevents fatal errors on sites running Elayne without WooCommerce installed (e.g., aseonomics.com)
+- Guards added to: `is_shop()`, `is_product_category()`, `is_product_tag()`, `is_product()`, `wc_get_product()`, `WC()`
+- Category filter drawer script now safely skips enqueue when WooCommerce functions are unavailable
+- Product structured data generation now validates `WC()->structured_data` exists before calling methods
+
 ## [4.6.1] - 2026-06-16
 
 ### Changed
