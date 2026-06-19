@@ -107,7 +107,11 @@ function elayne_enqueue_category_filter_drawer() {
 		return;
 	}
 	// Load on shop page, product category archives, product tag archives, and any product taxonomy.
-	if ( is_shop() || is_product_category() || is_product_tag() || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) {
+	if ( ( function_exists( 'is_shop' ) && is_shop() ) ||
+		( function_exists( 'is_product_category' ) && is_product_category() ) ||
+		( function_exists( 'is_product_tag' ) && is_product_tag() ) ||
+		is_tax( 'product_cat' ) ||
+		is_tax( 'product_tag' ) ) {
 		wp_enqueue_script(
 			'elayne-category-filter-drawer',
 			get_template_directory_uri() . '/assets/js/category-filter-drawer.js',
@@ -137,13 +141,17 @@ add_filter(
  * output_structured_data() still runs on wp_footer.
  */
 function elayne_add_product_structured_data() {
-	if ( ! is_product() ) {
+	if ( ! function_exists( 'is_product' ) || ! is_product() ) {
+		return;
+	}
+
+	if ( ! function_exists( 'wc_get_product' ) ) {
 		return;
 	}
 
 	$product = wc_get_product( get_the_ID() );
 
-	if ( $product instanceof \WC_Product ) {
+	if ( $product instanceof \WC_Product && function_exists( 'WC' ) && isset( WC()->structured_data ) ) {
 		WC()->structured_data->generate_product_data( $product );
 	}
 }

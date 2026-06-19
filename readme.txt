@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.6.1
+Stable tag: 4.6.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.6.2 - 06/20/26 =
+* FIXED: Added function_exists() guards around all WooCommerce functions to prevent fatal errors on non-WooCommerce sites.
+* FIXED: Category filter drawer safely skips enqueue when WooCommerce is not active.
+* FIXED: Product structured data generation validates WC() and structured_data availability before use.
 
 = 4.6.1 - 06/16/26 =
 * CHANGED: Theme description rewritten for WordPress.org discoverability — leads with theme name, action-oriented copy, reordered selling points, added Global Styles callout and demo link.
