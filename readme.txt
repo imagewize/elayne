@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.6.2
+Stable tag: 4.6.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.6.3 - 06/22/26 =
+* CHANGED: Migrated Mistral Vibe development instructions from .vibe/prompts/vibe.md to AGENTS.md for standardized AI agent guidance.
+* CHANGED: Updated .vibe/config.toml to use default CLI system prompt instead of custom vibe prompt.
+* CHANGED: Enhanced AGENTS.md with theme overview, WooCommerce subsite docs, demo rebuild workflow, mu-plugin caching, and pattern URL migration instructions.
 
 = 4.6.2 - 06/20/26 =
 * FIXED: Added function_exists() guards around all WooCommerce functions to prevent fatal errors on non-WooCommerce sites.

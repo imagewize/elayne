@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.6.3] - 2026-06-22
+
+### Changed
+
+**Mistral Vibe Configuration:**
+- Migrated Vibe development instructions from `.vibe/prompts/vibe.md` to `AGENTS.md` for standardized AI agent guidance
+- Updated `.vibe/config.toml` to use default CLI system prompt instead of custom vibe prompt
+- Removed `.vibe/prompts/vibe.md` (content consolidated into AGENTS.md)
+
+**AGENTS.md Enhancements:**
+- Added theme overview and efficiency guidelines
+- Expanded project structure with font family, text domain, and file references
+- Added WordPress Development Mode and mu-plugin caching documentation
+- Added demo rebuild workflow and pattern URL environment migration instructions
+- Added WooCommerce store subsite documentation with template hierarchy and filter blocks
+- Updated commit hygiene rules to include Mistral/Vibe attribution exclusion
+- Improved formatting consistency throughout
+
 ## [4.6.2] - 2026-06-20
 
 ### Fixed
