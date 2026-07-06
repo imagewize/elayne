@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.6.4] - 2026-07-06
+
+### Security
+**js-yaml Dependency Update:**
+- Bumped `js-yaml` from 4.1.1 to 4.3.0 to address a denial-of-service (DoS) vulnerability (GHSA-h67p-54hq-rp68)
+- Update applied via `package-lock.json` build dependency; no runtime theme behavior changes
+
+### Technical
+**Build Tooling:**
+- Updated transitive build dependency `js-yaml` to the patched 4.3.0 release
+- No changes to theme templates, patterns, or user-facing functionality
+
 ## [4.6.3] - 2026-06-22
 
 ### Changed
