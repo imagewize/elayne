@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.6.3
+Stable tag: 4.6.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.6.4 - 07/06/26 =
+* SECURITY: Bumped js-yaml build dependency from 4.1.1 to 4.3.0 to fix DoS vulnerability (GHSA-h67p-54hq-rp68).
+* TECHNICAL: Updated transitive build dependency only - no user-facing or runtime theme changes.
 
 = 4.6.3 - 06/22/26 =
 * CHANGED: Migrated Mistral Vibe development instructions from .vibe/prompts/vibe.md to AGENTS.md for standardized AI agent guidance.
