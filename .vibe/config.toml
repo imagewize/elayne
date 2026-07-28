@@ -201,15 +201,15 @@ denylist = []
 max_write_bytes = 64000
 create_parent_dirs = true
 
-[tools.read]
-permission = "always"
-allowlist = []
-denylist = []
-max_read_bytes = 64000
-max_state_history = 10
-
 [tools.edit]
 permission = "ask"
 allowlist = []
 denylist = []
 fuzzy_threshold = 0.9
+
+[tools.read_file]
+permission = "always"
+allowlist = []
+denylist = []
+max_read_bytes = 64000
+max_state_history = 10
