@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.6.4
+Stable tag: 4.7.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,24 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.7.0 - 07/28/26 =
+* ADDED: Page Layouts pattern category - New `elayne/page-layouts` category for full-page composition patterns.
+* ADDED: Agency About Page pattern - Combines page header, overlapping feature columns, team grid, and stats showcase.
+* ADDED: Generic Contact Page pattern - Combines page header and contact form section.
+* ADDED: Main Site Homepage pattern - Combines hero, services stack, agency showcase, client stories, logo wall, testimonials, and newsletter CTA.
+* ADDED: Agency Services Page pattern - Combines page header, agency services showcase, and three-column feature grid.
+* ADDED: WooCommerce plugin state gating - Store templates are hidden from the Site Editor when WooCommerce is not active.
+* ADDED: Store patterns and the Store pattern category are unregistered when WooCommerce is not active, preventing unrecognised-block placeholders in the inserter.
+* CHANGED: Double Bar Header pattern now uses the aludra/search-overlay-trigger block instead of elayne/search-overlay-trigger.
+* CHANGED: Mega menu template part now references the aludra/mega-menu-featured-content pattern instead of elayne-blocks/mega-menu-featured-content.
+* CHANGED: The elayne-blocks plugin is no longer required - the Aludra block library provides the search overlay and mega menu blocks.
+* FIXED: Product add-to-cart patterns used `woocommerce/add-to-cart-button` and `woocommerce/quantity-selector`, which no longer exist in WooCommerce 10.x and rendered as invalid-block placeholders. Both patterns now use `woocommerce/add-to-cart-with-options`.
+* FIXED: Cart and Checkout patterns emitted `woocommerce/cart` and `woocommerce/checkout` as self-closing blocks. These blocks require their full inner block tree, so both pages rendered empty even with items in the cart.
+* FIXED: Add-to-cart CSS now targets `.quantity` and `.single_add_to_cart_button`, covering both the blockified and classic markup WooCommerce may emit.
+* ADDED: Block registry drift check script that diffs block types used in patterns, templates and parts against the live block registry, catching blocks removed by a WordPress or WooCommerce upgrade.
+* TECHNICAL: Updated @imwz/wp-pattern-sentinel to 1.0.4 and playwright to 1.62.0 (dev dependency, requires Node >=20).
+
 
 = 4.6.4 - 07/06/26 =
 * SECURITY: Bumped js-yaml build dependency from 4.1.1 to 4.3.0 to fix DoS vulnerability (GHSA-h67p-54hq-rp68).
