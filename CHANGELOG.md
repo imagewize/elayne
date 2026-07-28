@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.7.1] - 2026-07-28
+
+### Fixed - Mixed text domain
+
+- `patterns/woocommerce/woo-cart.php` carried three strings ("You may be interested in&hellip;", "Your cart is currently empty!", "New in store") copied verbatim from WooCommerce's canonical cart block markup, still using the `woocommerce` text domain. This triggers WordPress's "more than one text-domain is being used in this theme" warning, which blocks WP.org language pack compatibility. All three now use the theme's `elayne` domain.
+
 ## [4.7.0] - 2026-07-28
 
 ### Fixed - WooCommerce block deprecations
