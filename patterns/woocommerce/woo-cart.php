@@ -34,7 +34,7 @@
 
 <!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":3,"pages":1,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":3,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/cross-sells","hideControls":["filterable"],"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":true,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
 <div class="wp-block-woocommerce-product-collection"><!-- wp:heading {"textAlign":"left","style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
-<h2 class="wp-block-heading has-text-align-left" style="margin-bottom:1rem"><?php echo wp_kses_post( __( 'You may be interested in&hellip;', 'woocommerce' ) ); ?></h2>
+<h2 class="wp-block-heading has-text-align-left" style="margin-bottom:1rem"><?php echo wp_kses_post( __( 'You may be interested in&hellip;', 'elayne' ) ); ?></h2>
 
 <!-- /wp:heading -->
 
@@ -100,7 +100,7 @@
 
 <!-- wp:woocommerce/empty-cart-block -->
 <div class="wp-block-woocommerce-empty-cart-block"><!-- wp:heading {"textAlign":"center","className":"with-empty-cart-icon wc-block-cart__empty-cart__title"} -->
-<h2 class="wp-block-heading has-text-align-center with-empty-cart-icon wc-block-cart__empty-cart__title"><?php esc_html_e( 'Your cart is currently empty!', 'woocommerce' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center with-empty-cart-icon wc-block-cart__empty-cart__title"><?php esc_html_e( 'Your cart is currently empty!', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:separator {"className":"is-style-dots"} -->
@@ -108,7 +108,7 @@
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'New in store', 'woocommerce' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'New in store', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:woocommerce/product-new {"columns":4,"rows":1} /--></div>
