@@ -920,21 +920,29 @@
 	align-items: stretch;
 }
 
-.elayne-atc-row .wp-block-woocommerce-add-to-cart-form {
+/* woocommerce/add-to-cart-with-options renders one of two markup shapes depending
+   on whether Woo resolves a blockified template part for the product type:
+     - blockified: .wp-block-woocommerce-add-to-cart-with-options + stepper selector
+     - classic:    .wp-block-woocommerce-add-to-cart-form + <form class="cart">
+   Both expose .quantity and .single_add_to_cart_button, so target those. */
+.elayne-atc-row .wp-block-woocommerce-add-to-cart-with-options,
+.elayne-atc-row .wp-block-woocommerce-add-to-cart-with-options > .wp-block-group,
+.elayne-atc-row .wp-block-woocommerce-add-to-cart-form,
+.elayne-atc-row form.cart {
 	display: flex;
 	gap: var(--wp--preset--spacing--x-small);
 	flex: 1;
 	min-width: 0;
 }
 
-.elayne-atc-row .wp-block-woocommerce-quantity-selector {
+.elayne-atc-row .quantity {
 	display: flex;
 	align-items: stretch;
 	border: 1px solid var(--wp--preset--color--border-light);
 	flex-shrink: 0;
 }
-.elayne-atc-row .wp-block-woocommerce-quantity-selector button,
-.elayne-atc-row .wp-block-woocommerce-quantity-selector input {
+.elayne-atc-row .quantity button,
+.elayne-atc-row .quantity input {
 	height: 44px;
 	min-width: 44px;
 	border: none;
@@ -944,8 +952,9 @@
 	color: var(--wp--preset--color--main);
 }
 
-.elayne-atc-button.wp-block-woocommerce-add-to-cart-button {
+.elayne-atc-row .single_add_to_cart_button {
 	flex: 1;
+	min-width: 0;
 	background-color: var(--wp--preset--color--main);
 	color: var(--wp--preset--color--base);
 	border: none;
@@ -957,7 +966,7 @@
 	cursor: pointer;
 	transition: opacity 0.15s ease;
 }
-.elayne-atc-button.wp-block-woocommerce-add-to-cart-button:hover {
+.elayne-atc-row .single_add_to_cart_button:hover {
 	opacity: 0.85;
 }
 
@@ -1142,7 +1151,19 @@
 	color: var(--wp--preset--color--main);
 	margin: 0;
 }
-.elayne-mobile-atc-button.wp-block-woocommerce-add-to-cart-button {
+/* The bar shows price + button only — hide the quantity control in either
+   markup shape (see the add-to-cart note in the ATC section above). */
+/* !important is required: WooCommerce's add-to-cart-form-style.css sets
+   `.wp-block-woocommerce-add-to-cart-form form.cart .quantity { display: inline-flex }`
+   at specificity (0,3,1), which outranks anything we can reasonably write here. */
+.wp-block-group.elayne-mobile-atc-bar .quantity {
+	display: none !important;
+}
+.elayne-mobile-atc-bar .wp-block-woocommerce-add-to-cart-form,
+.elayne-mobile-atc-bar form.cart {
+	margin: 0;
+}
+.elayne-mobile-atc-bar .single_add_to_cart_button {
 	padding: 0.9rem 1.8rem;
 	background-color: var(--wp--preset--color--main);
 	color: var(--wp--preset--color--base);
