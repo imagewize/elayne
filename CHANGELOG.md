@@ -7,6 +7,58 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.7.0] - 2026-07-28
+
+### Fixed - WooCommerce block deprecations
+
+**Removed add-to-cart blocks (WooCommerce 10.x):**
+- `woocommerce/add-to-cart-button` and `woocommerce/quantity-selector` no longer exist in WooCommerce and rendered as invalid-block placeholders. Both `elayne/woocommerce/woo-product-atc-section` and `elayne/woocommerce/woo-product-mobile-atc-bar` now use the self-closing `woocommerce/add-to-cart-with-options` block, which renders the correct template part per product type (simple, variable, grouped).
+- Retargeted the add-to-cart CSS in `assets/styles/woocommerce.css` to `.quantity` and `.single_add_to_cart_button`, which are present in both the blockified and classic markup WooCommerce may emit for that block.
+
+**Empty cart and checkout pages:**
+- `elayne/woocommerce/woo-cart` and `elayne/woocommerce/woo-checkout` emitted `woocommerce/cart` and `woocommerce/checkout` as self-closing blocks. These are static blocks that require their full inner block tree, so both pages rendered empty even with items in the cart. Both patterns now carry WooCommerce's canonical inner block structure, keeping the Elayne page wrapper and heading.
+
+### Added - Block registry drift check
+
+- New `scripts/check-pattern-blocks.sh` diffs every block type used in `patterns/`, `templates/` and `parts/` against the live `WP_Block_Type_Registry`, catching blocks removed by a WordPress or WooCommerce upgrade. Runs in seconds; documented as "Pass 0" alongside the existing four validation passes.
+
+### Added - Complete page-layout patterns
+**New "Page Layouts" Pattern Category:**
+- Added `elayne/page-layouts` category to organize full-page composition patterns
+
+**Agency About Page (`elayne/page-about`):**
+- New full-page pattern combining page header (accent banner), overlapping feature columns, team grid, and stats showcase
+
+**Generic Contact Page (`elayne/page-contact`):**
+- New full-page pattern combining page header (accent banner) and contact form section
+
+**Main Site Homepage (`elayne/page-homepage`):**
+- New full-page pattern combining hero, services stack, agency showcase, client success stories, client logo wall, testimonials grid, and newsletter CTA
+
+**Agency Services Page (`elayne/page-services`):**
+- New full-page pattern combining page header (accent banner), agency services showcase, and three-column feature grid
+
+Each page pattern assembles existing section patterns via PHP includes into a single ready-to-insert page composition, reducing manual pattern-by-pattern page building.
+
+### Added - WooCommerce plugin state gating
+Elayne ships store templates and store patterns but does not require WooCommerce. When the plugin is not active the theme now hides both, so a non-store site is not offered templates and patterns it cannot render:
+- Store templates (`archive-product`, `archive-product-spa`, `archive-product-store`, `single-product`, `taxonomy-product_cat`, `taxonomy-product_cat-store`) are filtered out of the Site Editor via `get_block_templates`
+- All patterns in the `elayne/woocommerce` category are unregistered, along with the now-empty "Store" pattern category, preventing unrecognised-block placeholders in the inserter
+
+No effect on sites running WooCommerce — all store templates and patterns behave as before.
+
+### Changed - Aludra block library migration
+**Header and mega menu blocks moved from `elayne-blocks` to Aludra:**
+- `patterns/header-double-bar.php` now uses `wp:aludra/search-overlay-trigger` instead of `wp:elayne/search-overlay-trigger`
+- `parts/mega-menu-template.html` now references the `aludra/mega-menu-featured-content` pattern instead of `elayne-blocks/mega-menu-featured-content`
+
+The `elayne-blocks` plugin is no longer required. Sites using the double-bar header or the mega menu template part must install the Aludra block library plugin; existing saved content referencing the old `elayne/search-overlay-trigger` block needs to be re-saved with the new block.
+
+### Technical
+**Dependency Updates:**
+- Updated `@imwz/wp-pattern-sentinel` from 1.0.2 to 1.0.4
+- Updated `playwright` and `playwright-core` from 1.60.0 to 1.62.0 (dev dependency; now requires Node >=20)
+
 ## [4.6.4] - 2026-07-06
 
 ### Security

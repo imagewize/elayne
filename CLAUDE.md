@@ -100,7 +100,7 @@ The demo site runs WooCommerce on a **subsite** mounted at `/store/`. All shop U
 - `taxonomy-product_tag.html` → product tag archives
 - `single-product.html` → single product pages
 
-**WooCommerce filter blocks** (WooCommerce 10.7+):
+**WooCommerce filter blocks** (verified against WooCommerce 10.9.4, July 2026):
 - `woocommerce/product-filter-taxonomy` — filter by any taxonomy; use `{"taxonomy":"product_cat"}` for categories. **NOT** `product-filter-category` (does not exist).
 - `woocommerce/product-filter-attribute` — filter by product attribute; omit `attributeId` to ship an unconfigured placeholder (Ollie pattern — client selects their attribute via Site Editor). Include `attributeId` only when building demo-specific templates. Verify IDs via `wp wc product_attribute list --path=web/wp --user=1`
 - `woocommerce/product-filter-price` — price range slider
@@ -219,6 +219,7 @@ WooCommerce core plugin includes official patterns in `wp-content/plugins/woocom
 | **Button attributes** | `"style":{...},"className":"..."` | `"className":"...","style":{...}` (root-level first) |
 | **Full-width layout** | Outer `alignfull` with `constrained` | Outer `alignfull` with `"layout":{"type":"default"}` |
 | **Unregistered categories** | `elayne/cart`, `elayne/checkout` | Use only `elayne/woocommerce` |
+| **Add to cart blocks** | `woocommerce/add-to-cart-button`, `woocommerce/quantity-selector` | Both **removed** in Woo 10.x. Use self-closing `woocommerce/add-to-cart-with-options` — it renders the right template part per product type (simple/variable/grouped), including quantity selector and button. It emits **two different markup shapes** depending on whether Woo resolves a blockified template part, so style via CSS on `.quantity` and `.single_add_to_cart_button`, which both shapes expose. |
 
 ### Pattern Conventions
 
@@ -403,6 +404,14 @@ Every user-facing string MUST be wrapped. Unwrapped strings cause WP.org rejecti
 ## Pattern Validation (four-pass)
 
 Always run all four validators. Use Pass 1 first — it fixes structural issues that regex cannot catch.
+
+> **Pass 0 — block registry drift** (seconds; run before the others after any WordPress or WooCommerce upgrade):
+>
+> ```bash
+> ./scripts/check-pattern-blocks.sh          # from the repo root
+> ```
+>
+> Diffs every `wp:namespace/block` used in `patterns/`, `templates/` and `parts/` against the live `WP_Block_Type_Registry`. Catches blocks that were **removed upstream** — which none of the four passes below reliably flag, because a missing block still serializes as an invalid-block placeholder. Runs against the `store` subsite so WooCommerce blocks are registered.
 
 > **Pass 1 vs Pass 3 — critical distinction:** `wp pattern validate` (Pass 1) uses PHP `parse_blocks()` + `serialize_blocks()`. It does NOT run Gutenberg's JavaScript `save()` function. Issues only the JS serializer produces — `border-top-style:solid` auto-injection, `has-text-color` before `has-{preset}-font-size` class ordering, button link class ordering (`wp-block-button__link has-custom-font-size wp-element-button`), `backgroundColor:"base"` being dropped — will pass Pass 1 but fail in the browser. Pass 3 (sentinel) catches all of these.
 

@@ -83,6 +83,90 @@ function elayne_enqueue_woocommerce_styles() {
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\elayne_enqueue_woocommerce_styles' );
 
 /**
+ * WooCommerce block templates shipped by this theme.
+ *
+ * @return string[] Template slugs.
+ */
+function elayne_woocommerce_template_slugs() {
+	return array(
+		'archive-product',
+		'archive-product-spa',
+		'archive-product-store',
+		'single-product',
+		'taxonomy-product_cat',
+		'taxonomy-product_cat-store',
+	);
+}
+
+/**
+ * Register the WooCommerce integration hooks that apply to this site.
+ *
+ * The theme ships store templates and store patterns but does not require
+ * WooCommerce, so these are hidden on sites where the plugin is not active.
+ */
+function elayne_woocommerce_hooks() {
+	if ( class_exists( 'WooCommerce' ) ) {
+		return;
+	}
+
+	add_filter( 'get_block_templates', __NAMESPACE__ . '\elayne_filter_woocommerce_templates', 10, 3 );
+	add_action( 'init', __NAMESPACE__ . '\elayne_unregister_woocommerce_patterns', 999 );
+}
+add_action( 'after_setup_theme', __NAMESPACE__ . '\elayne_woocommerce_hooks' );
+
+/**
+ * Hide the store templates when WooCommerce is not active.
+ *
+ * Without this, templates such as `single-product` and `archive-product` are
+ * listed in the Site Editor on a site that cannot render them.
+ *
+ * @param \WP_Block_Template[] $query_result  Templates found for the query.
+ * @param array                $query         Query arguments.
+ * @param string               $template_type 'wp_template' or 'wp_template_part'.
+ * @return \WP_Block_Template[] Filtered templates.
+ */
+function elayne_filter_woocommerce_templates( $query_result, $query, $template_type ) {
+	if ( 'wp_template' !== $template_type ) {
+		return $query_result;
+	}
+
+	$store_templates = elayne_woocommerce_template_slugs();
+
+	return array_values(
+		array_filter(
+			$query_result,
+			static function ( $template ) use ( $store_templates ) {
+				return ! in_array( $template->slug, $store_templates, true );
+			}
+		)
+	);
+}
+
+/**
+ * Unregister the theme's store patterns when WooCommerce is not active.
+ *
+ * Every pattern in `patterns/woocommerce/` is registered under the
+ * `elayne/woocommerce` category and builds on `woocommerce/*` blocks, so
+ * without the plugin they insert unrecognised-block placeholders. The category
+ * itself is removed too, so the inserter does not show an empty group.
+ */
+function elayne_unregister_woocommerce_patterns() {
+	$registry = \WP_Block_Patterns_Registry::get_instance();
+
+	foreach ( $registry->get_all_registered() as $pattern ) {
+		if ( empty( $pattern['name'] ) || empty( $pattern['categories'] ) ) {
+			continue;
+		}
+
+		if ( in_array( 'elayne/woocommerce', (array) $pattern['categories'], true ) ) {
+			unregister_block_pattern( $pattern['name'] );
+		}
+	}
+
+	unregister_block_pattern_category( 'elayne/woocommerce' );
+}
+
+/**
  * Enqueue single product page script.
  */
 function elayne_enqueue_product_page_scripts() {
@@ -189,6 +273,7 @@ function elayne_pattern_categories() {
 		'elayne/events'         => array( 'label' => __( 'Events', 'elayne' ) ),
 		'elayne/portfolio'      => array( 'label' => __( 'Portfolio', 'elayne' ) ),
 		'elayne/pages'          => array( 'label' => __( 'Pages', 'elayne' ) ),
+		'elayne/page-layouts'   => array( 'label' => __( 'Page Layouts', 'elayne' ) ),
 		'elayne/posts'          => array( 'label' => __( 'Posts', 'elayne' ) ),
 		'elayne/spa'            => array( 'label' => __( 'Spa & Wellness', 'elayne' ) ),
 		'elayne/legal'          => array( 'label' => __( 'Legal Services', 'elayne' ) ),

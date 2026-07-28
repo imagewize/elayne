@@ -14,10 +14,7 @@
 ?>
 <!-- wp:group {"className":"elayne-atc-section","metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-product-atc-section","name":"Product Add to Cart Section"},"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"0","bottom":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group elayne-atc-section" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--medium)"><!-- wp:group {"className":"elayne-atc-row","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"stretch"}} -->
-<div class="wp-block-group elayne-atc-row"><!-- wp:woocommerce/add-to-cart-form -->
-<!-- wp:woocommerce/quantity-selector /-->
-<!-- wp:woocommerce/add-to-cart-button {"className":"elayne-atc-button","textColor":"base","backgroundColor":"main","style":{"border":{"radius":"0"},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.2em","textTransform":"uppercase"}}} /-->
-<!-- /wp:woocommerce/add-to-cart-form -->
+<div class="wp-block-group elayne-atc-row"><!-- wp:woocommerce/add-to-cart-with-options /-->
 
 <!-- wp:group {"className":"elayne-wishlist-button","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"border":{"width":"1px","color":"var:preset|color|border-light","radius":"0"}},"layout":{"type":"flex","justifyContent":"center","alignItems":"center"}} -->
 <div class="wp-block-group elayne-wishlist-button has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"elayne-wishlist-icon"} -->
