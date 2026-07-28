@@ -273,6 +273,7 @@ function elayne_pattern_categories() {
 		'elayne/events'         => array( 'label' => __( 'Events', 'elayne' ) ),
 		'elayne/portfolio'      => array( 'label' => __( 'Portfolio', 'elayne' ) ),
 		'elayne/pages'          => array( 'label' => __( 'Pages', 'elayne' ) ),
+		'elayne/page-layouts'   => array( 'label' => __( 'Page Layouts', 'elayne' ) ),
 		'elayne/posts'          => array( 'label' => __( 'Posts', 'elayne' ) ),
 		'elayne/spa'            => array( 'label' => __( 'Spa & Wellness', 'elayne' ) ),
 		'elayne/legal'          => array( 'label' => __( 'Legal Services', 'elayne' ) ),
