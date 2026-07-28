@@ -17,21 +17,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Elayne is a premium WordPress block theme (FSE/block theme, WP 6.6+, PHP 8.0+, no build tools).
 
-### Directory Structure
-```
-elayne/
-├── assets/fonts/               # Variable fonts (Mona Sans, Open Sans, Bitter)
-├── assets/js/block-extensions/ # Vanilla JS block extensions
-├── inc/block-extensions.php    # PHP render_block filters
-├── languages/                  # Translation files (text domain: 'elayne')
-├── parts/                      # header.html, footer.html
-├── patterns/                   # PHP block patterns
-├── templates/                  # HTML templates
-├── functions.php
-├── style.css                   # Theme metadata only
-└── theme.json                  # Single source of truth for styles/colors/spacing
-```
-
 ## Local Development
 
 See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, SSH access, URL sanitization after DB operations.
