@@ -56,11 +56,11 @@ Access the WordPress Site Editor at **Appearance → Editor** to customize your 
 
 ## Companion Plugins
 
-### Elayne Blocks
+### Aludra
 
-Elayne works seamlessly with the **[Elayne Blocks](https://github.com/imagewize/elayne-blocks)** plugin, which adds 5 custom blocks: Mega Menu, Carousel, Slide, FAQ Tabs, and Search Overlay Trigger. These blocks are theme-agnostic and work with any WordPress theme.
+Elayne works seamlessly with the **[Aludra](https://github.com/imagewize/aludra)** plugin, which provides 25+ custom blocks including Mega Menu, Carousel, Slide, FAQ Tabs, Search Overlay Trigger, Hero Banner, Pricing Tiers, Testimonial Grid, and more. Aludra is a theme-agnostic shared block library that works with any WordPress theme. It is the direct continuation of the Elayne Blocks plugin, now serving multiple Imagewize themes.
 
-Download from the [Elayne Blocks repository](https://github.com/imagewize/elayne-blocks) and install via **Plugins → Add New → Upload Plugin**.
+Download from the [Aludra repository](https://github.com/imagewize/aludra) and install via **Plugins → Add New → Upload Plugin**.
 
 ### Waygate AI Builder (Beta)
 
