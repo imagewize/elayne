@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.7.4
+Stable tag: 4.8.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.8.0 - 07/29/26 =
+* ADDED: Store Homepage page pattern - Combines woo-hero, woo-ticker, woo-shop-categories, woo-signature-pieces, woo-our-story, woo-testimonials, and woo-newsletter into a complete store homepage layout.
+* ADDED: Store Shop page pattern - Minimal shop catalog page with banner header for WooCommerce product displays.
+* ADDED: Store Cart page pattern - Full shopping cart page layout using the woo-cart pattern.
+* ADDED: Store Checkout page pattern - Full checkout page layout using the woo-checkout pattern.
 
 = 4.7.4 - 07/29/26 =
 * FIXED: Build packaging — `.env` and `.env.*` are now excluded from distribution archives. The file is used only for local development credentials and was already kept out of version control, so no released version of the theme ever contained it, but a zip built from a working copy could have.

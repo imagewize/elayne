@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.8.0] - 2026-07-29
+
+### Added
+
+- **Store page-level patterns** - Four new full-page patterns for the WooCommerce store subsite, following the page pattern strategy from `ELAYNE-PAGE-PATTERNS-PLAN.md`:
+  - `page-store-homepage.php`: Complete store homepage combining woo-hero, woo-ticker, woo-shop-categories, woo-signature-pieces, woo-our-story, woo-testimonials, and woo-newsletter
+  - `page-store-shop.php`: Minimal shop catalog page with banner header (product display handled by WooCommerce blocks)
+  - `page-store-cart.php`: Full shopping cart page using the woo-cart pattern
+  - `page-store-checkout.php`: Full checkout page using the woo-checkout pattern
+
 ## [4.7.4] - 2026-07-29
 
 ### Fixed
