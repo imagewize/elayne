@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.8.0] - 2026-07-29
+
+### Added
+
+- **Store page-level patterns** - Four new full-page patterns for the WooCommerce store subsite, following the page pattern strategy from `ELAYNE-PAGE-PATTERNS-PLAN.md`:
+  - `page-store-homepage.php`: Complete store homepage combining woo-hero, woo-ticker, woo-shop-categories, woo-signature-pieces, woo-our-story, woo-testimonials, and woo-newsletter
+  - `page-store-shop.php`: Minimal shop catalog page with banner header (product display handled by WooCommerce blocks)
+  - `page-store-cart.php`: Full shopping cart page using the woo-cart pattern
+  - `page-store-checkout.php`: Full checkout page using the woo-checkout pattern
+
+### Fixed
+
+- **`woo-category-hero.php` showed the generic "Collection" title on the shop page.** The pattern's `<h1>` reads `get_queried_object()` and expects a `WP_Term` (category/tag archives); the main shop page's queried object is a `WP_Post` instead, so it always fell through to the "Collection" fallback. It now checks `is_shop()` and prints the shop page's own title in that case, falling back to "Collection" only when neither a term nor the shop page applies.
+- **Add-to-cart button hover was invisible when the "Store" style variation wasn't active.** `elayne-category-products.css` set the hover background to `var(--wp--preset--color--orange)`, which is only registered by the Store global style variation; without it the variable is invalid and the button became transparent over the product image on hover. Added a hardcoded hex fallback (`var(--wp--preset--color--orange, #E65C00)`) so the hover state degrades gracefully either way.
+
 ## [4.7.4] - 2026-07-29
 
 ### Fixed
