@@ -1,6 +1,10 @@
 # Directories (need /* suffix for zip -x@ to exclude recursively)
 .git/*
 .github/*
+vendor/*
+node_modules/*
+docs/*
+.tmp/*
 
 # Development files
 .DS_Store
