@@ -6,6 +6,8 @@
 .DS_Store
 .gitignore
 .distignore
+.env
+.env.*
 rsync
 phpcs.xml
 composer.json

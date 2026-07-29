@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.7.3
+Stable tag: 4.7.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.7.4 - 07/29/26 =
+* FIXED: Build packaging — `.env` and `.env.*` are now excluded from distribution archives. The file is used only for local development credentials and was already kept out of version control, so no released version of the theme ever contained it, but a zip built from a working copy could have.
 
 = 4.7.3 - 07/29/26 =
 * CHANGED: Developer documentation only, with no changes to theme output — corrected the demo rebuild workflow (copy the script to the site root rather than editing the vendor copy, which composer update overwrites), documented testing unreleased changes on a demo site without cutting a release, and clarified which validation passes read the installed theme versus the working tree.
