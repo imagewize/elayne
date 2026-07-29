@@ -105,16 +105,16 @@
         },
         {
             "name": "imagewize/pt-cli",
-            "version": "v2.4.3",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imagewize/pt-cli.git",
-                "reference": "45cf3a0fa9866b81f6ac611a94e64a44d3e631bd"
+                "reference": "39f184d929a98c068ce0ad05643d1178e26f425d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/pt-cli/zipball/45cf3a0fa9866b81f6ac611a94e64a44d3e631bd",
-                "reference": "45cf3a0fa9866b81f6ac611a94e64a44d3e631bd",
+                "url": "https://api.github.com/repos/imagewize/pt-cli/zipball/39f184d929a98c068ce0ad05643d1178e26f425d",
+                "reference": "39f184d929a98c068ce0ad05643d1178e26f425d",
                 "shasum": ""
             },
             "require": {
@@ -140,9 +140,9 @@
             "description": "Pattern scaffolding and compliance checker for WordPress FSE block themes",
             "support": {
                 "issues": "https://github.com/imagewize/pt-cli/issues",
-                "source": "https://github.com/imagewize/pt-cli/tree/v2.4.3"
+                "source": "https://github.com/imagewize/pt-cli/tree/v2.5.0"
             },
-            "time": "2026-07-29T01:43:27+00:00"
+            "time": "2026-07-29T02:47:19+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
