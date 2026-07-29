@@ -12,14 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<!-- wp:group {"metadata":{"patternName":"elayne/page-homepage","name":"Main Site Homepage"},"align":"full","layout":{"type":"default"},"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
-	<?php include get_template_directory() . '/patterns/main-hero.php'; ?>
-	<?php include get_template_directory() . '/patterns/main-services-stack.php'; ?>
-	<?php include get_template_directory() . '/patterns/agency-services-showcase.php'; ?>
-	<?php include get_template_directory() . '/patterns/client-success-stories.php'; ?>
-	<?php include get_template_directory() . '/patterns/client-logo-wall.php'; ?>
-	<?php include get_template_directory() . '/patterns/testimonials-grid.php'; ?>
-	<?php include get_template_directory() . '/patterns/cta-newsletter.php'; ?>
-</div>
-<!-- /wp:group -->
+<!-- wp:pattern {"slug":"elayne/main-hero"} /-->
+<!-- wp:pattern {"slug":"elayne/main-services-stack"} /-->
+<!-- wp:pattern {"slug":"elayne/agency-services-showcase"} /-->
+<!-- wp:pattern {"slug":"elayne/client-success-stories"} /-->
+<!-- wp:pattern {"slug":"elayne/client-logo-wall"} /-->
+<!-- wp:pattern {"slug":"elayne/testimonials-grid"} /-->
+<!-- wp:pattern {"slug":"elayne/cta-newsletter"} /-->
