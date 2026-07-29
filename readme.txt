@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.7.1
+Stable tag: 4.7.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.7.2 - 07/29/26 =
+* CHANGED: Page patterns (Main Site Homepage, Agency About Page, Agency Services Page, Generic Contact Page) now compose their sections with `wp:pattern` slug references instead of PHP includes, so renaming a section pattern no longer breaks them and child themes can override individual sections.
+* FIXED: Wide sections inside the page patterns rendered full-viewport instead of at the theme's wide width, and picked up an unintended gap between sections, because of the `is-layout-flow` wrapper group. The wrapper has been removed.
+* FIXED: `package.json` version was out of sync with `style.css` and `readme.txt`.
 
 = 4.7.1 - 07/28/26 =
 * FIXED: Cart page pattern (`elayne/woocommerce/woo-cart`) used the `woocommerce` text domain for three strings copied from WooCommerce's canonical block markup, triggering a "more than one text-domain" warning. All strings now use the `elayne` text domain.

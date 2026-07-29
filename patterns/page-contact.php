@@ -12,9 +12,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<!-- wp:group {"metadata":{"patternName":"elayne/page-contact","name":"Generic Contact Page"},"align":"full","layout":{"type":"default"},"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0">
-	<?php include get_template_directory() . '/patterns/banner-page-header-accent.php'; ?>
-	<?php include get_template_directory() . '/patterns/contact-with-form.php'; ?>
-</div>
-<!-- /wp:group -->
+<!-- wp:pattern {"slug":"elayne/banner-page-header-accent"} /-->
+<!-- wp:pattern {"slug":"elayne/contact-with-form"} /-->
