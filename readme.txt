@@ -179,6 +179,8 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: Store Shop page pattern - Minimal shop catalog page with banner header for WooCommerce product displays.
 * ADDED: Store Cart page pattern - Full shopping cart page layout using the woo-cart pattern.
 * ADDED: Store Checkout page pattern - Full checkout page layout using the woo-checkout pattern.
+* FIXED: Category hero pattern showed the generic "Collection" title on the shop page instead of the shop page's own title. Now detects the shop page and displays its actual title, falling back to "Collection" only when neither a category term nor the shop page applies.
+* FIXED: Add-to-cart button hover became invisible over the product image when the "Store" style variation wasn't active, because its hover color relied on a variable only that variation registers. Added a hex fallback so the hover state always renders.
 
 = 4.7.4 - 07/29/26 =
 * FIXED: Build packaging — `.env` and `.env.*` are now excluded from distribution archives. The file is used only for local development credentials and was already kept out of version control, so no released version of the theme ever contained it, but a zip built from a working copy could have.
