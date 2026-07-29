@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.7.3] - 2026-07-29
+
+Developer-facing only — no changes to theme output, patterns, styles or templates.
+
+### Changed
+
+- **Demo rebuild workflow (`CLAUDE.md`)** — the docs told you to edit the page maps "in your local `vendor/` copy", which the next `composer update` overwrites. Corrected to copy `rebuild-demo.php` to the site root and customise that copy. Documents the two options added in pt-cli 2.5.0: environment-keyed page maps (`dev`/`prod` chosen from `home_url()`, for sites whose page IDs differ between local and production) and a configurable `$page_template` — the script previously hardcoded `default`, silently clearing the `page-no-title` template demo pages rely on.
+- **Local development (`CLAUDE.md`)** — the demo site now installs Elayne as a pinned Composer dependency from Packagist rather than tracking a copy, so this repo is the source of truth and the copy under `demo/web/app/themes/elayne/` is disposable. Added a section on testing an unreleased change with the wp-ops `rsync-package-to-site.sh` script, so a release is no longer needed to try something on the demo, including its `--delete --delete-excluded` footgun.
+- **Pattern validation (`CLAUDE.md`)** — Pass 1 (`wp pattern validate`) reads the patterns installed on the demo site, which is now the released copy. Unreleased changes must be synced in first or Pass 1 validates the last release instead of your edits. Passes 2 and 3 run against the working tree and are unaffected.
+
+### Fixed
+
+- **`imagewize/pt-cli` bumped to v2.5.0** (dev dependency). 2.4.1 through 2.4.3 `export-ignore`d `scripts/`, so `rebuild-demo.php` was missing from those installs entirely; 2.5.0 is the first release since 2.4.0 that actually ships it.
+
 ## [4.7.2] - 2026-07-29
 
 ### Changed - Page patterns composed from pattern references
