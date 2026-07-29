@@ -11,7 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- **`.distignore` now excludes `.env` and `.env.*`.** The repo's `.env` holds the WP admin credentials sentinel uses to drive the block editor (`WP_URL`, `WP_USER`, `WP_PASS`). It is gitignored, so it never reached git, Packagist or a CI-built release — but `.distignore` governs everything built from a working copy, so a local `wp dist-archive` would have bundled it into the zip, and syncing the working copy onto a site (see the demo-testing workflow in `CLAUDE.md`) copied it into the theme directory, which is web-served. Neither path involves git, so gitignoring it was not enough. Found while rewriting that sync script; no released zip is affected.
+- **`.distignore` now excludes `.env` and `.env.*`.** The repo's `.env` holds the WP admin credentials sentinel uses to drive the block editor (`WP_URL`, `WP_USER`, `WP_PASS`). It is gitignored, so it never reached git, Packagist or a CI-built release — but `.distignore` governs everything built from a working copy, so a local zip build would have bundled it, and syncing the working copy onto a site (see the demo-testing workflow in `CLAUDE.md`) copied it into the theme directory, which is web-served. Neither path involves git, so gitignoring it was not enough.
+- **`.distignore` now excludes `vendor/`, `node_modules/`, `docs/` and `.tmp/`.** These were absent from syncs only because the sync tool carries its own baseline exclude list, not because `.distignore` covered them; a plain `zip -x@.distignore` had nothing compensating. Measured on a zip built from a working copy: **5,724 files / 26.3 MB before, 466 files / 8.8 MB after**. `.distignore` is now correct on its own rather than only in combination with a particular tool.
+
+Released zips are unaffected by both entries — `create-release.yml` builds from a clean `actions/checkout`, where none of these paths exist.
 
 ## [4.7.3] - 2026-07-29
 
