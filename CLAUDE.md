@@ -22,7 +22,11 @@ Elayne is a premium WordPress block theme (FSE/block theme, WP 6.6+, PHP 8.0+, n
 See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, SSH access, URL sanitization after DB operations.
 
 - Protocol: `http://demo.imagewize.test/` (HTTP, not HTTPS)
-- File sync: automatic via Lima — no rsync needed
+- **This repo is the source of truth.** The demo site installs Elayne as a
+  pinned Composer dependency (`imagewize/elayne` from Packagist), exactly as it
+  does Aviendha and Aludra. `demo/web/app/themes/elayne/` there is git-ignored
+  and disposable — anything edited in it is destroyed by the next
+  `composer update`. Never edit that copy.
 - Cache: `trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp cache flush --path=web/wp` — rarely needed; see mu-plugin note below
 - `WP_DEVELOPMENT_MODE=theme` is set in `config/environments/development.php` — bypasses theme.json/style transients on every request
 - **mu-plugin active:** `demo/web/app/mu-plugins/fse-dev-mode.php` hooks `pre_get_block_template` and returns the filesystem `WP_Block_Template` via `get_block_file_template()` when `WP_ENV=development`. This bypasses `wp_template`/`wp_template_part` DB overrides entirely — no manual `wp post delete` or cache flush needed for template and template-part changes. Templates with no matching filesystem file (WooCommerce archives, plugin templates) fall through to the DB normally.
@@ -31,26 +35,61 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 
 **Style variation cache:** If `theme.json`/`styles/*.json` changes don't appear in the Site Editor, switch away and back (`Styles → Browse styles`) to force a React state reload.
 
+### Testing an unreleased change on the demo site
+
+**Do not cut a release to test a local change.** Sync this working copy into
+the demo site with the shared script from
+[wp-ops](https://github.com/imagewize/wp-ops):
+
+```bash
+SITE_ROOT=~/code/imagewize.com/demo/web/app \
+  ~/code/wp-ops/scripts/rsync-package-to-site.sh theme elayne ~/code/elayne
+```
+
+**Always pass this working copy as the explicit source argument, and do not
+`cd` into the demo site to run it.** With the source omitted the script
+defaults to `$PWD`, and because it syncs with `--delete --delete-excluded` that
+wipes the real theme. Preview with `--dry-run` before the `theme` argument when
+unsure; if the output shows it deleting `web/wp/...` or `.env`, stop.
+
+Lima then picks the change up automatically — it maps `imagewize.com/demo` into
+the VM, so no further copying is needed. `composer update imagewize/elayne` on
+the demo site puts the released code back.
+
+Releasing is the reverse: tag here, Packagist picks it up within a minute, then
+`composer update imagewize/elayne` on the demo site.
+
+The script lives in wp-ops rather than here because its paths are personal
+configuration, and Theme Check's `File_Check` rejects a theme that ships a
+`.sh` file at all. The local `rsync` helper in this repo is gitignored for the
+same reason.
+
 ### Demo Rebuild Script
 
 Rebuilds demo pages by rendering pattern PHP files in the live WP context and overwriting `post_content` — equivalent to a fresh block-editor insert. Works on both **single-site** and **multisite** WordPress installs.
 
 **Location:** `vendor/imagewize/pt-cli/scripts/rebuild-demo.php` (shipped with pt-cli, not in the theme itself — keeps it off the production web server).
 
+Require pt-cli **at the site root**, not in the theme: `composer require --dev
+imagewize/pt-cli` from the Bedrock root. Elayne is installed there as a Composer
+package with no `vendor/` of its own, so a theme-relative path resolves to
+nothing. Needs **pt-cli ≥ 2.4.4** — 2.4.1 through 2.4.3 `export-ignore`d
+`scripts/`, so the script is absent from those installs.
+
 **Single-site** (most users):
 ```bash
 # Dry-run first (no writes)
 WP_REBUILD_DRY_RUN=1 wp --path=web/wp \
-  eval-file web/app/themes/elayne/vendor/imagewize/pt-cli/scripts/rebuild-demo.php
+  eval-file vendor/imagewize/pt-cli/scripts/rebuild-demo.php
 
 # Live run
-wp --path=web/wp eval-file web/app/themes/elayne/vendor/imagewize/pt-cli/scripts/rebuild-demo.php
+wp --path=web/wp eval-file vendor/imagewize/pt-cli/scripts/rebuild-demo.php
 ```
 
 **Multisite** — pass `--url=` AND a subsite slug argument. The slug selects the right entry from the nested `$page_map`. Page IDs are per-subsite, not global:
 ```bash
 wp --path=web/wp --url=example.com/store/ \
-  eval-file web/app/themes/elayne/vendor/imagewize/pt-cli/scripts/rebuild-demo.php store
+  eval-file vendor/imagewize/pt-cli/scripts/rebuild-demo.php store
 ```
 
 **Customization:** Edit the arrays in the script (in your local `vendor/` copy). Discover page IDs with:
@@ -477,7 +516,9 @@ pt-cli check:templates demo/web/app/themes/elayne/templates/ --theme=elayne --au
 pt-cli check:templates demo/web/app/themes/elayne/templates/archive-product.html --theme=elayne
 ```
 
-> Pass 1 requires the Trellis VM (`cd trellis && trellis vm shell`) because WordPress needs a database connection — the VM runs the database. Files sync automatically via Lima so patterns edited on the host are immediately available in the VM.
+> Pass 1 requires the Trellis VM (`cd trellis && trellis vm shell`) because WordPress needs a database connection — the VM runs the database.
+>
+> It reads the patterns **installed on the demo site**, which is the released Composer copy — not this working tree. Sync your changes in first (see "Testing an unreleased change on the demo site" above), or Pass 1 validates the last release rather than your edits. Lima maps `imagewize.com/demo` into the VM, so once synced the files are immediately visible there. Passes 2 and 3 run against this working tree directly and need no sync.
 
 CI runs Pass 2 automatically on every PR via `.github/workflows/pattern-compliance.yml`.
 
