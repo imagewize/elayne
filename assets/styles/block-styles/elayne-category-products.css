@@ -255,9 +255,10 @@
 	display: block;
 }
 
-.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button .wp-block-button__link:hover {
+/* Add to cart button hover  removed for now  causing invisible button on product list item hover andd consequent button hover*/
+/* .wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button .wp-block-button__link:hover {
 	background-color: var(--wp--preset--color--orange);
-}
+} */
 
 /* Color dots placeholder */
 .wp-block-woocommerce-product-collection .product-color-dots {
