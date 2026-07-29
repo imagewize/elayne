@@ -255,10 +255,12 @@
 	display: block;
 }
 
-/* Add to cart button hover  removed for now  causing invisible button on product list item hover andd consequent button hover*/
-/* .wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button .wp-block-button__link:hover {
-	background-color: var(--wp--preset--color--orange);
-} */
+/* Add to cart button hover — fallback hex guards against the button going
+   transparent (and invisible over the product image) when the "Store" global
+   style variation, which registers --wp--preset--color--orange, isn't active */
+.wp-block-woocommerce-product-collection .wp-block-woocommerce-product-button .wp-block-button__link:hover {
+	background-color: var(--wp--preset--color--orange, #E65C00);
+}
 
 /* Color dots placeholder */
 .wp-block-woocommerce-product-collection .product-color-dots {
