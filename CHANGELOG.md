@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.7.2] - 2026-07-29
+
+### Changed - Page patterns composed from pattern references
+
+- The four page-level patterns (`elayne/page-homepage`, `elayne/page-about`, `elayne/page-services`, `elayne/page-contact`) pulled their sections in with `include get_template_directory() . '/patterns/...'`. They now use `<!-- wp:pattern {"slug":"elayne/..."} /-->` references instead. The include form referenced sections by file path, so renaming a section pattern silently dropped it (an `E_WARNING`, invisible in production), and `get_template_directory()` resolves to the parent theme only, so a child theme could not override a section. Slug references survive file renames and resolve through the pattern registry.
+
+### Fixed - Section widths and spacing on page patterns
+
+- Removed the wrapper group from all four page patterns. It was an `alignfull` group with `"layout":{"type":"default"}`, which renders `is-layout-flow` — a layout with no `.alignwide` rule, so every `align:wide` section inside it lost its wide-size cap and rendered full-viewport. The same layout adds `margin-block-start: 1.2rem` to every child, inserting an unintended gap between sections on top of each pattern's own padding. The sections now sit directly in `post-content`, whose `constrained` layout resolves both align widths correctly.
+
+### Changed - Versioning
+
+- `package.json` was still at `4.0.2` while `style.css` and `readme.txt` were at `4.7.1`. All four version locations are now in sync.
+
 ## [4.7.1] - 2026-07-28
 
 ### Fixed - Mixed text domain
