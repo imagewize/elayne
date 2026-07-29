@@ -70,29 +70,41 @@ Rebuilds demo pages by rendering pattern PHP files in the live WP context and ov
 
 **Location:** `vendor/imagewize/pt-cli/scripts/rebuild-demo.php` (shipped with pt-cli, not in the theme itself — keeps it off the production web server).
 
-Require pt-cli **at the site root**, not in the theme: `composer require --dev
-imagewize/pt-cli` from the Bedrock root. Elayne is installed there as a Composer
-package with no `vendor/` of its own, so a theme-relative path resolves to
-nothing. Needs **pt-cli ≥ 2.4.4** — 2.4.1 through 2.4.3 `export-ignore`d
-`scripts/`, so the script is absent from those installs.
+**Copy it into your own site and run the copy** — e.g. `scripts/rebuild-demo.php`
+at the Bedrock root. Do not run or edit it inside `vendor/`: the next
+`composer update` overwrites your page maps, and Elayne is installed as a
+Composer package with no `vendor/` of its own, so a theme-relative path
+resolves to nothing anyway. Needs **pt-cli ≥ 2.5.0** — 2.4.1 through 2.4.3
+`export-ignore`d `scripts/`, so the script is absent from those installs.
+
+```bash
+composer require --dev imagewize/pt-cli   # from the Bedrock root
+cp vendor/imagewize/pt-cli/scripts/rebuild-demo.php scripts/rebuild-demo.php
+```
+
+The imagewize.com demo does exactly this — see
+`demo/scripts/rebuild-demo-subsite.php` there for a fully populated example.
 
 **Single-site** (most users):
 ```bash
 # Dry-run first (no writes)
-WP_REBUILD_DRY_RUN=1 wp --path=web/wp \
-  eval-file vendor/imagewize/pt-cli/scripts/rebuild-demo.php
+WP_REBUILD_DRY_RUN=1 wp --path=web/wp eval-file scripts/rebuild-demo.php
 
 # Live run
-wp --path=web/wp eval-file vendor/imagewize/pt-cli/scripts/rebuild-demo.php
+wp --path=web/wp eval-file scripts/rebuild-demo.php
 ```
 
 **Multisite** — pass `--url=` AND a subsite slug argument. The slug selects the right entry from the nested `$page_map`. Page IDs are per-subsite, not global:
 ```bash
 wp --path=web/wp --url=example.com/store/ \
-  eval-file vendor/imagewize/pt-cli/scripts/rebuild-demo.php store
+  eval-file scripts/rebuild-demo.php store
 ```
 
-**Customization:** Edit the arrays in the script (in your local `vendor/` copy). Discover page IDs with:
+**Environments** (pt-cli ≥ 2.5.0): `$page_map`, `$templates` and `$template_parts` may be keyed by `dev` / `prod` at the top level when page IDs differ between local and production. The branch is picked from `home_url()` (a `.test` host means dev); override with a second positional argument (`... rebuild-demo.php store prod`). Maps without those keys behave exactly as before.
+
+**Page template:** set `$page_template` (default `'default'`) or a per-subsite `$page_templates` override — Elayne demo pages generally want `page-no-title`, since the patterns carry their own heading.
+
+**Customization:** Edit the arrays in your copy of the script. Discover page IDs with:
 ```bash
 # Single-site
 wp post list --post_type=page --fields=ID,post_title,post_name --path=web/wp
