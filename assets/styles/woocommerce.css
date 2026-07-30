@@ -1195,6 +1195,31 @@
 	grid-template-rows: 1fr auto;
 }
 
+/* Eyebrow decorative line to the left of "New Collection 2025" */
+.elayne-hero-eyebrow-line {
+	width: 32px;
+	height: 1px;
+	margin: 0;
+	flex-shrink: 0;
+}
+
+/* Description paragraph and buttons row — every non-aligned direct child of
+   the left column's constrained group is force-centered by core's
+   `.is-layout-constrained > :where(...) { margin-left/right: auto !important }`
+   rule whenever its own rendered width is narrower than the column (true for
+   the desc paragraph's capped measure, and for the buttons row, which shrinks
+   to fit its content). Pin both back to flush-left to match the heading/eyebrow. */
+.elayne-hero-eyebrow-row,
+.elayne-hero-desc,
+.elayne-hero-buttons {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.elayne-hero-desc {
+	max-width: 360px;
+}
+
 /* ============================================
    Single Product Page — Sticky Gallery
    ============================================ */

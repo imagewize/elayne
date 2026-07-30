@@ -17,20 +17,28 @@
 <!-- wp:columns {"metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-hero","name":"Store Hero"},"className":"alignfull","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
 <div class="wp-block-columns alignfull"><!-- wp:column {"verticalAlignment":"stretch","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}}},"backgroundColor":"primary"} -->
 <div class="wp-block-column is-vertically-aligned-stretch has-primary-background-color has-background" style="padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontStyle":"normal","fontWeight":"400","letterSpacing":"0.22em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"gold"} -->
+<div class="wp-block-group"><!-- wp:group {"className":"elayne-hero-eyebrow-row","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group elayne-hero-eyebrow-row"><!-- wp:separator {"className":"elayne-hero-eyebrow-line","backgroundColor":"gold"} -->
+<hr class="wp-block-separator has-text-color has-gold-color has-alpha-channel-opacity has-gold-background-color has-background elayne-hero-eyebrow-line"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontStyle":"normal","fontWeight":"400","letterSpacing":"0.22em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"gold"} -->
 <p class="has-gold-color has-text-color" style="margin-top:0;margin-bottom:0;font-size:var(--wp--preset--font-size--small);font-style:normal;font-weight:400;letter-spacing:0.22em;text-transform:uppercase"><?php esc_html_e( 'New Collection 2025', 'elayne' ); ?></p>
-<!-- /wp:paragraph -->
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
 
 <!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"300","lineHeight":"1.05","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"base","fontSize":"xx-large","fontFamily":"var:preset|font-family|heading"} -->
 <h2 class="wp-block-heading has-base-color has-text-color has-var-preset-font-family-heading-font-family has-xx-large-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;letter-spacing:-0.01em;line-height:1.05"><?php esc_html_e( 'Refined', 'elayne' ); ?><br><em style="color:var(--wp--preset--color--orange-light)"><?php esc_html_e( 'Elegance', 'elayne' ); ?></em><br><?php esc_html_e( 'Defined', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"300","lineHeight":"1.8"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"base","fontSize":"medium"} -->
-<p class="has-base-color has-text-color has-medium-font-size" style="margin-top:0;margin-bottom:0;font-weight:300;line-height:1.8"><?php esc_html_e( 'Premium professional accessories crafted for the discerning practitioner. Where function meets uncompromising sophistication.', 'elayne' ); ?></p>
-<!-- /wp:paragraph -->
+<!-- wp:group {"className":"elayne-hero-desc","layout":{"type":"default"}} -->
+<div class="wp-block-group elayne-hero-desc"><!-- wp:paragraph {"style":{"color":{"text":"rgba(245, 240, 232, 0.65)"},"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontWeight":"300","lineHeight":"1.8"}},"fontSize":"small"} -->
+<p class="has-text-color has-small-font-size" style="color:rgba(245, 240, 232, 0.65);margin-top:0;margin-bottom:0;font-weight:300;line-height:1.8"><?php esc_html_e( 'Premium professional accessories crafted for the discerning practitioner. Where function meets uncompromising sophistication.', 'elayne' ); ?></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
 
-<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"var:preset|spacing|large"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"left"}} -->
-<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--large)"><!-- wp:button {"backgroundColor":"orange","textColor":"tertiary","className":"is-style-fill","style":{"border":{"radius":"0"},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.16em","textTransform":"uppercase"}}} -->
+<!-- wp:buttons {"className":"elayne-hero-buttons","style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"var:preset|spacing|large"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"left"}} -->
+<div class="wp-block-buttons elayne-hero-buttons" style="margin-top:var(--wp--preset--spacing--large)"><!-- wp:button {"backgroundColor":"orange","textColor":"tertiary","className":"is-style-fill","style":{"border":{"radius":"0"},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.16em","textTransform":"uppercase"}}} -->
 <div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-tertiary-color has-orange-background-color has-text-color has-background wp-element-button" style="border-radius:0;font-style:normal;font-weight:500;letter-spacing:0.16em;text-transform:uppercase"><?php esc_html_e( 'Shop Collection', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 

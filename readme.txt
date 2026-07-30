@@ -179,6 +179,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: `primary` font-family alias in the Store style variation, pointing to the same serif font already registered as `heading`.
 * FIXED: Store subsite logo silently fell back to the body font instead of a serif display font, because the shared header pattern references a `primary` font-family slug that no vertical style variation defines. Affected every vertical, not just Store.
 * FIXED: Woo Hero pattern had a visible gap between the left content panel and the right-hand image, caused by a missing blockGap override on the two-column layout.
+* FIXED: Woo Hero pattern's eyebrow, description, and buttons didn't match the design — added the decorative line before "New Collection 2025", narrowed and re-styled the description paragraph, and corrected the description and buttons row rendering centered instead of flush-left with the heading.
 
 = 4.8.0 - 07/29/26 =
 * ADDED: Store Homepage page pattern - Combines woo-hero, woo-ticker, woo-shop-categories, woo-signature-pieces, woo-our-story, woo-testimonials, and woo-newsletter into a complete store homepage layout.
