@@ -641,6 +641,29 @@ function elayne_enqueue_plumbing_variation_styles(): void {
 add_action( 'enqueue_block_assets', __NAMESPACE__ . '\elayne_enqueue_plumbing_variation_styles' );
 
 /**
+ * Enqueue the store style variation stylesheet.
+ *
+ * Uses enqueue_block_assets so the file loads in both the frontend and the
+ * FSE editor iframe. Only enqueued when the store variation is active.
+ * Styles are scoped under `.style-variation-store` so there is zero impact
+ * on other style variations or pages — including other verticals sharing
+ * the same header-standard pattern.
+ */
+function elayne_enqueue_store_variation_styles(): void {
+	$custom = wp_get_global_settings( array( 'custom' ) );
+	if ( empty( $custom['styleVariation'] ) || 'store' !== $custom['styleVariation'] ) {
+		return;
+	}
+	wp_enqueue_style(
+		'elayne-store-variation',
+		get_template_directory_uri() . '/assets/styles/store-variation.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+}
+add_action( 'enqueue_block_assets', __NAMESPACE__ . '\elayne_enqueue_store_variation_styles' );
+
+/**
  * Render ticker content for elayne-ticker group block.
  *
  * Uses render_block filter to inject PHP-generated marquee content

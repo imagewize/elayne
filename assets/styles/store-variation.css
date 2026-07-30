@@ -1,0 +1,27 @@
+/* ========================================================================
+   Store Style Variation
+   Loaded via enqueue_block_assets — applies on frontend and in the FSE
+   editor iframe. Only enqueued when the store variation is active.
+   Scopes: .style-variation-store (frontend + iframe body class)
+   ======================================================================== */
+
+/* Desktop nav — small, letter-spaced uppercase links (Elayne Store brand style) */
+.style-variation-store .wp-block-navigation .wp-block-navigation-item__content {
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+/* Logo — larger, letter-spaced wordmark matching the brand mark in the design.
+   !important needed to beat WP core's has-base-font-size !important rule. */
+.style-variation-store .wp-block-site-title {
+	font-size: 1.6rem !important;
+	letter-spacing: 0.12em;
+}
+
+/* Logo — accent-colour dot after the wordmark, matching the brand mark in the design */
+.style-variation-store .wp-block-site-title a::after {
+	content: ".";
+	color: var(--wp--preset--color--orange);
+}

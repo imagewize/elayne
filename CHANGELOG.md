@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.8.1] - 2026-07-30
+
+### Added
+
+- **Store style variation stylesheet** (`assets/styles/store-variation.css`), enqueued only when the Store style variation is active (`settings.custom.styleVariation` in `styles/store.json`), following the same `.style-variation-{slug}` convention as `plumbing-variation.css` and `nail-salon-variation.css`. Scopes the Store subsite's brand-specific header treatment without affecting `header-standard.php`, which is shared by every vertical.
+  - Desktop nav links: small, uppercase, letter-spaced (matches the Elayne Store design).
+  - Site title/logo: larger, letter-spaced wordmark with an accent-colored dot after the wordmark.
+- **`primary` font-family alias** in `styles/store.json`, pointing to the same Cormorant Garamond already registered under the `heading` slug.
+
+### Fixed
+
+- **Store subsite logo silently fell back to the body font (Jost) instead of a serif display font.** `header-standard.php`'s site-title block references `var:preset|font-family|primary`, but no vertical style variation (`store.json`, `nail-salon.json`, `plumbing.json`, etc.) defines a `primary` font-family slug — only the base `theme.json` does. The CSS custom property was therefore undefined on every vertical subsite, not just Store, and the browser silently dropped the declaration. `store.json` now defines `primary` explicitly.
+- **Woo Hero pattern (`woo-hero.php`) had a visible ~19px gap between the left content panel and the right-hand image**, because the outer `wp:columns` block had no `blockGap` override and fell back to the theme's global `1.2rem` flex gap. Zeroed it explicitly, following the same convention already used by `spa-home-hero.php`.
+- **Woo Hero pattern's eyebrow, description, and buttons didn't match the design.** Added the decorative line before "New Collection 2025", narrowed the description paragraph to a 360px measure with a smaller, dimmer color (`rgba(245, 240, 232, 0.65)` instead of the fully-opaque `base` color), and reduced its font size to `small`. Also fixed the description and buttons row rendering centered instead of flush-left: both are non-aligned direct children of a `constrained`-layout group, which core force-centers via `.is-layout-constrained > :where(...) { margin-left/right: auto !important }` whenever a child's own rendered width is narrower than the column — overridden back to flush-left in `assets/styles/woocommerce.css`.
+
 ## [4.8.0] - 2026-07-29
 
 ### Added

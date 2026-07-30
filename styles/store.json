@@ -3,6 +3,9 @@
 	"version": 3,
 	"title": "Store",
 	"settings": {
+		"custom": {
+			"styleVariation": "store"
+		},
 		"color": {
 			"defaultPalette": false,
 			"defaultDuotone": false,
@@ -177,6 +180,11 @@
 							"src": ["file:./assets/fonts/store/jost-v20-latin-italic-variable.woff2"]
 						}
 					]
+				},
+				{
+					"fontFamily": "\"Cormorant Garamond\", Georgia, serif",
+					"slug": "primary",
+					"name": "Cormorant Garamond (Primary)"
 				}
 			],
 			"fontSizes": [
