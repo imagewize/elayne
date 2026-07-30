@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Woo Hero pattern (`woo-hero.php`) had a visible ~19px gap between the left content panel and the right-hand image**, because the outer `wp:columns` block had no `blockGap` override and fell back to the theme's global `1.2rem` flex gap. Zeroed it explicitly, following the same convention already used by `spa-home-hero.php`.
 - **Woo Hero pattern's eyebrow, description, and buttons didn't match the design.** Added the decorative line before "New Collection 2025", narrowed the description paragraph to a 360px measure with a smaller, dimmer color (`rgba(245, 240, 232, 0.65)` instead of the fully-opaque `base` color), and reduced its font size to `small`. Also fixed the description and buttons row rendering centered instead of flush-left: both are non-aligned direct children of a `constrained`-layout group, which core force-centers via `.is-layout-constrained > :where(...) { margin-left/right: auto !important }` whenever a child's own rendered width is narrower than the column — overridden back to flush-left in `assets/styles/woocommerce.css`.
 
-
+## [4.8.0] - 2026-07-29
 
 ### Added
 
