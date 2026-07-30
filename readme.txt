@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.8.0
+Stable tag: 4.8.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.8.1 - 07/30/26 =
+* ADDED: Store style variation stylesheet, loaded only when the Store style variation is active — gives the Store subsite header its own uppercase letter-spaced nav and a larger, letter-spaced logo with an accent-colored dot, without affecting the shared header pattern used by every other vertical.
+* ADDED: `primary` font-family alias in the Store style variation, pointing to the same serif font already registered as `heading`.
+* FIXED: Store subsite logo silently fell back to the body font instead of a serif display font, because the shared header pattern references a `primary` font-family slug that no vertical style variation defines. Affected every vertical, not just Store.
+* FIXED: Woo Hero pattern had a visible gap between the left content panel and the right-hand image, caused by a missing blockGap override on the two-column layout.
 
 = 4.8.0 - 07/29/26 =
 * ADDED: Store Homepage page pattern - Combines woo-hero, woo-ticker, woo-shop-categories, woo-signature-pieces, woo-our-story, woo-testimonials, and woo-newsletter into a complete store homepage layout.

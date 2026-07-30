@@ -14,7 +14,7 @@
  * @version 1.0.0
  */
 ?>
-<!-- wp:columns {"metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-hero","name":"Store Hero"},"className":"alignfull"} -->
+<!-- wp:columns {"metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-hero","name":"Store Hero"},"className":"alignfull","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
 <div class="wp-block-columns alignfull"><!-- wp:column {"verticalAlignment":"stretch","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}}},"backgroundColor":"primary"} -->
 <div class="wp-block-column is-vertically-aligned-stretch has-primary-background-color has-background" style="padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontStyle":"normal","fontWeight":"400","letterSpacing":"0.22em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"gold"} -->
