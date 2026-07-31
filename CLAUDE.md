@@ -39,11 +39,12 @@ See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, 
 
 **Do not cut a release to test a local change.** Sync this working copy into
 the demo site with the shared script from
-[wp-ops](https://github.com/imagewize/wp-ops):
+[wp-ops](https://github.com/imagewize/wp-ops), via the `wp-ops` CLI (run
+`~/code/wp-ops/install.sh` once if `wp-ops` isn't on your PATH yet):
 
 ```bash
 SITE_ROOT=~/code/imagewize.com/demo/web/app \
-  ~/code/wp-ops/scripts/rsync-package-to-site.sh theme elayne ~/code/elayne
+  wp-ops rsync-package-to-site theme elayne ~/code/elayne
 ```
 
 **Always pass this working copy as the explicit source argument, and do not
