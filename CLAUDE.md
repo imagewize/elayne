@@ -19,7 +19,11 @@ Elayne is a premium WordPress block theme (FSE/block theme, WP 6.6+, PHP 8.0+, n
 
 ## Local Development
 
-See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, SSH access, URL sanitization after DB operations.
+See **parent `CLAUDE.md`** for: Trellis VM commands, file sync details, WP-CLI, SSH
+access, URL sanitization after DB operations, and the `wp-ops` MCP tools
+(`mcp__wp-ops__wp_cli`, `security_scan`, `redirect_audit`, `schema_audit` —
+site key `demo.imagewize.com`, env `development`) for ad-hoc checks against the
+demo site instead of raw `ssh`/`wp` commands.
 
 - Protocol: `http://demo.imagewize.test/` (HTTP, not HTTPS)
 - **This repo is the source of truth.** The demo site installs Elayne as a
