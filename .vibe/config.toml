@@ -14,7 +14,6 @@ include_prompt_detail = true
 enable_update_checks = true
 api_timeout = 720.0
 tool_paths = []
-mcp_servers = []
 enabled_tools = []
 disabled_tools = []
 skill_paths = [
@@ -58,6 +57,7 @@ alias = "devstral-small"
 temperature = 0.2
 input_price = 0.1
 output_price = 0.3
+thinking = "off"
 
 [[models]]
 name = "devstral"
