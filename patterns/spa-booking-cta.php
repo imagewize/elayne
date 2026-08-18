@@ -22,12 +22,12 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-button-light"} -->
-<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button" href="/book"><?php esc_html_e( 'Book Appointment', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"base","textColor":"main","className":"is-style-button-light"} -->
+<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link has-main-color has-base-background-color has-text-color has-background wp-element-button" href="/book"><?php esc_html_e( 'Book Appointment', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"className":"is-style-fill"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="/shop"><?php esc_html_e( 'Shop Products', 'elayne' ); ?></a></div>
+<!-- wp:button {"backgroundColor":"primary-alt","textColor":"main","className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-main-color has-primary-alt-background-color has-text-color has-background wp-element-button" href="/shop"><?php esc_html_e( 'Shop Products', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

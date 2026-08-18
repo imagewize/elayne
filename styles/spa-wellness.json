@@ -11,17 +11,26 @@
 				{
 					"name": "Spa Teal",
 					"slug": "primary",
-					"colors": ["#5BBCD6", "#E8F5F2"]
+					"colors": [
+						"#5BBCD6",
+						"#E8F5F2"
+					]
 				},
 				{
 					"name": "Ocean Sage",
 					"slug": "secondary",
-					"colors": ["#2D4A4E", "#F7FCFA"]
+					"colors": [
+						"#2D4A4E",
+						"#F7FCFA"
+					]
 				},
 				{
 					"name": "High Contrast",
 					"slug": "high-contrast",
-					"colors": ["#000000", "#ffffff"]
+					"colors": [
+						"#000000",
+						"#ffffff"
+					]
 				}
 			],
 			"gradients": [
@@ -126,14 +135,18 @@
 							"fontFamily": "Cormorant Garamond",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-VariableFont_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/cormorant-garamond/CormorantGaramond-VariableFont_wght.woff2"
+							]
 						},
 						{
 							"fontDisplay": "swap",
 							"fontFamily": "Cormorant Garamond",
 							"fontStyle": "italic",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-Italic-VariableFont_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/cormorant-garamond/CormorantGaramond-Italic-VariableFont_wght.woff2"
+							]
 						}
 					]
 				},
@@ -147,7 +160,9 @@
 							"fontFamily": "Quicksand",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/quicksand/Quicksand-VariableFont_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/quicksand/Quicksand-VariableFont_wght.woff2"
+							]
 						}
 					]
 				}
@@ -165,7 +180,7 @@
 					"width": "0"
 				},
 				"color": {
-					"background": "var:preset|color|primary",
+					"background": "var:preset|color|main",
 					"text": "var:preset|color|base"
 				},
 				"spacing": {
@@ -183,7 +198,7 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|primary-alt",
+						"background": "var:preset|color|border-dark",
 						"text": "var:preset|color|base"
 					}
 				}

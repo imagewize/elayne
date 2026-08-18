@@ -31,8 +31,8 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","justifyContent":"left"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"is-style-fill","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|small"}}} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--small)"><?php esc_html_e( 'Book an Appointment', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary-alt","textColor":"base","className":"is-style-fill","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|small"}}} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-base-color has-primary-alt-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--small)"><?php esc_html_e( 'Book an Appointment', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"textColor":"base","className":"is-style-outline","style":{"border":{"radius":"var:preset|border-radius|pill","width":"1px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"var:preset|font-size|small"}},"borderColor":"border-light"} -->

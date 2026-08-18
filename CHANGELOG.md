@@ -37,6 +37,22 @@ matters.
   6.96:1); Home Improvement keeps the orange and darkens the label to `main`
   (**6.36:1**, hover 5.05:1).
 
+- **Default buttons failed in all three variations.** The filled button paired a light
+  `primary` background with light text — **3.30:1** (Nail Salon), **2.85:1** (Home
+  Improvement), **2.19:1** (Spa & Wellness). Fixed per variation in
+  `styles.elements.button` and, where patterns set the colours explicitly, in the
+  pattern: Nail Salon's buttons move to `primary-alt` (**4.93:1**, hover 6.76:1), Home
+  Improvement keeps the orange and darkens the label to `main` (**6.36:1**, hover
+  5.05:1), and Spa moves to `main` (**9.54:1**, hover 5.03:1). Home Improvement had no
+  `elements.button` of its own and now gets one, so the fix stays scoped to that
+  variation.
+
+- **Spa booking CTA buttons.** With the band on `main`, the shared `button-light` block
+  style put `primary` cyan on white at **2.19:1**, and the filled button would have
+  matched the band exactly. Both now carry explicit colours: white with a `main` label
+  (**9.54:1**) and `primary-alt` mint with a `main` label (**6.03:1**), each clearly
+  distinct from the band.
+
 - **Home Improvement form focus ring** was **2.85:1** against the field, under the 3:1
   WCAG 1.4.11 requires of a control boundary. Now `#cf6d17` at **3.59:1**. Nail Salon's
   ring already cleared it at 3.40:1 and is unchanged.
@@ -54,7 +70,9 @@ at once, so the fix belongs at the handful of places that pair it with light tex
 
 ### Note
 
-The 18 patterns that set `backgroundColor: primary` and are shared across every
+The shared `button-light` block style still resolves to `text: primary`, which is
+unreadable on `base` under a light-`primary` variation wherever it is used outside the
+patterns fixed here. Likewise, the 18 patterns that set `backgroundColor: primary` and are shared across every
 variation are untouched. They are correct under the six variations whose `primary` is
 dark enough, and none of them are used by these three verticals' pages. Pairing one
 with a light-`primary` variation would still fail; solving that generally needs the
