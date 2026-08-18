@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.8.1
+Stable tag: 4.9.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.0 - 08/18/26 =
+* FIXED: Nail Salon, Home Improvement and Spa & Wellness put unreadable text on their `primary` colour. Text on a primary background measured 3.30:1, 2.42:1 and 2.19:1 against each variation's own page colour, where WCAG 2.1 AA asks for 4.5:1. All three now clear it (4.93:1, 4.52:1, 4.50:1). 33 patterns place text on a primary background, 18 of them shared across every variation, so this was visible well beyond the three verticals' own patterns.
+* FIXED: `primary-alt` failed the same test in Home Improvement (3.05:1) and Spa & Wellness (1.58:1). It is used as a text colour in 19 patterns, as a text background in 3 more, and as the hover state of the contact-form submit button, so a light value there left the button label unreadable on hover. Both now pass (6.49:1, 4.52:1).
+* FIXED: the same colours hardcoded outside the palettes — contact-form submit buttons and focus rings in the Nail Salon and Home Improvement variation stylesheets, ten block-style files, the Nail Salon CTA gradient, and the Spa booking block's accent — which would otherwise have kept the old, failing values.
+* CHANGED: Nail Salon's primary moves to the deeper rose already in its palette; Spa & Wellness's to a deepened version of its own teal. Home Improvement's orange had no in-palette shade that passes, so it darkens from #E67E22 to #A45713. The `primary` to `primary-alt` hover step is preserved in each.
+* CHANGED: style variation preview swatches updated to match the corrected palettes.
 
 = 4.8.1 - 07/30/26 =
 * ADDED: Store style variation stylesheet, loaded only when the Store style variation is active — gives the Store subsite header its own uppercase letter-spaced nav and a larger, letter-spaced logo with an accent-colored dot, without affecting the shared header pattern used by every other vertical.

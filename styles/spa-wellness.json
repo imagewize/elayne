@@ -11,7 +11,7 @@
 				{
 					"name": "Spa Teal",
 					"slug": "primary",
-					"colors": ["#5BBCD6", "#E8F5F2"]
+					"colors": ["#3F808A", "#E8F5F2"]
 				},
 				{
 					"name": "Ocean Sage",
@@ -28,12 +28,12 @@
 				{
 					"name": "Spa Teal",
 					"slug": "spa-teal",
-					"gradient": "linear-gradient(135deg, #5BBCD6, #A5D8CA)"
+					"gradient": "linear-gradient(135deg, #3F808A, #39836F)"
 				},
 				{
 					"name": "Ocean Depth",
 					"slug": "ocean-depth",
-					"gradient": "linear-gradient(135deg, #2D4A4E, #42858F)"
+					"gradient": "linear-gradient(135deg, #2D4A4E, #306067)"
 				},
 				{
 					"name": "Peaceful Sky",
@@ -50,7 +50,7 @@
 				{
 					"name": "Brand",
 					"slug": "primary",
-					"color": "#5BBCD6"
+					"color": "#3F808A"
 				},
 				{
 					"name": "Brand Accent",
@@ -60,12 +60,12 @@
 				{
 					"name": "Brand Alt",
 					"slug": "primary-alt",
-					"color": "#A5D8CA"
+					"color": "#39836F"
 				},
 				{
 					"name": "Brand Alt Accent",
 					"slug": "primary-alt-accent",
-					"color": "#42858F"
+					"color": "#306067"
 				},
 				{
 					"name": "Contrast",

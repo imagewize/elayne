@@ -43,13 +43,13 @@
 
 /* Featured testimonial card highlight */
 .style-variation-plumbing .plumbing-t-featured {
-	border-color: rgba( 230, 126, 34, 0.35 ) !important;
-	background: rgba( 230, 126, 34, 0.05 ) !important;
+	border-color: rgba( 164, 87, 19, 0.35 ) !important;
+	background: rgba( 164, 87, 19, 0.05 ) !important;
 }
 
 /* Always-on badge text */
 .style-variation-plumbing .plumbing-always-on {
-	color: #e67e22 !important;
+	color: #a45713 !important;
 	font-weight: 600 !important;
 }
 
@@ -241,7 +241,7 @@
 .style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="text"]:focus,
 .style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="email"]:focus,
 .style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea:focus {
-	border-color: #E67E22;
+	border-color: #A45713;
 }
 
 .style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea {
@@ -252,7 +252,7 @@
 /* Submit button */
 .style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="submit"] {
 	width: 100%;
-	background: #E67E22;
+	background: #A45713;
 	color: #fff;
 	border: none;
 	border-radius: var( --wp--preset--border-radius--pill );
@@ -265,7 +265,7 @@
 }
 
 .style-variation-plumbing .wp-block-contact-form-7-contact-form-selector .wpcf7-form input[type="submit"]:hover {
-	background: #cf6d17;
+	background: #80440f;
 }
 
 /* Spinner — keep next to button */

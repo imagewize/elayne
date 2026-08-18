@@ -11,9 +11,9 @@
 }
 
 .plumbing-header-cta:hover {
-	background: #cf6d17 !important;
+	background: #80440f !important;
 	transform: translateY( -1px );
-	box-shadow: 0 4px 16px rgba( 230, 126, 34, 0.4 );
+	box-shadow: 0 4px 16px rgba( 164, 87, 19, 0.4 );
 }
 
 .plumbing-cta-phone-icon {

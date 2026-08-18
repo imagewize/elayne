@@ -19,7 +19,7 @@
 				{
 					"name": "Amber",
 					"slug": "secondary",
-					"colors": ["#E67E22", "#e8edf4"]
+					"colors": ["#A45713", "#e8edf4"]
 				},
 				{
 					"name": "High Contrast",
@@ -41,7 +41,7 @@
 				{
 					"name": "Amber Warm",
 					"slug": "amber-warm",
-					"gradient": "linear-gradient(135deg, #E67E22, #f39c12)"
+					"gradient": "linear-gradient(135deg, #A45713, #f39c12)"
 				},
 				{
 					"name": "Main Diagonal",
@@ -53,7 +53,7 @@
 				{
 					"name": "Brand",
 					"slug": "primary",
-					"color": "#E67E22"
+					"color": "#A45713"
 				},
 				{
 					"name": "Brand Accent",
@@ -63,7 +63,7 @@
 				{
 					"name": "Brand Alt",
 					"slug": "primary-alt",
-					"color": "#cf6d17"
+					"color": "#80440F"
 				},
 				{
 					"name": "Brand Alt Accent",

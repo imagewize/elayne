@@ -19,7 +19,7 @@
 	left: 0;
 	right: 0;
 	height: 3px;
-	background: linear-gradient(90deg, #E67E22, #f39c12);
+	background: linear-gradient(90deg, #A45713, #f39c12);
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.3s ease;

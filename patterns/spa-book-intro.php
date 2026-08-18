@@ -14,5 +14,5 @@
 <p style="line-height:1.7"><?php esc_html_e( 'Welcome to our spa booking page! Treat yourself to a moment of tranquility and well-being. Whether you\'re looking for a soothing massage, a revitalizing facial, or a complete wellness experience, we have the perfect treatment for you. Simply select your preferred service and time from the calendar below, and let us take care of the rest.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:ssa/booking {"accent_color":"#5BBCD6"} /--></div>
+<!-- wp:ssa/booking {"accent_color":"#3F808A"} /--></div>
 <!-- /wp:group -->

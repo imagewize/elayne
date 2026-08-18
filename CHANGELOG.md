@@ -7,6 +7,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.0] - 2026-08-18
+
+Three style variations shipped text that could not be read on their own brand colour.
+Found while auditing Aludra 2.27.0's dark-variation contrast fix against every
+consuming theme.
+
+### Fixed
+
+- **`primary` failed WCAG 2.1 AA as a text background in three variations.** Measured
+  against each variation's own `base`: Nail Salon **3.30:1**, Home Improvement
+  **2.42:1**, Spa & Wellness **2.19:1** — all short of the 4.5:1 AA requires for body
+  text. They now reach **4.93:1**, **4.52:1** and **4.50:1**.
+
+  This was not confined to the three verticals' own patterns. 33 patterns set
+  `backgroundColor: primary` (30 paired with `textColor: base`, 3 with `white`), and
+  18 of those are shared across every variation — `hero-with-cta`, `cta-newsletter`,
+  `download-cta`, `banner-announcement-bar`, the WooCommerce set and others. The
+  palette is the only per-variation lever, so the fix had to be there.
+
+- **`primary-alt` failed the same test** in Home Improvement (**3.05:1**) and
+  Spa & Wellness (**1.58:1**), now **6.49:1** and **4.52:1**. It is a text colour in 19
+  patterns, a text background in 3, and `style.css` uses it as the hover state of the
+  contact-form submit button — so Spa's near-white mint left the button label
+  unreadable on hover.
+
+- **The same colours hardcoded outside the palettes.** `nail-salon-variation.css` and
+  `plumbing-variation.css` (submit buttons, focus rings), ten files under
+  `assets/styles/block-styles/`, the `nail-salon-cta` gradient, and the Spa booking
+  block's `accent_color`. Left alone these would have kept rendering the failing
+  values regardless of the palette.
+
+### Changed
+
+- Nail Salon's `primary` moves to `#A85560`, the deeper rose already defined in its own
+  palette, with `primary-alt` and `primary-alt-accent` stepping down to keep the ramp
+  distinct — `style.css` relies on `primary-alt` being a darker hover of `primary`.
+- Spa & Wellness's `primary` becomes `#3F808A`, its own `primary-alt-accent` deepened
+  just enough to clear the bar.
+- Home Improvement's `primary` darkens from `#E67E22` to `#A45713`. Nothing in its
+  orange family passed (`primary-alt` 3.05:1, `primary-alt-accent` 1.86:1), so unlike
+  the other two this is a visible shift away from the signature safety-orange.
+- Style variation preview swatches updated to match.
+
+### Not changed
+
+- `.floating-badge` in `style.css` keeps its `#E67E22` left border. It is a decorative
+  3px stripe on a `#112240` navy panel, shared by the Nail Salon and Home Improvement
+  heroes, carrying no text — and the darker orange would only dim it against that navy.
+
 ## [4.8.1] - 2026-07-30
 
 ### Added

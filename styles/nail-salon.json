@@ -11,7 +11,7 @@
 				{
 					"name": "Dusty Rose",
 					"slug": "primary",
-					"colors": ["#C9727C", "#F5E4E6"]
+					"colors": ["#A85560", "#F5E4E6"]
 				},
 				{
 					"name": "Warm Blush",
@@ -33,7 +33,7 @@
 				{
 					"name": "Rose CTA",
 					"slug": "rose-cta",
-					"gradient": "linear-gradient(135deg, #C9727C, #A85560)"
+					"gradient": "linear-gradient(135deg, #A85560, #8B4350)"
 				},
 				{
 					"name": "Gold Glow",
@@ -50,7 +50,7 @@
 				{
 					"name": "Brand",
 					"slug": "primary",
-					"color": "#C9727C"
+					"color": "#A85560"
 				},
 				{
 					"name": "Brand Accent",
@@ -60,12 +60,12 @@
 				{
 					"name": "Brand Alt",
 					"slug": "primary-alt",
-					"color": "#A85560"
+					"color": "#8B4350"
 				},
 				{
 					"name": "Brand Alt Accent",
 					"slug": "primary-alt-accent",
-					"color": "#8B4350"
+					"color": "#6C343E"
 				},
 				{
 					"name": "Contrast",
