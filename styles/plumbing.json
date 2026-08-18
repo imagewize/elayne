@@ -14,17 +14,26 @@
 				{
 					"name": "Navy",
 					"slug": "primary",
-					"colors": ["#0B1628", "#e8edf4"]
+					"colors": [
+						"#0B1628",
+						"#e8edf4"
+					]
 				},
 				{
 					"name": "Amber",
 					"slug": "secondary",
-					"colors": ["#E67E22", "#e8edf4"]
+					"colors": [
+						"#E67E22",
+						"#e8edf4"
+					]
 				},
 				{
 					"name": "High Contrast",
 					"slug": "high-contrast",
-					"colors": ["#000000", "#ffffff"]
+					"colors": [
+						"#000000",
+						"#ffffff"
+					]
 				}
 			],
 			"gradients": [
@@ -166,6 +175,18 @@
 					"textTransform": "uppercase",
 					"letterSpacing": "0.03em",
 					"fontStretch": "75%"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var:preset|color|primary",
+					"text": "var:preset|color|main"
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|primary-alt",
+						"text": "var:preset|color|main"
+					}
 				}
 			}
 		}

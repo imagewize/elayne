@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.8.1
+Stable tag: 4.9.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.0 - 08/18/26 =
+* FIXED: Nail Salon, Home Improvement and Spa & Wellness placed light text on a brand-coloured band that was too light to carry it — 3.30:1, 2.85:1 and 2.19:1 where WCAG 2.1 AA asks for 4.5:1. Fixed at the band, not in the palette, so the brand colour is unchanged everywhere else: the Nail Salon stats bar and CTA step down one shade, the Home Improvement stats bar and header keep their orange but switch to a dark navy label, and the Spa booking CTA moves onto the deep teal already in its palette. All now clear AA (4.93:1, 6.36:1, 9.54:1).
+* FIXED: contact form submit buttons in the Nail Salon and Home Improvement variations had white labels on a light brand colour (3.40:1 and 2.85:1); both now pass (5.08:1 and 6.36:1).
+* FIXED: default buttons in all three variations paired a light brand background with light text (3.30:1, 2.85:1, 2.19:1). Nail Salon's move to the deeper rose, Home Improvement keeps its orange with a dark navy label, and Spa moves to its deep teal — 4.93:1, 6.36:1 and 9.54:1.
+* FIXED: the Spa booking CTA's two buttons were unreadable on the new band; both now carry explicit colours, at 9.54:1 and 6.03:1.
+* FIXED: the Home Improvement form focus ring was 2.85:1 against the field, under the 3:1 WCAG 1.4.11 requires for a control boundary; now 3.59:1.
 
 = 4.8.1 - 07/30/26 =
 * ADDED: Store style variation stylesheet, loaded only when the Store style variation is active — gives the Store subsite header its own uppercase letter-spaced nav and a larger, letter-spaced logo with an accent-colored dot, without affecting the shared header pattern used by every other vertical.

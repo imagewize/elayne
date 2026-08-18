@@ -7,6 +7,78 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.0] - 2026-08-18
+
+Three verticals placed light text on a brand-coloured band too light to carry it.
+Fixed at the band rather than in the palette — see below for why that distinction
+matters.
+
+### Fixed
+
+- **Light text on a `primary` band, below WCAG 2.1 AA.** Measured against each
+  variation's own colours:
+
+  | Band | before | after |
+  |---|---|---|
+  | Nail Salon stats bar (`base` on `primary`) | 3.30:1 | **4.93:1** |
+  | Nail Salon CTA gradient | 3.30–4.93:1 | **4.93–6.76:1** |
+  | Home Improvement stats bar (`white` on `primary`) | 2.85:1 | **6.36:1** |
+  | Home Improvement top bar + header CTA pill | 2.85:1 | **6.36:1** |
+  | Spa booking CTA (`base` on `primary`) | 2.19:1 | **9.54:1** |
+
+  Each fix uses a colour already in that variation's palette. Nail Salon's band steps
+  down to `primary-alt` and its CTA gradient to `primary-alt`→`primary-alt-accent`.
+  Home Improvement keeps its signature orange and switches the label to `main`. The
+  Spa CTA moves onto `main`, the deep teal already in its palette.
+
+- **Contact form submit buttons** in the Nail Salon and Home Improvement variations
+  carried white labels on a light brand colour — **3.40:1** and **2.85:1**. Nail
+  Salon's button moves to `primary-alt` (**5.08:1**, hover `primary-alt-accent` at
+  6.96:1); Home Improvement keeps the orange and darkens the label to `main`
+  (**6.36:1**, hover 5.05:1).
+
+- **Default buttons failed in all three variations.** The filled button paired a light
+  `primary` background with light text — **3.30:1** (Nail Salon), **2.85:1** (Home
+  Improvement), **2.19:1** (Spa & Wellness). Fixed per variation in
+  `styles.elements.button` and, where patterns set the colours explicitly, in the
+  pattern: Nail Salon's buttons move to `primary-alt` (**4.93:1**, hover 6.76:1), Home
+  Improvement keeps the orange and darkens the label to `main` (**6.36:1**, hover
+  5.05:1), and Spa moves to `main` (**9.54:1**, hover 5.03:1). Home Improvement had no
+  `elements.button` of its own and now gets one, so the fix stays scoped to that
+  variation.
+
+- **Spa booking CTA buttons.** With the band on `main`, the shared `button-light` block
+  style put `primary` cyan on white at **2.19:1**, and the filled button would have
+  matched the band exactly. Both now carry explicit colours: white with a `main` label
+  (**9.54:1**) and `primary-alt` mint with a `main` label (**6.03:1**), each clearly
+  distinct from the band.
+
+- **Home Improvement form focus ring** was **2.85:1** against the field, under the 3:1
+  WCAG 1.4.11 requires of a control boundary. Now `#cf6d17` at **3.59:1**. Nail Salon's
+  ring already cleared it at 3.40:1 and is unchanged.
+
+### Why the bands and not the palette
+
+An earlier attempt darkened `primary` in these three variations. That fixed text *on*
+a primary background and broke primary *as* text on the dark surfaces, which is where
+these sites use it most — Home Improvement went from 6.36:1 to 3.41:1 on its navy.
+
+No single value can satisfy both. Each variation's `base` and `main` are 15.49:1,
+15.39:1 and 9.54:1 apart, so the best any one colour can score against both is 3.94:1,
+3.92:1 and 3.09:1 — all under 4.5:1. One token cannot serve a light and a dark surface
+at once, so the fix belongs at the handful of places that pair it with light text.
+
+### Note
+
+The shared `button-light` block style still resolves to `text: primary`, which is
+unreadable on `base` under a light-`primary` variation wherever it is used outside the
+patterns fixed here. Likewise, the 18 patterns that set `backgroundColor: primary` and are shared across every
+variation are untouched. They are correct under the six variations whose `primary` is
+dark enough, and none of them are used by these three verticals' pages. Pairing one
+with a light-`primary` variation would still fail; solving that generally needs the
+palette to separate its light-surface and dark-surface roles, which is a larger design
+change than this fix.
+
 ## [4.8.1] - 2026-07-30
 
 ### Added

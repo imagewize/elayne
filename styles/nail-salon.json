@@ -11,17 +11,26 @@
 				{
 					"name": "Dusty Rose",
 					"slug": "primary",
-					"colors": ["#C9727C", "#F5E4E6"]
+					"colors": [
+						"#C9727C",
+						"#F5E4E6"
+					]
 				},
 				{
 					"name": "Warm Blush",
 					"slug": "secondary",
-					"colors": ["#2C1E22", "#FDF7F4"]
+					"colors": [
+						"#2C1E22",
+						"#FDF7F4"
+					]
 				},
 				{
 					"name": "High Contrast",
 					"slug": "high-contrast",
-					"colors": ["#000000", "#ffffff"]
+					"colors": [
+						"#000000",
+						"#ffffff"
+					]
 				}
 			],
 			"gradients": [
@@ -126,14 +135,18 @@
 							"fontFamily": "Cormorant Garamond",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-VariableFont_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/cormorant-garamond/CormorantGaramond-VariableFont_wght.woff2"
+							]
 						},
 						{
 							"fontDisplay": "swap",
 							"fontFamily": "Cormorant Garamond",
 							"fontStyle": "italic",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/cormorant-garamond/CormorantGaramond-Italic-VariableFont_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/cormorant-garamond/CormorantGaramond-Italic-VariableFont_wght.woff2"
+							]
 						}
 					]
 				},
@@ -147,7 +160,9 @@
 							"fontFamily": "Quicksand",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/quicksand/Quicksand-VariableFont_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/quicksand/Quicksand-VariableFont_wght.woff2"
+							]
 						}
 					]
 				}
@@ -165,7 +180,7 @@
 					"width": "0"
 				},
 				"color": {
-					"background": "var:preset|color|primary",
+					"background": "var:preset|color|primary-alt",
 					"text": "var:preset|color|base"
 				},
 				"spacing": {
@@ -183,7 +198,7 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|primary-alt",
+						"background": "var:preset|color|primary-alt-accent",
 						"text": "var:preset|color|base"
 					}
 				}

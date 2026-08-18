@@ -157,8 +157,8 @@
 				<!-- /wp:group -->
 
 				<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","justifyContent":"left"}} -->
-				<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
-					<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Get a Free Estimate', 'elayne' ); ?></a></div>
+				<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"main","className":"is-style-fill","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+					<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-main-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Get a Free Estimate', 'elayne' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->

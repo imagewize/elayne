@@ -147,8 +147,8 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"plumbing-contact-submit","style":{"border":{"radius":"var:preset|border-radius|pill"},"spacing":{"padding":{"top":"0.95em","bottom":"0.95em","left":"2em","right":"2em"},"blockGap":"var:preset|spacing|small"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-<div class="wp-block-group plumbing-contact-submit has-white-color has-primary-background-color has-text-color has-background" style="border-radius:var(--wp--preset--border-radius--pill);padding-top:0.95em;padding-right:2em;padding-bottom:0.95em;padding-left:2em"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white"} -->
+<!-- wp:group {"className":"plumbing-contact-submit","style":{"border":{"radius":"var:preset|border-radius|pill"},"spacing":{"padding":{"top":"0.95em","bottom":"0.95em","left":"2em","right":"2em"},"blockGap":"var:preset|spacing|small"}},"backgroundColor":"primary","textColor":"main","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group plumbing-contact-submit has-main-color has-primary-background-color has-text-color has-background" style="border-radius:var(--wp--preset--border-radius--pill);padding-top:0.95em;padding-right:2em;padding-bottom:0.95em;padding-left:2em"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white"} -->
 <p class="has-white-color has-text-color" style="font-weight:700"><?php esc_html_e( 'Send Request', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 

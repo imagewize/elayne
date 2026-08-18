@@ -119,8 +119,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","justifyContent":"left"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"is-style-fill","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Book Your First Visit', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary-alt","textColor":"base","className":"is-style-fill","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-base-color has-primary-alt-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Book Your First Visit', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column --></div>
