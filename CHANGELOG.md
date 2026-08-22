@@ -68,11 +68,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - **`package.json` failing the Theme Check GitHub Action.** Its `keywords`
-  array had lowercase `"wordpress"`, which trips the required
-  `WordPress_Spelling_Check` rule — corrected to `"WordPress"`. While in
-  there: `version` was still `4.9.0` and `license` still
-  `GPL-2.0-or-later` (same stale-GPL-v2 issue as `composer.json`, above);
-  both corrected, and `description`'s pattern count refreshed to match.
+  array had "WordPress" written all-lowercase, which trips the required
+  `WordPress_Spelling_Check` rule. While in there: `version` was still
+  `4.9.0` and `license` still `GPL-2.0-or-later` (same stale-GPL-v2 issue
+  as `composer.json`, above); both corrected, and `description`'s pattern
+  count refreshed to match.
 
 ### Added
 
