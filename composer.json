@@ -2,7 +2,7 @@
 	"name": "imagewize/elayne",
 	"description": "A WordPress block theme by Jasper Frumau",
 	"type": "wordpress-theme",
-	"license": "GPL-2.0-or-later",
+	"license": "GPL-3.0-or-later",
 	"authors": [
 		{
 			"name": "Jasper Frumau",

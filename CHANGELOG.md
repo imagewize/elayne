@@ -23,6 +23,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   in the Requirements list.
 - **README** — License section pointing to `LICENSE.md` (GPL v3).
 
+### Fixed
+
+- **`composer.json` `license` field** — still read `GPL-2.0-or-later`, missed
+  when style.css, readme.txt, and LICENSE.md were migrated to GPL v3. Packagist
+  reads this field for the README's shields.io License badge, so the badge was
+  showing GPL v2 while every other license reference said v3.
+
 ## [4.9.0] - 2026-08-18
 
 Three verticals placed light text on a brand-coloured band too light to carry it.
