@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.1] - 2026-08-22
+
+### Changed
+
+- **README** — replaced the banner image with a centered logo and badge row
+  above the title, matching the Aviendha and Aludra READMEs. Removed the
+  now-unreferenced `assets/images/readme-banner.jpg`.
+
+### Added
+
+- **README** — Lineage note cross-linking Aviendha, Nynaeve, Ixian, and the
+  shared Aludra plugin dependency.
+- **README** — WooCommerce and Aludra listed as optional/recommended directly
+  in the Requirements list.
+- **README** — License section pointing to `LICENSE.md` (GPL v3).
+
 ## [4.9.0] - 2026-08-18
 
 Three verticals placed light text on a brand-coloured band too light to carry it.

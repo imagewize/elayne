@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.9.0
+Stable tag: 4.9.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -173,6 +173,13 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.1 - 08/22/26 =
+* CHANGED: README - replaced the banner image with a centered logo and badge row above the title, matching the Aviendha and Aludra READMEs.
+* ADDED: README - Lineage note cross-linking Aviendha, Nynaeve, Ixian, and the shared Aludra plugin dependency.
+* ADDED: README - WooCommerce and Aludra listed as optional/recommended directly in the Requirements list.
+* ADDED: README - License section pointing to LICENSE.md (GPL v3).
+* CHANGED: removed the now-unreferenced assets/images/readme-banner.jpg.
 
 = 4.9.0 - 08/18/26 =
 * FIXED: Nail Salon, Home Improvement and Spa & Wellness placed light text on a brand-coloured band that was too light to carry it — 3.30:1, 2.85:1 and 2.19:1 where WCAG 2.1 AA asks for 4.5:1. Fixed at the band, not in the palette, so the brand colour is unchanged everywhere else: the Nail Salon stats bar and CTA step down one shade, the Home Improvement stats bar and header keep their orange but switch to a dark navy label, and the Spa booking CTA moves onto the deep teal already in its palette. All now clear AA (4.93:1, 6.36:1, 9.54:1).
