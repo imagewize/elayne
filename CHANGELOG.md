@@ -44,6 +44,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - readme.txt's "17 page and post templates" undercounted — real count is
     19, and the list includes WooCommerce templates. Corrected to match
     README.md's "19 page, post, and WooCommerce templates".
+- **Stale per-category pattern counts in CONTRIBUTING.md and readme.txt's
+  Pattern Collection breakdown.** Recounted every pattern's `Categories:`
+  header (vertical tag takes priority over a generic one, so a
+  vertical-tagged pattern is counted once under its vertical, not also
+  under a Core/Specialized bucket). New verified breakdown, 143 total:
+  - Core Patterns (40): Hero Sections (3) · Headers & Footers (12) ·
+    Banners (4) · Call-to-Action (4) · Contact (2) · Features (5) ·
+    Testimonials (2) · Blog & Posts (8). Statistics and Team dropped —
+    every pattern still tagged with those categories is vertical-specific
+    now (e.g. `legal-stats.php`, `legal-team.php`), so the non-vertical
+    bucket is empty.
+  - Specialized (25): Cards (7) · Events (1) · Portfolio (1) · Pages (16,
+    up from a stale 11 — 8 ready-to-insert page patterns plus 8
+    per-template wrapper patterns).
+  - Industry Verticals (54): Spa & Wellness (14, up from a stale 10) ·
+    Legal Services (7) · Food & Beverage (17, up from a stale 14) · Home
+    Improvement (9) · Nail Salon (7). Legal/Home Improvement/Nail Salon
+    were already accurate; Spa and Food & Beverage had grown since the
+    docs were last updated.
+  - WooCommerce Store (24) — unchanged, already accurate.
+
+### Added
+
+- **Page patterns messaging** — style.css's theme header `Description`,
+  `composer.json`'s `description`, README.md's "Page Layouts" bullet, and
+  readme.txt's intro blurb, Key Features list, and Pattern Collection
+  breakdown now all call out the ready-to-insert page patterns (full-page
+  compositions like Homepage, About, Contact, Services, and the Store
+  variants) as a distinct, named capability rather than leaving them
+  implicit in the overall pattern count. README.md's bullet also now lists
+  all 8 page patterns instead of only the original 4 (it omitted the 4
+  Store-specific compositions).
 
 ## [4.9.0] - 2026-08-18
 

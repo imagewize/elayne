@@ -55,7 +55,7 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 **115+ patterns** across hero sections, features, CTAs, testimonials, cards, blog, portfolio, and more — plus 24 WooCommerce patterns covering the full shopping journey. Includes 19 page, post, and WooCommerce templates.
 
-**Page Layouts** — full-page compositions that assemble multiple section patterns into a single ready-to-insert page: Agency About, Generic Contact, Main Site Homepage, and Agency Services.
+**Page Layouts** — full-page compositions that assemble multiple section patterns into a single ready-to-insert page, so you go from blank canvas to a finished page in one paste: Agency About, Generic Contact, Main Site Homepage, and Agency Services, plus Store-specific Homepage, Shop, Cart, and Checkout compositions.
 
 **Industry verticals** with complete, ready-to-use pattern sets: Food & Beverage • Legal Services • Home Improvement • Spa & Wellness • Nail Salon • WooCommerce Store
 

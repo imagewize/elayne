@@ -59,7 +59,7 @@ elayne/
 │   └── styles/         # Block-specific styles
 ├── languages/          # Translation files
 ├── parts/              # Template parts (header, footer)
-├── patterns/           # Block patterns (125+ content patterns)
+├── patterns/           # Block patterns (143 patterns, incl. 24 WooCommerce)
 │   ├── images/         # Pattern-specific images
 │   │   ├── legal/      # Legal vertical images
 │   │   └── spa/        # Spa/wellness vertical images
@@ -83,15 +83,17 @@ Elayne registers custom image sizes optimized for various layouts:
 
 ## Pattern Library
 
-Elayne includes **125+ professionally designed patterns** across multiple categories:
+Elayne includes **140+ professionally designed patterns** across multiple categories:
 
-**Core Patterns:** Hero Sections (6) • Headers & Footers (11) • Banners (4) • Call-to-Action (11) • Contact (2) • Features (18) • Testimonials (7) • Statistics (1) • Team (1) • Blog & Posts (6)
+**Core Patterns:** Hero Sections (3) • Headers & Footers (12) • Banners (4) • Call-to-Action (4) • Contact (2) • Features (5) • Testimonials (2) • Blog & Posts (8)
 
 > Hero sections include the `main-hero` pattern for agency and corporate homepages alongside `hero-modern-light` and the full set of industry-specific heroes. Features includes the `main-services-stack` pattern — an editorial numbered services list with hover slide-in effect, pill tags, and two-column header.
 
-**Specialized:** Cards (13) • Events (1) • Portfolio (2) • Pages (11)
+**Specialized:** Cards (7) • Events (1) • Portfolio (1) • Pages (16)
 
-**Industry Verticals:** Spa & Wellness (10) • Legal Services (7) • Food & Beverage (14) • Home Improvement (9) • Nail Salon (7)
+> Pages includes 8 ready-to-insert **page patterns** — full-page compositions like Agency About, Generic Contact, Main Site Homepage, and Agency Services that assemble multiple section patterns into one paste, per the Composite page patterns rule in `CLAUDE.md` — alongside the 8 per-template wrapper patterns that back `templates/*.html`.
+
+**Industry Verticals:** Spa & Wellness (14) • Legal Services (7) • Food & Beverage (17) • Home Improvement (9) • Nail Salon (7)
 
 **WooCommerce Store:** 24 patterns covering the full shopping journey — shop landing, category archives, product detail pages, cart, checkout, and more (requires WooCommerce plugin)
 
@@ -119,10 +121,10 @@ Elayne registers custom pattern categories for better organization:
 
 Elayne provides specialized pattern sets for specific industries:
 
-- **Food & Beverage** - Restaurant and café patterns with hero, marquee strip, menu display, reservations, chef story, event grids, hours/location info, testimonials, and specialized header with top bar (14 patterns). Includes two style variations: classic "Food & Beverage" (emerald/cream, Anton/Asap Condensed) and "Bistro" (ink-blue editorial palette, Bricolage Grotesque/Instrument Sans/Instrument Serif) for modern restaurants and wine bars
+- **Food & Beverage** - Restaurant and café patterns with hero, marquee strip, menu display, reservations, chef story, event grids, hours/location info, testimonials, and specialized header with top bar (17 patterns). Includes two style variations: classic "Food & Beverage" (emerald/cream, Anton/Asap Condensed) and "Bistro" (ink-blue editorial palette, Bricolage Grotesque/Instrument Sans/Instrument Serif) for modern restaurants and wine bars
 - **Legal Services** - Professional attorney profiles, practice area showcases, case statistics, client testimonials, and contact patterns optimized for law firms (7 patterns)
 - **Home Improvement** - Full-site pattern set for home improvement businesses: header, hero, services grid, stats bar, why-us, testimonials, emergency CTA, contact, and footer (9 patterns). Includes a navy/amber style variation with emergency-red accents
-- **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and wellness posts (10 patterns)
+- **Spa & Wellness** - Relaxing color palettes, treatment showcases, booking CTAs, and wellness posts (14 patterns)
 - **Nail Salon** - Elegant rose/blush pattern set for nail studios: hero, services grid, stats bar, why-us, testimonials, booking CTA, and contact (7 patterns). Includes a "Nail Salon" style variation with Cormorant Garamond/Quicksand fonts and a rose & warm-white color palette
 - **WooCommerce Store** - Complete e-commerce vertical (24 patterns) covering the full shopping journey: shop landing, category hero & toolbar, product gallery with colour swatches & style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile sticky ATC bar, cart, checkout, ticker, featured products, testimonials, and newsletter (requires WooCommerce plugin)
 
