@@ -181,6 +181,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * ADDED: README - License section pointing to LICENSE.md (GPL v3).
 * CHANGED: removed the now-unreferenced assets/images/readme-banner.jpg.
 * FIXED: composer.json license field still said GPL-2.0-or-later, missed when style.css, readme.txt and LICENSE.md were migrated to GPL v3 — this is what Packagist reads for the README's shields.io License badge, so the badge showed GPL v2 while everything else said v3.
+* FIXED: composer.json description field was the generic placeholder "A WordPress block theme by Jasper Frumau" — replaced with the same description already used on the GitHub repo.
 
 = 4.9.0 - 08/18/26 =
 * FIXED: Nail Salon, Home Improvement and Spa & Wellness placed light text on a brand-coloured band that was too light to carry it — 3.30:1, 2.85:1 and 2.19:1 where WCAG 2.1 AA asks for 4.5:1. Fixed at the band, not in the palette, so the brand colour is unchanged everywhere else: the Nail Salon stats bar and CTA step down one shade, the Home Improvement stats bar and header keep their orange but switch to a dark navy label, and the Spa booking CTA moves onto the deep teal already in its palette. All now clear AA (4.93:1, 6.36:1, 9.54:1).

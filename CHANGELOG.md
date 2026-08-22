@@ -29,6 +29,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   when style.css, readme.txt, and LICENSE.md were migrated to GPL v3. Packagist
   reads this field for the README's shields.io License badge, so the badge was
   showing GPL v2 while every other license reference said v3.
+- **`composer.json` `description` field** — was the placeholder
+  `"A WordPress block theme by Jasper Frumau"`. Replaced with the same
+  description already used on the GitHub repo.
 
 ## [4.9.0] - 2026-08-18
 
