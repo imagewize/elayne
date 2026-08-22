@@ -4,17 +4,18 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 4.9.0
+Stable tag: 4.9.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 125+ beautiful pattern designs, 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 140+ beautiful pattern designs — including ready-to-insert page patterns that assemble a full page in one paste — 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 125+ Professional Patterns - All 100% original, created specifically for Elayne
+* 140+ Professional Patterns - All 100% original, created specifically for Elayne
+* Ready-to-Insert Page Patterns - Full-page compositions (Homepage, About, Contact, Services, plus Store Homepage, Shop, Cart, and Checkout) that assemble multiple section patterns in a single paste
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
 * 8 Style Variations - Complete design systems including Bistro, Food & Beverage, Spa & Wellness, Legal Blue, Home Improvement, Nail Salon, and Publicist
@@ -30,30 +31,28 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-Elayne includes **125+ professionally designed patterns** across multiple categories:
+Elayne includes **140+ professionally designed patterns** across multiple categories:
 
 **Core Patterns:**
-* Hero Sections (8) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs. Includes the new main-hero pattern for agency and corporate homepages
-* Headers & Footers (9) - Responsive navigation options from mobile hamburger to desktop inline menus, including advanced two-bar layouts with contact information, and a minimal editorial header with frosted-glass effect
+* Hero Sections (3) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs. Includes the main-hero pattern for agency and corporate homepages
+* Headers & Footers (12) - Responsive navigation options from mobile hamburger to desktop inline menus, including advanced two-bar layouts with contact information, and a minimal editorial header with frosted-glass effect
 * Banners (4) - Announcement bars, page headers with solid or slanted backgrounds
-* Call-to-Action (11) - Newsletter signups, contact forms, booking CTAs, and conversion-focused blocks
+* Call-to-Action (4) - Newsletter signups, contact forms, booking CTAs, and conversion-focused blocks
 * Contact (2) - Professional contact information displays with office hours, phone, email, and address
-* Features (17) - Feature grids, pricing tables, service showcases, client logo walls, and agency services
-* Testimonials (7) - Client reviews, success stories with ratings, and detailed feedback layouts
-* Statistics (1) - Statistics displays and feature lists with visual emphasis
-* Team (1) - Team member grids with photos and bios
-* Blog & Posts (6) - Featured post layouts and portrait-oriented displays
+* Features (5) - Feature grids, service showcases, and the main-services-stack editorial numbered list
+* Testimonials (2) - Client reviews and detailed feedback layouts
+* Blog & Posts (8) - Featured post layouts, portrait-oriented displays, and single/index post templates
 
 **Specialized Patterns:**
-* Cards (13) - Versatile card patterns for various content types (simple, extended, and profile cards)
+* Cards (7) - Versatile card patterns for various content types (simple, extended, and profile cards)
 * Events (1) - Event grids with date badges and registration
 * Portfolio (1) - Masonry grid portfolio layouts
-* Pages (11) - Full-page layouts and specialized page templates
+* Pages (16) - 8 ready-to-insert page patterns (full-page compositions like Homepage, About, Contact, Services, and Store variants) plus 8 per-template wrapper patterns
 
 **Industry Verticals:**
-* Spa & Wellness (10) - Treatment showcases, booking CTAs, wellness features, and product displays
-* Legal Services (6) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
-* Food & Beverage (14) - Restaurant and café patterns with hero, marquee, menu display, reservations, chef story, event grids, hours/location, and amenities. Includes Bistro (ink-blue editorial) and classic emerald/cream style variations
+* Spa & Wellness (14) - Treatment showcases, booking CTAs, wellness features, and product displays
+* Legal Services (7) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
+* Food & Beverage (17) - Restaurant and café patterns with hero, marquee, menu display, reservations, chef story, event grids, hours/location, and amenities. Includes Bistro (ink-blue editorial) and classic emerald/cream style variations
 * Home Improvement (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
 * Nail Salon (7) - Hero with real photo, services grid, stats bar, why-us, testimonials, CTA, and contact patterns with rose palette
 * WooCommerce Store (24) - Complete e-commerce pattern set: shop landing, category hero & toolbar, product gallery, colour swatches, style options, engraving option, trust badges, accordion tabs, add-to-cart section, mobile ATC bar, cart, checkout, ticker, featured products, testimonials, newsletter, and more
@@ -61,7 +60,7 @@ Elayne includes **125+ professionally designed patterns** across multiple catego
 Note: The "Contact With Form" and "Home Improvement Contact Section" patterns display a live Contact Form 7 form when that plugin is active. Without it, styled placeholder fields are shown as a fallback — no broken layouts.
 
 **Templates:**
-* 17 page and post templates (centered, full-width, wide, sidebars, hero, landing page)
+* 19 page, post, and WooCommerce templates (centered, full-width, wide, sidebars, hero, landing page, product archive, product category, single product)
 
 Browse the complete pattern library in **Appearance → Editor → Patterns**
 
@@ -173,6 +172,19 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.1 - 08/22/26 =
+* CHANGED: README - replaced the banner image with a centered logo and badge row above the title, matching the Aviendha and Aludra READMEs.
+* ADDED: README - Lineage note cross-linking Aviendha, Nynaeve, Ixian, and the shared Aludra plugin dependency.
+* ADDED: README - WooCommerce and Aludra listed as optional/recommended directly in the Requirements list.
+* ADDED: README - License section pointing to LICENSE.md (GPL v3).
+* CHANGED: removed the now-unreferenced assets/images/readme-banner.jpg.
+* FIXED: composer.json license field still said GPL-2.0-or-later, missed when style.css, readme.txt and LICENSE.md were migrated to GPL v3 — this is what Packagist reads for the README's shields.io License badge, so the badge showed GPL v2 while everything else said v3.
+* FIXED: composer.json description field was the generic placeholder "A WordPress block theme by Jasper Frumau" — replaced with the same description already used on the GitHub repo.
+* FIXED: stale pattern/template counts in README.md and readme.txt. Verified against the actual files: 119 non-WooCommerce + 24 WooCommerce patterns (143 total) in patterns/, and 19 files in templates/. README.md's "125+ patterns" (quoted separately from "24 WooCommerce patterns") overclaimed the real 119 non-WooCommerce count, corrected to "115+". readme.txt's "125+" mentions quote a combined total and undersold the real 143, corrected to "140+". readme.txt's "17 page and post templates" undercounted the real 19 and omitted WooCommerce templates, corrected to match README.md's "19 page, post, and WooCommerce templates".
+* FIXED: stale per-category pattern counts in CONTRIBUTING.md and readme.txt's Pattern Collection breakdown, recounted from each pattern's Categories header (vertical tag takes priority, so a vertical-tagged pattern counts once under its vertical, not also under a Core/Specialized bucket). New verified breakdown, 143 total: Core Patterns (40) Hero Sections 3, Headers & Footers 12, Banners 4, Call-to-Action 4, Contact 2, Features 5, Testimonials 2, Blog & Posts 8 — Statistics and Team dropped, every remaining tagged pattern is vertical-specific now; Specialized (25) Cards 7, Events 1, Portfolio 1, Pages 16 (up from a stale 11); Industry Verticals (54) Spa & Wellness 14 (up from a stale 10), Legal Services 7, Food & Beverage 17 (up from a stale 14), Home Improvement 9, Nail Salon 7; WooCommerce Store 24 unchanged.
+* ADDED: page patterns messaging — style.css's theme header Description, composer.json's description, README.md's "Page Layouts" bullet, and readme.txt's intro blurb, Key Features list, and Pattern Collection breakdown now call out the ready-to-insert page patterns (full-page compositions like Homepage, About, Contact, Services, and the Store variants) as a distinct, named capability. README.md's bullet now also lists all 8 page patterns instead of the original 4 (it omitted the 4 Store-specific compositions).
+* FIXED: package.json failing the Theme Check GitHub Action — its keywords array had "WordPress" written all-lowercase, tripping the required WordPress_Spelling_Check rule. Also caught while in there: version was still 4.9.0 and license still GPL-2.0-or-later (same stale GPL v2 issue as composer.json, above); both corrected, and description's pattern count refreshed to match.
 
 = 4.9.0 - 08/18/26 =
 * FIXED: Nail Salon, Home Improvement and Spa & Wellness placed light text on a brand-coloured band that was too light to carry it — 3.30:1, 2.85:1 and 2.19:1 where WCAG 2.1 AA asks for 4.5:1. Fixed at the band, not in the palette, so the brand colour is unchanged everywhere else: the Nail Salon stats bar and CTA step down one shade, the Home Improvement stats bar and header keep their orange but switch to a dark navy label, and the Spa booking CTA moves onto the deep teal already in its palette. All now clear AA (4.93:1, 6.36:1, 9.54:1).

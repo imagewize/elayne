@@ -1,8 +1,21 @@
-# Elayne — Professional WordPress Block Theme for Full Site Editing
+<p align="center">
+  <img src="assets/images/logos/elayne-logo-primary.svg" alt="Elayne Logo" width="128" height="148">
+</p>
+<div align="center">
+<h1>Elayne — Professional WordPress Block Theme for Full Site Editing</h1>
+</div>
+<div align="center">
 
-![Elayne Theme](assets/images/readme-banner.jpg)
+[![Total Downloads](https://img.shields.io/packagist/dt/imagewize/elayne.svg)](https://packagist.org/packages/imagewize/elayne)
+[![Latest Stable Version](https://img.shields.io/packagist/v/imagewize/elayne.svg)](https://packagist.org/packages/imagewize/elayne)
+[![License](https://img.shields.io/packagist/l/imagewize/elayne.svg)](https://packagist.org/packages/imagewize/elayne)
+[![Theme Check](https://github.com/imagewize/elayne/actions/workflows/theme-check.yml/badge.svg)](https://github.com/imagewize/elayne/actions/workflows/theme-check.yml)
+
+</div>
 
 Design better, build faster, publish sooner. Elayne is a professional WordPress block theme designed for modern businesses, offering sophisticated patterns and conversion-optimized layouts — no coding or expensive page builders required.
+
+> **Lineage:** Elayne is the flagship of Imagewize's block theme family, alongside the minimal starter theme [Aviendha](https://github.com/imagewize/aviendha) and [Nynaeve](https://github.com/imagewize/nynaeve), with [Ixian](https://github.com/imagewize/ixian) built on top of Aviendha. Elayne's content blocks come from the shared [Aludra](https://github.com/imagewize/aludra) plugin, per WordPress.org's theme-review rules — Aviendha uses Aludra too, while Nynaeve registers its own blocks instead.
 
 ## Why Choose Elayne?
 
@@ -26,6 +39,8 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 ### Requirements
 - WordPress 6.6 or later
 - PHP 8.0 or later
+- WooCommerce (optional, for store templates and patterns)
+- Aludra plugin (recommended, for Mega Menu, Carousel, FAQ Tabs, and other custom blocks)
 
 ## Installation
 
@@ -38,9 +53,9 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## What's Included
 
-**125+ patterns** across hero sections, features, CTAs, testimonials, cards, blog, portfolio, and more — plus 24 WooCommerce patterns covering the full shopping journey. Includes 19 page, post, and WooCommerce templates.
+**115+ patterns** across hero sections, features, CTAs, testimonials, cards, blog, portfolio, and more — plus 24 WooCommerce patterns covering the full shopping journey. Includes 19 page, post, and WooCommerce templates.
 
-**Page Layouts** — full-page compositions that assemble multiple section patterns into a single ready-to-insert page: Agency About, Generic Contact, Main Site Homepage, and Agency Services.
+**Page Layouts** — full-page compositions that assemble multiple section patterns into a single ready-to-insert page, so you go from blank canvas to a finished page in one paste: Agency About, Generic Contact, Main Site Homepage, and Agency Services, plus Store-specific Homepage, Shop, Cart, and Checkout compositions.
 
 **Industry verticals** with complete, ready-to-use pattern sets: Food & Beverage • Legal Services • Home Improvement • Spa & Wellness • Nail Salon • WooCommerce Store
 
@@ -94,3 +109,7 @@ Elayne is created and maintained by [Jasper Frumau](https://imagewize.com).
 - **Base Architecture**: Inspired by modern WordPress block theme standards
 
 **[View Demo](https://demo.imagewize.com)** | **[Visit Imagewize](https://imagewize.com)**
+
+## License
+
+GNU General Public License v3.0 (or later). See [LICENSE.md](LICENSE.md).

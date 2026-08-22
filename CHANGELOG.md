@@ -7,6 +7,85 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.1] - 2026-08-22
+
+### Changed
+
+- **README** — replaced the banner image with a centered logo and badge row
+  above the title, matching the Aviendha and Aludra READMEs. Removed the
+  now-unreferenced `assets/images/readme-banner.jpg`.
+
+### Added
+
+- **README** — Lineage note cross-linking Aviendha, Nynaeve, Ixian, and the
+  shared Aludra plugin dependency.
+- **README** — WooCommerce and Aludra listed as optional/recommended directly
+  in the Requirements list.
+- **README** — License section pointing to `LICENSE.md` (GPL v3).
+
+### Fixed
+
+- **`composer.json` `license` field** — still read `GPL-2.0-or-later`, missed
+  when style.css, readme.txt, and LICENSE.md were migrated to GPL v3. Packagist
+  reads this field for the README's shields.io License badge, so the badge was
+  showing GPL v2 while every other license reference said v3.
+- **`composer.json` `description` field** — was the placeholder
+  `"A WordPress block theme by Jasper Frumau"`. Replaced with the same
+  description already used on the GitHub repo.
+- **Stale pattern/template counts in README.md and readme.txt.** Verified
+  against the actual file counts: 119 non-WooCommerce patterns + 24
+  WooCommerce patterns (143 total) in `patterns/`, and 19 files in
+  `templates/`.
+  - README.md's "125+ patterns" (quoting the non-WooCommerce count
+    separately from "24 WooCommerce patterns") overclaimed — real count is
+    119. Corrected to "115+".
+  - readme.txt's three "125+" mentions quote a combined total and were
+    undersold relative to the real total of 143. Corrected to "140+".
+  - readme.txt's "17 page and post templates" undercounted — real count is
+    19, and the list includes WooCommerce templates. Corrected to match
+    README.md's "19 page, post, and WooCommerce templates".
+- **Stale per-category pattern counts in CONTRIBUTING.md and readme.txt's
+  Pattern Collection breakdown.** Recounted every pattern's `Categories:`
+  header (vertical tag takes priority over a generic one, so a
+  vertical-tagged pattern is counted once under its vertical, not also
+  under a Core/Specialized bucket). New verified breakdown, 143 total:
+  - Core Patterns (40): Hero Sections (3) · Headers & Footers (12) ·
+    Banners (4) · Call-to-Action (4) · Contact (2) · Features (5) ·
+    Testimonials (2) · Blog & Posts (8). Statistics and Team dropped —
+    every pattern still tagged with those categories is vertical-specific
+    now (e.g. `legal-stats.php`, `legal-team.php`), so the non-vertical
+    bucket is empty.
+  - Specialized (25): Cards (7) · Events (1) · Portfolio (1) · Pages (16,
+    up from a stale 11 — 8 ready-to-insert page patterns plus 8
+    per-template wrapper patterns).
+  - Industry Verticals (54): Spa & Wellness (14, up from a stale 10) ·
+    Legal Services (7) · Food & Beverage (17, up from a stale 14) · Home
+    Improvement (9) · Nail Salon (7). Legal/Home Improvement/Nail Salon
+    were already accurate; Spa and Food & Beverage had grown since the
+    docs were last updated.
+  - WooCommerce Store (24) — unchanged, already accurate.
+
+### Fixed
+
+- **`package.json` failing the Theme Check GitHub Action.** Its `keywords`
+  array had "WordPress" written all-lowercase, which trips the required
+  `WordPress_Spelling_Check` rule. While in there: `version` was still
+  `4.9.0` and `license` still `GPL-2.0-or-later` (same stale-GPL-v2 issue
+  as `composer.json`, above); both corrected, and `description`'s pattern
+  count refreshed to match.
+
+### Added
+
+- **Page patterns messaging** — style.css's theme header `Description`,
+  `composer.json`'s `description`, README.md's "Page Layouts" bullet, and
+  readme.txt's intro blurb, Key Features list, and Pattern Collection
+  breakdown now all call out the ready-to-insert page patterns (full-page
+  compositions like Homepage, About, Contact, Services, and the Store
+  variants) as a distinct, named capability rather than leaving them
+  implicit in the overall pattern count. README.md's bullet also now lists
+  all 8 page patterns instead of only the original 4 (it omitted the 4
+  Store-specific compositions).
+
 ## [4.9.0] - 2026-08-18
 
 Three verticals placed light text on a brand-coloured band too light to carry it.
