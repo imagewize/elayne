@@ -32,6 +32,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`composer.json` `description` field** — was the placeholder
   `"A WordPress block theme by Jasper Frumau"`. Replaced with the same
   description already used on the GitHub repo.
+- **Stale pattern/template counts in README.md and readme.txt.** Verified
+  against the actual file counts: 119 non-WooCommerce patterns + 24
+  WooCommerce patterns (143 total) in `patterns/`, and 19 files in
+  `templates/`.
+  - README.md's "125+ patterns" (quoting the non-WooCommerce count
+    separately from "24 WooCommerce patterns") overclaimed — real count is
+    119. Corrected to "115+".
+  - readme.txt's three "125+" mentions quote a combined total and were
+    undersold relative to the real total of 143. Corrected to "140+".
+  - readme.txt's "17 page and post templates" undercounted — real count is
+    19, and the list includes WooCommerce templates. Corrected to match
+    README.md's "19 page, post, and WooCommerce templates".
 
 ## [4.9.0] - 2026-08-18
 

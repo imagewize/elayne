@@ -10,11 +10,11 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 125+ beautiful pattern designs, 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 140+ beautiful pattern designs, 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
 
 = Key Features =
 
-* 125+ Professional Patterns - All 100% original, created specifically for Elayne
+* 140+ Professional Patterns - All 100% original, created specifically for Elayne
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
 * 8 Style Variations - Complete design systems including Bistro, Food & Beverage, Spa & Wellness, Legal Blue, Home Improvement, Nail Salon, and Publicist
@@ -30,7 +30,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 
 = Pattern Collection =
 
-Elayne includes **125+ professionally designed patterns** across multiple categories:
+Elayne includes **140+ professionally designed patterns** across multiple categories:
 
 **Core Patterns:**
 * Hero Sections (8) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs. Includes the new main-hero pattern for agency and corporate homepages
@@ -61,7 +61,7 @@ Elayne includes **125+ professionally designed patterns** across multiple catego
 Note: The "Contact With Form" and "Home Improvement Contact Section" patterns display a live Contact Form 7 form when that plugin is active. Without it, styled placeholder fields are shown as a fallback — no broken layouts.
 
 **Templates:**
-* 17 page and post templates (centered, full-width, wide, sidebars, hero, landing page)
+* 19 page, post, and WooCommerce templates (centered, full-width, wide, sidebars, hero, landing page, product archive, product category, single product)
 
 Browse the complete pattern library in **Appearance → Editor → Patterns**
 
@@ -182,6 +182,7 @@ Elayne includes custom image sizes optimized for different layouts:
 * CHANGED: removed the now-unreferenced assets/images/readme-banner.jpg.
 * FIXED: composer.json license field still said GPL-2.0-or-later, missed when style.css, readme.txt and LICENSE.md were migrated to GPL v3 — this is what Packagist reads for the README's shields.io License badge, so the badge showed GPL v2 while everything else said v3.
 * FIXED: composer.json description field was the generic placeholder "A WordPress block theme by Jasper Frumau" — replaced with the same description already used on the GitHub repo.
+* FIXED: stale pattern/template counts in README.md and readme.txt. Verified against the actual files: 119 non-WooCommerce + 24 WooCommerce patterns (143 total) in patterns/, and 19 files in templates/. README.md's "125+ patterns" (quoted separately from "24 WooCommerce patterns") overclaimed the real 119 non-WooCommerce count, corrected to "115+". readme.txt's "125+" mentions quote a combined total and undersold the real 143, corrected to "140+". readme.txt's "17 page and post templates" undercounted the real 19 and omitted WooCommerce templates, corrected to match README.md's "19 page, post, and WooCommerce templates".
 
 = 4.9.0 - 08/18/26 =
 * FIXED: Nail Salon, Home Improvement and Spa & Wellness placed light text on a brand-coloured band that was too light to carry it — 3.30:1, 2.85:1 and 2.19:1 where WCAG 2.1 AA asks for 4.5:1. Fixed at the band, not in the palette, so the brand colour is unchanged everywhere else: the Nail Salon stats bar and CTA step down one shade, the Home Improvement stats bar and header keep their orange but switch to a dark navy label, and the Spa booking CTA moves onto the deep teal already in its palette. All now clear AA (4.93:1, 6.36:1, 9.54:1).
