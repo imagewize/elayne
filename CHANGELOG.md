@@ -7,6 +7,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.2] - 2026-08-25
+
+### Fixed
+
+- **`patterns/header-double-bar.php` required the Aludra plugin.** The top bar's
+  search icon was an `aludra/search-overlay-trigger` block — the theme's only
+  Aludra dependency, and one that ships in the WordPress.org release, so anyone
+  inserting the pattern without Aludra installed got a block-error placeholder
+  where the search icon should be. Replaced with a trigger and overlay owned by
+  the theme; the pattern is now core-blocks-only, like the other 120.
+
+- **`parts/mega-menu-template.html` required the Aludra plugin too.** It was a
+  single `core/pattern` block pointing at `aludra/mega-menu-featured-content`,
+  so without Aludra the Mega Menu template part rendered as nothing at all —
+  silently empty rather than a visible error, which is why it went unnoticed
+  alongside the header trigger. Replaced with the equivalent composition in core
+  blocks, inlined into the template part. The external `placehold.co` image in
+  the Aludra original was dropped rather than copied, and the
+  `is-style-list-plain-no-indent` class with it, since that block style is
+  registered by Aludra and not by Elayne.
+
+### Changed
+
+- **`Tested up to` 7.0 → 7.1.** `Requires at least` stays at 6.6 — nothing here
+  needs newer.
+- **README.md** — the Lineage note, the Requirements list and the Aludra
+  companion-plugin section all described Aludra as supplying Elayne's content
+  blocks. Nothing Elayne ships references an `aludra/*` block or pattern any
+  more, so all three now describe it as genuinely optional.
+
+### Added
+
+- **Search overlay (`inc/search-overlay.php`, `assets/js/search-overlay.js`).**
+  Full-screen search overlay behind the header-double-bar trigger. Three
+  improvements over the block it replaces: the trigger is a real `<button>`
+  rather than a `<figure>`, so it is keyboard-reachable; the overlay markup is
+  rendered in PHP rather than assembled from a JavaScript string, so its strings
+  are translatable; and the overlay traps Tab while open and restores focus to
+  the trigger on close.
+- **Editor visibility rule (`assets/css/editor.css`).** The trigger ships with
+  the `hidden` attribute and is revealed by the script, so it is never a dead
+  control on the front end when JavaScript has not run. The script does not run
+  in the editor, so an editor-only rule reveals it there — otherwise the
+  pattern's top bar appears to be missing its search icon while being edited.
+- **Conditional script loading.** `search-overlay.js` is registered on
+  `wp_enqueue_scripts` but enqueued from `render_block()` only when a trigger is
+  actually rendered, so sites that do not use the pattern load nothing. The
+  footer markup is gated the same way. Only `core/html` blocks are inspected,
+  keeping the filter off the hot path for every other block.
+
 ## [4.9.1] - 2026-08-22
 
 ### Changed
