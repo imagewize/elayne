@@ -21,3 +21,17 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.55);
 }
+
+/* ========================================================================
+   SEARCH OVERLAY TRIGGER
+   The header-double-bar trigger ships with the `hidden` attribute and is
+   revealed by assets/js/search-overlay.js, so it never renders as a dead
+   control on the front end when the script has not run. That script does not
+   run in the editor, so reveal the button here — otherwise the pattern's top
+   bar looks like it is missing its search icon while being edited.
+   ======================================================================== */
+
+.elayne-search-overlay-trigger[hidden] {
+    display: inline-flex;
+    opacity: 0.6;
+}

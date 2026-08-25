@@ -5,9 +5,9 @@ Author: Jasper Frumau
 Author URI: https://imagewize.com
 Description: Elayne is a premium full-site-editing block theme for professional websites. Launch a fast, pixel-perfect site with 140+ conversion-optimized block patterns — including ready-to-insert page patterns that assemble a full page in one paste — 8 style variations, and industry-specific pattern sets for spa and wellness, legal, food and beverage, home services, nail salon, and publishing. Fully customizable with Global Styles — no page builder required. ✶ Full demo: https://demo.imagewize.com ✶
 Requires at least: 6.6
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.0
-Version: 4.9.1
+Version: 4.9.2
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: elayne
@@ -38,6 +38,7 @@ Elayne is distributed under the terms of the GNU GPL.
  * 16. Layout Utilities (overlay-grid-wrap, floating-badge, icon-pulse, stats-divider)
  * 17. Skip Link Accessibility
  * 18. Safari Scrollbar Fix
+ * 19. Search Overlay
  */
 
 /* Partial underline styling for post titles (matches Versifier) */
@@ -834,3 +835,103 @@ figure.is-avatar,
 	}
 }
 .elayne-hero-watermark { opacity: 0.2; }
+
+/* ========================================================================
+   19. SEARCH OVERLAY
+   ======================================================================== */
+
+/* Trigger lives in the header-double-bar pattern's top bar. It is rendered
+   hidden and revealed by assets/js/search-overlay.js, so it never appears as a
+   dead control when the script has not run. */
+.elayne-search-overlay-trigger {
+	display: none;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: inherit;
+	cursor: pointer;
+	line-height: 0;
+}
+.elayne-search-overlay-trigger:not([hidden]) {
+	display: inline-flex;
+}
+.elayne-search-overlay-trigger:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 4px;
+}
+
+.elayne-search-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 999999;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.elayne-search-overlay.is-active {
+	opacity: 1;
+}
+.elayne-search-overlay[hidden] {
+	display: none;
+}
+.elayne-search-overlay__backdrop {
+	position: absolute;
+	inset: 0;
+	background-color: var(--wp--preset--color--base, #fff);
+	opacity: 0.97;
+}
+.elayne-search-overlay__content {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: var(--wp--preset--spacing--medium, 1.5rem);
+}
+.elayne-search-overlay__close {
+	position: absolute;
+	top: var(--wp--preset--spacing--medium, 1.5rem);
+	right: var(--wp--preset--spacing--medium, 1.5rem);
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--wp--preset--color--main, #000);
+	cursor: pointer;
+	line-height: 0;
+}
+.elayne-search-overlay__form {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	width: min(100%, 42rem);
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid var(--wp--preset--color--border-light, #ccc);
+}
+.elayne-search-overlay__field {
+	flex: 1;
+	border: 0;
+	background: none;
+	color: var(--wp--preset--color--main, #000);
+	font-size: var(--wp--preset--font-size--large, 1.5rem);
+}
+.elayne-search-overlay__field:focus {
+	outline: none;
+}
+.elayne-search-overlay__submit {
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--wp--preset--color--main, #000);
+	cursor: pointer;
+	line-height: 0;
+}
+
+/* Stop the page behind the overlay from scrolling while it is open. */
+body.elayne-search-overlay-open {
+	overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.elayne-search-overlay {
+		transition: none;
+	}
+}

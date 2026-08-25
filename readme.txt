@@ -2,9 +2,9 @@
 Contributors: Rhand
 Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, grid-layout, template-editing, threaded-comments, translation-ready, wide-blocks
 Requires at least: 6.6
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.9.1
+Stable tag: 4.9.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,15 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.2 - 08/25/26 =
+* FIXED: patterns/header-double-bar.php required the Aludra plugin - its top bar search icon was an aludra/search-overlay-trigger block, the theme's only Aludra dependency and one that ships in the WordPress.org release, so inserting the pattern without Aludra installed produced a block-error placeholder instead of a search icon. The trigger and its full-screen overlay now live in the theme, making the pattern core-blocks-only like the other 120.
+* FIXED: parts/mega-menu-template.html required the Aludra plugin too - it was a single core/pattern block pointing at aludra/mega-menu-featured-content, so without Aludra the Mega Menu template part rendered as nothing at all. Silently empty rather than a visible error, which is why it went unnoticed alongside the header trigger. Replaced with the equivalent composition in core blocks, inlined into the template part. The external placehold.co image in the Aludra original was dropped rather than copied, along with the is-style-list-plain-no-indent class, which is a block style Aludra registers and Elayne does not.
+* CHANGED: Tested up to 7.0 to 7.1. Requires at least stays at 6.6 - nothing in this release needs newer.
+* CHANGED: README.md described Aludra as supplying Elayne's content blocks in its Lineage note, Requirements list and companion-plugin section. Nothing Elayne ships references an aludra/* block or pattern any more, so all three now describe it as genuinely optional.
+* ADDED: search overlay in inc/search-overlay.php and assets/js/search-overlay.js. Three improvements over the block it replaces: the trigger is a real button element rather than a figure, so it is keyboard-reachable; the overlay markup is rendered in PHP rather than assembled from a JavaScript string, so its strings are translatable; and the overlay traps Tab while open and restores focus to the trigger on close.
+* ADDED: an editor-only rule in assets/css/editor.css reveals the trigger while editing. The trigger ships with the hidden attribute and is revealed by the script, so it is never a dead control on the front end when JavaScript has not run - but that script does not run in the editor, where the pattern's top bar would otherwise look like it was missing its search icon.
+* ADDED: the overlay script is registered on wp_enqueue_scripts but only enqueued from render_block() when a trigger is actually rendered, and the footer markup is gated the same way, so sites not using the pattern load no extra CSS-adjacent JavaScript or markup.
 
 = 4.9.1 - 08/22/26 =
 * CHANGED: README - replaced the banner image with a centered logo and badge row above the title, matching the Aviendha and Aludra READMEs.

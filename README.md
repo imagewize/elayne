@@ -15,7 +15,7 @@
 
 Design better, build faster, publish sooner. Elayne is a professional WordPress block theme designed for modern businesses, offering sophisticated patterns and conversion-optimized layouts — no coding or expensive page builders required.
 
-> **Lineage:** Elayne is the flagship of Imagewize's block theme family, alongside the minimal starter theme [Aviendha](https://github.com/imagewize/aviendha) and [Nynaeve](https://github.com/imagewize/nynaeve), with [Ixian](https://github.com/imagewize/ixian) built on top of Aviendha. Elayne's content blocks come from the shared [Aludra](https://github.com/imagewize/aludra) plugin, per WordPress.org's theme-review rules — Aviendha uses Aludra too, while Nynaeve registers its own blocks instead.
+> **Lineage:** Elayne is the flagship of Imagewize's block theme family, alongside the minimal starter theme [Aviendha](https://github.com/imagewize/aviendha) and [Nynaeve](https://github.com/imagewize/nynaeve), with [Ixian](https://github.com/imagewize/ixian) built on top of Aviendha. Elayne ships no custom blocks of its own and requires none — every pattern is built from core blocks, with WooCommerce and Contact Form 7 blocks where a pattern is store- or form-specific. The shared [Aludra](https://github.com/imagewize/aludra) block library pairs with it optionally; Aviendha and Ixian build on Aludra directly, while Nynaeve registers its own blocks instead.
 
 ## Why Choose Elayne?
 
@@ -40,7 +40,7 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 - WordPress 6.6 or later
 - PHP 8.0 or later
 - WooCommerce (optional, for store templates and patterns)
-- Aludra plugin (recommended, for Mega Menu, Carousel, FAQ Tabs, and other custom blocks)
+- Aludra plugin (optional, adds Mega Menu, Carousel, FAQ Tabs, and other blocks — nothing Elayne ships depends on it)
 
 ## Installation
 
@@ -73,7 +73,9 @@ Access the WordPress Site Editor at **Appearance → Editor** to customize your 
 
 ### Aludra
 
-Elayne works seamlessly with the **[Aludra](https://github.com/imagewize/aludra)** plugin, which provides 25+ custom blocks including Mega Menu, Carousel, Slide, FAQ Tabs, Search Overlay Trigger, Hero Banner, Pricing Tiers, Testimonial Grid, and more. Aludra is a theme-agnostic shared block library that works with any WordPress theme. It is the direct continuation of the Elayne Blocks plugin, now serving multiple Imagewize themes.
+Elayne works seamlessly with the **[Aludra](https://github.com/imagewize/aludra)** plugin, which provides 30 custom blocks including Mega Menu, Carousel, Slide, FAQ Tabs, Hero Banner, Pricing Tiers, Testimonial Grid, and more. Aludra is a theme-agnostic shared block library that works with any WordPress theme. It is the direct continuation of the Elayne Blocks plugin, now serving multiple Imagewize themes.
+
+It is genuinely optional: as of 4.9.2 nothing Elayne ships references an `aludra/*` block or pattern, so every theme pattern and template part renders correctly without it. Aludra adds blocks to build *with*; it is not a dependency.
 
 Download from the [Aludra repository](https://github.com/imagewize/aludra) and install via **Plugins → Add New → Upload Plugin**.
 
