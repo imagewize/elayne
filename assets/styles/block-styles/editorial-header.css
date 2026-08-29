@@ -22,9 +22,9 @@
 	pointer-events: none;
 }
 
-/* Mobile: hide status pill so hamburger right-aligns via flex space-between */
-@media (max-width: 781px) {
-	.elayne-editorial-header .is-style-status-pill {
-		display: none;
-	}
-}
+/*
+ * Status pill hides on mobile/tablet so the hamburger right-aligns via flex
+ * space-between — handled by native WP 7.0 block visibility (see the
+ * "metadata":{"blockVisibility":...} attribute on the pill's paragraph block
+ * in patterns/header-editorial.php) instead of a hand-rolled media query.
+ */

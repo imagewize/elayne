@@ -22,7 +22,7 @@
 <!-- wp:navigation-link {"label":"Journal","url":"#","kind":"custom","isTopLevelLink":true} /-->
 <!-- /wp:navigation -->
 
-<!-- wp:paragraph {"className":"is-style-status-pill"} -->
+<!-- wp:paragraph {"metadata":{"blockVisibility":{"viewport":{"mobile":false,"tablet":false,"desktop":true}}},"className":"is-style-status-pill"} -->
 <p class="wp-block-paragraph is-style-status-pill"><?php esc_html_e( 'Open · 2 spots Q2', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></header>
