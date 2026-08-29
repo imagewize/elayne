@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.9.2
+Stable tag: 4.9.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,10 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.3 - 08/29/26 =
+* CHANGED: patterns/header-editorial.php - replaced a hand-rolled @media (max-width: 781px) { display: none } rule hiding the status pill on mobile/tablet with WordPress 7.0's native per-device block visibility (metadata.blockVisibility.viewport). Same visual result, no custom CSS - the rule is now a comment in assets/styles/block-styles/editorial-header.css pointing at the pattern.
+* ADDED: dimension size presets in theme.json (settings.dimensions.dimensionSizes), a WordPress 7.0 addition that lets a theme define a preset scale for the width/height/min-height dimensions block support. Added a five-step scale (xs/sm/md/lg/xl - 40/300/330/600/680px) matching min-height values already in use, and applied it to the two patterns whose wp:group blocks referenced a bare pixel value: services-feature-cards.php and stats-showcase.php. core/cover's separate, older minHeight/minHeightUnit attributes are not wired into this preset system by WordPress core, so the ~33 minHeight values on wp:cover blocks elsewhere in the pattern library are unaffected and unchanged.
 
 = 4.9.2 - 08/25/26 =
 * FIXED: patterns/header-double-bar.php required the Aludra plugin - its top bar search icon was an aludra/search-overlay-trigger block, the theme's only Aludra dependency and one that ships in the WordPress.org release, so inserting the pattern without Aludra installed produced a block-error placeholder instead of a search icon. The trigger and its full-screen overlay now live in the theme, making the pattern core-blocks-only like the other 120.
