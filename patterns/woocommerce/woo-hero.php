@@ -27,8 +27,8 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"300","lineHeight":"1.05","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"base","fontSize":"xx-large","fontFamily":"var:preset|font-family|heading"} -->
-<h2 class="wp-block-heading has-base-color has-text-color has-var-preset-font-family-heading-font-family has-xx-large-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;letter-spacing:-0.01em;line-height:1.05"><?php esc_html_e( 'Refined', 'elayne' ); ?><br><em style="color:var(--wp--preset--color--orange-light)"><?php esc_html_e( 'Elegance', 'elayne' ); ?></em><br><?php esc_html_e( 'Defined', 'elayne' ); ?></h2>
+<!-- wp:heading {"level":1,"style":{"typography":{"fontStyle":"normal","fontWeight":"300","lineHeight":"1.05","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"base","fontSize":"xx-large","fontFamily":"var:preset|font-family|heading"} -->
+<h1 class="wp-block-heading has-base-color has-text-color has-var-preset-font-family-heading-font-family has-xx-large-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;letter-spacing:-0.01em;line-height:1.05"><?php esc_html_e( 'Refined', 'elayne' ); ?><br><em style="color:var(--wp--preset--color--orange-light)"><?php esc_html_e( 'Elegance', 'elayne' ); ?></em><br><?php esc_html_e( 'Defined', 'elayne' ); ?></h1>
 <!-- /wp:heading -->
 
 <!-- wp:group {"className":"elayne-hero-desc","layout":{"type":"default"}} -->

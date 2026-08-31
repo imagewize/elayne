@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.3] - 2026-08-31
+
+### Fixed
+
+- **`patterns/woocommerce/woo-hero.php` had no H1 on the page.** The Store Hero
+  pattern's headline ("Refined Elegance Defined") was a `wp:heading` block with
+  no `level` set, defaulting to `<h2>`. On the store homepage this hero is the
+  only heading above the fold and nothing else on the page renders an `<h1>` —
+  flagged by an AI-readiness/SEO scan of `demo.imagewize.com/store/` (score
+  dropped from a B to a C, partly on this). Set `"level":1` so the pattern
+  renders `<h1>`.
+
 ## [4.9.2] - 2026-08-25
 
 ### Fixed
