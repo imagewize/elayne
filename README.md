@@ -2,7 +2,7 @@
   <img src="assets/images/logos/elayne-logo-primary.svg" alt="Elayne Logo" width="104" height="120">
 </p>
 <div align="center">
-<h1>Elayne — Professional WordPress Block Theme for Full Site Editing</h1>
+<h1>Elayne</h1>
 </div>
 <div align="center">
 
