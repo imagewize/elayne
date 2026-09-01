@@ -1,13 +1,14 @@
 <p align="center">
-  <img src="assets/images/logos/elayne-logo-primary.svg" alt="Elayne Logo" width="128" height="148">
+  <img src="assets/images/logos/elayne-logo-primary.svg" alt="Elayne Logo" width="104" height="120">
 </p>
 <div align="center">
 <h1>Elayne — Professional WordPress Block Theme for Full Site Editing</h1>
 </div>
 <div align="center">
 
-[![Total Downloads](https://img.shields.io/packagist/dt/imagewize/elayne.svg)](https://packagist.org/packages/imagewize/elayne)
-[![Latest Stable Version](https://img.shields.io/packagist/v/imagewize/elayne.svg)](https://packagist.org/packages/imagewize/elayne)
+[![Theme Version](https://img.shields.io/wordpress/theme/v/elayne.svg)](https://wordpress.org/themes/elayne/)
+[![Downloads](https://img.shields.io/wordpress/theme/dt/elayne.svg)](https://wordpress.org/themes/elayne/)
+[![Active Installs](https://img.shields.io/wordpress/theme/installs/elayne.svg)](https://wordpress.org/themes/elayne/)
 [![License](https://img.shields.io/packagist/l/imagewize/elayne.svg)](https://packagist.org/packages/imagewize/elayne)
 [![Theme Check](https://github.com/imagewize/elayne/actions/workflows/theme-check.yml/badge.svg)](https://github.com/imagewize/elayne/actions/workflows/theme-check.yml)
 
