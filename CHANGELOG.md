@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.4] - 2026-09-03
+
+### Changed
+
+- **Bumped `@imwz/wp-pattern-sentinel` to `^1.1.1`.** Pulls in a fix for
+  [GHSA-5p4m-2wfm-xmqj](https://github.com/imagewize/wp-pattern-sentinel/security/dependabot/3),
+  a high-severity `js-yaml` quadratic CPU consumption (DoS) bug that affected
+  `--trellis` auto-discovery, plus the `--verbose` flag added in 1.1.0 for
+  step-by-step validation progress. Dev-only dependency — no effect on the
+  theme's runtime code.
+
 ## [4.9.3] - 2026-08-31
 
 ### Fixed

@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.9.3
+Stable tag: 4.9.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.4 - 09/03/26 =
+* CHANGED: Bumped the dev-only wp-pattern-sentinel validator dependency to 1.1.1, pulling in a fix for a js-yaml denial-of-service vulnerability (GHSA-5p4m-2wfm-xmqj) plus the --verbose flag added in 1.1.0. No effect on the theme's runtime code.
 
 = 4.9.2 - 08/25/26 =
 * FIXED: patterns/header-double-bar.php required the Aludra plugin - its top bar search icon was an aludra/search-overlay-trigger block, the theme's only Aludra dependency and one that ships in the WordPress.org release, so inserting the pattern without Aludra installed produced a block-error placeholder instead of a search icon. The trigger and its full-screen overlay now live in the theme, making the pattern core-blocks-only like the other 120.
