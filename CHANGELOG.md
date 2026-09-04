@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.5] - 2026-09-04
+
+### Fixed
+
+- **Source archives now match the release zip.** `.distignore` governs the theme
+  zip built by `create-release.yml`, but nothing governed source archives —
+  GitHub's "Download source code" and, more importantly, the dist tarball
+  Composer installs `imagewize/elayne` from. `CLAUDE.md`, `AGENTS.md`,
+  `phpcs.xml` and `.github/` were therefore reaching `web/app/themes/elayne/`
+  on every Composer install, despite being excluded from the zip. A new
+  `.gitattributes` marks them `export-ignore`. `README.md` is deliberately kept
+  — it has no place in the theme zip but belongs in a source archive. Nothing
+  in the release zip changes.
+
 ## [4.9.4] - 2026-09-03
 
 ### Changed
