@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.9.5
+Stable tag: 4.9.6
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.6 - 09/04/26 =
+* CHANGED: Re-release of 4.9.5's code under a new tag so Composer installs can reach it. Packagist will not accept a version whose git tag was moved, and 4.9.5's tag was moved to pick up the .distignore fix. No theme changes — this release is identical to 4.9.5 apart from the version strings.
 
 = 4.9.5 - 09/04/26 =
 * FIXED: Source archives now match the release zip. .distignore governed the theme zip but nothing governed the dist tarball Composer installs from, so CLAUDE.md, AGENTS.md, phpcs.xml and .github/ were landing in installed sites despite being excluded from the zip. A new .gitattributes marks them export-ignore, and .distignore excludes that file in turn so it is not itself packaged into the zip. No change to what the zip contains otherwise.

@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.9.6] - 2026-09-04
+
+### Changed
+
+- **Re-release of 4.9.5's code under a new tag, so Composer can serve it.** No
+  theme changes: this tree is identical to 4.9.5 apart from the version strings
+  and this entry. Packagist refuses to update a version whose git tag was moved
+  ("Upstream re-tag blocked"), and 4.9.5's tag was moved forward to pick up the
+  `.distignore` fix. Deleting the version on Packagist and re-crawling removes it
+  without restoring it, so 4.9.5 is absent there and `^4.9` resolves to 4.9.4. A
+  tag Packagist has never seen is the only way to get the fix onto that channel.
+  The GitHub release and the WordPress.org listing are unaffected — both already
+  carry the corrected 4.9.5.
+
 ## [4.9.5] - 2026-09-04
 
 ### Fixed
