@@ -174,7 +174,7 @@ Elayne includes custom image sizes optimized for different layouts:
 == Changelog ==
 
 = 4.9.5 - 09/04/26 =
-* FIXED: Source archives now match the release zip. .distignore governed the theme zip but nothing governed the dist tarball Composer installs from, so CLAUDE.md, AGENTS.md, phpcs.xml and .github/ were landing in installed sites despite being excluded from the zip. A new .gitattributes marks them export-ignore. No change to the release zip.
+* FIXED: Source archives now match the release zip. .distignore governed the theme zip but nothing governed the dist tarball Composer installs from, so CLAUDE.md, AGENTS.md, phpcs.xml and .github/ were landing in installed sites despite being excluded from the zip. A new .gitattributes marks them export-ignore, and .distignore excludes that file in turn so it is not itself packaged into the zip. No change to what the zip contains otherwise.
 
 = 4.9.4 - 09/03/26 =
 * CHANGED: Bumped the dev-only wp-pattern-sentinel validator dependency to 1.1.1, pulling in a fix for a js-yaml denial-of-service vulnerability (GHSA-5p4m-2wfm-xmqj) plus the --verbose flag added in 1.1.0. No effect on the theme's runtime code.
