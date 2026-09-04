@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.9.4
+Stable tag: 4.9.5
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.9.5 - 09/04/26 =
+* FIXED: Source archives now match the release zip. .distignore governed the theme zip but nothing governed the dist tarball Composer installs from, so CLAUDE.md, AGENTS.md, phpcs.xml and .github/ were landing in installed sites despite being excluded from the zip. A new .gitattributes marks them export-ignore. No change to the release zip.
 
 = 4.9.4 - 09/03/26 =
 * CHANGED: Bumped the dev-only wp-pattern-sentinel validator dependency to 1.1.1, pulling in a fix for a js-yaml denial-of-service vulnerability (GHSA-5p4m-2wfm-xmqj) plus the --verbose flag added in 1.1.0. No effect on the theme's runtime code.
