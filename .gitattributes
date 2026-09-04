@@ -1,0 +1,27 @@
+# Keeps source archives (GitHub's "Download source code", and the dist tarball
+# Composer installs from) in step with .distignore, which governs the release
+# zip built by .github/workflows/create-release.yml. Without this file the two
+# disagree: dev tooling and AI guidance excluded from the zip were still landing
+# in web/app/themes/elayne/ on every Composer install.
+#
+# README.md is deliberately absent — a README belongs in a source archive even
+# though it has no place in the theme zip. Keep this list in step with
+# .distignore when either changes.
+
+/node_modules export-ignore
+/vendor export-ignore
+
+# Guards, not descriptions: docs/ and .tmp/ do not exist here. Kept so a stray
+# file re-added later stays out of source archives too.
+/docs export-ignore
+/.tmp export-ignore
+/.vibe export-ignore
+
+/.github export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.distignore export-ignore
+/CLAUDE.md export-ignore
+/AGENTS.md export-ignore
+/phpcs.xml export-ignore
+*.sh export-ignore
