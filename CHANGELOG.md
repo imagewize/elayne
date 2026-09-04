@@ -18,8 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `phpcs.xml` and `.github/` were therefore reaching `web/app/themes/elayne/`
   on every Composer install, despite being excluded from the zip. A new
   `.gitattributes` marks them `export-ignore`. `README.md` is deliberately kept
-  — it has no place in the theme zip but belongs in a source archive. Nothing
-  in the release zip changes.
+  — it has no place in the theme zip but belongs in a source archive.
+- `.distignore` excludes `.gitattributes` in turn, so the new file is not itself
+  packaged into the theme zip; WordPress.org's automated review rejects an
+  upload containing a file it cannot read. It also now guards `.claude/*`,
+  matching Aviendha — untracked here, so CI never zipped it, but nothing
+  stopped it either.
 
 ## [4.9.4] - 2026-09-03
 
