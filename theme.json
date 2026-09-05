@@ -182,6 +182,36 @@
 				"loose": 2
 			}
 		},
+		"dimensions": {
+			"minHeight": true,
+			"dimensionSizes": [
+				{
+					"name": "Extra Small",
+					"slug": "xs",
+					"size": "40px"
+				},
+				{
+					"name": "Small",
+					"slug": "sm",
+					"size": "300px"
+				},
+				{
+					"name": "Medium",
+					"slug": "md",
+					"size": "330px"
+				},
+				{
+					"name": "Large",
+					"slug": "lg",
+					"size": "600px"
+				},
+				{
+					"name": "Extra Large",
+					"slug": "xl",
+					"size": "680px"
+				}
+			]
+		},
 		"layout": {
 			"contentSize": "740px",
 			"wideSize": "1260px"

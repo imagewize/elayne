@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.10.0] - 2026-09-05
+
+### Changed
+
+- **`patterns/header-editorial.php`.** Replaced the hand-rolled
+  `@media (max-width: 781px) { display: none }` rule that hid the status pill
+  on mobile/tablet with WordPress 7.0's native per-device block visibility
+  (`metadata.blockVisibility.viewport`). Same visual result, no custom CSS —
+  the old rule is now a comment in `assets/styles/block-styles/editorial-header.css`
+  pointing at the pattern attribute that replaced it.
+
+### Added
+
+- **Dimension size presets (`theme.json`).** WordPress 7.0 added
+  `settings.dimensions.dimensionSizes`, letting a theme define a preset scale
+  for the width/height/min-height dimensions block support. Added a five-step
+  scale (`xs`/`sm`/`md`/`lg`/`xl` — 40/300/330/600/680px) matching the
+  min-height values already in use, and applied it to the two patterns whose
+  `wp:group` blocks referenced a bare pixel value:
+  `services-feature-cards.php` and `stats-showcase.php`. Checked WordPress
+  core's `block.json` directly: `core/cover`'s separate, older
+  `minHeight`/`minHeightUnit` attributes are not wired into this preset
+  system, so the ~33 `minHeight` values on `wp:cover` blocks elsewhere in the
+  pattern library (hero/banner/WooCommerce patterns) are unaffected and
+  intentionally left as literal pixel values.
+
+### Technical
+
+- **Minimum WordPress version raised to 7.0.** This release uses WordPress 7.0
+  features (dimension presets and block visibility) that are not available in
+  earlier versions. Users on WordPress 6.x should upgrade before installing
+  this version.
+
 ## [4.9.5] - 2026-09-04
 
 ### Fixed

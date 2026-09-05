@@ -1,10 +1,10 @@
 === Elayne WordPress Block Theme ===
 Contributors: Rhand
 Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, grid-layout, template-editing, threaded-comments, translation-ready, wide-blocks
-Requires at least: 6.6
+Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.9.5
+Stable tag: 4.10.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.10.0 - 09/05/26 =
+* CHANGED: patterns/header-editorial.php now uses WordPress 7.0 native per-device block visibility (metadata.blockVisibility.viewport) to hide the status pill on mobile/tablet, replacing the hand-rolled @media rule in assets/styles/block-styles/editorial-header.css. Same visual result, no custom CSS.
+* ADDED: Dimension size presets in theme.json (settings.dimensions.dimensionSizes: xs/sm/md/lg/xl mapped to 40/300/330/600/680px) for the WordPress 7.0 dimensions block support. Applied to the two wp:group blocks that previously used bare pixel min-heights: patterns/services-feature-cards.php (300px -> sm) and patterns/stats-showcase.php (40px -> xs). Cover-block min-heights are intentionally unchanged because core/cover does not participate in this preset system.
+* TECHNICAL: Minimum WordPress version raised to 7.0. This release uses WordPress 7.0 features (dimension presets and block visibility) that are not available in earlier versions. Users on WordPress 6.x should upgrade before installing this version.
 
 = 4.9.5 - 09/04/26 =
 * FIXED: Source archives now match the release zip. .distignore governed the theme zip but nothing governed the dist tarball Composer installs from, so CLAUDE.md, AGENTS.md, phpcs.xml and .github/ were landing in installed sites despite being excluded from the zip. A new .gitattributes marks them export-ignore, and .distignore excludes that file in turn so it is not itself packaged into the zip. No change to what the zip contains otherwise.
