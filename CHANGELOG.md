@@ -33,6 +33,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   pattern library (hero/banner/WooCommerce patterns) are unaffected and
   intentionally left as literal pixel values.
 
+### Technical
+
+- **Minimum WordPress version raised to 7.0.** This release uses WordPress 7.0
+  features (dimension presets and block visibility) that are not available in
+  earlier versions. Users on WordPress 6.x should upgrade before installing
+  this version.
+
 ## [4.9.5] - 2026-09-04
 
 ### Fixed
