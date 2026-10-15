@@ -19,7 +19,7 @@
 <!-- wp:post-title {"level":1,"align":"wide","fontFamily":"secondary"} /-->
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"10px"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"secondary","fontSize":"small","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group alignwide has-secondary-color has-text-color has-link-color has-small-font-size" style="font-style:normal;font-weight:500"><!-- wp:post-author {"showBio":false} /-->
+<div class="wp-block-group alignwide has-secondary-color has-text-color has-link-color has-small-font-size" style="font-style:normal;font-weight:500"><!-- wp:post-author {"showBio":false,"isLink":true} /-->
 
 <!-- wp:paragraph {"textColor":"secondary"} -->
 <p class="has-secondary-color has-text-color"><?php esc_html_e( '·', 'elayne' ); ?></p>
@@ -32,6 +32,8 @@
 <!-- /wp:group -->
 
 <!-- wp:post-content {"align":"wide","layout":{"type":"default"}} /-->
+
+<!-- wp:pattern {"slug":"elayne/post-author-box"} /-->
 
 <!-- wp:group {"metadata":{"name":"Tags"},"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide"><!-- wp:group {"align":"wide","className":"post-meta","style":{"border":{"radius":"5px"}},"fontSize":"small","layout":{"type":"flex","justifyContent":"space-between"}} -->

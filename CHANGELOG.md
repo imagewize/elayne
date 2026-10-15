@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.11.0] - 2026-10-15
+
+### Added
+
+- **Author archive template (`templates/author.html`).** Author archives used
+  to fall back to the generic archive template, with no sign of who the
+  author was. The new `elayne/template-author-archive` pattern puts the
+  author's avatar, name and profile biography above the post grid. A profile
+  with no biography shows no empty paragraph.
+- **`elayne/author` Block Bindings source (`inc/author-bindings.php`).** Feeds
+  the archive's author name, biography and avatar URL to core blocks (heading,
+  paragraph, image). A pattern file cannot do this in PHP: patterns are
+  evaluated before the main query is resolved, so `get_queried_object()` is
+  empty at that point. Bindings resolve at render time.
+- **`elayne/post-author-box` pattern.** A card at the end of single posts: round
+  avatar, author name linked to the author archive, and the biography, with a
+  small "Written by" label. Added to the four single-post layouts (centered,
+  wide, left sidebar, right sidebar), above the tags.
+
+### Technical
+
+- The author name in the single-post byline now links to the author archive
+  (`isLink` on `core/post-author`). Previously it was plain text.
+
 ## [4.10.0] - 2026-09-05
 
 ### Changed

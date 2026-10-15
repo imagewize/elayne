@@ -25,7 +25,7 @@
 <!-- wp:post-title {"level":1,"fontFamily":"secondary"} /-->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"10px"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"secondary","fontSize":"small","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group has-secondary-color has-text-color has-link-color has-small-font-size" style="font-style:normal;font-weight:500"><!-- wp:post-author {"showBio":false} /-->
+<div class="wp-block-group has-secondary-color has-text-color has-link-color has-small-font-size" style="font-style:normal;font-weight:500"><!-- wp:post-author {"showBio":false,"isLink":true} /-->
 
 <!-- wp:paragraph {"textColor":"secondary"} -->
 <p class="has-secondary-color has-text-color"><?php esc_html_e( '·', 'elayne' ); ?></p>
@@ -37,6 +37,8 @@
 <!-- wp:post-featured-image {"aspectRatio":"16/9","sizeSlug":"elayne-single-hero","style":{"spacing":{"margin":{"right":"var:preset|spacing|large","left":"var:preset|spacing|large"}}}} /-->
 
 <!-- wp:post-content {"align":"wide","layout":{"type":"constrained"}} /-->
+
+<!-- wp:pattern {"slug":"elayne/post-author-box"} /-->
 
 <!-- wp:group {"metadata":{"name":"Tags"},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"className":"post-meta","style":{"border":{"radius":"5px"}},"fontSize":"small","layout":{"type":"flex","justifyContent":"space-between"}} -->
