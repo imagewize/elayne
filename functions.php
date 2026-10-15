@@ -936,3 +936,4 @@ add_action( 'wp_head', __NAMESPACE__ . '\elayne_page_loaded_head_script', 1 );
  */
 require_once get_template_directory() . '/inc/block-extensions.php';
 require_once get_template_directory() . '/inc/search-overlay.php';
+require_once get_template_directory() . '/inc/author-bindings.php';
