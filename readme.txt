@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.10.0
+Stable tag: 4.11.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.11.0 - 10/15/26 =
+* ADDED: Author archive template (templates/author.html, pattern elayne/template-author-archive). Shows the author's avatar, name and profile biography above the post grid; no empty paragraph when the biography is blank.
+* ADDED: elayne/author Block Bindings source (inc/author-bindings.php) exposing the archive author's name, biography and avatar URL to core blocks at render time.
+* ADDED: elayne/post-author-box pattern, a card at the end of single posts with avatar, author name linked to the author archive and biography. Used by all four single-post layouts.
+* TECHNICAL: The single-post byline author name now links to the author archive.
 
 = 4.10.0 - 09/05/26 =
 * CHANGED: patterns/header-editorial.php now uses WordPress 7.0 native per-device block visibility (metadata.blockVisibility.viewport) to hide the status pill on mobile/tablet, replacing the hand-rolled @media rule in assets/styles/block-styles/editorial-header.css. Same visual result, no custom CSS.

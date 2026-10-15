@@ -552,6 +552,7 @@ Update all three on every release:
 |---|---|---|
 | `404.html` | `elayne/template-page-404` | 404 error page |
 | `archive.html` | `elayne/template-page-archive` | Archives |
+| `author.html` | `elayne/template-author-archive` | Author archive (avatar, name, bio from profile) |
 | `home.html` | `elayne/template-index-grid` | Blog index / static homepage |
 | `index.html` | `elayne/template-index-grid` | Fallback |
 | `page.html` | `elayne/template-page` | Default page |
