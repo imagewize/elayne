@@ -304,9 +304,19 @@ WooCommerce core plugin includes official patterns in `wp-content/plugins/woocom
 
 > Full details with code examples: `docs/elayne/PATTERN-GUIDELINES.md`
 
+## Content & Design Prototypes (private `elayne-content` repo)
+
+Design prototypes and demo content for verticals live in a **separate private repo**, not in this theme: `~/Documents/elayne-content` ([imagewize/elayne-content](https://github.com/imagewize/elayne-content)). It keeps the theme clean and keeps Unsplash prototype photos out of anything that ships to WP.org.
+
+- One self-contained folder per design: `<vertical>/` or `<vertical>-<variant>/` (e.g. `legal/`, `legal-corporate/`), each with `index.html` + `style.css` + `CREDITS.md` + `images/`. Open `index.html` directly in a browser; there is no build.
+- Each `style.css` mirrors `theme.json` tokens at the top and flags prototype-only deviations (extra fonts, custom palette). Check these before porting — they must be mapped to theme slugs or dropped.
+- **Start new vertical/variant work from here**: read the prototype, then port it to block patterns (via the `elayne-pattern-generator` skill and the pt-cli scaffolding below). Do not copy prototype CSS or images into the theme verbatim.
+- **Prototype images are NOT shippable.** Unsplash is rejected by WP.org; replace with CC0/GPL images (WebP, <200KB, in `patterns/images/`) and document them in `readme.txt` before porting.
+- Never commit `elayne-content` files into this repo, and never hotlink its images.
+
 ## New Vertical Development
 
-When creating a new industry vertical (home-improvement, legal, fintech, etc.), follow the full workflow in `docs/elayne/VERTICAL-WORKFLOW.md`.
+When creating a new industry vertical (home-improvement, legal, fintech, etc.), follow the full workflow in `docs/elayne/VERTICAL-WORKFLOW.md`. Check `elayne-content` first for an existing prototype of the vertical, and decide whether the design is a **variant of an existing vertical** (new style variation + patterns, same `elayne/<vertical>` category) or a genuinely new one.
 
 > **Naming note:** The Home Improvement vertical uses `plumbing` as its internal slug throughout (files, CSS classes, style JSON, pattern slugs). The display label was changed to "Home Improvement" in May 2026 but internal identifiers were not renamed to avoid a database migration. Do not "fix" the plumbing naming — it is intentional.
 
