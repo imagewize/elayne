@@ -120,6 +120,18 @@ All design tokens live in `theme.json` — never hardcode colors, sizes, or spac
 
 **Pill/badge shrink-wrap rule (CRITICAL — prevents full-column-width pills):** WordPress `is-layout-flow` columns are internally `flex-direction: column` flex containers. Any child is a flex item and gets its `display` blockified — `inline-block`/`inline-flex` both compute to `block` regardless of inline styles or CSS. The default `align-items: normal` acts as `stretch`, making every child span the full column width. To shrink-wrap a pill/badge inside a `wp:column`, add `align-self: flex-start` and `width: fit-content` to its **CSS rule** (not inline). `is-style-status-pill` works in the editorial header only because that header is a `flex-direction: row` container (cross-axis vertical → width is content-driven); inside a `wp:column` it would need the same fix.
 
+## Vertical child themes
+Verticals are moving out of this theme into child themes that require Elayne (pilot: `elayne-legal`, `~/code/elayne-legal`, pre-v1.0.0). Slugs stay `elayne/<vertical>-*`, the child's patterns win over the parent's while both exist, and each child has its own `CHANGELOG.md` and text domain. Child-only images use `get_stylesheet_directory_uri()`; shared images stay here. This theme's template patterns hard-code `"theme":"elayne"` on template-part blocks, so a child retargets that attribute in its own `functions.php`; keep the attribute here. Do not add new vertical pattern sets to this theme; the bundled `legal-*` patterns stay until a deprecation release. See `CLAUDE.md` for the full setup.
+
+## Content & Design Prototypes (private `elayne-content` repo)
+Design prototypes and demo content for verticals live in a separate **private** repo, `~/Documents/elayne-content` ([imagewize/elayne-content](https://github.com/imagewize/elayne-content)), kept out of the theme repo.
+- One self-contained folder per design: `<vertical>/` or `<vertical>-<variant>/` (e.g. `legal/`, `legal-corporate/`) with `index.html`, `style.css`, `CREDITS.md`, `images/`. Open `index.html` in a browser; no build.
+- Its `style.css` mirrors `theme.json` tokens and flags prototype-only deviations (extra fonts, custom palette) — map them to theme slugs or drop them when porting.
+- Start new vertical/variant work there: read the prototype, then port to block patterns (see `elayne-pattern-generator` skill and `docs/elayne/VERTICAL-WORKFLOW.md`). Do not copy prototype CSS/images verbatim.
+- Prototype images are Unsplash and **not shippable** — WP.org rejects them. Replace with CC0/GPL WebP images in `patterns/images/` and document in `readme.txt`.
+- Never commit `elayne-content` files here or hotlink its images.
+- Legal vertical work happens in the `elayne-legal` child theme (`~/code/elayne-legal`), not here. The bundled `legal-*` patterns are slated for deprecation after the child's v1.0.0; do not add new legal patterns here.
+
 ## Coding Style & Naming Conventions
 - PHP: follow WordPress coding standards (tab indent, snake_case functions); keep logic minimal and filter-based. Use text domain `elayne` in translatable strings.
 - Patterns: name files with kebab-case slugs (e.g., `hero-two-tone.php`) and match the `title`/`categories` to existing taxonomy.
