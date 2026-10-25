@@ -60,6 +60,8 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 **Industry verticals** with complete, ready-to-use pattern sets: Food & Beverage • Legal Services • Home Improvement • Spa & Wellness • Nail Salon • WooCommerce Store
 
+**Vertical child themes:** Elayne is moving industry verticals into separate child themes that require Elayne as the parent, starting with a legal child theme (`elayne-legal`, in development). The legal patterns bundled here will be deprecated once it is released.
+
 **8 style variations** — switch your entire site's look with one click in **Appearance → Editor → Styles**
 
 **32+ CSS block styles** — interactive animations and effects with zero JavaScript, applied via the Styles panel in the block editor

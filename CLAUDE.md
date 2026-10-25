@@ -315,6 +315,18 @@ Design prototypes and demo content for verticals live in a **separate private re
 - Never commit `elayne-content` files into this repo, and never hotlink its images.
 - **Legal vertical work happens in the `elayne-legal` child theme** (`~/code/elayne-legal`, `imagewize/elayne-legal`), not here. The `legal-*` patterns and legal style variations still bundled in this theme are slated for deprecation once the child theme reaches v1.0.0; do not add new legal patterns here.
 
+## Vertical Child Themes (`elayne-legal` and later)
+
+Elayne is getting lighter by moving verticals into **child themes** that require Elayne as the parent, instead of bundling every vertical here.
+
+- **Pilot:** `elayne-legal` (`~/code/elayne-legal`, `imagewize/elayne-legal`). It holds the `legal-*` patterns, the Legal Corporate and Legal Blue variations, the Source Serif 4 font, the header and footer, and its own `CHANGELOG.md`. Not yet released (pre-v1.0.0); the `legal-*` patterns stay in this theme until a deprecation release removes them.
+- **Child anatomy:** `style.css` with `Template: elayne`, `patterns/`, `styles/`, `parts/header.html` and `parts/footer.html`, `assets/` (fonts, block-style CSS, JS), `functions.php`. Pattern slugs stay `elayne/<vertical>-*` (the child's copy wins over the parent's while both exist); the text domain is the child's own (`elayne-legal`).
+- **Asset URLs:** vertical-only images use `get_stylesheet_directory_uri()`; images shared across verticals (avatars, icons) stay in this theme and use `get_template_directory_uri()`. A variation's `file:./assets/fonts/...` paths resolve against the child, so it must bundle every font its variation declares, including Open Sans and Mona Sans.
+- **Template parts:** this theme's template patterns hard-code `"theme":"elayne"` on `wp:template-part` blocks (the compliance checker requires it), so a child's own parts are never reached by default. The child's `functions.php` retargets that attribute on `render_block_data`. Keep the attribute here.
+- **Validators and tooling:** run `pt-cli check ... --theme=elayne` and `npx sentinel` from this repo against the child's `patterns/` path; run `wp pattern validate` against the copy synced to the demo site. Sync the child with `wp-ops rsync-package-to-site theme elayne-legal ~/code/elayne-legal` (create the target folder first).
+- **Distribution:** public child themes go on Packagist; private or paid ones live in private GitHub repos installed via a `vcs` repository and a token.
+- **New verticals:** decide public (child theme repo) vs. private early. Do not add new vertical pattern sets to this theme.
+
 ## New Vertical Development
 
 When creating a new industry vertical (home-improvement, legal, fintech, etc.), follow the full workflow in `docs/elayne/VERTICAL-WORKFLOW.md`. Check `elayne-content` first for an existing prototype of the vertical, and decide whether the design is a **variant of an existing vertical** (new style variation + patterns, same `elayne/<vertical>` category) or a genuinely new one.
