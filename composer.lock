@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53b5e4d1ad266dadcf94061d09dba64f",
+    "content-hash": "7293584eaf2fff958d6a7ef974607b90",
     "packages": [],
     "packages-dev": [
         {
@@ -105,16 +105,16 @@
         },
         {
             "name": "imagewize/pt-cli",
-            "version": "v2.5.0",
+            "version": "v2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imagewize/pt-cli.git",
-                "reference": "39f184d929a98c068ce0ad05643d1178e26f425d"
+                "reference": "bc4794ae29b59318a29340e7a0b8754de7834cd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/pt-cli/zipball/39f184d929a98c068ce0ad05643d1178e26f425d",
-                "reference": "39f184d929a98c068ce0ad05643d1178e26f425d",
+                "url": "https://api.github.com/repos/imagewize/pt-cli/zipball/bc4794ae29b59318a29340e7a0b8754de7834cd3",
+                "reference": "bc4794ae29b59318a29340e7a0b8754de7834cd3",
                 "shasum": ""
             },
             "require": {
@@ -140,9 +140,9 @@
             "description": "Pattern scaffolding and compliance checker for WordPress FSE block themes",
             "support": {
                 "issues": "https://github.com/imagewize/pt-cli/issues",
-                "source": "https://github.com/imagewize/pt-cli/tree/v2.5.0"
+                "source": "https://github.com/imagewize/pt-cli/tree/v2.6.0"
             },
-            "time": "2026-07-29T02:47:19+00:00"
+            "time": "2026-10-25T00:39:53+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
