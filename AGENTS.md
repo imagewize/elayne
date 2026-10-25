@@ -127,6 +127,7 @@ Design prototypes and demo content for verticals live in a separate **private** 
 - Start new vertical/variant work there: read the prototype, then port to block patterns (see `elayne-pattern-generator` skill and `docs/elayne/VERTICAL-WORKFLOW.md`). Do not copy prototype CSS/images verbatim.
 - Prototype images are Unsplash and **not shippable** — WP.org rejects them. Replace with CC0/GPL WebP images in `patterns/images/` and document in `readme.txt`.
 - Never commit `elayne-content` files here or hotlink its images.
+- Legal vertical work happens in the `elayne-legal` child theme (`~/code/elayne-legal`), not here. The bundled `legal-*` patterns are slated for deprecation after the child's v1.0.0; do not add new legal patterns here.
 
 ## Coding Style & Naming Conventions
 - PHP: follow WordPress coding standards (tab indent, snake_case functions); keep logic minimal and filter-based. Use text domain `elayne` in translatable strings.

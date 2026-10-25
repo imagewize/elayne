@@ -313,6 +313,7 @@ Design prototypes and demo content for verticals live in a **separate private re
 - **Start new vertical/variant work from here**: read the prototype, then port it to block patterns (via the `elayne-pattern-generator` skill and the pt-cli scaffolding below). Do not copy prototype CSS or images into the theme verbatim.
 - **Prototype images are NOT shippable.** Unsplash is rejected by WP.org; replace with CC0/GPL images (WebP, <200KB, in `patterns/images/`) and document them in `readme.txt` before porting.
 - Never commit `elayne-content` files into this repo, and never hotlink its images.
+- **Legal vertical work happens in the `elayne-legal` child theme** (`~/code/elayne-legal`, `imagewize/elayne-legal`), not here. The `legal-*` patterns and legal style variations still bundled in this theme are slated for deprecation once the child theme reaches v1.0.0; do not add new legal patterns here.
 
 ## New Vertical Development
 
