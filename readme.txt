@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.11.0
+Stable tag: 4.11.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,12 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.11.1 - 10/25/26 =
+* NOTICE: New industry verticals now ship as child themes that require Elayne as the parent, starting with Elayne Legal (https://github.com/imagewize/elayne-legal, not on WordPress.org). Elayne itself is unchanged and keeps working as before; no new vertical pattern sets will be added to this theme.
+* NOTICE: The legal patterns and the Legal Blue style variation bundled here stay in place for now, and will be deprecated in a later release once Elayne Legal is established.
+* CHANGED: Development tooling bumped, pt-cli to 2.6.0 (image-height-auto rule) and @imwz/wp-pattern-sentinel to 1.2.2. No theme output changes.
+* DOCS: README rewritten around the child-theme direction, with corrected requirements (WordPress 7.0) and install options. CLAUDE.md, AGENTS.md and README document the vertical child theme setup and the private elayne-content prototype repo.
 
 = 4.11.0 - 10/15/26 =
 * ADDED: Author archive template (templates/author.html, pattern elayne/template-author-archive). Shows the author's avatar, name and profile biography above the post grid; no empty paragraph when the biography is blank.
