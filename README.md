@@ -38,7 +38,7 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 | **Support** | [imagewize.com/support](https://imagewize.com/support) |
 
 ### Requirements
-- WordPress 6.6 or later
+- WordPress 7.0 or later
 - PHP 8.0 or later
 - WooCommerce (optional, for store templates and patterns)
 - Aludra plugin (optional, adds Mega Menu, Carousel, FAQ Tabs, and other blocks — nothing Elayne ships depends on it)
@@ -60,13 +60,23 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 **Industry verticals** with complete, ready-to-use pattern sets: Food & Beverage • Legal Services • Home Improvement • Spa & Wellness • Nail Salon • WooCommerce Store
 
-**Vertical child themes:** Elayne is moving industry verticals into separate child themes that require Elayne as the parent, starting with a legal child theme (`elayne-legal`, in development). The legal patterns bundled here will be deprecated once it is released.
+**Vertical child themes:** Elayne is large, so new industry verticals now ship as separate child themes that require Elayne as the parent. Elayne itself keeps working exactly as before and stays on WordPress.org; no new vertical pattern sets will be added here. The legal patterns bundled in this theme stay for now and will be deprecated in a later release. See [Vertical Child Themes](#vertical-child-themes).
 
 **8 style variations** — switch your entire site's look with one click in **Appearance → Editor → Styles**
 
 **32+ CSS block styles** — interactive animations and effects with zero JavaScript, applied via the Styles panel in the block editor
 
 Browse the complete pattern library in **Appearance → Editor → Patterns**. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full pattern inventory and developer documentation.
+
+## Vertical Child Themes
+
+A child theme adds one vertical's design on top of Elayne: its own patterns, style variations, header and footer. Elayne stays the parent and supplies the base theme, the shared patterns and the WooCommerce templates.
+
+| Child theme | Vertical | Status | Install |
+| --- | --- | --- | --- |
+| [Elayne Legal](https://github.com/imagewize/elayne-legal) | Law firms | v1.0.0, public | `composer require imagewize/elayne-legal` or the zip from GitHub releases |
+
+Child themes are not listed on WordPress.org. Install Elayne first, then the child, and activate the child under **Appearance → Themes**. Pattern slugs stay `elayne/<vertical>-*`, so a child's patterns replace the ones still bundled here. Developers: see [CONTRIBUTING.md](CONTRIBUTING.md) and `CLAUDE.md` for the child anatomy and validation workflow.
 
 ## Getting Started
 

@@ -7,7 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.11.1] - 2026-10-25
+
+### Notice
+
+- **New verticals ship as child themes.** Elayne is large, so industry
+  verticals now move into separate child themes that require Elayne as the
+  parent, starting with [Elayne Legal](https://github.com/imagewize/elayne-legal)
+  (public, installed from GitHub or Packagist, not listed on WordPress.org).
+  Elayne itself is unchanged and keeps working as before. No new vertical
+  pattern sets will be added to this theme.
+- The legal patterns and the Legal Blue style variation bundled here stay in
+  place for now. They will be deprecated in a later release, once Elayne Legal
+  is established.
+
 ### Changed
+
+- **pt-cli bumped to 2.6.0** for the `image-height-auto` rule.
 - **`@imwz/wp-pattern-sentinel` bumped to `^1.2.2`.** Sentinel now resolves `echo esc_attr( __() )` and `wp_json_encode` translations inside block comment attributes instead of dropping them, which caused false validation failures.
 
 ## [4.11.0] - 2026-10-15
