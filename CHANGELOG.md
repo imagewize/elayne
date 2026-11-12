@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.11.2] - 2026-11-12
+
+### Fixed
+- **Release zip now has a top-level `elayne/` folder.** The GitHub release workflow zipped the repo
+  root, so the zip was flat (files at the top level). WordPress 7.1.4 unpacks an uploaded zip into a
+  working directory named `<zip name>-<16 random characters>`, and with a flat zip that directory
+  becomes the theme folder, so an upload under Appearance > Themes installed Elayne as
+  `elayne-<random>`. Anything that stores the folder name (template part references, image URLs saved
+  from patterns) then points at the wrong place. `create-release.yml` now wraps the same file set
+  (same `.distignore`) in `elayne/`. WordPress 6.x named the folder after the zip, so older installs
+  were not affected. Installed copies are unchanged; only the release zip differs.
+
 ## [4.11.1] - 2026-10-25
 
 ### Notice

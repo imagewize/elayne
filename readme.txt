@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.11.1
+Stable tag: 4.11.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,9 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.11.2 - 11/12/26 =
+* Fixed: the GitHub release zip now wraps the theme in its own `elayne/` folder, so uploading it on WordPress 7.1.4 or later no longer installs the theme in a randomly named folder.
 
 = 4.11.1 - 10/25/26 =
 * NOTICE: New industry verticals now ship as child themes that require Elayne as the parent, starting with Elayne Legal (https://github.com/imagewize/elayne-legal, not on WordPress.org). Elayne itself is unchanged and keeps working as before; no new vertical pattern sets will be added to this theme.
