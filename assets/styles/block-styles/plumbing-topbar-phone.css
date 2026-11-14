@@ -3,16 +3,16 @@
    editor iframe without needing a body-class or editor-wrapper scope. */
 
 .plumbing-top-bar a {
-	color: #fff !important;
+	color: var(--elayne-on-primary) !important;
 	text-decoration: none !important;
 }
 
 .plumbing-topbar-phone {
-	background: rgba( 255, 255, 255, 0.2 );
+	background: color-mix(in srgb, currentColor 20%, transparent);
 }
 
 .plumbing-topbar-phone:hover {
-	background: rgba( 255, 255, 255, 0.35 );
+	background: color-mix(in srgb, currentColor 35%, transparent);
 }
 
 .plumbing-topbar-phone-icon {

@@ -16,5 +16,5 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
-	color: rgba(255, 255, 255, 0.75) !important;
+	opacity: 0.75; /* Dims the label in its own colour, so it reads on any band. */
 }

@@ -21,12 +21,12 @@
 					<!-- /wp:group -->
 
 					<!-- wp:group {"className":"is-style-plumbing-years-badge","layout":{"type":"constrained"}} -->
-					<div class="wp-block-group is-style-plumbing-years-badge"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium","style":{"typography":{"fontWeight":"800","lineHeight":"1"}},"textColor":"white"} -->
-						<h3 class="wp-block-heading has-text-align-center has-white-color has-text-color has-medium-font-size" style="font-weight:800;line-height:1"><?php esc_html_e( '20+', 'elayne' ); ?></h3>
+					<div class="wp-block-group is-style-plumbing-years-badge"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium","style":{"typography":{"fontWeight":"800","lineHeight":"1"}}} -->
+						<h3 class="wp-block-heading has-text-align-center has-medium-font-size" style="font-weight:800;line-height:1"><?php esc_html_e( '20+', 'elayne' ); ?></h3>
 						<!-- /wp:heading -->
 
-						<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"white","fontSize":"x-small"} -->
-						<p class="has-text-align-center has-white-color has-text-color has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Years in Business', 'elayne' ); ?></p>
+						<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"fontSize":"x-small"} -->
+						<p class="has-text-align-center has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Years in Business', 'elayne' ); ?></p>
 						<!-- /wp:paragraph -->
 					</div>
 					<!-- /wp:group -->
@@ -40,8 +40,8 @@
 				<p class="is-style-plumbing-section-label has-primary-color has-text-color has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Why FlowPro', 'elayne' ); ?></p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"level":2,"style":{"typography":{"lineHeight":"1.2","letterSpacing":"-0.02em"}},"textColor":"white","fontSize":"large"} -->
-				<h2 class="wp-block-heading has-white-color has-text-color has-large-font-size" style="letter-spacing:-0.02em;line-height:1.2"><?php esc_html_e( 'Plumbing You Can Actually Count On', 'elayne' ); ?></h2>
+				<!-- wp:heading {"level":2,"style":{"typography":{"lineHeight":"1.2","letterSpacing":"-0.02em"}},"fontSize":"large"} -->
+				<h2 class="wp-block-heading has-large-font-size" style="letter-spacing:-0.02em;line-height:1.2"><?php esc_html_e( 'Plumbing You Can Actually Count On', 'elayne' ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.7"}},"textColor":"main-accent","fontSize":"base"} -->
@@ -58,8 +58,8 @@
 						<!-- /wp:group -->
 
 						<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
-						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white","fontSize":"small"} -->
-							<p class="has-white-color has-text-color has-small-font-size" style="font-weight:700"><?php esc_html_e( '24/7 Emergency Response', 'elayne' ); ?></p>
+						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"fontSize":"small"} -->
+							<p class="has-small-font-size" style="font-weight:700"><?php esc_html_e( '24/7 Emergency Response', 'elayne' ); ?></p>
 							<!-- /wp:paragraph -->
 
 							<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
@@ -79,8 +79,8 @@
 						<!-- /wp:group -->
 
 						<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
-						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white","fontSize":"small"} -->
-							<p class="has-white-color has-text-color has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Upfront, Flat-Rate Pricing', 'elayne' ); ?></p>
+						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"fontSize":"small"} -->
+							<p class="has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Upfront, Flat-Rate Pricing', 'elayne' ); ?></p>
 							<!-- /wp:paragraph -->
 
 							<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
@@ -100,8 +100,8 @@
 						<!-- /wp:group -->
 
 						<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
-						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white","fontSize":"small"} -->
-							<p class="has-white-color has-text-color has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Licensed, Bonded & Insured', 'elayne' ); ?></p>
+						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"fontSize":"small"} -->
+							<p class="has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Licensed, Bonded & Insured', 'elayne' ); ?></p>
 							<!-- /wp:paragraph -->
 
 							<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
@@ -121,8 +121,8 @@
 						<!-- /wp:group -->
 
 						<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
-						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white","fontSize":"small"} -->
-							<p class="has-white-color has-text-color has-small-font-size" style="font-weight:700"><?php esc_html_e( '100% Satisfaction Guarantee', 'elayne' ); ?></p>
+						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"fontSize":"small"} -->
+							<p class="has-small-font-size" style="font-weight:700"><?php esc_html_e( '100% Satisfaction Guarantee', 'elayne' ); ?></p>
 							<!-- /wp:paragraph -->
 
 							<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
@@ -142,8 +142,8 @@
 						<!-- /wp:group -->
 
 						<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
-						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white","fontSize":"small"} -->
-							<p class="has-white-color has-text-color has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Latest Plumbing Technology', 'elayne' ); ?></p>
+						<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"fontSize":"small"} -->
+							<p class="has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Latest Plumbing Technology', 'elayne' ); ?></p>
 							<!-- /wp:paragraph -->
 
 							<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
@@ -157,8 +157,8 @@
 				<!-- /wp:group -->
 
 				<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","justifyContent":"left"}} -->
-				<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"main","className":"is-style-fill","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
-					<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-main-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Get a Free Estimate', 'elayne' ); ?></a></div>
+				<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-fill","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+					<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Get a Free Estimate', 'elayne' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->

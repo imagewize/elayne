@@ -57,6 +57,7 @@
 .style-variation-plumbing .plumbing-hero-section {
 	position: relative;
 	overflow: visible !important;
+	background: var(--wp--preset--gradient--navy-dark);
 }
 
 .style-variation-plumbing .plumbing-hero-section::after {
@@ -66,17 +67,10 @@
 	left: 0;
 	right: 0;
 	height: 80px;
-	background: #0b1628;
+	background: var(--wp--preset--color--main);
 	clip-path: polygon( 0 100%, 100% 0, 100% 100% );
 	z-index: 2;
 	pointer-events: none;
-}
-
-/* Remove browser default yellow highlight on <mark> in plumbing headings */
-.style-variation-plumbing .plumbing-hero-section .wp-block-heading mark,
-.editor-styles-wrapper .plumbing-hero-section .wp-block-heading mark {
-	background: none;
-	background-color: transparent;
 }
 
 /* Hero right column — cover block clips to border-radius */
@@ -310,4 +304,11 @@
 	background: rgba( 240, 128, 128, 0.1 );
 	border-color: rgba( 240, 128, 128, 0.35 );
 	color: #f08080;
+}
+
+/* Emergency band: red under Plumbing. The pattern itself is a primary band, so it
+   stays readable under any other variation. */
+.style-variation-plumbing .plumbing-emergency-band {
+	background: linear-gradient( 135deg, #b71c1c, var(--wp--preset--color--plumbing-emergency) ) !important;
+	color: var(--wp--preset--color--white) !important;
 }

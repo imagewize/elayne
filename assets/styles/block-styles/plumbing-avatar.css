@@ -9,13 +9,13 @@
 	height: 42px;
 	min-width: 42px;
 	border-radius: 50%;
-	background: linear-gradient( 135deg, #1e88e5, #e67e22 );
+	background: linear-gradient( 135deg, var(--wp--preset--color--primary-accent), var(--wp--preset--color--primary) );
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 0.78rem;
 	font-weight: 700;
-	color: #fff;
+	color: var(--elayne-on-primary);
 }
 
 .wp-block-group.is-style-plumbing-avatar p {
@@ -24,5 +24,5 @@
 	line-height: 1;
 	font-size: 0.78rem;
 	font-weight: 700;
-	color: #fff;
+	color: var(--elayne-on-primary);
 }

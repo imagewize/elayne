@@ -12,9 +12,9 @@ p.is-style-plumbing-section-label {
 	font-weight: 700;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: #e67e22;
+	color: var(--wp--preset--color--primary);
 	padding: 0.3rem 0.9rem;
-	background: rgba( 230, 126, 34, 0.1 );
+	background: color-mix(in srgb, var(--wp--preset--color--primary) 10%, transparent);
 	border-radius: 999px;
-	border: 1px solid rgba( 230, 126, 34, 0.2 );
+	border: 1px solid color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent);
 }

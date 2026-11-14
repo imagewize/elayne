@@ -26,6 +26,11 @@
 					"name": "Ink Fog"
 				},
 				{
+					"name": "On Primary",
+					"slug": "on-primary",
+					"color": "#FFFFFF"
+				},
+				{
 					"slug": "main",
 					"color": "#0A1024",
 					"name": "Ink Text"

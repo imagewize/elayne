@@ -27,6 +27,7 @@
 		"layout:create": "@php ./vendor/bin/pt-cli layout:create",
 		"style:create": "@php ./vendor/bin/pt-cli style:create",
 		"check": "@php ./vendor/bin/pt-cli check patterns/ --theme=elayne",
+		"check:colors": "@php bin/check-colors.php",
 		"validate": "npm run validate",
 		"validate:woo": "npm run validate:woo",
 		"validate:new": "npm run validate:new",

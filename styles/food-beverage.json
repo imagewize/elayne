@@ -26,6 +26,11 @@
 					"name": "Sage Green"
 				},
 				{
+					"name": "On Primary",
+					"slug": "on-primary",
+					"color": "#ffffff"
+				},
+				{
 					"slug": "main",
 					"color": "#046b3c",
 					"name": "Main Text"

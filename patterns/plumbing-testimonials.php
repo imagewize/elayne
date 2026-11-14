@@ -8,14 +8,14 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Plumbing Testimonials","patternName":"elayne/plumbing-testimonials"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"main","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-main-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"Plumbing Testimonials","patternName":"elayne/plumbing-testimonials"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:paragraph {"align":"center","className":"is-style-plumbing-section-label"} -->
 		<p class="has-text-align-center is-style-plumbing-section-label"><?php esc_html_e( 'Real Reviews', 'elayne' ); ?></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:heading {"textAlign":"center","level":2,"textColor":"white","fontSize":"large"} -->
-		<h2 class="wp-block-heading has-text-align-center has-white-color has-text-color has-large-font-size"><?php esc_html_e( 'What Our Customers Say', 'elayne' ); ?></h2>
+		<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"large"} -->
+		<h2 class="wp-block-heading has-text-align-center has-large-font-size"><?php esc_html_e( 'What Our Customers Say', 'elayne' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","textColor":"main-accent"} -->
@@ -36,15 +36,15 @@
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:group {"className":"is-style-plumbing-avatar","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-				<div class="wp-block-group is-style-plumbing-avatar"><!-- wp:paragraph {"textColor":"white","fontSize":"x-small"} -->
-					<p class="has-white-color has-text-color has-x-small-font-size"><?php esc_html_e( 'SJ', 'elayne' ); ?></p>
+				<div class="wp-block-group is-style-plumbing-avatar"><!-- wp:paragraph {"fontSize":"x-small"} -->
+					<p class="has-x-small-font-size"><?php esc_html_e( 'SJ', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
 
 				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
-				<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white","fontSize":"small"} -->
-					<p class="has-white-color has-text-color has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Sarah J.', 'elayne' ); ?></p>
+				<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"fontSize":"small"} -->
+					<p class="has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Sarah J.', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"main-accent","fontSize":"x-small"} -->
@@ -68,15 +68,15 @@
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:group {"className":"is-style-plumbing-avatar","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-				<div class="wp-block-group is-style-plumbing-avatar"><!-- wp:paragraph {"textColor":"white","fontSize":"x-small"} -->
-					<p class="has-white-color has-text-color has-x-small-font-size"><?php esc_html_e( 'MT', 'elayne' ); ?></p>
+				<div class="wp-block-group is-style-plumbing-avatar"><!-- wp:paragraph {"fontSize":"x-small"} -->
+					<p class="has-x-small-font-size"><?php esc_html_e( 'MT', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
 
 				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
-				<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white","fontSize":"small"} -->
-					<p class="has-white-color has-text-color has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Michael T.', 'elayne' ); ?></p>
+				<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"fontSize":"small"} -->
+					<p class="has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Michael T.', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"main-accent","fontSize":"x-small"} -->
@@ -100,15 +100,15 @@
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:group {"className":"is-style-plumbing-avatar","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-				<div class="wp-block-group is-style-plumbing-avatar"><!-- wp:paragraph {"textColor":"white","fontSize":"x-small"} -->
-					<p class="has-white-color has-text-color has-x-small-font-size"><?php esc_html_e( 'ER', 'elayne' ); ?></p>
+				<div class="wp-block-group is-style-plumbing-avatar"><!-- wp:paragraph {"fontSize":"x-small"} -->
+					<p class="has-x-small-font-size"><?php esc_html_e( 'ER', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
 
 				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
-				<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"textColor":"white","fontSize":"small"} -->
-					<p class="has-white-color has-text-color has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Emily R.', 'elayne' ); ?></p>
+				<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"700"}},"fontSize":"small"} -->
+					<p class="has-small-font-size" style="font-weight:700"><?php esc_html_e( 'Emily R.', 'elayne' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"main-accent","fontSize":"x-small"} -->
