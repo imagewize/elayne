@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **`on-primary` palette slug** in `theme.json` and every style variation: the text colour for a
+  `primary` background. Each variation uses whichever of its own `base` or `main` contrasts more
+  with its `primary` (dark text on Plumbing's orange, Nail Salon's rose and Spa's teal).
+- **Colour contract check**, `composer check:colors` (`bin/check-colors.php [theme-dir] [--report]`):
+  fails when a variation lacks a contract slug, or a pattern, part or template uses a slug outside
+  the contract, a gradient slug or a hard-coded colour. `--report` prints WCAG contrast per
+  variation. Pass a child theme's directory to check it. Not yet run in CI: other patterns still
+  have violations.
+- `--elayne-on-primary` in `style.css`: `on-primary`, or black or white chosen from `primary` on
+  sites whose saved global styles predate the slug.
+
+### Fixed
+- **Plumbing patterns under other style variations.** They were built for Plumbing's dark page:
+  white text, a navy gradient only Plumbing defines, and block styles with hard-coded orange and
+  translucent white, so under Legal Blue headings, labels and buttons were white on cream. Text
+  now inherits the page colour, text on a primary band uses `on-primary`, buttons take the
+  variation's button colours, and the navy hero gradient and red emergency band moved to
+  `plumbing-variation.css`. Under Plumbing they look as before, apart from text on orange (years
+  badge, avatars, top-bar link), which is now navy: white on that orange is 2.4:1.
+- Plumbing hero stats group failed block validation: its attributes set `margin-top: 0`, the saved
+  style left it out.
+- Store palette lacked the `secondary` slug.
+- Text-colour marks (`<mark class="has-inline-color">`) showed the browser's yellow highlight
+  outside the Plumbing variation.
+- Headings on an `on-primary` band took the theme heading colour, which can be `primary` itself.
+
 ## [4.11.2] - 2026-11-12
 
 ### Fixed
