@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.11.2
+Stable tag: 4.12.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -172,6 +172,16 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.12.0 - 11/14/26 =
+* ADDED: Colour contract. Patterns, template parts, templates and the shared CSS now use only the palette colours every style variation defines, so any pattern reads correctly under any variation. New palette colours in theme.json and every variation: on-primary (text on a primary background), accent (kickers, eyebrows and accent buttons on the page) and accent-light (highlights on dark bands). The old orange, orange-light, gold and accent-warm colours stay defined, so saved content keeps its colours.
+* ADDED: Fallbacks for sites whose saved global styles predate the new colours (--elayne-on-primary, --elayne-accent, --elayne-accent-light), and fixed status colours for form and WooCommerce notices.
+* FIXED: Plumbing, Store/WooCommerce, Nail Salon, Food & Beverage and other vertical patterns under other style variations: white text on cream, invisible labels and badges, backgrounds in colours only one variation defined, and gradients that rendered nothing.
+* FIXED: Comment titles, dates and links in every post and page template, footer meta, post-loop terms and testimonial roles used a background colour as text and were nearly invisible. They now use main-accent.
+* FIXED: Spa variation contrast. Muted text, tinted sections and primary-alt bands now pass WCAG AA. Sites that already saved Spa keep their old palette.
+* FIXED: Nail Salon pattern layout (why-us column, hero card, featured testimonial) never loaded; it now applies under every variation.
+* FIXED: Block validation errors in about 30 patterns after WordPress core save changes, and WooCommerce patterns that never got the heading font they asked for.
+* TECHNICAL: composer check:colors (bin/check-colors.php) checks the colour contract and prints a WCAG contrast report per variation; it runs in CI and can check a child theme.
 
 = 4.11.2 - 11/12/26 =
 * Fixed: the GitHub release zip now wraps the theme in its own `elayne/` folder, so uploading it on WordPress 7.1.4 or later no longer installs the theme in a randomly named folder.
