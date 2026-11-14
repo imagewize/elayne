@@ -15,7 +15,7 @@
 <div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"740px"}} -->
 <div class="wp-block-group alignwide"><!-- wp:query-title {"type":"archive","style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"medium"} /-->
 
-<!-- wp:term-description {"textColor":"secondary"} /--></div>
+<!-- wp:term-description {"textColor":"main-accent"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
