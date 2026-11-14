@@ -6,6 +6,7 @@ vendor/*
 node_modules/*
 docs/*
 .tmp/*
+bin/*
 
 # Development files
 .DS_Store
