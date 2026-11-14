@@ -123,6 +123,10 @@ foreach ( $patterns as $file ) {
 		if ( preg_match_all( '/style="([^"]*)"/', $line, $m ) ) {
 			foreach ( $m[1] as $style ) {
 				foreach ( explode( ';', $style ) as $decl ) {
+					// WooCommerce's product-filters block writes its own overlay defaults.
+					if ( str_starts_with( trim( $decl ), '--wc-product-filter' ) ) {
+						continue;
+					}
 					if ( preg_match( '/#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?)\(/', $decl ) ) {
 						$errors[] = "$at: hard-coded colour in inline style: " . trim( $decl );
 					}
