@@ -19,8 +19,8 @@
 
 <!-- wp:group {"className":"elayne-colour-options","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 <div class="wp-block-group elayne-colour-options"><!-- wp:group {"className":"elayne-colour-option active","layout":{"type":"default"}} -->
-<div class="wp-block-group elayne-colour-option active"><!-- wp:group {"className":"elayne-colour-swatch-lg","backgroundColor":"gold","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
-<div class="wp-block-group elayne-colour-swatch-lg has-gold-background-color has-background" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"></div>
+<div class="wp-block-group elayne-colour-option active"><!-- wp:group {"className":"elayne-colour-swatch-lg","style":{"color":{"background":"#C8A96E"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+<div class="wp-block-group elayne-colour-swatch-lg has-background" style="background-color:#C8A96E;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"></div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"className":"elayne-colour-name","textColor":"main","fontSize":"xx-small","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"margin":{"top":"var:preset|spacing|2-x-small","bottom":"0"}}}} -->
 <p class="elayne-colour-name has-main-color has-text-color has-xx-small-font-size" style="margin-top:var(--wp--preset--spacing--2-x-small);margin-bottom:0;font-style:normal;font-weight:400"><?php esc_html_e( 'Tan', 'elayne' ); ?></p>
@@ -28,8 +28,8 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"elayne-colour-option","layout":{"type":"default"}} -->
-<div class="wp-block-group elayne-colour-option"><!-- wp:group {"className":"elayne-colour-swatch-lg","backgroundColor":"main","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
-<div class="wp-block-group elayne-colour-swatch-lg has-main-background-color has-background" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"></div>
+<div class="wp-block-group elayne-colour-option"><!-- wp:group {"className":"elayne-colour-swatch-lg","style":{"color":{"background":"#1A1A1A"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+<div class="wp-block-group elayne-colour-swatch-lg has-background" style="background-color:#1A1A1A;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"></div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"className":"elayne-colour-name","textColor":"main","fontSize":"xx-small","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"margin":{"top":"var:preset|spacing|2-x-small","bottom":"0"}}}} -->
 <p class="elayne-colour-name has-main-color has-text-color has-xx-small-font-size" style="margin-top:var(--wp--preset--spacing--2-x-small);margin-bottom:0;font-style:normal;font-weight:400"><?php esc_html_e( 'Black', 'elayne' ); ?></p>

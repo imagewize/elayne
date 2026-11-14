@@ -29,8 +29,8 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:paragraph {"className":"elayne-engraving-price","textColor":"orange","fontSize":"base","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<p class="elayne-engraving-price has-orange-color has-text-color has-base-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400"><?php esc_html_e( '+$35', 'elayne' ); ?></p>
+<!-- wp:paragraph {"className":"elayne-engraving-price","textColor":"accent","fontSize":"base","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+<p class="elayne-engraving-price has-accent-color has-text-color has-base-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400"><?php esc_html_e( '+$35', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

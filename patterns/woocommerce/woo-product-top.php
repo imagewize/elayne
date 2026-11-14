@@ -14,8 +14,8 @@
 ?>
 <!-- wp:group {"className":"elayne-product-top","metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-product-top","name":"Product Top Section"},"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"0","bottom":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group elayne-product-top" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--medium)"><!-- wp:group {"className":"elayne-product-top-meta","style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"center"}} -->
-<div class="wp-block-group elayne-product-top-meta"><!-- wp:paragraph {"className":"elayne-product-collection","textColor":"orange","fontSize":"x-small","style":{"typography":{"fontStyle":"normal","fontWeight":"400","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<p class="elayne-product-collection has-orange-color has-text-color has-x-small-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;letter-spacing:0.2em;text-transform:uppercase"><?php esc_html_e( 'Leather Portfolios', 'elayne' ); ?></p>
+<div class="wp-block-group elayne-product-top-meta"><!-- wp:paragraph {"className":"elayne-product-collection","textColor":"accent","fontSize":"x-small","style":{"typography":{"fontStyle":"normal","fontWeight":"400","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+<p class="elayne-product-collection has-accent-color has-text-color has-x-small-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;letter-spacing:0.2em;text-transform:uppercase"><?php esc_html_e( 'Leather Portfolios', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:woocommerce/product-rating {"isDescendentOfSingleProductTemplate":true} /--></div>

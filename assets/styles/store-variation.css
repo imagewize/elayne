@@ -25,3 +25,25 @@
 	content: ".";
 	color: var(--wp--preset--color--orange);
 }
+
+/* Shop by Category cards: warm dark gradients per card. The pattern itself uses a
+   plain main overlay so it reads under every variation. */
+.style-variation-store .is-style-elayne-woo-categories-grid > .wp-block-cover:nth-child(1) .wp-block-cover__background {
+	background: linear-gradient(160deg, #1e1a14 0%, #2d2416 50%, #1a1208 100%);
+}
+
+.style-variation-store .is-style-elayne-woo-categories-grid > .wp-block-cover:nth-child(2) .wp-block-cover__background {
+	background: linear-gradient(140deg, #2a1f0e 0%, #3d2d15 100%);
+}
+
+.style-variation-store .is-style-elayne-woo-categories-grid > .wp-block-cover:nth-child(3) .wp-block-cover__background {
+	background: linear-gradient(140deg, #0d1a1a 0%, #162828 100%);
+}
+
+.style-variation-store .is-style-elayne-woo-categories-grid > .wp-block-cover:nth-child(4) .wp-block-cover__background {
+	background: linear-gradient(140deg, #1a0d1a 0%, #2a1528 100%);
+}
+
+.style-variation-store .is-style-elayne-woo-categories-grid > .wp-block-cover:nth-child(5) .wp-block-cover__background {
+	background: linear-gradient(140deg, #0a1020 0%, #152038 100%);
+}

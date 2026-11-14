@@ -24,8 +24,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"flex","justifyContent":"stretch"}} -->
-<div class="wp-block-buttons" style="margin-top:0;margin-bottom:0"><!-- wp:button {"className":"elayne-buy-now-button is-style-fill","backgroundColor":"orange","textColor":"tertiary","width":100,"style":{"border":{"radius":"0"},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.18em","textTransform":"uppercase"}}} -->
-<div class="wp-block-button elayne-buy-now-button is-style-fill has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-orange-background-color has-tertiary-color has-text-color has-background wp-element-button" style="border-radius:0;font-style:normal;font-weight:500;letter-spacing:0.18em;text-transform:uppercase"><?php esc_html_e( 'Buy Now', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons" style="margin-top:0;margin-bottom:0"><!-- wp:button {"className":"elayne-buy-now-button is-style-fill","backgroundColor":"accent","textColor":"tertiary","width":100,"style":{"border":{"radius":"0"},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.18em","textTransform":"uppercase"}}} -->
+<div class="wp-block-button elayne-buy-now-button is-style-fill has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-accent-background-color has-tertiary-color has-text-color has-background wp-element-button" style="border-radius:0;font-style:normal;font-weight:500;letter-spacing:0.18em;text-transform:uppercase"><?php esc_html_e( 'Buy Now', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

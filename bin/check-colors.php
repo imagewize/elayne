@@ -12,7 +12,8 @@
  * - a pattern uses a colour slug outside the contract or any gradient slug;
  * - a pattern hard-codes a colour (hex, rgb(), hsl()) in block attributes or inline styles.
  *   Exception: iconColorValue / iconBackgroundColorValue, which core stores next to a
- *   contract slug (iconColor / iconBackgroundColor).
+ *   contract slug (iconColor / iconBackgroundColor), and product colour swatches
+ *   (className elayne-colour-swatch*), which show product colours, not theme colours.
  *
  * Also prints a contrast report per variation (informational, never fails):
  * the role pairs patterns rely on, with WCAG contrast ratios.
@@ -99,6 +100,11 @@ foreach ( $patterns as $file ) {
 			foreach ( array_unique( array_filter( array_merge( $m[1], $m[2], $m[3] ) ) ) as $slug ) {
 				$errors[] = "$at: gradient \"$slug\" (no gradient is shared by every variation; put it in the variation's CSS)";
 			}
+		}
+
+		// Product colour swatches show the product's colours, not the theme's.
+		if ( str_contains( $line, 'elayne-colour-swatch' ) ) {
+			continue;
 		}
 
 		// Hard-coded colours in block attribute values.

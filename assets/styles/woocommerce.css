@@ -1220,6 +1220,11 @@
 	max-width: 360px;
 }
 
+/* Muted description: the band's text colour (base) at reduced strength. */
+.elayne-hero-desc p {
+	opacity: 0.65;
+}
+
 /* ============================================
    Single Product Page — Sticky Gallery
    ============================================ */
