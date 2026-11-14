@@ -15,7 +15,7 @@
 <figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/bistro/kitchen-interior.webp" alt="<?php echo esc_attr__( 'Chef plating in the kitchen', 'elayne' ); ?>"/></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph {"className":"fandb-image-tag","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"color":{"text":"var:preset|color|main"}}} -->
-<p class="fandb-image-tag" style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--main)"><?php esc_html_e( 'Chapter 01 — The Kitchen', 'elayne' ); ?></p>
+<p class="has-text-color fandb-image-tag" style="color:var(--wp--preset--color--main);margin-top:0;margin-bottom:0"><?php esc_html_e( 'Chapter 01 — The Kitchen', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 <!-- wp:column {"width":"50%","className":"fandb-story-text","style":{"spacing":{"padding":{"top":"0"}}}} -->
@@ -26,13 +26,15 @@
 <h2 class="wp-block-heading" style="margin-top:0;margin-bottom:0;line-height:0.92"><?php echo wp_kses_post( __( 'A small room, an <em>open fire</em>, and the people we feed.', 'elayne' ) ); ?></h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontSize":"var:preset|font-size|medium","lineHeight":"1.55"},"color":{"text":"var:preset|color|main"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--main);font-size:var(--wp--preset--font-size--medium);line-height:1.55"><?php esc_html_e( 'What began as a six-table espresso bar has grown into the neighbourhood\'s table. We still roast our own beans on Mondays, still hand-write the menu each morning, still pour the first glass of natural wine the moment the lamps come on.', 'elayne' ); ?></p>
+<p class="has-text-color" style="color:var(--wp--preset--color--main);margin-top:0;margin-bottom:0;font-size:var(--wp--preset--font-size--medium);line-height:1.55"><?php esc_html_e( 'What began as a six-table espresso bar has grown into the neighbourhood\'s table. We still roast our own beans on Mondays, still hand-write the menu each morning, still pour the first glass of natural wine the moment the lamps come on.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:quote {"className":"fandb-pull-quote","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<blockquote class="wp-block-quote fandb-pull-quote" style="margin-top:0;margin-bottom:0"><p><?php esc_html_e( 'Cook for the people in front of you, with what the day brought in. Everything else is just decoration.', 'elayne' ); ?></p></blockquote>
+<blockquote class="wp-block-quote fandb-pull-quote" style="margin-top:0;margin-bottom:0"><!-- wp:paragraph -->
+<p><?php esc_html_e( 'Cook for the people in front of you, with what the day brought in. Everything else is just decoration.', 'elayne' ); ?></p>
+<!-- /wp:paragraph --></blockquote>
 <!-- /wp:quote -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontSize":"var:preset|font-size|medium","lineHeight":"1.55"},"color":{"text":"var:preset|color|main"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--main);font-size:var(--wp--preset--font-size--medium);line-height:1.55"><?php esc_html_e( 'Our kitchen is built around a single wood-fired hearth and an unreasonable obsession with provenance — vegetables from the urban farm three streets over, fish from the morning market, sourdough from our own starter.', 'elayne' ); ?></p>
+<p class="has-text-color" style="color:var(--wp--preset--color--main);margin-top:0;margin-bottom:0;font-size:var(--wp--preset--font-size--medium);line-height:1.55"><?php esc_html_e( 'Our kitchen is built around a single wood-fired hearth and an unreasonable obsession with provenance — vegetables from the urban farm three streets over, fish from the morning market, sourdough from our own starter.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"}} -->
 <div class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:paragraph {"className":"fandb-sig-name","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->

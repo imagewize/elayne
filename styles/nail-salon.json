@@ -3,6 +3,9 @@
 	"version": 3,
 	"title": "Nail Salon",
 	"settings": {
+		"custom": {
+			"styleVariation": "nail-salon"
+		},
 		"color": {
 			"defaultDuotone": false,
 			"defaultGradients": false,

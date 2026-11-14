@@ -75,8 +75,8 @@
 
 <!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:group {"className":"overlay-grid-wrap","layout":{"type":"default"}} -->
-<div class="wp-block-group overlay-grid-wrap"><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/hero-nail-salon.webp","dimRatio":0,"minHeight":480,"minHeightUnit":"px","className":"nail-salon-hero-card","style":{"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"borderColor":"primary"} -->
-<div class="wp-block-cover nail-salon-hero-card has-border-color has-primary-border-color" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);min-height:480px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/hero-nail-salon.webp" alt="<?php echo esc_attr__( 'Woman with red manicured nails', 'elayne' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
+<div class="wp-block-group overlay-grid-wrap"><!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/hero-nail-salon.webp","alt":"<?php echo esc_attr__( 'Woman with red manicured nails', 'elayne' ); ?>","dimRatio":0,"minHeight":480,"minHeightUnit":"px","className":"nail-salon-hero-card","style":{"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"borderColor":"primary"} -->
+<div class="wp-block-cover nail-salon-hero-card has-border-color has-primary-border-color" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);min-height:480px"><img class="wp-block-cover__image-background" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/hero-nail-salon.webp" alt="<?php echo esc_attr__( 'Woman with red manicured nails', 'elayne' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
 <p class="has-text-align-center"></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
@@ -86,8 +86,8 @@
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-check-rose.svg" alt=""/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"primary-accent","fontSize":"x-small"} -->
-<p class="has-primary-accent-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Certified Nail Artists', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"x-small"} -->
+<p class="has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Certified Nail Artists', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

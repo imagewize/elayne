@@ -17,12 +17,12 @@
 <!-- wp:group {"align":"full","metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-testimonials","name":"Client Voices Testimonials"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"secondary","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull has-secondary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--xx-large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400","letterSpacing":"0.22em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"accent","fontFamily":"var:preset|font-family|heading","fontSize":"small"} -->
-<p class="has-text-align-center has-accent-color has-text-color has-var-preset-font-family-heading-font-family has-small-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;letter-spacing:0.22em;text-transform:uppercase"><?php esc_html_e( 'Client Voices', 'elayne' ); ?></p>
+<div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400","letterSpacing":"0.22em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"accent","fontFamily":"heading","fontSize":"small"} -->
+<p class="has-text-align-center has-accent-color has-text-color has-heading-font-family has-small-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;letter-spacing:0.22em;text-transform:uppercase"><?php esc_html_e( 'Client Voices', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"textAlign":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"300","lineHeight":"1.1","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontSize":"x-large","fontFamily":"var:preset|font-family|heading"} -->
-<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-var-preset-font-family-heading-font-family has-x-large-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;line-height:1.1;letter-spacing:-0.01em"><?php esc_html_e( 'Trusted by', 'elayne' ); ?> <em style="color:var(--wp--preset--color--main-accent)"><?php esc_html_e( 'Practitioners', 'elayne' ); ?></em></h2>
+<!-- wp:heading {"textAlign":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"300","lineHeight":"1.1","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontSize":"x-large","fontFamily":"heading"} -->
+<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-font-family has-x-large-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;line-height:1.1;letter-spacing:-0.01em"><?php esc_html_e( 'Trusted by', 'elayne' ); ?> <em style="color:var(--wp--preset--color--main-accent)"><?php esc_html_e( 'Practitioners', 'elayne' ); ?></em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -32,14 +32,14 @@
 <p class="has-text-align-center has-accent-color has-text-color has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;letter-spacing:0.1em">★★★★★</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"italic","fontWeight":"300","lineHeight":"1.7"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"var:preset|font-family|heading","fontSize":"base"} -->
-<p class="has-text-align-center has-primary-color has-text-color has-var-preset-font-family-heading-font-family has-base-font-size" style="margin-top:0;margin-bottom:0;font-style:italic;font-weight:300;line-height:1.7"><?php echo wp_kses_post( __( '&#8220;The Sterling Portfolio has become an extension of my practice identity. Clients notice it immediately.&#8221;', 'elayne' ) ); ?></p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"italic","fontWeight":"300","lineHeight":"1.7"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"heading","fontSize":"base"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-heading-font-family has-base-font-size" style="margin-top:0;margin-bottom:0;font-style:italic;font-weight:300;line-height:1.7"><?php echo wp_kses_post( __( '&#8220;The Sterling Portfolio has become an extension of my practice identity. Clients notice it immediately.&#8221;', 'elayne' ) ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"var:preset|spacing|medium","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
 <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--medium);margin-bottom:0"><!-- wp:group {"className":"elayne-avatar-circle","backgroundColor":"secondary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group elayne-avatar-circle has-secondary-background-color has-background"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"var:preset|font-family|heading","fontSize":"medium"} -->
-<p class="has-text-align-center has-primary-color has-text-color has-var-preset-font-family-heading-font-family has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;line-height:1">M</p>
+<div class="wp-block-group elayne-avatar-circle has-secondary-background-color has-background"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"heading","fontSize":"medium"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-heading-font-family has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;line-height:1">M</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -60,14 +60,14 @@
 <p class="has-text-align-center has-accent-color has-text-color has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;letter-spacing:0.1em">★★★★★</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"italic","fontWeight":"300","lineHeight":"1.7"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"var:preset|font-family|heading","fontSize":"base"} -->
-<p class="has-text-align-center has-primary-color has-text-color has-var-preset-font-family-heading-font-family has-base-font-size" style="margin-top:0;margin-bottom:0;font-style:italic;font-weight:300;line-height:1.7"><?php echo wp_kses_post( __( '&#8220;Exceptional craftsmanship. Four years on, it looks better now than the day I received it.&#8221;', 'elayne' ) ); ?></p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"italic","fontWeight":"300","lineHeight":"1.7"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"heading","fontSize":"base"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-heading-font-family has-base-font-size" style="margin-top:0;margin-bottom:0;font-style:italic;font-weight:300;line-height:1.7"><?php echo wp_kses_post( __( '&#8220;Exceptional craftsmanship. Four years on, it looks better now than the day I received it.&#8221;', 'elayne' ) ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"var:preset|spacing|medium","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
 <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--medium);margin-bottom:0"><!-- wp:group {"className":"elayne-avatar-circle","backgroundColor":"secondary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group elayne-avatar-circle has-secondary-background-color has-background"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"var:preset|font-family|heading","fontSize":"medium"} -->
-<p class="has-text-align-center has-primary-color has-text-color has-var-preset-font-family-heading-font-family has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;line-height:1">R</p>
+<div class="wp-block-group elayne-avatar-circle has-secondary-background-color has-background"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"heading","fontSize":"medium"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-heading-font-family has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;line-height:1">R</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -88,14 +88,14 @@
 <p class="has-text-align-center has-accent-color has-text-color has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;letter-spacing:0.1em">★★★★★</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"italic","fontWeight":"300","lineHeight":"1.7"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"var:preset|font-family|heading","fontSize":"base"} -->
-<p class="has-text-align-center has-primary-color has-text-color has-var-preset-font-family-heading-font-family has-base-font-size" style="margin-top:0;margin-bottom:0;font-style:italic;font-weight:300;line-height:1.7"><?php echo wp_kses_post( __( '&#8220;We gift Elayne sets to every new associate. The quality communicates our standards perfectly.&#8221;', 'elayne' ) ); ?></p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"italic","fontWeight":"300","lineHeight":"1.7"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"heading","fontSize":"base"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-heading-font-family has-base-font-size" style="margin-top:0;margin-bottom:0;font-style:italic;font-weight:300;line-height:1.7"><?php echo wp_kses_post( __( '&#8220;We gift Elayne sets to every new associate. The quality communicates our standards perfectly.&#8221;', 'elayne' ) ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"var:preset|spacing|medium","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
 <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--medium);margin-bottom:0"><!-- wp:group {"className":"elayne-avatar-circle","backgroundColor":"secondary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group elayne-avatar-circle has-secondary-background-color has-background"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"var:preset|font-family|heading","fontSize":"medium"} -->
-<p class="has-text-align-center has-primary-color has-text-color has-var-preset-font-family-heading-font-family has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;line-height:1">S</p>
+<div class="wp-block-group elayne-avatar-circle has-secondary-background-color has-background"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontFamily":"heading","fontSize":"medium"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-heading-font-family has-medium-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:400;line-height:1">S</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

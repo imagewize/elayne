@@ -12,13 +12,13 @@
 <div class="wp-block-group alignfull is-style-fandb-hero has-secondary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:columns {"align":"wide","isStackedOnMobile":true,"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-columns alignwide" style="margin-top:0;margin-bottom:0"><!-- wp:column {"width":"55%","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}}} -->
 <div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);flex-basis:55%"><!-- wp:paragraph {"className":"fandb-hero-stamp","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontWeight":"600","letterSpacing":"0.22em","textTransform":"uppercase"},"color":{"text":"var:preset|color|primary"}}} -->
-<p class="fandb-hero-stamp" style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--primary);font-weight:600;letter-spacing:0.22em;text-transform:uppercase"><?php esc_html_e( "Tonight's Service · Open Now", 'elayne' ); ?></p>
+<p class="has-text-color fandb-hero-stamp" style="color:var(--wp--preset--color--primary);margin-top:0;margin-bottom:0;font-weight:600;letter-spacing:0.22em;text-transform:uppercase"><?php esc_html_e( "Tonight's Service · Open Now", 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":1,"className":"fandb-hero-title","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontWeight":"700","lineHeight":"0.88","letterSpacing":"-0.035em"},"color":{"text":"var:preset|color|main"}}} -->
 <h1 class="wp-block-heading fandb-hero-title has-text-color" style="color:var(--wp--preset--color--main);margin-top:0;margin-bottom:0;font-weight:700;letter-spacing:-0.035em;line-height:0.88"><?php echo wp_kses_post( __( 'Dine.<br>Drink.<br>Linger &amp; stay.', 'elayne' ) ); ?></h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontSize":"var:preset|font-size|medium","lineHeight":"1.45"},"color":{"text":"var:preset|color|main-accent"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--main-accent);font-size:var(--wp--preset--font-size--medium);line-height:1.45"><?php esc_html_e( 'A neighbourhood bistro and natural wine bar serving wood-fired plates, seasonal cocktails, and unhurried evenings on the terrace.', 'elayne' ); ?></p>
+<p class="has-text-color" style="color:var(--wp--preset--color--main-accent);margin-top:0;margin-bottom:0;font-size:var(--wp--preset--font-size--medium);line-height:1.45"><?php esc_html_e( 'A neighbourhood bistro and natural wine bar serving wood-fired plates, seasonal cocktails, and unhurried evenings on the terrace.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-buttons" style="margin-top:0;margin-bottom:0"><!-- wp:button -->
@@ -37,7 +37,7 @@
 <!-- /wp:group -->
 <!-- wp:group {"className":"fandb-hero-chip fandb-hero-chip-rating","style":{"spacing":{"padding":{"top":"0.6rem","right":"1rem","bottom":"0.6rem","left":"1rem"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group fandb-hero-chip fandb-hero-chip-rating" style="padding-top:0.6rem;padding-right:1rem;padding-bottom:0.6rem;padding-left:1rem"><!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontWeight":"600"},"color":{"text":"var:preset|color|main"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--main);font-weight:600"><span style="color:var(--wp--preset--color--border-light)">&#9733;</span> 4.9 &nbsp;·&nbsp; <?php esc_html_e( '412 reviews', 'elayne' ); ?></p>
+<p class="has-text-color" style="color:var(--wp--preset--color--main);margin-top:0;margin-bottom:0;font-weight:600"><span style="color:var(--wp--preset--color--border-light)">&#9733;</span> 4.9 &nbsp;·&nbsp; <?php esc_html_e( '412 reviews', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"fandb-hero-chip fandb-hero-chip-open","backgroundColor":"primary","style":{"spacing":{"padding":{"top":"0.6rem","right":"1rem","bottom":"0.6rem","left":"1rem"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->

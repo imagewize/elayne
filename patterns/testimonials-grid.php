@@ -41,8 +41,8 @@
 <p><strong><?php esc_html_e( 'Nicolas Johnson', 'elayne' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Monthly Member', 'elayne' ); ?></p>
+<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
+<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Monthly Member', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -63,8 +63,8 @@
 <p><strong><?php esc_html_e( 'Samantha Chen', 'elayne' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'First-time Visitor', 'elayne' ); ?></p>
+<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
+<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'First-time Visitor', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -85,8 +85,8 @@
 <p><strong><?php esc_html_e( 'Olivia Martinez', 'elayne' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Retreat Participant', 'elayne' ); ?></p>
+<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
+<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Retreat Participant', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -107,8 +107,8 @@
 <p><strong><?php esc_html_e( 'Jackie Wilson', 'elayne' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Yoga Membership', 'elayne' ); ?></p>
+<!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
+<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Yoga Membership', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

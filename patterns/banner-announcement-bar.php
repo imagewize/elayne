@@ -12,7 +12,7 @@
 <div class="wp-block-group alignfull has-base-color has-primary-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
 		<div class="wp-block-group alignwide"><!-- wp:image {"width":"20px","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-resized is-style-default"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-star-celebration-white.svg" alt="" style="width:20px"/></figure>
+			<figure class="wp-block-image size-full is-resized is-style-default"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-star-celebration-white.svg" alt="" style="width:20px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"base","fontSize":"base","fontFamily":"open-sans"} -->

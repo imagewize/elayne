@@ -23,7 +23,7 @@
 <!-- /wp:navigation -->
 
 <!-- wp:paragraph {"metadata":{"blockVisibility":{"viewport":{"mobile":false,"tablet":false,"desktop":true}}},"className":"is-style-status-pill"} -->
-<p class="wp-block-paragraph is-style-status-pill"><?php esc_html_e( 'Open · 2 spots Q2', 'elayne' ); ?></p>
+<p class="is-style-status-pill"><?php esc_html_e( 'Open · 2 spots Q2', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></header>
 <!-- /wp:group -->

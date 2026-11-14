@@ -23,7 +23,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"24px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-phone.svg" alt="" style="width:24px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-phone.svg" alt="" style="width:24px;height:auto"/></figure>
 <!-- /wp:image --><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.08em"><?php esc_html_e( 'Phone', 'elayne' ); ?></p>
@@ -36,7 +36,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"24px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-email.svg" alt="" style="width:24px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-email.svg" alt="" style="width:24px;height:auto"/></figure>
 <!-- /wp:image --><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.08em"><?php esc_html_e( 'Email', 'elayne' ); ?></p>
@@ -49,7 +49,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"24px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-location.svg" alt="" style="width:24px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-location.svg" alt="" style="width:24px;height:auto"/></figure>
 <!-- /wp:image --><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.08em"><?php esc_html_e( 'Address', 'elayne' ); ?></p>
@@ -62,7 +62,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"24px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-clock.svg" alt="" style="width:24px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/icon-clock.svg" alt="" style="width:24px;height:auto"/></figure>
 <!-- /wp:image --><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"main-accent","fontSize":"x-small"} -->
 <p class="has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.08em"><?php esc_html_e( 'Hours', 'elayne' ); ?></p>

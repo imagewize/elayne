@@ -13,11 +13,11 @@
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|xx-large","top":"var:preset|spacing|xx-large"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--xx-large)"><!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center"><?php esc_html_e( 'Page Not Found', 'elayne' ); ?></h1>
+<h1 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Page Not Found', 'elayne' ); ?></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"secondary"} -->
-<p class="has-text-align-center has-secondary-color has-text-color"><?php esc_html_e( 'Unfortunately, the page you are looking for no longer exists, or has been moved. Please try searching for your content below.', 'elayne' ); ?></p>
+<!-- wp:paragraph {"align":"center","textColor":"main-accent"} -->
+<p class="has-text-align-center has-main-accent-color has-text-color"><?php esc_html_e( 'Unfortunately, the page you are looking for no longer exists, or has been moved. Please try searching for your content below.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->

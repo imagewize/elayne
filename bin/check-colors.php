@@ -30,6 +30,10 @@
 
 const CONTRACT = array( 'primary', 'primary-accent', 'primary-alt', 'primary-alt-accent', 'on-primary', 'accent', 'accent-light', 'main', 'main-accent', 'base', 'secondary', 'tertiary', 'border-light', 'border-dark' );
 
+// What to use instead of secondary as text: it is a light tint in most variations
+// but mid teal in Spa and dark navy in Plumbing.
+const SECONDARY_HINT = 'muted text: main-accent; on a main band: base; on a primary band: on-primary';
+
 // Core helper classes that look like palette classes but are not.
 const CORE_CLASSES = array( 'text', 'background', 'link', 'border', 'icon', 'inline', 'custom', 'fixed' );
 
@@ -94,6 +98,12 @@ foreach ( $patterns as $file ) {
 
 		foreach ( array_unique( array_diff( $used, CONTRACT ) ) as $slug ) {
 			$errors[] = "$at: colour slug \"$slug\" is not in the contract";
+		}
+
+		// A separator's colour class comes from its background colour, so it is not text.
+		$text_line = preg_replace( '/<hr class="wp-block-separator[^"]*"/', '', $line );
+		if ( preg_match( '/"textColor":"secondary"|\bhas-secondary-color\b|"text":"var:preset\|color\|secondary"/', $text_line ) ) {
+			$errors[] = "$at: \"secondary\" is a background colour, not text (" . SECONDARY_HINT . ')';
 		}
 
 		if ( preg_match_all( '/"gradient":"([a-z0-9-]+)"|has-([a-z0-9-]+)-gradient-background|var:preset\|gradient\|([a-z0-9-]+)/', $line, $m ) ) {
@@ -212,6 +222,10 @@ foreach ( css_files( $root ) as $file ) {
 			}
 		}
 
+		if ( preg_match( '/(?<![\w-])color\s*:\s*var\(\s*--wp--preset--color--secondary\b/', $code ) ) {
+			$errors[] = "$at: \"secondary\" is a background colour, not text (" . SECONDARY_HINT . ')';
+		}
+
 		if ( preg_match_all( '/#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?)\([^)]*\)?/', $code, $m, PREG_OFFSET_CAPTURE ) ) {
 			foreach ( $m[0] as $hit ) {
 				list( $literal, $offset ) = $hit;
@@ -220,7 +234,8 @@ foreach ( css_files( $root ) as $file ) {
 					continue;
 				}
 				// Translucent black or white: shadows and scrims, neutral under every palette.
-				if ( preg_match( '/^rgba?\(\s*(0\s*,\s*0\s*,\s*0|255\s*,\s*255\s*,\s*255)\s*,\s*0?\.\d+\s*\)$/', $literal ) ) {
+				// Comma syntax rgba(0, 0, 0, .1) or space syntax rgb(0 0 0 / .1).
+				if ( preg_match( '/^rgba?\(\s*(0[\s,]+0[\s,]+0|255[\s,]+255[\s,]+255)\s*[,\/]\s*0?\.\d+\s*\)$/', $literal ) ) {
 					continue;
 				}
 				$errors[] = "$at: hard-coded colour in CSS: $literal";
@@ -290,6 +305,7 @@ if ( $report ) {
 			'page text on secondary'   => array( $text, $c['secondary'] ?? null ),
 			'page text on tertiary'    => array( $text, $c['tertiary'] ?? null ),
 			'base on main (dark band)' => array( $c['base'] ?? null, $c['main'] ?? null ),
+			'base on primary-alt'      => array( $c['base'] ?? null, $c['primary-alt'] ?? null ),
 			'primary on page'          => array( $c['primary'] ?? null, $page ),
 			'accent on page'           => array( $c['accent'] ?? null, $page ),
 			'accent-light on main'     => array( $c['accent-light'] ?? null, $c['main'] ?? null ),

@@ -60,7 +60,7 @@
 <h2 class="wp-block-heading"><?php esc_html_e( 'Comments', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 
-<!-- wp:comments-title {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary","fontSize":"base"} /--></div>
+<!-- wp:comments-title {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|main-accent"}}}},"textColor":"main-accent","fontSize":"base"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:comment-template -->
@@ -71,7 +71,7 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}}} -->
 <div class="wp-block-group"><!-- wp:comment-author-name /-->
 
-<!-- wp:comment-date {"style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary"} /--></div>
+<!-- wp:comment-date {"style":{"elements":{"link":{"color":{"text":"var:preset|color|main-accent"}}}},"textColor":"main-accent"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
@@ -86,7 +86,7 @@
 <!-- /wp:comment-template -->
 
 <!-- wp:group {"metadata":{"name":"Comment Pagination"},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:comments-pagination {"style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary","layout":{"type":"flex","justifyContent":"space-between"}} -->
+<div class="wp-block-group"><!-- wp:comments-pagination {"style":{"elements":{"link":{"color":{"text":"var:preset|color|main-accent"}}}},"textColor":"main-accent","layout":{"type":"flex","justifyContent":"space-between"}} -->
 <!-- wp:comments-pagination-previous /-->
 
 <!-- wp:comments-pagination-next /-->

@@ -22,8 +22,8 @@
 <h1 class="wp-block-heading has-xx-large-font-size" style="font-style:normal;font-weight:600"></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"elayne/author","args":{"field":"bio"}}}},"textColor":"secondary","className":"elayne-author-bio"} -->
-<p class="elayne-author-bio has-secondary-color has-text-color"></p>
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"elayne/author","args":{"field":"bio"}}}},"textColor":"main-accent","className":"elayne-author-bio"} -->
+<p class="elayne-author-bio has-main-accent-color has-text-color"></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

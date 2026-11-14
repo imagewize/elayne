@@ -69,7 +69,7 @@
 				{
 					"name": "Brand Alt",
 					"slug": "primary-alt",
-					"color": "#A5D8CA"
+					"color": "#3A7A80"
 				},
 				{
 					"name": "Brand Alt Accent",
@@ -99,7 +99,7 @@
 				{
 					"name": "Contrast Accent",
 					"slug": "main-accent",
-					"color": "#E1EBE9"
+					"color": "#577478"
 				},
 				{
 					"name": "Base",
@@ -109,7 +109,7 @@
 				{
 					"name": "Base Accent",
 					"slug": "secondary",
-					"color": "#6A8D94"
+					"color": "#E3EEEB"
 				},
 				{
 					"name": "Tint",

@@ -24,9 +24,14 @@
 	align-items: center;
 }
 
+/* Track text on the primary band */
+.is-style-fandb-marquee p.fandb-marquee-track {
+	color: var(--elayne-on-primary);
+}
+
 /* Star separator */
 .is-style-fandb-marquee .fandb-marquee-star {
-	color: var(--wp--preset--color--border-light);
+	color: var(--elayne-accent-light);
 	font-size: 0.7em;
 }
 
