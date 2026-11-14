@@ -15,14 +15,14 @@
  */
 ?>
 <!-- wp:group {"metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-signature-pieces","name":"Signature Pieces"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"var:preset|spacing|2-x-small"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--2-x-small);padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:columns {"align":"wide"} -->
+<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--2-x-small);padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:columns {"isStackedOnMobile":false,"align":"wide"} -->
 <div class="wp-block-columns alignwide is-not-stacked-on-mobile"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 <div class="wp-block-column"><!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontStyle":"normal","fontWeight":"400","letterSpacing":"0.22em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"accent"} -->
 <p class="has-accent-color has-text-color" style="margin-top:0;margin-bottom:0;font-size:var(--wp--preset--font-size--small);font-style:normal;font-weight:400;letter-spacing:0.22em;text-transform:uppercase"><?php esc_html_e( 'Best Sellers', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"300","lineHeight":"1.1","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontSize":"x-large","fontFamily":"var:preset|font-family|heading"} -->
-<h2 class="wp-block-heading has-primary-color has-text-color has-var-preset-font-family-heading-font-family has-x-large-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;letter-spacing:-0.01em;line-height:1.1"><?php esc_html_e( 'Signature', 'elayne' ); ?><br><em style="color:var(--wp--preset--color--main-accent)"><?php esc_html_e( 'Pieces', 'elayne' ); ?></em></h2>
+<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"300","lineHeight":"1.1","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontSize":"x-large","fontFamily":"heading"} -->
+<h2 class="wp-block-heading has-primary-color has-text-color has-heading-font-family has-x-large-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;letter-spacing:-0.01em;line-height:1.1"><?php esc_html_e( 'Signature', 'elayne' ); ?><br><em style="color:var(--wp--preset--color--main-accent)"><?php esc_html_e( 'Pieces', 'elayne' ); ?></em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:column -->
 
