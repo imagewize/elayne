@@ -38,19 +38,19 @@
 <!-- wp:group {"className":"is-style-elayne-category-meta-bar","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group is-style-elayne-category-meta-bar" style="margin-top:0;margin-bottom:0"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|xx-large"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--xx-large)"><!-- wp:paragraph {"className":"elayne-meta-item","style":{"typography":{"fontSize":"var:preset|font-size|x-small","fontStyle":"normal","fontWeight":"400","letterSpacing":"0.12em","textTransform":"uppercase"},"spacing":{"margin":"0"}},"textColor":"base"} -->
-<p class="elayne-meta-item has-base-color has-text-color" style="margin:0;font-size:var(--wp--preset--font-size--x-small);font-style:normal;font-weight:400;letter-spacing:0.12em;text-transform:uppercase"><strong style="color:var(--wp--preset--color--accent-light);font-weight:400;margin-right:0.5rem"><?php esc_html_e( 'Products', 'elayne' ); ?></strong></p>
+<p class="elayne-meta-item has-base-color has-text-color" style="margin:0;font-size:var(--wp--preset--font-size--x-small);font-style:normal;font-weight:400;letter-spacing:0.12em;text-transform:uppercase"><strong><?php esc_html_e( 'Products', 'elayne' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"elayne-meta-item","style":{"typography":{"fontSize":"var:preset|font-size|x-small","fontStyle":"normal","fontWeight":"400","letterSpacing":"0.12em","textTransform":"uppercase"},"spacing":{"margin":"0"}},"textColor":"base"} -->
-<p class="elayne-meta-item has-base-color has-text-color" style="margin:0;font-size:var(--wp--preset--font-size--x-small);font-style:normal;font-weight:400;letter-spacing:0.12em;text-transform:uppercase"><strong style="color:var(--wp--preset--color--accent-light);font-weight:400;margin-right:0.5rem"><?php esc_html_e( 'Full-grain', 'elayne' ); ?></strong> <?php esc_html_e( 'Leather', 'elayne' ); ?></p>
+<p class="elayne-meta-item has-base-color has-text-color" style="margin:0;font-size:var(--wp--preset--font-size--x-small);font-style:normal;font-weight:400;letter-spacing:0.12em;text-transform:uppercase"><strong><?php esc_html_e( 'Full-grain', 'elayne' ); ?></strong> <?php esc_html_e( 'Leather', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"elayne-meta-item","style":{"typography":{"fontSize":"var:preset|font-size|x-small","fontStyle":"normal","fontWeight":"400","letterSpacing":"0.12em","textTransform":"uppercase"},"spacing":{"margin":"0"}},"textColor":"base"} -->
-<p class="elayne-meta-item has-base-color has-text-color" style="margin:0;font-size:var(--wp--preset--font-size--x-small);font-style:normal;font-weight:400;letter-spacing:0.12em;text-transform:uppercase"><strong style="color:var(--wp--preset--color--accent-light);font-weight:400;margin-right:0.5rem"><?php esc_html_e( 'Complimentary', 'elayne' ); ?></strong> <?php esc_html_e( 'Engraving', 'elayne' ); ?></p>
+<p class="elayne-meta-item has-base-color has-text-color" style="margin:0;font-size:var(--wp--preset--font-size--x-small);font-style:normal;font-weight:400;letter-spacing:0.12em;text-transform:uppercase"><strong><?php esc_html_e( 'Complimentary', 'elayne' ); ?></strong> <?php esc_html_e( 'Engraving', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"elayne-meta-item","style":{"typography":{"fontSize":"var:preset|font-size|x-small","fontStyle":"normal","fontWeight":"400","letterSpacing":"0.12em","textTransform":"uppercase"},"spacing":{"margin":"0"}},"textColor":"base"} -->
-<p class="elayne-meta-item has-base-color has-text-color" style="margin:0;font-size:var(--wp--preset--font-size--x-small);font-style:normal;font-weight:400;letter-spacing:0.12em;text-transform:uppercase"><strong style="color:var(--wp--preset--color--accent-light);font-weight:400;margin-right:0.5rem"><?php esc_html_e( '3-5 Day', 'elayne' ); ?></strong> <?php esc_html_e( 'Dispatch', 'elayne' ); ?></p>
+<p class="elayne-meta-item has-base-color has-text-color" style="margin:0;font-size:var(--wp--preset--font-size--x-small);font-style:normal;font-weight:400;letter-spacing:0.12em;text-transform:uppercase"><strong><?php esc_html_e( '3-5 Day', 'elayne' ); ?></strong> <?php esc_html_e( 'Dispatch', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

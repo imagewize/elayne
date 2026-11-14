@@ -14,8 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Colour contract check**, `composer check:colors` (`bin/check-colors.php [theme-dir] [--report]`):
   fails when a variation lacks a contract slug, or a pattern, part or template uses a slug outside
   the contract, a gradient slug or a hard-coded colour. `--report` prints WCAG contrast per
-  variation. Pass a child theme's directory to check it. Not yet run in CI: CSS files are not
-  checked yet.
+  variation. Pass a child theme's directory to check it. Not yet run in CI.
+- The colour contract check covers stylesheets: every `.css` file except `*-variation.css` may use
+  only contract preset slugs, and no hard-coded colours apart from `var()` fallbacks and translucent
+  black or white. `/* colour-contract: ignore */` on a line, or an `ignore-start`/`ignore-end`
+  pair, exempts deliberate fixed colours (product swatches, the skip-link focus ring).
+- `--elayne-success`, `--elayne-error` and `--elayne-warning` in `style.css`: fixed status colours
+  for form and WooCommerce notice messages. Store maps them to its own `success` and `error`.
 - `--elayne-on-primary` in `style.css`: `on-primary`, or black or white chosen from `primary` on
   sites whose saved global styles predate the slug.
 - **`accent` and `accent-light` palette slugs** in `theme.json` and every style variation, added
@@ -55,6 +60,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   wellness-cover-highlight replaced with palette colours; the Nail Salon hero and CTA gradients are
   built from palette colours in `style.css`.
 - woo-our-story had a mis-nested `color.background` attribute on its story column.
+- **Shared CSS under other style variations.** Block styles and `woocommerce.css` used `orange`,
+  `orange-light`, `gold`, `accent-warm` and `base-accent`, which the default palette lacks, plus
+  `text`, `text-muted`, `surface`, `border` and `-rgb` slugs no palette defines, so those rules did
+  nothing. They now use contract colours through `--elayne-accent`, `--elayne-accent-light` and
+  `--elayne-on-primary`, and brand-tinted `rgba()` values became `color-mix()` of contract colours.
+  The category hero and meta bar sit on `main`; Store keeps its gold and orange ticker in
+  `store-variation.css`.
+- Store ticker text had no colour and inherited the page text, dark on the dark band under the
+  default palette; it now uses `on-primary`.
+- Nail Salon avatar and years-badge text is now `on-primary` (dark) instead of white, which was 3:1
+  on the rose.
+- On sites whose saved Store global styles predate `accent` and `accent-light`, accents fell back to
+  `primary` (black). `store-variation.css` now falls back to Store's orange and gold.
+- Category hero highlights, the woo-hero heading accent and the woo-newsletter rules used the raw
+  `accent-light` preset in inline styles, which is missing on such sites; they now use
+  `--elayne-accent-light` or the block-style CSS.
 
 ## [4.11.2] - 2026-11-12
 

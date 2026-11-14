@@ -136,6 +136,99 @@ foreach ( $patterns as $file ) {
 	}
 }
 
+// --- Stylesheets use only the contract ---
+
+/**
+ * CSS files to check: every stylesheet except variation-scoped ones and dependencies.
+ *
+ * `*-variation.css` files load only for their own variation and may use its palette
+ * and literal colours freely.
+ *
+ * @param string $root Theme directory.
+ * @return string[]
+ */
+function css_files( string $root ): array {
+	$out = array();
+	$it  = new RecursiveIteratorIterator(
+		new RecursiveCallbackFilterIterator(
+			new RecursiveDirectoryIterator( $root, FilesystemIterator::SKIP_DOTS ),
+			static fn( $f ) => ! in_array( $f->getFilename(), array( 'vendor', 'node_modules', '.git' ), true )
+		)
+	);
+	foreach ( $it as $f ) {
+		if ( 'css' === $f->getExtension() && ! str_ends_with( $f->getFilename(), '-variation.css' ) ) {
+			$out[] = $f->getPathname();
+		}
+	}
+	sort( $out );
+	return $out;
+}
+
+foreach ( css_files( $root ) as $file ) {
+	$rel        = substr( $file, strlen( $root ) + 1 );
+	$in_comment = false;
+	$ignoring   = false;
+
+	foreach ( file( $file ) as $n => $line ) {
+		$at = $rel . ':' . ( $n + 1 );
+
+		if ( str_contains( $line, 'colour-contract: ignore-start' ) ) {
+			$ignoring = true;
+		}
+		if ( str_contains( $line, 'colour-contract: ignore-end' ) ) {
+			$ignoring = false;
+			continue;
+		}
+		if ( $ignoring || preg_match( '/colour-contract: ignore\b(?!-)/', $line ) ) {
+			continue;
+		}
+
+		// Drop comments, which may span lines.
+		$code = '';
+		$rest = $line;
+		while ( '' !== $rest ) {
+			if ( $in_comment ) {
+				$end = strpos( $rest, '*/' );
+				if ( false === $end ) {
+					break;
+				}
+				$rest       = substr( $rest, $end + 2 );
+				$in_comment = false;
+			} else {
+				$start = strpos( $rest, '/*' );
+				if ( false === $start ) {
+					$code .= $rest;
+					break;
+				}
+				$code      .= substr( $rest, 0, $start );
+				$rest       = substr( $rest, $start + 2 );
+				$in_comment = true;
+			}
+		}
+
+		if ( preg_match_all( '/--wp--preset--color--([a-z0-9-]+)/', $code, $m ) ) {
+			foreach ( array_unique( array_diff( $m[1], CONTRACT ) ) as $slug ) {
+				$errors[] = "$at: colour slug \"$slug\" is not in the contract";
+			}
+		}
+
+		if ( preg_match_all( '/#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?)\([^)]*\)?/', $code, $m, PREG_OFFSET_CAPTURE ) ) {
+			foreach ( $m[0] as $hit ) {
+				list( $literal, $offset ) = $hit;
+				// A var() fallback only applies where the variable is missing.
+				if ( preg_match( '/var\(\s*--[a-z0-9-]+\s*,\s*$/i', substr( $code, 0, $offset ) ) ) {
+					continue;
+				}
+				// Translucent black or white: shadows and scrims, neutral under every palette.
+				if ( preg_match( '/^rgba?\(\s*(0\s*,\s*0\s*,\s*0|255\s*,\s*255\s*,\s*255)\s*,\s*0?\.\d+\s*\)$/', $literal ) ) {
+					continue;
+				}
+				$errors[] = "$at: hard-coded colour in CSS: $literal";
+			}
+		}
+	}
+}
+
 // --- Contrast report ---
 
 /**

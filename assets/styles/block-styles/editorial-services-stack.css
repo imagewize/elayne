@@ -18,7 +18,7 @@
 	font-weight: 400;
 	text-transform: none;
 	letter-spacing: -0.01em;
-	color: var(--wp--preset--color--accent-warm);
+	color: var(--elayne-accent);
 }
 
 .wp-block-group.is-style-editorial-services-stack .editorial-service-list {

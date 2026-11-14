@@ -65,7 +65,7 @@ html.elayne-page-loaded .wp-block-heading.is-style-editorial-hero-heading .line:
 	font-weight: 400;
 	text-transform: none;
 	letter-spacing: -0.015em;
-	color: var(--wp--preset--color--accent-warm);
+	color: var(--elayne-accent);
 }
 
 /* Stats column — hidden on narrow viewports, visible at ≥1000px */

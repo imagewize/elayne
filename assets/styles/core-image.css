@@ -102,7 +102,7 @@
 
 .is-style-lift-shadow:hover {
 	transform: translateY(-8px);
-	box-shadow: 0 20px 40px rgba(11, 19, 36, 0.15);
+	box-shadow: 0 20px 40px color-mix(in srgb, var(--wp--preset--color--main) 15%, transparent);
 }
 
 .is-style-lift-shadow:active {

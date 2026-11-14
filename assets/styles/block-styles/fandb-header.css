@@ -16,7 +16,7 @@
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: rgba(248, 244, 235, 0.92);
+	background: color-mix(in srgb, var(--wp--preset--color--base) 92%, transparent);
 	backdrop-filter: saturate(120%) blur(10px);
 	-webkit-backdrop-filter: saturate(120%) blur(10px);
 	z-index: -1;
@@ -26,7 +26,7 @@
 /* ── Topbar (dark strip) ── */
 .is-style-fandb-header .fandb-header-topbar {
 	/* background set via backgroundColor block attr; border separates it from main bar */
-	border-bottom: 1px solid rgba(10, 16, 36, 0.12);
+	border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--main) 12%, transparent);
 }
 
 .is-style-fandb-header .fandb-topbar-inner {
@@ -69,7 +69,7 @@
 
 .is-style-fandb-header .fandb-topbar-socials a:hover,
 .is-style-fandb-header .fandb-social-link:hover {
-	color: #fff !important;
+	color: var(--wp--preset--color--base) !important;
 }
 
 /* ── Main header bar — 3-column grid: [nav left] [brand center] [cta right] ── */

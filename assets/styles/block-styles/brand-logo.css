@@ -18,7 +18,7 @@
 	display: inline-block;
 	width: 0.55em;
 	height: 0.55em;
-	background: var(--wp--preset--color--accent-warm);
+	background: var(--elayne-accent);
 	border-radius: 999px;
 	transform: translateY(-0.05em);
 	flex-shrink: 0;

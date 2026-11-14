@@ -15,7 +15,7 @@
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: rgba(253, 251, 247, 0.78);
+	background: color-mix(in srgb, var(--wp--preset--color--base) 78%, transparent);
 	backdrop-filter: saturate(140%) blur(14px);
 	-webkit-backdrop-filter: saturate(140%) blur(14px);
 	z-index: -1;

@@ -18,7 +18,7 @@
 .wp-element-button:hover,
 .wp-block-button__link:hover {
 	transform: scale(1.02);
-	box-shadow: 0 4px 12px rgba(11, 19, 36, 0.15);
+	box-shadow: 0 4px 12px color-mix(in srgb, var(--wp--preset--color--main) 15%, transparent);
 }
 
 /* Active state (click feedback) */
@@ -118,9 +118,9 @@
 
 .is-style-glow .wp-block-button__link:hover {
 	box-shadow:
-		0 0 20px rgba(31, 41, 55, 0.4),
-		0 0 40px rgba(31, 41, 55, 0.2),
-		0 4px 12px rgba(11, 19, 36, 0.15);
+		0 0 20px color-mix(in srgb, var(--wp--preset--color--primary) 40%, transparent),
+		0 0 40px color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent),
+		0 4px 12px color-mix(in srgb, var(--wp--preset--color--main) 15%, transparent);
 	transform: translateY(-2px);
 }
 

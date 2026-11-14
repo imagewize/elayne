@@ -23,13 +23,13 @@
 	width: 6px;
 	height: 6px;
 	border-radius: 999px;
-	background: var(--wp--preset--color--accent-warm);
-	box-shadow: 0 0 0 0 rgba(230, 92, 0, 0.6);
+	background: var(--elayne-accent);
+	box-shadow: 0 0 0 0 color-mix(in srgb, var(--elayne-accent) 60%, transparent);
 	animation: elayne-status-pulse 2.2s ease-out infinite;
 }
 
 @keyframes elayne-status-pulse {
-	0%   { box-shadow: 0 0 0 0 rgba(230, 92, 0, 0.55); }
-	70%  { box-shadow: 0 0 0 8px rgba(230, 92, 0, 0); }
-	100% { box-shadow: 0 0 0 0 rgba(230, 92, 0, 0); }
+	0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--elayne-accent) 55%, transparent); }
+	70%  { box-shadow: 0 0 0 8px color-mix(in srgb, var(--elayne-accent) 0%, transparent); }
+	100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--elayne-accent) 0%, transparent); }
 }
