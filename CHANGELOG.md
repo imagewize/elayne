@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Colour contract check**, `composer check:colors` (`bin/check-colors.php [theme-dir] [--report]`):
   fails when a variation lacks a contract slug, or a pattern, part or template uses a slug outside
   the contract, a gradient slug or a hard-coded colour. `--report` prints WCAG contrast per
-  variation. Pass a child theme's directory to check it. Not yet run in CI.
+  variation. Pass a child theme's directory to check it. Runs in CI (Pattern Compliance workflow).
 - The colour contract check covers stylesheets: every `.css` file except `*-variation.css` may use
   only contract preset slugs, and no hard-coded colours apart from `var()` fallbacks and translucent
   black or white. `/* colour-contract: ignore */` on a line, or an `ignore-start`/`ignore-end`
@@ -33,6 +33,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   tint of `primary` on sites whose saved global styles predate the slugs.
 - The contrast report (`composer check:colors --report`) shows `accent` on the page and
   `accent-light` on `main`.
+- The colour check rejects `secondary` as a text colour (it is a background colour: a light tint
+  in most variations, mid teal in Spa, dark navy in Plumbing), in patterns and in CSS `color`.
+- The contrast report shows `base` on `primary-alt`.
 
 ### Fixed
 - **Plumbing patterns under other style variations.** They were built for Plumbing's dark page:
@@ -76,6 +79,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Category hero highlights, the woo-hero heading accent and the woo-newsletter rules used the raw
   `accent-light` preset in inline styles, which is missing on such sites; they now use
   `--elayne-accent-light` or the block-style CSS.
+- **Spa palette contrast.** `main-accent` `#E1EBE9` → `#577478` (muted text 1.22:1 → 5.0:1),
+  `secondary` `#E3EEEB` instead of `#6A8D94` (page text on tinted sections 2.66:1 → 8.0:1),
+  `primary-alt` `#3A7A80` instead of `#A5D8CA` (white text on primary-alt bands and button hover
+  1.58:1 → 4.9:1). Sites that already saved the Spa variation keep their old palette.
+- **Muted text used `secondary`**, a background colour: comment titles, dates and links in every
+  post and page template, footer meta, post-loop terms and testimonial roles were 1.4:1 on the
+  default page. They now use `main-accent`.
+- Text on `primary`, `primary-alt` and `main` bands in legal-stats, client-success-stories,
+  fandb-marquee, fandb-reserve and the fandb header topbar now uses `on-primary` or `base`
+  (several were 1.1–1.7:1 in some variations).
+- **Nail Salon pattern layout never loaded.** `nail-salon.json` lacked `custom.styleVariation`, so
+  `nail-salon-variation.css` (why-us layout, hero card clipping, featured testimonial tint) was
+  dead. The pattern layout now lives in `style.css` and applies under every variation; the
+  variation file keeps only Nail Salon looks (nav hover, light floating badge, form tweaks).
+- nail-salon-hero floating badge text was invisible (`primary-accent` on a light badge).
+- Contact Form 7 submit text uses `on-primary` (white on Nail Salon's rose was 3:1).
+- **Block validation across 30 patterns**, found by a full sentinel run: sized images save
+  `height:auto`; covers save the image before the overlay and carry its alt; paragraphs with a
+  custom text colour save `has-text-color`; lists save `wp-block-list`; wrappers carry the margins
+  their attributes set; WooCommerce filter blocks in shop-filters-sidebar get their wrappers; the
+  fandb-story pull quote holds an inner paragraph; event-upcoming-grid buttons size the link, not
+  the wrapper; runtime classes (`wp-block-paragraph`, `is-layout-constrained`) removed from saved
+  markup; legal-team closed a group before its `div`; the 404 heading lacked `wp-block-heading`.
+- **WooCommerce patterns never got the heading font they ask for.** 29 blocks set `fontFamily` to
+  `var:preset|font-family|heading` instead of `heading`, which renders a class no CSS matches.
+
 
 ## [4.11.2] - 2026-11-12
 
