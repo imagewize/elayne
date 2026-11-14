@@ -290,6 +290,7 @@ if ( $report ) {
 			'page text on secondary'   => array( $text, $c['secondary'] ?? null ),
 			'page text on tertiary'    => array( $text, $c['tertiary'] ?? null ),
 			'base on main (dark band)' => array( $c['base'] ?? null, $c['main'] ?? null ),
+			'base on primary-alt'      => array( $c['base'] ?? null, $c['primary-alt'] ?? null ),
 			'primary on page'          => array( $c['primary'] ?? null, $page ),
 			'accent on page'           => array( $c['accent'] ?? null, $page ),
 			'accent-light on main'     => array( $c['accent-light'] ?? null, $c['main'] ?? null ),
