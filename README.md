@@ -45,10 +45,13 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 
 ## Installation
 
-1. Download the theme from [GitHub releases](https://github.com/imagewize/elayne/releases) or WordPress.org
-2. Upload via **Appearance → Themes → Add New** or manually to `/wp-content/themes/elayne/`
-3. Activate via **Appearance → Themes**
-4. Start designing in **Appearance → Editor**
+Elayne is in the [WordPress.org theme directory](https://wordpress.org/themes/elayne/):
+
+1. In your dashboard, go to **Appearance → Themes → Add New Theme** and search for "Elayne"
+2. Click **Install**, then **Activate**
+3. Start designing in **Appearance → Editor**
+
+To install manually instead, download the zip from [WordPress.org](https://wordpress.org/themes/elayne/) or [GitHub releases](https://github.com/imagewize/elayne/releases) and upload it via **Appearance → Themes → Add New Theme → Upload Theme**.
 
 For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
