@@ -87,8 +87,8 @@
 			</ul>
 			<!-- /wp:list -->
 
-			<!-- wp:separator {"className":"is-style-dots","style":{"color":{"background":"rgba(255,255,255,0.3)"}}} -->
-			<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background is-style-dots" style="background-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.3)"/>
+			<!-- wp:separator {"backgroundColor":"base","className":"is-style-dots"} -->
+			<hr class="wp-block-separator has-text-color has-base-color has-alpha-channel-opacity has-base-background-color has-background is-style-dots"/>
 			<!-- /wp:separator -->
 
 			<!-- wp:heading {"level":4,"textAlign":"center","textColor":"base","fontSize":"x-large"} -->

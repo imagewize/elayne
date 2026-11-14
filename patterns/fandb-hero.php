@@ -41,8 +41,8 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"fandb-hero-chip fandb-hero-chip-open","backgroundColor":"primary","style":{"spacing":{"padding":{"top":"0.6rem","right":"1rem","bottom":"0.6rem","left":"1rem"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group fandb-hero-chip fandb-hero-chip-open has-primary-background-color has-background" style="padding-top:0.6rem;padding-right:1rem;padding-bottom:0.6rem;padding-left:1rem"><!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontWeight":"600"},"color":{"text":"#ffffff"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:#ffffff;font-weight:600"><?php esc_html_e( 'Open Now · Table for 2 →', 'elayne' ); ?></p>
+<div class="wp-block-group fandb-hero-chip fandb-hero-chip-open has-primary-background-color has-background" style="padding-top:0.6rem;padding-right:1rem;padding-bottom:0.6rem;padding-left:1rem"><!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontWeight":"600"}},"textColor":"on-primary"} -->
+<p class="has-on-primary-color has-text-color" style="margin-top:0;margin-bottom:0;font-weight:600"><?php esc_html_e( 'Open Now · Table for 2 →', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>

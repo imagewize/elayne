@@ -15,8 +15,8 @@
 		<!-- /wp:heading -->
 
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}}} -->
-		<div class="wp-block-columns alignwide"><!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","color":"#ebeced"}},"backgroundColor":"base"} -->
-		<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-color:#ebeced;border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:paragraph {"fontSize":"medium"} -->
+		<div class="wp-block-columns alignwide"><!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px"}},"backgroundColor":"base","borderColor":"border-light"} -->
+		<div class="wp-block-column has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:paragraph {"fontSize":"medium"} -->
 			<p class="has-medium-font-size">"<?php esc_html_e( 'Working with this team has transformed our approach to customer acquisition. We\'ve seen a 150% increase in qualified leads within just three months.', 'elayne' ); ?>"</p>
 			<!-- /wp:paragraph -->
 
@@ -34,8 +34,8 @@
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","color":"#ebeced"}},"backgroundColor":"base"} -->
-		<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-color:#ebeced;border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:paragraph {"fontSize":"medium"} -->
+		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px"}},"backgroundColor":"base","borderColor":"border-light"} -->
+		<div class="wp-block-column has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:paragraph {"fontSize":"medium"} -->
 			<p class="has-medium-font-size">"<?php esc_html_e( 'The ROI speaks for itself. Professional service, strategic thinking, and genuine partnership. Couldn\'t recommend them more highly.', 'elayne' ); ?>"</p>
 			<!-- /wp:paragraph -->
 

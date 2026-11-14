@@ -145,8 +145,8 @@
 <p class="has-base-color has-text-color has-body-font-family has-xx-small-font-size" style="margin-top:0"><?php esc_html_e( 'Classic Italian coffee-flavored dessert', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:separator {"className":"has-alpha-channel-opacity menu-separator","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}},"color":{"background":"rgba(255,255,255,0.3)"}}} -->
-<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background menu-separator" style="margin-top:var(--wp--preset--spacing--x-small);margin-bottom:var(--wp--preset--spacing--x-small);background-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.3)"/>
+<!-- wp:separator {"className":"has-alpha-channel-opacity menu-separator","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"backgroundColor":"base"} -->
+<hr class="wp-block-separator has-text-color has-base-color has-alpha-channel-opacity has-base-background-color has-background menu-separator" style="margin-top:var(--wp--preset--spacing--x-small);margin-bottom:var(--wp--preset--spacing--x-small)"/>
 <!-- /wp:separator -->
 
 <!-- wp:group {"className":"menu-item","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
@@ -163,8 +163,8 @@
 <p class="has-base-color has-text-color has-body-font-family has-xx-small-font-size" style="margin-top:0"><?php esc_html_e( 'Warm chocolate cake with vanilla ice cream', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:separator {"className":"has-alpha-channel-opacity menu-separator","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}},"color":{"background":"rgba(255,255,255,0.3)"}}} -->
-<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background menu-separator" style="margin-top:var(--wp--preset--spacing--x-small);margin-bottom:var(--wp--preset--spacing--x-small);background-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.3)"/>
+<!-- wp:separator {"className":"has-alpha-channel-opacity menu-separator","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"backgroundColor":"base"} -->
+<hr class="wp-block-separator has-text-color has-base-color has-alpha-channel-opacity has-base-background-color has-background menu-separator" style="margin-top:var(--wp--preset--spacing--x-small);margin-bottom:var(--wp--preset--spacing--x-small)"/>
 <!-- /wp:separator -->
 
 <!-- wp:group {"className":"menu-item","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
