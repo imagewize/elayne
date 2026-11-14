@@ -14,10 +14,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Colour contract check**, `composer check:colors` (`bin/check-colors.php [theme-dir] [--report]`):
   fails when a variation lacks a contract slug, or a pattern, part or template uses a slug outside
   the contract, a gradient slug or a hard-coded colour. `--report` prints WCAG contrast per
-  variation. Pass a child theme's directory to check it. Not yet run in CI: other patterns still
-  have violations.
+  variation. Pass a child theme's directory to check it. Not yet run in CI: CSS files are not
+  checked yet.
 - `--elayne-on-primary` in `style.css`: `on-primary`, or black or white chosen from `primary` on
   sites whose saved global styles predate the slug.
+- **`accent` and `accent-light` palette slugs** in `theme.json` and every style variation, added
+  to the colour contract: `accent` reads on the page (kickers, eyebrows, accent buttons),
+  `accent-light` reads on `main` (eyebrows and highlights on dark bands). Each variation has values
+  that fit its palette and pass WCAG AA. Store's accent is `#C24E00`, a darker version of its orange.
+  The old `orange`, `orange-light`, `gold` and `accent-warm` slugs stay defined, so saved content
+  keeps its colours.
+- `--elayne-accent` and `--elayne-accent-light` in `style.css`: fallbacks to `primary` and a light
+  tint of `primary` on sites whose saved global styles predate the slugs.
+- The contrast report (`composer check:colors --report`) shows `accent` on the page and
+  `accent-light` on `main`.
 
 ### Fixed
 - **Plumbing patterns under other style variations.** They were built for Plumbing's dark page:
@@ -33,6 +43,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Text-colour marks (`<mark class="has-inline-color">`) showed the browser's yellow highlight
   outside the Plumbing variation.
 - Headings on an `on-primary` band took the theme heading colour, which can be `primary` itself.
+- **WooCommerce/Store patterns under other style variations.** They used `gold` and `base-accent`,
+  which only Store defines, and dark bands in `primary`, which is light in Spa and Nail Salon. They
+  now use `accent`, `accent-light`, `secondary`, `base` and `main`. Store keeps its Shop by Category
+  card gradients through `store-variation.css`.
+- Product colour swatches showed theme colours (the "Black" swatch was green under Food &
+  Beverage); they now use fixed product colours and are exempt from the colour check.
+- Undefined slugs `neutral`, `background-alt` and `contact-bg` (client-logo-wall,
+  two-column-review, menu-drinks-grid) rendered no background; they now use `tertiary`.
+- Hard-coded colours in fandb-hero, menu-food-grid, pricing-comparison, testimonial-card and
+  wellness-cover-highlight replaced with palette colours; the Nail Salon hero and CTA gradients are
+  built from palette colours in `style.css`.
+- woo-our-story had a mis-nested `color.background` attribute on its story column.
 
 ## [4.11.2] - 2026-11-12
 
