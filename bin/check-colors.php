@@ -234,7 +234,8 @@ foreach ( css_files( $root ) as $file ) {
 					continue;
 				}
 				// Translucent black or white: shadows and scrims, neutral under every palette.
-				if ( preg_match( '/^rgba?\(\s*(0\s*,\s*0\s*,\s*0|255\s*,\s*255\s*,\s*255)\s*,\s*0?\.\d+\s*\)$/', $literal ) ) {
+				// Comma syntax rgba(0, 0, 0, .1) or space syntax rgb(0 0 0 / .1).
+				if ( preg_match( '/^rgba?\(\s*(0[\s,]+0[\s,]+0|255[\s,]+255[\s,]+255)\s*[,\/]\s*0?\.\d+\s*\)$/', $literal ) ) {
 					continue;
 				}
 				$errors[] = "$at: hard-coded colour in CSS: $literal";
