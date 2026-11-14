@@ -12,13 +12,13 @@
 <div class="wp-block-group alignfull is-style-fandb-reserve has-primary-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:columns {"align":"wide","isStackedOnMobile":true,"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-columns alignwide" style="margin-top:0;margin-bottom:0"><!-- wp:column {"width":"55%"} -->
 <div class="wp-block-column" style="flex-basis:55%"><!-- wp:paragraph {"className":"fandb-eyebrow","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"color":{"text":"var:preset|color|accent-light"}}} -->
-<p class="fandb-eyebrow" style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--accent-light)"><?php esc_html_e( 'Reservations', 'elayne' ); ?></p>
+<p class="has-text-color fandb-eyebrow" style="color:var(--wp--preset--color--accent-light);margin-top:0;margin-bottom:0"><?php esc_html_e( 'Reservations', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"lineHeight":"0.9","letterSpacing":"-0.03em"},"color":{"text":"var:preset|color|base"}}} -->
 <h2 class="wp-block-heading has-text-color" style="color:var(--wp--preset--color--base);margin-top:0;margin-bottom:0;letter-spacing:-0.03em;line-height:0.9"><?php echo wp_kses_post( __( 'Hold a seat,<br><em>we\'ll keep the candle lit.</em>', 'elayne' ) ); ?></h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontSize":"var:preset|font-size|medium","lineHeight":"1.5"},"color":{"text":"var:preset|color|base"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--base);font-size:var(--wp--preset--font-size--medium);line-height:1.5"><?php esc_html_e( 'Tables are released eight weeks ahead. Walk-ins welcome at the bar — there are always two stools waiting.', 'elayne' ); ?></p>
+<p class="has-text-color" style="color:var(--wp--preset--color--base);margin-top:0;margin-bottom:0;font-size:var(--wp--preset--font-size--medium);line-height:1.5"><?php esc_html_e( 'Tables are released eight weeks ahead. Walk-ins welcome at the bar — there are always two stools waiting.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-buttons" style="margin-top:0;margin-bottom:0"><!-- wp:button {"backgroundColor":"base","textColor":"main","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"}}} -->

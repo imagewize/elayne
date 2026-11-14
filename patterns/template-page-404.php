@@ -13,7 +13,7 @@
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|xx-large","top":"var:preset|spacing|xx-large"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--xx-large)"><!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center"><?php esc_html_e( 'Page Not Found', 'elayne' ); ?></h1>
+<h1 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Page Not Found', 'elayne' ); ?></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"main-accent"} -->
