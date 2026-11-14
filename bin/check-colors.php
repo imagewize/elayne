@@ -12,7 +12,8 @@
  * - a pattern uses a colour slug outside the contract or any gradient slug;
  * - a pattern hard-codes a colour (hex, rgb(), hsl()) in block attributes or inline styles.
  *   Exception: iconColorValue / iconBackgroundColorValue, which core stores next to a
- *   contract slug (iconColor / iconBackgroundColor).
+ *   contract slug (iconColor / iconBackgroundColor), and product colour swatches
+ *   (className elayne-colour-swatch*), which show product colours, not theme colours.
  *
  * Also prints a contrast report per variation (informational, never fails):
  * the role pairs patterns rely on, with WCAG contrast ratios.
@@ -27,7 +28,7 @@
 
 // phpcs:disable WordPress.Security.EscapeOutput, WordPress.WP.GlobalVariablesOverride, WordPress.WP.AlternativeFunctions, Universal.Operators.DisallowShortTernary -- CLI script outside WordPress.
 
-const CONTRACT = array( 'primary', 'primary-accent', 'primary-alt', 'primary-alt-accent', 'on-primary', 'main', 'main-accent', 'base', 'secondary', 'tertiary', 'border-light', 'border-dark' );
+const CONTRACT = array( 'primary', 'primary-accent', 'primary-alt', 'primary-alt-accent', 'on-primary', 'accent', 'accent-light', 'main', 'main-accent', 'base', 'secondary', 'tertiary', 'border-light', 'border-dark' );
 
 // Core helper classes that look like palette classes but are not.
 const CORE_CLASSES = array( 'text', 'background', 'link', 'border', 'icon', 'inline', 'custom', 'fixed' );
@@ -101,6 +102,11 @@ foreach ( $patterns as $file ) {
 			}
 		}
 
+		// Product colour swatches show the product's colours, not the theme's.
+		if ( str_contains( $line, 'elayne-colour-swatch' ) ) {
+			continue;
+		}
+
 		// Hard-coded colours in block attribute values.
 		if ( preg_match_all( '/"([A-Za-z]+)":"([^"]*)"/', $line, $m, PREG_SET_ORDER ) ) {
 			foreach ( $m as $attr ) {
@@ -117,6 +123,10 @@ foreach ( $patterns as $file ) {
 		if ( preg_match_all( '/style="([^"]*)"/', $line, $m ) ) {
 			foreach ( $m[1] as $style ) {
 				foreach ( explode( ';', $style ) as $decl ) {
+					// WooCommerce's product-filters block writes its own overlay defaults.
+					if ( str_starts_with( trim( $decl ), '--wc-product-filter' ) ) {
+						continue;
+					}
 					if ( preg_match( '/#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?)\(/', $decl ) ) {
 						$errors[] = "$at: hard-coded colour in inline style: " . trim( $decl );
 					}
@@ -188,6 +198,8 @@ if ( $report ) {
 			'page text on tertiary'    => array( $text, $c['tertiary'] ?? null ),
 			'base on main (dark band)' => array( $c['base'] ?? null, $c['main'] ?? null ),
 			'primary on page'          => array( $c['primary'] ?? null, $page ),
+			'accent on page'           => array( $c['accent'] ?? null, $page ),
+			'accent-light on main'     => array( $c['accent-light'] ?? null, $c['main'] ?? null ),
 			'button text on button'    => array( $btn_tx, $btn_bg ),
 		);
 

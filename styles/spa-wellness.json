@@ -82,6 +82,16 @@
 					"color": "#2D4A4E"
 				},
 				{
+					"name": "Accent",
+					"slug": "accent",
+					"color": "#2F6E77"
+				},
+				{
+					"name": "Accent Light",
+					"slug": "accent-light",
+					"color": "#A5D8CA"
+				},
+				{
 					"name": "Contrast",
 					"slug": "main",
 					"color": "#2D4A4E"

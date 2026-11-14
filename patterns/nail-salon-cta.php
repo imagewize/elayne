@@ -8,8 +8,8 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Nail Salon Booking CTA","patternName":"elayne/nail-salon-cta"},"align":"full","style":{"color":{"gradient":"linear-gradient(135deg, #A85560, #8B4350)"},"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg, #A85560, #8B4350);margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"Nail Salon Booking CTA","patternName":"elayne/nail-salon-cta"},"align":"full","className":"nail-salon-cta-section","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"backgroundColor":"primary-alt","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull nail-salon-cta-section has-primary-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"base","fontSize":"x-small"} -->
 <p class="has-text-align-center has-base-color has-text-color has-x-small-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase"><?php esc_html_e( 'Limited Spots Available', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
@@ -27,8 +27,8 @@
 <div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-primary-alt-color has-base-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Book an Appointment', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"textColor":"base","className":"is-style-outline","style":{"border":{"radius":"var:preset|border-radius|pill","color":"rgba(255,255,255,0.7)","width":"1.5px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-text-color has-border-color has-custom-font-size wp-element-button" style="border-color:rgba(255,255,255,0.7);border-width:1.5px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Call Us Now', 'elayne' ); ?></a></div>
+<!-- wp:button {"textColor":"base","className":"is-style-outline","style":{"border":{"radius":"var:preset|border-radius|pill","width":"1.5px"},"typography":{"fontSize":"var:preset|font-size|base"}},"borderColor":"base"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-text-color has-border-color has-base-border-color has-custom-font-size wp-element-button" style="border-width:1.5px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Call Us Now', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

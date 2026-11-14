@@ -31,6 +31,16 @@
 					"color": "#FFFFFF"
 				},
 				{
+					"name": "Accent",
+					"slug": "accent",
+					"color": "#B45309"
+				},
+				{
+					"name": "Accent Light",
+					"slug": "accent-light",
+					"color": "#E8A82C"
+				},
+				{
 					"slug": "main",
 					"color": "#0A1024",
 					"name": "Ink Text"

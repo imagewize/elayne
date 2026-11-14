@@ -17,7 +17,7 @@
 <div class="wp-block-columns are-vertically-aligned-top"><!-- wp:column {"width":"85%"} -->
 <div class="wp-block-column" style="flex-basis:85%"><!-- wp:heading {"level":1,"className":"is-style-editorial-hero-heading","style":{"typography":{"letterSpacing":"-0.035em","textTransform":"uppercase"}},"fontSize":"display"} -->
 <h1 class="wp-block-heading is-style-editorial-hero-heading has-display-font-size" style="letter-spacing:-0.035em;text-transform:uppercase"><span class="line"><?php esc_html_e( 'Quietly', 'elayne' ); ?></span>
-<span class="line"><em class="has-accent-warm-color has-text-color has-serif-font-family"><?php esc_html_e( 'opinionated', 'elayne' ); ?></em></span>
+<span class="line"><em class="has-accent-color has-text-color has-serif-font-family"><?php esc_html_e( 'opinionated', 'elayne' ); ?></em></span>
 <span class="line"><?php esc_html_e( 'design system.', 'elayne' ); ?></span></h1>
 <!-- /wp:heading --></div>
 <!-- /wp:column -->
