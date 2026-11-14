@@ -19,7 +19,7 @@
 	position: absolute;
 	top: 1rem;
 	left: 1rem;
-	background: #fff;
+	background: var(--wp--preset--color--base);
 	padding: 0.5rem 0.9rem;
 	border-radius: 999px;
 	font-size: 0.7rem;

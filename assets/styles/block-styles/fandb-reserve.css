@@ -23,7 +23,7 @@
 
 /* Hours table */
 .is-style-fandb-reserve .fandb-hours-table {
-	border-top: 1px solid rgba(184, 196, 245, 0.25);
+	border-top: 1px solid color-mix(in srgb, currentColor 25%, transparent);
 }
 
 /* Each row: day / dotted leader / time */
@@ -32,7 +32,7 @@
 	grid-template-columns: auto 1fr auto;
 	gap: 1rem;
 	padding: 1rem 0;
-	border-bottom: 1px solid rgba(184, 196, 245, 0.15);
+	border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent);
 	align-items: baseline;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .is-style-fandb-reserve .fandb-hours-leader {
-	border-bottom: 1.5px dotted rgba(184, 196, 245, 0.3);
+	border-bottom: 1.5px dotted color-mix(in srgb, currentColor 30%, transparent);
 	align-self: end;
 	margin-bottom: 0.45rem;
 	height: 0;

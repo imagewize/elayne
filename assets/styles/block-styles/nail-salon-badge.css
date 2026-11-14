@@ -5,8 +5,8 @@
  */
 
 .wp-block-group.is-style-nail-salon-badge {
-	background: rgba( 201, 114, 124, 0.12 ) !important;
-	border-color: rgba( 201, 114, 124, 0.35 ) !important;
+	background: color-mix(in srgb, var(--wp--preset--color--primary) 12%, transparent) !important;
+	border-color: color-mix(in srgb, var(--wp--preset--color--primary) 35%, transparent) !important;
 	color: var( --wp--preset--color--primary );
 	letter-spacing: 0.04em;
 	text-transform: uppercase;

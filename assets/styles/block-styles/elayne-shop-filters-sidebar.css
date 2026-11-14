@@ -21,11 +21,11 @@
 
 /* ── Product Filters Container ── */
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar {
-	--wc-product-filter-price-slider: #E65C00;
-	--wc-product-filter-price-slider-handle: #E65C00;
-	--wc-product-filter-price-slider-handle-border: #E65C00;
+	--wc-product-filter-price-slider: var(--elayne-accent);
+	--wc-product-filter-price-slider-handle: var(--elayne-accent);
+	--wc-product-filter-price-slider-handle-border: var(--elayne-accent);
 	--wc-product-filter-checkbox-list-option-element-border: currentColor;
-	--wc-product-filter-checkbox-list-option-element-selected: #E65C00;
+	--wc-product-filter-checkbox-list-option-element-selected: var(--elayne-accent);
 }
 
 /* Filter group sections — divider + spacing */
@@ -102,7 +102,7 @@
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider input[type="range"] {
 	width: 100%;
 	height: 2px;
-	background: var(--wp--preset--color--base-accent);
+	background: var(--wp--preset--color--secondary);
 	-webkit-appearance: none;
 	appearance: none;
 	outline: none;
@@ -116,7 +116,7 @@
 	appearance: none;
 	width: 14px;
 	height: 14px;
-	background: var(--wp--preset--color--orange);
+	background: var(--elayne-accent);
 	border-radius: 50%;
 	cursor: pointer;
 	border: none;
@@ -125,7 +125,7 @@
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-price-slider input[type="range"]::-moz-range-thumb {
 	width: 14px;
 	height: 14px;
-	background: var(--wp--preset--color--orange);
+	background: var(--elayne-accent);
 	border-radius: 50%;
 	cursor: pointer;
 	border: none;
@@ -163,7 +163,7 @@
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-checkbox-list__item input[type="checkbox"] {
 	width: 14px;
 	height: 14px;
-	accent-color: var(--wp--preset--color--orange);
+	accent-color: var(--elayne-accent);
 	cursor: pointer;
 	margin-right: var(--wp--preset--spacing--small);
 }
@@ -209,11 +209,13 @@
 }
 
 /* Swatch colours — store in a custom property so hover and active states can reuse it */
+/* colour-contract: ignore-start — product colour swatches show product colours, not theme colours */
 button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-tan"]      { --swatch-bg: #C4956A; background: #C4956A; }
 button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-black"]    { --swatch-bg: #1A1A1A; background: #1A1A1A; }
 button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-cognac"]   { --swatch-bg: #9B4E2F; background: #9B4E2F; }
 button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-chestnut"] { --swatch-bg: #954535; background: #954535; }
 button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour-navy"]     { --swatch-bg: #1B2B5E; background: #1B2B5E; }
+/* colour-contract: ignore-end */
 
 /* Preserve swatch colour on hover and when active/selected */
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips__item:hover,
@@ -223,7 +225,7 @@ button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour
 
 /* Active/selected swatch — orange border on top of preserved colour */
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-chips__item:is([aria-pressed="true"], [aria-checked="true"], .is-active) {
-	border-color: var(--wp--preset--color--orange) !important;
+	border-color: var(--elayne-accent) !important;
 }
 
 /* Remove focus outline — colour + border is sufficient active indicator */
@@ -238,7 +240,7 @@ button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour
 	font-family: var(--wp--preset--font-family--body);
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: var(--wp--preset--color--orange);
+	color: var(--elayne-accent);
 	text-decoration: none;
 	margin-bottom: var(--wp--preset--spacing--medium);
 	padding-bottom: var(--wp--preset--spacing--medium);
@@ -276,7 +278,7 @@ button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour
 
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-active__clear {
 	font-size: var(--wp--preset--font-size--x-small);
-	color: var(--wp--preset--color--orange);
+	color: var(--elayne-accent);
 	text-decoration: none;
 	letter-spacing: 0.05em;
 }
@@ -298,8 +300,8 @@ button.wc-block-product-filter-chips__item[data-wp-key="attribute/leather-colour
 }
 
 .wp-block-woocommerce-product-filters.is-style-elayne-shop-filters-sidebar .wc-block-product-filter-active__list-item button:hover {
-	border-color: var(--wp--preset--color--orange);
-	color: var(--wp--preset--color--orange);
+	border-color: var(--elayne-accent);
+	color: var(--elayne-accent);
 }
 
 /* ── Hide mobile drawer buttons at desktop ── */

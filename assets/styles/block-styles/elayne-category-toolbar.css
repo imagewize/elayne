@@ -87,7 +87,7 @@
 	font-family: var(--wp--preset--font-family--body);
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: var(--wp--preset--color--orange);
+	color: var(--elayne-accent);
 	text-decoration: none;
 	white-space: nowrap;
 }
@@ -135,7 +135,7 @@
 	display: none;
 	position: fixed;
 	inset: 0;
-	background: rgba(10, 8, 5, 0.5);
+	background: color-mix(in srgb, var(--wp--preset--color--main) 50%, transparent);
 	z-index: 119;
 	opacity: 0;
 	transition: opacity 0.35s ease;
@@ -185,7 +185,7 @@
 }
 
 .elayne-filter-apply-btn:hover {
-	background: var(--wp--preset--color--orange);
+	background: var(--elayne-accent);
 }
 
 /* ===== RESPONSIVE ===== */

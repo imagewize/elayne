@@ -14,7 +14,7 @@
 	font-family: var(--wp--preset--font-family--heading);
 	font-weight: 800;
 	font-size: clamp(8rem, 22vw, 22rem);
-	color: rgba(45, 63, 140, 0.05);
+	color: color-mix(in srgb, var(--wp--preset--color--primary) 5%, transparent);
 	letter-spacing: -0.04em;
 	pointer-events: none;
 	line-height: 1;
@@ -33,7 +33,7 @@
 	letter-spacing: 0.3em;
 	text-transform: uppercase;
 	color: var(--wp--preset--color--primary);
-	border-bottom: 1px solid rgba(10, 16, 36, 0.15);
+	border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--main) 15%, transparent);
 	padding-bottom: 0.75rem;
 	margin-bottom: 1.5rem;
 }
@@ -45,7 +45,7 @@
 	gap: 0.75rem;
 	align-items: baseline;
 	padding: 1.1rem 0;
-	border-bottom: 1px solid rgba(10, 16, 36, 0.08);
+	border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--main) 8%, transparent);
 	transition: padding 0.25s ease;
 }
 
@@ -69,7 +69,7 @@
 
 /* Dotted leader line — filler between name and price */
 .is-style-fandb-menu .fandb-menu-item-leader {
-	border-bottom: 1.5px dotted rgba(10, 16, 36, 0.25);
+	border-bottom: 1.5px dotted color-mix(in srgb, var(--wp--preset--color--main) 25%, transparent);
 	align-self: end;
 	margin-bottom: 0.5rem;
 	min-width: 1rem;
@@ -107,7 +107,7 @@
 	text-transform: uppercase;
 	padding: 3px 7px;
 	background: var(--wp--preset--color--primary);
-	color: #fff;
+	color: var(--elayne-on-primary);
 	vertical-align: middle;
 	margin-left: 0.5rem;
 	border-radius: 999px;

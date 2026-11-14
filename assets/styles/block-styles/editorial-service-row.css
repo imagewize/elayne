@@ -16,7 +16,7 @@
 	top: 50%;
 	width: 0;
 	height: 1px;
-	background: var(--wp--preset--color--accent-warm);
+	background: var(--elayne-accent);
 	transform: translateY(-50%);
 	transition: width 380ms cubic-bezier(.2, .7, .2, 1);
 }
@@ -28,11 +28,11 @@
 	width: 40px;
 }
 .wp-block-group.is-style-editorial-service-row:hover .editorial-service-num {
-	color: var(--wp--preset--color--accent-warm);
+	color: var(--elayne-accent);
 }
 .wp-block-group.is-style-editorial-service-row:hover .editorial-service-go {
 	transform: translateX(4px);
-	color: var(--wp--preset--color--accent-warm);
+	color: var(--elayne-accent);
 }
 
 .wp-block-group.is-style-editorial-service-row .editorial-service-num {

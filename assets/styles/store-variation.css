@@ -47,3 +47,30 @@
 .style-variation-store .is-style-elayne-woo-categories-grid > .wp-block-cover:nth-child(5) .wp-block-cover__background {
 	background: linear-gradient(140deg, #0a1020 0%, #152038 100%);
 }
+
+/* Store's own status colours for WooCommerce notices and form messages. */
+.style-variation-store {
+	--elayne-success: var(--wp--preset--color--success);
+	--elayne-error: var(--wp--preset--color--error);
+}
+
+/* Ticker: gold highlights and an orange separator on the dark band. The shared block
+   style uses on-primary so it reads under every variation. */
+.style-variation-store .elayne-ticker .elayne-ticker__item strong {
+	color: var(--wp--preset--color--gold);
+}
+.style-variation-store .elayne-ticker .elayne-ticker__item span[aria-hidden="true"] {
+	color: var(--wp--preset--color--orange);
+	opacity: 1;
+}
+.style-variation-store .elayne-ticker {
+	border-color: rgba(200, 169, 110, 0.2);
+}
+
+/* Sites that picked Store before accent and accent-light existed keep the old palette
+   in their saved global styles, so the shared fallbacks (primary, black here) would
+   turn every accent black. Fall back to Store's own orange and gold instead. */
+.style-variation-store {
+	--elayne-accent: var(--wp--preset--color--accent, var(--wp--preset--color--orange));
+	--elayne-accent-light: var(--wp--preset--color--accent-light, var(--wp--preset--color--gold));
+}

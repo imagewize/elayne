@@ -10,12 +10,12 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background: #C9727C !important;
-	color: #fff;
+	background: var(--wp--preset--color--primary) !important;
+	color: var(--elayne-on-primary);
 	width: 110px;
 	height: 110px;
 	border-radius: 50% !important;
-	box-shadow: 0 8px 32px rgba( 201, 114, 124, 0.45 );
+	box-shadow: 0 8px 32px color-mix(in srgb, var(--wp--preset--color--primary) 45%, transparent);
 	padding: 0 !important;
 }
 
