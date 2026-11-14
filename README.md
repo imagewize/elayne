@@ -92,11 +92,9 @@ It is genuinely optional: as of 4.9.2 nothing Elayne ships references an `aludra
 
 Download from the [Aludra repository](https://github.com/imagewize/aludra) and install via **Plugins → Add New → Upload Plugin**.
 
-### Waygate AI Builder (Beta)
+### Waygate AI Builder
 
 [Waygate](https://github.com/imagewize/waygate) is an AI-powered pattern page builder for Elayne. Describe a page or section in plain language and Waygate assembles it from Elayne's pattern library.
-
-> **Beta notice:** Waygate is under active development. Expect breaking changes between releases.
 
 **Install from GitHub:** Download from [github.com/imagewize/waygate/releases](https://github.com/imagewize/waygate/releases) and upload via **Plugins → Add New → Upload Plugin**.
 
