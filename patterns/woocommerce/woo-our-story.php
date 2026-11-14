@@ -15,7 +15,7 @@
  */
 ?>
 <!-- wp:columns {"metadata":{"categories":["elayne/woocommerce"],"patternName":"elayne/woocommerce/woo-our-story","name":"Our Story"},"align":"full","isStackedOnMobile":true,"style":{"spacing":{"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->
-<div class="wp-block-columns alignfull"><!-- wp:column {"backgroundColor":"main","style":{"spacing":{"padding":"0"}},"layout":{"type":"default"}} -->
+<div class="wp-block-columns alignfull" style="margin-top:0;margin-bottom:0"><!-- wp:column {"backgroundColor":"main","style":{"spacing":{"padding":"0"}},"layout":{"type":"default"}} -->
 <div class="wp-block-column has-main-background-color has-background" style="padding:0"><!-- wp:cover {"minHeight":600,"minHeightUnit":"px","dimRatio":0,"backgroundColor":"main","style":{"dimensions":{"minHeight":"600px"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover has-main-background-color has-background" style="min-height:600px">
 <span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
@@ -48,7 +48,7 @@
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large"},"blockGap":"var:preset|spacing|xx-large"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--xx-large)"><!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+<div class="wp-block-columns" style="margin-top:0;margin-bottom:0"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 <div class="wp-block-column"><!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"300","lineHeight":"1"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"accent-light","fontSize":"xx-large","fontFamily":"heading"} -->
 <h3 class="wp-block-heading has-accent-light-color has-text-color has-heading-font-family has-xx-large-font-size" style="margin-top:0;margin-bottom:0;font-style:normal;font-weight:300;line-height:1">12+</h3>
 <!-- /wp:heading -->

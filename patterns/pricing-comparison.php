@@ -32,7 +32,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:list {"className":"is-style-checkmark-list","textColor":"main"} -->
-			<ul class="is-style-checkmark-list has-main-color has-text-color"><!-- wp:list-item -->
+			<ul class="wp-block-list is-style-checkmark-list has-main-color has-text-color"><!-- wp:list-item -->
 				<li><?php esc_html_e( 'Edit up to 10 hours of podcast audio files.', 'elayne' ); ?></li>
 				<!-- /wp:list-item -->
 
@@ -69,7 +69,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:list {"className":"is-style-checkmark-list","textColor":"base"} -->
-			<ul class="is-style-checkmark-list has-base-color has-text-color"><!-- wp:list-item -->
+			<ul class="wp-block-list is-style-checkmark-list has-base-color has-text-color"><!-- wp:list-item -->
 				<li><?php esc_html_e( 'Edit up to 1,000 hours of podcast audio files.', 'elayne' ); ?></li>
 				<!-- /wp:list-item -->
 
@@ -114,7 +114,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:list {"className":"is-style-checkmark-list","textColor":"main"} -->
-			<ul class="is-style-checkmark-list has-main-color has-text-color"><!-- wp:list-item -->
+			<ul class="wp-block-list is-style-checkmark-list has-main-color has-text-color"><!-- wp:list-item -->
 				<li><?php esc_html_e( 'Edit up to 4,000 hours of podcast audio files.', 'elayne' ); ?></li>
 				<!-- /wp:list-item -->
 

@@ -50,7 +50,7 @@
 					<!-- /wp:heading -->
 
 					<!-- wp:list {"textColor":"main-accent","fontFamily":"body","fontSize":"x-small"} -->
-					<ul class="has-main-accent-color has-text-color has-body-font-family has-x-small-font-size"><!-- wp:list-item -->
+					<ul class="wp-block-list has-main-accent-color has-text-color has-body-font-family has-x-small-font-size"><!-- wp:list-item -->
 						<li><?php esc_html_e( 'James Beard Award Finalist (2023)', 'elayne' ); ?></li>
 						<!-- /wp:list-item -->
 
