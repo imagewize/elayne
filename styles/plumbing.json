@@ -80,6 +80,11 @@
 					"color": "#f39c12"
 				},
 				{
+					"name": "On Primary",
+					"slug": "on-primary",
+					"color": "#0B1628"
+				},
+				{
 					"name": "Contrast",
 					"slug": "main",
 					"color": "#0B1628"

@@ -113,6 +113,11 @@
 					"color": "#374151"
 				},
 				{
+					"name": "On Primary",
+					"slug": "on-primary",
+					"color": "#FDFBF7"
+				},
+				{
 					"name": "Contrast",
 					"slug": "main",
 					"color": "#0B1324"
