@@ -9,7 +9,7 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.22em;
-	color: var(--wp--preset--color--border-light);
+	color: var(--elayne-accent-light);
 }
 
 .is-style-fandb-reserve .fandb-eyebrow::before {
@@ -18,7 +18,7 @@
 	width: 28px;
 	height: 1.5px;
 	flex-shrink: 0;
-	background: var(--wp--preset--color--border-light);
+	background: var(--elayne-accent-light);
 }
 
 /* Hours table */
@@ -41,7 +41,7 @@
 	font-size: 1.3rem !important;
 	font-weight: 600;
 	letter-spacing: -0.02em;
-	color: var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--base);
 	line-height: 1;
 	margin: 0;
 }
@@ -58,7 +58,7 @@
 .is-style-fandb-reserve .fandb-hours-time {
 	font-size: var(--wp--preset--font-size--small) !important;
 	font-weight: 500;
-	color: var(--wp--preset--color--primary-alt-accent);
+	color: color-mix(in srgb, var(--wp--preset--color--base) 75%, transparent);
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	margin: 0;
@@ -67,7 +67,7 @@
 /* Today — amber highlight */
 .is-style-fandb-reserve .fandb-hours-today .fandb-hours-day,
 .is-style-fandb-reserve .fandb-hours-today .fandb-hours-time {
-	color: var(--wp--preset--color--border-light);
+	color: var(--elayne-accent-light);
 }
 
 /* Closed row — italic time */
