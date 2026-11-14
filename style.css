@@ -612,6 +612,58 @@ figure.is-avatar,
 	background-image: linear-gradient(135deg, var(--wp--preset--color--primary-alt), var(--wp--preset--color--primary-alt-accent));
 }
 
+/* Nail Salon pattern layout. Lives here, not in nail-salon-variation.css, because
+   the patterns are offered under every variation. */
+
+/* Editor: collapse Gutenberg wrapper divs so the overlay grid sees the hero card
+   and badge as direct grid items. */
+.editor-styles-wrapper .overlay-grid-wrap > .block-editor-inner-blocks,
+.editor-styles-wrapper .overlay-grid-wrap > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	display: contents;
+}
+
+.editor-styles-wrapper .nail-salon-hero-section .nail-salon-hero-card,
+.editor-styles-wrapper .nail-salon-hero-section .floating-badge-bl {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+/* Hero card: the cover clips to its border radius */
+.nail-salon-hero-card {
+	overflow: hidden;
+	padding: 0 !important;
+}
+
+/* Hero heading emphasis on the dark band */
+.nail-salon-hero-section .wp-block-heading em {
+	color: var(--elayne-accent-light);
+	font-style: italic;
+}
+
+/* Why-us: vertically centre the image column and give the overlay its height */
+.nail-salon-why-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.nail-salon-why-col .overlay-grid-wrap {
+	align-items: stretch;
+	min-height: 420px;
+}
+
+.nail-salon-why-col .overlay-grid-wrap > .wp-block-group:first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Featured testimonial: primary tint */
+.nail-salon-t-featured {
+	border-color: color-mix(in srgb, var(--wp--preset--color--primary) 40%, transparent) !important;
+	background: color-mix(in srgb, var(--wp--preset--color--primary) 4%, var(--wp--preset--color--tertiary)) !important;
+}
+
 /* Headings on a primary band take the band's text colour, not the theme's heading
    colour (which can be primary itself, and so vanish on the band). */
 .has-on-primary-color :where(h1, h2, h3, h4, h5, h6):not(.has-text-color) {
