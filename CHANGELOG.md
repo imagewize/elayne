@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.12.0] - 2026-11-14
+
 ### Added
 - **`on-primary` palette slug** in `theme.json` and every style variation: the text colour for a
   `primary` background. Each variation uses whichever of its own `base` or `main` contrasts more
