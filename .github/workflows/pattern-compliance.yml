@@ -35,3 +35,6 @@ jobs:
 
       - name: Pass 3b — Template parts HTML compliance
         run: ./vendor/bin/pt-cli check:templates parts/ --theme=elayne
+
+      - name: Colour contract
+        run: php bin/check-colors.php
