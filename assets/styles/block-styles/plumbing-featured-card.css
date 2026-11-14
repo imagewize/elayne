@@ -8,8 +8,8 @@
 	position: relative;
 	overflow: hidden;
 	transition: transform 0.25s ease, box-shadow 0.25s ease;
-	border-color: rgba(230, 126, 34, 0.35) !important;
-	background: rgba(230, 126, 34, 0.06) !important;
+	border-color: color-mix(in srgb, var(--wp--preset--color--primary) 35%, transparent) !important;
+	background: color-mix(in srgb, var(--wp--preset--color--primary) 6%, transparent) !important;
 }
 
 .wp-block-group.is-style-plumbing-featured-card::before {
@@ -19,7 +19,7 @@
 	left: 0;
 	right: 0;
 	height: 3px;
-	background: linear-gradient(90deg, #E67E22, #f39c12);
+	background: linear-gradient(90deg, var(--wp--preset--color--primary), var(--wp--preset--color--primary-alt-accent));
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.3s ease;
@@ -32,5 +32,5 @@
 
 .wp-block-group.is-style-plumbing-featured-card:hover {
 	transform: translateY(-4px);
-	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 12px 32px color-mix(in srgb, var(--wp--preset--color--main) 35%, transparent);
 }

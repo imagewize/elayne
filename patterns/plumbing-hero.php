@@ -8,8 +8,8 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["elayne/hero"],"patternName":"elayne/plumbing-hero","name":"Plumbing Hero"},"align":"full","className":"plumbing-hero-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"gradient":"navy-dark","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull plumbing-hero-section has-navy-dark-gradient-background has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["elayne/hero"],"patternName":"elayne/plumbing-hero","name":"Plumbing Hero"},"align":"full","className":"plumbing-hero-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull plumbing-hero-section" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"60%","style":{"spacing":{"blockGap":"var:preset|spacing|large"}}} -->
 <div class="wp-block-column" style="flex-basis:60%"><!-- wp:group {"className":"is-style-plumbing-badge","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"var:preset|border-radius|pill","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
@@ -22,8 +22,8 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"1.15","letterSpacing":"-0.02em"}},"textColor":"white","fontSize":"xx-large"} -->
-<h1 class="wp-block-heading has-white-color has-text-color has-xx-large-font-size" style="letter-spacing:-0.02em;line-height:1.15"><?php echo wp_kses_post( __( 'When Pipes Break, <mark class="has-inline-color has-primary-color">We Don\'t.</mark>', 'elayne' ) ); ?></h1>
+<!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"1.15","letterSpacing":"-0.02em"}},"fontSize":"xx-large"} -->
+<h1 class="wp-block-heading has-xx-large-font-size" style="letter-spacing:-0.02em;line-height:1.15"><?php echo wp_kses_post( __( 'When Pipes Break, <mark class="has-inline-color has-primary-color">We Don\'t.</mark>', 'elayne' ) ); ?></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.7"}},"textColor":"main-accent","fontSize":"medium"} -->
@@ -31,12 +31,12 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"flex","justifyContent":"left"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"main","className":"is-style-fill is-style-plumbing-call-btn","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
-<div class="wp-block-button is-style-fill is-style-plumbing-call-btn"><a class="wp-block-button__link has-main-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Call Now: (555) 123-4567', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-fill is-style-plumbing-call-btn","style":{"border":{"radius":"var:preset|border-radius|pill","width":"0px"},"typography":{"fontSize":"var:preset|font-size|base"}}} -->
+<div class="wp-block-button is-style-fill is-style-plumbing-call-btn"><a class="wp-block-button__link has-custom-font-size wp-element-button" style="border-width:0px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Call Now: (555) 123-4567', 'elayne' ); ?></a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"textColor":"base","className":"is-style-outline","style":{"border":{"radius":"var:preset|border-radius|pill","width":"1px"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"var:preset|font-size|base"}},"borderColor":"border-light"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-text-color has-link-color has-border-color has-border-light-border-color has-custom-font-size wp-element-button" style="border-width:1px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Schedule Service →', 'elayne' ); ?></a></div>
+<!-- wp:button {"className":"is-style-outline","style":{"border":{"radius":"var:preset|border-radius|pill","width":"1px"},"typography":{"fontSize":"var:preset|font-size|base"}},"borderColor":"border-light"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-border-color has-border-light-border-color has-custom-font-size wp-element-button" style="border-width:1px;border-radius:var(--wp--preset--border-radius--pill);font-size:var(--wp--preset--font-size--base)"><?php esc_html_e( 'Schedule Service →', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
@@ -46,8 +46,8 @@
 <h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '4.9★', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"textColor":"main-accent","fontSize":"x-small"} -->
-<p class="has-text-align-center has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Google Rating', 'elayne' ); ?></p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"fontSize":"x-small"} -->
+<p class="has-text-align-center has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Google Rating', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -60,8 +60,8 @@
 <h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '2,400+', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"textColor":"main-accent","fontSize":"x-small"} -->
-<p class="has-text-align-center has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Jobs Completed', 'elayne' ); ?></p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"fontSize":"x-small"} -->
+<p class="has-text-align-center has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Jobs Completed', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -74,8 +74,8 @@
 <h3 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-large-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '60 Min', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"textColor":"main-accent","fontSize":"x-small"} -->
-<p class="has-text-align-center has-main-accent-color has-text-color has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Response Time', 'elayne' ); ?></p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"600"}},"fontSize":"x-small"} -->
+<p class="has-text-align-center has-x-small-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php esc_html_e( 'Response Time', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -94,8 +94,8 @@
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-shield.svg" alt=""/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"white","fontSize":"x-small"} -->
-<p class="has-white-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Licensed &amp; Insured', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"x-small"} -->
+<p class="has-x-small-font-size" style="font-weight:600"><?php esc_html_e( 'Licensed &amp; Insured', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -104,8 +104,8 @@
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-clock-amber.svg" alt=""/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"textColor":"white","fontSize":"x-small"} -->
-<p class="has-white-color has-text-color has-x-small-font-size" style="font-weight:600"><?php esc_html_e( '24/7 Emergency', 'elayne' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"x-small"} -->
+<p class="has-x-small-font-size" style="font-weight:600"><?php esc_html_e( '24/7 Emergency', 'elayne' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

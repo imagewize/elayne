@@ -550,14 +550,42 @@ figure.is-avatar,
 	display: block;
 }
 
+/* on-primary with a fallback. A site that picked a style variation before on-primary
+   existed keeps that variation's old palette in its global styles, so the preset is
+   missing there. Fall back to black or white, whichever reads on primary. Where the
+   preset exists, WordPress's own .has-on-primary-* rules (with !important) win. */
+:root {
+	--elayne-on-primary: var(--wp--preset--color--on-primary, oklch(from var(--wp--preset--color--primary) clamp(0, (0.6 - l) * 1000, 1) 0 0));
+}
+
+.has-on-primary-color {
+	color: var(--elayne-on-primary);
+}
+
+.has-on-primary-background-color {
+	background-color: var(--elayne-on-primary);
+}
+
+/* Headings on a primary band take the band's text colour, not the theme's heading
+   colour (which can be primary itself, and so vanish on the band). */
+.has-on-primary-color :where(h1, h2, h3, h4, h5, h6):not(.has-text-color) {
+	color: inherit;
+}
+
+/* Text colour marks (<mark class="has-inline-color">) colour the text only; without
+   this the browser's default yellow highlight shows behind them. */
+mark.has-inline-color {
+	background: transparent;
+}
+
 /* Floating stat/social-proof badge overlaid on an image */
 .floating-badge {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	background: #112240;
-	border: 1px solid rgba( 255, 255, 255, 0.08 );
-	border-left: 3px solid #E67E22;
+	background: var(--wp--preset--color--secondary);
+	border: 1px solid color-mix(in srgb, currentColor 8%, transparent);
+	border-left: 3px solid var(--wp--preset--color--primary);
 	padding: 0.55rem 0.9rem;
 	border-radius: 10px;
 	z-index: 2;

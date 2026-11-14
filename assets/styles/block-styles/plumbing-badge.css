@@ -5,9 +5,9 @@
  */
 
 .wp-block-group.is-style-plumbing-badge {
-	background: rgba(230, 126, 34, 0.15) !important;
-	border-color: rgba(230, 126, 34, 0.35) !important;
-	color: #f39c12;
+	background: color-mix(in srgb, var(--wp--preset--color--primary) 15%, transparent) !important;
+	border-color: color-mix(in srgb, var(--wp--preset--color--primary) 35%, transparent) !important;
+	color: var(--wp--preset--color--primary-alt-accent);
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	width: fit-content;
