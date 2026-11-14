@@ -32,6 +32,11 @@
 					"color": "#000000"
 				},
 				{
+					"name": "On Primary",
+					"slug": "on-primary",
+					"color": "#FDFBF7"
+				},
+				{
 					"name": "Main Text",
 					"slug": "main",
 					"color": "#1A1A1A"
@@ -49,6 +54,11 @@
 				{
 					"name": "Cream Dark",
 					"slug": "base-accent",
+					"color": "#EDE7D8"
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
 					"color": "#EDE7D8"
 				},
 				{
