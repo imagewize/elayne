@@ -27,7 +27,7 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:group {"className":"is-style-nail-salon-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-nail-salon-service-card has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-nail-polish.svg" alt="<?php esc_attr_e( 'Classic Manicure', 'elayne' ); ?>" style="width:40px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-nail-polish.svg" alt="<?php esc_attr_e( 'Classic Manicure', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"main","fontSize":"base"} -->
@@ -45,7 +45,7 @@
 
 <!-- wp:group {"className":"is-style-nail-salon-featured-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"base","borderColor":"primary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-nail-salon-featured-card has-border-color has-primary-border-color has-base-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-gel-nails.svg" alt="<?php esc_attr_e( 'Gel Nails', 'elayne' ); ?>" style="width:40px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-gel-nails.svg" alt="<?php esc_attr_e( 'Gel Nails', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"main","fontSize":"base"} -->
@@ -63,7 +63,7 @@
 
 <!-- wp:group {"className":"is-style-nail-salon-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-nail-salon-service-card has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-acrylic.svg" alt="<?php esc_attr_e( 'Acrylic Extensions', 'elayne' ); ?>" style="width:40px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-acrylic.svg" alt="<?php esc_attr_e( 'Acrylic Extensions', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"main","fontSize":"base"} -->
@@ -81,7 +81,7 @@
 
 <!-- wp:group {"className":"is-style-nail-salon-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-nail-salon-service-card has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-nail-art.svg" alt="<?php esc_attr_e( 'Nail Art', 'elayne' ); ?>" style="width:40px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-nail-art.svg" alt="<?php esc_attr_e( 'Nail Art', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"main","fontSize":"base"} -->
@@ -99,7 +99,7 @@
 
 <!-- wp:group {"className":"is-style-nail-salon-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-nail-salon-service-card has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-pedicure.svg" alt="<?php esc_attr_e( 'Spa Pedicure', 'elayne' ); ?>" style="width:40px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-pedicure.svg" alt="<?php esc_attr_e( 'Spa Pedicure', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"main","fontSize":"base"} -->
@@ -117,7 +117,7 @@
 
 <!-- wp:group {"className":"is-style-nail-salon-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-nail-salon-service-card has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-paraffin.svg" alt="<?php esc_attr_e( 'Paraffin Treatment', 'elayne' ); ?>" style="width:40px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/nail-salon/icon-paraffin.svg" alt="<?php esc_attr_e( 'Paraffin Treatment', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"main","fontSize":"base"} -->

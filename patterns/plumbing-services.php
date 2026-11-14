@@ -28,7 +28,7 @@
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
 	<div class="wp-block-group alignwide"><!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-leak.svg" alt="<?php esc_attr_e( 'Leak Detection and Repair', 'elayne' ); ?>" style="width:40px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-leak.svg" alt="<?php esc_attr_e( 'Leak Detection and Repair', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->
@@ -47,7 +47,7 @@
 
 		<!-- wp:group {"className":"is-style-plumbing-featured-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"primary","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group is-style-plumbing-featured-card has-border-color has-primary-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-drain.svg" alt="<?php esc_attr_e( 'Drain Cleaning', 'elayne' ); ?>" style="width:40px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-drain.svg" alt="<?php esc_attr_e( 'Drain Cleaning', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->
@@ -66,7 +66,7 @@
 
 		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-water-heater.svg" alt="<?php esc_attr_e( 'Water Heater Services', 'elayne' ); ?>" style="width:40px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-water-heater.svg" alt="<?php esc_attr_e( 'Water Heater Services', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->
@@ -85,7 +85,7 @@
 
 		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-pipe.svg" alt="<?php esc_attr_e( 'Pipe Repair and Replacement', 'elayne' ); ?>" style="width:40px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-pipe.svg" alt="<?php esc_attr_e( 'Pipe Repair and Replacement', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->
@@ -104,7 +104,7 @@
 
 		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-sewer.svg" alt="<?php esc_attr_e( 'Sewer Line Services', 'elayne' ); ?>" style="width:40px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-sewer.svg" alt="<?php esc_attr_e( 'Sewer Line Services', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->
@@ -123,7 +123,7 @@
 
 		<!-- wp:group {"className":"is-style-plumbing-service-card","style":{"spacing":{"padding":"var:preset|spacing|large","blockGap":"var:preset|spacing|small"},"border":{"radius":"var:preset|border-radius|lg","width":"1px"}},"backgroundColor":"secondary","borderColor":"border-light","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group is-style-plumbing-service-card has-border-color has-border-light-border-color has-secondary-background-color has-background" style="border-width:1px;border-radius:var(--wp--preset--border-radius--lg);padding:var(--wp--preset--spacing--large)"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-commercial.svg" alt="<?php esc_attr_e( 'Commercial Plumbing', 'elayne' ); ?>" style="width:40px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/plumbing/icon-commercial.svg" alt="<?php esc_attr_e( 'Commercial Plumbing', 'elayne' ); ?>" style="width:40px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->

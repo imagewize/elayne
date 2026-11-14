@@ -31,7 +31,7 @@
 <div class="wp-block-group alignwide"><!-- wp:group {"metadata":{"name":"Web Design"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var:preset|color|border-light","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group"><!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-web.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing web design and development', 'elayne' ); ?>" style="width:48px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-web.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing web design and development', 'elayne' ); ?>" style="width:48px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3} -->
@@ -49,7 +49,7 @@
 	<!-- wp:group {"metadata":{"name":"Digital Marketing"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var:preset|color|border-light","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group"><!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-marketing.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing performance marketing', 'elayne' ); ?>" style="width:48px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-marketing.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing performance marketing', 'elayne' ); ?>" style="width:48px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3} -->
@@ -67,7 +67,7 @@
 	<!-- wp:group {"metadata":{"name":"Brand Strategy"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var:preset|color|border-light","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group"><!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-strategy.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing brand strategy', 'elayne' ); ?>" style="width:48px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-strategy.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing brand strategy', 'elayne' ); ?>" style="width:48px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3} -->
@@ -85,7 +85,7 @@
 	<!-- wp:group {"metadata":{"name":"E-commerce"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"border":{"radius":"8px","color":"var:preset|color|border-light","width":"1px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group has-base-background-color has-background has-border-color" style="border-color:var(--wp--preset--color--border-light);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group"><!-- wp:image {"width":"48px","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-commerce.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing e-commerce solutions', 'elayne' ); ?>" style="width:48px"/></figure>
+			<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'patterns/images/icon-service-commerce.svg' ) ); ?>" alt="<?php esc_attr_e( 'Icon representing e-commerce solutions', 'elayne' ); ?>" style="width:48px;height:auto"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":3} -->

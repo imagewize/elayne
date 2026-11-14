@@ -13,7 +13,7 @@
 <div class="wp-block-group alignwide" style="margin-top:0;margin-bottom:0"><!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"bottom":"var:preset|spacing|large"},"margin":{"top":"0","bottom":"0"}},"border":{"bottom":{"color":"var:preset|color|main","width":"1.5px"},"top":[],"right":[],"left":[]}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"end"}} -->
 <div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--main);border-bottom-width:1.5px;margin-top:0;margin-bottom:0;padding-bottom:var(--wp--preset--spacing--large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"}} -->
 <div class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:paragraph {"className":"fandb-eyebrow","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"color":{"text":"var:preset|color|primary"}}} -->
-<p class="fandb-eyebrow" style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--primary)"><?php esc_html_e( 'A la carte · Updated daily', 'elayne' ); ?></p>
+<p class="has-text-color fandb-eyebrow" style="color:var(--wp--preset--color--primary);margin-top:0;margin-bottom:0"><?php esc_html_e( 'A la carte · Updated daily', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"lineHeight":"0.92"},"color":{"text":"var:preset|color|main"}}} -->
 <h2 class="wp-block-heading has-text-color" style="color:var(--wp--preset--color--main);margin-top:0;margin-bottom:0;line-height:0.92"><?php echo wp_kses_post( __( "Tonight's <em>service.</em>", 'elayne' ) ); ?></h2>
@@ -21,10 +21,10 @@
 <!-- /wp:group -->
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical","verticalAlignment":"bottom"}} -->
 <div class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontWeight":"600","letterSpacing":"0.2em","textTransform":"uppercase","fontSize":"var:preset|font-size|x-small"},"color":{"text":"var:preset|color|main-accent"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--main-accent);font-size:var(--wp--preset--font-size--x-small);font-weight:600;letter-spacing:0.2em;text-transform:uppercase"><?php esc_html_e( 'Service', 'elayne' ); ?></p>
+<p class="has-text-color" style="color:var(--wp--preset--color--main-accent);margin-top:0;margin-bottom:0;font-size:var(--wp--preset--font-size--x-small);font-weight:600;letter-spacing:0.2em;text-transform:uppercase"><?php esc_html_e( 'Service', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontFamily":"var:preset|font-family|heading","fontWeight":"700","letterSpacing":"-0.02em","fontSize":"var:preset|font-size|x-large"},"color":{"text":"var:preset|color|main"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--main);font-family:var(--wp--preset--font-family--heading);font-size:var(--wp--preset--font-size--x-large);font-weight:700;letter-spacing:-0.02em">17:30 – 23:00</p>
+<p class="has-text-color" style="color:var(--wp--preset--color--main);margin-top:0;margin-bottom:0;font-family:var(--wp--preset--font-family--heading);font-size:var(--wp--preset--font-size--x-large);font-weight:700;letter-spacing:-0.02em">17:30 – 23:00</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -154,7 +154,7 @@
 <!-- /wp:columns -->
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large"},"margin":{"top":"0","bottom":"0"}},"border":{"top":{"color":"var:preset|color|main","width":"1.5px"},"bottom":[],"right":[],"left":[]}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group" style="border-top-color:var(--wp--preset--color--main);border-top-width:1.5px;margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large)"><!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontFamily":"var:preset|font-family|serif","fontStyle":"italic","fontSize":"var:preset|font-size|medium"},"color":{"text":"var:preset|color|main"}}} -->
-<p style="margin-top:0;margin-bottom:0;color:var(--wp--preset--color--main);font-family:var(--wp--preset--font-family--serif);font-style:italic;font-size:var(--wp--preset--font-size--medium)"><?php esc_html_e( 'Menu changes daily with what the morning market brought in.', 'elayne' ); ?></p>
+<p class="has-text-color" style="color:var(--wp--preset--color--main);margin-top:0;margin-bottom:0;font-family:var(--wp--preset--font-family--serif);font-style:italic;font-size:var(--wp--preset--font-size--medium)"><?php esc_html_e( 'Menu changes daily with what the morning market brought in.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-buttons" style="margin-top:0;margin-bottom:0"><!-- wp:button -->
