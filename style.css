@@ -566,6 +566,30 @@ figure.is-avatar,
 	background-color: var(--elayne-on-primary);
 }
 
+/* accent and accent-light with fallbacks, for the same reason as on-primary above.
+   accent falls back to primary (reads on the page); accent-light, which sits on main,
+   to a light tint of primary. */
+:root {
+	--elayne-accent: var(--wp--preset--color--accent, var(--wp--preset--color--primary));
+	--elayne-accent-light: var(--wp--preset--color--accent-light, color-mix(in srgb, var(--wp--preset--color--base) 70%, var(--wp--preset--color--primary)));
+}
+
+.has-accent-color {
+	color: var(--elayne-accent);
+}
+
+.has-accent-background-color {
+	background-color: var(--elayne-accent);
+}
+
+.has-accent-light-color {
+	color: var(--elayne-accent-light);
+}
+
+.has-accent-light-background-color {
+	background-color: var(--elayne-accent-light);
+}
+
 /* Headings on a primary band take the band's text colour, not the theme's heading
    colour (which can be primary itself, and so vanish on the band). */
 .has-on-primary-color :where(h1, h2, h3, h4, h5, h6):not(.has-text-color) {

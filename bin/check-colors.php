@@ -27,7 +27,7 @@
 
 // phpcs:disable WordPress.Security.EscapeOutput, WordPress.WP.GlobalVariablesOverride, WordPress.WP.AlternativeFunctions, Universal.Operators.DisallowShortTernary -- CLI script outside WordPress.
 
-const CONTRACT = array( 'primary', 'primary-accent', 'primary-alt', 'primary-alt-accent', 'on-primary', 'main', 'main-accent', 'base', 'secondary', 'tertiary', 'border-light', 'border-dark' );
+const CONTRACT = array( 'primary', 'primary-accent', 'primary-alt', 'primary-alt-accent', 'on-primary', 'accent', 'accent-light', 'main', 'main-accent', 'base', 'secondary', 'tertiary', 'border-light', 'border-dark' );
 
 // Core helper classes that look like palette classes but are not.
 const CORE_CLASSES = array( 'text', 'background', 'link', 'border', 'icon', 'inline', 'custom', 'fixed' );
@@ -188,6 +188,8 @@ if ( $report ) {
 			'page text on tertiary'    => array( $text, $c['tertiary'] ?? null ),
 			'base on main (dark band)' => array( $c['base'] ?? null, $c['main'] ?? null ),
 			'primary on page'          => array( $c['primary'] ?? null, $page ),
+			'accent on page'           => array( $c['accent'] ?? null, $page ),
+			'accent-light on main'     => array( $c['accent-light'] ?? null, $c['main'] ?? null ),
 			'button text on button'    => array( $btn_tx, $btn_bg ),
 		);
 
