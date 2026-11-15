@@ -1682,6 +1682,18 @@ The following icons were created using AI tools (ChatGPT) for the plumbing indus
 - **Attribution:** Not required (CC0)
 - **Description:** Ten neutral product placeholder images used across WooCommerce product archive and single product patterns as demo imagery
 
+## Home Bold Images (GPLv2 or later)
+
+**patterns/images/home/demo-restaurant.webp, demo-spa.webp, demo-home-services.webp, demo-style-preview.webp**
+- **Source:** Created for Elayne by Imagewize: renders of sample page layouts, using only photos already bundled with the theme and credited above
+- **License:** [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+- **Description:** Demo-site screenshots shown in the Home Bold hero and bento patterns
+
+**patterns/images/home/icon-patterns.svg, icon-styles.svg, icon-shop.svg, icon-blocks-white.svg**
+- **Source:** Created for Elayne by Imagewize
+- **License:** [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+- **Description:** Line icons for the Home Bold bento cards
+
 ---
 
 ## Fonts
