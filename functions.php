@@ -918,6 +918,43 @@ function elayne_register_editorial_block_styles() {
 add_action( 'init', __NAMESPACE__ . '\elayne_register_editorial_block_styles' );
 
 /**
+ * Register block styles for the default homepage patterns (home-*).
+ *
+ * CSS files live in assets/styles/block-styles/ and load only on pages where
+ * the group block is present.
+ */
+function elayne_register_home_block_styles() {
+	$styles = array(
+		'home-mosaic' => __( 'Home Mosaic', 'elayne' ),
+		'home-facts'  => __( 'Home Facts', 'elayne' ),
+		'home-steps'  => __( 'Home Steps', 'elayne' ),
+		'home-card'   => __( 'Home Card', 'elayne' ),
+	);
+
+	foreach ( $styles as $style_name => $label ) {
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => $style_name,
+				'label' => $label,
+			)
+		);
+		$css_path = get_theme_file_path( "assets/styles/block-styles/{$style_name}.css" );
+		if ( file_exists( $css_path ) ) {
+			wp_enqueue_block_style(
+				'core/group',
+				array(
+					'handle' => "elayne-{$style_name}",
+					'src'    => get_theme_file_uri( "assets/styles/block-styles/{$style_name}.css" ),
+					'path'   => $css_path,
+				)
+			);
+		}
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\elayne_register_home_block_styles' );
+
+/**
  * Add elayne-page-loaded class to <html> in <head> to enable hero animations.
  * Excluded from FSE editor via is_admin() check.
  *

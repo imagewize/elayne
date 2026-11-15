@@ -1,0 +1,11 @@
+/* Home steps: each step sits under a heavy rule. */
+.wp-block-group.is-style-home-steps > .wp-block-group {
+	padding-top: var(--wp--preset--spacing--medium);
+	border-top: 2px solid var(--wp--preset--color--main);
+}
+
+.wp-block-group.is-style-home-steps > .wp-block-group > p:first-child {
+	font-family: var(--wp--preset--font-family--primary);
+	font-weight: 600;
+	line-height: 1;
+}

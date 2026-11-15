@@ -1,0 +1,64 @@
+/* Home mosaic: four labelled photo tiles in a 3x2 grid (one tall, one wide). */
+.wp-block-group.is-style-home-mosaic {
+	display: grid;
+	grid-template-columns: 1.15fr 0.8fr 0.8fr;
+	grid-template-rows: 1fr 1fr;
+	gap: var(--wp--preset--spacing--small);
+	height: clamp(22rem, 44vw, 33rem);
+}
+
+.wp-block-group.is-style-home-mosaic > .home-mosaic-tile {
+	position: relative;
+	overflow: hidden;
+	min-height: 0;
+	margin: 0;
+	border-radius: var(--wp--preset--border-radius--xs);
+	background-color: var(--wp--preset--color--tertiary);
+}
+
+.wp-block-group.is-style-home-mosaic > .home-mosaic-tile-tall {
+	grid-row: 1 / span 2;
+}
+
+.wp-block-group.is-style-home-mosaic > .home-mosaic-tile-wide {
+	grid-column: 2 / span 2;
+}
+
+.wp-block-group.is-style-home-mosaic .home-mosaic-tile > .wp-block-image {
+	height: 100%;
+	margin: 0;
+}
+
+.wp-block-group.is-style-home-mosaic .home-mosaic-tile > .wp-block-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.wp-block-group.is-style-home-mosaic .home-mosaic-tile > p {
+	position: absolute;
+	left: 0.75rem;
+	bottom: 0.75rem;
+	margin: 0;
+	padding: 0.35rem 0.8rem;
+	border-radius: 0.25rem;
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--main);
+	font-family: var(--wp--preset--font-family--primary);
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+	.wp-block-group.is-style-home-mosaic {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1.2fr 1fr 1fr;
+		height: 30rem;
+	}
+
+	.wp-block-group.is-style-home-mosaic > .home-mosaic-tile-tall,
+	.wp-block-group.is-style-home-mosaic > .home-mosaic-tile-wide {
+		grid-row: auto;
+		grid-column: 1 / span 2;
+	}
+}
