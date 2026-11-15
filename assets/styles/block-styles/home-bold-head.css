@@ -1,0 +1,12 @@
+/* Home Bold section head: a large heading and a lead paragraph, left-aligned in a narrow measure. */
+.wp-block-group.is-style-home-bold-head > * {
+	max-width: 52rem;
+}
+
+.wp-block-group.is-style-home-bold-head > :is(h1, h2, h3) {
+	text-wrap: balance;
+}
+
+.wp-block-group.is-style-home-bold-head > p {
+	line-height: 1.4;
+}

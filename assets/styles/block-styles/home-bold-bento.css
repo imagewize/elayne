@@ -1,0 +1,33 @@
+/* Home Bold bento: a 12-column grid; each cell says how many columns it spans. */
+.wp-block-group.is-style-home-bold-bento {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	gap: var(--wp--preset--spacing--medium);
+}
+
+.wp-block-group.is-style-home-bold-bento > * {
+	grid-column: span 12;
+	margin: 0;
+}
+
+@media (min-width: 961px) {
+	.wp-block-group.is-style-home-bold-bento > .home-bold-span-4 {
+		grid-column: span 4;
+	}
+
+	.wp-block-group.is-style-home-bold-bento > .home-bold-span-5 {
+		grid-column: span 5;
+	}
+
+	.wp-block-group.is-style-home-bold-bento > .home-bold-span-7 {
+		grid-column: span 7;
+	}
+
+	.wp-block-group.is-style-home-bold-bento > .home-bold-span-8 {
+		grid-column: span 8;
+	}
+
+	.wp-block-group.is-style-home-bold-bento > .is-style-home-bold-cell:not(.home-bold-cell-short) {
+		min-height: 22rem;
+	}
+}

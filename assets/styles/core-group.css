@@ -269,3 +269,37 @@
 		transform: none !important;
 	}
 }
+
+/* ===========================
+   REVEAL ON SCROLL
+   .is-style-reveal / .elayne-reveal: the block rises into place as it scrolls into view.
+   .is-style-reveal-sequence / .elayne-reveal-sequence: its children do, one after another.
+   CSS only (scroll-driven animation); browsers without support, the editor and
+   visitors who prefer reduced motion see the content in place.
+   =========================== */
+
+@keyframes elayne-reveal {
+	from {
+		opacity: 0;
+		transform: translateY(1.5rem);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	@supports (animation-timeline: view()) {
+		body:not(.editor-styles-wrapper) :is(.is-style-reveal, .elayne-reveal),
+		body:not(.editor-styles-wrapper) :is(.is-style-reveal-sequence, .elayne-reveal-sequence) > * {
+			animation: elayne-reveal linear both;
+			animation-timeline: view();
+			animation-range: entry 0% entry 40%;
+		}
+
+		body:not(.editor-styles-wrapper) :is(.is-style-reveal-sequence, .elayne-reveal-sequence) > :nth-child(3n+2) {
+			animation-range: entry 12% entry 52%;
+		}
+
+		body:not(.editor-styles-wrapper) :is(.is-style-reveal-sequence, .elayne-reveal-sequence) > :nth-child(3n) {
+			animation-range: entry 24% entry 64%;
+		}
+	}
+}

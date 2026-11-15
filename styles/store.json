@@ -214,7 +214,8 @@
 				{ "slug": "medium",   "size": "1.15rem",                    "name": "Medium" },
 				{ "slug": "large",    "size": "clamp(1.5rem, 2.5vw, 2rem)", "name": "Large" },
 				{ "slug": "x-large",  "size": "clamp(2rem, 3.5vw, 3.6rem)", "name": "X-Large" },
-				{ "slug": "xx-large", "size": "clamp(3rem, 5vw, 5.5rem)",   "name": "XX-Large" }
+				{ "slug": "xx-large", "size": "clamp(3rem, 5vw, 5.5rem)",   "name": "XX-Large" },
+				{ "slug": "xxx-large", "size": "clamp(3.25rem, 6vw, 6.5rem)", "name": "3X-Large" }
 			]
 		}
 	},

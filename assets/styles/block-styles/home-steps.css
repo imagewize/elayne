@@ -1,0 +1,20 @@
+/* Home steps: each step sits under a heavy rule. */
+.wp-block-group.is-style-home-steps > .wp-block-group {
+	padding-top: var(--wp--preset--spacing--medium);
+	border-top: 2px solid var(--wp--preset--color--main);
+}
+
+.wp-block-group.is-style-home-steps > .wp-block-group > p:first-child {
+	font-family: var(--wp--preset--font-family--primary);
+	font-weight: 600;
+	line-height: 1;
+}
+
+/* Motion: the rule over a step takes the accent colour on hover. */
+.wp-block-group.is-style-home-steps > .wp-block-group {
+	transition: border-color 0.3s ease;
+}
+
+.wp-block-group.is-style-home-steps > .wp-block-group:hover {
+	border-top-color: var(--elayne-accent);
+}

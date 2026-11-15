@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **New default homepage.** `elayne/page-homepage` is now a business homepage that shows the theme's range, built from seven new patterns: `home-hero-mosaic` (headline, two buttons and a four-photo mosaic of labelled industries), `home-facts` (ruled strip of four facts), `home-industries` (six photo cards, one per industry, three per row), `home-steps` (three numbered steps), `home-built-on-blocks` (photo beside a checklist) and `home-cta` (dark call to action band). All use photos already bundled in the theme.
+- `elayne/page-agency-homepage`: the previous agency homepage composition (editorial hero, services stack, client stories, logo wall, testimonials, newsletter), kept under its own slug.
+- `xs` border-radius preset (0.375rem) in `theme.json`, for images and cards with tighter corners.
+- Mega Menu template part (`parts/mega-menu-template.html`) now lists the industries (eight entries with a one-line description each) in a wrapping grid, replacing the placeholder category lists. Shown by a mega menu block such as Aludra's.
+- `screenshot.png` re-shot from the new homepage: 1200x900, the industry mosaic hero and the facts strip.
+- Subtle depth and motion in the home patterns, in CSS only and switched off under `prefers-reduced-motion`: mosaic tiles rise in once on page load, lift and zoom their photo on hover; industry cards have a soft shadow, lift on hover and rise into view on scroll (where the browser supports scroll-driven animation); step rules take the accent colour on hover.
+- **Reveal on scroll**: two group block styles, "Reveal on Scroll" and "Reveal Children in Sequence" (also usable on any block as the classes `elayne-reveal` and `elayne-reveal-sequence`). CSS only, through scroll-driven animation; browsers without support, the editor and visitors who prefer reduced motion see the content in place. The home patterns use them.
+- `home-marquee`: a full-width strip of eight bundled photos that drifts sideways and pauses on hover. A `render_block` filter duplicates the track on the front end so the loop is seamless.
+- `home-glow` group block style: two soft, slowly drifting lights behind a dark band; used by `home-cta`.
+- Group block styles `home-mosaic`, `home-facts`, `home-steps`, `home-card`, `home-marquee` and `home-glow`, with their CSS in `assets/styles/block-styles/`.
+
 ## [4.13.0] - 2026-11-15
 
 ### Deprecated

@@ -1,21 +1,21 @@
 <?php
 /**
- * Title: Main Site Homepage
+ * Title: Homepage
  * Slug: elayne/page-homepage
- * Description: Complete main site homepage composition with hero, services stack, agency showcase, client stories, logo wall, testimonials, and newsletter CTA
+ * Description: Business homepage composition with an industry mosaic hero, facts strip, industry cards, three steps, image with checklist and a call to action band
  * Categories: elayne/page-layouts
  * Block Types: core/post-content
  * Viewport Width: 1200
- * Keywords: page, homepage, main, hero, services, showcase, testimonials, newsletter
+ * Keywords: page, homepage, home, hero, industries, steps, cta
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<!-- wp:pattern {"slug":"elayne/main-hero"} /-->
-<!-- wp:pattern {"slug":"elayne/main-services-stack"} /-->
-<!-- wp:pattern {"slug":"elayne/agency-services-showcase"} /-->
-<!-- wp:pattern {"slug":"elayne/client-success-stories"} /-->
-<!-- wp:pattern {"slug":"elayne/client-logo-wall"} /-->
-<!-- wp:pattern {"slug":"elayne/testimonials-grid"} /-->
-<!-- wp:pattern {"slug":"elayne/cta-newsletter"} /-->
+<!-- wp:pattern {"slug":"elayne/home-hero-mosaic"} /-->
+<!-- wp:pattern {"slug":"elayne/home-facts"} /-->
+<!-- wp:pattern {"slug":"elayne/home-industries"} /-->
+<!-- wp:pattern {"slug":"elayne/home-marquee"} /-->
+<!-- wp:pattern {"slug":"elayne/home-steps"} /-->
+<!-- wp:pattern {"slug":"elayne/home-built-on-blocks"} /-->
+<!-- wp:pattern {"slug":"elayne/home-cta"} /-->

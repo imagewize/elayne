@@ -162,7 +162,7 @@ The demo site runs WooCommerce on a **subsite** mounted at `/store/`. All shop U
 
 ### Typography
 - **Mona Sans** — headings | **Open Sans** — body | **Bitter** — optional serif
-- Font sizes: `xx-small` → `x-small` → `small` → `base` → `medium` → `large` → `x-large` → `xx-large`
+- Font sizes: `xx-small` → `x-small` → `small` → `base` → `medium` → `large` → `x-large` → `xx-large` → `xxx-large`
 
 ### Spacing Scale
 `2-x-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
@@ -188,6 +188,7 @@ The demo site runs WooCommerce on a **subsite** mounted at `/store/`. All shop U
 | `large` | 2.75rem | H1 on dark hero, stat numbers |
 | `x-large` | 3.5rem | Display H1 only |
 | `xx-large` | 4.39rem | Rarely used — very large display only |
+| `xxx-large` | 5.5rem | Display headings in the Home Bold patterns only |
 
 **Pill/badge padding rule:** Always use `x-small` (vertical) + `small` (horizontal). Never `medium` — that is ~28px per side and will make any pill grotesquely wide.
 

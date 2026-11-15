@@ -1,0 +1,51 @@
+/* Home marquee: a full-width strip of photos drifting sideways; pauses on hover.
+   The track's content is duplicated on the front end (render_block filter) so the loop is seamless. */
+.wp-block-group.is-style-home-marquee {
+	overflow: hidden;
+	mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.wp-block-group.is-style-home-marquee > .home-marquee-track {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0;
+	width: max-content;
+}
+
+.wp-block-group.is-style-home-marquee .home-marquee-clone {
+	display: contents;
+}
+
+.wp-block-group.is-style-home-marquee .home-marquee-track .wp-block-image {
+	flex: none;
+	margin: 0 var(--wp--preset--spacing--small) 0 0;
+}
+
+.wp-block-group.is-style-home-marquee .home-marquee-track .wp-block-image img {
+	display: block;
+	width: auto;
+	height: clamp(10rem, 18vw, 15rem);
+	border-radius: var(--wp--preset--border-radius--xs);
+}
+
+@keyframes elayne-home-marquee {
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	body:not(.editor-styles-wrapper) .wp-block-group.is-style-home-marquee > .home-marquee-track {
+		animation: elayne-home-marquee 70s linear infinite;
+	}
+
+	.wp-block-group.is-style-home-marquee:hover > .home-marquee-track {
+		animation-play-state: paused;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-group.is-style-home-marquee {
+		overflow-x: auto;
+	}
+}

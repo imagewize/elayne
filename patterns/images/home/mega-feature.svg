@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="400" viewBox="0 0 320 400" fill="none">
+<!-- Original artwork created for Elayne by Imagewize, dedicated to the public domain under CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). White and black shapes only, so it reads on any style variation's primary colour. -->
+<polygon points="190,0 250,0 120,400 60,400" fill="#FFFFFF" fill-opacity="0.07"/>
+<polygon points="270,0 292,0 162,400 140,400" fill="#FFFFFF" fill-opacity="0.04"/>
+<g transform="translate(0 -44)">
+<rect x="64" y="34" width="224" height="170" rx="12" fill="#FFFFFF" fill-opacity="0.3"/>
+<rect x="44" y="70" width="224" height="170" rx="12" fill="#FFFFFF" fill-opacity="0.55"/>
+<rect x="28" y="108" width="248" height="190" rx="12" fill="#FFFFFF"/>
+<circle cx="46" cy="126" r="4" fill="#000000" fill-opacity="0.18"/>
+<circle cx="60" cy="126" r="4" fill="#000000" fill-opacity="0.18"/>
+<circle cx="74" cy="126" r="4" fill="#000000" fill-opacity="0.18"/>
+<rect x="46" y="150" width="140" height="14" rx="7" fill="#000000" fill-opacity="0.82"/>
+<rect x="46" y="174" width="190" height="8" rx="4" fill="#000000" fill-opacity="0.22"/>
+<rect x="46" y="190" width="150" height="8" rx="4" fill="#000000" fill-opacity="0.22"/>
+<rect x="46" y="212" width="72" height="24" rx="12" fill="#000000" fill-opacity="0.82"/>
+<rect x="46" y="252" width="62" height="32" rx="6" fill="#000000" fill-opacity="0.12"/>
+<rect x="120" y="252" width="62" height="32" rx="6" fill="#000000" fill-opacity="0.12"/>
+<rect x="194" y="252" width="62" height="32" rx="6" fill="#000000" fill-opacity="0.12"/>
+</g>
+</svg>
