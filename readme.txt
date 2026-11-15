@@ -1694,6 +1694,12 @@ The following icons were created using AI tools (ChatGPT) for the plumbing indus
 - **License:** [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 - **Description:** Line icons for the Home Bold bento cards
 
+**patterns/images/home/mega-feature.svg**
+- **Source:** Original illustration created for Elayne by Imagewize
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Stacked page wireframes shown on the feature card of the industries mega menu
+
 ---
 
 ## Fonts

@@ -1,10 +1,11 @@
-/* Home mega feature: a photo card in the mega menu with a white caption over its bottom edge. */
+/* Home mega feature: an illustrated card in the mega menu with a white caption over its bottom edge. */
 .wp-block-group.is-style-home-mega-feature {
 	position: relative;
 	overflow: hidden;
 	height: 100%;
-	min-height: 11rem;
+	min-height: 20rem;
 	border-radius: var(--wp--preset--border-radius--md);
+	background-image: linear-gradient(118deg, transparent 0 34%, color-mix(in srgb, var(--wp--preset--color--base) 7%, transparent) 34% 45%, transparent 45%);
 }
 
 .wp-block-group.is-style-home-mega-feature > .wp-block-image {

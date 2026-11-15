@@ -2,17 +2,17 @@
 /**
  * Title: Mega Menu Industries
  * Slug: elayne/mega-menu-industries
- * Description: Mega menu panel with eight industry links in a grid and a photo feature card on the right
+ * Description: Mega menu panel with eight industry links in a grid and an illustrated feature card on the right
  * Categories: elayne/features
  * Keywords: mega menu, navigation, industries, feature
  * Viewport Width: 1400
  * Inserter: false
  */
 ?>
-<!-- wp:group {"metadata":{"patternName":"elayne/mega-menu-industries","name":"Mega Menu Industries"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|large"}}}} -->
+<!-- wp:group {"metadata":{"patternName":"elayne/mega-menu-industries","name":"Mega Menu Industries"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|large"}}}} -->
 <div class="wp-block-columns"><!-- wp:column {"width":"75%"} -->
-<div class="wp-block-column" style="flex-basis:75%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"grid","minimumColumnWidth":"15rem"}} -->
+<div class="wp-block-column" style="flex-basis:75%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"15rem"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"small"} -->
 <h3 class="wp-block-heading has-small-font-size"><a href="#"><?php esc_html_e( 'Restaurants and cafés', 'elayne' ); ?></a></h3>
@@ -96,9 +96,9 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"className":"is-style-home-mega-feature","layout":{"type":"default"}} -->
-<div class="wp-block-group is-style-home-mega-feature"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/pan-seared-halibut.webp" alt=""/></figure>
+<div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"className":"is-style-home-mega-feature","backgroundColor":"primary","layout":{"type":"default"}} -->
+<div class="wp-block-group is-style-home-mega-feature has-primary-background-color has-background"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/home/mega-feature.svg" alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"backgroundColor":"base","style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"default"}} -->
