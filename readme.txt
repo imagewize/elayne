@@ -10,13 +10,13 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 140+ beautiful pattern designs — including ready-to-insert page patterns that assemble a full page in one paste — 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required! The bundled legal patterns and the Legal Blue style variation are deprecated as of 4.13.0 — use the Elayne Legal child theme for law-firm sites.
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 140+ beautiful pattern designs — including ready-to-insert page patterns that assemble a full page in one paste — 34 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required! The bundled legal patterns and the Legal Blue style variation are deprecated as of 4.13.0 — use the Elayne Legal child theme for law-firm sites.
 
 = Key Features =
 
 * 140+ Professional Patterns - All 100% original, created specifically for Elayne
 * Ready-to-Insert Page Patterns - Full-page compositions (Homepage, Agency Homepage, About, Contact, Services, plus Store Homepage, Shop, Cart, and Checkout) that assemble multiple section patterns in a single paste
-* 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
+* 34 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
 * 8 Style Variations - Complete design systems including Bistro, Food & Beverage, Spa & Wellness, Home Improvement, Nail Salon, and Publicist (Legal Blue deprecated in 4.13.0, see below)
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
@@ -39,7 +39,7 @@ Elayne includes **140+ professionally designed patterns** across multiple catego
 * Banners (4) - Announcement bars, page headers with solid or slanted backgrounds
 * Call-to-Action (5) - Newsletter signups, contact forms, booking CTAs, a dark call to action band, and conversion-focused blocks
 * Contact (2) - Professional contact information displays with office hours, phone, email, and address
-* Features (8) - Feature grids, service showcases, industry cards, three numbered steps, an image with checklist, and the main-services-stack editorial numbered list
+* Features (9) - Feature grids, service showcases, industry cards, a drifting photo marquee, three numbered steps, an image with checklist, and the main-services-stack editorial numbered list
 * Statistics (1) - A ruled strip of four short facts
 * Testimonials (2) - Client reviews and detailed feedback layouts
 * Blog & Posts (8) - Featured post layouts, portrait-oriented displays, and single/index post templates

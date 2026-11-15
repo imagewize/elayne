@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-15T06:07:18+01:00\n"
+"POT-Creation-Date: 2026-11-15T06:23:36+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: elayne\n"
@@ -235,341 +235,357 @@ msgstr ""
 msgid "Slide Border"
 msgstr ""
 
-#: functions.php:366
-msgid "Zoom Hover"
+#: functions.php:364
+msgid "Reveal on Scroll"
 msgstr ""
 
-#: functions.php:367
-msgid "Grayscale Hover"
+#: functions.php:365
+msgid "Reveal Children in Sequence"
 msgstr ""
 
 #: functions.php:368
-msgid "Rotate Icon"
+msgid "Zoom Hover"
 msgstr ""
 
 #: functions.php:369
-msgid "Blur Hover"
+msgid "Grayscale Hover"
 msgstr ""
 
 #: functions.php:370
-msgid "Brightness Hover"
+msgid "Rotate Icon"
 msgstr ""
 
 #: functions.php:371
-msgid "Sepia Hover"
+msgid "Blur Hover"
 msgstr ""
 
 #: functions.php:372
-msgid "Lift Shadow"
+msgid "Brightness Hover"
 msgstr ""
 
 #: functions.php:373
-msgid "Border Reveal"
+msgid "Sepia Hover"
 msgstr ""
 
 #: functions.php:374
+msgid "Lift Shadow"
+msgstr ""
+
+#: functions.php:375
+msgid "Border Reveal"
+msgstr ""
+
+#: functions.php:376
 msgid "Tilt 3D"
 msgstr ""
 
-#: functions.php:377
+#: functions.php:379
 msgid "Eyebrow"
 msgstr ""
 
-#: functions.php:378
+#: functions.php:380
 msgid "Animated Underline"
 msgstr ""
 
-#: functions.php:379
+#: functions.php:381
 msgid "Animated Underline Center"
 msgstr ""
 
-#: functions.php:380
+#: functions.php:382
 msgid "Highlight Fade"
 msgstr ""
 
-#: functions.php:381
+#: functions.php:383
 msgid "Link Hover Shift"
 msgstr ""
 
-#: functions.php:382
+#: functions.php:384
 msgid "Fade In"
 msgstr ""
 
-#: functions.php:385
+#: functions.php:387
 msgid "Gradient Text"
 msgstr ""
 
-#: functions.php:386
+#: functions.php:388
 msgid "Gradient Text Animated"
 msgstr ""
 
-#: functions.php:387
+#: functions.php:389
 msgid "Underline Slide"
 msgstr ""
 
-#: functions.php:388
+#: functions.php:390
 msgid "Logo Link"
 msgstr ""
 
-#: functions.php:391
+#: functions.php:393
 msgid "Animated Markers"
 msgstr ""
 
-#: functions.php:418
+#: functions.php:420
 msgid "Plumbing Service Card"
 msgstr ""
 
-#: functions.php:419
+#: functions.php:421
 msgid "Plumbing Featured Card"
 msgstr ""
 
-#: functions.php:420
+#: functions.php:422
 msgid "Plumbing Badge"
 msgstr ""
 
-#: functions.php:421
+#: functions.php:423
 msgid "Plumbing Years Badge"
 msgstr ""
 
-#: functions.php:422
+#: functions.php:424
 msgid "Plumbing Stat Block"
 msgstr ""
 
-#: functions.php:423
+#: functions.php:425
 msgid "Plumbing Check Icon"
 msgstr ""
 
-#: functions.php:424
+#: functions.php:426
 msgid "Plumbing Why Item"
 msgstr ""
 
-#: functions.php:425
+#: functions.php:427
 msgid "Plumbing Avatar"
 msgstr ""
 
-#: functions.php:426
+#: functions.php:428
 msgid "Plumbing Contact Icon"
 msgstr ""
 
-#: functions.php:427
+#: functions.php:429
 msgid "Plumbing CTA Call Pill"
 msgstr ""
 
-#: functions.php:428
+#: functions.php:430
 msgid "Plumbing CTA Actions"
 msgstr ""
 
-#: functions.php:431
+#: functions.php:433
 msgid "Plumbing Section Label"
 msgstr ""
 
-#: functions.php:434
+#: functions.php:436
 msgid "Plumbing Call Button"
 msgstr ""
 
-#: functions.php:494
+#: functions.php:496
 msgid "Nail Salon Service Card"
 msgstr ""
 
-#: functions.php:495
+#: functions.php:497
 msgid "Nail Salon Featured Card"
 msgstr ""
 
-#: functions.php:496
+#: functions.php:498
 msgid "Nail Salon Badge"
 msgstr ""
 
-#: functions.php:497
+#: functions.php:499
 msgid "Nail Salon Years Badge"
 msgstr ""
 
-#: functions.php:498
+#: functions.php:500
 msgid "Nail Salon Stat Block"
 msgstr ""
 
-#: functions.php:499
+#: functions.php:501
 msgid "Nail Salon Check Icon"
 msgstr ""
 
-#: functions.php:500
+#: functions.php:502
 msgid "Nail Salon Why Item"
 msgstr ""
 
-#: functions.php:501
+#: functions.php:503
 msgid "Nail Salon Avatar"
 msgstr ""
 
-#: functions.php:502
+#: functions.php:504
 msgid "Nail Salon Contact Icon"
 msgstr ""
 
-#: functions.php:505
+#: functions.php:507
 msgid "Nail Salon Section Label"
 msgstr ""
 
-#: functions.php:544
+#: functions.php:546
 msgid "F&B Header"
 msgstr ""
 
-#: functions.php:545
+#: functions.php:547
 msgid "F&B Hero"
 msgstr ""
 
-#: functions.php:546
+#: functions.php:548
 msgid "F&B Marquee"
 msgstr ""
 
-#: functions.php:547
+#: functions.php:549
 msgid "F&B Story"
 msgstr ""
 
-#: functions.php:548
+#: functions.php:550
 msgid "F&B Menu"
 msgstr ""
 
-#: functions.php:549
+#: functions.php:551
 msgid "F&B Reserve"
 msgstr ""
 
-#: functions.php:702
+#: functions.php:704
 msgid "Premium Leather Goods"
 msgstr ""
 
-#: functions.php:703
+#: functions.php:705
 #: patterns/woocommerce/woo-shop-categories.php:68
 msgid "Legal Stationery"
 msgstr ""
 
-#: functions.php:704
+#: functions.php:706
 msgid "Executive Accessories"
 msgstr ""
 
-#: functions.php:705
+#: functions.php:707
 msgid "Bespoke Briefcases"
 msgstr ""
 
-#: functions.php:706
+#: functions.php:708
 msgid "Fine Writing Instruments"
 msgstr ""
 
-#: functions.php:707
+#: functions.php:709
 msgid "Corporate Gifting"
 msgstr ""
 
-#: functions.php:716
+#: functions.php:718
 msgid "Product categories"
 msgstr ""
 
-#: functions.php:737
+#: functions.php:739
 msgid "Store Ticker"
 msgstr ""
 
-#: functions.php:738
+#: functions.php:740
 msgid "Avatar Circle"
 msgstr ""
 
-#: functions.php:739
+#: functions.php:741
 msgid "Categories Grid"
 msgstr ""
 
-#: functions.php:740
+#: functions.php:742
 msgid "Category Hero"
 msgstr ""
 
-#: functions.php:741
+#: functions.php:743
 msgid "Category Toolbar"
 msgstr ""
 
-#: functions.php:742
+#: functions.php:744
 msgid "Category Products"
 msgstr ""
 
-#: functions.php:743
+#: functions.php:745
 msgid "Category Meta Bar"
 msgstr ""
 
-#: functions.php:746
+#: functions.php:748
 msgid "Our Story Watermark"
 msgstr ""
 
-#: functions.php:749
+#: functions.php:751
 msgid "Newsletter Search"
 msgstr ""
 
-#: functions.php:752
+#: functions.php:754
 msgid "Shop Filters Sidebar"
 msgstr ""
 
-#: functions.php:843
+#: functions.php:845
 msgid "Orders dispatched within 3–5 business days. Complimentary shipping on orders over $250. Standard items may be returned within 30 days in original condition."
 msgstr ""
 
-#: functions.php:859
+#: functions.php:861
 msgid "Brand Logo"
 msgstr ""
 
-#: functions.php:862
+#: functions.php:864
 msgid "Status Pill"
 msgstr ""
 
-#: functions.php:863
+#: functions.php:865
 msgid "Editorial Eyebrow"
 msgstr ""
 
-#: functions.php:864
+#: functions.php:866
 msgid "Editorial Pill"
 msgstr ""
 
-#: functions.php:867
+#: functions.php:869
 msgid "Editorial Hero Heading"
 msgstr ""
 
-#: functions.php:868
+#: functions.php:870
 msgid "Editorial Footer Wordmark"
 msgstr ""
 
-#: functions.php:871
+#: functions.php:873
 msgid "Editorial Services Stack"
 msgstr ""
 
-#: functions.php:872
+#: functions.php:874
 msgid "Editorial Service Row"
 msgstr ""
 
-#: functions.php:873
+#: functions.php:875
 msgid "Editorial Work Grid"
 msgstr ""
 
-#: functions.php:874
+#: functions.php:876
 msgid "Editorial Work Card"
 msgstr ""
 
-#: functions.php:875
+#: functions.php:877
 msgid "Editorial Pull Quote"
 msgstr ""
 
-#: functions.php:876
+#: functions.php:878
 msgid "Editorial Stats"
 msgstr ""
 
-#: functions.php:877
+#: functions.php:879
 msgid "Editorial CTA"
 msgstr ""
 
-#: functions.php:928
+#: functions.php:930
 msgid "Home Mosaic"
 msgstr ""
 
-#: functions.php:929
+#: functions.php:931
 msgid "Home Facts"
 msgstr ""
 
-#: functions.php:930
+#: functions.php:932
 msgid "Home Steps"
 msgstr ""
 
-#: functions.php:931
+#: functions.php:933
 msgid "Home Card"
+msgstr ""
+
+#: functions.php:934
+msgid "Home Marquee"
+msgstr ""
+
+#: functions.php:935
+msgid "Home Glow"
 msgstr ""
 
 #: inc/author-bindings.php:29
@@ -2817,6 +2833,48 @@ msgstr ""
 
 #: patterns/home-industries.php:145
 msgid "Browse all patterns"
+msgstr ""
+
+#: patterns/home-marquee.php
+msgctxt "Pattern title"
+msgid "Home Photo Marquee"
+msgstr ""
+
+#: patterns/home-marquee.php
+msgctxt "Pattern description"
+msgid "A full-width strip of photos that drifts slowly sideways and pauses on hover"
+msgstr ""
+
+#: patterns/home-marquee.php:16
+msgid "A chef plating dishes"
+msgstr ""
+
+#: patterns/home-marquee.php:20
+msgid "A yoga pose on a boardwalk"
+msgstr ""
+
+#: patterns/home-marquee.php:24
+msgid "A chef at work"
+msgstr ""
+
+#: patterns/home-marquee.php:28
+msgid "A treatment bed with a red flower"
+msgstr ""
+
+#: patterns/home-marquee.php:32
+msgid "Hands at a laptop and drawing tablet"
+msgstr ""
+
+#: patterns/home-marquee.php:36
+msgid "A harbour at sunset"
+msgstr ""
+
+#: patterns/home-marquee.php:40
+msgid "A person meditating"
+msgstr ""
+
+#: patterns/home-marquee.php:44
+msgid "A person working on a laptop"
 msgstr ""
 
 #: patterns/home-steps.php
