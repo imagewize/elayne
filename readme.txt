@@ -15,7 +15,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 = Key Features =
 
 * 140+ Professional Patterns - All 100% original, created specifically for Elayne
-* Ready-to-Insert Page Patterns - Full-page compositions (Homepage, About, Contact, Services, plus Store Homepage, Shop, Cart, and Checkout) that assemble multiple section patterns in a single paste
+* Ready-to-Insert Page Patterns - Full-page compositions (Homepage, Agency Homepage, About, Contact, Services, plus Store Homepage, Shop, Cart, and Checkout) that assemble multiple section patterns in a single paste
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
 * 8 Style Variations - Complete design systems including Bistro, Food & Beverage, Spa & Wellness, Home Improvement, Nail Salon, and Publicist (Legal Blue deprecated in 4.13.0, see below)
@@ -34,12 +34,13 @@ Launch a professional business website with the Elayne WordPress block theme! El
 Elayne includes **140+ professionally designed patterns** across multiple categories:
 
 **Core Patterns:**
-* Hero Sections (3) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs. Includes the main-hero pattern for agency and corporate homepages
+* Hero Sections (4) - Modern heroes with bold typography, split layouts, slanted overlays, and conversion-focused designs. Includes the home hero with a four-photo industry mosaic and the main-hero pattern for agency homepages
 * Headers & Footers (12) - Responsive navigation options from mobile hamburger to desktop inline menus, including advanced two-bar layouts with contact information, and a minimal editorial header with frosted-glass effect
 * Banners (4) - Announcement bars, page headers with solid or slanted backgrounds
-* Call-to-Action (4) - Newsletter signups, contact forms, booking CTAs, and conversion-focused blocks
+* Call-to-Action (5) - Newsletter signups, contact forms, booking CTAs, a dark call to action band, and conversion-focused blocks
 * Contact (2) - Professional contact information displays with office hours, phone, email, and address
-* Features (5) - Feature grids, service showcases, and the main-services-stack editorial numbered list
+* Features (8) - Feature grids, service showcases, industry cards, three numbered steps, an image with checklist, and the main-services-stack editorial numbered list
+* Statistics (1) - A ruled strip of four short facts
 * Testimonials (2) - Client reviews and detailed feedback layouts
 * Blog & Posts (8) - Featured post layouts, portrait-oriented displays, and single/index post templates
 
@@ -47,7 +48,7 @@ Elayne includes **140+ professionally designed patterns** across multiple catego
 * Cards (7) - Versatile card patterns for various content types (simple, extended, and profile cards)
 * Events (1) - Event grids with date badges and registration
 * Portfolio (1) - Masonry grid portfolio layouts
-* Pages (16) - 8 ready-to-insert page patterns (full-page compositions like Homepage, About, Contact, Services, and Store variants) plus 8 per-template wrapper patterns
+* Pages (17) - 9 ready-to-insert page patterns (full-page compositions like Homepage, Agency Homepage, About, Contact, Services, and Store variants) plus 8 per-template wrapper patterns
 
 **Industry Verticals:**
 * Spa & Wellness (14) - Treatment showcases, booking CTAs, wellness features, and product displays
