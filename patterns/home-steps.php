@@ -26,8 +26,8 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:group {"align":"wide","className":"is-style-home-steps","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
-<div class="wp-block-group alignwide is-style-home-steps"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"default"}} -->
+<!-- wp:group {"align":"wide","className":"is-style-home-steps elayne-reveal-sequence","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
+<div class="wp-block-group alignwide is-style-home-steps elayne-reveal-sequence"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"textColor":"accent","fontSize":"medium"} -->
 <p class="has-accent-color has-text-color has-medium-font-size"><?php esc_html_e( '1', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->

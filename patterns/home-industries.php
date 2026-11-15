@@ -26,8 +26,8 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"grid","minimumColumnWidth":"21rem"}} -->
-<div class="wp-block-group alignwide"><!-- wp:group {"className":"is-style-home-card","backgroundColor":"base","layout":{"type":"default"}} -->
+<!-- wp:group {"align":"wide","className":"elayne-reveal-sequence","style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"grid","minimumColumnWidth":"21rem"}} -->
+<div class="wp-block-group alignwide elayne-reveal-sequence"><!-- wp:group {"className":"is-style-home-card","backgroundColor":"base","layout":{"type":"default"}} -->
 <div class="wp-block-group is-style-home-card has-base-background-color has-background"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/fandb/pan-seared-halibut.webp" alt="<?php echo esc_attr__( 'Pan-seared halibut on saffron rice', 'elayne' ); ?>"/></figure>
 <!-- /wp:image -->

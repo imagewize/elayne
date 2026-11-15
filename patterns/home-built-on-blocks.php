@@ -19,8 +19,8 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:heading {"fontSize":"large"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:group {"className":"elayne-reveal","style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group elayne-reveal"><!-- wp:heading {"fontSize":"large"} -->
 <h2 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Built on WordPress blocks, and nothing else', 'elayne' ); ?></h2>
 <!-- /wp:heading -->
 

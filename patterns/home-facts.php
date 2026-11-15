@@ -11,8 +11,8 @@
 ?>
 <!-- wp:group {"metadata":{"patternName":"elayne/home-facts","name":"Home Facts Strip"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small)"><!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:group {"align":"wide","className":"is-style-home-facts","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"grid","minimumColumnWidth":"16rem"}} -->
-<div class="wp-block-group alignwide is-style-home-facts"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:group {"align":"wide","className":"is-style-home-facts elayne-reveal-sequence","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"grid","minimumColumnWidth":"16rem"}} -->
+<div class="wp-block-group alignwide is-style-home-facts elayne-reveal-sequence"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
 <h3 class="wp-block-heading has-medium-font-size"><?php esc_html_e( '140+ patterns', 'elayne' ); ?></h3>
 <!-- /wp:heading -->

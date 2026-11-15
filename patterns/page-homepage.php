@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- wp:pattern {"slug":"elayne/home-hero-mosaic"} /-->
 <!-- wp:pattern {"slug":"elayne/home-facts"} /-->
 <!-- wp:pattern {"slug":"elayne/home-industries"} /-->
+<!-- wp:pattern {"slug":"elayne/home-marquee"} /-->
 <!-- wp:pattern {"slug":"elayne/home-steps"} /-->
 <!-- wp:pattern {"slug":"elayne/home-built-on-blocks"} /-->
 <!-- wp:pattern {"slug":"elayne/home-cta"} /-->
