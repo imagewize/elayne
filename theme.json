@@ -7,6 +7,11 @@
 			"radius": true,
 			"radiusSizes": [
 				{
+					"name": "Extra Small",
+					"slug": "xs",
+					"size": "0.375rem"
+				},
+				{
 					"name": "Small",
 					"slug": "sm",
 					"size": "0.625rem"
