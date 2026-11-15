@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `xs` border-radius preset (0.375rem) in `theme.json`, for images and cards with tighter corners.
 - Mega Menu template part (`parts/mega-menu-template.html`) now lists the industries (eight entries with a one-line description each) in a wrapping grid, replacing the placeholder category lists. Shown by a mega menu block such as Aludra's.
 - `screenshot.png` re-shot from the new homepage: 1200x900, the industry mosaic hero and the facts strip.
+- Subtle depth and motion in the home patterns, in CSS only and switched off under `prefers-reduced-motion`: mosaic tiles rise in once on page load, lift and zoom their photo on hover; industry cards have a soft shadow, lift on hover and rise into view on scroll (where the browser supports scroll-driven animation); step rules take the accent colour on hover.
 - Group block styles `home-mosaic`, `home-facts`, `home-steps` and `home-card`, with their CSS in `assets/styles/block-styles/`.
 
 ## [4.13.0] - 2026-11-15

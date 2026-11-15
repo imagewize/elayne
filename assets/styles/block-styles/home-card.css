@@ -32,3 +32,62 @@
 .wp-block-group.is-style-home-card a:hover {
 	color: var(--wp--preset--color--main);
 }
+
+/* Depth and motion: the card lifts and its photo zooms slowly on hover; the link underline thickens. */
+.wp-block-group.is-style-home-card {
+	box-shadow: var(--wp--preset--shadow--small-light);
+	transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.wp-block-group.is-style-home-card:hover {
+	box-shadow: var(--wp--preset--shadow--large-light);
+	transform: translateY(-4px);
+}
+
+.wp-block-group.is-style-home-card > .wp-block-image {
+	overflow: hidden;
+}
+
+.wp-block-group.is-style-home-card > .wp-block-image img {
+	transition: transform 0.9s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.wp-block-group.is-style-home-card:hover > .wp-block-image img {
+	transform: scale(1.05);
+}
+
+.wp-block-group.is-style-home-card a {
+	text-decoration-thickness: 1px;
+	transition: text-decoration-thickness 0.2s ease, text-underline-offset 0.2s ease, color 0.2s ease;
+}
+
+.wp-block-group.is-style-home-card:hover a {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.3em;
+}
+
+/* Cards rise into place as they scroll into view, where the browser supports scroll-driven animation. */
+@media (prefers-reduced-motion: no-preference) {
+	@supports (animation-timeline: view()) {
+		.wp-block-group.is-style-home-card {
+			animation: elayne-home-card-rise linear both;
+			animation-timeline: view();
+			animation-range: entry 0% entry 45%;
+		}
+	}
+}
+
+@keyframes elayne-home-card-rise {
+	from {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-group.is-style-home-card,
+	.wp-block-group.is-style-home-card > .wp-block-image img,
+	.wp-block-group.is-style-home-card a {
+		transition: none;
+	}
+}

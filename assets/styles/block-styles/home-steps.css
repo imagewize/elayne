@@ -9,3 +9,12 @@
 	font-weight: 600;
 	line-height: 1;
 }
+
+/* Motion: the rule over a step takes the accent colour on hover. */
+.wp-block-group.is-style-home-steps > .wp-block-group {
+	transition: border-color 0.3s ease;
+}
+
+.wp-block-group.is-style-home-steps > .wp-block-group:hover {
+	border-top-color: var(--elayne-accent);
+}

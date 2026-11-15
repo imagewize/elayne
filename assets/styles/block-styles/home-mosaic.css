@@ -62,3 +62,64 @@
 		grid-column: 1 / span 2;
 	}
 }
+
+/* Depth and motion: soft shadow, slow photo zoom on hover, one staggered rise on page load. */
+.wp-block-group.is-style-home-mosaic > .home-mosaic-tile {
+	box-shadow: var(--wp--preset--shadow--medium-light);
+	transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.wp-block-group.is-style-home-mosaic > .home-mosaic-tile:hover {
+	box-shadow: var(--wp--preset--shadow--large-dark);
+	transform: translateY(-3px);
+}
+
+.wp-block-group.is-style-home-mosaic .home-mosaic-tile > .wp-block-image img {
+	transition: transform 0.9s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.wp-block-group.is-style-home-mosaic .home-mosaic-tile:hover > .wp-block-image img {
+	transform: scale(1.06);
+}
+
+.wp-block-group.is-style-home-mosaic .home-mosaic-tile > p {
+	box-shadow: var(--wp--preset--shadow--small-dark);
+	transition: transform 0.4s ease;
+}
+
+.wp-block-group.is-style-home-mosaic .home-mosaic-tile:hover > p {
+	transform: translateY(-3px);
+}
+
+@keyframes elayne-home-rise {
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.wp-block-group.is-style-home-mosaic > .home-mosaic-tile {
+		animation: elayne-home-rise 0.8s cubic-bezier(0.2, 0.6, 0.2, 1) backwards;
+	}
+
+	.wp-block-group.is-style-home-mosaic > .home-mosaic-tile:nth-child(2) {
+		animation-delay: 0.1s;
+	}
+
+	.wp-block-group.is-style-home-mosaic > .home-mosaic-tile:nth-child(3) {
+		animation-delay: 0.2s;
+	}
+
+	.wp-block-group.is-style-home-mosaic > .home-mosaic-tile:nth-child(4) {
+		animation-delay: 0.3s;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-group.is-style-home-mosaic > .home-mosaic-tile,
+	.wp-block-group.is-style-home-mosaic .home-mosaic-tile > .wp-block-image img,
+	.wp-block-group.is-style-home-mosaic .home-mosaic-tile > p {
+		transition: none;
+	}
+}
