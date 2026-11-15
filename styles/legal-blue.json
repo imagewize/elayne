@@ -2,6 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Legal Blue",
+	"description": "Deprecated in Elayne 4.13.0 — install the Elayne Legal child theme (github.com/imagewize/elayne-legal), which ships the Legal Blue and Legal Corporate variations.",
 	"settings": {
 		"color": {
 			"defaultDuotone": false,

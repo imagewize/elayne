@@ -2,7 +2,7 @@
 /**
  * Title: Legal Client Testimonials
  * Slug: elayne/legal-testimonials
- * Description: Grid of client testimonials for law firm
+ * Description: Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Grid of client testimonials for law firm
  * Categories: elayne/legal, elayne/testimonial
  * Keywords: legal, law, testimonials, reviews, clients, attorneys
  * Viewport Width: 1280

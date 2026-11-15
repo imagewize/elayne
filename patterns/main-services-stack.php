@@ -89,11 +89,11 @@
 <h3 class="wp-block-heading has-large-font-size" style="letter-spacing:-0.02em;text-transform:uppercase"><?php esc_html_e( 'Vertical kits', 'elayne' ); ?></h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
-<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Pre-composed pattern libraries for legal, food and beverage, spa, plumbing, salons, publication, store. Drop in, rewrite the copy, launch.', 'elayne' ); ?></p>
+<p class="has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Pre-composed pattern libraries for food and beverage, spa, plumbing, salons, publication, store. Drop in, rewrite the copy, launch.', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"className":"editorial-service-tags","style":{"spacing":{"blockGap":"var:preset|spacing|2-x-small"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 <div class="wp-block-group editorial-service-tags"><!-- wp:paragraph {"className":"is-style-editorial-pill"} -->
-<p class="is-style-editorial-pill"><?php esc_html_e( '9 verticals', 'elayne' ); ?></p>
+<p class="is-style-editorial-pill"><?php esc_html_e( '6 verticals', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"is-style-editorial-pill"} -->
 <p class="is-style-editorial-pill"><?php esc_html_e( 'Style variations', 'elayne' ); ?></p>

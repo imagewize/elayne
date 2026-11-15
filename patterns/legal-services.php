@@ -2,7 +2,7 @@
 /**
  * Title: Legal Services Grid
  * Slug: elayne/legal-services
- * Description: Six-column responsive grid of legal practice areas with custom SVG icons
+ * Description: Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Six-column responsive grid of legal practice areas with custom SVG icons
  * Categories: elayne/legal, elayne/features, elayne/card-simple
  * Keywords: services, law, legal, attorney, practice areas, family law, business law, simple
  * Viewport Width: 1200

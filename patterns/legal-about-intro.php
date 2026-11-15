@@ -2,7 +2,7 @@
 /**
  * Title: Legal About Intro
  * Slug: elayne/legal-about-intro
- * Description: About page header banner with founding story and two-column values section
+ * Description: Deprecated in 4.13.0 — moved to the Elayne Legal child theme. About page header banner with founding story and two-column values section
  * Categories: elayne/legal
  * Keywords: about, legal, intro, header, story, commitment, history
  * Viewport Width: 1200

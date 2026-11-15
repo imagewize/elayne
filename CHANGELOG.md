@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.13.0] - 2026-11-15
+
+### Deprecated
+- The bundled legal patterns — `elayne/legal-about-intro`, `elayne/legal-contact`, `elayne/legal-services`, `elayne/legal-stats`, `elayne/legal-team`, `elayne/legal-testimonials`, `elayne/hero-cover-slanted-legal` — and the `Legal Blue` style variation (`styles/legal-blue.json`). Their pattern descriptions and the variation's `description` now say "Deprecated in 4.13.0", and they stay registered until 5.0.0 so existing inserter references keep working. Law-firm sites should install the [Elayne Legal](https://github.com/imagewize/elayne-legal) child theme (v1.1.0+), whose same-slug patterns and same-basename variation win over these.
+
+### Added
+- `screenshot.png` re-shot as a clean 1200x900 render of the default homepage (`elayne/page-homepage`) — no version badge, no "released this week", no agency pill.
+- `patterns/main-hero.php`: evergreen hero copy — the eyebrow reads "A theme for serious work" and the stats read "140+ patterns / Ready to insert" and "8 style variations / One click in the editor" (previously hard-coded `v4.0` / `v4.2.0`, "Released this week", "9 verticals / From legal to nail salons").
+- `patterns/header-editorial.php`: the status pill reads "Open for new projects" instead of the site-specific "Open · 2 spots Q2".
+- `patterns/main-services-stack.php`: the "Vertical kits" row no longer lists legal or claims "9 verticals" — it lists the six bundled sets and the pill reads "6 verticals" (legal lives in the Elayne Legal child theme).
+
 ## [4.12.0] - 2026-11-14
 
 ### Added

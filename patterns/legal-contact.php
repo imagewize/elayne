@@ -2,7 +2,7 @@
 /**
  * Title: Legal Contact Information
  * Slug: elayne/legal-contact
- * Description: Contact details for law firm with office location, phone, email, and hours
+ * Description: Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Contact details for law firm with office location, phone, email, and hours
  * Categories: elayne/legal, elayne/contact
  * Keywords: contact, legal, law firm, office, phone, email, hours, location
  * Viewport Width: 1200

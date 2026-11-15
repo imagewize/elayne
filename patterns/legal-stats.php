@@ -2,7 +2,7 @@
 /**
  * Title: Legal Stats - Experience and Success
  * Slug: elayne/legal-stats
- * Description: Statistics showcase for law firm featuring years of experience, cases won, and success rate
+ * Description: Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Statistics showcase for law firm featuring years of experience, cases won, and success rate
  * Categories: elayne/legal, elayne/statistics
  * Keywords: stats, statistics, legal, law firm, experience, cases, success rate
  * Viewport Width: 1200

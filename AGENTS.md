@@ -121,7 +121,7 @@ All design tokens live in `theme.json` — never hardcode colors, sizes, or spac
 **Pill/badge shrink-wrap rule (CRITICAL — prevents full-column-width pills):** WordPress `is-layout-flow` columns are internally `flex-direction: column` flex containers. Any child is a flex item and gets its `display` blockified — `inline-block`/`inline-flex` both compute to `block` regardless of inline styles or CSS. The default `align-items: normal` acts as `stretch`, making every child span the full column width. To shrink-wrap a pill/badge inside a `wp:column`, add `align-self: flex-start` and `width: fit-content` to its **CSS rule** (not inline). `is-style-status-pill` works in the editorial header only because that header is a `flex-direction: row` container (cross-axis vertical → width is content-driven); inside a `wp:column` it would need the same fix.
 
 ## Vertical child themes
-Verticals are moving out of this theme into child themes that require Elayne (pilot: `elayne-legal`, `~/code/elayne-legal`, pre-v1.0.0). Slugs stay `elayne/<vertical>-*`, the child's patterns win over the parent's while both exist, and each child has its own `CHANGELOG.md` and text domain. Child-only images use `get_stylesheet_directory_uri()`; shared images stay here. This theme's template patterns hard-code `"theme":"elayne"` on template-part blocks, so a child retargets that attribute in its own `functions.php`; keep the attribute here. Do not add new vertical pattern sets to this theme; the bundled `legal-*` patterns stay until a deprecation release. See `CLAUDE.md` for the full setup.
+Verticals are moving out of this theme into child themes that require Elayne (pilot: `elayne-legal`, `~/code/elayne-legal`, v1.1.0). Slugs stay `elayne/<vertical>-*`, the child's patterns win over the parent's while both exist, and each child has its own `CHANGELOG.md` and text domain. Child-only images use `get_stylesheet_directory_uri()`; shared images stay here. This theme's template patterns hard-code `"theme":"elayne"` on template-part blocks, so a child retargets that attribute in its own `functions.php`; keep the attribute here. Do not add new vertical pattern sets to this theme; the bundled `legal-*` patterns were deprecated in 4.13.0 and are removed in 5.0.0. See `CLAUDE.md` for the full setup.
 
 ## Content & Design Prototypes (private `elayne-content` repo)
 Design prototypes and demo content for verticals live in a separate **private** repo, `~/Documents/elayne-content` ([imagewize/elayne-content](https://github.com/imagewize/elayne-content)), kept out of the theme repo.
@@ -130,7 +130,7 @@ Design prototypes and demo content for verticals live in a separate **private** 
 - Start new vertical/variant work there: read the prototype, then port to block patterns (see `elayne-pattern-generator` skill and `docs/elayne/VERTICAL-WORKFLOW.md`). Do not copy prototype CSS/images verbatim.
 - Prototype images are Unsplash and **not shippable** — WP.org rejects them. Replace with CC0/GPL WebP images in `patterns/images/` and document in `readme.txt`.
 - Never commit `elayne-content` files here or hotlink its images.
-- Legal vertical work happens in the `elayne-legal` child theme (`~/code/elayne-legal`), not here. The bundled `legal-*` patterns are slated for deprecation after the child's v1.0.0; do not add new legal patterns here.
+- Legal vertical work happens in the `elayne-legal` child theme (`~/code/elayne-legal`), not here. The bundled `legal-*` patterns were deprecated in 4.13.0 (the child is at v1.1.0) and are removed in 5.0.0; do not add new legal patterns here.
 
 ## Coding Style & Naming Conventions
 - PHP: follow WordPress coding standards (tab indent, snake_case functions); keep logic minimal and filter-based. Use text domain `elayne` in translatable strings.
@@ -318,7 +318,7 @@ Each HTML template references exactly one pattern via `<!-- wp:pattern {"slug":"
 
 ## Versioning Checklist
 Update together on every release: `style.css` header `Version:`, `readme.txt` `Stable tag:` + changelog section, and `CHANGELOG.md` release entry.
-- Match `readme.txt` changelog to Moiraine: `== Changelog ==`, entries like `= 1.0.0-beta.3 - 12/10/25 =` with `NEW/ADDED/CHANGED/TECHNICAL` prefixes, concise sentences ending in periods.
+- Match `readme.txt` changelog to Moiraine: `== Changelog ==`, entries like `= 1.0.0-beta.3 - 12/10/25 =` with `NEW/ADDED/CHANGED/TECHNICAL` prefixes, concise sentences ending in periods. New entries are `ADDED`, never `CHANGED` — see the next bullet and the same rule in `CLAUDE.md`.
 - Keep `CHANGELOG.md` aligned to Keep a Changelog (`### Added - ...`, `### Changed - ...`).
 - When updating `CHANGELOG.md`/`readme.txt`, new entries are ADDITIONS — do NOT describe them as "Changed" unless the file already existed on `main`.
 - Review with `git status`/`git diff`; compare against `main` (`git diff main...HEAD`) before writing release notes.
