@@ -1,0 +1,87 @@
+/* Home Bold cell: a rounded card; its pill button is pinned to the bottom. */
+.wp-block-group.is-style-home-bold-cell {
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--wp--preset--border-radius--lg);
+	padding: var(--wp--preset--spacing--large);
+}
+
+.wp-block-group.is-style-home-bold-cell .home-bold-cell-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.wp-block-group.is-style-home-bold-cell p {
+	max-width: 30rem;
+}
+
+.wp-block-group.is-style-home-bold-cell .home-bold-icon {
+	margin: 0 0 var(--wp--preset--spacing--small);
+}
+
+.wp-block-group.is-style-home-bold-cell .home-bold-icon img {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+}
+
+/* Split cell: text on the left, a stage panel on the right. */
+.wp-block-group.is-style-home-bold-cell.home-bold-cell-split {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+	gap: var(--wp--preset--spacing--large);
+	align-items: stretch;
+}
+
+.wp-block-group.is-style-home-bold-cell.home-bold-cell-split > * {
+	margin: 0;
+}
+
+/* Pill button, shared with the Home Bold cards. */
+.wp-block-buttons.home-bold-pill {
+	align-self: flex-start;
+	width: fit-content;
+	margin-top: auto;
+	padding-top: var(--wp--preset--spacing--medium);
+}
+
+.wp-block-buttons.home-bold-pill .wp-block-button__link,
+.wp-block-buttons.home-bold-swatches .wp-block-button__link {
+	border-radius: var(--wp--preset--border-radius--pill);
+	font-family: var(--wp--preset--font-family--primary);
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.wp-block-buttons.home-bold-pill .wp-block-button__link {
+	padding: 0.7rem 1.15rem;
+}
+
+.wp-block-buttons.home-bold-pill .wp-block-button__link:hover {
+	background-color: var(--elayne-accent-light) !important;
+	color: var(--wp--preset--color--main) !important;
+}
+
+/* Style swatches: small outlined pills, the chosen one filled. */
+.wp-block-buttons.home-bold-swatches {
+	gap: 0.5rem;
+	padding-top: var(--wp--preset--spacing--small);
+}
+
+.wp-block-buttons.home-bold-swatches .wp-block-button__link {
+	border: 1px solid var(--wp--preset--color--main);
+	padding: 0.5rem 0.9rem;
+}
+
+.wp-block-buttons.home-bold-swatches .is-style-outline .wp-block-button__link {
+	border-color: var(--wp--preset--color--border-dark);
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--main);
+}
+
+@media (max-width: 640px) {
+	.wp-block-group.is-style-home-bold-cell.home-bold-cell-split {
+		grid-template-columns: 1fr;
+	}
+}

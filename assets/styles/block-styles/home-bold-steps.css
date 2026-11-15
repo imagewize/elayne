@@ -1,0 +1,12 @@
+/* Home Bold steps: open on the page, each under a very large numeral. */
+.wp-block-group.is-style-home-bold-steps .home-bold-step-number {
+	margin-bottom: var(--wp--preset--spacing--medium);
+	font-family: var(--wp--preset--font-family--primary);
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: -0.04em;
+}
+
+.wp-block-group.is-style-home-bold-steps p:not(.home-bold-step-number) {
+	max-width: 24rem;
+}

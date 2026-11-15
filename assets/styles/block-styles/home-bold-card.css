@@ -1,0 +1,27 @@
+/* Home Bold card: white card with an inset rounded photo, text below, pill link pinned to the bottom. */
+.wp-block-group.is-style-home-bold-card {
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--wp--preset--border-radius--lg);
+	padding: var(--wp--preset--spacing--small);
+}
+
+.wp-block-group.is-style-home-bold-card > .wp-block-image {
+	margin: 0;
+}
+
+.wp-block-group.is-style-home-bold-card > .wp-block-image img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: var(--wp--preset--border-radius--md);
+}
+
+.wp-block-group.is-style-home-bold-card > .home-bold-card-body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin-block-start: 0;
+	padding: var(--wp--preset--spacing--medium) clamp(0.75rem, 1.6vw, 1.5rem) clamp(0.75rem, 1.6vw, 1.5rem);
+}
