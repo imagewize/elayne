@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **New default homepage.** `elayne/page-homepage` is now a business homepage that shows the theme's range, built from six new patterns: `home-hero-mosaic` (headline, two buttons and a four-photo mosaic of labelled industries), `home-facts` (ruled strip of four facts), `home-industries` (six photo cards, one per industry, three per row), `home-steps` (three numbered steps), `home-built-on-blocks` (photo beside a checklist) and `home-cta` (dark call to action band). All use photos already bundled in the theme.
+- `elayne/page-agency-homepage`: the previous agency homepage composition (editorial hero, services stack, client stories, logo wall, testimonials, newsletter), kept under its own slug.
+- `xs` border-radius preset (0.375rem) in `theme.json`, for images and cards with tighter corners.
+- Group block styles `home-mosaic`, `home-facts`, `home-steps` and `home-card`, with their CSS in `assets/styles/block-styles/`.
+
 ## [4.13.0] - 2026-11-15
 
 ### Deprecated
