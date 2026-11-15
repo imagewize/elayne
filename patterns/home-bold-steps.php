@@ -24,8 +24,8 @@
 
 <!-- wp:group {"align":"wide","className":"is-style-home-bold-steps","style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
 <div class="wp-block-group alignwide is-style-home-bold-steps"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"className":"home-bold-step-number","textColor":"accent","fontSize":"xx-large"} -->
-<p class="home-bold-step-number has-accent-color has-text-color has-xx-large-font-size"><?php esc_html_e( '1', 'elayne' ); ?></p>
+<div class="wp-block-group"><!-- wp:paragraph {"className":"home-bold-step-number","textColor":"accent","fontSize":"xxx-large"} -->
+<p class="home-bold-step-number has-accent-color has-text-color has-xxx-large-font-size"><?php esc_html_e( '1', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"fontSize":"large"} -->
@@ -38,8 +38,8 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"className":"home-bold-step-number","textColor":"accent","fontSize":"xx-large"} -->
-<p class="home-bold-step-number has-accent-color has-text-color has-xx-large-font-size"><?php esc_html_e( '2', 'elayne' ); ?></p>
+<div class="wp-block-group"><!-- wp:paragraph {"className":"home-bold-step-number","textColor":"accent","fontSize":"xxx-large"} -->
+<p class="home-bold-step-number has-accent-color has-text-color has-xxx-large-font-size"><?php esc_html_e( '2', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"fontSize":"large"} -->
@@ -52,8 +52,8 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"className":"home-bold-step-number","textColor":"accent","fontSize":"xx-large"} -->
-<p class="home-bold-step-number has-accent-color has-text-color has-xx-large-font-size"><?php esc_html_e( '3', 'elayne' ); ?></p>
+<div class="wp-block-group"><!-- wp:paragraph {"className":"home-bold-step-number","textColor":"accent","fontSize":"xxx-large"} -->
+<p class="home-bold-step-number has-accent-color has-text-color has-xxx-large-font-size"><?php esc_html_e( '3', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"fontSize":"large"} -->

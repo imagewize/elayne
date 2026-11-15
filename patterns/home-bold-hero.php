@@ -11,8 +11,8 @@
 ?>
 <!-- wp:group {"metadata":{"patternName":"elayne/home-bold-hero","name":"Home Bold Hero"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"}}},"align":"full","backgroundColor":"tertiary","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:heading {"level":1,"align":"wide","fontSize":"xx-large"} -->
-<h1 class="wp-block-heading alignwide has-xx-large-font-size"><?php echo wp_kses_post( __( 'One theme.<br>A site for every kind of business.', 'elayne' ) ); ?></h1>
+<div class="wp-block-group"><!-- wp:heading {"level":1,"align":"wide","fontSize":"xxx-large"} -->
+<h1 class="wp-block-heading alignwide has-xxx-large-font-size"><?php echo wp_kses_post( __( 'One theme.<br>A site for every kind of business.', 'elayne' ) ); ?></h1>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"verticalAlignment":"bottom","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|x-large"}}}} -->

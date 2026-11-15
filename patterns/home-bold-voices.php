@@ -12,8 +12,8 @@
 <!-- wp:group {"metadata":{"patternName":"elayne/home-bold-voices","name":"Home Bold Voices"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large"},"margin":{"top":"0","bottom":"0"}}},"align":"full","className":"is-style-home-bold-voices","backgroundColor":"primary","textColor":"on-primary","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull is-style-home-bold-voices has-on-primary-color has-primary-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--xx-large)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:quote {"align":"wide","className":"home-bold-voice-lead"} -->
-<blockquote class="wp-block-quote alignwide home-bold-voice-lead"><!-- wp:paragraph {"fontSize":"xx-large"} -->
-<p class="has-xx-large-font-size"><?php esc_html_e( '“We opened on a Friday. The site went up on Wednesday.”', 'elayne' ); ?></p>
+<blockquote class="wp-block-quote alignwide home-bold-voice-lead"><!-- wp:paragraph {"fontSize":"xxx-large"} -->
+<p class="has-xxx-large-font-size"><?php esc_html_e( '“We opened on a Friday. The site went up on Wednesday.”', 'elayne' ); ?></p>
 <!-- /wp:paragraph --><cite><?php esc_html_e( 'Marta Kowalski, Harbour Street Kitchen', 'elayne' ); ?></cite></blockquote>
 <!-- /wp:quote -->
 
