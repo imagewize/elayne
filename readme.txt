@@ -4,13 +4,13 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.12.0
+Stable tag: 4.13.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a professional business website with the Elayne WordPress block theme! Elayne features 140+ beautiful pattern designs — including ready-to-insert page patterns that assemble a full page in one paste — 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required!
+Launch a professional business website with the Elayne WordPress block theme! Elayne features 140+ beautiful pattern designs — including ready-to-insert page patterns that assemble a full page in one paste — 32 interactive CSS effects, WooCommerce store integration, and a fully-customizable design system with Global Styles. Elayne integrates seamlessly with all of the powerful WordPress editor features, giving you the most lightweight and powerful website builder — no expensive page builder plugin required! The bundled legal patterns and the Legal Blue style variation are deprecated as of 4.13.0 — use the Elayne Legal child theme for law-firm sites.
 
 = Key Features =
 
@@ -18,7 +18,7 @@ Launch a professional business website with the Elayne WordPress block theme! El
 * Ready-to-Insert Page Patterns - Full-page compositions (Homepage, About, Contact, Services, plus Store Homepage, Shop, Cart, and Checkout) that assemble multiple section patterns in a single paste
 * 32 Interactive CSS Effects - Pure CSS animations for buttons, cards, images, and text
 * WooCommerce Integration - Custom product archive template with responsive 3-2-1 grid
-* 8 Style Variations - Complete design systems including Bistro, Food & Beverage, Spa & Wellness, Legal Blue, Home Improvement, Nail Salon, and Publicist
+* 8 Style Variations - Complete design systems including Bistro, Food & Beverage, Spa & Wellness, Home Improvement, Nail Salon, and Publicist (Legal Blue deprecated in 4.13.0, see below)
 * Flexible Layout System - Multiple page & post layout options (centered, sidebar, wide)
 * Business/Corporate Focus - Professional patterns for modern businesses
 * Industry-Specific Content - Pattern sets optimized for spa & wellness, legal services, food & beverage, home improvement trades, nail salons, and publishing
@@ -51,7 +51,7 @@ Elayne includes **140+ professionally designed patterns** across multiple catego
 
 **Industry Verticals:**
 * Spa & Wellness (14) - Treatment showcases, booking CTAs, wellness features, and product displays
-* Legal Services (7) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns
+* Legal Services (7, deprecated in 4.13.0) - Attorney profiles, practice area showcases, case statistics, and professional contact patterns. Moved to the Elayne Legal child theme (https://github.com/imagewize/elayne-legal); the bundled copies are removed in 5.0.0.
 * Food & Beverage (17) - Restaurant and café patterns with hero, marquee, menu display, reservations, chef story, event grids, hours/location, and amenities. Includes Bistro (ink-blue editorial) and classic emerald/cream style variations
 * Home Improvement (9) - Full-site pattern set with header, hero, services grid, stats, emergency CTA, and footer
 * Nail Salon (7) - Hero with real photo, services grid, stats bar, why-us, testimonials, CTA, and contact patterns with rose palette
@@ -86,7 +86,7 @@ Switch your entire site's look with one click using **8 pre-configured color pal
 * Food & Beverage - Emerald and cream with Anton/Asap Condensed fonts for restaurants and cafés
 * Home Improvement - Navy, amber, and emergency-red for trade service businesses
 * Spa & Wellness (Teal & Sage) - Soothing spa colors with elegant Cormorant Garamond serif
-* Legal Blue - Professional navy blue and gold palette for law firms
+* Legal Blue (deprecated in 4.13.0) - Professional navy blue and gold palette for law firms. Superseded by the Legal Blue and Legal Corporate variations in the Elayne Legal child theme.
 * Nail Salon - Rose and blush pink palette with Cormorant Garamond headings for beauty businesses
 * Publicist - Indigo and violet tones with elegant Bodoni Moda serif for modern publications and blogs
 
@@ -172,6 +172,11 @@ Elayne includes custom image sizes optimized for different layouts:
 * elayne-single-hero (700×400) - 16:9-ish landscape
 
 == Changelog ==
+
+= 4.13.0 - 11/15/26 =
+* DEPRECATED: The bundled legal patterns (elayne/legal-about-intro, elayne/legal-contact, elayne/legal-services, elayne/legal-stats, elayne/legal-team, elayne/legal-testimonials, elayne/hero-cover-slanted-legal) and the Legal Blue style variation; their descriptions now say so. They stay registered until 5.0.0. Use the Elayne Legal child theme (github.com/imagewize/elayne-legal) for law-firm sites — its same-slug patterns win.
+* ADDED: New theme screenshot: a clean 1200x900 render of the default homepage without version badges or promotional text.
+* ADDED: Evergreen copy in the default homepage patterns — hero stats read "140+ patterns / Ready to insert" and "8 style variations / One click in the editor" (no hard-coded version or "released this week"), the editorial header pill reads "Open for new projects", and the services-stack vertical row reads "6 verticals" without listing legal.
 
 = 4.12.0 - 11/14/26 =
 * ADDED: Colour contract. Patterns, template parts, templates and the shared CSS now use only the palette colours every style variation defines, so any pattern reads correctly under any variation. New palette colours in theme.json and every variation: on-primary (text on a primary background), accent (kickers, eyebrows and accent buttons on the page) and accent-light (highlights on dark bands). The old orange, orange-light, gold and accent-warm colours stay defined, so saved content keeps its colours.
