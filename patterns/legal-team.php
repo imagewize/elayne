@@ -2,7 +2,7 @@
 /**
  * Title: Legal Team - Attorney Profiles
  * Slug: elayne/legal-team
- * Description: Showcase law firm attorneys with professional profiles in a responsive grid
+ * Description: Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Showcase law firm attorneys with professional profiles in a responsive grid
  * Categories: elayne/legal, elayne/team, elayne/card, elayne/card-profiles
  * Keywords: legal, attorneys, lawyers, team, staff, profiles, law firm
  * Viewport Width: 1200

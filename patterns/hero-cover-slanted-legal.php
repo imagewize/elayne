@@ -2,7 +2,7 @@
 /**
  * Title: Hero Cover (Slanted Legal)
  * Slug: elayne/hero-cover-slanted-legal
- * Description: Full-height hero section with slanted gradient overlay - legal services content
+ * Description: Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Full-height hero section with slanted gradient overlay - legal services content
  * Categories: elayne/hero, elayne/legal
  * Keywords: hero, slanted, gradient, overlay, cover, image, background, legal, law firm, attorney
  * Viewport Width: 1200
