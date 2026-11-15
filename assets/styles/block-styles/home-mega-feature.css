@@ -1,0 +1,42 @@
+/* Home mega feature: a photo card in the mega menu with a white caption over its bottom edge. */
+.wp-block-group.is-style-home-mega-feature {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	min-height: 11rem;
+	border-radius: var(--wp--preset--border-radius--md);
+}
+
+.wp-block-group.is-style-home-mega-feature > .wp-block-image {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+}
+
+.wp-block-group.is-style-home-mega-feature > .wp-block-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.wp-block-group.is-style-home-mega-feature > .wp-block-group {
+	position: absolute;
+	right: 0.6rem;
+	bottom: 0.6rem;
+	left: 0.6rem;
+	margin: 0;
+	border-radius: var(--wp--preset--border-radius--sm);
+	padding: 0.7rem 0.8rem;
+}
+
+.wp-block-group.is-style-home-mega-feature > .wp-block-group a {
+	color: var(--wp--preset--color--main);
+	text-decoration: none;
+}
+
+/* The whole card is the link target. */
+.wp-block-group.is-style-home-mega-feature > .wp-block-group a::after {
+	position: absolute;
+	inset: -100vh -0.6rem -0.6rem;
+	content: "";
+}

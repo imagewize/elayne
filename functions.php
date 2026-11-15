@@ -927,19 +927,20 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_editorial_block_styles' );
  */
 function elayne_register_home_block_styles() {
 	$styles = array(
-		'home-mosaic'      => __( 'Home Mosaic', 'elayne' ),
-		'home-facts'       => __( 'Home Facts', 'elayne' ),
-		'home-steps'       => __( 'Home Steps', 'elayne' ),
-		'home-card'        => __( 'Home Card', 'elayne' ),
-		'home-marquee'     => __( 'Home Marquee', 'elayne' ),
-		'home-glow'        => __( 'Home Glow', 'elayne' ),
-		'home-bold-head'   => __( 'Home Bold Head', 'elayne' ),
-		'home-bold-stage'  => __( 'Home Bold Stage', 'elayne' ),
-		'home-bold-bento'  => __( 'Home Bold Bento', 'elayne' ),
-		'home-bold-cell'   => __( 'Home Bold Cell', 'elayne' ),
-		'home-bold-card'   => __( 'Home Bold Card', 'elayne' ),
-		'home-bold-steps'  => __( 'Home Bold Steps', 'elayne' ),
-		'home-bold-voices' => __( 'Home Bold Voices', 'elayne' ),
+		'home-mosaic'       => __( 'Home Mosaic', 'elayne' ),
+		'home-facts'        => __( 'Home Facts', 'elayne' ),
+		'home-steps'        => __( 'Home Steps', 'elayne' ),
+		'home-card'         => __( 'Home Card', 'elayne' ),
+		'home-marquee'      => __( 'Home Marquee', 'elayne' ),
+		'home-glow'         => __( 'Home Glow', 'elayne' ),
+		'home-mega-feature' => __( 'Home Mega Feature', 'elayne' ),
+		'home-bold-head'    => __( 'Home Bold Head', 'elayne' ),
+		'home-bold-stage'   => __( 'Home Bold Stage', 'elayne' ),
+		'home-bold-bento'   => __( 'Home Bold Bento', 'elayne' ),
+		'home-bold-cell'    => __( 'Home Bold Cell', 'elayne' ),
+		'home-bold-card'    => __( 'Home Bold Card', 'elayne' ),
+		'home-bold-steps'   => __( 'Home Bold Steps', 'elayne' ),
+		'home-bold-voices'  => __( 'Home Bold Voices', 'elayne' ),
 	);
 
 	foreach ( $styles as $style_name => $label ) {
