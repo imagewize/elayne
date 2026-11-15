@@ -1,17 +1,17 @@
-# Copyright (C) 2025 Jasper Frumau
-# This file is distributed under the GNU General Public License v2 or later.
+# Copyright (C) 2026 Jasper Frumau
+# This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Elayne 1.0.0-beta.5\n"
+"Project-Id-Version: Elayne 4.13.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/elayne\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-12-12T06:19:10+00:00\n"
+"POT-Creation-Date: 2026-11-15T05:17:53+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: elayne\n"
 
 #. Theme Name of the theme
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "A premium business block theme with advanced patterns for professional websites. Features industry-specific pattern sets for spa, real estate, and professional services with built-in conversion optimization."
+msgid "Elayne is a premium full-site-editing block theme for professional websites. Launch a fast, pixel-perfect site with 140+ conversion-optimized block patterns — including ready-to-insert page patterns that assemble a full page in one paste — 8 style variations, and industry-specific pattern sets for spa and wellness, food and beverage, home services, nail salon, and publishing (legal moved to the Elayne Legal child theme). Fully customizable with Global Styles — no page builder required. ✶ Full demo: https://demo.imagewize.com ✶"
 msgstr ""
 
 #. Author of the theme
@@ -39,185 +39,929 @@ msgstr ""
 msgid "https://imagewize.com"
 msgstr ""
 
-#: functions.php:44
-msgid "Hero"
+#: functions.php:37
+msgid "Menu"
+msgstr ""
+
+#: functions.php:38
+msgid "The Menu template part area is used for navigation menus."
 msgstr ""
 
 #: functions.php:45
-#: patterns/footer-light.php:89
-msgid "Features"
+msgid "Sidebar"
 msgstr ""
 
 #: functions.php:46
+msgid "The Sidebar template part area is used for sidebar content."
+msgstr ""
+
+#: functions.php:214
+#: woocommerce/single-product/product-image.php:73
+msgid "Best Seller"
+msgstr ""
+
+#: functions.php:261
+msgid "Hero"
+msgstr ""
+
+#: functions.php:262
+msgid "Banners"
+msgstr ""
+
+#: functions.php:263
+#: patterns/footer-standard.php:89
+msgid "Features"
+msgstr ""
+
+#: functions.php:264
 msgid "Call To Action"
 msgstr ""
 
-#: functions.php:47
+#: functions.php:265
 msgid "Testimonials"
 msgstr ""
 
-#: functions.php:48
+#: functions.php:266
+#: patterns/footer-with-nav-columns.php:46
 msgid "Team"
 msgstr ""
 
-#: functions.php:49
+#: functions.php:267
 msgid "Statistics"
 msgstr ""
 
-#: functions.php:50
-#: patterns/footer-light.php:53
-#: patterns/footer-light.php:69
-#: patterns/footer-light.php:125
-#: patterns/footer-simple.php:35
+#: functions.php:268
+#: patterns/footer-simple.php:33
+#: patterns/footer-standard.php:53
+#: patterns/footer-standard.php:69
+#: patterns/footer-standard.php:125
+#: patterns/footer-with-nav-columns.php:54
+#: patterns/plumbing-footer.php:74
+#: patterns/plumbing-footer.php:85
 msgid "Contact"
 msgstr ""
 
-#: functions.php:51
+#: functions.php:269
+msgid "Cards"
+msgstr ""
+
+#: functions.php:270
+msgid "Cards: Simple"
+msgstr ""
+
+#: functions.php:271
+msgid "Cards: Extended"
+msgstr ""
+
+#: functions.php:272
+msgid "Cards: Profiles"
+msgstr ""
+
+#: functions.php:273
+msgid "Events"
+msgstr ""
+
+#: functions.php:274
+#: patterns/portfolio-grid-masonry.php:14
+msgid "Portfolio"
+msgstr ""
+
+#: functions.php:275
 msgid "Pages"
 msgstr ""
 
-#: functions.php:52
+#: functions.php:276
+msgid "Page Layouts"
+msgstr ""
+
+#: functions.php:277
 msgid "Posts"
 msgstr ""
 
-#: patterns/blog-post-columns-portrait.php
-#: patterns/blog-post-columns.php
-msgctxt "Pattern title"
-msgid "Blog Post Columns (Portrait)"
+#: functions.php:278
+msgid "Spa & Wellness"
 msgstr ""
 
-#: patterns/blog-post-columns-portrait.php
-#: patterns/blog-post-columns.php
+#: functions.php:279
+msgid "Legal Services"
+msgstr ""
+
+#: functions.php:280
+msgid "Home Improvement"
+msgstr ""
+
+#: functions.php:281
+msgid "Fintech & Technology"
+msgstr ""
+
+#: functions.php:282
+msgid "Beauty & Salon"
+msgstr ""
+
+#: functions.php:283
+msgid "Retail & E-commerce"
+msgstr ""
+
+#: functions.php:284
+msgid "Food & Beverage"
+msgstr ""
+
+#: functions.php:285
+msgid "Store"
+msgstr ""
+
+#: functions.php:286
+#: patterns/woocommerce/woo-category-hero.php:41
+msgid "Products"
+msgstr ""
+
+#: functions.php:287
+msgid "Grids"
+msgstr ""
+
+#: functions.php:288
+msgid "Responsive"
+msgstr ""
+
+#: functions.php:349
+msgid "Arrow Slide"
+msgstr ""
+
+#: functions.php:350
+msgid "Gradient Shift"
+msgstr ""
+
+#: functions.php:351
+msgid "Shimmer"
+msgstr ""
+
+#: functions.php:352
+msgid "Glow"
+msgstr ""
+
+#: functions.php:353
+msgid "Border Draw"
+msgstr ""
+
+#: functions.php:354
+msgid "Slide Up"
+msgstr ""
+
+#: functions.php:357
+msgid "Elevate on Hover"
+msgstr ""
+
+#: functions.php:358
+msgid "Glow Border"
+msgstr ""
+
+#: functions.php:359
+msgid "Image Zoom"
+msgstr ""
+
+#: functions.php:360
+msgid "Tilt Card"
+msgstr ""
+
+#: functions.php:361
+msgid "Scale Hover"
+msgstr ""
+
+#: functions.php:362
+msgid "Border Pulse"
+msgstr ""
+
+#: functions.php:363
+msgid "Slide Border"
+msgstr ""
+
+#: functions.php:366
+msgid "Zoom Hover"
+msgstr ""
+
+#: functions.php:367
+msgid "Grayscale Hover"
+msgstr ""
+
+#: functions.php:368
+msgid "Rotate Icon"
+msgstr ""
+
+#: functions.php:369
+msgid "Blur Hover"
+msgstr ""
+
+#: functions.php:370
+msgid "Brightness Hover"
+msgstr ""
+
+#: functions.php:371
+msgid "Sepia Hover"
+msgstr ""
+
+#: functions.php:372
+msgid "Lift Shadow"
+msgstr ""
+
+#: functions.php:373
+msgid "Border Reveal"
+msgstr ""
+
+#: functions.php:374
+msgid "Tilt 3D"
+msgstr ""
+
+#: functions.php:377
+msgid "Eyebrow"
+msgstr ""
+
+#: functions.php:378
+msgid "Animated Underline"
+msgstr ""
+
+#: functions.php:379
+msgid "Animated Underline Center"
+msgstr ""
+
+#: functions.php:380
+msgid "Highlight Fade"
+msgstr ""
+
+#: functions.php:381
+msgid "Link Hover Shift"
+msgstr ""
+
+#: functions.php:382
+msgid "Fade In"
+msgstr ""
+
+#: functions.php:385
+msgid "Gradient Text"
+msgstr ""
+
+#: functions.php:386
+msgid "Gradient Text Animated"
+msgstr ""
+
+#: functions.php:387
+msgid "Underline Slide"
+msgstr ""
+
+#: functions.php:388
+msgid "Logo Link"
+msgstr ""
+
+#: functions.php:391
+msgid "Animated Markers"
+msgstr ""
+
+#: functions.php:418
+msgid "Plumbing Service Card"
+msgstr ""
+
+#: functions.php:419
+msgid "Plumbing Featured Card"
+msgstr ""
+
+#: functions.php:420
+msgid "Plumbing Badge"
+msgstr ""
+
+#: functions.php:421
+msgid "Plumbing Years Badge"
+msgstr ""
+
+#: functions.php:422
+msgid "Plumbing Stat Block"
+msgstr ""
+
+#: functions.php:423
+msgid "Plumbing Check Icon"
+msgstr ""
+
+#: functions.php:424
+msgid "Plumbing Why Item"
+msgstr ""
+
+#: functions.php:425
+msgid "Plumbing Avatar"
+msgstr ""
+
+#: functions.php:426
+msgid "Plumbing Contact Icon"
+msgstr ""
+
+#: functions.php:427
+msgid "Plumbing CTA Call Pill"
+msgstr ""
+
+#: functions.php:428
+msgid "Plumbing CTA Actions"
+msgstr ""
+
+#: functions.php:431
+msgid "Plumbing Section Label"
+msgstr ""
+
+#: functions.php:434
+msgid "Plumbing Call Button"
+msgstr ""
+
+#: functions.php:494
+msgid "Nail Salon Service Card"
+msgstr ""
+
+#: functions.php:495
+msgid "Nail Salon Featured Card"
+msgstr ""
+
+#: functions.php:496
+msgid "Nail Salon Badge"
+msgstr ""
+
+#: functions.php:497
+msgid "Nail Salon Years Badge"
+msgstr ""
+
+#: functions.php:498
+msgid "Nail Salon Stat Block"
+msgstr ""
+
+#: functions.php:499
+msgid "Nail Salon Check Icon"
+msgstr ""
+
+#: functions.php:500
+msgid "Nail Salon Why Item"
+msgstr ""
+
+#: functions.php:501
+msgid "Nail Salon Avatar"
+msgstr ""
+
+#: functions.php:502
+msgid "Nail Salon Contact Icon"
+msgstr ""
+
+#: functions.php:505
+msgid "Nail Salon Section Label"
+msgstr ""
+
+#: functions.php:544
+msgid "F&B Header"
+msgstr ""
+
+#: functions.php:545
+msgid "F&B Hero"
+msgstr ""
+
+#: functions.php:546
+msgid "F&B Marquee"
+msgstr ""
+
+#: functions.php:547
+msgid "F&B Story"
+msgstr ""
+
+#: functions.php:548
+msgid "F&B Menu"
+msgstr ""
+
+#: functions.php:549
+msgid "F&B Reserve"
+msgstr ""
+
+#: functions.php:702
+msgid "Premium Leather Goods"
+msgstr ""
+
+#: functions.php:703
+#: patterns/woocommerce/woo-shop-categories.php:68
+msgid "Legal Stationery"
+msgstr ""
+
+#: functions.php:704
+msgid "Executive Accessories"
+msgstr ""
+
+#: functions.php:705
+msgid "Bespoke Briefcases"
+msgstr ""
+
+#: functions.php:706
+msgid "Fine Writing Instruments"
+msgstr ""
+
+#: functions.php:707
+msgid "Corporate Gifting"
+msgstr ""
+
+#: functions.php:716
+msgid "Product categories"
+msgstr ""
+
+#: functions.php:737
+msgid "Store Ticker"
+msgstr ""
+
+#: functions.php:738
+msgid "Avatar Circle"
+msgstr ""
+
+#: functions.php:739
+msgid "Categories Grid"
+msgstr ""
+
+#: functions.php:740
+msgid "Category Hero"
+msgstr ""
+
+#: functions.php:741
+msgid "Category Toolbar"
+msgstr ""
+
+#: functions.php:742
+msgid "Category Products"
+msgstr ""
+
+#: functions.php:743
+msgid "Category Meta Bar"
+msgstr ""
+
+#: functions.php:746
+msgid "Our Story Watermark"
+msgstr ""
+
+#: functions.php:749
+msgid "Newsletter Search"
+msgstr ""
+
+#: functions.php:752
+msgid "Shop Filters Sidebar"
+msgstr ""
+
+#: functions.php:843
+msgid "Orders dispatched within 3–5 business days. Complimentary shipping on orders over $250. Standard items may be returned within 30 days in original condition."
+msgstr ""
+
+#: functions.php:859
+msgid "Brand Logo"
+msgstr ""
+
+#: functions.php:862
+msgid "Status Pill"
+msgstr ""
+
+#: functions.php:863
+msgid "Editorial Eyebrow"
+msgstr ""
+
+#: functions.php:864
+msgid "Editorial Pill"
+msgstr ""
+
+#: functions.php:867
+msgid "Editorial Hero Heading"
+msgstr ""
+
+#: functions.php:868
+msgid "Editorial Footer Wordmark"
+msgstr ""
+
+#: functions.php:871
+msgid "Editorial Services Stack"
+msgstr ""
+
+#: functions.php:872
+msgid "Editorial Service Row"
+msgstr ""
+
+#: functions.php:873
+msgid "Editorial Work Grid"
+msgstr ""
+
+#: functions.php:874
+msgid "Editorial Work Card"
+msgstr ""
+
+#: functions.php:875
+msgid "Editorial Pull Quote"
+msgstr ""
+
+#: functions.php:876
+msgid "Editorial Stats"
+msgstr ""
+
+#: functions.php:877
+msgid "Editorial CTA"
+msgstr ""
+
+#: inc/author-bindings.php:29
+msgid "Archive author"
+msgstr ""
+
+#: inc/search-overlay.php:83
+#: inc/search-overlay.php:103
+#: patterns/template-page-404.php:24
+#: patterns/template-page-search.php:18
+msgid "Search"
+msgstr ""
+
+#: inc/search-overlay.php:86
+msgid "Close search"
+msgstr ""
+
+#: inc/search-overlay.php:92
+msgid "Search for:"
+msgstr ""
+
+#: inc/search-overlay.php:99
+msgid "Search…"
+msgstr ""
+
+#: patterns/agency-services-showcase.php
+msgctxt "Pattern title"
+msgid "Agency Services Showcase"
+msgstr ""
+
+#: patterns/agency-services-showcase.php
 msgctxt "Pattern description"
-msgid "Three-column blog post grid with portrait-oriented featured images"
+msgid "Showcase your agency services with icons and descriptions in a clean layout"
 msgstr ""
 
-#: patterns/blog-post-list.php
+#: patterns/agency-services-showcase.php:18
+msgid "Our Expertise"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:22
+msgid "Comprehensive digital solutions"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:26
+msgid "We offer a full suite of digital services designed to elevate your brand and drive measurable results."
+msgstr ""
+
+#: patterns/agency-services-showcase.php:34
+msgid "Icon representing web design and development"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:38
+msgid "Web Design & Development"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:42
+msgid "Custom website design and development tailored to your brand identity and business objectives."
+msgstr ""
+
+#: patterns/agency-services-showcase.php:52
+msgid "Icon representing performance marketing"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:56
+msgid "Digital Marketing"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:60
+msgid "Data-driven marketing strategies including SEO, PPC, and social media campaigns."
+msgstr ""
+
+#: patterns/agency-services-showcase.php:70
+msgid "Icon representing brand strategy"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:74
+msgid "Brand Strategy"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:78
+msgid "Comprehensive brand development and positioning to establish your market presence."
+msgstr ""
+
+#: patterns/agency-services-showcase.php:88
+msgid "Icon representing e-commerce solutions"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:92
+msgid "E-commerce Solutions"
+msgstr ""
+
+#: patterns/agency-services-showcase.php:96
+msgid "End-to-end e-commerce platforms with secure payment integration and inventory management."
+msgstr ""
+
+#: patterns/banner-announcement-bar.php
 msgctxt "Pattern title"
-msgid "Blog Post List"
+msgid "Announcement Bar"
 msgstr ""
 
-#: patterns/blog-post-list.php
-#: patterns/template-index-list.php
+#: patterns/banner-announcement-bar.php
 msgctxt "Pattern description"
-msgid "A single column list layout for blog posts and archive pages."
+msgid "Slim top bar for important announcements, promotions, or notices"
 msgstr ""
 
-#: patterns/blog-post-list.php:27
-#: patterns/template-post-centered.php:25
-#: patterns/template-post-left-sidebar.php:31
-#: patterns/template-post-right-sidebar.php:27
-#: patterns/template-post-wide.php:25
-msgid "·"
+#: patterns/banner-announcement-bar.php:19
+msgid "New Service Launch:"
 msgstr ""
 
-#: patterns/client-reviews.php
+#: patterns/banner-announcement-bar.php:19
+msgid "Schedule your free consultation today"
+msgstr ""
+
+#: patterns/banner-announcement-bar.php:19
+#: patterns/image-card-grid.php:48
+#: patterns/image-card-grid.php:70
+#: patterns/image-card-grid.php:92
+msgid "Learn More →"
+msgstr ""
+
+#: patterns/banner-page-header-accent.php
 msgctxt "Pattern title"
-msgid "Client Reviews"
+msgid "Page Header Banner (Accent)"
 msgstr ""
 
-#: patterns/client-reviews.php
+#: patterns/banner-page-header-accent.php
 msgctxt "Pattern description"
-msgid "Three client reviews with profile images following theme color settings"
+msgid "Simple page header with accent color background"
 msgstr ""
 
-#: patterns/client-reviews.php:18
-msgid "Client Reviews."
+#: patterns/banner-page-header-accent.php:14
+#: patterns/banner-page-header.php:14
+msgid "Page Title"
 msgstr ""
 
-#: patterns/client-reviews.php:24
-#: patterns/client-reviews.php:34
-#: patterns/client-reviews.php:44
-msgid "Client profile"
+#: patterns/banner-page-header-accent.php:18
+#: patterns/banner-page-header.php:18
+msgid "A brief description or tagline for this page"
 msgstr ""
 
-#: patterns/client-reviews.php:28
-msgid "\"We have hired Jasper a couple of times and he always does a great job and in a timely manner! He is very good at what he does and we continue to use him for our projects.\""
-msgstr ""
-
-#: patterns/client-reviews.php:38
-msgid "\"His communication was top-notch, he met all deadlines, and his skills were very strong. He was proficient in WordPress, WooCommerce, Shopify and programming on those platforms to get our new Shopify site up and running.\""
-msgstr ""
-
-#: patterns/client-reviews.php:48
-msgid "\"Couldn't have done this job without Jasper and he did a great job. My website now runs faster than ever. Would definitely hire again.\""
-msgstr ""
-
-#: patterns/contact-info.php
+#: patterns/banner-page-header-slanted.php
 msgctxt "Pattern title"
-msgid "Contact Information Section"
+msgid "Page Header Banner (Slanted)"
 msgstr ""
 
-#: patterns/contact-info.php
+#: patterns/banner-page-header-slanted.php
+msgctxt "Pattern description"
+msgid "Page header banner with slanted gradient overlay and background image"
+msgstr ""
+
+#: patterns/banner-page-header-slanted.php:11
+#: patterns/banner-page-header-slanted.php:12
+msgid "Page header image"
+msgstr ""
+
+#: patterns/banner-page-header-slanted.php:15
+#: patterns/nail-salon-services.php:15
+msgid "Our Services"
+msgstr ""
+
+#: patterns/banner-page-header-slanted.php:19
+msgid "Comprehensive solutions tailored to your needs"
+msgstr ""
+
+#: patterns/banner-page-header.php
+msgctxt "Pattern title"
+msgid "Page Header Banner"
+msgstr ""
+
+#: patterns/banner-page-header.php
+msgctxt "Pattern description"
+msgid "Simple page header with solid background color"
+msgstr ""
+
+#: patterns/card-call-to-action.php
+msgctxt "Pattern title"
+msgid "Card Call to Action"
+msgstr ""
+
+#: patterns/card-call-to-action.php
+msgctxt "Pattern description"
+msgid "Modular CTA component for landing pages, blog sidebars, and conversion-focused sections"
+msgstr ""
+
+#: patterns/card-call-to-action.php:14
+msgid "Ready to Get Started?"
+msgstr ""
+
+#: patterns/card-call-to-action.php:18
+msgid "Let's discuss your next project and how we can help you achieve your goals with a customized solution."
+msgstr ""
+
+#: patterns/card-call-to-action.php:24
+msgid "Request Quote"
+msgstr ""
+
+#: patterns/client-logo-wall.php
+msgctxt "Pattern title"
+msgid "Client Logo Wall"
+msgstr ""
+
+#: patterns/client-logo-wall.php
+msgctxt "Pattern description"
+msgid "Display client logos to build credibility and social proof with responsive grid layout"
+msgstr ""
+
+#: patterns/client-logo-wall.php:14
+msgid "Trusted by Leading Brands"
+msgstr ""
+
+#: patterns/client-logo-wall.php:18
+msgid "We're proud to work with industry leaders who trust us to deliver exceptional results"
+msgstr ""
+
+#: patterns/client-logo-wall.php:26
+#: patterns/client-logo-wall.php:30
+#: patterns/client-logo-wall.php:34
+#: patterns/client-logo-wall.php:38
+#: patterns/client-logo-wall.php:42
+#: patterns/client-logo-wall.php:46
+#: patterns/client-logo-wall.php:50
+#: patterns/client-logo-wall.php:54
+#: patterns/client-logo-wall.php:58
+#: patterns/client-logo-wall.php:62
+#: patterns/client-logo-wall.php:66
+#: patterns/client-logo-wall.php:70
+msgid "Client logo"
+msgstr ""
+
+#: patterns/client-logo-wall.php:77
+msgid "View Our Portfolio"
+msgstr ""
+
+#: patterns/client-success-stories.php
+msgctxt "Pattern title"
+msgid "Client Success Stories"
+msgstr ""
+
+#: patterns/client-success-stories.php
+msgctxt "Pattern description"
+msgid "Showcase client testimonials and success stories with ratings and detailed feedback"
+msgstr ""
+
+#: patterns/client-success-stories.php:17
+msgid "Client Success Stories"
+msgstr ""
+
+#: patterns/client-success-stories.php:21
+msgid "Real results from real clients"
+msgstr ""
+
+#: patterns/client-success-stories.php:25
+msgid "Discover how our digital solutions have transformed businesses and driven measurable success."
+msgstr ""
+
+#: patterns/client-success-stories.php:36
+msgid "\"Transformative digital experience that exceeded all expectations\""
+msgstr ""
+
+#: patterns/client-success-stories.php:40
+msgid "Working with this agency completely transformed our online presence. From the initial strategy session to the final launch, every step was handled with professionalism and expertise. Our website traffic increased by 300% and conversion rates doubled within the first three months."
+msgstr ""
+
+#: patterns/client-success-stories.php:50
+#: patterns/team-grid.php:31
+msgid "Sarah Johnson"
+msgstr ""
+
+#: patterns/client-success-stories.php:54
+msgid "Marketing Director, BrightFuture Inc."
+msgstr ""
+
+#: patterns/client-success-stories.php:68
+msgid "\"Exceptional service from start to finish\""
+msgstr ""
+
+#: patterns/client-success-stories.php:72
+msgid "The attention to detail and professionalism exceeded our expectations. Our new website has increased leads by 300% and we couldn't be happier with the results."
+msgstr ""
+
+#: patterns/client-success-stories.php:82
+#: patterns/fandb-testimonials-food.php:60
+#: patterns/team-grid.php:51
+#: patterns/testimonial-card.php:47
+msgid "Michael Chen"
+msgstr ""
+
+#: patterns/client-success-stories.php:86
+msgid "CEO, TechInnovate"
+msgstr ""
+
+#: patterns/client-success-stories.php:98
+msgid "\"The best investment we made this year\""
+msgstr ""
+
+#: patterns/client-success-stories.php:102
+msgid "Our conversion rate doubled after the website redesign. The team's expertise in UX/UI design and SEO optimization has been invaluable to our business growth."
+msgstr ""
+
+#: patterns/client-success-stories.php:112
+#: patterns/team-grid.php:71
+msgid "Emily Rodriguez"
+msgstr ""
+
+#: patterns/client-success-stories.php:116
+msgid "Founder, GreenEarth Solutions"
+msgstr ""
+
+#: patterns/client-success-stories.php:128
+msgid "\"A seamless and enjoyable experience\""
+msgstr ""
+
+#: patterns/client-success-stories.php:132
+msgid "The collaborative approach made the entire process enjoyable. They listened to our ideas, provided expert guidance, and created a website that exceeds our expectations."
+msgstr ""
+
+#: patterns/client-success-stories.php:142
+msgid "David Wilson"
+msgstr ""
+
+#: patterns/client-success-stories.php:146
+msgid "Operations Manager, CityLogistics"
+msgstr ""
+
+#: patterns/contact-details.php
+msgctxt "Pattern title"
+msgid "Contact Details Section"
+msgstr ""
+
+#: patterns/contact-details.php
 msgctxt "Pattern description"
 msgid "Professional contact section with office hours, phone, email, and address in a modern card layout"
 msgstr ""
 
-#: patterns/contact-info.php:20
+#: patterns/contact-details.php:15
 msgid "Get In Touch"
 msgstr ""
 
-#: patterns/contact-info.php:24
+#: patterns/contact-details.php:19
 msgid "Tell us about your project and we'll respond within one business day with next steps."
 msgstr ""
 
-#: patterns/contact-info.php:32
+#: patterns/contact-details.php:27
+#: patterns/legal-contact.php:98
 msgid "Office Hours"
 msgstr ""
 
-#: patterns/contact-info.php:36
+#: patterns/contact-details.php:31
 msgid "Monday - Friday"
 msgstr ""
 
-#: patterns/contact-info.php:36
+#: patterns/contact-details.php:31
 msgid "9:00 AM - 5:00 PM"
 msgstr ""
 
-#: patterns/contact-info.php:40
+#: patterns/contact-details.php:35
 msgid "Weekend appointments available upon request"
 msgstr ""
 
-#: patterns/contact-info.php:48
+#: patterns/contact-details.php:42
 msgid "Contact Details"
 msgstr ""
 
-#: patterns/contact-info.php:52
+#: patterns/contact-details.php:46
 msgid "Phone:"
 msgstr ""
 
-#: patterns/contact-info.php:56
+#: patterns/contact-details.php:50
 msgid "Email:"
 msgstr ""
 
-#: patterns/contact-info.php:60
+#: patterns/contact-details.php:50
+#: patterns/contact-side-by-side.php:80
+msgid "hello@example.com"
+msgstr ""
+
+#: patterns/contact-details.php:54
 msgid "Response time:"
 msgstr ""
 
-#: patterns/contact-info.php:60
+#: patterns/contact-details.php:54
 msgid "Within 24 hours"
 msgstr ""
 
-#: patterns/contact-info.php:68
+#: patterns/contact-details.php:61
+#: patterns/fandb-hours-location.php:13
+#: patterns/footer-with-nav-columns.php:85
 msgid "Visit Us"
 msgstr ""
 
-#: patterns/contact-info.php:73
+#: patterns/contact-details.php:66
 msgid "123 Business Street"
 msgstr ""
 
-#: patterns/contact-info.php:74
+#: patterns/contact-details.php:67
 msgid "Suite 100"
 msgstr ""
 
-#: patterns/contact-info.php:75
+#: patterns/contact-details.php:68
 msgid "City, State 12345"
 msgstr ""
 
-#: patterns/contact-info.php:80
+#: patterns/contact-details.php:73
 msgid "Free parking available for visitors"
 msgstr ""
 
-#: patterns/contact-info.php:90
+#: patterns/contact-details.php:80
+#: patterns/legal-contact.php:16
 msgid "Schedule a Consultation"
 msgstr ""
 
@@ -231,44 +975,146 @@ msgctxt "Pattern description"
 msgid "Contact information displayed in a side-by-side layout with grid blocks"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:24
+#: patterns/contact-side-by-side.php:18
 msgid "Get in touch"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:28
+#: patterns/contact-side-by-side.php:22
 msgid "Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac pellentesque."
 msgstr ""
 
-#: patterns/contact-side-by-side.php:48
+#: patterns/contact-side-by-side.php:34
 msgid "Collaborate"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:51
+#: patterns/contact-side-by-side.php:37
 msgid "partner@example.com"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:63
+#: patterns/contact-side-by-side.php:47
 msgid "Press"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:66
+#: patterns/contact-side-by-side.php:50
 msgid "press@example.com"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:84
+#: patterns/contact-side-by-side.php:64
 msgid "Join Our Team"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:87
+#: patterns/contact-side-by-side.php:67
 msgid "careers@example.com"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:99
+#: patterns/contact-side-by-side.php:77
 msgid "Say Hello"
 msgstr ""
 
-#: patterns/contact-side-by-side.php:102
-msgid "hello@example.com"
+#: patterns/contact-with-form.php
+msgctxt "Pattern title"
+msgid "Contact With Form"
+msgstr ""
+
+#: patterns/contact-with-form.php
+msgctxt "Pattern description"
+msgid "Two-column contact section with business details and a contact form. Requires Contact Form 7; shows placeholder fields when plugin is inactive."
+msgstr ""
+
+#: patterns/contact-with-form.php:16
+#: patterns/nail-salon-contact.php:16
+#: patterns/plumbing-contact.php:16
+msgid "Get in Touch"
+msgstr ""
+
+#: patterns/contact-with-form.php:20
+msgid "Have a question or ready to get started? Fill out the form and we'll be in touch shortly."
+msgstr ""
+
+#: patterns/contact-with-form.php:29
+#: patterns/legal-contact.php:41
+#: patterns/nail-salon-contact.php:37
+#: patterns/plumbing-contact.php:37
+msgid "Phone"
+msgstr ""
+
+#: patterns/contact-with-form.php:32
+#: patterns/legal-contact.php:45
+#: patterns/plumbing-contact.php:41
+#: patterns/plumbing-footer.php:95
+#: patterns/plumbing-header.php:31
+#: patterns/plumbing-header.php:49
+msgid "(555) 123-4567"
+msgstr ""
+
+#: patterns/contact-with-form.php:42
+#: patterns/header-double-bar.php:23
+#: patterns/legal-contact.php:59
+#: patterns/nail-salon-contact.php:55
+#: patterns/plumbing-contact.php:55
+msgid "Email"
+msgstr ""
+
+#: patterns/contact-with-form.php:45
+#: patterns/contact-with-form.php:103
+#: patterns/legal-contact.php:63
+#: patterns/plumbing-contact.php:59
+#: patterns/plumbing-footer.php:100
+msgid "example@example.com"
+msgstr ""
+
+#: patterns/contact-with-form.php:55
+#: patterns/nail-salon-contact.php:73
+#: patterns/plumbing-contact.php:73
+msgid "Address"
+msgstr ""
+
+#: patterns/contact-with-form.php:58
+#: patterns/legal-contact.php:84
+msgid "123 Main Street, Suite 200"
+msgstr ""
+
+#: patterns/contact-with-form.php:68
+#: patterns/nail-salon-contact.php:91
+#: patterns/plumbing-contact.php:91
+msgid "Hours"
+msgstr ""
+
+#: patterns/contact-with-form.php:71
+msgid "Mon–Fri: 9am–5pm"
+msgstr ""
+
+#: patterns/contact-with-form.php:80
+msgid "Send a Message"
+msgstr ""
+
+#: patterns/contact-with-form.php:88
+msgid "Your Name"
+msgstr ""
+
+#: patterns/contact-with-form.php:92
+#: patterns/plumbing-contact.php:121
+msgid "Your name"
+msgstr ""
+
+#: patterns/contact-with-form.php:99
+msgid "Email Address"
+msgstr ""
+
+#: patterns/contact-with-form.php:110
+msgid "Message"
+msgstr ""
+
+#: patterns/contact-with-form.php:114
+msgid "Tell us how we can help..."
+msgstr ""
+
+#: patterns/contact-with-form.php:121
+msgid "Send Message"
+msgstr ""
+
+#: patterns/contact-with-form.php:125
+msgid "We typically respond within 1 business day."
 msgstr ""
 
 #: patterns/cta-newsletter.php
@@ -281,95 +1127,1012 @@ msgctxt "Pattern description"
 msgid "Call-to-action block for newsletter subscription or lead capture"
 msgstr ""
 
-#: patterns/cta-newsletter.php:24
+#: patterns/cta-newsletter.php:17
 msgid "Get Weekly Business Growth "
 msgstr ""
 
-#: patterns/cta-newsletter.php:24
+#: patterns/cta-newsletter.php:17
 msgid "Insights"
 msgstr ""
 
-#: patterns/cta-newsletter.php:28
+#: patterns/cta-newsletter.php:21
 msgid "Join 5,000+ business owners receiving actionable strategies, industry trends, and exclusive resources directly to their inbox."
 msgstr ""
 
-#: patterns/cta-newsletter.php:38
+#: patterns/cta-newsletter.php:31
 msgid "Subscribe Now"
 msgstr ""
 
-#: patterns/cta-newsletter.php:44
+#: patterns/cta-newsletter.php:36
 msgid "No spam. Unsubscribe anytime."
 msgstr ""
 
-#: patterns/footer-light.php
+#: patterns/download-cta.php
 msgctxt "Pattern title"
-msgid "Footer Light"
+msgid "Download CTA"
 msgstr ""
 
-#: patterns/footer-light.php
+#: patterns/download-cta.php
 msgctxt "Pattern description"
-msgid "A light footer with brand blurb, social links, and navigation columns."
+msgid "Call-to-action section for theme download with centered card layout"
 msgstr ""
 
-#: patterns/footer-light.php:20
-msgid "Build polished pages with the Elayne block theme and the WordPress Site Editor."
+#: patterns/download-cta.php:17
+msgid "Download Elayne"
 msgstr ""
 
-#: patterns/footer-light.php:36
-msgid "Company"
+#: patterns/download-cta.php:21
+msgid "Free WordPress block theme for professional business websites"
 msgstr ""
 
-#: patterns/footer-light.php:41
-#: patterns/footer-simple.php:27
-msgid "About"
+#: patterns/download-cta.php:27
+msgid "Download from WordPress.org"
 msgstr ""
 
-#: patterns/footer-light.php:45
-msgid "Careers"
+#: patterns/download-cta.php:32
+msgid "Version 2.1.1 • Updated January 2026"
 msgstr ""
 
-#: patterns/footer-light.php:49
-msgid "Brand Assets"
+#: patterns/event-upcoming-grid.php
+msgctxt "Pattern title"
+msgid "Upcoming Events Grid"
 msgstr ""
 
-#: patterns/footer-light.php:60
-msgid "Resources"
+#: patterns/event-upcoming-grid.php
+msgctxt "Pattern description"
+msgid "Display upcoming events in a responsive 3-column grid with event details"
 msgstr ""
 
-#: patterns/footer-light.php:65
-msgid "Blog"
+#: patterns/event-upcoming-grid.php:15
+msgid "What's on"
 msgstr ""
 
-#: patterns/footer-light.php:73
-msgid "Support Docs"
+#: patterns/event-upcoming-grid.php:19
+msgid "Upcoming events"
 msgstr ""
 
-#: patterns/footer-light.php:77
-msgid "Get Help"
+#: patterns/event-upcoming-grid.php:23
+msgid "Workshops, webinars, and meetups you can join."
 msgstr ""
 
-#: patterns/footer-light.php:84
-msgid "Product"
+#: patterns/event-upcoming-grid.php:32
+msgid "DEC"
 msgstr ""
 
-#: patterns/footer-light.php:93
-msgid "Pricing"
+#: patterns/event-upcoming-grid.php:36
+msgid "19"
 msgstr ""
 
-#: patterns/footer-light.php:97
-msgid "Use Cases"
+#: patterns/event-upcoming-grid.php:40
+#: patterns/fandb-events-grid.php:89
+msgid "Fri"
 msgstr ""
 
-#: patterns/footer-light.php:101
-msgid "Demo"
+#: patterns/event-upcoming-grid.php:47
+#: patterns/event-upcoming-grid.php:165
+msgid "Online"
 msgstr ""
 
-#: patterns/footer-light.php:117
-msgid "Download"
+#: patterns/event-upcoming-grid.php:51
+msgid "10:30 – 12:00 SGT"
 msgstr ""
 
-#: patterns/footer-light.php:121
-msgid "Visit Site"
+#: patterns/event-upcoming-grid.php:57
+msgid "Oceanarium Edu Tour"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:61
+msgid "A guided learning session with activities and Q&A. Suitable for kids & parents."
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:66
+msgid "📍 Marina Bay / Sentosa"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:70
+msgid "📅 Limited seats"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:77
+msgid "Register"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:81
+#: patterns/event-upcoming-grid.php:140
+#: patterns/event-upcoming-grid.php:199
+msgid "Details"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:91
+msgid "JAN"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:95
+msgid "06"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:99
+msgid "Tue"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:106
+msgid "In-person"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:110
+msgid "19:00 – 21:00"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:116
+msgid "WordPress Performance Night"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:120
+msgid "Fast sites, Core Web Vitals, caching, and real-case speed audits."
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:125
+msgid "📍 Amsterdam, NL"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:129
+msgid "🔔 Free entry"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:136
+msgid "Get tickets"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:150
+msgid "FEB"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:154
+msgid "14"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:158
+#: patterns/fandb-events-grid.php:39
+#: patterns/fandb-events-grid.php:139
+msgid "Sat"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:169
+msgid "16:00 – 17:30"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:175
+msgid "SEO for SMEs: Quick Wins"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:179
+msgid "A practical checklist you can apply today. Includes Q&A and templates."
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:184
+msgid "📍 Live stream"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:188
+msgid "🔔 Recording included"
+msgstr ""
+
+#: patterns/event-upcoming-grid.php:195
+msgid "Save seat"
+msgstr ""
+
+#: patterns/fandb-about-intro.php
+msgctxt "Pattern title"
+msgid "About Section with Image"
+msgstr ""
+
+#: patterns/fandb-about-intro.php
+msgctxt "Pattern description"
+msgid "Two-column about section with introduction text and cafe interior photo, includes \"Read Our Story\" CTA button"
+msgstr ""
+
+#: patterns/fandb-about-intro.php:15
+#: patterns/footer-with-nav-columns.php:42
+#: patterns/woocommerce/woo-our-story.php:34
+#: patterns/woocommerce/woo-our-story.php:90
+msgid "Our Story"
+msgstr ""
+
+#: patterns/fandb-about-intro.php:19
+msgid "Welcome to our cafe, where every cup tells a story and every meal is crafted with passion. Nestled in the heart of the community, we've been serving locally-sourced cuisine and artisan beverages since our doors first opened."
+msgstr ""
+
+#: patterns/fandb-about-intro.php:23
+msgid "Our cozy atmosphere and dedication to quality have made us a beloved gathering place for neighbors, friends, and food enthusiasts alike. We believe in creating memorable experiences through exceptional food, warm hospitality, and a welcoming environment."
+msgstr ""
+
+#: patterns/fandb-about-intro.php:27
+msgid "From our signature roasts to our seasonal menu selections, everything we serve reflects our commitment to excellence and our love for bringing people together over great food."
+msgstr ""
+
+#: patterns/fandb-about-intro.php:32
+msgid "Read Our Story"
+msgstr ""
+
+#: patterns/fandb-about-intro.php:39
+msgid "Cozy outdoor cafe seating area"
+msgstr ""
+
+#: patterns/fandb-amenities.php
+msgctxt "Pattern title"
+msgid "Restaurant Amenities"
+msgstr ""
+
+#: patterns/fandb-amenities.php
+msgctxt "Pattern description"
+msgid "Icon grid showcasing restaurant amenities and features with responsive 3-column layout"
+msgstr ""
+
+#: patterns/fandb-amenities.php:14
+msgid "Our Amenities"
+msgstr ""
+
+#: patterns/fandb-amenities.php:24
+msgid "Free Parking"
+msgstr ""
+
+#: patterns/fandb-amenities.php:28
+msgid "Complimentary parking available for all guests in our adjacent lot"
+msgstr ""
+
+#: patterns/fandb-amenities.php:38
+msgid "Outdoor Seating"
+msgstr ""
+
+#: patterns/fandb-amenities.php:42
+msgid "Enjoy your meal on our beautiful terrace with seasonal outdoor dining"
+msgstr ""
+
+#: patterns/fandb-amenities.php:52
+msgid "Free WiFi"
+msgstr ""
+
+#: patterns/fandb-amenities.php:56
+msgid "High-speed wireless internet access throughout the restaurant"
+msgstr ""
+
+#: patterns/fandb-amenities.php:66
+msgid "Private Events"
+msgstr ""
+
+#: patterns/fandb-amenities.php:70
+msgid "Host your special occasions in our private dining room for up to 40 guests"
+msgstr ""
+
+#: patterns/fandb-amenities.php:80
+msgid "Wheelchair Accessible"
+msgstr ""
+
+#: patterns/fandb-amenities.php:84
+msgid "Fully accessible facilities with ramp entrance and accessible restrooms"
+msgstr ""
+
+#: patterns/fandb-amenities.php:94
+msgid "Full Bar"
+msgstr ""
+
+#: patterns/fandb-amenities.php:98
+msgid "Extensive wine list and craft cocktails featuring local spirits"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php
+msgctxt "Pattern title"
+msgid "Chef Profile"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php
+msgctxt "Pattern description"
+msgid "Two-column layout with chef portrait photo and professional biography for restaurants and cafes"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:13
+msgid "Meet Our Chef"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:19
+msgid "Chef portrait"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:28
+msgid "Chef Alexandra Martinez"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:32
+msgid "Executive Chef &amp; Culinary Director"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:40
+msgid "With over 15 years of culinary experience across three continents, Chef Alexandra brings a unique fusion of traditional techniques and modern innovation to every dish. Her passion for seasonal, locally-sourced ingredients shines through in her carefully crafted menus."
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:44
+msgid "Trained at Le Cordon Bleu Paris and having worked in Michelin-starred kitchens throughout Europe, Chef Alexandra's culinary philosophy centers on celebrating the natural flavors of premium ingredients while honoring sustainable farming practices."
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:49
+msgid "Awards &amp; Recognition"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:54
+msgid "James Beard Award Finalist (2023)"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:58
+msgid "Michelin Rising Star Chef (2021)"
+msgstr ""
+
+#: patterns/fandb-chef-profile.php:62
+msgid "Best New Restaurant - Culinary Excellence Awards (2020)"
+msgstr ""
+
+#: patterns/fandb-events-grid.php
+msgctxt "Pattern title"
+msgid "F+B Events Grid"
+msgstr ""
+
+#: patterns/fandb-events-grid.php
+msgctxt "Pattern description"
+msgid "Display upcoming restaurant events in a responsive 3-column grid with date badges (wine tastings, live music, special dinners)"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:15
+msgid "What's happening"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:19
+msgid "Upcoming Events"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:23
+msgid "Join us for special tastings, live music, and culinary experiences."
+msgstr ""
+
+#: patterns/fandb-events-grid.php:31
+msgid "MAR"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:35
+msgid "15"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:45
+msgid "Wine Tasting"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:49
+msgid "19:00 – 21:30"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:54
+msgid "French Wine & Cheese Pairing"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:58
+msgid "Join our sommelier for an intimate evening exploring the perfect wine and cheese combinations from French regions."
+msgstr ""
+
+#: patterns/fandb-events-grid.php:63
+msgid "€45 per person"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:67
+msgid "Limited to 20 guests"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:73
+msgid "Reserve Now"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:81
+#: patterns/fandb-events-grid.php:131
+msgid "APR"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:85
+msgid "05"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:95
+msgid "Live Music"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:99
+msgid "20:00 – 23:00"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:104
+msgid "Jazz Night with The Trio"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:108
+msgid "Enjoy an evening of smooth jazz while dining. Featuring local musicians performing classic and contemporary favorites."
+msgstr ""
+
+#: patterns/fandb-events-grid.php:113
+msgid "No cover charge"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:117
+msgid "Reservations recommended"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:123
+msgid "Book Table"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:135
+msgid "20"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:145
+msgid "Chef's Table"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:149
+msgid "18:00 – 22:00"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:154
+msgid "Spring Tasting Menu Experience"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:158
+msgid "An exclusive 7-course seasonal menu paired with wines, prepared tableside by our head chef with insights into each dish."
+msgstr ""
+
+#: patterns/fandb-events-grid.php:163
+msgid "€95 per person"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:167
+msgid "Limited to 12 guests"
+msgstr ""
+
+#: patterns/fandb-events-grid.php:173
+msgid "Reserve Seat"
+msgstr ""
+
+#: patterns/fandb-header.php
+msgctxt "Pattern title"
+msgid "F+B Header"
+msgstr ""
+
+#: patterns/fandb-header.php
+msgctxt "Pattern description"
+msgid "Bistro header with dark topbar, frosted-glass sticky bar, desktop nav links, and mobile hamburger."
+msgstr ""
+
+#: patterns/fandb-header.php:17
+msgid "Open Today · 8:00 — 23:00 · Heritage Lane"
+msgstr ""
+
+#: patterns/fandb-header.php:21
+#: patterns/header-social-logo-hamburger-light.php:21
+#: patterns/header-social-logo-hamburger.php:21
+msgid "Instagram"
+msgstr ""
+
+#: patterns/fandb-header.php:24
+#: patterns/header-social-logo-hamburger-light.php:17
+#: patterns/header-social-logo-hamburger.php:17
+msgid "Facebook"
+msgstr ""
+
+#: patterns/fandb-header.php:27
+msgid "+62 21 555 0142"
+msgstr ""
+
+#: patterns/fandb-header.php:40
+msgid "Book a Table"
+msgstr ""
+
+#: patterns/fandb-hero.php
+msgctxt "Pattern title"
+msgid "F+B Hero"
+msgstr ""
+
+#: patterns/fandb-hero.php
+msgctxt "Pattern description"
+msgid "Full-width hero with display heading, lead text, CTA buttons, and hero image with floating info chips."
+msgstr ""
+
+#: patterns/fandb-hero.php:15
+msgid "Tonight's Service · Open Now"
+msgstr ""
+
+#: patterns/fandb-hero.php:18
+msgid "Dine.<br>Drink.<br>Linger &amp; stay."
+msgstr ""
+
+#: patterns/fandb-hero.php:21
+msgid "A neighbourhood bistro and natural wine bar serving wood-fired plates, seasonal cocktails, and unhurried evenings on the terrace."
+msgstr ""
+
+#: patterns/fandb-hero.php:25
+msgid "Reserve a Table"
+msgstr ""
+
+#: patterns/fandb-hero.php:28
+msgid "Tonight's Menu"
+msgstr ""
+
+#: patterns/fandb-hero.php:35
+msgid "Friends gathered around a table at the wine bar"
+msgstr ""
+
+#: patterns/fandb-hero.php:40
+msgid "412 reviews"
+msgstr ""
+
+#: patterns/fandb-hero.php:45
+msgid "Open Now · Table for 2 →"
+msgstr ""
+
+#: patterns/fandb-hours-location.php
+msgctxt "Pattern title"
+msgid "Hours & Location"
+msgstr ""
+
+#: patterns/fandb-hours-location.php
+msgctxt "Pattern description"
+msgid "Two-column layout with hours of operation and location information for restaurants and cafes"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:20
+msgid "Hours of Operation"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:25
+msgid "<strong>Monday – Friday</strong><br>11:00 AM – 10:00 PM"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:29
+msgid "<strong>Saturday</strong><br>10:00 AM – 11:00 PM"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:33
+msgid "<strong>Sunday</strong><br>10:00 AM – 9:00 PM"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:37
+msgid "Kitchen closes 30 minutes before closing time"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:48
+msgid "Contact Information"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:53
+msgid "<strong>Phone</strong><br>(555) 123-4567"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:57
+msgid "<strong>Email</strong><br>example@example.com"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:61
+msgid "<strong>Address</strong><br>123 Main Street<br>Your City, ST 12345"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:69
+msgid "Get Directions"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:83
+msgid "Location"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:87
+msgid "We're located in the heart of downtown, easily accessible by public transit and with nearby parking options available."
+msgstr ""
+
+#: patterns/fandb-hours-location.php:92
+msgid "<em>Map placeholder</em><br>Replace this section with your Google Maps embed or preferred map solution"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:100
+msgid "To add a map: Replace this group with an HTML block containing your Google Maps iframe embed code"
+msgstr ""
+
+#: patterns/fandb-hours-location.php:107
+msgid "Follow Us"
+msgstr ""
+
+#: patterns/fandb-marquee.php
+msgctxt "Pattern title"
+msgid "F+B Marquee Strip"
+msgstr ""
+
+#: patterns/fandb-marquee.php
+msgctxt "Pattern description"
+msgid "Full-width cobalt scrolling marquee strip with keyword highlights."
+msgstr ""
+
+#: patterns/fandb-marquee.php:13
+msgid "Wood-Fired"
+msgstr ""
+
+#: patterns/fandb-marquee.php:13
+msgid "Locally Sourced"
+msgstr ""
+
+#: patterns/fandb-marquee.php:13
+msgid "Natural Wine"
+msgstr ""
+
+#: patterns/fandb-marquee.php:13
+msgid "Open Daily"
+msgstr ""
+
+#: patterns/fandb-marquee.php:13
+msgid "Terrace Dining"
+msgstr ""
+
+#: patterns/fandb-marquee.php:13
+msgid "Seasonal Menu"
+msgstr ""
+
+#: patterns/fandb-menu.php
+msgctxt "Pattern title"
+msgid "F+B Tonight's Menu"
+msgstr ""
+
+#: patterns/fandb-menu.php
+msgctxt "Pattern description"
+msgid "Editorial menu section with two-column menu grid, dotted leader lines, section heading, and a full-menu CTA."
+msgstr ""
+
+#: patterns/fandb-menu.php:16
+msgid "A la carte · Updated daily"
+msgstr ""
+
+#: patterns/fandb-menu.php:19
+msgid "Tonight's <em>service.</em>"
+msgstr ""
+
+#: patterns/fandb-menu.php:24
+msgid "Service"
+msgstr ""
+
+#: patterns/fandb-menu.php:34
+msgid "Small Plates and Snacks"
+msgstr ""
+
+#: patterns/fandb-menu.php:38
+msgid "Burrata, Stone Fruit"
+msgstr ""
+
+#: patterns/fandb-menu.php:47
+msgid "grilled peach, basil oil, sourdough crisp <span class=\"fandb-menu-tag fandb-menu-tag-veg\">VEG</span>"
+msgstr ""
+
+#: patterns/fandb-menu.php:52
+msgid "Hearth-Roast Carrots"
+msgstr ""
+
+#: patterns/fandb-menu.php:61
+msgid "whipped tahini, dukkah, pomegranate <span class=\"fandb-menu-tag fandb-menu-tag-veg\">VEG</span>"
+msgstr ""
+
+#: patterns/fandb-menu.php:66
+msgid "Oyster Trio"
+msgstr ""
+
+#: patterns/fandb-menu.php:75
+msgid "cucumber granita, fermented chilli, mignonette"
+msgstr ""
+
+#: patterns/fandb-menu.php:80
+msgid "Beef Tartare"
+msgstr ""
+
+#: patterns/fandb-menu.php:89
+msgid "smoked egg yolk, capers, grilled milk bread"
+msgstr ""
+
+#: patterns/fandb-menu.php:95
+msgid "From the Fire"
+msgstr ""
+
+#: patterns/fandb-menu.php:99
+msgid "Hanger Steak <span class=\"fandb-menu-tag\">SPECIAL</span>"
+msgstr ""
+
+#: patterns/fandb-menu.php:108
+msgid "charred shallot, bone marrow butter, frites"
+msgstr ""
+
+#: patterns/fandb-menu.php:113
+msgid "Whole Daurade"
+msgstr ""
+
+#: patterns/fandb-menu.php:122
+msgid "salt-baked, charred lemon, salsa verde"
+msgstr ""
+
+#: patterns/fandb-menu.php:127
+msgid "Ember Cabbage"
+msgstr ""
+
+#: patterns/fandb-menu.php:136
+msgid "brown butter, anchovy, lemon zest <span class=\"fandb-menu-tag fandb-menu-tag-veg\">VEG</span>"
+msgstr ""
+
+#: patterns/fandb-menu.php:141
+msgid "Wood-Fired Focaccia"
+msgstr ""
+
+#: patterns/fandb-menu.php:150
+msgid "rosemary, sea salt, cultured butter <span class=\"fandb-menu-tag fandb-menu-tag-veg\">VEG</span>"
+msgstr ""
+
+#: patterns/fandb-menu.php:157
+msgid "Menu changes daily with what the morning market brought in."
+msgstr ""
+
+#: patterns/fandb-menu.php:161
+msgid "View Full Menu"
+msgstr ""
+
+#: patterns/fandb-reserve.php
+msgctxt "Pattern title"
+msgid "F+B Reserve and Hours"
+msgstr ""
+
+#: patterns/fandb-reserve.php
+msgctxt "Pattern description"
+msgid "Deep cobalt reservation section with headline, CTA buttons, and opening hours table."
+msgstr ""
+
+#: patterns/fandb-reserve.php:15
+msgid "Reservations"
+msgstr ""
+
+#: patterns/fandb-reserve.php:18
+msgid "Hold a seat,<br><em>we'll keep the candle lit.</em>"
+msgstr ""
+
+#: patterns/fandb-reserve.php:21
+msgid "Tables are released eight weeks ahead. Walk-ins welcome at the bar — there are always two stools waiting."
+msgstr ""
+
+#: patterns/fandb-reserve.php:25
+msgid "Book Online"
+msgstr ""
+
+#: patterns/fandb-reserve.php:28
+msgid "Call to Reserve"
+msgstr ""
+
+#: patterns/fandb-reserve.php:35
+msgid "Mon – Wed"
+msgstr ""
+
+#: patterns/fandb-reserve.php:41
+msgid "8:00 – 23:00"
+msgstr ""
+
+#: patterns/fandb-reserve.php:46
+msgid "Thursday"
+msgstr ""
+
+#: patterns/fandb-reserve.php:52
+msgid "8:00 – 24:00 · Today"
+msgstr ""
+
+#: patterns/fandb-reserve.php:57
+msgid "Fri – Sat"
+msgstr ""
+
+#: patterns/fandb-reserve.php:63
+msgid "8:00 – 01:00"
+msgstr ""
+
+#: patterns/fandb-reserve.php:68
+msgid "Sunday"
+msgstr ""
+
+#: patterns/fandb-reserve.php:74
+msgid "9:00 – 22:00 · Brunch only"
+msgstr ""
+
+#: patterns/fandb-reserve.php:79
+msgid "Holidays"
+msgstr ""
+
+#: patterns/fandb-reserve.php:85
+msgid "Closed"
+msgstr ""
+
+#: patterns/fandb-story.php
+msgctxt "Pattern title"
+msgid "F+B Our Story"
+msgstr ""
+
+#: patterns/fandb-story.php
+msgctxt "Pattern description"
+msgid "Magazine-layout two-column story section with image, eyebrow, display heading, pull quote, and chef signature."
+msgstr ""
+
+#: patterns/fandb-story.php:15
+msgid "Chef plating in the kitchen"
+msgstr ""
+
+#: patterns/fandb-story.php:18
+msgid "Chapter 01 — The Kitchen"
+msgstr ""
+
+#: patterns/fandb-story.php:23
+msgid "Since 2018 · Heritage Lane"
+msgstr ""
+
+#: patterns/fandb-story.php:26
+msgid "A small room, an <em>open fire</em>, and the people we feed."
+msgstr ""
+
+#: patterns/fandb-story.php:29
+msgid "What began as a six-table espresso bar has grown into the neighbourhood's table. We still roast our own beans on Mondays, still hand-write the menu each morning, still pour the first glass of natural wine the moment the lamps come on."
+msgstr ""
+
+#: patterns/fandb-story.php:33
+msgid "Cook for the people in front of you, with what the day brought in. Everything else is just decoration."
+msgstr ""
+
+#: patterns/fandb-story.php:37
+msgid "Our kitchen is built around a single wood-fired hearth and an unreasonable obsession with provenance — vegetables from the urban farm three streets over, fish from the morning market, sourdough from our own starter."
+msgstr ""
+
+#: patterns/fandb-story.php:41
+msgid "Alexandra Reyes"
+msgstr ""
+
+#: patterns/fandb-story.php:44
+msgid "Chef and Co-Owner"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php
+msgctxt "Pattern title"
+msgid "Customer Testimonials"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php
+msgctxt "Pattern description"
+msgid "Three-column grid of customer reviews and testimonials for restaurants and cafes"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:14
+msgid "What Our Guests Say"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:18
+msgid "Read what our guests have to say about their dining experience"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:28
+msgid "\"Absolutely exceptional dining experience! The seasonal menu showcases the finest local ingredients, and every dish was perfectly executed. Chef Alexandra's attention to detail is evident in every bite.\""
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:36
+msgid "Sarah Thompson"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:40
+msgid "January 2026"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:52
+msgid "\"The ambiance is perfect for both romantic dinners and business meetings. Outstanding wine selection and the staff's knowledge of pairings elevated our entire meal. We'll definitely be back!\""
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:64
+msgid "December 2025"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:76
+msgid "\"From the warm welcome to the exquisite dessert, everything was impeccable. The outdoor terrace is stunning, and the farm-to-table philosophy really shines through. Best restaurant in the city!\""
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:84
+msgid "Emma Rodriguez"
+msgstr ""
+
+#: patterns/fandb-testimonials-food.php:88
+msgid "November 2025"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "FAQ"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Collapsible FAQ section with accordion-style expandable questions and answers"
+msgstr ""
+
+#: patterns/faq.php:16
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: patterns/faq.php:21
+msgid "What services does your agency provide?"
+msgstr ""
+
+#: patterns/faq.php:22
+msgid "We specialize in web design, development, branding, and digital marketing services. Our team creates custom WordPress websites, e-commerce solutions, and provides ongoing support and maintenance to ensure your digital presence thrives."
+msgstr ""
+
+#: patterns/faq.php:27
+msgid "How long does a typical website project take?"
+msgstr ""
+
+#: patterns/faq.php:28
+msgid "Project timelines vary depending on complexity. A basic website typically takes 4-6 weeks, while more complex projects with custom functionality may take 8-12 weeks. We provide detailed timelines during our initial consultation and keep you updated throughout the process."
+msgstr ""
+
+#: patterns/faq.php:33
+msgid "Do you offer website maintenance services?"
+msgstr ""
+
+#: patterns/faq.php:34
+msgid "Yes, we offer comprehensive website maintenance packages including security updates, backups, performance optimization, and content updates. Our maintenance plans ensure your website stays secure, fast, and up-to-date so you can focus on your business."
+msgstr ""
+
+#: patterns/faq.php:39
+msgid "What platforms do you work with?"
+msgstr ""
+
+#: patterns/faq.php:40
+msgid "We primarily work with WordPress, the world's most popular content management system. We also have experience with WooCommerce for e-commerce, and can integrate with various third-party platforms and APIs to meet your specific business needs."
+msgstr ""
+
+#: patterns/faq.php:45
+msgid "Can you help with SEO and digital marketing?"
+msgstr ""
+
+#: patterns/faq.php:46
+msgid "Absolutely! We offer comprehensive SEO services including technical optimization, content strategy, and link building. Our digital marketing services cover social media management, email marketing, and paid advertising to help you reach your target audience effectively."
+msgstr ""
+
+#: patterns/faq.php:51
+msgid "What is your pricing structure?"
+msgstr ""
+
+#: patterns/faq.php:52
+msgid "Our pricing is customized based on your specific needs and project scope. We offer transparent, fixed-price quotes for defined projects, as well as hourly rates for ongoing work. Contact us for a free consultation and personalized quote tailored to your requirements."
+msgstr ""
+
+#: patterns/faq.php:57
+msgid "Do you provide training for website management?"
+msgstr ""
+
+#: patterns/faq.php:58
+msgid "Yes, we provide comprehensive training sessions to help you manage your website confidently. We'll walk you through the WordPress dashboard, content updates, and best practices. We also provide documentation and ongoing support to ensure you're never stuck."
+msgstr ""
+
+#: patterns/faq.php:63
+msgid "What makes your agency different from others?"
+msgstr ""
+
+#: patterns/faq.php:64
+msgid "We focus on building long-term partnerships, not just completing projects. Our team combines technical expertise with strategic thinking to deliver solutions that drive real business results. We're transparent, responsive, and committed to your success every step of the way."
+msgstr ""
+
+#: patterns/faq.php:73
+msgid "Still have questions?"
+msgstr ""
+
+#: patterns/faq.php:77
+msgid "Can't find the answer you're looking for? Our team is here to help. Reach out to us and we'll get back to you as soon as possible."
+msgstr ""
+
+#: patterns/faq.php:83
+msgid "Contact Support"
 msgstr ""
 
 #: patterns/footer-simple.php
@@ -382,80 +2145,382 @@ msgctxt "Pattern description"
 msgid "A minimal footer with single-line menu navigation"
 msgstr ""
 
-#: patterns/footer-simple.php:43
+#. translators: %1$s: year, %2$s: theme link
+#: patterns/footer-simple.php:17
+#: patterns/footer-standard.php:112
+#: patterns/footer-with-nav-columns.php:113
+#, php-format
+msgid "© %1$s Powered by WordPress and %2$s"
+msgstr ""
+
+#: patterns/footer-simple.php:25
+#: patterns/footer-standard.php:41
+msgid "About"
+msgstr ""
+
+#: patterns/footer-simple.php:41
 msgid "Privacy"
 msgstr ""
 
-#: patterns/footer-simple.php:51
+#: patterns/footer-simple.php:49
 msgid "Terms"
 msgstr ""
 
-#: patterns/header-light-with-hamburger-menu.php
+#: patterns/footer-standard.php
 msgctxt "Pattern title"
-msgid "Header Light with Hamburger Menu"
+msgid "Footer Standard"
 msgstr ""
 
-#: patterns/header-light-with-hamburger-menu.php
+#: patterns/footer-standard.php
 msgctxt "Pattern description"
-msgid "Header with nav and social icons"
+msgid "A standard footer with brand blurb, social links, and navigation columns."
 msgstr ""
 
-#: patterns/header-light-with-standard-menu.php
+#: patterns/footer-standard.php:20
+msgid "Build polished pages with the Elayne block theme and the WordPress Site Editor."
+msgstr ""
+
+#: patterns/footer-standard.php:36
+#: patterns/plumbing-footer.php:57
+msgid "Company"
+msgstr ""
+
+#: patterns/footer-standard.php:45
+#: patterns/footer-with-nav-columns.php:50
+msgid "Careers"
+msgstr ""
+
+#: patterns/footer-standard.php:49
+msgid "Brand Assets"
+msgstr ""
+
+#: patterns/footer-standard.php:60
+msgid "Resources"
+msgstr ""
+
+#: patterns/footer-standard.php:65
+#: patterns/plumbing-footer.php:70
+msgid "Blog"
+msgstr ""
+
+#: patterns/footer-standard.php:73
+msgid "Support Docs"
+msgstr ""
+
+#: patterns/footer-standard.php:77
+msgid "Get Help"
+msgstr ""
+
+#: patterns/footer-standard.php:84
+msgid "Product"
+msgstr ""
+
+#: patterns/footer-standard.php:93
+#: patterns/footer-with-nav-columns.php:94
+msgid "Pricing"
+msgstr ""
+
+#: patterns/footer-standard.php:97
+msgid "Use Cases"
+msgstr ""
+
+#: patterns/footer-standard.php:101
+msgid "Demo"
+msgstr ""
+
+#: patterns/footer-standard.php:117
+msgid "Download"
+msgstr ""
+
+#: patterns/footer-standard.php:121
+msgid "Visit Site"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php
 msgctxt "Pattern title"
-msgid "Header Light with Standard Menu"
+msgid "Footer with Navigation Columns"
 msgstr ""
 
-#: patterns/header-light-with-standard-menu.php
+#: patterns/footer-with-nav-columns.php
 msgctxt "Pattern description"
-msgid "Header with logo, inline navigation, and social icons"
+msgid "Two-column footer layout with site info/social on left and multi-column navigation menu on right"
 msgstr ""
 
-#: patterns/hero-modern.php
+#: patterns/footer-with-nav-columns.php:19
+msgid "Experience relaxation and rejuvenation at Velora Spa and Retreat. Discover our luxurious treatments and unwind in a serene atmosphere. Your wellness journey starts here."
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:37
+#: patterns/legal-about-intro.php:14
+#: patterns/plumbing-footer.php:62
+msgid "About Us"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:61
+#: patterns/plumbing-footer.php:25
+msgid "Services"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:66
+msgid "Massages"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:70
+msgid "Facials"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:74
+msgid "Body Treatments"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:78
+msgid "Wellness Classes"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:90
+msgid "Book Now"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:98
+msgid "Gift Cards"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:102
+msgid "Memberships"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:118
+#: patterns/plumbing-footer.php:121
+msgid "Privacy Policy"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:122
+#: patterns/plumbing-footer.php:125
+msgid "Terms of Service"
+msgstr ""
+
+#: patterns/footer-with-nav-columns.php:126
+msgid "Spa Etiquette"
+msgstr ""
+
+#: patterns/four-column-wellness-posts.php
 msgctxt "Pattern title"
-msgid "Modern Hero - Centered"
+msgid "Four Column Wellness Posts"
 msgstr ""
 
-#: patterns/hero-modern.php
+#: patterns/four-column-wellness-posts.php
 msgctxt "Pattern description"
-msgid "A modern centered hero with gradient background, headline, tagline, CTA buttons and image below"
+msgid "A four-column grid displaying recent posts with portrait images."
 msgstr ""
 
-#: patterns/hero-two-tone.php
+#: patterns/four-column-wellness-posts.php:15
+#: patterns/spa-overlapping-feature-columns.php:24
+msgid "Wellness"
+msgstr ""
+
+#: patterns/header-double-bar.php
 msgctxt "Pattern title"
-msgid "Hero Section Two-Tone"
+msgid "Header Double Bar"
 msgstr ""
 
-#: patterns/hero-two-tone.php
+#: patterns/header-double-bar.php
 msgctxt "Pattern description"
-msgid "Modern hero section with two-tone heading, dual CTA buttons, and optional image - responsive design with proper spacing"
+msgid "Two-bar header with top contact bar (email, phone, search) and bottom navigation bar with left-aligned logo"
 msgstr ""
 
-#: patterns/hero-two-tone.php:24
-msgid "Hero "
+#: patterns/header-double-bar.php:38
+msgid "Open search"
 msgstr ""
 
-#: patterns/hero-two-tone.php:24
-msgid "Section"
+#: patterns/header-editorial.php
+msgctxt "Pattern title"
+msgid "Header Editorial"
 msgstr ""
 
-#: patterns/hero-two-tone.php:24
-msgid "2.0"
+#: patterns/header-editorial.php
+msgctxt "Pattern description"
+msgid "Editorial header with brand logo, centered navigation, and status pill"
 msgstr ""
 
-#: patterns/hero-two-tone.php:28
-msgid "Transform your business with proven strategies that deliver measurable results. Our solutions are designed for ambitious companies ready to scale."
+#: patterns/header-editorial.php:26
+msgid "Open for new projects"
 msgstr ""
 
-#: patterns/hero-two-tone.php:34
-msgid "Getting started"
+#: patterns/header-mobile.php
+msgctxt "Pattern title"
+msgid "Header Mobile"
 msgstr ""
 
-#: patterns/hero-two-tone.php:38
-msgid "Contribute"
+#: patterns/header-mobile.php
+msgctxt "Pattern description"
+msgid "Mobile-optimized header with hamburger menu and social icons"
 msgstr ""
 
-#: patterns/hero-two-tone.php:48
-msgid "Hero background"
+#: patterns/header-social-logo-hamburger-light.php
+msgctxt "Pattern title"
+msgid "Header with Social, Logo, and Hamburger (Light)"
+msgstr ""
+
+#: patterns/header-social-logo-hamburger-light.php
+msgctxt "Pattern description"
+msgid "Clean light header with left social icons, centered logo, and hamburger menu"
+msgstr ""
+
+#: patterns/header-social-logo-hamburger.php
+msgctxt "Pattern title"
+msgid "Header with Social, Logo, and Hamburger (Dark)"
+msgstr ""
+
+#: patterns/header-social-logo-hamburger.php
+msgctxt "Pattern description"
+msgid "Clean dark header with left social icons, centered logo, and hamburger menu"
+msgstr ""
+
+#: patterns/header-standard-with-tel-number.php
+msgctxt "Pattern title"
+msgid "Header Standard with Phone Number"
+msgstr ""
+
+#: patterns/header-standard-with-tel-number.php
+msgctxt "Pattern description"
+msgid "Standard header with logo, inline navigation, and phone number"
+msgstr ""
+
+#: patterns/header-standard-with-tel-number.php:19
+#: patterns/header-standard-with-tel-number.php:25
+msgid "(123) 456-7890"
+msgstr ""
+
+#: patterns/header-standard.php
+msgctxt "Pattern title"
+msgid "Header Standard"
+msgstr ""
+
+#: patterns/header-standard.php
+msgctxt "Pattern description"
+msgid "Standard header with logo, inline navigation, and social icons"
+msgstr ""
+
+#: patterns/header-top-bar-centered-menu.php
+msgctxt "Pattern title"
+msgid "Header with Top Bar and Centered Menu"
+msgstr ""
+
+#: patterns/header-top-bar-centered-menu.php
+msgctxt "Pattern description"
+msgid "Header with social icons, centered logo, cart/login, and a centered menu below"
+msgstr ""
+
+#: patterns/hero-cover-slanted-legal.php
+msgctxt "Pattern title"
+msgid "Hero Cover (Slanted Legal)"
+msgstr ""
+
+#: patterns/hero-cover-slanted-legal.php
+msgctxt "Pattern description"
+msgid "Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Full-height hero section with slanted gradient overlay - legal services content"
+msgstr ""
+
+#: patterns/hero-cover-slanted-legal.php:11
+#: patterns/hero-cover-slanted-legal.php:12
+msgid "Harbor with boats at sunset"
+msgstr ""
+
+#: patterns/hero-cover-slanted-legal.php:15
+msgid "Experienced Legal Counsel You Can Trust"
+msgstr ""
+
+#: patterns/hero-cover-slanted-legal.php:19
+msgid "Sterling & Associates is a full-service law firm dedicated to protecting your interests and advancing your goals. With over 30 years of combined experience, our team of skilled attorneys provides comprehensive legal solutions across corporate law, litigation, real estate, and family matters. We combine deep legal expertise with a personalized approach, ensuring every client receives the attention and strategic counsel they deserve. Let us guide you through complex legal challenges with confidence and clarity."
+msgstr ""
+
+#: patterns/hero-fandb-cover-fullwidth.php
+msgctxt "Pattern title"
+msgid "F&B Hero - Full-Width Cover"
+msgstr ""
+
+#: patterns/hero-fandb-cover-fullwidth.php
+msgctxt "Pattern description"
+msgid "Full-width cover hero with cafe terrace background image, dark overlay, centered text, and dual CTA buttons (Reservations + View Menu)"
+msgstr ""
+
+#: patterns/hero-fandb-cover-fullwidth.php:11
+#: patterns/hero-fandb-cover-fullwidth.php:12
+msgid "Charming outdoor cafe terrace seating"
+msgstr ""
+
+#: patterns/hero-fandb-cover-fullwidth.php:14
+msgid "Experience Authentic Flavors at Kafe"
+msgstr ""
+
+#: patterns/hero-fandb-cover-fullwidth.php:18
+msgid "Join us for unforgettable dining on our beautiful terrace. Fresh ingredients, crafted cocktails, and warm hospitality await."
+msgstr ""
+
+#: patterns/hero-fandb-cover-fullwidth.php:23
+msgid "Reserve Your Table"
+msgstr ""
+
+#: patterns/hero-fandb-cover-fullwidth.php:27
+msgid "View Our Menu"
+msgstr ""
+
+#: patterns/hero-fandb-split-layout.php
+msgctxt "Pattern title"
+msgid "F+B Hero - Split Layout"
+msgstr ""
+
+#: patterns/hero-fandb-split-layout.php
+msgctxt "Pattern description"
+msgid "Split layout hero with text on left, cafe interior image on right, light background, and \"Order Online\" CTA button"
+msgstr ""
+
+#: patterns/hero-fandb-split-layout.php:16
+msgid "Fresh Coffee & Artisan Pastries"
+msgstr ""
+
+#: patterns/hero-fandb-split-layout.php:20
+msgid "Start your day with expertly brewed coffee and house-made pastries. We source local ingredients and craft each cup with care."
+msgstr ""
+
+#: patterns/hero-fandb-split-layout.php:25
+msgid "Order Online"
+msgstr ""
+
+#: patterns/hero-fandb-split-layout.php:32
+msgid "Cozy cafe interior with outdoor seating"
+msgstr ""
+
+#: patterns/hero-modern-light.php
+msgctxt "Pattern title"
+msgid "Modern Hero - Light"
+msgstr ""
+
+#: patterns/hero-modern-light.php
+msgctxt "Pattern description"
+msgid "A modern centered hero with light gradient background, headline, tagline, CTA buttons and image below"
+msgstr ""
+
+#: patterns/hero-modern-light.php:14
+msgid "Elevate your business presence online"
+msgstr ""
+
+#: patterns/hero-modern-light.php:18
+msgid "Describe what you do, who you help, and why it matters. Replace this with your own message to connect with visitors and showcase what makes your business stand out."
+msgstr ""
+
+#: patterns/hero-modern-light.php:23
+msgid "Get started"
+msgstr ""
+
+#: patterns/hero-modern-light.php:27
+#: patterns/spa-home-hero.php:35
+#: patterns/spa-overlapping-feature-columns.php:36
+msgid "Learn more →"
+msgstr ""
+
+#: patterns/hero-modern-light.php:36
+msgid "Mountain landscape at sunrise with pine trees and reflective lake"
 msgstr ""
 
 #: patterns/hero-with-cta.php
@@ -468,22 +2533,2172 @@ msgctxt "Pattern description"
 msgid "Business-focused hero section with headline, description, and prominent call-to-action button"
 msgstr ""
 
-#: patterns/hero-with-cta.php:20
+#: patterns/hero-with-cta.php:15
 msgid "Launch your idea with confidence"
 msgstr ""
 
-#: patterns/hero-with-cta.php:24
+#: patterns/hero-with-cta.php:19
 msgid "Build your product, attract users, and grow faster with our powerful tools designed for startups."
 msgstr ""
 
-#: patterns/hero-with-cta.php:30
-#: patterns/stats-list.php:35
+#: patterns/hero-with-cta.php:24
 #: patterns/stats-showcase.php:35
 msgid "Get Started"
 msgstr ""
 
-#: patterns/hero-with-cta.php:34
+#: patterns/hero-with-cta.php:28
 msgid "Learn More"
+msgstr ""
+
+#: patterns/image-card-grid.php
+msgctxt "Pattern title"
+msgid "Image Card Grid"
+msgstr ""
+
+#: patterns/image-card-grid.php
+msgctxt "Pattern description"
+msgid "Showcase content with image preview cards in a responsive grid layout. Perfect for demos, case studies, services, or featured content."
+msgstr ""
+
+#: patterns/image-card-grid.php:18
+msgid "Featured Content"
+msgstr ""
+
+#: patterns/image-card-grid.php:22
+msgid "Discover Our Work"
+msgstr ""
+
+#: patterns/image-card-grid.php:26
+msgid "Explore our featured projects and see how we deliver exceptional results for our clients."
+msgstr ""
+
+#: patterns/image-card-grid.php:33
+#: patterns/image-card-grid.php:55
+#: patterns/image-card-grid.php:77
+msgid "Project preview"
+msgstr ""
+
+#: patterns/image-card-grid.php:38
+msgid "Digital Solutions"
+msgstr ""
+
+#: patterns/image-card-grid.php:42
+msgid "Modern web applications and digital experiences built with cutting-edge technologies and best practices."
+msgstr ""
+
+#: patterns/image-card-grid.php:60
+msgid "Strategic Consulting"
+msgstr ""
+
+#: patterns/image-card-grid.php:64
+msgid "Expert guidance and strategic planning to help your business achieve its goals and maximize growth potential."
+msgstr ""
+
+#: patterns/image-card-grid.php:82
+msgid "Creative Design"
+msgstr ""
+
+#: patterns/image-card-grid.php:86
+msgid "Innovative design solutions that captivate your audience and elevate your brand identity across all touchpoints."
+msgstr ""
+
+#: patterns/legal-about-intro.php
+msgctxt "Pattern title"
+msgid "Legal About Intro"
+msgstr ""
+
+#: patterns/legal-about-intro.php
+msgctxt "Pattern description"
+msgid "Deprecated in 4.13.0 — moved to the Elayne Legal child theme. About page header banner with founding story and two-column values section"
+msgstr ""
+
+#: patterns/legal-about-intro.php:18
+msgid "A team of experienced attorneys provides personalized legal solutions"
+msgstr ""
+
+#: patterns/legal-about-intro.php:25
+msgid "Founded in 1998, our law firm has proudly served the community with integrity, dedication, and a deep commitment to justice. For more than two decades, we have built lasting relationships with our clients by offering clear guidance, practical advice, and trusted legal representation. Our team of experienced attorneys provides personalized legal solutions, carefully tailored to your unique needs and circumstances."
+msgstr ""
+
+#: patterns/legal-about-intro.php:33
+msgid "Our Commitment"
+msgstr ""
+
+#: patterns/legal-about-intro.php:37
+msgid "We believe that every client deserves clear communication, strategic thinking, and unwavering advocacy. Whether you're navigating a family matter, building a business, or planning your estate, we take the time to understand your unique situation and craft solutions that protect your interests and achieve your goals."
+msgstr ""
+
+#: patterns/legal-about-intro.php:43
+msgid "Why Choose Our Firm"
+msgstr ""
+
+#: patterns/legal-about-intro.php:47
+msgid "Our reputation is built on results, integrity, and client satisfaction. We combine decades of combined legal experience with a modern, client-focused approach. From your first consultation through case resolution, you'll have direct access to experienced attorneys who treat your matter with the attention and urgency it deserves."
+msgstr ""
+
+#: patterns/legal-contact.php
+msgctxt "Pattern title"
+msgid "Legal Contact Information"
+msgstr ""
+
+#: patterns/legal-contact.php
+msgctxt "Pattern description"
+msgid "Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Contact details for law firm with office location, phone, email, and hours"
+msgstr ""
+
+#: patterns/legal-contact.php:20
+msgid "Contact us today to discuss your legal needs. We offer free initial consultations for most practice areas."
+msgstr ""
+
+#: patterns/legal-contact.php:25
+msgid "Contact Us Today"
+msgstr ""
+
+#: patterns/legal-contact.php:80
+msgid "Office Location"
+msgstr ""
+
+#: patterns/legal-contact.php:84
+msgid "Downtown, ST 12345"
+msgstr ""
+
+#: patterns/legal-contact.php:102
+msgid "Mon-Fri: 9:00 AM - 5:00 PM"
+msgstr ""
+
+#: patterns/legal-contact.php:102
+msgid "Evenings by appointment"
+msgstr ""
+
+#: patterns/legal-services.php
+msgctxt "Pattern title"
+msgid "Legal Services Grid"
+msgstr ""
+
+#: patterns/legal-services.php
+msgctxt "Pattern description"
+msgid "Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Six-column responsive grid of legal practice areas with custom SVG icons"
+msgstr ""
+
+#: patterns/legal-services.php:15
+msgid "Our Legal Services"
+msgstr ""
+
+#: patterns/legal-services.php:19
+msgid "Comprehensive legal representation across multiple practice areas"
+msgstr ""
+
+#: patterns/legal-services.php:27
+#: patterns/legal-services.php:31
+msgid "Family Law"
+msgstr ""
+
+#: patterns/legal-services.php:35
+msgid "Divorce, custody, adoption, and family mediation services with compassionate representation."
+msgstr ""
+
+#: patterns/legal-services.php:42
+#: patterns/legal-services.php:46
+msgid "Business Law"
+msgstr ""
+
+#: patterns/legal-services.php:50
+msgid "Contracts, formation, compliance, and commercial litigation for businesses of all sizes."
+msgstr ""
+
+#: patterns/legal-services.php:57
+#: patterns/legal-services.php:61
+msgid "Real Estate Law"
+msgstr ""
+
+#: patterns/legal-services.php:65
+msgid "Property transactions, landlord-tenant disputes, and title examination services."
+msgstr ""
+
+#: patterns/legal-services.php:72
+#: patterns/legal-services.php:76
+msgid "Estate Planning"
+msgstr ""
+
+#: patterns/legal-services.php:80
+msgid "Wills, trusts, probate administration, and comprehensive asset protection strategies."
+msgstr ""
+
+#: patterns/legal-services.php:87
+#: patterns/legal-services.php:91
+msgid "Litigation"
+msgstr ""
+
+#: patterns/legal-services.php:95
+msgid "Civil litigation, appeals, and alternative dispute resolution for complex legal matters."
+msgstr ""
+
+#: patterns/legal-services.php:102
+#: patterns/legal-services.php:106
+msgid "Criminal Defense"
+msgstr ""
+
+#: patterns/legal-services.php:110
+msgid "DUI, misdemeanors, felonies, and expungement with aggressive defense representation."
+msgstr ""
+
+#: patterns/legal-stats.php
+msgctxt "Pattern title"
+msgid "Legal Stats - Experience and Success"
+msgstr ""
+
+#: patterns/legal-stats.php
+msgctxt "Pattern description"
+msgid "Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Statistics showcase for law firm featuring years of experience, cases won, and success rate"
+msgstr ""
+
+#: patterns/legal-stats.php:14
+msgid "Proven Track Record of Success"
+msgstr ""
+
+#: patterns/legal-stats.php:20
+msgid "25+"
+msgstr ""
+
+#: patterns/legal-stats.php:24
+#: patterns/plumbing-stats-bar.php:30
+msgid "Years Experience"
+msgstr ""
+
+#: patterns/legal-stats.php:28
+msgid "Serving the community since 1998"
+msgstr ""
+
+#: patterns/legal-stats.php:35
+msgid "500+"
+msgstr ""
+
+#: patterns/legal-stats.php:39
+msgid "Cases Won"
+msgstr ""
+
+#: patterns/legal-stats.php:43
+msgid "Successful outcomes for our clients"
+msgstr ""
+
+#: patterns/legal-stats.php:50
+msgid "98%"
+msgstr ""
+
+#: patterns/legal-stats.php:54
+msgid "Success Rate"
+msgstr ""
+
+#: patterns/legal-stats.php:58
+msgid "Consistent excellence in representation"
+msgstr ""
+
+#: patterns/legal-team.php
+msgctxt "Pattern title"
+msgid "Legal Team - Attorney Profiles"
+msgstr ""
+
+#: patterns/legal-team.php
+msgctxt "Pattern description"
+msgid "Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Showcase law firm attorneys with professional profiles in a responsive grid"
+msgstr ""
+
+#: patterns/legal-team.php:15
+msgid "Our Attorneys"
+msgstr ""
+
+#: patterns/legal-team.php:16
+msgid "Experienced legal professionals dedicated to protecting your rights and achieving the best possible outcomes"
+msgstr ""
+
+#: patterns/legal-team.php:19
+#: patterns/legal-team.php:25
+#: patterns/legal-team.php:31
+msgid "Attorney profile photo"
+msgstr ""
+
+#: patterns/legal-team.php:21
+msgid "Michael Harrison, J.D."
+msgstr ""
+
+#: patterns/legal-team.php:22
+msgid "Senior Partner, Family Law"
+msgstr ""
+
+#: patterns/legal-team.php:23
+msgid "With over 20 years of experience in family law, Michael provides compassionate representation in divorce, custody, and adoption matters."
+msgstr ""
+
+#: patterns/legal-team.php:27
+msgid "Sarah Mitchell, J.D."
+msgstr ""
+
+#: patterns/legal-team.php:28
+msgid "Partner, Business & Corporate Law"
+msgstr ""
+
+#: patterns/legal-team.php:29
+msgid "Sarah specializes in business formation, contracts, and commercial litigation, helping businesses navigate complex legal challenges."
+msgstr ""
+
+#: patterns/legal-team.php:33
+msgid "David Rodriguez, J.D."
+msgstr ""
+
+#: patterns/legal-team.php:34
+msgid "Associate Attorney, Estate Planning"
+msgstr ""
+
+#: patterns/legal-team.php:35
+msgid "David focuses on wills, trusts, and estate administration, providing clients with comprehensive planning for their family's future."
+msgstr ""
+
+#: patterns/legal-testimonials.php
+msgctxt "Pattern title"
+msgid "Legal Client Testimonials"
+msgstr ""
+
+#: patterns/legal-testimonials.php
+msgctxt "Pattern description"
+msgid "Deprecated in 4.13.0 — moved to the Elayne Legal child theme. Grid of client testimonials for law firm"
+msgstr ""
+
+#: patterns/legal-testimonials.php:14
+msgid "Client Testimonials"
+msgstr ""
+
+#: patterns/legal-testimonials.php:18
+#: patterns/nail-salon-testimonials.php:18
+#: patterns/testimonial-card.php:14
+msgid "What Our Clients Say"
+msgstr ""
+
+#: patterns/legal-testimonials.php:22
+msgid "We measure our success by the positive outcomes we achieve for our clients and the trust they place in us."
+msgstr ""
+
+#: patterns/legal-testimonials.php:30
+msgid "The legal team handled my family law matter with exceptional professionalism and compassion. They guided me through every step of a difficult divorce, always prioritizing my children's best interests. I couldn't have asked for better representation."
+msgstr ""
+
+#: patterns/legal-testimonials.php:35
+#: patterns/legal-testimonials.php:60
+#: patterns/legal-testimonials.php:85
+msgid "Client testimonial"
+msgstr ""
+
+#: patterns/legal-testimonials.php:40
+msgid "Jennifer Martinez"
+msgstr ""
+
+#: patterns/legal-testimonials.php:44
+msgid "Family Law Client"
+msgstr ""
+
+#: patterns/legal-testimonials.php:55
+msgid "As a small business owner, I needed expert guidance on contracts and compliance. The attorneys here provided clear, practical advice that helped me avoid costly mistakes and protect my business. Their business law expertise is outstanding."
+msgstr ""
+
+#: patterns/legal-testimonials.php:65
+msgid "David Thompson"
+msgstr ""
+
+#: patterns/legal-testimonials.php:69
+msgid "Business Owner"
+msgstr ""
+
+#: patterns/legal-testimonials.php:80
+msgid "Estate planning is complex, but this firm made it straightforward and stress-free. They took the time to understand my family's needs and created a comprehensive plan that gives me peace of mind about my family's future."
+msgstr ""
+
+#: patterns/legal-testimonials.php:90
+msgid "Robert Anderson"
+msgstr ""
+
+#: patterns/legal-testimonials.php:94
+msgid "Estate Planning Client"
+msgstr ""
+
+#: patterns/main-hero.php
+msgctxt "Pattern title"
+msgid "Main — Hero"
+msgstr ""
+
+#: patterns/main-hero.php
+msgctxt "Pattern description"
+msgid "Main — Hero"
+msgstr ""
+
+#: patterns/main-hero.php:14
+msgid "A theme for serious work"
+msgstr ""
+
+#: patterns/main-hero.php:19
+msgid "Quietly"
+msgstr ""
+
+#: patterns/main-hero.php:20
+msgid "opinionated"
+msgstr ""
+
+#: patterns/main-hero.php:21
+msgid "design system."
+msgstr ""
+
+#: patterns/main-hero.php:26
+msgid "<strong>140+ patterns</strong><br>Ready to insert"
+msgstr ""
+
+#: patterns/main-hero.php:29
+msgid "<strong>8 style variations</strong><br>One click in the editor"
+msgstr ""
+
+#: patterns/main-hero.php:36
+msgid "Elayne is a <strong>Full Site Editing</strong> theme built for studios and operators who would rather ship than wrestle a builder. Content that pops. Tokens that scale. Typography that earns the page."
+msgstr ""
+
+#: patterns/main-hero.php:42
+msgid "Get the theme →"
+msgstr ""
+
+#: patterns/main-hero.php:45
+msgid "View patterns"
+msgstr ""
+
+#: patterns/main-services-stack.php
+msgctxt "Pattern title"
+msgid "Main — Services Stack"
+msgstr ""
+
+#: patterns/main-services-stack.php
+msgctxt "Pattern description"
+msgid "Editorial numbered services list with hover slide-in effect"
+msgstr ""
+
+#: patterns/main-services-stack.php:16
+msgid "§ What we build"
+msgstr ""
+
+#: patterns/main-services-stack.php:19
+msgid "Four things, <em class=\"has-accent-color has-text-color has-serif-font-family\">done well</em>."
+msgstr ""
+
+#: patterns/main-services-stack.php:24
+msgid "Not a service menu — a working method. Each engagement is bounded, written down, and shipped against a real deadline."
+msgstr ""
+
+#: patterns/main-services-stack.php:31
+msgid "01"
+msgstr ""
+
+#: patterns/main-services-stack.php:35
+msgid "FSE theme builds"
+msgstr ""
+
+#: patterns/main-services-stack.php:38
+msgid "Custom block themes in the Elayne lineage. Token-driven, pattern-first, no page builders. Shipped from JSON to production."
+msgstr ""
+
+#: patterns/main-services-stack.php:42
+msgid "theme.json"
+msgstr ""
+
+#: patterns/main-services-stack.php:45
+msgid "Block patterns"
+msgstr ""
+
+#: patterns/main-services-stack.php:48
+#: patterns/main-services-stack.php:99
+msgid "Style variations"
+msgstr ""
+
+#: patterns/main-services-stack.php:58
+msgid "02"
+msgstr ""
+
+#: patterns/main-services-stack.php:62
+msgid "Headless + Sage"
+msgstr ""
+
+#: patterns/main-services-stack.php:65
+msgid "When the editor is not enough — Sage 11, Acorn, Blade, Tailwind. The same care, the developer-mode version."
+msgstr ""
+
+#: patterns/main-services-stack.php:69
+msgid "Sage 11"
+msgstr ""
+
+#: patterns/main-services-stack.php:72
+msgid "Bedrock"
+msgstr ""
+
+#: patterns/main-services-stack.php:75
+msgid "Trellis"
+msgstr ""
+
+#: patterns/main-services-stack.php:85
+msgid "03"
+msgstr ""
+
+#: patterns/main-services-stack.php:89
+msgid "Vertical kits"
+msgstr ""
+
+#: patterns/main-services-stack.php:92
+msgid "Pre-composed pattern libraries for food and beverage, spa, plumbing, salons, publication, store. Drop in, rewrite the copy, launch."
+msgstr ""
+
+#: patterns/main-services-stack.php:96
+msgid "6 verticals"
+msgstr ""
+
+#: patterns/main-services-stack.php:109
+msgid "04"
+msgstr ""
+
+#: patterns/main-services-stack.php:113
+msgid "Performance + SEO"
+msgstr ""
+
+#: patterns/main-services-stack.php:116
+msgid "Audits that read like editorials. Concrete fixes. Core Web Vitals you can hand to a stakeholder without translation."
+msgstr ""
+
+#: patterns/main-services-stack.php:120
+msgid "CWV"
+msgstr ""
+
+#: patterns/main-services-stack.php:123
+msgid "Technical SEO"
+msgstr ""
+
+#: patterns/main-services-stack.php:126
+msgid "Hardening"
+msgstr ""
+
+#: patterns/menu-daily-specials.php
+msgctxt "Pattern title"
+msgid "Daily Specials Menu"
+msgstr ""
+
+#: patterns/menu-daily-specials.php
+msgctxt "Pattern description"
+msgid "Featured daily specials with large images, chef's notes, and pricing"
+msgstr ""
+
+#: patterns/menu-daily-specials.php:14
+msgid "Chef's Daily Specials"
+msgstr ""
+
+#: patterns/menu-daily-specials.php:18
+msgid "Fresh seasonal dishes prepared daily by our culinary team"
+msgstr ""
+
+#: patterns/menu-daily-specials.php:26
+#: patterns/menu-daily-specials.php:27
+#: patterns/menu-daily-specials.php:35
+msgid "Pan-Seared Halibut"
+msgstr ""
+
+#: patterns/menu-daily-specials.php:39
+msgid "Fresh halibut fillet pan-seared to perfection, served on a bed of saffron risotto with roasted asparagus and cherry tomatoes. Finished with a light lemon butter sauce."
+msgstr ""
+
+#: patterns/menu-daily-specials.php:47
+msgid "<strong>Chef's Note:</strong> \"This dish showcases the best of our local fisherman's daily catch. The delicate halibut pairs beautifully with the creamy risotto and bright citrus notes.\""
+msgstr ""
+
+#: patterns/menu-daily-specials.php:52
+msgid "€32.00"
+msgstr ""
+
+#: patterns/menu-daily-specials.php:56
+#: patterns/menu-daily-specials.php:88
+msgid "Available today only"
+msgstr ""
+
+#: patterns/menu-daily-specials.php:67
+#: patterns/menu-daily-specials.php:94
+#: patterns/menu-daily-specials.php:95
+msgid "Wild Mushroom Ravioli"
+msgstr ""
+
+#: patterns/menu-daily-specials.php:71
+msgid "Handmade ravioli filled with a blend of porcini, shiitake, and oyster mushrooms. Tossed in brown butter sage sauce with toasted pine nuts and fresh parmesan."
+msgstr ""
+
+#: patterns/menu-daily-specials.php:79
+msgid "<strong>Chef's Note:</strong> \"Our pasta is made fresh every morning. This vegetarian special celebrates the earthy flavors of autumn with locally foraged wild mushrooms.\""
+msgstr ""
+
+#: patterns/menu-daily-specials.php:84
+msgid "€22.00"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php
+msgctxt "Pattern title"
+msgid "Drinks Menu Grid"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php
+msgctxt "Pattern description"
+msgid "Four-section responsive drinks menu with color-coded categories (Coffee/Tea, Wines, Beers, Snacks)"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:13
+msgid "Drinks"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:19
+msgid "Koffie &amp; Thee"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:24
+msgid "Verse muntthee"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:28
+#: patterns/menu-drinks-grid.php:56
+#: patterns/menu-drinks-grid.php:84
+msgid "€3.00"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:38
+msgid "Diverse Nespresso koffie vanaf"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:42
+msgid "€2.50"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:52
+msgid "Germberthee"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:61
+msgid "Frisdranken"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:66
+msgid "Koffie met een tic"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:70
+#: patterns/menu-food-grid.php:176
+msgid "€7.00"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:80
+msgid "Diverse frisdranken vanaf"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:91
+msgid "Wijnen"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:95
+msgid "Wit"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:100
+msgid "Chardonnay"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:104
+#: patterns/menu-drinks-grid.php:122
+#: patterns/menu-drinks-grid.php:140
+#: patterns/menu-drinks-grid.php:158
+#: patterns/menu-food-grid.php:224
+msgid "€4.50"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:109
+msgid "Portugal"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:118
+msgid "Verdejo"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:127
+#: patterns/menu-drinks-grid.php:163
+msgid "Spanje"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:136
+msgid "Pinot Grigio"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:145
+msgid "Italië"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:154
+msgid "Cava"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:167
+msgid "Rood"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:172
+msgid "Merlot"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:176
+#: patterns/menu-drinks-grid.php:210
+#: patterns/menu-food-grid.php:210
+msgid "€5.50"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:181
+msgid "Frankrijk"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:187
+msgid "Bieren uit de fles"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:192
+msgid "Affligem Wit"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:196
+msgid "€4.80"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:206
+msgid "Westmalle Dubbel"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:220
+msgid "Duvel"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:224
+#: patterns/menu-drinks-grid.php:238
+#: patterns/menu-drinks-grid.php:268
+msgid "€5.00"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:234
+msgid "Desperado"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:243
+msgid "Alcohol Vrij"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:248
+msgid "Heineken 0.0"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:252
+#: patterns/menu-drinks-grid.php:296
+msgid "€3.50"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:259
+msgid "Hapjes"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:264
+msgid "Bitterballen"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:278
+msgid "Kaasplankje"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:282
+#: patterns/menu-food-grid.php:28
+#: patterns/menu-food-grid.php:158
+msgid "€8.50"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:292
+msgid "Olijven"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:306
+msgid "Nacho's met salsa"
+msgstr ""
+
+#: patterns/menu-drinks-grid.php:310
+msgid "€6.00"
+msgstr ""
+
+#: patterns/menu-food-grid.php
+msgctxt "Pattern title"
+msgid "Food Menu Grid"
+msgstr ""
+
+#: patterns/menu-food-grid.php
+msgctxt "Pattern description"
+msgid "Four-section responsive food menu with color-coded categories (Appetizers, Mains, Desserts, Sides)"
+msgstr ""
+
+#: patterns/menu-food-grid.php:13
+msgid "Food Menu"
+msgstr ""
+
+#: patterns/menu-food-grid.php:19
+msgid "Appetizers"
+msgstr ""
+
+#: patterns/menu-food-grid.php:24
+msgid "Bruschetta"
+msgstr ""
+
+#: patterns/menu-food-grid.php:33
+msgid "Toasted bread with tomatoes, garlic, and basil"
+msgstr ""
+
+#: patterns/menu-food-grid.php:42
+msgid "Calamari Fritti"
+msgstr ""
+
+#: patterns/menu-food-grid.php:46
+msgid "€12.00"
+msgstr ""
+
+#: patterns/menu-food-grid.php:51
+msgid "Crispy fried squid with lemon aioli"
+msgstr ""
+
+#: patterns/menu-food-grid.php:60
+msgid "Caesar Salad"
+msgstr ""
+
+#: patterns/menu-food-grid.php:64
+msgid "€9.50"
+msgstr ""
+
+#: patterns/menu-food-grid.php:69
+msgid "Romaine lettuce, parmesan, croutons"
+msgstr ""
+
+#: patterns/menu-food-grid.php:75
+msgid "Mains"
+msgstr ""
+
+#: patterns/menu-food-grid.php:80
+msgid "Grilled Salmon"
+msgstr ""
+
+#: patterns/menu-food-grid.php:84
+msgid "€24.00"
+msgstr ""
+
+#: patterns/menu-food-grid.php:89
+msgid "Fresh Atlantic salmon with seasonal vegetables"
+msgstr ""
+
+#: patterns/menu-food-grid.php:98
+msgid "Beef Tenderloin"
+msgstr ""
+
+#: patterns/menu-food-grid.php:102
+msgid "€28.50"
+msgstr ""
+
+#: patterns/menu-food-grid.php:107
+msgid "8oz tenderloin with truffle mashed potatoes"
+msgstr ""
+
+#: patterns/menu-food-grid.php:116
+msgid "Mushroom Risotto"
+msgstr ""
+
+#: patterns/menu-food-grid.php:120
+msgid "€18.00"
+msgstr ""
+
+#: patterns/menu-food-grid.php:125
+msgid "Creamy arborio rice with wild mushrooms"
+msgstr ""
+
+#: patterns/menu-food-grid.php:131
+msgid "Desserts"
+msgstr ""
+
+#: patterns/menu-food-grid.php:136
+msgid "Tiramisu"
+msgstr ""
+
+#: patterns/menu-food-grid.php:140
+msgid "€7.50"
+msgstr ""
+
+#: patterns/menu-food-grid.php:145
+msgid "Classic Italian coffee-flavored dessert"
+msgstr ""
+
+#: patterns/menu-food-grid.php:154
+msgid "Chocolate Lava Cake"
+msgstr ""
+
+#: patterns/menu-food-grid.php:163
+msgid "Warm chocolate cake with vanilla ice cream"
+msgstr ""
+
+#: patterns/menu-food-grid.php:172
+msgid "Crème Brûlée"
+msgstr ""
+
+#: patterns/menu-food-grid.php:181
+msgid "Vanilla custard with caramelized sugar crust"
+msgstr ""
+
+#: patterns/menu-food-grid.php:187
+msgid "Sides"
+msgstr ""
+
+#: patterns/menu-food-grid.php:192
+msgid "Truffle Fries"
+msgstr ""
+
+#: patterns/menu-food-grid.php:196
+msgid "€6.50"
+msgstr ""
+
+#: patterns/menu-food-grid.php:206
+msgid "Grilled Vegetables"
+msgstr ""
+
+#: patterns/menu-food-grid.php:220
+msgid "Garlic Bread"
+msgstr ""
+
+#: patterns/menu-pricing-table.php
+msgctxt "Pattern title"
+msgid "Menu Pricing Table"
+msgstr ""
+
+#: patterns/menu-pricing-table.php
+msgctxt "Pattern description"
+msgid "Simple, elegant pricing table perfect for wine lists, coffee menus, or quick reference menus"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:13
+msgid "Wine List"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:19
+msgid "Red Wines"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:25
+msgid "Cabernet Sauvignon, Napa Valley 2020"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:29
+msgid "€65"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:34
+msgid "Full-bodied with notes of black cherry and oak"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:45
+msgid "Pinot Noir, Willamette Valley 2021"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:49
+msgid "€55"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:54
+msgid "Elegant with red fruit and earthy undertones"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:65
+msgid "Merlot, Bordeaux 2019"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:69
+msgid "€48"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:74
+msgid "Smooth and velvety with plum and chocolate notes"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:81
+msgid "White Wines"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:87
+msgid "Chardonnay, Sonoma 2021"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:91
+msgid "€52"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:96
+msgid "Crisp and buttery with hints of vanilla and apple"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:107
+msgid "Sauvignon Blanc, Marlborough 2022"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:111
+msgid "€45"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:116
+msgid "Bright and zesty with citrus and tropical fruit"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:127
+msgid "Riesling, Mosel 2021"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:131
+msgid "€42"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:136
+msgid "Semi-sweet with delicate floral aromatics"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:143
+msgid "Sparkling"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:149
+msgid "Champagne Brut, France NV"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:153
+msgid "€85"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:158
+msgid "Classic dry champagne with fine bubbles"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:169
+msgid "Prosecco, Veneto DOC"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:173
+msgid "€38"
+msgstr ""
+
+#: patterns/menu-pricing-table.php:178
+msgid "Light and refreshing Italian sparkler"
+msgstr ""
+
+#: patterns/nail-salon-contact.php
+msgctxt "Pattern title"
+msgid "Nail Salon Contact Section"
+msgstr ""
+
+#: patterns/nail-salon-contact.php
+msgctxt "Pattern description"
+msgid "Two-column contact section with business details and booking form placeholder"
+msgstr ""
+
+#: patterns/nail-salon-contact.php:20
+msgid "Visit Lacquer &amp; Luxe"
+msgstr ""
+
+#: patterns/nail-salon-contact.php:24
+msgid "We'd love to see you. Pop in for a walk-in appointment or book ahead for guaranteed time with your favorite artist."
+msgstr ""
+
+#: patterns/nail-salon-contact.php:41
+msgid "(555) 246-8910"
+msgstr ""
+
+#: patterns/nail-salon-contact.php:59
+msgid "info@example.com"
+msgstr ""
+
+#: patterns/nail-salon-contact.php:77
+msgid "24 Blossom Lane, Suite 3, City, State 10001"
+msgstr ""
+
+#: patterns/nail-salon-contact.php:95
+msgid "Mon–Fri: 9am–7pm · Sat: 9am–6pm · Sun: 10am–5pm"
+msgstr ""
+
+#: patterns/nail-salon-contact.php:104
+#: patterns/nail-salon-cta.php:27
+#: patterns/nail-salon-hero.php:35
+msgid "Book an Appointment"
+msgstr ""
+
+#: patterns/nail-salon-contact.php:114
+msgid "We typically confirm within a few hours during business hours."
+msgstr ""
+
+#: patterns/nail-salon-cta.php
+msgctxt "Pattern title"
+msgid "Nail Salon Booking CTA"
+msgstr ""
+
+#: patterns/nail-salon-cta.php
+msgctxt "Pattern description"
+msgid "Full-width rose gradient call-to-action with headline, eyebrow, and booking buttons"
+msgstr ""
+
+#: patterns/nail-salon-cta.php:14
+msgid "Limited Spots Available"
+msgstr ""
+
+#: patterns/nail-salon-cta.php:18
+msgid "Your Perfect Nails Are One Booking Away"
+msgstr ""
+
+#: patterns/nail-salon-cta.php:22
+msgid "Whether it's a special occasion or everyday self-care — we'd love to see you. Book online in seconds or call us today."
+msgstr ""
+
+#: patterns/nail-salon-cta.php:31
+msgid "Call Us Now"
+msgstr ""
+
+#: patterns/nail-salon-hero.php
+msgctxt "Pattern title"
+msgid "Nail Salon Hero"
+msgstr ""
+
+#: patterns/nail-salon-hero.php
+msgctxt "Pattern description"
+msgid "Two-column hero for nail salon with eyebrow badge, headline, CTA buttons, and trust stats"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:21
+msgid "Now Booking — Walk-ins Welcome"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:26
+msgid "Nails That Tell <em>Your Story.</em>"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:30
+msgid "Premium manicures, gel nails, and nail art in a luxurious setting. At Lacquer & Luxe, every visit is an experience in beauty and self-care."
+msgstr ""
+
+#: patterns/nail-salon-hero.php:39
+msgid "View Our Services"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:46
+#: patterns/nail-salon-stats-bar.php:25
+#: patterns/nail-salon-why-us.php:24
+msgid "8+"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:50
+#: patterns/nail-salon-stats-bar.php:29
+msgid "Years Open"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:56
+#: patterns/nail-salon-stats-bar.php:15
+msgid "3,200+"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:60
+#: patterns/nail-salon-stats-bar.php:19
+msgid "Happy Clients"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:66
+msgid "4.9"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:70
+#: patterns/plumbing-hero.php:50
+msgid "Google Rating"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:78
+#: patterns/nail-salon-hero.php:79
+msgid "Woman with red manicured nails"
+msgstr ""
+
+#: patterns/nail-salon-hero.php:90
+msgid "Certified Nail Artists"
+msgstr ""
+
+#: patterns/nail-salon-services.php
+msgctxt "Pattern title"
+msgid "Nail Salon Services Grid"
+msgstr ""
+
+#: patterns/nail-salon-services.php
+msgctxt "Pattern description"
+msgid "Six-card responsive grid of nail salon services with SVG icons"
+msgstr ""
+
+#: patterns/nail-salon-services.php:19
+msgid "Crafted for Every Occasion"
+msgstr ""
+
+#: patterns/nail-salon-services.php:23
+msgid "From classic manicures to custom nail art — choose the treatment that speaks to you."
+msgstr ""
+
+#: patterns/nail-salon-services.php:30
+#: patterns/nail-salon-services.php:34
+msgid "Classic Manicure"
+msgstr ""
+
+#: patterns/nail-salon-services.php:38
+msgid "Nail shaping, cuticle care, and your choice of polish for flawless, lasting color."
+msgstr ""
+
+#: patterns/nail-salon-services.php:42
+#: patterns/nail-salon-services.php:60
+#: patterns/nail-salon-services.php:78
+#: patterns/nail-salon-services.php:96
+#: patterns/nail-salon-services.php:114
+#: patterns/nail-salon-services.php:132
+#: patterns/plumbing-services.php:43
+#: patterns/plumbing-services.php:62
+#: patterns/plumbing-services.php:81
+#: patterns/plumbing-services.php:100
+#: patterns/plumbing-services.php:119
+#: patterns/plumbing-services.php:138
+msgid "Learn more"
+msgstr ""
+
+#: patterns/nail-salon-services.php:48
+#: patterns/nail-salon-services.php:52
+msgid "Gel Nails"
+msgstr ""
+
+#: patterns/nail-salon-services.php:56
+msgid "Long-lasting gel polish that stays chip-free for up to three weeks. Vivid colors, brilliant shine."
+msgstr ""
+
+#: patterns/nail-salon-services.php:66
+#: patterns/nail-salon-services.php:70
+msgid "Acrylic Extensions"
+msgstr ""
+
+#: patterns/nail-salon-services.php:74
+msgid "Custom-length acrylics sculpted and filed to your preference — natural to dramatic."
+msgstr ""
+
+#: patterns/nail-salon-services.php:84
+#: patterns/nail-salon-services.php:88
+msgid "Nail Art"
+msgstr ""
+
+#: patterns/nail-salon-services.php:92
+msgid "Hand-painted designs, decals, ombre, and 3D elements — express your unique personal style."
+msgstr ""
+
+#: patterns/nail-salon-services.php:102
+#: patterns/nail-salon-services.php:106
+msgid "Spa Pedicure"
+msgstr ""
+
+#: patterns/nail-salon-services.php:110
+msgid "Soothing foot soak, scrub, callus treatment, and polish — total relaxation for tired feet."
+msgstr ""
+
+#: patterns/nail-salon-services.php:120
+#: patterns/nail-salon-services.php:124
+msgid "Paraffin Treatment"
+msgstr ""
+
+#: patterns/nail-salon-services.php:128
+msgid "Warm paraffin wax deeply nourishes and softens skin — the ultimate luxury add-on."
+msgstr ""
+
+#: patterns/nail-salon-stats-bar.php
+msgctxt "Pattern title"
+msgid "Nail Salon Stats Bar"
+msgstr ""
+
+#: patterns/nail-salon-stats-bar.php
+msgctxt "Pattern description"
+msgid "Full-width rose statistics bar with five key nail salon business metrics"
+msgstr ""
+
+#: patterns/nail-salon-stats-bar.php:35
+#: patterns/plumbing-stats-bar.php:37
+msgid "4.9 / 5"
+msgstr ""
+
+#: patterns/nail-salon-stats-bar.php:39
+#: patterns/plumbing-stats-bar.php:41
+msgid "Average Rating"
+msgstr ""
+
+#: patterns/nail-salon-stats-bar.php:45
+msgid "50+"
+msgstr ""
+
+#: patterns/nail-salon-stats-bar.php:49
+msgid "Polish Colors"
+msgstr ""
+
+#: patterns/nail-salon-stats-bar.php:55
+#: patterns/plumbing-stats-bar.php:59
+msgid "100%"
+msgstr ""
+
+#: patterns/nail-salon-stats-bar.php:59
+msgid "Satisfaction Guarantee"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php
+msgctxt "Pattern title"
+msgid "Nail Salon Client Testimonials"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php
+msgctxt "Pattern description"
+msgid "Three-column testimonial grid with star ratings for nail salon"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:14
+msgid "Client Love"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:22
+msgid "Real reviews from real clients who trust Lacquer &amp; Luxe."
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:33
+msgid "I've been coming here for two years and I always leave absolutely thrilled. The nail art is stunning and the staff makes you feel so welcome. Best salon in the city!"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:39
+msgid "SR"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:45
+msgid "Sophie R."
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:49
+msgid "Regular Client · Google Review"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:61
+msgid "My gel nails lasted a full three weeks without a single chip. The technician took so much time to perfect the shape and color. I will never go anywhere else for my nails."
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:67
+msgid "MK"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:73
+msgid "Maya K."
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:77
+msgid "Returning Client · Yelp Review"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:89
+msgid "Treated myself to the spa pedicure and paraffin add-on. Absolutely divine! So relaxing, beautifully done. The whole atmosphere at Lacquer &amp; Luxe is just gorgeous."
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:95
+msgid "LT"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:101
+msgid "Lauren T."
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:105
+msgid "New Client · Google Review"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:119
+#: patterns/plumbing-testimonials.php:132
+msgid "4.9 on Google"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:129
+#: patterns/plumbing-testimonials.php:142
+msgid "5.0 on Yelp"
+msgstr ""
+
+#: patterns/nail-salon-testimonials.php:139
+msgid "3,200+ Happy Clients"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php
+msgctxt "Pattern title"
+msgid "Nail Salon Why Choose Us"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php
+msgctxt "Pattern description"
+msgid "Two-column why choose us section with image and feature list for nail salon"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:18
+msgid "Nail technician giving a manicure"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:28
+msgid "Years of Luxury"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:36
+msgid "Why Lacquer &amp; Luxe"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:40
+msgid "Beauty Begins with the Right Hands"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:44
+msgid "We're a boutique nail salon committed to the highest standards of hygiene, artistry, and relaxation. Every visit is personalized — because your nails deserve nothing less."
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:57
+msgid "Hospital-Grade Sanitation"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:61
+msgid "All tools sterilized between every client — your health is our priority"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:75
+msgid "Skilled, Certified Artists"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:79
+msgid "Our nail technicians are licensed and trained in the latest techniques"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:93
+msgid "Premium, Non-Toxic Products"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:97
+msgid "We use only top-tier polishes and gels from trusted, trusted brands"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:111
+msgid "Relaxing Boutique Atmosphere"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:115
+msgid "Thoughtfully designed space — calm, clean, and beautifully appointed"
+msgstr ""
+
+#: patterns/nail-salon-why-us.php:123
+msgid "Book Your First Visit"
+msgstr ""
+
+#: patterns/overlapping-feature-columns-reversed.php
+msgctxt "Pattern title"
+msgid "Overlapping Feature Columns Reversed"
+msgstr ""
+
+#: patterns/overlapping-feature-columns-reversed.php
+msgctxt "Pattern description"
+msgid "A two-column layout with overlapping text block and image. General-purpose variant."
+msgstr ""
+
+#: patterns/overlapping-feature-columns-reversed.php:17
+msgid "Our Process"
+msgstr ""
+
+#: patterns/overlapping-feature-columns-reversed.php:21
+msgid "From Discovery to Launch, We Have You Covered"
+msgstr ""
+
+#: patterns/overlapping-feature-columns-reversed.php:25
+msgid "Every project begins with a deep-dive discovery session. We map your goals, analyse your audience, and define a clear roadmap — so every decision from design to deployment is grounded in strategy."
+msgstr ""
+
+#: patterns/overlapping-feature-columns-reversed.php:29
+msgid "See how we work →"
+msgstr ""
+
+#: patterns/overlapping-feature-columns-reversed.php:38
+msgid "Design work on a desktop screen"
+msgstr ""
+
+#: patterns/overlapping-feature-columns.php
+msgctxt "Pattern title"
+msgid "Overlapping Feature Columns"
+msgstr ""
+
+#: patterns/overlapping-feature-columns.php
+msgctxt "Pattern description"
+msgid "A two-column layout with image and overlapping text block. General-purpose variant."
+msgstr ""
+
+#: patterns/overlapping-feature-columns.php:16
+msgid "Team collaborating on a digital project"
+msgstr ""
+
+#: patterns/overlapping-feature-columns.php:24
+msgid "Our Approach"
+msgstr ""
+
+#: patterns/overlapping-feature-columns.php:28
+msgid "Strategic Solutions Built Around Your Goals"
+msgstr ""
+
+#: patterns/overlapping-feature-columns.php:32
+msgid "We combine deep industry expertise with data-driven insight to craft digital strategies that deliver measurable results. From web development to marketing, our team partners with you at every stage."
+msgstr ""
+
+#: patterns/overlapping-feature-columns.php:36
+msgid "Learn more about us →"
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern title"
+msgid "Agency About Page"
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern description"
+msgid "Complete agency about page with page header, overlapping feature columns, team grid, and stats showcase"
+msgstr ""
+
+#: patterns/page-contact.php
+msgctxt "Pattern title"
+msgid "Generic Contact Page"
+msgstr ""
+
+#: patterns/page-contact.php
+msgctxt "Pattern description"
+msgid "Complete contact page with page header and contact form section"
+msgstr ""
+
+#: patterns/page-homepage.php
+msgctxt "Pattern title"
+msgid "Main Site Homepage"
+msgstr ""
+
+#: patterns/page-homepage.php
+msgctxt "Pattern description"
+msgid "Complete main site homepage composition with hero, services stack, agency showcase, client stories, logo wall, testimonials, and newsletter CTA"
+msgstr ""
+
+#: patterns/page-services.php
+msgctxt "Pattern title"
+msgid "Agency Services Page"
+msgstr ""
+
+#: patterns/page-services.php
+msgctxt "Pattern description"
+msgid "Complete agency services overview page with page header, agency services showcase, and three-column feature grid"
+msgstr ""
+
+#: patterns/page-store-cart.php
+msgctxt "Pattern title"
+msgid "Store Cart Page"
+msgstr ""
+
+#: patterns/page-store-cart.php
+msgctxt "Pattern description"
+msgid "Complete shopping cart page with the full cart layout"
+msgstr ""
+
+#: patterns/page-store-checkout.php
+msgctxt "Pattern title"
+msgid "Store Checkout Page"
+msgstr ""
+
+#: patterns/page-store-checkout.php
+msgctxt "Pattern description"
+msgid "Complete checkout page with fields, order summary, and payment options"
+msgstr ""
+
+#: patterns/page-store-homepage.php
+msgctxt "Pattern title"
+msgid "Store Homepage"
+msgstr ""
+
+#: patterns/page-store-homepage.php
+msgctxt "Pattern description"
+msgid "Complete WooCommerce store homepage with hero, ticker, categories, featured products, story, testimonials, and newsletter"
+msgstr ""
+
+#: patterns/page-store-shop.php
+msgctxt "Pattern title"
+msgid "Store Shop Page"
+msgstr ""
+
+#: patterns/page-store-shop.php
+msgctxt "Pattern description"
+msgid "Shop catalog page with page header - the product catalog is primarily handled by WooCommerce blocks"
+msgstr ""
+
+#: patterns/plumbing-contact.php
+msgctxt "Pattern title"
+msgid "Home Improvement Contact Section"
+msgstr ""
+
+#: patterns/plumbing-contact.php
+msgctxt "Pattern description"
+msgid "Two-column contact section with business details and contact form shortcode"
+msgstr ""
+
+#: patterns/plumbing-contact.php:20
+msgid "Request Service or Get a Quote"
+msgstr ""
+
+#: patterns/plumbing-contact.php:24
+msgid "Fill out the form and we'll be in touch within the hour. For emergencies, call us directly."
+msgstr ""
+
+#: patterns/plumbing-contact.php:77
+msgid "123 Main St, City, State 12345"
+msgstr ""
+
+#: patterns/plumbing-contact.php:95
+msgid "Mon–Fri: 8am–6pm · Sat: 9am–4pm"
+msgstr ""
+
+#: patterns/plumbing-contact.php:99
+msgid "Emergency line: 24/7"
+msgstr ""
+
+#: patterns/plumbing-contact.php:108
+msgid "Send Us a Message"
+msgstr ""
+
+#: patterns/plumbing-contact.php:116
+msgid "Full Name"
+msgstr ""
+
+#: patterns/plumbing-contact.php:128
+msgid "Phone or Email"
+msgstr ""
+
+#: patterns/plumbing-contact.php:133
+msgid "How can we reach you?"
+msgstr ""
+
+#: patterns/plumbing-contact.php:140
+msgid "Service Needed"
+msgstr ""
+
+#: patterns/plumbing-contact.php:145
+msgid "Describe the issue or service you need..."
+msgstr ""
+
+#: patterns/plumbing-contact.php:152
+msgid "Send Request"
+msgstr ""
+
+#: patterns/plumbing-contact.php:161
+msgid "We typically respond within 1 hour during business hours."
+msgstr ""
+
+#: patterns/plumbing-emergency-cta.php
+msgctxt "Pattern title"
+msgid "Home Improvement Emergency CTA"
+msgstr ""
+
+#: patterns/plumbing-emergency-cta.php
+msgctxt "Pattern description"
+msgid "Full-width emergency call-to-action with phone number for 24/7 home improvement service"
+msgstr ""
+
+#: patterns/plumbing-emergency-cta.php:18
+msgid "Plumbing Emergency?"
+msgstr ""
+
+#: patterns/plumbing-emergency-cta.php:22
+msgid "Our emergency crew is standing by — 24 hours a day, 7 days a week. Don't wait. Water damage gets worse by the minute."
+msgstr ""
+
+#: patterns/plumbing-emergency-cta.php:32
+#: patterns/plumbing-hero.php:35
+msgid "Call Now: (555) 123-4567"
+msgstr ""
+
+#: patterns/plumbing-emergency-cta.php:38
+msgid "Request a Callback"
+msgstr ""
+
+#: patterns/plumbing-footer.php
+msgctxt "Pattern title"
+msgid "Home Improvement Footer"
+msgstr ""
+
+#: patterns/plumbing-footer.php
+msgctxt "Pattern description"
+msgid "Dark navy four-column footer for home improvement vertical with contact details and bottom bar"
+msgstr ""
+
+#: patterns/plumbing-footer.php:19
+msgid "Licensed, bonded, and insured plumbing professionals serving residential and commercial clients since 2004."
+msgstr ""
+
+#: patterns/plumbing-footer.php:30
+msgid "Leak Detection"
+msgstr ""
+
+#: patterns/plumbing-footer.php:34
+#: patterns/plumbing-services.php:50
+#: patterns/plumbing-services.php:54
+msgid "Drain Cleaning"
+msgstr ""
+
+#: patterns/plumbing-footer.php:38
+msgid "Water Heaters"
+msgstr ""
+
+#: patterns/plumbing-footer.php:42
+msgid "Pipe Repair"
+msgstr ""
+
+#: patterns/plumbing-footer.php:46
+msgid "Sewer Lines"
+msgstr ""
+
+#: patterns/plumbing-footer.php:50
+msgid "Commercial"
+msgstr ""
+
+#: patterns/plumbing-footer.php:66
+msgid "Reviews"
+msgstr ""
+
+#: patterns/plumbing-footer.php:78
+msgid "Service Areas"
+msgstr ""
+
+#: patterns/plumbing-footer.php:104
+msgid "123 Main St, City, State"
+msgstr ""
+
+#: patterns/plumbing-footer.php:108
+msgid "24/7 Emergency Line Available"
+msgstr ""
+
+#: patterns/plumbing-footer.php:116
+msgid "© 2025 FlowPro Plumbing & Services. All rights reserved. · License #299613"
+msgstr ""
+
+#: patterns/plumbing-header.php
+msgctxt "Pattern title"
+msgid "Home Improvement Header"
+msgstr ""
+
+#: patterns/plumbing-header.php
+msgctxt "Pattern description"
+msgid "Two-bar header for home improvement business with amber emergency top bar and dark navigation bar"
+msgstr ""
+
+#: patterns/plumbing-header.php:18
+msgid "Available 24/7 — Emergency Response in 60 Minutes"
+msgstr ""
+
+#: patterns/plumbing-header.php:23
+msgid "Licensed & Insured · ROC # 299613"
+msgstr ""
+
+#: patterns/plumbing-hero.php
+msgctxt "Pattern title"
+msgid "Home Improvement Hero"
+msgstr ""
+
+#: patterns/plumbing-hero.php
+msgctxt "Pattern description"
+msgid "Two-column hero for home improvement business with badge, headline, CTA buttons, and trust stats"
+msgstr ""
+
+#: patterns/plumbing-hero.php:21
+msgid "Emergency Plumbers Available Now"
+msgstr ""
+
+#: patterns/plumbing-hero.php:26
+msgid "When Pipes Break, <mark class=\"has-inline-color has-primary-color\">We Don't.</mark>"
+msgstr ""
+
+#: patterns/plumbing-hero.php:30
+msgid "Fast, reliable plumbing for homes and businesses. Licensed professionals with 20+ years of experience — on-site within the hour."
+msgstr ""
+
+#: patterns/plumbing-hero.php:39
+msgid "Schedule Service →"
+msgstr ""
+
+#: patterns/plumbing-hero.php:46
+msgid "4.9★"
+msgstr ""
+
+#: patterns/plumbing-hero.php:60
+#: patterns/plumbing-stats-bar.php:15
+msgid "2,400+"
+msgstr ""
+
+#: patterns/plumbing-hero.php:64
+#: patterns/plumbing-stats-bar.php:19
+msgid "Jobs Completed"
+msgstr ""
+
+#: patterns/plumbing-hero.php:74
+#: patterns/plumbing-stats-bar.php:48
+msgid "60 Min"
+msgstr ""
+
+#: patterns/plumbing-hero.php:78
+msgid "Response Time"
+msgstr ""
+
+#: patterns/plumbing-hero.php:86
+#: patterns/plumbing-hero.php:87
+msgid "Gold plumbing taps"
+msgstr ""
+
+#: patterns/plumbing-hero.php:98
+msgid "Licensed &amp; Insured"
+msgstr ""
+
+#: patterns/plumbing-hero.php:108
+msgid "24/7 Emergency"
+msgstr ""
+
+#: patterns/plumbing-services.php
+msgctxt "Pattern title"
+msgid "Home Improvement Services Grid"
+msgstr ""
+
+#: patterns/plumbing-services.php
+msgctxt "Pattern description"
+msgid "Six-card responsive grid of home improvement services with SVG icons"
+msgstr ""
+
+#: patterns/plumbing-services.php:15
+msgid "What We Do"
+msgstr ""
+
+#: patterns/plumbing-services.php:19
+msgid "Complete Plumbing Solutions"
+msgstr ""
+
+#: patterns/plumbing-services.php:23
+msgid "From minor repairs to full pipe replacement — every job done right, the first time."
+msgstr ""
+
+#: patterns/plumbing-services.php:31
+msgid "Leak Detection and Repair"
+msgstr ""
+
+#: patterns/plumbing-services.php:35
+msgid "Leak Detection & Repair"
+msgstr ""
+
+#: patterns/plumbing-services.php:39
+msgid "Advanced electronic detection finds hidden leaks fast — in walls, floors, and underground lines."
+msgstr ""
+
+#: patterns/plumbing-services.php:58
+msgid "Hydro-jetting and snake services clear even the most stubborn clogs in drains and sewer lines."
+msgstr ""
+
+#: patterns/plumbing-services.php:69
+#: patterns/plumbing-services.php:73
+msgid "Water Heater Services"
+msgstr ""
+
+#: patterns/plumbing-services.php:77
+msgid "Installation, repair, and replacement of tank and tankless water heaters — all brands."
+msgstr ""
+
+#: patterns/plumbing-services.php:88
+msgid "Pipe Repair and Replacement"
+msgstr ""
+
+#: patterns/plumbing-services.php:92
+msgid "Pipe Repair & Replacement"
+msgstr ""
+
+#: patterns/plumbing-services.php:96
+msgid "From patching a small crack to full repiping — copper, PEX, and PVC solutions for every home."
+msgstr ""
+
+#: patterns/plumbing-services.php:107
+#: patterns/plumbing-services.php:111
+msgid "Sewer Line Services"
+msgstr ""
+
+#: patterns/plumbing-services.php:115
+msgid "Video camera inspection, trenchless repair, and full sewer line replacement with minimal disruption."
+msgstr ""
+
+#: patterns/plumbing-services.php:126
+#: patterns/plumbing-services.php:130
+msgid "Commercial Plumbing"
+msgstr ""
+
+#: patterns/plumbing-services.php:134
+msgid "Full-service commercial plumbing for offices, restaurants, and multi-unit properties of any size."
+msgstr ""
+
+#: patterns/plumbing-stats-bar.php
+msgctxt "Pattern title"
+msgid "Home Improvement Stats Bar"
+msgstr ""
+
+#: patterns/plumbing-stats-bar.php
+msgctxt "Pattern description"
+msgid "Full-width amber statistics bar with five key home improvement business metrics"
+msgstr ""
+
+#: patterns/plumbing-stats-bar.php:26
+#: patterns/plumbing-why-us.php:25
+msgid "20+"
+msgstr ""
+
+#: patterns/plumbing-stats-bar.php:52
+msgid "Emergency Response"
+msgstr ""
+
+#: patterns/plumbing-stats-bar.php:63
+msgid "Satisfaction Guaranteed"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php
+msgctxt "Pattern title"
+msgid "Home Improvement Customer Testimonials"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php
+msgctxt "Pattern description"
+msgid "Three-column testimonial grid with star ratings and review platform logos"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:14
+msgid "Real Reviews"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:18
+msgid "What Our Customers Say"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:22
+msgid "Don't just take our word for it — here's what our neighbors think."
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:34
+msgid "Fast response time and excellent service! Fixed our burst pipe in the middle of the night and saved us from major water damage. Professional, quick, and didn't overcharge."
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:40
+msgid "SJ"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:47
+msgid "Sarah J."
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:51
+msgid "Homeowner · Google Review"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:66
+msgid "Professional, courteous, and reasonably priced. They installed our new water heater and explained everything clearly — no upselling, no runaround. Exactly what you want."
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:72
+msgid "MT"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:79
+msgid "Michael T."
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:83
+msgid "Business Owner · Yelp Review"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:98
+msgid "Reliable and trustworthy. We've used them for all our plumbing needs for years and they never disappoint. Showed up on time and left the place spotless."
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:104
+msgid "ER"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:111
+msgid "Emily R."
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:115
+msgid "Property Manager · Google Review"
+msgstr ""
+
+#: patterns/plumbing-testimonials.php:152
+msgid "2,400+ Happy Customers"
+msgstr ""
+
+#: patterns/plumbing-why-us.php
+msgctxt "Pattern title"
+msgid "Home Improvement Why Choose Us"
+msgstr ""
+
+#: patterns/plumbing-why-us.php
+msgctxt "Pattern description"
+msgid "Two-column why choose us section with image and feature list for home improvement business"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:18
+msgid "Team Photo"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:29
+msgid "Years in Business"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:40
+msgid "Why FlowPro"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:44
+msgid "Plumbing You Can Actually Count On"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:48
+msgid "We're not a call center — we're a family-owned business. When you call us, you get a real plumber who shows up prepared, works clean, and stands behind every job."
+msgstr ""
+
+#: patterns/plumbing-why-us.php:62
+msgid "24/7 Emergency Response"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:66
+msgid "On-site within 60 minutes, day or night"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:83
+msgid "Upfront, Flat-Rate Pricing"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:87
+msgid "You know the price before we start — no surprises"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:104
+msgid "Licensed, Bonded & Insured"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:108
+msgid "Fully credentialed professionals on every call"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:125
+msgid "100% Satisfaction Guarantee"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:129
+msgid "We fix it right or return at no charge"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:146
+msgid "Latest Plumbing Technology"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:150
+msgid "Video inspection, electronic leak detection, hydro-jetting"
+msgstr ""
+
+#: patterns/plumbing-why-us.php:161
+msgid "Get a Free Estimate"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php
+msgctxt "Pattern title"
+msgid "Portfolio Grid Masonry"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php
+msgctxt "Pattern description"
+msgid "Showcase creative work in a visually engaging masonry grid layout with category filters"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:18
+msgid "Our work"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:22
+msgid "Creative projects that showcase design, strategy, and innovation."
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:29
+msgid "All"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:33
+#: patterns/portfolio-grid-masonry.php:60
+#: patterns/portfolio-grid-masonry.php:125
+#: patterns/portfolio-grid-masonry.php:167
+msgid "Branding"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:37
+#: patterns/portfolio-grid-masonry.php:64
+#: patterns/portfolio-grid-masonry.php:106
+#: patterns/portfolio-grid-masonry.php:144
+msgid "Web Design"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:41
+#: patterns/portfolio-grid-masonry.php:83
+#: patterns/portfolio-grid-masonry.php:148
+#: patterns/services-feature-cards.php:61
+msgid "Development"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:45
+#: patterns/portfolio-grid-masonry.php:102
+#: patterns/portfolio-grid-masonry.php:171
+msgid "Marketing"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:55
+msgid "Nordic Café Rebrand"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:78
+msgid "TechFlow Analytics"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:97
+msgid "Urban Collective"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:120
+msgid "Wellness Studio"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:139
+msgid "Horizon Ventures"
+msgstr ""
+
+#: patterns/portfolio-grid-masonry.php:162
+msgid "Summit Partners"
+msgstr ""
+
+#: patterns/post-author-box.php
+msgctxt "Pattern title"
+msgid "Post Author Box"
+msgstr ""
+
+#: patterns/post-author-box.php
+msgctxt "Pattern description"
+msgid "Author card for single posts: avatar, name linked to the author archive, and the biography from the user profile."
+msgstr ""
+
+#: patterns/post-author-box.php:19
+msgid "Written by"
 msgstr ""
 
 #: patterns/post-featured-two-column.php
@@ -496,6 +4711,139 @@ msgctxt "Pattern description"
 msgid "Displays a single featured post with portrait image and title on the left, excerpt on the right. Shows posts tagged with \"featured\"."
 msgstr ""
 
+#: patterns/post-loop-grid.php
+#: patterns/template-index-grid.php
+msgctxt "Pattern title"
+msgid "Post Loop Grid"
+msgstr ""
+
+#: patterns/post-loop-grid.php
+msgctxt "Pattern description"
+msgid "Three-column grid of blog posts with portrait images. Use on index and archive pages where the loop inherits the query from the page context."
+msgstr ""
+
+#: patterns/pricing-comparison.php
+msgctxt "Pattern title"
+msgid "Pricing Comparison"
+msgstr ""
+
+#: patterns/pricing-comparison.php
+msgctxt "Pattern description"
+msgid "Three-column pricing grid with feature comparison, monthly/annual toggle, and highlighted recommended plan"
+msgstr ""
+
+#: patterns/pricing-comparison.php:15
+msgid "Choose Your Perfect Plan"
+msgstr ""
+
+#: patterns/pricing-comparison.php:19
+msgid "Flexible pricing plans designed to grow with your business needs"
+msgstr ""
+
+#: patterns/pricing-comparison.php:27
+msgid "Guardian"
+msgstr ""
+
+#: patterns/pricing-comparison.php:31
+#: patterns/pricing-comparison.php:68
+#: patterns/pricing-comparison.php:113
+msgid "What You'll Get"
+msgstr ""
+
+#: patterns/pricing-comparison.php:36
+msgid "Edit up to 10 hours of podcast audio files."
+msgstr ""
+
+#: patterns/pricing-comparison.php:40
+#: patterns/pricing-comparison.php:77
+#: patterns/pricing-comparison.php:122
+msgid "Set your own landing page"
+msgstr ""
+
+#: patterns/pricing-comparison.php:50
+msgid "Free Forever"
+msgstr ""
+
+#: patterns/pricing-comparison.php:55
+#: patterns/pricing-comparison.php:100
+#: patterns/pricing-comparison.php:149
+msgid "Choose"
+msgstr ""
+
+#: patterns/pricing-comparison.php:64
+msgid "Mage"
+msgstr ""
+
+#: patterns/pricing-comparison.php:73
+msgid "Edit up to 1,000 hours of podcast audio files."
+msgstr ""
+
+#: patterns/pricing-comparison.php:81
+#: patterns/pricing-comparison.php:126
+msgid "24/7 support"
+msgstr ""
+
+#: patterns/pricing-comparison.php:85
+#: patterns/pricing-comparison.php:130
+msgid "Advanced analytics"
+msgstr ""
+
+#: patterns/pricing-comparison.php:95
+msgid "$480"
+msgstr ""
+
+#: patterns/pricing-comparison.php:95
+#: patterns/pricing-comparison.php:144
+msgid "/month"
+msgstr ""
+
+#: patterns/pricing-comparison.php:109
+msgid "Phantom"
+msgstr ""
+
+#: patterns/pricing-comparison.php:118
+msgid "Edit up to 4,000 hours of podcast audio files."
+msgstr ""
+
+#: patterns/pricing-comparison.php:134
+msgid "Set sponsor deals"
+msgstr ""
+
+#: patterns/pricing-comparison.php:144
+msgid "$600"
+msgstr ""
+
+#: patterns/review-text-image-overlap.php
+msgctxt "Pattern title"
+msgid "Overlapping Review"
+msgstr ""
+
+#: patterns/review-text-image-overlap.php
+msgctxt "Pattern description"
+msgid "A two-column review with image and overlapping text block."
+msgstr ""
+
+#: patterns/review-text-image-overlap.php:17
+#: patterns/two-column-review.php:17
+msgid "\"The treatment I received at this spa exceeded all my expectations. The staff was professional and attentive, making me feel valued throughout my visit.\""
+msgstr ""
+
+#: patterns/review-text-image-overlap.php:26
+#: patterns/review-text-image-overlap.php:31
+#: patterns/two-column-review.php:26
+#: patterns/two-column-review.php:31
+msgid "Emma Johnson"
+msgstr ""
+
+#: patterns/review-text-image-overlap.php:35
+#: patterns/two-column-review.php:35
+msgid "Regular Client"
+msgstr ""
+
+#: patterns/review-text-image-overlap.php:48
+msgid "Natural wellness supplements"
+msgstr ""
+
 #: patterns/services-feature-cards.php
 msgctxt "Pattern title"
 msgid "Services Feature Cards"
@@ -506,121 +4854,247 @@ msgctxt "Pattern description"
 msgid "A services section with feature cards showcasing consulting, development, and support services"
 msgstr ""
 
-#: patterns/services-feature-cards.php:20
+#: patterns/services-feature-cards.php:21
 msgid "Consulting"
 msgstr ""
 
-#: patterns/services-feature-cards.php:24
-#: patterns/services-feature-cards.php:40
-#: patterns/services-feature-cards.php:50
-#: patterns/services-feature-cards.php:64
-#: patterns/services-feature-cards.php:80
-#: patterns/services-feature-cards.php:90
-#: patterns/services-feature-cards.php:104
-#: patterns/services-feature-cards.php:120
-#: patterns/services-feature-cards.php:130
+#: patterns/services-feature-cards.php:25
+#: patterns/services-feature-cards.php:41
+#: patterns/services-feature-cards.php:51
+#: patterns/services-feature-cards.php:65
+#: patterns/services-feature-cards.php:81
+#: patterns/services-feature-cards.php:91
+#: patterns/services-feature-cards.php:105
+#: patterns/services-feature-cards.php:121
+#: patterns/services-feature-cards.php:131
 msgid "Arrow"
 msgstr ""
 
-#: patterns/services-feature-cards.php:29
+#: patterns/services-feature-cards.php:30
 msgid "Strategic guidance and expert advice to help your business grow, optimize processes, and achieve your goals with proven methodologies."
 msgstr ""
 
-#: patterns/services-feature-cards.php:36
+#: patterns/services-feature-cards.php:37
 msgid "Strategy Planning"
 msgstr ""
 
-#: patterns/services-feature-cards.php:46
+#: patterns/services-feature-cards.php:47
 msgid "Business Analysis"
 msgstr ""
 
-#: patterns/services-feature-cards.php:60
-msgid "Development"
-msgstr ""
-
-#: patterns/services-feature-cards.php:69
+#: patterns/services-feature-cards.php:70
 msgid "Custom software solutions, web applications, and digital products built with modern technologies and best practices."
 msgstr ""
 
-#: patterns/services-feature-cards.php:76
+#: patterns/services-feature-cards.php:77
 msgid "Web Applications"
 msgstr ""
 
-#: patterns/services-feature-cards.php:86
+#: patterns/services-feature-cards.php:87
 msgid "Mobile Apps"
 msgstr ""
 
-#: patterns/services-feature-cards.php:100
+#: patterns/services-feature-cards.php:101
 msgid "Support"
 msgstr ""
 
-#: patterns/services-feature-cards.php:109
+#: patterns/services-feature-cards.php:110
 msgid "Ongoing maintenance, technical support, and optimization services to keep your systems running smoothly and efficiently."
 msgstr ""
 
-#: patterns/services-feature-cards.php:116
+#: patterns/services-feature-cards.php:117
 msgid "Maintenance"
 msgstr ""
 
-#: patterns/services-feature-cards.php:126
+#: patterns/services-feature-cards.php:127
 msgid "Technical Support"
 msgstr ""
 
-#: patterns/stats-list.php
+#: patterns/shop-overview-three-columns.php
 msgctxt "Pattern title"
-msgid "Stats List with CTA"
+msgid "Shop Overview Three Columns"
 msgstr ""
 
-#: patterns/stats-list.php
+#: patterns/shop-overview-three-columns.php
 msgctxt "Pattern description"
-msgid "Two-column section with promotional content and feature list"
+msgid "Displays shop products in a three-column layout with a shop button"
 msgstr ""
 
-#: patterns/stats-list.php:20
-msgid "Deploy faster"
+#: patterns/shop-overview-three-columns.php:17
+msgid "Shop"
 msgstr ""
 
-#: patterns/stats-list.php:24
-msgid "A better workflow"
+#: patterns/shop-overview-three-columns.php:23
+msgid "Product 1"
 msgstr ""
 
-#: patterns/stats-list.php:28
-#: patterns/stats-list.php:80
-msgid "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+#: patterns/shop-overview-three-columns.php:27
+msgid "Essential Serum"
 msgstr ""
 
-#: patterns/stats-list.php:40
-msgid "Live demo"
+#: patterns/shop-overview-three-columns.php:37
+msgid "Product 2"
 msgstr ""
 
-#: patterns/stats-list.php:55
-#: patterns/stats-showcase.php:55
-msgid "Moiraine completely transformed how we build WordPress sites. The pattern library is incredible and performance is unmatched."
+#: patterns/shop-overview-three-columns.php:41
+msgid "Bath Salts"
 msgstr ""
 
-#: patterns/stats-list.php:59
-#: patterns/stats-showcase.php:59
-msgid "— Sarah Chen, Creative Director"
+#: patterns/shop-overview-three-columns.php:51
+msgid "Product 3"
 msgstr ""
 
-#: patterns/stats-list.php:76
-msgid "Push to deploy."
+#: patterns/shop-overview-three-columns.php:55
+msgid "Massage Oil"
 msgstr ""
 
-#: patterns/stats-list.php:94
-msgid "SSL certificates."
+#: patterns/shop-overview-three-columns.php:66
+#: patterns/woocommerce/woo-shop-categories.php:40
+msgid "Shop Now"
 msgstr ""
 
-#: patterns/stats-list.php:98
-msgid "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+#: patterns/spa-articles-intro.php
+msgctxt "Pattern title"
+msgid "Spa Articles Page Intro"
 msgstr ""
 
-#: patterns/stats-list.php:112
-msgid "Database backups."
+#: patterns/spa-articles-intro.php
+msgctxt "Pattern description"
+msgid "Eyebrow, heading and description intro for the spa articles page."
 msgstr ""
 
-#: patterns/stats-list.php:116
-msgid "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."
+#: patterns/spa-articles-intro.php:14
+#: patterns/spa-beauty-intro.php:14
+msgid "Latest and Greatest"
+msgstr ""
+
+#: patterns/spa-articles-intro.php:18
+msgid "Read our latest spa articles"
+msgstr ""
+
+#: patterns/spa-articles-intro.php:22
+msgid "Discover the latest tips on relaxation, wellness, and self-care. From soothing massage techniques to skincare secrets, our blog is your guide to feeling refreshed and rejuvenated. Unwind, explore, and let Beautify inspire your next spa experience!"
+msgstr ""
+
+#: patterns/spa-beauty-intro.php
+msgctxt "Pattern title"
+msgid "Spa Beauty Page Intro"
+msgstr ""
+
+#: patterns/spa-beauty-intro.php
+msgctxt "Pattern description"
+msgid "Eyebrow, heading and description intro for the spa Beauty articles page."
+msgstr ""
+
+#: patterns/spa-beauty-intro.php:18
+msgid "Read our latest Beauty articles"
+msgstr ""
+
+#: patterns/spa-beauty-intro.php:22
+msgid "At Beautify, we believe that wellness is a journey—a path to rejuvenation, relaxation, and self-discovery. Our blog is your go-to resource for holistic beauty tips, self-care rituals, and insights into maintaining a balanced lifestyle. Whether you're looking for expert advice on skincare, the latest in spa treatments, or simple ways to unwind at home, you'll find inspiration and guidance right here."
+msgstr ""
+
+#: patterns/spa-beauty-intro.php:26
+msgid "Join us as we explore the world of wellness, one blissful moment at a time."
+msgstr ""
+
+#: patterns/spa-book-intro.php
+msgctxt "Pattern title"
+msgid "Spa Book Intro"
+msgstr ""
+
+#: patterns/spa-book-intro.php
+msgctxt "Pattern description"
+msgid "Intro text and Simply Schedule Appointments booking calendar for the spa booking page."
+msgstr ""
+
+#: patterns/spa-book-intro.php:14
+msgid "Welcome to our spa booking page! Treat yourself to a moment of tranquility and well-being. Whether you're looking for a soothing massage, a revitalizing facial, or a complete wellness experience, we have the perfect treatment for you. Simply select your preferred service and time from the calendar below, and let us take care of the rest."
+msgstr ""
+
+#: patterns/spa-booking-cta.php
+msgctxt "Pattern title"
+msgid "Spa Booking Call to Action"
+msgstr ""
+
+#: patterns/spa-booking-cta.php
+msgctxt "Pattern description"
+msgid "A full-width call to action for booking appointments and shopping products"
+msgstr ""
+
+#: patterns/spa-booking-cta.php:16
+msgid "Experience True Relaxation"
+msgstr ""
+
+#: patterns/spa-booking-cta.php:20
+msgid "Indulge in our premium spa treatments designed to rejuvenate your body and calm your mind. Our skilled therapists use natural, organic products to create a personalized wellness experience."
+msgstr ""
+
+#: patterns/spa-booking-cta.php:26
+msgid "Book Appointment"
+msgstr ""
+
+#: patterns/spa-booking-cta.php:30
+msgid "Shop Products"
+msgstr ""
+
+#: patterns/spa-home-hero.php
+msgctxt "Pattern title"
+msgid "Spa Home Hero"
+msgstr ""
+
+#: patterns/spa-home-hero.php
+msgctxt "Pattern description"
+msgid "A hero section with an overlapping colored box on an image background"
+msgstr ""
+
+#: patterns/spa-home-hero.php:16
+msgid "Back massage treatment"
+msgstr ""
+
+#: patterns/spa-home-hero.php:23
+msgid "spa &amp; Retreat"
+msgstr ""
+
+#: patterns/spa-home-hero.php:27
+msgid "Welcome to Velora"
+msgstr ""
+
+#: patterns/spa-home-hero.php:31
+msgid "Escape the hustle and embrace tranquility with our curated wellness experiences. From soothing massages to revitalizing therapies, immerse yourself in a journey of relaxation and rejuvenation"
+msgstr ""
+
+#: patterns/spa-overlapping-feature-columns.php
+msgctxt "Pattern title"
+msgid "Spa Overlapping Feature Columns"
+msgstr ""
+
+#: patterns/spa-overlapping-feature-columns.php
+msgctxt "Pattern description"
+msgid "A two-column layout with spa image and overlapping text block."
+msgstr ""
+
+#: patterns/spa-overlapping-feature-columns.php:16
+#: patterns/two-column-feature.php:16
+msgid "Spa treatment"
+msgstr ""
+
+#: patterns/spa-overlapping-feature-columns.php:28
+msgid "Discover Inner Peace Through Movement"
+msgstr ""
+
+#: patterns/spa-overlapping-feature-columns.php:32
+msgid "Our holistic approach combines movement, mindfulness, and expert guidance to help you achieve balance in body and mind. Experience the transformation with our specialized programs."
+msgstr ""
+
+#: patterns/spa-wellness-posts.php
+msgctxt "Pattern title"
+msgid "Spa Wellness Blog Posts"
+msgstr ""
+
+#: patterns/spa-wellness-posts.php
+msgctxt "Pattern description"
+msgid "Two-column blog post grid with landscape images, title and excerpt for the spa wellness page."
 msgstr ""
 
 #: patterns/stats-showcase.php
@@ -642,11 +5116,19 @@ msgid "Built for performance and designed for results"
 msgstr ""
 
 #: patterns/stats-showcase.php:28
-msgid "Join the growing community of professionals who trust Moiraine to power their WordPress sites. Beautiful design meets exceptional performance."
+msgid "Join the growing community of professionals who trust Elayne to power their WordPress sites. Beautiful design meets exceptional performance."
 msgstr ""
 
 #: patterns/stats-showcase.php:40
 msgid "View Documentation"
+msgstr ""
+
+#: patterns/stats-showcase.php:55
+msgid "Elayne completely transformed how we build WordPress sites. The pattern library is incredible and performance is unmatched."
+msgstr ""
+
+#: patterns/stats-showcase.php:59
+msgid "— Sarah Chen, Creative Director"
 msgstr ""
 
 #: patterns/stats-showcase.php:75
@@ -703,60 +5185,52 @@ msgctxt "Pattern description"
 msgid "Showcase your team with professional profiles in a clean three-column grid layout"
 msgstr ""
 
-#: patterns/team-grid.php:16
+#: patterns/team-grid.php:15
 msgid "Meet Our Team"
 msgstr ""
 
-#: patterns/team-grid.php:20
+#: patterns/team-grid.php:19
 msgid "Dedicated professionals committed to delivering exceptional results for your business"
 msgstr ""
 
-#: patterns/team-grid.php:28
-#: patterns/team-grid.php:52
-#: patterns/team-grid.php:76
+#: patterns/team-grid.php:26
+#: patterns/team-grid.php:46
+#: patterns/team-grid.php:66
 msgid "Team member photo"
 msgstr ""
 
-#: patterns/team-grid.php:34
-msgid "Sarah Johnson"
-msgstr ""
-
-#: patterns/team-grid.php:38
+#: patterns/team-grid.php:35
 msgid "Chief Executive Officer"
 msgstr ""
 
-#: patterns/team-grid.php:42
+#: patterns/team-grid.php:39
 msgid "With 15+ years of industry experience, Sarah leads our strategic vision and drives innovation across all operations."
 msgstr ""
 
-#: patterns/team-grid.php:58
-#: patterns/testimonial-card.php:52
-msgid "Michael Chen"
-msgstr ""
-
-#: patterns/team-grid.php:62
+#: patterns/team-grid.php:55
 msgid "Head of Operations"
 msgstr ""
 
-#: patterns/team-grid.php:66
+#: patterns/team-grid.php:59
 msgid "Michael ensures seamless execution and operational excellence, bringing efficiency and quality to every project."
 msgstr ""
 
-#: patterns/team-grid.php:82
-msgid "Emily Rodriguez"
-msgstr ""
-
-#: patterns/team-grid.php:86
+#: patterns/team-grid.php:75
 msgid "Client Success Director"
 msgstr ""
 
-#: patterns/team-grid.php:90
+#: patterns/team-grid.php:79
 msgid "Emily builds lasting client relationships and ensures every partnership delivers exceptional value and measurable success."
 msgstr ""
 
-#: patterns/template-index-grid.php
+#: patterns/template-author-archive.php
 msgctxt "Pattern title"
-msgid "Post Loop Grid"
+msgid "Author Archive Page"
+msgstr ""
+
+#: patterns/template-author-archive.php
+msgctxt "Pattern description"
+msgid "The author archive template: avatar, name and profile biography of the author, followed by their posts."
 msgstr ""
 
 #: patterns/template-index-grid.php
@@ -767,6 +5241,29 @@ msgstr ""
 #: patterns/template-index-list.php
 msgctxt "Pattern title"
 msgid "Post Loop List"
+msgstr ""
+
+#: patterns/template-index-list.php
+msgctxt "Pattern description"
+msgid "A single column list layout for blog posts and archive pages."
+msgstr ""
+
+#: patterns/template-index-list.php:29
+#: patterns/template-post-centered.php:25
+#: patterns/template-post-left-sidebar.php:31
+#: patterns/template-post-right-sidebar.php:27
+#: patterns/template-post-wide.php:25
+msgid "·"
+msgstr ""
+
+#: patterns/template-landing-page.php
+msgctxt "Pattern title"
+msgid "Landing Page (No Header/Footer)"
+msgstr ""
+
+#: patterns/template-landing-page.php
+msgctxt "Pattern description"
+msgid "Full-screen landing page template without header or footer, perfect for coming soon pages and launch pages."
 msgstr ""
 
 #: patterns/template-page-404.php
@@ -787,11 +5284,6 @@ msgstr ""
 msgid "Unfortunately, the page you are looking for no longer exists, or has been moved. Please try searching for your content below."
 msgstr ""
 
-#: patterns/template-page-404.php:24
-#: patterns/template-page-search.php:18
-msgid "Search"
-msgstr ""
-
 #: patterns/template-page-archive.php
 msgctxt "Pattern title"
 msgid "Archive Page"
@@ -802,34 +5294,6 @@ msgctxt "Pattern description"
 msgid "The archive template for blog categories, tags, and other taxonomies."
 msgstr ""
 
-#: patterns/template-page-centered.php
-msgctxt "Pattern title"
-msgid "Page Centered"
-msgstr ""
-
-#: patterns/template-page-centered.php
-msgctxt "Pattern description"
-msgid "A centered page layout where the content sits in a container in the middle of the page."
-msgstr ""
-
-#: patterns/template-page-centered.php:30
-#: patterns/template-post-centered.php:48
-#: patterns/template-post-left-sidebar.php:62
-#: patterns/template-post-right-sidebar.php:58
-#: patterns/template-post-wide.php:48
-msgid "Comments"
-msgstr ""
-
-#: patterns/template-page-full.php
-msgctxt "Pattern title"
-msgid "Page Full Width No Title"
-msgstr ""
-
-#: patterns/template-page-full.php
-msgctxt "Pattern description"
-msgid "This full page layout with no title, perfect for building pages with patterns."
-msgstr ""
-
 #: patterns/template-page-left-sidebar.php
 msgctxt "Pattern title"
 msgid "Page Left Sidebar"
@@ -838,6 +5302,16 @@ msgstr ""
 #: patterns/template-page-left-sidebar.php
 msgctxt "Pattern description"
 msgid "A page layout with a left sidebar and right content area."
+msgstr ""
+
+#: patterns/template-page-no-title.php
+msgctxt "Pattern title"
+msgid "Page No Title"
+msgstr ""
+
+#: patterns/template-page-no-title.php
+msgctxt "Pattern description"
+msgid "Page template without title, perfect for building pages with patterns."
 msgstr ""
 
 #: patterns/template-page-right-sidebar.php
@@ -872,24 +5346,22 @@ msgstr ""
 msgid "Sorry, nothing was found for that search term."
 msgstr ""
 
-#: patterns/template-page-wide-no-title.php
+#: patterns/template-page.php
 msgctxt "Pattern title"
-msgid "Page Wide No Title"
+msgid "Page"
 msgstr ""
 
-#: patterns/template-page-wide-no-title.php
+#: patterns/template-page.php
 msgctxt "Pattern description"
-msgid "This wide page layout with no title, perfect for building pages with patterns."
+msgid "Default page template with title, centered content layout."
 msgstr ""
 
-#: patterns/template-page-wide.php
-msgctxt "Pattern title"
-msgid "Page Wide"
-msgstr ""
-
-#: patterns/template-page-wide.php
-msgctxt "Pattern description"
-msgid "This wide page layout where the content sits in a wide container that stretches the page area."
+#: patterns/template-page.php:30
+#: patterns/template-post-centered.php:50
+#: patterns/template-post-left-sidebar.php:64
+#: patterns/template-post-right-sidebar.php:60
+#: patterns/template-post-wide.php:50
+msgid "Comments"
 msgstr ""
 
 #: patterns/template-post-centered.php
@@ -942,28 +5414,110 @@ msgctxt "Pattern description"
 msgid "Single testimonial with client quote, name, and company"
 msgstr ""
 
-#: patterns/testimonial-card.php:16
-msgid "What Our Clients Say"
-msgstr ""
-
-#: patterns/testimonial-card.php:24
+#: patterns/testimonial-card.php:20
 msgid "Working with this team has transformed our approach to customer acquisition. We've seen a 150% increase in qualified leads within just three months."
 msgstr ""
 
-#: patterns/testimonial-card.php:32
+#: patterns/testimonial-card.php:28
 msgid "Sarah Mitchell"
 msgstr ""
 
-#: patterns/testimonial-card.php:36
+#: patterns/testimonial-card.php:32
 msgid "CEO, TechVenture Solutions"
 msgstr ""
 
-#: patterns/testimonial-card.php:44
+#: patterns/testimonial-card.php:39
 msgid "The ROI speaks for itself. Professional service, strategic thinking, and genuine partnership. Couldn't recommend them more highly."
 msgstr ""
 
-#: patterns/testimonial-card.php:56
+#: patterns/testimonial-card.php:51
 msgid "Director of Marketing, Global Innovations Inc."
+msgstr ""
+
+#: patterns/testimonials-grid.php
+msgctxt "Pattern title"
+msgid "Spa Testimonials Grid"
+msgstr ""
+
+#: patterns/testimonials-grid.php
+msgctxt "Pattern description"
+msgid "A grid of customer testimonials for spa and wellness services"
+msgstr ""
+
+#: patterns/testimonials-grid.php:16
+msgid "Client Stories"
+msgstr ""
+
+#: patterns/testimonials-grid.php:20
+msgid "Transformative Experiences"
+msgstr ""
+
+#: patterns/testimonials-grid.php:24
+msgid "Our clients' wellbeing is at the heart of everything we do. We're honored to be part of their wellness journeys and delighted to share their experiences."
+msgstr ""
+
+#: patterns/testimonials-grid.php:31
+msgid "The hot stone massage was absolutely life-changing. I've had chronic back pain for years, and just one session provided more relief than months of other treatments. The therapist was incredibly knowledgeable and attentive to my specific needs."
+msgstr ""
+
+#: patterns/testimonials-grid.php:36
+msgid "Woman smiling"
+msgstr ""
+
+#: patterns/testimonials-grid.php:41
+msgid "Nicolas Johnson"
+msgstr ""
+
+#: patterns/testimonials-grid.php:45
+msgid "Monthly Member"
+msgstr ""
+
+#: patterns/testimonials-grid.php:53
+msgid "The organic facial completely transformed my skin. After struggling with sensitivity and dryness for years, I finally found a skincare treatment that works with my skin instead of against it. The difference was noticeable immediately."
+msgstr ""
+
+#: patterns/testimonials-grid.php:58
+msgid "Man with glasses"
+msgstr ""
+
+#: patterns/testimonials-grid.php:63
+msgid "Samantha Chen"
+msgstr ""
+
+#: patterns/testimonials-grid.php:67
+msgid "First-time Visitor"
+msgstr ""
+
+#: patterns/testimonials-grid.php:75
+msgid "The weekend wellness retreat was exactly what I needed. From the meditation sessions to the nutritious meals and aromatherapy workshops, every detail was thoughtfully curated. I left feeling completely renewed and with practical tools for daily wellness."
+msgstr ""
+
+#: patterns/testimonials-grid.php:80
+msgid "Woman with curly hair"
+msgstr ""
+
+#: patterns/testimonials-grid.php:85
+msgid "Olivia Martinez"
+msgstr ""
+
+#: patterns/testimonials-grid.php:89
+msgid "Retreat Participant"
+msgstr ""
+
+#: patterns/testimonials-grid.php:97
+msgid "I've tried several yoga studios, but nothing compares to the classes here. The instructors are incredibly skilled at accommodating all levels while still providing challenges. The peaceful atmosphere and essential oil diffusion create the perfect environment for deepening my practice."
+msgstr ""
+
+#: patterns/testimonials-grid.php:102
+msgid "Man with beard"
+msgstr ""
+
+#: patterns/testimonials-grid.php:107
+msgid "Jackie Wilson"
+msgstr ""
+
+#: patterns/testimonials-grid.php:111
+msgid "Yoga Membership"
 msgstr ""
 
 #: patterns/three-column-feature-grid.php
@@ -976,214 +5530,1017 @@ msgctxt "Pattern description"
 msgid "Showcase your key features or services in a clean three-column layout"
 msgstr ""
 
-#: patterns/three-column-feature-grid.php:20
+#: patterns/three-column-feature-grid.php:15
 msgid "Why Businesses Choose Us"
 msgstr ""
 
-#: patterns/three-column-feature-grid.php:24
+#: patterns/three-column-feature-grid.php:19
 msgid "We deliver results that matter to your bottom line"
 msgstr ""
 
-#: patterns/three-column-feature-grid.php:32
+#: patterns/three-column-feature-grid.php:26
 msgid "Proven Results"
 msgstr ""
 
-#: patterns/three-column-feature-grid.php:36
+#: patterns/three-column-feature-grid.php:30
 msgid "Track record of delivering measurable ROI and business growth for our clients across diverse industries."
 msgstr ""
 
-#: patterns/three-column-feature-grid.php:44
+#: patterns/three-column-feature-grid.php:36
 msgid "Expert Team"
 msgstr ""
 
-#: patterns/three-column-feature-grid.php:48
+#: patterns/three-column-feature-grid.php:40
 msgid "Dedicated professionals with deep industry expertise committed to understanding and achieving your business goals."
 msgstr ""
 
-#: patterns/three-column-feature-grid.php:56
+#: patterns/three-column-feature-grid.php:46
 msgid "Ongoing Support"
 msgstr ""
 
-#: patterns/three-column-feature-grid.php:60
+#: patterns/three-column-feature-grid.php:50
 msgid "Continuous optimization and support to ensure your investment delivers sustained value and competitive advantage."
 msgstr ""
 
-#: styles/gray-gold.json
-msgctxt "Style variation name"
-msgid "Gray & Gold"
+#: patterns/two-column-feature.php
+msgctxt "Pattern title"
+msgid "Two Column Feature"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
+#: patterns/two-column-feature.php
+msgctxt "Pattern description"
+msgid "A two-column layout with a landscape image on the left and text content on the right."
+msgstr ""
+
+#: patterns/two-column-feature.php:23
+msgid "Fitness"
+msgstr ""
+
+#: patterns/two-column-feature.php:27
+msgid "Build a Stronger Core with Us"
+msgstr ""
+
+#: patterns/two-column-feature.php:31
+msgid "Discover our specialized core-building program designed to enhance your strength, improve posture, and promote overall wellness through mindful movement and targeted exercises."
+msgstr ""
+
+#: patterns/two-column-feature.php:35
+msgid "Read more →"
+msgstr ""
+
+#: patterns/two-column-review.php
+msgctxt "Pattern title"
+msgid "Two Column Review"
+msgstr ""
+
+#: patterns/two-column-review.php
+msgctxt "Pattern description"
+msgid "A two-column layout with text on the left and image on the right, designed for testimonials or reviews"
+msgstr ""
+
+#: patterns/two-column-review.php:43
+msgid "Spa Treatment"
+msgstr ""
+
+#: patterns/wellness-cover-highlight.php
+msgctxt "Pattern title"
+msgid "Wellness Cover Highlight"
+msgstr ""
+
+#: patterns/wellness-cover-highlight.php
+msgctxt "Pattern description"
+msgid "A cover block with overlay and centered content box highlighting wellness content."
+msgstr ""
+
+#: patterns/wellness-cover-highlight.php:14
+msgid "Hot stone massage treatment at spa"
+msgstr ""
+
+#: patterns/wellness-cover-highlight.php:16
+msgid "<strong>TRENDING •</strong> WELLNESS"
+msgstr ""
+
+#: patterns/wellness-cover-highlight.php:20
+msgid "How to Start Your Wellness Plan"
+msgstr ""
+
+#: patterns/wellness-cover-highlight.php:25
+msgid "READ MORE"
+msgstr ""
+
+#: patterns/woocommerce/shop-filters-sidebar.php
+msgctxt "Pattern title"
+msgid "Shop Filters Sidebar"
+msgstr ""
+
+#: patterns/woocommerce/shop-filters-sidebar.php
+msgctxt "Pattern description"
+msgid "WooCommerce product filters sidebar — price range slider, leather colour chips, style checkboxes"
+msgstr ""
+
+#: patterns/woocommerce/woo-cart.php
+msgctxt "Pattern title"
+msgid "Cart Page"
+msgstr ""
+
+#: patterns/woocommerce/woo-cart.php
+msgctxt "Pattern description"
+msgid "Complete cart page layout with items, totals, and cross-sells"
+msgstr ""
+
+#: patterns/woocommerce/woo-cart.php:25
+msgid "Your Cart"
+msgstr ""
+
+#: patterns/woocommerce/woo-cart.php:37
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: patterns/woocommerce/woo-cart.php:103
+msgid "Your cart is currently empty!"
+msgstr ""
+
+#: patterns/woocommerce/woo-cart.php:111
+msgid "New in store"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php
+msgctxt "Pattern title"
+msgid "Category Hero"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php
+msgctxt "Pattern description"
+msgid "Collection hero section with breadcrumb, title, description, visual element, and meta bar"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php:23
+#: patterns/woocommerce/woo-shop-categories.php:48
+#: patterns/woocommerce/woo-shop-categories.php:64
+msgid "Collection"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php:45
+msgid "Full-grain"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php:45
+msgid "Leather"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php:49
+msgid "Complimentary"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php:49
+msgid "Engraving"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php:53
+msgid "3-5 Day"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-hero.php:53
+msgid "Dispatch"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-toolbar.php
+msgctxt "Pattern title"
+msgid "Category Toolbar"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-toolbar.php
+msgctxt "Pattern description"
+msgid "Product category toolbar with filter button, active filters, result count, and sort select"
+msgstr ""
+
+#: patterns/woocommerce/woo-category-toolbar.php:22
+msgid "Filters"
+msgstr ""
+
+#: patterns/woocommerce/woo-checkout.php
+msgctxt "Pattern title"
+msgid "Checkout Page"
+msgstr ""
+
+#: patterns/woocommerce/woo-checkout.php
+msgctxt "Pattern description"
+msgid "Complete checkout page layout with fields, order summary, and payment"
+msgstr ""
+
+#: patterns/woocommerce/woo-checkout.php:25
+msgid "Checkout"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php
+msgctxt "Pattern title"
+msgid "Store Hero"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php
+msgctxt "Pattern description"
+msgid "Two-column hero — left text with CTA buttons, right decorative cover with watermark"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:26
+msgid "New Collection 2025"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:31
+msgid "Refined"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:31
+msgid "Elegance"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:31
+msgid "Defined"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:36
+msgid "Premium professional accessories crafted for the discerning practitioner. Where function meets uncompromising sophistication."
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:42
+msgid "Shop Collection"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:46
+msgid "Discover More"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:53
+#: patterns/woocommerce/woo-hero.php:54
+msgid "Leather bag"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:55
+msgid "ELAYNE"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:55
+msgid "COLLECTION"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:61
+msgid "Artisan crafted since 2018"
+msgstr ""
+
+#: patterns/woocommerce/woo-hero.php:65
+msgid "Scroll to explore"
+msgstr ""
+
+#: patterns/woocommerce/woo-newsletter.php
+msgctxt "Pattern title"
+msgid "Stay Connected Newsletter"
+msgstr ""
+
+#: patterns/woocommerce/woo-newsletter.php
+msgctxt "Pattern description"
+msgid "Newsletter signup section with journal title and subscription form"
+msgstr ""
+
+#: patterns/woocommerce/woo-newsletter.php:23
+msgid "Stay Connected"
+msgstr ""
+
+#: patterns/woocommerce/woo-newsletter.php:29
+msgid "The Elayne"
+msgstr ""
+
+#: patterns/woocommerce/woo-newsletter.php:29
+msgid "Journal"
+msgstr ""
+
+#: patterns/woocommerce/woo-newsletter.php:33
+msgid "Craft insights, new arrivals, and exclusive offers for the discerning professional."
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php
+msgctxt "Pattern title"
+msgid "Our Story"
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php
+msgctxt "Pattern description"
+msgid "Brand story section with monogram image and statistics"
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php:38
+msgid "Crafted for"
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php:38
+msgid "Those Who"
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php:38
+msgid "Lead"
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php:42
+msgid "Elayne was founded on a simple conviction: that the tools of professional life should be as refined as the work they support."
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php:46
+msgid "We work with heritage tanneries and artisan workshops to produce accessories that endure — not just in material quality, but in timeless aesthetic."
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php:57
+msgid "Years Crafting"
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php:68
+msgid "Clients Worldwide"
+msgstr ""
+
+#: patterns/woocommerce/woo-our-story.php:79
+msgid "Artisan Made"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-accordion-tabs.php
+msgctxt "Pattern title"
+msgid "Product Accordion Tabs"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-accordion-tabs.php
+msgctxt "Pattern description"
+msgid "Four-tab accordion for product description, specifications, shipping and returns, and care instructions. Requires woocommerce-product-page.js for open/close behaviour."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-accordion-tabs.php:19
+msgid "Description"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-accordion-tabs.php:33
+msgid "Specifications"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-accordion-tabs.php:47
+msgid "Shipping & Returns"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-accordion-tabs.php:61
+msgid "Care Instructions"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-accordion-tabs.php:69
+msgid "Clean with a soft, lightly damp cloth. Condition every 3–6 months with a quality leather balm. Store in the included cotton dust bag when not in use."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-atc-section.php
+msgctxt "Pattern title"
+msgid "Product Add to Cart Section"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-atc-section.php
+msgctxt "Pattern description"
+msgid "Quantity selector, add-to-cart button, wishlist button, and buy now button for the single product page."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-atc-section.php:21
+msgid "Add to wishlist"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-atc-section.php:28
+msgid "Buy Now"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-color-swatches.php
+msgctxt "Pattern title"
+msgid "Product Color Swatches"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-color-swatches.php
+msgctxt "Pattern description"
+msgid "Colour swatch selector showing leather colour options with active state. Static implementation — extend with PHP for dynamic product attributes."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-color-swatches.php:17
+msgid "Leather Colour"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-color-swatches.php:17
+#: patterns/woocommerce/woo-product-color-swatches.php:26
+msgid "Tan"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-color-swatches.php:35
+msgid "Black"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-color-swatches.php:44
+msgid "Cognac"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-color-swatches.php:53
+msgid "Chestnut"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-color-swatches.php:62
+msgid "Navy"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-engraving-option.php
+msgctxt "Pattern title"
+msgid "Product Engraving Option"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-engraving-option.php
+msgctxt "Pattern description"
+msgid "Add-on personalised engraving selector — clickable bordered box with icon, description, and add-on price. Toggle selected state via JavaScript."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-engraving-option.php:24
+msgid "Add Personalised Engraving"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-engraving-option.php:27
+msgid "Monogram or initials — foil embossed in gold or silver"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-engraving-option.php:33
+msgid "+$35"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-gallery.php
+msgctxt "Pattern title"
+msgid "Product Gallery"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-gallery.php
+msgctxt "Pattern description"
+msgid "Product image gallery with vertical thumbnails on the left (desktop) and horizontal scroll thumbnails below (mobile). Images are rendered dynamically from the product's WooCommerce gallery via a template override — no hardcoded placeholder slots."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-mobile-atc-bar.php
+msgctxt "Pattern title"
+msgid "Product Mobile ATC Bar"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-mobile-atc-bar.php
+msgctxt "Pattern description"
+msgid "Fixed sticky bar shown at the bottom of the screen on mobile devices, displaying the product price and an add-to-cart button."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-related.php
+msgctxt "Pattern title"
+msgid "Product Related Products"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-related.php
+msgctxt "Pattern description"
+msgid "Full-width related products section with custom heading and four-column product grid. Uses WooCommerce product-collection with related query."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-related.php:20
+msgid "You May Also Like"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-related.php:23
+msgid "Complete Your <em>Set</em>"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-related.php:27
+#: patterns/woocommerce/woo-signature-pieces.php:32
+msgid "View All"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-style-options.php
+msgctxt "Pattern title"
+msgid "Product Style Options"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-style-options.php
+msgctxt "Pattern description"
+msgid "Style/size option selector with active and sold-out states. Static implementation for visual display — wire to WooCommerce variations via JavaScript."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-style-options.php:17
+msgid "Style"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-style-options.php:17
+#: patterns/woocommerce/woo-product-style-options.php:23
+msgid "A4 with Notepad"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-style-options.php:29
+msgid "A4 Slim"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-style-options.php:35
+msgid "A5 with Notepad"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-style-options.php:41
+msgid "A3 — Sold Out"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-top.php
+msgctxt "Pattern title"
+msgid "Product Top Section"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-top.php
+msgctxt "Pattern description"
+msgid "Product info panel: collection label, star rating, title, subtitle, price block with compare price and save badge, price note, and divider."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-top.php:18
+msgid "Leather Portfolios"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-top.php:27
+msgid "Full-grain vegetable-tanned leather, hand-stitched and burnished. Designed for the practitioner who demands excellence in every detail."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-top.php:33
+msgid "Tax included. Free shipping over $250."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-trust-badges.php
+msgctxt "Pattern title"
+msgid "Product Trust Badges"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-trust-badges.php
+msgctxt "Pattern description"
+msgid "Three-column trust badge row displaying free shipping, returns policy, and warranty information."
+msgstr ""
+
+#: patterns/woocommerce/woo-product-trust-badges.php:21
+msgid "Free shipping over $250"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-trust-badges.php:30
+msgid "30-day returns"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-trust-badges.php:39
+msgid "5-year warranty"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-variations.php
+msgctxt "Pattern title"
+msgid "Product Variations and Add to Cart"
+msgstr ""
+
+#: patterns/woocommerce/woo-product-variations.php
+msgctxt "Pattern description"
+msgid "Dynamic product variation selector and add to cart section. Uses WooCommerce's add-to-cart-with-options block which automatically adapts to product type (simple or variable)."
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php
+msgctxt "Pattern title"
+msgid "Shop by Category"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php
+msgctxt "Pattern description"
+msgid "Five-card category grid — section header, one large featured card left, four smaller cards right"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:20
+msgid "Shop by Category"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:24
+msgid "Curated for the"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:24
+msgid "Professional"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:32
+msgid "Featured Category"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:36
+msgid "Leather Portfolios &amp; Briefcases"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:52
+msgid "Writing Instruments"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:56
+#: patterns/woocommerce/woo-shop-categories.php:72
+#: patterns/woocommerce/woo-shop-categories.php:88
+#: patterns/woocommerce/woo-shop-categories.php:104
+msgid "Explore"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:80
+msgid "New Arrivals"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:84
+msgid "Desk Accessories"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:96
+msgid "Gifting"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-categories.php:100
+msgid "Corporate Sets"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-landing.php
+msgctxt "Pattern title"
+msgid "Shop Landing"
+msgstr ""
+
+#: patterns/woocommerce/woo-shop-landing.php
+msgctxt "Pattern description"
+msgid "Store homepage — hero, ticker, categories, featured products, brand story, testimonials, newsletter"
+msgstr ""
+
+#: patterns/woocommerce/woo-signature-pieces.php
+msgctxt "Pattern title"
+msgid "Signature Pieces"
+msgstr ""
+
+#: patterns/woocommerce/woo-signature-pieces.php
+msgctxt "Pattern description"
+msgid "Signature Pieces section — section header with View All button and WooCommerce product grid"
+msgstr ""
+
+#: patterns/woocommerce/woo-signature-pieces.php:21
+msgid "Best Sellers"
+msgstr ""
+
+#: patterns/woocommerce/woo-signature-pieces.php:25
+msgid "Signature"
+msgstr ""
+
+#: patterns/woocommerce/woo-signature-pieces.php:25
+msgid "Pieces"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php
+msgctxt "Pattern title"
+msgid "Client Voices Testimonials"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php
+msgctxt "Pattern description"
+msgid "Three-column testimonials grid with star ratings and author information"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:21
+msgid "Client Voices"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:25
+msgid "Trusted by"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:25
+msgid "Practitioners"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:36
+msgid "&#8220;The Sterling Portfolio has become an extension of my practice identity. Clients notice it immediately.&#8221;"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:48
+msgid "Margaret K."
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:52
+msgid "Senior Partner, M&amp;K Legal"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:64
+msgid "&#8220;Exceptional craftsmanship. Four years on, it looks better now than the day I received it.&#8221;"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:76
+msgid "Richard T."
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:80
+msgid "QC, Temple Chambers"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:92
+msgid "&#8220;We gift Elayne sets to every new associate. The quality communicates our standards perfectly.&#8221;"
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:104
+msgid "Sarah L."
+msgstr ""
+
+#: patterns/woocommerce/woo-testimonials.php:108
+msgid "Managing Partner, Sterling &amp; Associates"
+msgstr ""
+
+#: patterns/woocommerce/woo-ticker.php
+msgctxt "Pattern title"
+msgid "Store Ticker"
+msgstr ""
+
+#: patterns/woocommerce/woo-ticker.php
+msgctxt "Pattern description"
+msgid "Animated scrolling marquee ticker with product category labels"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:41
+msgid "Awaiting product image"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:76
+msgid "Click to zoom"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:109
+msgid "Close image viewer"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:112
+msgid "Previous image"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:115
+msgid "Next image"
+msgstr ""
+
+#: assets/js/block-extensions/post-excerpt.js:52
+msgid "Link Settings"
+msgstr ""
+
+#: assets/js/block-extensions/post-excerpt.js:59
+msgid "Link excerpt to post"
+msgstr ""
+
+#: assets/js/block-extensions/post-excerpt.js:69
+msgid "Underline link"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Pill"
+msgstr ""
+
 #: theme.json
 msgctxt "Duotone name"
-msgid "Primary"
+msgid "Ink"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
 msgctxt "Duotone name"
-msgid "Secondary"
+msgid "Sand"
 msgstr ""
 
-#: styles/gray-gold.json
-msgctxt "Duotone name"
-msgid "Accent"
-msgstr ""
-
-#: styles/gray-gold.json
-msgctxt "Duotone name"
-msgid "Neutral"
-msgstr ""
-
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
+#: styles/store.json
 msgctxt "Duotone name"
 msgid "High Contrast"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
+msgctxt "Duotone name"
+msgid "Warm Glow"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Ink to Navy"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Misty Blue"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Sand Glow"
+msgstr ""
+
+#: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
+#: styles/store.json
+msgctxt "Gradient name"
+msgid "Main Diagonal"
+msgstr ""
+
+#: theme.json
+#: styles/store.json
+msgctxt "Gradient name"
+msgid "Warm Diagonal"
+msgstr ""
+
+#: theme.json
+#: styles/bistro.json
+msgctxt "Gradient name"
+msgid "Editorial Glow"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Editorial Stripe"
+msgstr ""
+
+#: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Brand"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Brand Accent"
 msgstr ""
 
-#: styles/gray-gold.json
+#: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Brand Alt"
 msgstr ""
 
-#: styles/gray-gold.json
+#: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Brand Alt Accent"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
+#: styles/bistro.json
+#: styles/food-beverage.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/publicist.json
+#: styles/spa-wellness.json
+#: styles/store.json
+msgctxt "Color name"
+msgid "On Primary"
+msgstr ""
+
+#: theme.json
+#: styles/bistro.json
+#: styles/food-beverage.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/publicist.json
+#: styles/spa-wellness.json
+#: styles/store.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+#: styles/bistro.json
+#: styles/food-beverage.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/publicist.json
+#: styles/spa-wellness.json
+#: styles/store.json
+msgctxt "Color name"
+msgid "Accent Light"
+msgstr ""
+
+#: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Contrast"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Contrast Accent"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Base"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Base Accent"
 msgstr ""
 
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Tint"
 msgstr ""
 
-#: styles/gray-gold.json
-msgctxt "Color name"
-msgid "Border Base"
-msgstr ""
-
-#: styles/gray-gold.json
-msgctxt "Color name"
-msgid "Border Contrast"
-msgstr ""
-
-#: styles/gray-gold.json
-msgctxt "Font family name"
-msgid "Bodoni Moda"
-msgstr ""
-
-#: styles/gray-gold.json
-msgctxt "Font family name"
-msgid "Bodoni Moda Italic"
-msgstr ""
-
-#: styles/gray-gold.json
-#: styles/orange.json
 #: theme.json
-msgctxt "Font family name"
-msgid "Open Sans"
-msgstr ""
-
-#: styles/orange.json
-msgctxt "Style variation name"
-msgid "Orange"
-msgstr ""
-
-#: styles/orange.json
-#: theme.json
-msgctxt "Color name"
-msgid "Brand Dark"
-msgstr ""
-
-#: styles/orange.json
-#: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/publicist.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Border Light"
 msgstr ""
 
-#: styles/orange.json
 #: theme.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/publicist.json
+#: styles/spa-wellness.json
 msgctxt "Color name"
 msgid "Border Dark"
 msgstr ""
 
-#: styles/orange.json
 #: theme.json
-msgctxt "Font family name"
-msgid "Mona Sans"
-msgstr ""
-
-#: styles/orange.json
-#: theme.json
-msgctxt "Font family name"
-msgid "Bitter"
-msgstr ""
-
-#: styles/orange.json
-#: theme.json
-msgctxt "Font family name"
-msgid "Monospace"
+msgctxt "Color name"
+msgid "Accent Warm"
 msgstr ""
 
 #: theme.json
-msgctxt "Gradient name"
-msgid "Teal"
+msgctxt "Color name"
+msgid "Accent Warm Light"
 msgstr ""
 
 #: theme.json
-msgctxt "Gradient name"
-msgid "Ocean"
+msgctxt "Dimension size name"
+msgid "Extra Small"
 msgstr ""
 
 #: theme.json
-msgctxt "Gradient name"
-msgid "Charcoal"
+msgctxt "Dimension size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Dimension size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Dimension size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Dimension size name"
+msgid "Extra Large"
 msgstr ""
 
 #: theme.json
@@ -1228,6 +6585,16 @@ msgstr ""
 
 #: theme.json
 msgctxt "Space size name"
+msgid "2X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
 msgid "Small"
 msgstr ""
 
@@ -1252,26 +6619,61 @@ msgid "2xl"
 msgstr ""
 
 #: theme.json
+msgctxt "Space size name"
+msgid "3xl"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Mona Sans"
+msgstr ""
+
+#: theme.json
+#: styles/publicist.json
+msgctxt "Font family name"
+msgid "Open Sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Bitter"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Monospace"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "2X-Small"
+msgstr ""
+
+#: theme.json
 msgctxt "Font size name"
 msgid "Extra Small"
 msgstr ""
 
 #: theme.json
+#: styles/store.json
 msgctxt "Font size name"
 msgid "Small"
 msgstr ""
 
 #: theme.json
+#: styles/store.json
 msgctxt "Font size name"
 msgid "Base"
 msgstr ""
 
 #: theme.json
+#: styles/store.json
 msgctxt "Font size name"
 msgid "Medium"
 msgstr ""
 
 #: theme.json
+#: styles/store.json
 msgctxt "Font size name"
 msgid "Large"
 msgstr ""
@@ -1287,6 +6689,11 @@ msgid "Extra Extra Large"
 msgstr ""
 
 #: theme.json
+msgctxt "Font size name"
+msgid "Display"
+msgstr ""
+
+#: theme.json
 msgctxt "Template part name"
 msgid "Header"
 msgstr ""
@@ -1294,4 +6701,605 @@ msgstr ""
 #: theme.json
 msgctxt "Template part name"
 msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Mega Menu"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Style variation name"
+msgid "Bistro"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Ink Blue"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Ink Light"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Deep Ink"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Ink Fog"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Ink Text"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Slate"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Pure White"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Ivory"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Warm Cream"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Amber"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Near Black"
+msgstr ""
+
+#: styles/bistro.json
+#: styles/food-beverage.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/publicist.json
+#: styles/spa-wellness.json
+#: styles/store.json
+msgctxt "Color name"
+msgid "Orange"
+msgstr ""
+
+#: styles/bistro.json
+#: styles/food-beverage.json
+#: styles/legal-blue.json
+#: styles/nail-salon.json
+#: styles/plumbing.json
+#: styles/publicist.json
+#: styles/spa-wellness.json
+#: styles/store.json
+msgctxt "Color name"
+msgid "Orange Light"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Color name"
+msgid "Soft Amber"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Duotone name"
+msgid "Ink & Amber"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Duotone name"
+msgid "Ink & Ivory"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Duotone name"
+msgid "Blue & Cream"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Gradient name"
+msgid "Ink to Amber"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Gradient name"
+msgid "Ivory Fade"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Font family name"
+msgid "Bricolage Grotesque"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Font family name"
+msgid "Instrument Sans"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Font family name"
+msgid "Bricolage Grotesque Wide"
+msgstr ""
+
+#: styles/bistro.json
+msgctxt "Font family name"
+msgid "Instrument Serif"
+msgstr ""
+
+#: styles/bistro.json
+#: styles/food-beverage.json
+msgctxt "Font family name"
+msgid "Inter"
+msgstr ""
+
+#: styles/blocks/button/button-brand.json
+msgctxt "Style variation name"
+msgid "Brand"
+msgstr ""
+
+#: styles/blocks/button/button-dark.json
+msgctxt "Style variation name"
+msgid "Dark"
+msgstr ""
+
+#: styles/blocks/button/button-light.json
+msgctxt "Style variation name"
+msgid "Light"
+msgstr ""
+
+#: styles/blocks/button/button-outline.json
+msgctxt "Style variation name"
+msgid "Outline"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Style variation name"
+msgid "Food & Beverage"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Emerald"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Seafoam"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Dark Moss"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Sage Green"
+msgstr ""
+
+#: styles/food-beverage.json
+#: styles/publicist.json
+#: styles/store.json
+msgctxt "Color name"
+msgid "Main Text"
+msgstr ""
+
+#: styles/food-beverage.json
+#: styles/publicist.json
+#: styles/store.json
+msgctxt "Color name"
+msgid "Secondary Text"
+msgstr ""
+
+#: styles/food-beverage.json
+#: styles/publicist.json
+msgctxt "Color name"
+msgid "Base White"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Light Cream"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Creamy Beige"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Harvest Gold"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Charcoal Gray"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Color name"
+msgid "Mint Background"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Duotone name"
+msgid "Moss & Gold"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Duotone name"
+msgid "Emerald & Cream"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Duotone name"
+msgid "Seafoam & Beige"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Gradient name"
+msgid "Warm Earth"
+msgstr ""
+
+#: styles/food-beverage.json
+#: styles/store.json
+msgctxt "Gradient name"
+msgid "Cream Fade"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Font family name"
+msgid "Anton"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Font family name"
+msgid "Asap Condensed"
+msgstr ""
+
+#: styles/food-beverage.json
+msgctxt "Font family name"
+msgid "Orbitron"
+msgstr ""
+
+#: styles/legal-blue.json
+msgctxt "Style variation name"
+msgid "Legal Blue"
+msgstr ""
+
+#: styles/legal-blue.json
+msgctxt "Style variation description"
+msgid "Deprecated in Elayne 4.13.0 — install the Elayne Legal child theme (github.com/imagewize/elayne-legal), which ships the Legal Blue and Legal Corporate variations."
+msgstr ""
+
+#: styles/legal-blue.json
+#: styles/plumbing.json
+msgctxt "Duotone name"
+msgid "Navy"
+msgstr ""
+
+#: styles/legal-blue.json
+msgctxt "Duotone name"
+msgid "Gold"
+msgstr ""
+
+#: styles/legal-blue.json
+msgctxt "Gradient name"
+msgid "Navy Blue"
+msgstr ""
+
+#: styles/legal-blue.json
+msgctxt "Gradient name"
+msgid "Gold Shine"
+msgstr ""
+
+#: styles/legal-blue.json
+msgctxt "Gradient name"
+msgid "Professional"
+msgstr ""
+
+#: styles/nail-salon.json
+msgctxt "Style variation name"
+msgid "Nail Salon"
+msgstr ""
+
+#: styles/nail-salon.json
+msgctxt "Duotone name"
+msgid "Dusty Rose"
+msgstr ""
+
+#: styles/nail-salon.json
+msgctxt "Duotone name"
+msgid "Warm Blush"
+msgstr ""
+
+#: styles/nail-salon.json
+msgctxt "Gradient name"
+msgid "Rose Hero"
+msgstr ""
+
+#: styles/nail-salon.json
+msgctxt "Gradient name"
+msgid "Rose CTA"
+msgstr ""
+
+#: styles/nail-salon.json
+msgctxt "Gradient name"
+msgid "Gold Glow"
+msgstr ""
+
+#: styles/nail-salon.json
+#: styles/spa-wellness.json
+#: styles/store.json
+msgctxt "Font family name"
+msgid "Cormorant Garamond"
+msgstr ""
+
+#: styles/nail-salon.json
+#: styles/spa-wellness.json
+msgctxt "Font family name"
+msgid "Quicksand"
+msgstr ""
+
+#: styles/plumbing.json
+msgctxt "Style variation name"
+msgid "Home Improvement"
+msgstr ""
+
+#: styles/plumbing.json
+msgctxt "Duotone name"
+msgid "Amber"
+msgstr ""
+
+#: styles/plumbing.json
+msgctxt "Gradient name"
+msgid "Navy Dark"
+msgstr ""
+
+#: styles/plumbing.json
+msgctxt "Gradient name"
+msgid "Emergency Red"
+msgstr ""
+
+#: styles/plumbing.json
+msgctxt "Gradient name"
+msgid "Amber Warm"
+msgstr ""
+
+#: styles/plumbing.json
+msgctxt "Color name"
+msgid "Emergency Red"
+msgstr ""
+
+#: styles/plumbing.json
+#: styles/store.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Style variation name"
+msgid "Publicist"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Color name"
+msgid "Indigo"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Color name"
+msgid "Lavender"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Color name"
+msgid "Deep Indigo"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Color name"
+msgid "Soft Violet"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Color name"
+msgid "Light Tint"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Color name"
+msgid "Soft Lilac"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Duotone name"
+msgid "Indigo & Lavender"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Duotone name"
+msgid "Ink & Tint"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Duotone name"
+msgid "Indigo & Violet"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Gradient name"
+msgid "Indigo Fade"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Gradient name"
+msgid "Lavender Tint"
+msgstr ""
+
+#: styles/publicist.json
+msgctxt "Font family name"
+msgid "Bodoni Moda"
+msgstr ""
+
+#: styles/spa-wellness.json
+msgctxt "Style variation name"
+msgid "Spa & Wellness"
+msgstr ""
+
+#: styles/spa-wellness.json
+msgctxt "Duotone name"
+msgid "Spa Teal"
+msgstr ""
+
+#: styles/spa-wellness.json
+msgctxt "Duotone name"
+msgid "Ocean Sage"
+msgstr ""
+
+#: styles/spa-wellness.json
+msgctxt "Gradient name"
+msgid "Spa Teal"
+msgstr ""
+
+#: styles/spa-wellness.json
+msgctxt "Gradient name"
+msgid "Ocean Depth"
+msgstr ""
+
+#: styles/spa-wellness.json
+msgctxt "Gradient name"
+msgid "Peaceful Sky"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Style variation name"
+msgid "Store"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Charcoal"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Charcoal Accent"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Charcoal Alt"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Charcoal Alt Accent"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Cream"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Cream Dark"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Gold"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Success"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Error"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Border Solid"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Color name"
+msgid "Border Transparent"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Duotone name"
+msgid "Charcoal to Cream"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Duotone name"
+msgid "Orange to Gold"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Gradient name"
+msgid "Charcoal to Orange"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Gradient name"
+msgid "Gold Shimmer"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Font family name"
+msgid "Jost"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Font family name"
+msgid "Cormorant Garamond (Primary)"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Font size name"
+msgid "X-Small"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Font size name"
+msgid "X-Large"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Font size name"
+msgid "XX-Large"
 msgstr ""
