@@ -1,0 +1,47 @@
+/* Home glow: two soft blurred lights behind the content of a dark band, drifting slowly. */
+.wp-block-group.is-style-home-glow {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.wp-block-group.is-style-home-glow::before,
+.wp-block-group.is-style-home-glow::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: 55%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	filter: blur(70px);
+	pointer-events: none;
+}
+
+.wp-block-group.is-style-home-glow::before {
+	top: -55%;
+	right: -10%;
+	background: radial-gradient(closest-side, color-mix(in srgb, var(--elayne-accent-light) 50%, transparent), transparent);
+}
+
+.wp-block-group.is-style-home-glow::after {
+	bottom: -70%;
+	left: -15%;
+	background: radial-gradient(closest-side, color-mix(in srgb, var(--wp--preset--color--primary-accent) 30%, transparent), transparent);
+}
+
+@keyframes elayne-home-glow-drift {
+	to {
+		transform: translate(-8%, 10%) scale(1.1);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.wp-block-group.is-style-home-glow::before,
+	.wp-block-group.is-style-home-glow::after {
+		animation: elayne-home-glow-drift 14s ease-in-out infinite alternate;
+	}
+
+	.wp-block-group.is-style-home-glow::after {
+		animation-delay: -7s;
+	}
+}

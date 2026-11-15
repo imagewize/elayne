@@ -66,24 +66,6 @@
 	text-underline-offset: 0.3em;
 }
 
-/* Cards rise into place as they scroll into view, where the browser supports scroll-driven animation. */
-@media (prefers-reduced-motion: no-preference) {
-	@supports (animation-timeline: view()) {
-		.wp-block-group.is-style-home-card {
-			animation: elayne-home-card-rise linear both;
-			animation-timeline: view();
-			animation-range: entry 0% entry 45%;
-		}
-	}
-}
-
-@keyframes elayne-home-card-rise {
-	from {
-		opacity: 0;
-		transform: translateY(24px);
-	}
-}
-
 @media (prefers-reduced-motion: reduce) {
 	.wp-block-group.is-style-home-card,
 	.wp-block-group.is-style-home-card > .wp-block-image img,

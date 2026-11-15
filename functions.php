@@ -354,13 +354,15 @@ function elayne_register_effect_block_styles() {
 			'slide-up'       => __( 'Slide Up', 'elayne' ),
 		),
 		'core/group'     => array(
-			'elevate-hover' => __( 'Elevate on Hover', 'elayne' ),
-			'glow-border'   => __( 'Glow Border', 'elayne' ),
-			'image-zoom'    => __( 'Image Zoom', 'elayne' ),
-			'tilt-card'     => __( 'Tilt Card', 'elayne' ),
-			'scale-hover'   => __( 'Scale Hover', 'elayne' ),
-			'border-pulse'  => __( 'Border Pulse', 'elayne' ),
-			'slide-border'  => __( 'Slide Border', 'elayne' ),
+			'elevate-hover'   => __( 'Elevate on Hover', 'elayne' ),
+			'glow-border'     => __( 'Glow Border', 'elayne' ),
+			'image-zoom'      => __( 'Image Zoom', 'elayne' ),
+			'tilt-card'       => __( 'Tilt Card', 'elayne' ),
+			'scale-hover'     => __( 'Scale Hover', 'elayne' ),
+			'border-pulse'    => __( 'Border Pulse', 'elayne' ),
+			'slide-border'    => __( 'Slide Border', 'elayne' ),
+			'reveal'          => __( 'Reveal on Scroll', 'elayne' ),
+			'reveal-sequence' => __( 'Reveal Children in Sequence', 'elayne' ),
 		),
 		'core/image'     => array(
 			'zoom-hover'       => __( 'Zoom Hover', 'elayne' ),
@@ -925,10 +927,12 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_editorial_block_styles' );
  */
 function elayne_register_home_block_styles() {
 	$styles = array(
-		'home-mosaic' => __( 'Home Mosaic', 'elayne' ),
-		'home-facts'  => __( 'Home Facts', 'elayne' ),
-		'home-steps'  => __( 'Home Steps', 'elayne' ),
-		'home-card'   => __( 'Home Card', 'elayne' ),
+		'home-mosaic'  => __( 'Home Mosaic', 'elayne' ),
+		'home-facts'   => __( 'Home Facts', 'elayne' ),
+		'home-steps'   => __( 'Home Steps', 'elayne' ),
+		'home-card'    => __( 'Home Card', 'elayne' ),
+		'home-marquee' => __( 'Home Marquee', 'elayne' ),
+		'home-glow'    => __( 'Home Glow', 'elayne' ),
 	);
 
 	foreach ( $styles as $style_name => $label ) {
@@ -953,6 +957,31 @@ function elayne_register_home_block_styles() {
 	}
 }
 add_action( 'init', __NAMESPACE__ . '\elayne_register_home_block_styles' );
+
+/**
+ * Duplicate the content of a home marquee track on the front end, so the
+ * CSS loop (translateX -50%) is seamless. The editor keeps a single row.
+ *
+ * @param string $block_content Rendered block HTML.
+ * @param array  $block         Parsed block.
+ * @return string
+ */
+function elayne_render_home_marquee( $block_content, $block ) {
+	if ( 'core/group' !== $block['blockName'] || empty( $block['attrs']['className'] ) || false === strpos( $block['attrs']['className'], 'home-marquee-track' ) ) {
+		return $block_content;
+	}
+
+	$start = strpos( $block_content, '>' );
+	$end   = strrpos( $block_content, '</div>' );
+	if ( false === $start || false === $end ) {
+		return $block_content;
+	}
+
+	$inner = substr( $block_content, $start + 1, $end - $start - 1 );
+
+	return substr( $block_content, 0, $end ) . '<div class="home-marquee-clone" aria-hidden="true">' . $inner . '</div>' . substr( $block_content, $end );
+}
+add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_home_marquee', 10, 2 );
 
 /**
  * Add elayne-page-loaded class to <html> in <head> to enable hero animations.
