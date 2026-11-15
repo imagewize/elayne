@@ -104,6 +104,7 @@ All design tokens live in `theme.json` — never hardcode colors, sizes, or spac
 | `large` | 2.75rem | H1 on dark hero, stat numbers |
 | `x-large` | 3.5rem | Display H1 only |
 | `xx-large` | 4.39rem | Rarely used — very large display only |
+| `xxx-large` | 5.5rem | Display headings in the Home Bold patterns only |
 
 **Spacing scale** (all `clamp()` responsive): `2-x-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large` — ⚠️ `xx-small` does NOT exist; use `2-x-small` or `x-small`. Values (critical — prevents oversized pills/badges):
 

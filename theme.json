@@ -474,6 +474,15 @@
 				},
 				{
 					"fluid": {
+						"min": "2.7rem",
+						"max": "5.5rem"
+					},
+					"size": "5.5rem",
+					"slug": "xxx-large",
+					"name": "3X-Large"
+				},
+				{
+					"fluid": {
 						"min": "3.5rem",
 						"max": "11rem"
 					},
