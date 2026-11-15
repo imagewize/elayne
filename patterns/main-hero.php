@@ -11,7 +11,7 @@
 ?>
 <!-- wp:group {"metadata":{"patternName":"elayne/main-hero","name":"Main - Hero"},"align":"wide","className":"main-hero","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|x-large"},"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide main-hero" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xx-large);padding-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:paragraph {"className":"is-style-editorial-eyebrow","style":{"color":{"text":"var:preset|color|main-accent"}},"fontSize":"x-small"} -->
-<p class="is-style-editorial-eyebrow has-text-color has-x-small-font-size" style="color:var(--wp--preset--color--main-accent)"><?php esc_html_e( 'A theme for serious work — v4.0', 'elayne' ); ?></p>
+<p class="is-style-editorial-eyebrow has-text-color has-x-small-font-size" style="color:var(--wp--preset--color--main-accent)"><?php esc_html_e( 'A theme for serious work', 'elayne' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:columns {"verticalAlignment":"top","style":{"spacing":{"blockGap":{"top":"0","left":"var:preset|spacing|large"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-top"><!-- wp:column {"width":"85%"} -->
@@ -23,10 +23,10 @@
 <!-- /wp:column -->
 <!-- wp:column {"width":"15%","className":"editorial-hero-stats","style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 <div class="wp-block-column editorial-hero-stats" style="flex-basis:15%"><!-- wp:paragraph -->
-<p><?php echo wp_kses_post( __( '<strong>v4.2.0</strong><br>Released this week', 'elayne' ) ); ?></p>
+<p><?php echo wp_kses_post( __( '<strong>140+ patterns</strong><br>Ready to insert', 'elayne' ) ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><?php echo wp_kses_post( __( '<strong>9 verticals</strong><br>From legal to nail salons', 'elayne' ) ); ?></p>
+<p><?php echo wp_kses_post( __( '<strong>8 style variations</strong><br>One click in the editor', 'elayne' ) ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
