@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `elayne/page-agency-homepage`: the previous agency homepage composition (editorial hero, services stack, client stories, logo wall, testimonials, newsletter), kept under its own slug.
 - `xs` border-radius preset (0.375rem) in `theme.json`, for images and cards with tighter corners.
 - Mega Menu template part (`parts/mega-menu-template.html`) now lists the industries (eight entries with a one-line description each) in a wrapping grid, replacing the placeholder category lists. Shown by a mega menu block such as Aludra's.
+- `screenshot.png` re-shot from the new homepage: 1200x900, the industry mosaic hero and the facts strip.
 - Group block styles `home-mosaic`, `home-facts`, `home-steps` and `home-card`, with their CSS in `assets/styles/block-styles/`.
 
 ## [4.13.0] - 2026-11-15
