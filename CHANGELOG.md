@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Section rhythm contract** in `AGENTS.md` ("Spacing & BlockGap"): outer `alignfull` sections pad top/bottom `large` by default (48px at 1440, 32px at 390), hero and banner bands at most `x-large` per side, and the two paddings meeting between adjacent sections stay within 112px together at 1440 and 64px at 390 (outer groups carry `margin: 0`, so paddings stack). One padding layer per section, verified by measurement. New and adapted patterns never use `xx-large`/`xxx-large` as section padding; patterns shipped before 2026-11 may still exceed the contract.
 - **New default homepage.** `elayne/page-homepage` is now a business homepage that shows the theme's range, built from seven new patterns: `home-hero-mosaic` (headline, two buttons and a four-photo mosaic of labelled industries), `home-facts` (ruled strip of four facts), `home-industries` (six photo cards, one per industry, three per row), `home-steps` (three numbered steps), `home-built-on-blocks` (photo beside a checklist) and `home-cta` (dark call to action band). All use photos already bundled in the theme.
 - `elayne/page-agency-homepage`: the previous agency homepage composition (editorial hero, services stack, client stories, logo wall, testimonials, newsletter), kept under its own slug.
 - `xs` border-radius preset (0.375rem) in `theme.json`, for images and cards with tighter corners.
