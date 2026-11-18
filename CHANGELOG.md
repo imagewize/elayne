@@ -5,6 +5,14 @@ All notable changes to the Elayne WordPress theme will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.14.1] - 2026-11-18
+
+### Fixed
+- **WordPress.org subject tags.** The theme directory's Theme Check reported: "A maximum of 3 subject tags are allowed. The theme has 4 subjects tags ( blog, e-commerce, news, portfolio )." Removed the `portfolio` subject tag from the `Tags:` header in both `style.css` and `readme.txt` (Theme Check requires the two lists to match). `portfolio` was the least applicable — the theme ships a single masonry grid pattern — while `blog`, `e-commerce` and `news` stay: `news` covers the Publicist/publishing vertical. The text-domain INFO from the same review needed no action: the only domain used is `elayne`, which matches the theme slug.
+
+### Added
+- **WordPress.org Directory Metadata note in `AGENTS.md`** ("Versioning Checklist" section): maximum three subject tags, the `style.css`/`readme.txt` `Tags:` lists must stay identical, and the "Only one text-domain is being used" INFO is a pass state — so future tag changes do not trip Theme Check again.
+
 ## [4.14.0] - 2026-11-18
 
 ### Changed

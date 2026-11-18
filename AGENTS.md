@@ -330,6 +330,11 @@ Update together on every release: `style.css` header `Version:`, `readme.txt` `S
 - When updating `CHANGELOG.md`/`readme.txt`, new entries are ADDITIONS — do NOT describe them as "Changed" unless the file already existed on `main`.
 - Review with `git status`/`git diff`; compare against `main` (`git diff main...HEAD`) before writing release notes.
 
+### WordPress.org Directory Metadata (Theme Check)
+- **Subject tags: maximum of three.** Theme Check rejects four-plus subject tags (fixed in 4.14.1 after "The theme has 4 subjects tags ( blog, e-commerce, news, portfolio )"). Elayne keeps `blog`, `e-commerce`, `news` — do not re-add `portfolio` (one masonry pattern does not justify it). Before adding any tag, check it against the official Theme Tags list and count subject tags.
+- **Tags lists must match**: `style.css` and `readme.txt` `Tags:` headers must stay identical — Theme Check compares the two.
+- The INFO "Only one text-domain is being used... The domain found is elayne" is a pass state, not an error — the domain matches the theme slug.
+
 ## Commit & Pull Request Guidelines
 - Short, Title-Case messages focused on a single change (e.g., `Hero Pattern Update`).
 - **Atomic commits**: `git add` files individually or in small logical groups, each with a specific message — never stage multiple unrelated files together.

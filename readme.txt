@@ -1,10 +1,10 @@
 === Elayne WordPress Block Theme ===
 Contributors: Rhand
-Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, grid-layout, news, portfolio, template-editing, threaded-comments, translation-ready, wide-blocks
+Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, grid-layout, news, template-editing, threaded-comments, translation-ready, wide-blocks
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.14.0
+Stable tag: 4.14.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -211,6 +211,10 @@ Elayne is the full theme for general business and shop sites. A child theme such
 No. A style variation only changes the global design — colors, fonts, buttons. Your pages and content are untouched, and you can switch back at any time in Appearance → Editor → Styles.
 
 == Changelog ==
+
+= 4.14.1 - 11/18/26 =
+* CHANGED: Removed the portfolio subject tag from the Tags list in style.css and readme.txt. WordPress.org allows a maximum of three subject tags; the theme had four (blog, e-commerce, news, portfolio). Portfolio was the weakest fit (a single masonry pattern), while news covers the Publicist publishing vertical. The blog and e-commerce subject tags stay.
+* ADDED: A WordPress.org Directory Metadata note in AGENTS.md (maximum three subject tags, style.css/readme.txt tag lists must match, the single-text-domain INFO is a pass state), so future tag changes do not trip Theme Check again.
 
 = 4.14.0 - 11/18/26 =
 * ADDED: New default homepage. elayne/page-homepage is now a business homepage built from the new home patterns (home-hero-mosaic with its four-photo industry mosaic, home-facts, home-industries, home-steps, home-built-on-blocks, home-cta and the home-marquee photo strip), all using photos already bundled with the theme. The previous agency homepage composition stays available as elayne/page-agency-homepage.
