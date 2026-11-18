@@ -2,6 +2,9 @@
   <img src="assets/images/logos/elayne-logo-primary.svg" alt="Elayne Logo" width="104" height="120">
 </p>
 <div align="center">
+<h1>Elayne</h1>
+</div>
+<div align="center">
 
 [![Theme Version](https://img.shields.io/wordpress/theme/v/elayne.svg)](https://wordpress.org/themes/elayne/)
 [![Downloads](https://img.shields.io/wordpress/theme/dt/elayne.svg)](https://wordpress.org/themes/elayne/)
