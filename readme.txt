@@ -4,7 +4,7 @@ Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-men
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 4.13.0
+Stable tag: 4.14.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -211,6 +211,14 @@ Elayne is the full theme for general business and shop sites. A child theme such
 No. A style variation only changes the global design — colors, fonts, buttons. Your pages and content are untouched, and you can switch back at any time in Appearance → Editor → Styles.
 
 == Changelog ==
+
+= 4.14.0 - 11/18/26 =
+* ADDED: New default homepage. elayne/page-homepage is now a business homepage built from the new home patterns (home-hero-mosaic with its four-photo industry mosaic, home-facts, home-industries, home-steps, home-built-on-blocks, home-cta and the home-marquee photo strip), all using photos already bundled with the theme. The previous agency homepage composition stays available as elayne/page-agency-homepage.
+* ADDED: Motion and depth block styles, all pure CSS and switched off under prefers-reduced-motion. Two new group block styles, Reveal on Scroll and Reveal Children in Sequence, plus home-glow (soft drifting lights behind a dark band) and the home-mosaic, home-facts, home-steps, home-card and home-marquee styles.
+* ADDED: The Mega Menu template part now lists the eight industries, each with a one-line description, in a wrapping grid.
+* ADDED: styleVariation tags in the bold, bistro and food-beverage style variations, read by the new elayne_active_style_variation() helper in functions.php.
+* CHANGED: Vertical block styles (plumbing, nail salon, Food and Beverage, store, editorial and home) now appear in the editor style picker only when their own style variation is active. Their CSS still loads wherever a pattern using the style is inserted, so existing pages and child themes are unaffected.
+* CHANGED: Directory-facing copy rewritten in readme.txt, the style.css description and README.md (live demo links per vertical, new FAQ answers, aligned 140+ pattern count), and the theme screenshot re-shot from the new Bold homepage.
 
 = 4.13.0 - 11/15/26 =
 * DEPRECATED: The bundled legal patterns (elayne/legal-about-intro, elayne/legal-contact, elayne/legal-services, elayne/legal-stats, elayne/legal-team, elayne/legal-testimonials, elayne/hero-cover-slanted-legal) and the Legal Blue style variation; their descriptions now say so. They stay registered until 5.0.0. Use the Elayne Legal child theme (github.com/imagewize/elayne-legal) for law-firm sites — its same-slug patterns win.

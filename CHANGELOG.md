@@ -5,7 +5,7 @@ All notable changes to the Elayne WordPress theme will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [4.14.0] - 2026-11-18
 
 ### Changed
 - **Vertical block styles register only on their own sites.** The plumbing, nail salon, Food & Beverage, store, editorial and home block style sets in `functions.php` now register in the editor style picker only when their style variation is active: plumbing styles with `plumbing`, nail salon with `nail-salon`, Food & Beverage with `bistro` or `food-beverage`, store with `store`, editorial and home with `bold`. Sites running another variation (or no variation) see only the generic effect styles in the picker. Their CSS still enqueues wherever a pattern using the style is inserted, so existing pages and child themes are unaffected.
