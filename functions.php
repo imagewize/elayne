@@ -894,6 +894,7 @@ add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_shipping_returns_con
  *
  * Only register in the editor when the bold variation (the main demo site)
  * is active.
+ */
 function elayne_register_editorial_block_styles() {
 	$styles = array(
 		'core/site-title' => array(
@@ -915,7 +916,7 @@ function elayne_register_editorial_block_styles() {
 			'editorial-work-card'      => __( 'Editorial Work Card', 'elayne' ),
 			'editorial-pull-quote'     => __( 'Editorial Pull Quote', 'elayne' ),
 			'editorial-stats'          => __( 'Editorial Stats', 'elayne' ),
-			'editorial-cta'             => __( 'Editorial CTA', 'elayne' ),
+			'editorial-cta'            => __( 'Editorial CTA', 'elayne' ),
 		),
 	);
 
