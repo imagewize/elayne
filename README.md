@@ -25,12 +25,15 @@ Every screenshot below is a live Elayne site. Pick the one closest to your busin
 <td align="center"><a href="https://demo.imagewize.com/"><img src="assets/images/readme/demo-main.webp" alt="Elayne main homepage with the Bold style variation"></a><br><sub><b>Main</b> · Bold variation</sub></td>
 <td align="center"><a href="https://demo.imagewize.com/kafe/"><img src="assets/images/readme/demo-kafe.webp" alt="Restaurant and cafe homepage with the Bistro style variation"></a><br><sub><b>Restaurant</b> · Bistro variation</sub></td>
 <td align="center"><a href="https://demo.imagewize.com/spa/"><img src="assets/images/readme/demo-spa.webp" alt="Spa and wellness homepage with the Spa and Wellness style variation"></a><br><sub><b>Spa</b> · Spa & Wellness variation</sub></td>
-<td align="center"><a href="https://demo.imagewize.com/nail-salon/"><img src="assets/images/readme/demo-nail-salon.webp" alt="Nail salon homepage with the Nail Salon style variation"></a><br><sub><b>Nail Salon</b> · Nail Salon variation</sub></td>
 </tr>
 <tr>
+<td align="center"><a href="https://demo.imagewize.com/nail-salon/"><img src="assets/images/readme/demo-nail-salon.webp" alt="Nail salon homepage with the Nail Salon style variation"></a><br><sub><b>Nail Salon</b> · Nail Salon variation</sub></td>
 <td align="center"><a href="https://demo.imagewize.com/plumbing/"><img src="assets/images/readme/demo-plumbing.webp" alt="Home improvement homepage with the Home Improvement style variation"></a><br><sub><b>Home Services</b> · Home Improvement variation</sub></td>
 <td align="center"><a href="https://demo.imagewize.com/store/"><img src="assets/images/readme/demo-store.webp" alt="WooCommerce store homepage with the Store style variation"></a><br><sub><b>Shop</b> · WooCommerce + Store variation</sub></td>
+</tr>
+<tr>
 <td align="center"><a href="https://demo.imagewize.com/legal/"><img src="assets/images/readme/demo-legal.webp" alt="Law firm homepage built on the Elayne Legal child theme"></a><br><sub><b>Law Firm</b> · Elayne Legal child theme</sub></td>
+<td align="center"><a href="https://aseonomics.com/"><img src="assets/images/readme/demo-publicist.webp" alt="ASEonomics publication homepage with the Publicist style variation"></a><br><sub><b>Publication</b> · Publicist variation · aseonomics.com</sub></td>
 </tr>
 </table>
 
