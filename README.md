@@ -2,19 +2,20 @@
   <img src="assets/images/logos/elayne-logo-primary.svg" alt="Elayne Logo" width="104" height="120">
 </p>
 <div align="center">
-<h1>Elayne</h1>
-</div>
-<div align="center">
 
 [![Theme Version](https://img.shields.io/wordpress/theme/v/elayne.svg)](https://wordpress.org/themes/elayne/)
 [![Downloads](https://img.shields.io/wordpress/theme/dt/elayne.svg)](https://wordpress.org/themes/elayne/)
 [![Active Installs](https://img.shields.io/wordpress/theme/installs/elayne.svg)](https://wordpress.org/themes/elayne/)
+<br>
 [![License](https://img.shields.io/packagist/l/imagewize/elayne.svg)](https://packagist.org/packages/imagewize/elayne)
 [![Theme Check](https://github.com/imagewize/elayne/actions/workflows/theme-check.yml/badge.svg)](https://github.com/imagewize/elayne/actions/workflows/theme-check.yml)
 
 </div>
+<div align="center">
 
-Design better, build faster, publish sooner. Elayne is a professional WordPress block theme designed for modern businesses, offering sophisticated patterns and conversion-optimized layouts — no coding or expensive page builders required.
+**Design better, build faster, publish sooner.**
+A professional WordPress block theme for modern businesses — sophisticated patterns, conversion-optimized layouts, no page builder required.
+</div>
 
 ## One Theme, a Site for Every Kind of Business
 
