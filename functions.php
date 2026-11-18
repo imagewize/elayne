@@ -409,10 +409,27 @@ function elayne_register_effect_block_styles() {
 add_action( 'init', __NAMESPACE__ . '\elayne_register_effect_block_styles' );
 
 /**
+ * Get the slug of the active style variation, if any.
+ *
+ * Style variations identify themselves through settings.custom.styleVariation
+ * (see styles/plumbing.json and its siblings). Vertical-specific block styles
+ * use this to register only on sites where their variation is active, so the
+ * editor style picker stays short on other sites. Their CSS still enqueues
+ * whenever the block style is used in content.
+ *
+ * @return string Variation slug, or an empty string when none is set.
+ */
+function elayne_active_style_variation() {
+	$custom = wp_get_global_settings( array( 'custom' ) );
+	return empty( $custom['styleVariation'] ) ? '' : $custom['styleVariation'];
+}
+
+/**
  * Register plumbing block style variations and enqueue their CSS on demand.
  *
  * CSS files live in assets/styles/block-styles/ and load only on pages where
- * the corresponding block style is used — not globally.
+ * the corresponding block style is used — not globally. The styles themselves
+ * only register in the editor when the plumbing variation is active.
  */
 function elayne_register_plumbing_block_styles() {
 	$styles = array(
@@ -437,15 +454,19 @@ function elayne_register_plumbing_block_styles() {
 		),
 	);
 
+	$register_styles = in_array( elayne_active_style_variation(), array( 'plumbing' ), true );
+
 	foreach ( $styles as $block => $variations ) {
 		foreach ( $variations as $name => $label ) {
-			register_block_style(
-				$block,
-				array(
-					'name'  => $name,
-					'label' => $label,
-				)
-			);
+			if ( $register_styles ) {
+				register_block_style(
+					$block,
+					array(
+						'name'  => $name,
+						'label' => $label,
+					)
+				);
+			}
 
 			$css_file = "assets/styles/block-styles/{$name}.css";
 			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
@@ -488,7 +509,8 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_plumbing_block_styles' );
  * Register nail salon block style variations and enqueue their CSS on demand.
  *
  * CSS files live in assets/styles/block-styles/ and load only on pages where
- * the corresponding block style is used — not globally.
+ * the corresponding block style is used — not globally. The styles themselves
+ * only register in the editor when the nail-salon variation is active.
  */
 function elayne_register_nail_salon_block_styles() {
 	$styles = array(
@@ -508,15 +530,19 @@ function elayne_register_nail_salon_block_styles() {
 		),
 	);
 
+	$register_styles = in_array( elayne_active_style_variation(), array( 'nail-salon' ), true );
+
 	foreach ( $styles as $block => $variations ) {
 		foreach ( $variations as $name => $label ) {
-			register_block_style(
-				$block,
-				array(
-					'name'  => $name,
-					'label' => $label,
-				)
-			);
+			if ( $register_styles ) {
+				register_block_style(
+					$block,
+					array(
+						'name'  => $name,
+						'label' => $label,
+					)
+				);
+			}
 
 			$css_file = "assets/styles/block-styles/{$name}.css";
 			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
@@ -538,7 +564,9 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_nail_salon_block_styles' )
  * Register Food & Beverage block style variations and enqueue their CSS on demand.
  *
  * Five styles on core/group — one per bistro-design pattern section. Each CSS
- * file loads only on pages where the corresponding section is used.
+ * file loads only on pages where the corresponding section is used. The styles
+ * themselves only register in the editor when a food-and-beverage variation
+ * (bistro or food-beverage) is active.
  */
 function elayne_register_fandb_block_styles() {
 	$styles = array(
@@ -552,15 +580,19 @@ function elayne_register_fandb_block_styles() {
 		),
 	);
 
+	$register_styles = in_array( elayne_active_style_variation(), array( 'food-beverage', 'bistro' ), true );
+
 	foreach ( $styles as $block => $variations ) {
 		foreach ( $variations as $name => $label ) {
-			register_block_style(
-				$block,
-				array(
-					'name'  => $name,
-					'label' => $label,
-				)
-			);
+			if ( $register_styles ) {
+				register_block_style(
+					$block,
+					array(
+						'name'  => $name,
+						'label' => $label,
+					)
+				);
+			}
 
 			$css_file = "assets/styles/block-styles/{$name}.css";
 			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
@@ -731,7 +763,8 @@ add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_ticker_block', 10, 2
  * Register WooCommerce block style variations and enqueue their CSS on demand.
  *
  * CSS files live in assets/styles/block-styles/ and load only on pages where
- * the corresponding block style is used — not globally.
+ * the corresponding block style is used — not globally. The styles themselves
+ * only register in the editor when the store variation is active.
  */
 function elayne_register_woocommerce_block_styles() {
 	$styles = array(
@@ -755,15 +788,19 @@ function elayne_register_woocommerce_block_styles() {
 		),
 	);
 
+	$register_styles = in_array( elayne_active_style_variation(), array( 'store' ), true );
+
 	foreach ( $styles as $block => $variations ) {
 		foreach ( $variations as $name => $label ) {
-			register_block_style(
-				$block,
-				array(
-					'name'  => $name,
-					'label' => $label,
-				)
-			);
+			if ( $register_styles ) {
+				register_block_style(
+					$block,
+					array(
+						'name'  => $name,
+						'label' => $label,
+					)
+				);
+			}
 
 			$css_file = "assets/styles/block-styles/{$name}.css";
 			if ( file_exists( get_theme_file_path( $css_file ) ) ) {
@@ -854,7 +891,9 @@ add_filter( 'render_block', __NAMESPACE__ . '\elayne_render_shipping_returns_con
 
 /**
  * Register editorial block styles for the main-site redesign hero.
- */
+ *
+ * Only register in the editor when the bold variation (the main demo site)
+ * is active.
 function elayne_register_editorial_block_styles() {
 	$styles = array(
 		'core/site-title' => array(
@@ -876,19 +915,23 @@ function elayne_register_editorial_block_styles() {
 			'editorial-work-card'      => __( 'Editorial Work Card', 'elayne' ),
 			'editorial-pull-quote'     => __( 'Editorial Pull Quote', 'elayne' ),
 			'editorial-stats'          => __( 'Editorial Stats', 'elayne' ),
-			'editorial-cta'            => __( 'Editorial CTA', 'elayne' ),
+			'editorial-cta'             => __( 'Editorial CTA', 'elayne' ),
 		),
 	);
 
+	$register_styles = in_array( elayne_active_style_variation(), array( 'bold' ), true );
+
 	foreach ( $styles as $block_name => $block_styles ) {
 		foreach ( $block_styles as $style_name => $label ) {
-			register_block_style(
-				$block_name,
-				array(
-					'name'  => $style_name,
-					'label' => $label,
-				)
-			);
+			if ( $register_styles ) {
+				register_block_style(
+					$block_name,
+					array(
+						'name'  => $style_name,
+						'label' => $label,
+					)
+				);
+			}
 			$css_path = get_theme_file_path( "assets/styles/block-styles/{$style_name}.css" );
 			if ( file_exists( $css_path ) ) {
 				wp_enqueue_block_style(
@@ -923,7 +966,8 @@ add_action( 'init', __NAMESPACE__ . '\elayne_register_editorial_block_styles' );
  * Register block styles for the homepage patterns (home-* and home-bold-*).
  *
  * CSS files live in assets/styles/block-styles/ and load only on pages where
- * the group block is present.
+ * the group block is present. The styles themselves only register in the
+ * editor when the bold variation (the main demo site) is active.
  */
 function elayne_register_home_block_styles() {
 	$styles = array(
@@ -943,14 +987,18 @@ function elayne_register_home_block_styles() {
 		'home-bold-voices'  => __( 'Home Bold Voices', 'elayne' ),
 	);
 
+	$register_styles = in_array( elayne_active_style_variation(), array( 'bold' ), true );
+
 	foreach ( $styles as $style_name => $label ) {
-		register_block_style(
-			'core/group',
-			array(
-				'name'  => $style_name,
-				'label' => $label,
-			)
-		);
+		if ( $register_styles ) {
+			register_block_style(
+				'core/group',
+				array(
+					'name'  => $style_name,
+					'label' => $label,
+				)
+			);
+		}
 		$css_path = get_theme_file_path( "assets/styles/block-styles/{$style_name}.css" );
 		if ( file_exists( $css_path ) ) {
 			wp_enqueue_block_style(
