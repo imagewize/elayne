@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - **Vertical block styles register only on their own sites.** The plumbing, nail salon, Food & Beverage, store, editorial and home block style sets in `functions.php` now register in the editor style picker only when their style variation is active: plumbing styles with `plumbing`, nail salon with `nail-salon`, Food & Beverage with `bistro` or `food-beverage`, store with `store`, editorial and home with `bold`. Sites running another variation (or no variation) see only the generic effect styles in the picker. Their CSS still enqueues wherever a pattern using the style is inserted, so existing pages and child themes are unaffected.
+- **Directory-facing copy rewritten** (`readme.txt`, `style.css` description, `README.md`). The readme.txt description now leads with the pattern/style-variation pitch and links a live demo per vertical, the legal deprecation moved into its own note near the end, the FAQ gained six sales-objection answers (page builders, existing content, WooCommerce, price, child themes, style variation switching), the changelog keeps 4.10.0 and newer with a pointer to CHANGELOG.md for older releases, and the `news` and `portfolio` tags were added (matched in style.css). The Copyright section's licence line was corrected to GPL v3, matching the header everywhere else. README.md gained a live-demo gallery, concrete "Why Elayne" claims, and a single aligned pattern count (140+, including 24 WooCommerce patterns).
+- `screenshot.png` re-shot from the Bold homepage (`elayne/page-home-bold`) — clean 1200x900 render of the new default homepage, same as the demo main site.
 
 ### Added
 - `settings.custom.styleVariation` tags in the `bold`, `bistro` and `food-beverage` style variations (`plumbing`, `nail-salon` and `store` already had them), read by the new `elayne_active_style_variation()` helper in `functions.php`.
@@ -23,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `home-marquee`: a full-width strip of eight bundled photos that drifts sideways and pauses on hover. A `render_block` filter duplicates the track on the front end so the loop is seamless.
 - `home-glow` group block style: two soft, slowly drifting lights behind a dark band; used by `home-cta`.
 - Group block styles `home-mosaic`, `home-facts`, `home-steps`, `home-card`, `home-marquee` and `home-glow`, with their CSS in `assets/styles/block-styles/`.
+- README demo gallery: seven WebP homepage crops under `assets/images/readme/` (main, kafe, spa, nail salon, plumbing, store, legal), each linking to its live demo site on demo.imagewize.com. Excluded from the distribution zip via `.distignore`.
 
 ## [4.13.0] - 2026-11-15
 
