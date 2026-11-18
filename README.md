@@ -9,22 +9,47 @@
 [![Theme Version](https://img.shields.io/wordpress/theme/v/elayne.svg)](https://wordpress.org/themes/elayne/)
 [![Downloads](https://img.shields.io/wordpress/theme/dt/elayne.svg)](https://wordpress.org/themes/elayne/)
 [![Active Installs](https://img.shields.io/wordpress/theme/installs/elayne.svg)](https://wordpress.org/themes/elayne/)
+<br>
 [![License](https://img.shields.io/packagist/l/imagewize/elayne.svg)](https://packagist.org/packages/imagewize/elayne)
 [![Theme Check](https://github.com/imagewize/elayne/actions/workflows/theme-check.yml/badge.svg)](https://github.com/imagewize/elayne/actions/workflows/theme-check.yml)
 
 </div>
+<div align="center">
 
-Design better, build faster, publish sooner. Elayne is a professional WordPress block theme designed for modern businesses, offering sophisticated patterns and conversion-optimized layouts — no coding or expensive page builders required.
+**Design better, build faster, publish sooner.**
+A professional WordPress block theme for modern businesses — sophisticated patterns, conversion-optimized layouts, no page builder required.
+</div>
+
+## One Theme, a Site for Every Kind of Business
+
+Every screenshot below is a live Elayne site. Pick the one closest to your business, open the editor, replace the words.
+
+<table>
+<tr>
+<td align="center"><a href="https://demo.imagewize.com/"><img src="assets/images/readme/demo-main.webp" alt="Elayne main homepage with the Bold style variation"></a><br><sub><b>Main</b> · Bold variation</sub></td>
+<td align="center"><a href="https://demo.imagewize.com/kafe/"><img src="assets/images/readme/demo-kafe.webp" alt="Restaurant and cafe homepage with the Bistro style variation"></a><br><sub><b>Restaurant</b> · Bistro variation</sub></td>
+<td align="center"><a href="https://demo.imagewize.com/spa/"><img src="assets/images/readme/demo-spa.webp" alt="Spa and wellness homepage with the Spa and Wellness style variation"></a><br><sub><b>Spa</b> · Spa & Wellness variation</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="https://demo.imagewize.com/nail-salon/"><img src="assets/images/readme/demo-nail-salon.webp" alt="Nail salon homepage with the Nail Salon style variation"></a><br><sub><b>Nail Salon</b> · Nail Salon variation</sub></td>
+<td align="center"><a href="https://demo.imagewize.com/plumbing/"><img src="assets/images/readme/demo-plumbing.webp" alt="Home improvement homepage with the Home Improvement style variation"></a><br><sub><b>Home Services</b> · Home Improvement variation</sub></td>
+<td align="center"><a href="https://demo.imagewize.com/store/"><img src="assets/images/readme/demo-store.webp" alt="WooCommerce store homepage with the Store style variation"></a><br><sub><b>Shop</b> · WooCommerce + Store variation</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="https://demo.imagewize.com/legal/"><img src="assets/images/readme/demo-legal.webp" alt="Law firm homepage built on the Elayne Legal child theme"></a><br><sub><b>Law Firm</b> · Elayne Legal child theme</sub></td>
+<td align="center"><a href="https://aseonomics.com/"><img src="assets/images/readme/demo-publicist.webp" alt="ASEonomics publication homepage with the Publicist style variation"></a><br><sub><b>Publication</b> · Publicist variation · aseonomics.com</sub></td>
+</tr>
+</table>
 
 > **Lineage:** Elayne is the flagship of Imagewize's block theme family, alongside the minimal starter theme [Aviendha](https://github.com/imagewize/aviendha) and [Nynaeve](https://github.com/imagewize/nynaeve), with [Ixian](https://github.com/imagewize/ixian) built on top of Aviendha. Elayne ships no custom blocks of its own and requires none — every pattern is built from core blocks, with WooCommerce and Contact Form 7 blocks where a pattern is store- or form-specific. The shared [Aludra](https://github.com/imagewize/aludra) block library pairs with it optionally; Aviendha and Ixian build on Aludra directly, while Nynaeve registers its own blocks instead.
 
 ## Why Choose Elayne?
 
-- **Business-Focused**: Professional patterns specifically designed for corporate websites, service providers, and modern businesses
-- **Industry-Specific Content**: Pattern sets optimized for spa & wellness, legal services, food & beverage, and home improvement trades
-- **Conversion Optimized**: Built-in patterns designed to convert visitors into customers
-- **Mobile-First Design**: Every pattern is responsive and optimized for all devices
-- **Clean, Modern Aesthetic**: Sophisticated design with professional color palettes and typography
+- **Ready-Made Sites for Real Businesses**: Complete pattern sets for restaurants and cafés, spa and wellness, home services, salons and shops — real section designs, not lorem ipsum shells
+- **One-Click Style Variations**: 8 full design systems — colors, fonts, buttons and all — swap your entire site's look in one click
+- **140+ Patterns, All Core Blocks**: Every pattern is native WordPress blocks — no page builder, no lock-in, nothing to break on the next WordPress update. The 32 interactive block styles (hovers, reveals, marquees) are pure CSS with zero JavaScript
+- **Conversion-Optimized Sections**: Heroes, CTAs, pricing, testimonials and stats designed to turn visits into enquiries
+- **Quality You Can Check**: the color contract — every pattern color resolves under every style variation — runs in CI, and each variation ships a WCAG contrast report (`composer check:colors`)
 - **True No-Code Solution**: Seamlessly integrated with WordPress's native site editor — drag, drop, and publish
 
 Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to create stunning professional websites using the latest Full Site Editing features.
@@ -57,7 +82,7 @@ For developer installation and setup, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## What's Included
 
-**115+ patterns** across hero sections, features, CTAs, testimonials, cards, blog, portfolio, and more — plus 24 WooCommerce patterns covering the full shopping journey. Includes 19 page, post, and WooCommerce templates.
+**140+ patterns** (24 of them built for WooCommerce) across hero sections, features, CTAs, testimonials, cards, blog, portfolio, and more. Includes 19 page, post, and WooCommerce templates.
 
 **Page Layouts** — full-page compositions that assemble multiple section patterns into a single ready-to-insert page, so you go from blank canvas to a finished page in one paste: Agency About, Generic Contact, Main Site Homepage, and Agency Services, plus Store-specific Homepage, Shop, Cart, and Checkout compositions.
 
