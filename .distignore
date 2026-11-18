@@ -50,3 +50,6 @@ ziDHI0kh
 *.log
 .htaccess
 __MACOSX
+
+# README gallery (development only, not part of distribution)
+assets/images/readme/*
