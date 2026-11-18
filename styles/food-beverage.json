@@ -3,6 +3,9 @@
 	"version": 3,
 	"title": "Food & Beverage",
 	"settings": {
+		"custom": {
+			"styleVariation": "food-beverage"
+		},
 		"color": {
 			"palette": [
 				{
