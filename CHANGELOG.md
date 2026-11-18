@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `home-marquee`: a full-width strip of eight bundled photos that drifts sideways and pauses on hover. A `render_block` filter duplicates the track on the front end so the loop is seamless.
 - `home-glow` group block style: two soft, slowly drifting lights behind a dark band; used by `home-cta`.
 - Group block styles `home-mosaic`, `home-facts`, `home-steps`, `home-card`, `home-marquee` and `home-glow`, with their CSS in `assets/styles/block-styles/`.
-- README demo gallery: seven WebP homepage crops under `assets/images/readme/` (main, kafe, spa, nail salon, plumbing, store, legal), each linking to its live demo site on demo.imagewize.com. Excluded from the distribution zip via `.distignore`.
+- README demo gallery: eight WebP homepage crops under `assets/images/readme/` (main, kafe, spa, nail salon, plumbing, store, legal, and the live publication aseonomics.com), each linking to its live site. Excluded from the distribution zip via `.distignore`. Three thumbs per row in the README table.
 
 ## [4.13.0] - 2026-11-15
 
