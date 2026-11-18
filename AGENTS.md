@@ -209,6 +209,12 @@ More broadly: never emit `gap:`, spacing `margin-top/bottom`, or spacing `paddin
 - **NO spacer blocks** — use `blockGap` on parent containers. **NO manual margins** on headings/paragraphs — let parent `blockGap` control spacing.
 - **Horizontal padding** always on the outer container — `left/right: var:preset|spacing|medium`.
 - Scale: `small` (tight grouping) → `medium` → `large` → `x-large` (major section breaks). Full details: `docs/elayne/DESIGN-REFACTOR.md`.
+- **Section rhythm contract** (the vertical padding rule the toolboxes and child themes read; patterns shipped before 2026-11 may still exceed it):
+  - Outer `alignfull` sections pad top/bottom `large` by default (48px at 1440, 32px at 390); `medium` for dense sections and for the side of a boundary whose other side already carries a hero band.
+  - Hero and full-bleed banner bands: at most `x-large` per side (80px at 1440, 48px at 390) — never `xx-large`/`xxx-large` in new or adapted patterns.
+  - The two paddings meeting between adjacent sections stay within **112px together at 1440 and 64px at 390** (outer groups carry `margin: 0`, so paddings stack): at most one side of a boundary is `x-large`.
+  - One padding layer: the outer group pads; inner `constrained`/`alignwide` groups add no top/bottom padding.
+  - Verified by measurement (`measure.mjs`), never by eye — oversize section padding is the most expensive class of review fix to shrink one step at a time.
 
 #### Border Radius Presets (WP 6.9+)
 Use `var:preset|border-radius|{slug}` — never hardcode px, and never the non-existent `var:preset|border|radius`. Slugs (from `theme.json → settings.border.radiusSizes`): `sm` 0.625rem (buttons), `md` 0.75rem (inner card elements), `lg` 1rem (card containers), `pill` 999px (badges/tags). Border width has no preset — always hardcode `1px`. Full details: `docs/elayne/BORDER-PRESETS.md`.
