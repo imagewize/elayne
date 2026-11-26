@@ -63,7 +63,7 @@ Built by [Jasper Frumau](https://imagewize.com), Elayne empowers businesses to c
 | **Support** | [imagewize.com/support](https://imagewize.com/support) |
 
 ### Requirements
-- WordPress 7.0 or later
+- WordPress 7.1 or later
 - PHP 8.0 or later
 - WooCommerce (optional, for store templates and patterns)
 - Aludra plugin (optional, adds Mega Menu, Carousel, FAQ Tabs, and other blocks — nothing Elayne ships depends on it)

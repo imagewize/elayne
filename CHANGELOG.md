@@ -5,6 +5,20 @@ All notable changes to the Elayne WordPress theme will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.15.0] - 2026-11-26
+
+### Changed
+- **Tested up to WordPress 7.2** (7.2-RC3 on the demo, PHP 8.5): all seven demo sites load in the Site Editor and on the front end, the `editor.BlockListBlock` filter in `post-excerpt.js` still adds `elayne-linked-excerpt`, and the pattern validator passes 156 of 161 patterns after the fixes below (the other five are listed under Known).
+- **Minimum WordPress version raised to 7.1** (`Requires at least` in `style.css` and `readme.txt`, README requirements). Patterns now use the 7.1 attribute format: button `width` as `style.dimensions.width` (no `has-custom-width` / `wp-block-button__width-*` classes) in `card-call-to-action`, `woo-our-story` and `woo-product-atc-section`; paragraph `align` and site title `textAlign` as `style.typography.textAlign` in `header-standard-with-tel-number` and `header-top-bar-centered-menu`.
+
+### Fixed
+- **`header-standard`, `header-standard-with-tel-number`, `header-top-bar-centered-menu`**: stored the editor-normalized form so Sentinel no longer reports content removed by the editor: the font family as the `fontFamily` slug on the site title (not `style.typography.fontFamily`), and no default-valued `overlayMenu:"mobile"` on the navigation or `showLabels:false` on social links.
+- **`four-column-wellness-posts`**: the legacy `displayLayout` on `wp:query` (migrated by a deprecation) is replaced by a grid layout with `columnCount` 4 on `wp:post-template`; `perPage` is numeric; stray indentation inside the post template removed.
+
+### Known
+- `header-double-bar` reports "migrated by a deprecation" on its `core/html` search-trigger button in Sentinel. Not a pattern bug: any `core/html` block fails the Sentinel round trip (a bare `<p>hello</p>` fails too), while the editor parses the pattern with all 14 blocks valid and the HTML survives a parse and serialize round trip. The block is needed by `assets/js/search-overlay.js` and `inc/search-overlay.php`. The navigation `ref` is intentional for the demo header.
+- `page-store-cart`, `page-store-checkout`, `page-store-homepage` and `woo-shop-landing` report only `pattern_ref_missing` for `elayne/woocommerce/*` refs (no block errors); the refs are registered on `/store` (checked with WP-CLI). Sentinel could not log in to `/store` on Nov 26 (admin-email confirmation redirect), so they were not re-validated there; `woo-shop-landing` passed the Nov 14 `/store` run.
+
 ## [4.14.1] - 2026-11-18
 
 ### Fixed

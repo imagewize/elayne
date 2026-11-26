@@ -1,10 +1,10 @@
 === Elayne WordPress Block Theme ===
 Contributors: Rhand
 Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, grid-layout, news, template-editing, threaded-comments, translation-ready, wide-blocks
-Requires at least: 7.0
-Tested up to: 7.1
+Requires at least: 7.1
+Tested up to: 7.2
 Requires PHP: 8.0
-Stable tag: 4.14.1
+Stable tag: 4.15.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -211,6 +211,12 @@ Elayne is the full theme for general business and shop sites. A child theme such
 No. A style variation only changes the global design — colors, fonts, buttons. Your pages and content are untouched, and you can switch back at any time in Appearance → Editor → Styles.
 
 == Changelog ==
+
+= 4.15.0 - 11/26/26 =
+* CHANGED: Tested up to WordPress 7.2 (tested on 7.2-RC3 on the demo: all seven sites, the Site Editor, the front end and the pattern validator).
+* TECHNICAL: Minimum WordPress version raised to 7.1. The theme patterns now use the 7.1 attribute format: button width in style.dimensions.width and paragraph and site title alignment in style.typography.textAlign, so they validate without a migration. The old format is migrated on load by 7.1 and later.
+* FIXED: Four header and card patterns no longer trigger a block migration: card-call-to-action, header-standard, header-standard-with-tel-number and header-top-bar-centered-menu now store the editor-normalized form (font family slug, no default overlayMenu or showLabels). The shop patterns woo-our-story and woo-product-atc-section get the new button width format.
+* FIXED: four-column-wellness-posts uses a grid layout on the post template instead of the deprecated query displayLayout, and a numeric perPage.
 
 = 4.14.1 - 11/18/26 =
 * CHANGED: Removed the portfolio subject tag from the Tags list in style.css and readme.txt. WordPress.org allows a maximum of three subject tags; the theme had four (blog, e-commerce, news, portfolio). Portfolio was the weakest fit (a single masonry pattern), while news covers the Publicist publishing vertical. The blog and e-commerce subject tags stay.
