@@ -20,8 +20,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"width":100,"style":{"border":{"radius":"100px"}}} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" style="border-radius:100px"><?php esc_html_e( 'Request Quote', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"100px"},"dimensions":{"width":"100%"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" style="border-radius:100px"><?php esc_html_e( 'Request Quote', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
