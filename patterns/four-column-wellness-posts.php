@@ -15,18 +15,16 @@
   <h2 class="wp-block-heading has-text-align-center has-x-large-font-size" style="font-weight:600"><?php esc_html_e( 'Wellness', 'elayne' ); ?></h2>
   <!-- /wp:heading -->
 
-  <!-- wp:query {"queryId":1,"query":{"perPage":"4","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"flex","columns":4}} -->
-  <div class="wp-block-query"><!-- wp:post-template {"className":"spa-post-grid"} -->
-    <!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"1.5rem"},"blockGap":"var:preset|spacing|small"}}} -->
-    <div class="wp-block-group" style="padding-top:0;padding-bottom:1.5rem"><!-- wp:post-featured-image {"isLink":true,"height":"290px","aspectRatio":"3/4","scale":"cover"} /-->
-      
-      <!-- wp:post-date {"fontSize":"small","style":{"typography":{"fontStyle":"normal","fontWeight":"500"},"color":{"text":"var:preset|color|primary"}}} /-->
-      
-      <!-- wp:post-title {"isLink":true,"fontSize":"medium","style":{"typography":{"fontWeight":"600"}}} /-->
-    </div>
-    <!-- /wp:group -->
-    <!-- /wp:post-template -->
-  </div>
-  <!-- /wp:query -->
+<!-- wp:query {"queryId":1,"query":{"perPage":4,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
+<div class="wp-block-query"><!-- wp:post-template {"className":"spa-post-grid","layout":{"type":"grid","columnCount":4}} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"1.5rem"},"blockGap":"var:preset|spacing|small"}}} -->
+<div class="wp-block-group" style="padding-top:0;padding-bottom:1.5rem"><!-- wp:post-featured-image {"isLink":true,"height":"290px","aspectRatio":"3/4","scale":"cover"} /-->
+
+<!-- wp:post-date {"fontSize":"small","style":{"typography":{"fontStyle":"normal","fontWeight":"500"},"color":{"text":"var:preset|color|primary"}}} /-->
+
+<!-- wp:post-title {"isLink":true,"fontSize":"medium","style":{"typography":{"fontWeight":"600"}}} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query -->
 </div>
 <!-- /wp:group -->

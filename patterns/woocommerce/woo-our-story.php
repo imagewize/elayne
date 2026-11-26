@@ -86,8 +86,8 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"textColor":"tertiary","backgroundColor":"accent","className":"is-style-fill","width":100,"style":{"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.16em","textTransform":"uppercase"},"border":{"radius":"0"}}} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-fill is-width-full"><a class="wp-block-button__link has-tertiary-color has-accent-background-color has-text-color has-background wp-element-button" style="border-radius:0;font-style:normal;font-weight:500;letter-spacing:0.16em;text-transform:uppercase"><?php esc_html_e( 'Our Story', 'elayne' ); ?></a></div>
+<div class="wp-block-buttons"><!-- wp:button {"textColor":"tertiary","backgroundColor":"accent","className":"is-style-fill is-width-full","style":{"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"0.16em","textTransform":"uppercase"},"border":{"radius":"0"},"dimensions":{"width":"100%"}}} -->
+<div class="wp-block-button is-style-fill is-width-full"><a class="wp-block-button__link has-tertiary-color has-accent-background-color has-text-color has-background wp-element-button" style="border-radius:0;font-style:normal;font-weight:500;letter-spacing:0.16em;text-transform:uppercase"><?php esc_html_e( 'Our Story', 'elayne' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 </div>
